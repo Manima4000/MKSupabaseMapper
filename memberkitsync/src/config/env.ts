@@ -1,0 +1,33 @@
+import { z } from 'zod'
+import 'dotenv/config'
+
+const envSchema = z.object({
+  NODE_ENV: z.enum(['development', 'production', 'test']).default('development'),
+  PORT: z.coerce.number().default(3000),
+  HOST: z.string().default('0.0.0.0'),
+
+  SUPABASE_URL: z.string().url(),
+  SUPABASE_SERVICE_ROLE_KEY: z.string().min(1),
+
+  MEMBERKIT_API_KEY: z.string().min(1),
+  MEMBERKIT_API_URL: z.string().url().default('https://app.memberkit.com.br/api/v1'),
+
+  // Segredo compartilhado para validar webhooks vindos da MemberKit
+  WEBHOOK_SECRET: z.string().min(1).optional(),
+
+  LOG_LEVEL: z
+    .enum(['fatal', 'error', 'warn', 'info', 'debug', 'trace'])
+    .default('info'),
+})
+
+export type Env = z.infer<typeof envSchema>
+
+const result = envSchema.safeParse(process.env)
+
+if (!result.success) {
+  console.error('Variáveis de ambiente inválidas:')
+  console.error(result.error.format())
+  process.exit(1)
+}
+
+export const env = result.data
