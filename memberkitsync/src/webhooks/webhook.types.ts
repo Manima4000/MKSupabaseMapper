@@ -18,6 +18,7 @@ export interface MKWebhookEnvelope {
   event: MKWebhookEventType
   fired_at: string
   data: Record<string, unknown>
+  [key: string]: unknown
 }
 
 // --------------------------------------------------------------------------

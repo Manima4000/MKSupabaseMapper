@@ -21,8 +21,10 @@ async function bootstrap(): Promise<void> {
   // Handler global de erros
   app.setErrorHandler((error, _request, reply) => {
     logger.error({ err: error }, 'Erro não tratado')
-    reply.code(error.statusCode ?? 500).send({
-      error: error.message ?? 'Erro interno do servidor',
+    const statusCode = (error as any).statusCode ?? 500
+    const message = (error as any).message ?? 'Erro interno do servidor'
+    reply.code(statusCode).send({
+      error: message,
     })
   })
 
