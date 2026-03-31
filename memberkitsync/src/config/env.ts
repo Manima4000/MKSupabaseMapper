@@ -12,8 +12,8 @@ const envSchema = z.object({
   MEMBERKIT_API_KEY: z.string().min(1),
   MEMBERKIT_API_URL: z.string().url().default('https://app.memberkit.com.br/api/v1'),
 
-  // Segredo compartilhado para validar webhooks vindos da MemberKit
-  WEBHOOK_SECRET: z.string().min(1).optional(),
+  // Chave de API usada como query param na URL do webhook (?api_key=...)
+  WEBHOOK_API_KEY: z.string().min(1).optional(),
 
   LOG_LEVEL: z
     .enum(['fatal', 'error', 'warn', 'info', 'debug', 'trace'])

@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:ajuda.memberkit.com.br)",
+      "WebSearch"
+    ]
+  }
+}

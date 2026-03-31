@@ -4,7 +4,7 @@ import type { MKUserPayload } from '../user.types.js'
 
 const base: MKUserPayload = {
   id: 42,
-  name: 'João Silva',
+  full_name: 'João Silva',
   email: 'joao@example.com',
   blocked: false,
   unlimited: true,

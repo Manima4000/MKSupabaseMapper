@@ -8,7 +8,7 @@ describe('mkPlanToUpsertInput', () => {
       id: 7,
       name: 'Assinatura ESA Anual',
       trial_period: 14,
-      member_areas: [],
+      classroom_ids: [],
     }
 
     expect(mkPlanToUpsertInput(mk)).toEqual({
@@ -19,7 +19,7 @@ describe('mkPlanToUpsertInput', () => {
   })
 
   it('maps trial_period = 0 (no trial)', () => {
-    const mk: MKPlanPayload = { id: 1, name: 'Plan', trial_period: 0, member_areas: [] }
+    const mk: MKPlanPayload = { id: 1, name: 'Plan', trial_period: 0, classroom_ids: [] }
 
     expect(mkPlanToUpsertInput(mk).trialPeriod).toBe(0)
   })
@@ -28,8 +28,6 @@ describe('mkPlanToUpsertInput', () => {
 describe('mkSubscriptionToUpsertInput', () => {
   const base: MKSubscriptionPayload = {
     id: 200,
-    member_id: 5,
-    plan_id: 7,
     status: 'active',
     expire_at: '2025-01-01T00:00:00Z',
   }

@@ -27,10 +27,8 @@ export interface MKWebhookEnvelope {
 
 export interface MKMemberWebhookData {
   id: number
-  name: string
+  full_name: string | null
   email: string
-  bio: string | null
-  image_url: string | null
   blocked: boolean
   unlimited: boolean
   sign_in_count: number

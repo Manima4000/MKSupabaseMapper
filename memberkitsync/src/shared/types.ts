@@ -124,7 +124,7 @@ export interface Membership {
 
 export interface Enrollment {
   id: number
-  mk_id: number
+  mk_id: number | null
   user_id: number
   course_id: number
   classroom_id: number | null

@@ -48,7 +48,7 @@ SupabaseProject/
         │   └── sync.command.ts           # CLI entry point (npm run sync)
         └── webhooks/
             ├── webhook.types.ts          # Typed event envelopes
-            ├── webhook.validator.ts      # HMAC-SHA256 signature + payload parsing
+            ├── webhook.validator.ts      # api_key validation + payload parsing
             ├── webhook.handler.ts        # Dispatcher: routes events to services
             └── webhook.routes.ts         # POST /webhooks/memberkit
 ```
@@ -126,7 +126,7 @@ The sync order **must** respect foreign key constraints:
 
 ```
 POST /webhooks/memberkit
-    ↓ validateWebhookSignature (HMAC-SHA256, skipped if WEBHOOK_SECRET is empty)
+    ↓ validateApiKey (query param ?api_key=, skipped if WEBHOOK_API_KEY is empty)
     ↓ parseWebhookBody
     ↓ reply 200 immediately
     ↓ dispatchWebhook (async, non-blocking)
@@ -240,9 +240,9 @@ The client uses Node.js native `fetch` (Node 18+). Authentication is via `?api_k
 | `lesson_status_saved` | upsert lesson_progress + insert user_activity |
 | `comment.created` | (not yet handled — falls through to "unhandled" log) |
 
-### Signature validation
+### Autenticação do webhook
 
-Configured via `WEBHOOK_SECRET` in `.env`. If set, the handler validates `X-MemberKit-Signature` or `X-Hub-Signature-256` using HMAC-SHA256. If `WEBHOOK_SECRET` is empty, validation is skipped (useful for local testing).
+Configurado via `WEBHOOK_API_KEY` no `.env`. A MemberKit envia `?api_key=...` na URL do webhook. Se `WEBHOOK_API_KEY` estiver vazio, a validação é ignorada (útil para testes locais).
 
 ---
 
@@ -279,7 +279,7 @@ SUPABASE_SERVICE_ROLE_KEY=...   # Never the anon key
 MEMBERKIT_API_KEY=...
 MEMBERKIT_API_URL=https://app.memberkit.com.br/api/v1
 
-WEBHOOK_SECRET=                 # Leave empty to skip signature validation
+WEBHOOK_API_KEY=                # Leave empty to skip api_key validation
 ```
 
 All variables are validated at startup via Zod (`src/config/env.ts`). The process exits immediately with a clear error message if any required variable is missing.

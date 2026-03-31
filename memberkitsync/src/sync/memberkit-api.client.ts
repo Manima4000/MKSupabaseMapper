@@ -1,5 +1,6 @@
 import { env } from '../config/env.js'
 import { MemberKitApiError } from '../shared/errors.js'
+import { logger } from '../shared/logger.js'
 import type { PaginationMeta } from '../shared/pagination.js'
 
 // ============================================================================
@@ -51,9 +52,16 @@ export interface MKCourse {
   sections: MKSection[]
 }
 
-export interface MKMember {
+export interface MKCoursesResponse {
+  courses: MKCourse[]
+  total_count: number
+  current_page: number
+  total_pages: number
+}
+
+export interface MKUser {
   id: number
-  name: string
+  full_name: string | null
   email: string
   blocked: boolean
   unlimited: boolean
@@ -63,11 +71,40 @@ export interface MKMember {
   meta: Record<string, unknown>
 }
 
-export interface MKMembersResponse {
-  members: MKMember[]
-  total_count: number
-  current_page: number
-  total_pages: number
+// Keep MKMember as an alias for backwards compatibility within the codebase
+export type MKMember = MKUser
+
+// Enrollment as it appears inline inside GET /users/{id}
+export interface MKUserEnrollment {
+  id: number
+  status: string
+  course_id: number
+  classroom_id: number | null
+  expire_date: string | null
+}
+
+// Membership as it appears inline inside GET /users/{id}
+export interface MKUserMembership {
+  id: number
+  status: string
+  membership_level_id: number
+  expire_date: string | null
+}
+
+// Metadata as returned by GET /users/{id}
+export interface MKUserMetadata {
+  cpf_cnpj: string | null
+  phone_local_code: string | null
+  phone_number: string | null
+}
+
+// Full user detail returned by GET /users/{id}
+export interface MKUserDetail extends MKUser {
+  metadata: MKUserMetadata
+  created_at: string
+  updated_at: string
+  enrollments: MKUserEnrollment[]
+  memberships: MKUserMembership[]
 }
 
 export interface MKClassroom {
@@ -75,28 +112,33 @@ export interface MKClassroom {
   name: string
 }
 
-export interface MKPlan {
+export interface MKMembershipLevel {
   id: number
   name: string
   trial_period: number
-  member_areas: MKClassroom[]
+  classroom_ids: number[]
 }
 
-export interface MKSubscription {
+// Keep MKPlan as an alias for backwards compatibility within the codebase
+export type MKPlan = MKMembershipLevel
+
+export interface MKMembership {
   id: number
-  member_id: number
-  plan_id: number
   status: string
-  expire_at: string | null
+  membership_level_id: number
+  expire_date: string | null
+  user: {
+    id: number
+    full_name: string | null
+    email: string
+  }
 }
 
-export interface MKSubscriptionsResponse {
-  subscriptions: MKSubscription[]
-  total_count: number
-  current_page: number
-  total_pages: number
-}
+// Keep MKSubscription as an alias for backwards compatibility within the codebase
+export type MKSubscription = MKMembership
 
+// MKEnrollment is kept for the webhook path (enrollment.created / enrollment.updated),
+// which does send a full payload with id and member_id.
 export interface MKEnrollment {
   id: number
   member_id: number
@@ -106,11 +148,13 @@ export interface MKEnrollment {
   expire_at: string | null
 }
 
-export interface MKEnrollmentsResponse {
-  enrollments: MKEnrollment[]
-  total_count: number
-  current_page: number
-  total_pages: number
+export interface MKUserActivity {
+  id: number
+  course_id: number | null
+  lesson_id: number | null
+  trackable_type: string
+  trackable: Record<string, unknown>
+  created_at: string
 }
 
 // ============================================================================
@@ -121,12 +165,44 @@ export class MemberKitClient {
   private readonly baseUrl: string
   private readonly apiKey: string
 
+  // Sliding-window rate limiter: max 115 requests per 60-second window
+  private readonly maxRequestsPerMinute = 115
+  private requestTimestamps: number[] = []
+
   constructor(baseUrl = env.MEMBERKIT_API_URL, apiKey = env.MEMBERKIT_API_KEY) {
     this.baseUrl = baseUrl.replace(/\/$/, '')
     this.apiKey = apiKey
   }
 
-  private async get<T>(path: string, params: Record<string, string | number> = {}): Promise<T> {
+  private async throttle(): Promise<void> {
+    const now = Date.now()
+    const windowStart = now - 60_000
+    this.requestTimestamps = this.requestTimestamps.filter(t => t > windowStart)
+
+    if (this.requestTimestamps.length >= this.maxRequestsPerMinute) {
+      const oldest = this.requestTimestamps[0]
+      if (oldest !== undefined) {
+        const waitMs = oldest + 60_000 - now + 100
+        logger.debug({ waitMs }, 'Rate limit reached, aguardando janela de 60s...')
+        await new Promise(resolve => setTimeout(resolve, waitMs))
+      }
+
+      const after = Date.now()
+      this.requestTimestamps = this.requestTimestamps.filter(t => t > after - 60_000)
+    }
+
+    this.requestTimestamps.push(Date.now())
+  }
+
+  // Returns parsed JSON body AND raw response headers so callers can read
+  // MemberKit's pagination headers (Total-Pages, Current-Page, Total-Count).
+  private async get<T>(
+    path: string,
+    params: Record<string, string | number> = {},
+    retries = 3,
+  ): Promise<{ data: T; headers: Headers }> {
+    await this.throttle()
+
     const url = new URL(`${this.baseUrl}${path}`)
     url.searchParams.set('api_key', this.apiKey)
 
@@ -138,6 +214,14 @@ export class MemberKitClient {
       headers: { Accept: 'application/json' },
     })
 
+    if (response.status === 429) {
+      const retryAfterHeader = response.headers.get('Retry-After')
+      const waitMs = retryAfterHeader ? parseInt(retryAfterHeader, 10) * 1000 : 60_000
+      logger.warn({ path, waitMs, retriesLeft: retries }, 'Rate limited (429), aguardando...')
+      await new Promise(resolve => setTimeout(resolve, waitMs))
+      if (retries > 0) return this.get<T>(path, params, retries - 1)
+    }
+
     if (!response.ok) {
       const body = await response.text().catch(() => '')
       throw new MemberKitApiError(
@@ -146,72 +230,119 @@ export class MemberKitClient {
       )
     }
 
-    return response.json() as Promise<T>
+    return { data: await response.json() as T, headers: response.headers }
+  }
+
+  // Reads MemberKit's pagination headers into a PaginationMeta object.
+  private parseMeta(headers: Headers, page: number, itemCount: number): PaginationMeta {
+    return {
+      current_page: parseInt(headers.get('Current-Page') ?? String(page), 10),
+      total_pages: parseInt(headers.get('Total-Pages') ?? '1', 10),
+      total_count: parseInt(headers.get('Total-Count') ?? String(itemCount), 10),
+    }
   }
 
   // --------------------------------------------------------------------------
-  // Courses (retorna catálogo completo com sections e lessons embutidos)
+  // Courses — handles pagination internally, returns full nested data.
+  // Supports both a plain array response and a paginated { courses, total_pages } wrapper.
   // --------------------------------------------------------------------------
   async getCourses(): Promise<MKCourse[]> {
-    return this.get<MKCourse[]>('/courses')
+    const { data: firstPage, headers: firstHeaders } = await this.get<MKCourse[] | MKCoursesResponse>('/courses', { page: 1, per_page: 100 })
+
+    const normalize = (c: MKCourse): MKCourse => ({
+      ...c,
+      sections: (c.sections ?? []).map(s => ({ ...s, lessons: s.lessons ?? [] })),
+    })
+
+    // API returned a plain array — pagination info comes from headers
+    if (Array.isArray(firstPage)) {
+      const meta = this.parseMeta(firstHeaders, 1, firstPage.length)
+      const all: MKCourse[] = firstPage.map(normalize)
+
+      for (let page = 2; page <= meta.total_pages; page++) {
+        const { data } = await this.get<MKCourse[]>('/courses', { page, per_page: 100 })
+        all.push(...(Array.isArray(data) ? data : []).map(normalize))
+      }
+
+      return all
+    }
+
+    // API returned a paginated wrapper
+    const all: MKCourse[] = firstPage.courses.map(normalize)
+    let page = 2
+
+    while (page <= firstPage.total_pages) {
+      const { data } = await this.get<MKCoursesResponse>('/courses', { page, per_page: 100 })
+      all.push(...data.courses.map(normalize))
+      page++
+    }
+
+    return all
   }
 
   // --------------------------------------------------------------------------
-  // Classrooms / Member Areas
+  // Classrooms — endpoint: /classrooms
   // --------------------------------------------------------------------------
   async getClassrooms(): Promise<MKClassroom[]> {
-    return this.get<MKClassroom[]>('/member_areas')
+    const { data } = await this.get<MKClassroom[]>('/classrooms')
+    return data
   }
 
   // --------------------------------------------------------------------------
-  // Plans / Membership Levels (inclui classrooms vinculadas)
+  // Membership Levels — endpoint: /membership_levels (each has classroom_ids)
   // --------------------------------------------------------------------------
-  async getPlans(): Promise<MKPlan[]> {
-    return this.get<MKPlan[]>('/plans')
+  async getMembershipLevels(): Promise<MKMembershipLevel[]> {
+    const { data } = await this.get<MKMembershipLevel[]>('/membership_levels')
+    return data
   }
 
   // --------------------------------------------------------------------------
-  // Members (paginado)
+  // Users (paginado) — endpoint: /users
+  // Pagination metadata comes from response headers, not the JSON body.
   // --------------------------------------------------------------------------
-  async getMembers(page: number, perPage: number): Promise<{ items: MKMember[]; meta: PaginationMeta }> {
-    const data = await this.get<MKMembersResponse>('/members', { page, per_page: perPage })
+  async getUsers(page: number, perPage: number): Promise<{ items: MKUser[]; meta: PaginationMeta }> {
+    const { data, headers } = await this.get<MKUser[]>('/users', { page, per_page: perPage })
+    const items = Array.isArray(data) ? data : []
+    return { items, meta: this.parseMeta(headers, page, items.length) }
+  }
+
+  // --------------------------------------------------------------------------
+  // Memberships / Subscriptions (paginado) — endpoint: /memberships
+  // Pagination metadata comes from response headers, not the JSON body.
+  // --------------------------------------------------------------------------
+  async getMemberships(page: number, perPage: number): Promise<{ items: MKMembership[]; meta: PaginationMeta }> {
+    const { data, headers } = await this.get<MKMembership[]>('/memberships', { page, per_page: perPage })
+    const items = Array.isArray(data) ? data : []
+    return { items, meta: this.parseMeta(headers, page, items.length) }
+  }
+
+  // --------------------------------------------------------------------------
+  // User Detail — endpoint: /users/{id}
+  // Returns full user profile including inline enrollments[].
+  // This is the correct way to get a user's enrollments — there is no
+  // standalone /enrollments endpoint in the MemberKit API.
+  // --------------------------------------------------------------------------
+  async getUserDetail(userId: number): Promise<MKUserDetail> {
+    const { data } = await this.get<MKUserDetail>(`/users/${userId}`)
     return {
-      items: data.members,
-      meta: {
-        current_page: data.current_page,
-        total_pages: data.total_pages,
-        total_count: data.total_count,
-      },
+      ...data,
+      enrollments: data.enrollments ?? [],
     }
   }
 
   // --------------------------------------------------------------------------
-  // Subscriptions / Memberships (paginado)
+  // User Activities (paginado) — endpoint: /users/{user_id}/activities
   // --------------------------------------------------------------------------
-  async getSubscriptions(page: number, perPage: number): Promise<{ items: MKSubscription[]; meta: PaginationMeta }> {
-    const data = await this.get<MKSubscriptionsResponse>('/subscriptions', { page, per_page: perPage })
-    return {
-      items: data.subscriptions,
-      meta: {
-        current_page: data.current_page,
-        total_pages: data.total_pages,
-        total_count: data.total_count,
-      },
-    }
-  }
-
-  // --------------------------------------------------------------------------
-  // Enrollments (paginado)
-  // --------------------------------------------------------------------------
-  async getEnrollments(page: number, perPage: number): Promise<{ items: MKEnrollment[]; meta: PaginationMeta }> {
-    const data = await this.get<MKEnrollmentsResponse>('/enrollments', { page, per_page: perPage })
-    return {
-      items: data.enrollments,
-      meta: {
-        current_page: data.current_page,
-        total_pages: data.total_pages,
-        total_count: data.total_count,
-      },
-    }
+  async getUserActivities(
+    userId: number,
+    page: number,
+    perPage: number,
+  ): Promise<{ items: MKUserActivity[]; meta: PaginationMeta }> {
+    const { data, headers } = await this.get<MKUserActivity[]>(
+      `/users/${userId}/activities`,
+      { page, per_page: perPage },
+    )
+    const items = Array.isArray(data) ? data : []
+    return { items, meta: this.parseMeta(headers, page, items.length) }
   }
 }

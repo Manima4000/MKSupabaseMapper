@@ -41,6 +41,9 @@ vi.mock('../../modules/enrollments/enrollment.mapper.js', () => ({
   mkEnrollmentToUpsertInput: vi.fn((mk, userId, courseId, classroomId) => ({
     mkId: mk.id, userId, courseId, classroomId,
   })),
+  mkUserEnrollmentToUpsertInput: vi.fn((mk, userId, courseId, classroomId) => ({
+    mkId: null, userId, courseId, classroomId,
+  })),
 }))
 
 vi.mock('../../modules/users/user.repository.js', () => ({
@@ -89,10 +92,10 @@ function makeMockClient() {
   return {
     getCourses: vi.fn().mockResolvedValue([]),
     getClassrooms: vi.fn().mockResolvedValue([]),
-    getPlans: vi.fn().mockResolvedValue([]),
-    getMembers: vi.fn(),
-    getSubscriptions: vi.fn(),
-    getEnrollments: vi.fn(),
+    getMembershipLevels: vi.fn().mockResolvedValue([]),
+    getUsers: vi.fn(),
+    getMemberships: vi.fn(),
+    getUserDetail: vi.fn().mockResolvedValue({ enrollments: [] }),
   }
 }
 
@@ -107,7 +110,7 @@ describe('SyncOrchestrator.run()', () => {
     mockFetchAllPages.mockResolvedValue([])
   })
 
-  it('calls all 6 sync stages when client returns empty data', async () => {
+  it('calls all sync stages when client returns empty data', async () => {
     const client = makeMockClient()
     const orchestrator = new SyncOrchestrator(client as never)
 
@@ -115,9 +118,11 @@ describe('SyncOrchestrator.run()', () => {
 
     expect(client.getCourses).toHaveBeenCalledOnce()
     expect(client.getClassrooms).toHaveBeenCalledOnce()
-    expect(client.getPlans).toHaveBeenCalledOnce()
-    // fetchAllPages is used for members, subscriptions, enrollments
-    expect(mockFetchAllPages).toHaveBeenCalledTimes(3)
+    expect(client.getMembershipLevels).toHaveBeenCalledOnce()
+    // fetchAllPages is used for members and subscriptions only
+    expect(mockFetchAllPages).toHaveBeenCalledTimes(2)
+    // getUserDetail is not called when there are no members
+    expect(client.getUserDetail).not.toHaveBeenCalled()
   })
 
   describe('syncCatalog', () => {
@@ -128,7 +133,7 @@ describe('SyncOrchestrator.run()', () => {
         { id: 2, name: 'Curso B', position: 2, category: null, sections: [] },
       ]
       client.getCourses.mockResolvedValue(courses)
-      mockSyncCourse.mockResolvedValue(undefined)
+      mockSyncCourse.mockResolvedValue(undefined as never)
 
       const orchestrator = new SyncOrchestrator(client as never)
       await orchestrator.run()
@@ -146,7 +151,7 @@ describe('SyncOrchestrator.run()', () => {
       ])
       mockSyncCourse
         .mockRejectedValueOnce(new Error('API error'))
-        .mockResolvedValueOnce(undefined)
+        .mockResolvedValueOnce(undefined as never)
 
       const orchestrator = new SyncOrchestrator(client as never)
       await expect(orchestrator.run()).resolves.toBeUndefined()
@@ -162,7 +167,7 @@ describe('SyncOrchestrator.run()', () => {
         { id: 10, name: 'Turma ESA' },
         { id: 11, name: 'Turma EsSA' },
       ])
-      mockUpsertClassroom.mockResolvedValue(undefined)
+      mockUpsertClassroom.mockResolvedValue(undefined as never)
 
       const orchestrator = new SyncOrchestrator(client as never)
       await orchestrator.run()
@@ -174,11 +179,11 @@ describe('SyncOrchestrator.run()', () => {
   describe('syncPlans', () => {
     it('calls syncPlan once per plan', async () => {
       const client = makeMockClient()
-      client.getPlans.mockResolvedValue([
-        { id: 1, name: 'Plano A', trial_period: 0, member_areas: [] },
-        { id: 2, name: 'Plano B', trial_period: 7, member_areas: [] },
+      client.getMembershipLevels.mockResolvedValue([
+        { id: 1, name: 'Plano A', trial_period: 0, classroom_ids: [] },
+        { id: 2, name: 'Plano B', trial_period: 7, classroom_ids: [] },
       ])
-      mockSyncPlan.mockResolvedValue(undefined)
+      mockSyncPlan.mockResolvedValue(undefined as never)
 
       const orchestrator = new SyncOrchestrator(client as never)
       await orchestrator.run()
@@ -194,12 +199,10 @@ describe('SyncOrchestrator.run()', () => {
         { id: 1, name: 'Alice', email: 'alice@test.com', blocked: false, unlimited: false, sign_in_count: 1, current_sign_in_at: null, last_seen_at: null, meta: {} },
         { id: 2, name: 'Bob', email: 'bob@test.com', blocked: false, unlimited: false, sign_in_count: 0, current_sign_in_at: null, last_seen_at: null, meta: {} },
       ]
-      // fetchAllPages is called three times (members, subscriptions, enrollments)
       mockFetchAllPages
-        .mockResolvedValueOnce(members)   // members call
-        .mockResolvedValueOnce([])         // subscriptions call
-        .mockResolvedValueOnce([])         // enrollments call
-      mockSyncUser.mockResolvedValue(undefined)
+        .mockResolvedValueOnce(members)  // members call
+        .mockResolvedValueOnce([])        // subscriptions call
+      mockSyncUser.mockResolvedValue(undefined as never)
 
       const orchestrator = new SyncOrchestrator(client as never)
       await orchestrator.run()
@@ -216,10 +219,9 @@ describe('SyncOrchestrator.run()', () => {
       mockFetchAllPages
         .mockResolvedValueOnce(members)
         .mockResolvedValueOnce([])
-        .mockResolvedValueOnce([])
       mockSyncUser
         .mockRejectedValueOnce(new Error('timeout'))
-        .mockResolvedValueOnce(undefined)
+        .mockResolvedValueOnce(undefined as never)
 
       const orchestrator = new SyncOrchestrator(client as never)
       await expect(orchestrator.run()).resolves.toBeUndefined()
@@ -235,10 +237,9 @@ describe('SyncOrchestrator.run()', () => {
       mockFetchAllPages
         .mockResolvedValueOnce([])   // members
         .mockResolvedValueOnce(subs) // subscriptions
-        .mockResolvedValueOnce([])   // enrollments
       mockGetUserByMkId.mockResolvedValue({ id: 10 } as never)
       mockGetMembershipLevelByMkId.mockResolvedValue({ id: 20 } as never)
-      mockSyncSubscription.mockResolvedValue(undefined)
+      mockSyncSubscription.mockResolvedValue(undefined as never)
 
       const orchestrator = new SyncOrchestrator(client as never)
       await orchestrator.run()
@@ -251,7 +252,6 @@ describe('SyncOrchestrator.run()', () => {
       mockFetchAllPages
         .mockResolvedValueOnce([])
         .mockResolvedValueOnce([{ id: 1, member_id: 99, plan_id: 2, status: 'active', expire_at: null }])
-        .mockResolvedValueOnce([])
       mockGetUserByMkId.mockResolvedValue(null)
 
       const orchestrator = new SyncOrchestrator(client as never)
@@ -262,30 +262,46 @@ describe('SyncOrchestrator.run()', () => {
   })
 
   describe('syncEnrollments', () => {
-    it('calls upsertEnrollment when user, course and classroom are found', async () => {
+    it('calls getUserDetail once per member and upsertEnrollment per enrollment', async () => {
       const client = makeMockClient()
-      const enrollments = [{ id: 500, member_id: 1, course_id: 2, member_area_id: 3, status: 'active', expire_at: null }]
+      const members = [
+        { id: 1, name: 'Alice', email: 'alice@test.com', blocked: false, unlimited: false, sign_in_count: 1, current_sign_in_at: null, last_seen_at: null, meta: {} },
+      ]
       mockFetchAllPages
-        .mockResolvedValueOnce([])           // members
-        .mockResolvedValueOnce([])           // subscriptions
-        .mockResolvedValueOnce(enrollments)  // enrollments
+        .mockResolvedValueOnce(members)  // members
+        .mockResolvedValueOnce([])        // subscriptions
+      mockSyncUser.mockResolvedValue(undefined as never)
+
+      const enrollments = [
+        { status: 'active', course_id: 2, classroom_id: 3, expire_date: null },
+      ]
+      client.getUserDetail.mockResolvedValue({ ...members[0], enrollments })
       mockGetUserByMkId.mockResolvedValue({ id: 10 } as never)
       mockGetCourseByMkId.mockResolvedValue({ id: 20 } as never)
       mockGetClassroomByMkId.mockResolvedValue({ id: 30 } as never)
-      mockUpsertEnrollment.mockResolvedValue(undefined)
+      mockUpsertEnrollment.mockResolvedValue(undefined as never)
 
       const orchestrator = new SyncOrchestrator(client as never)
       await orchestrator.run()
 
+      expect(client.getUserDetail).toHaveBeenCalledWith(1)
       expect(mockUpsertEnrollment).toHaveBeenCalledOnce()
     })
 
-    it('skips enrollment when course is not found', async () => {
+    it('skips enrollments when course is not found', async () => {
       const client = makeMockClient()
+      const members = [
+        { id: 1, name: 'Alice', email: 'alice@test.com', blocked: false, unlimited: false, sign_in_count: 1, current_sign_in_at: null, last_seen_at: null, meta: {} },
+      ]
       mockFetchAllPages
+        .mockResolvedValueOnce(members)
         .mockResolvedValueOnce([])
-        .mockResolvedValueOnce([])
-        .mockResolvedValueOnce([{ id: 1, member_id: 1, course_id: 999, member_area_id: null, status: 'active', expire_at: null }])
+      mockSyncUser.mockResolvedValue(undefined as never)
+
+      client.getUserDetail.mockResolvedValue({
+        ...members[0],
+        enrollments: [{ status: 'active', course_id: 999, classroom_id: null, expire_date: null }],
+      })
       mockGetUserByMkId.mockResolvedValue({ id: 10 } as never)
       mockGetCourseByMkId.mockResolvedValue(null)
 
@@ -295,15 +311,45 @@ describe('SyncOrchestrator.run()', () => {
       expect(mockUpsertEnrollment).not.toHaveBeenCalled()
     })
 
-    it('handles null member_area_id (no classroom lookup)', async () => {
+    it('skips all enrollments when user is not found in DB', async () => {
       const client = makeMockClient()
+      const members = [
+        { id: 1, name: 'Alice', email: 'alice@test.com', blocked: false, unlimited: false, sign_in_count: 1, current_sign_in_at: null, last_seen_at: null, meta: {} },
+      ]
       mockFetchAllPages
+        .mockResolvedValueOnce(members)
         .mockResolvedValueOnce([])
+      mockSyncUser.mockResolvedValue(undefined as never)
+
+      client.getUserDetail.mockResolvedValue({
+        ...members[0],
+        enrollments: [{ status: 'active', course_id: 2, classroom_id: null, expire_date: null }],
+      })
+      mockGetUserByMkId.mockResolvedValue(null)
+
+      const orchestrator = new SyncOrchestrator(client as never)
+      await orchestrator.run()
+
+      expect(mockUpsertEnrollment).not.toHaveBeenCalled()
+    })
+
+    it('handles null classroom_id (no classroom lookup)', async () => {
+      const client = makeMockClient()
+      const members = [
+        { id: 1, name: 'Alice', email: 'alice@test.com', blocked: false, unlimited: false, sign_in_count: 1, current_sign_in_at: null, last_seen_at: null, meta: {} },
+      ]
+      mockFetchAllPages
+        .mockResolvedValueOnce(members)
         .mockResolvedValueOnce([])
-        .mockResolvedValueOnce([{ id: 1, member_id: 1, course_id: 2, member_area_id: null, status: 'active', expire_at: null }])
+      mockSyncUser.mockResolvedValue(undefined as never)
+
+      client.getUserDetail.mockResolvedValue({
+        ...members[0],
+        enrollments: [{ status: 'active', course_id: 2, classroom_id: null, expire_date: null }],
+      })
       mockGetUserByMkId.mockResolvedValue({ id: 10 } as never)
       mockGetCourseByMkId.mockResolvedValue({ id: 20 } as never)
-      mockUpsertEnrollment.mockResolvedValue(undefined)
+      mockUpsertEnrollment.mockResolvedValue(undefined as never)
 
       const orchestrator = new SyncOrchestrator(client as never)
       await orchestrator.run()

@@ -5,11 +5,22 @@ import type {
   MembershipLevelInsert,
   MembershipStatus,
 } from '../../shared/types.js'
-import type { MKSubscription, MKPlan } from '../../sync/memberkit-api.client.js'
+import type { MKMembershipLevel } from '../../sync/memberkit-api.client.js'
 
 export type { Membership, MembershipInsert, MembershipLevel, MembershipLevelInsert, MembershipStatus }
-export type MKSubscriptionPayload = MKSubscription
-export type MKPlanPayload = MKPlan
+
+// Minimal interface accepted by the subscription mapper.
+// Satisfied by both the REST API response (MKMembership) and webhook payloads
+// (MKSubscriptionWebhookData), which use different field names for the expire
+// date. The mapper handles both via dynamic field access.
+export interface MKSubscriptionPayload {
+  id: number
+  status: string
+  expire_date?: string | null
+  expire_at?: string | null
+}
+
+export type MKPlanPayload = MKMembershipLevel
 
 export interface UpsertMembershipLevelInput {
   mkId: number

@@ -18,7 +18,7 @@ export async function fetchAllPages<T>(
 
   do {
     const { items, meta } = await fetcher(client, page, perPage)
-    all.push(...items)
+    all.push(...(items ?? []))
 
     if (page >= meta.total_pages) break
     page++

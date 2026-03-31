@@ -1,5 +1,5 @@
 import type { FastifyInstance } from 'fastify'
-import { validateWebhookSignature, parseWebhookBody } from './webhook.validator.js'
+import { validateApiKey, parseWebhookBody } from './webhook.validator.js'
 import { dispatchWebhook } from './webhook.handler.js'
 import { logger } from '../shared/logger.js'
 import { WebhookValidationError } from '../shared/errors.js'
@@ -7,16 +7,11 @@ import { WebhookValidationError } from '../shared/errors.js'
 export async function webhookRoutes(fastify: FastifyInstance): Promise<void> {
   // POST /webhooks/memberkit
   // Recebe eventos da MemberKit e os processa de forma assíncrona
-  fastify.post('/memberkit', {
-    config: { rawBody: true }, // necessário para validar assinatura HMAC
-  }, async (request, reply) => {
+  fastify.post('/memberkit', async (request, reply) => {
     try {
-      // Valida assinatura (se WEBHOOK_SECRET estiver configurado)
-      const signature = request.headers['x-memberkit-signature'] as string | undefined
-        ?? request.headers['x-hub-signature-256'] as string | undefined
-
-      const rawBody = (request.body as string | undefined) ?? JSON.stringify(request.body)
-      validateWebhookSignature(rawBody, signature)
+      // Valida api_key na query string (se WEBHOOK_API_KEY estiver configurado)
+      const { api_key } = request.query as Record<string, string | undefined>
+      validateApiKey(api_key)
 
       // Faz parse e valida o envelope
       const envelope = parseWebhookBody(request.body)

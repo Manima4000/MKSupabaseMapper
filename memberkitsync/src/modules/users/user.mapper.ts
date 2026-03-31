@@ -3,7 +3,7 @@ import type { MKUserPayload, UpsertUserInput } from './user.types.js'
 export function mkMemberToUpsertInput(mk: MKUserPayload): UpsertUserInput {
   return {
     mkId: mk.id,
-    fullName: mk.name,
+    fullName: mk.full_name ?? mk.email,
     email: mk.email,
     blocked: mk.blocked,
     unlimited: mk.unlimited,

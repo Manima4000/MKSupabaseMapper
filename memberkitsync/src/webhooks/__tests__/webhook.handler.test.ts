@@ -142,7 +142,7 @@ describe('dispatchWebhook', () => {
     it('calls syncSubscription when user and level exist', async () => {
       mockGetUserByMkId.mockResolvedValue({ id: 10, mk_id: 5 } as never)
       mockGetMembershipLevelByMkId.mockResolvedValue({ id: 20, mk_id: 7 } as never)
-      mockSyncSubscription.mockResolvedValue(undefined)
+      mockSyncSubscription.mockResolvedValue(undefined as never)
 
       await dispatchWebhook({ event: 'subscription.created', fired_at: '2024-01-01T00:00:00Z', data: subData })
 
@@ -175,7 +175,7 @@ describe('dispatchWebhook', () => {
       mockGetUserByMkId.mockResolvedValue({ id: 10 } as never)
       mockGetCourseByMkId.mockResolvedValue({ id: 20 } as never)
       mockGetClassroomByMkId.mockResolvedValue({ id: 30 } as never)
-      mockUpsertEnrollment.mockResolvedValue(undefined)
+      mockUpsertEnrollment.mockResolvedValue(undefined as never)
 
       await dispatchWebhook({ event: 'enrollment.created', fired_at: '2024-01-01T00:00:00Z', data: enrollData })
 
@@ -203,7 +203,7 @@ describe('dispatchWebhook', () => {
     it('proceeds without classroom when member_area_id is null', async () => {
       mockGetUserByMkId.mockResolvedValue({ id: 10 } as never)
       mockGetCourseByMkId.mockResolvedValue({ id: 20 } as never)
-      mockUpsertEnrollment.mockResolvedValue(undefined)
+      mockUpsertEnrollment.mockResolvedValue(undefined as never)
 
       await dispatchWebhook({
         event: 'enrollment.created',
@@ -222,8 +222,8 @@ describe('dispatchWebhook', () => {
     it('calls handleLessonProgress and logUserActivity when user and lesson exist', async () => {
       mockGetUserByMkId.mockResolvedValue({ id: 10 } as never)
       mockGetLessonByMkId.mockResolvedValue({ id: 30 } as never)
-      mockHandleLessonProgress.mockResolvedValue(undefined)
-      mockLogUserActivity.mockResolvedValue(undefined)
+      mockHandleLessonProgress.mockResolvedValue(undefined as never)
+      mockLogUserActivity.mockResolvedValue(undefined as never)
 
       await dispatchWebhook({ event: 'lesson_status_saved', fired_at: '2024-01-01T00:00:00Z', data: lessonData })
 

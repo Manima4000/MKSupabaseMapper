@@ -4,7 +4,7 @@ import type { Enrollment, EnrollmentInsert, UpsertEnrollmentInput } from './enro
 
 export async function upsertEnrollment(input: UpsertEnrollmentInput): Promise<Enrollment> {
   const row: EnrollmentInsert = {
-    mk_id: input.mkId,
+    mk_id: input.mkId ?? null,
     user_id: input.userId,
     course_id: input.courseId,
     classroom_id: input.classroomId,
@@ -12,13 +12,17 @@ export async function upsertEnrollment(input: UpsertEnrollmentInput): Promise<En
     expire_date: input.expireDate,
   }
 
+  // Webhook path: conflict on mk_id (the enrollment has a known MemberKit ID).
+  // Sync path: conflict on (user_id, course_id) since inline enrollments have no ID.
+  const onConflict = input.mkId != null ? 'mk_id' : 'user_id, course_id'
+
   const { data, error } = await supabase
     .from('enrollments')
-    .upsert(row, { onConflict: 'mk_id' })
+    .upsert(row, { onConflict })
     .select()
     .single()
 
-  if (error) throw new SupabaseError(`Falha ao upsert enrollment mk_id=${input.mkId}`, error)
+  if (error) throw new SupabaseError(`Falha ao upsert enrollment user_id=${input.userId} course_id=${input.courseId}`, error)
   return data as Enrollment
 }
 

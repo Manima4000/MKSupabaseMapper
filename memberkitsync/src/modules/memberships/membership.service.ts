@@ -1,17 +1,20 @@
 import { logger } from '../../shared/logger.js'
 import { mkPlanToUpsertInput, mkSubscriptionToUpsertInput } from './membership.mapper.js'
 import { upsertMembershipLevel, upsertMembership } from './membership.repository.js'
-import { linkMembershipLevelToClassroom, upsertClassroom } from '../classrooms/classroom.repository.js'
-import { mkClassroomToUpsertInput } from '../classrooms/classroom.mapper.js'
+import { linkMembershipLevelToClassroom, getClassroomByMkId } from '../classrooms/classroom.repository.js'
 import type { MKPlanPayload, MKSubscriptionPayload, Membership, MembershipLevel } from './membership.types.js'
 
-// Sincroniza um plano com suas turmas vinculadas
+// Sincroniza um nível de assinatura e vincula às classrooms já sincronizadas
 export async function syncPlan(mkPlan: MKPlanPayload): Promise<MembershipLevel> {
   const level = await upsertMembershipLevel(mkPlanToUpsertInput(mkPlan))
   logger.debug({ mkId: mkPlan.id, levelId: level.id }, 'MembershipLevel sincronizado')
 
-  for (const mkClassroom of mkPlan.member_areas) {
-    const classroom = await upsertClassroom(mkClassroomToUpsertInput(mkClassroom))
+  for (const classroomMkId of mkPlan.classroom_ids ?? []) {
+    const classroom = await getClassroomByMkId(classroomMkId)
+    if (!classroom) {
+      logger.warn({ classroomMkId }, 'Classroom não encontrada para vincular ao plano, pulando')
+      continue
+    }
     await linkMembershipLevelToClassroom(level.id, classroom.id)
   }
 

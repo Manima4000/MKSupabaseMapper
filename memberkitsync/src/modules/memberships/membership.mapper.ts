@@ -30,11 +30,15 @@ export function mkSubscriptionToUpsertInput(
   userId: number,
   membershipLevelId: number,
 ): UpsertMembershipInput {
+  // REST API uses expire_date; webhook payloads may use expire_at
+  const expireDate = (mk as unknown as Record<string, unknown>)['expire_date'] as string | null | undefined
+    ?? (mk as unknown as Record<string, unknown>)['expire_at'] as string | null | undefined
+    ?? null
   return {
     mkId: mk.id,
     userId,
     membershipLevelId,
     status: normalizeStatus(mk.status),
-    expireDate: mk.expire_at ?? null,
+    expireDate,
   }
 }
