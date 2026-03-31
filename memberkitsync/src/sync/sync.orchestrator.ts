@@ -36,7 +36,7 @@ export class SyncOrchestrator {
   // --------------------------------------------------------------------------
   // 1. Catálogo: courses + categories + sections + lessons + vídeos/arquivos
   // --------------------------------------------------------------------------
-  private async syncCatalog(): Promise<void> {
+  async syncCatalog(): Promise<void> {
     logger.info('Sincronizando catálogo de cursos...')
     const courses = await this.client.getCourses()
     logger.info({ count: courses.length }, 'Cursos encontrados')
@@ -53,7 +53,7 @@ export class SyncOrchestrator {
   // --------------------------------------------------------------------------
   // 2. Classrooms / Member Areas
   // --------------------------------------------------------------------------
-  private async syncClassrooms(): Promise<void> {
+  async syncClassrooms(): Promise<void> {
     logger.info('Sincronizando classrooms...')
     const classrooms = await this.client.getClassrooms()
 
@@ -66,7 +66,7 @@ export class SyncOrchestrator {
   // --------------------------------------------------------------------------
   // 3. Membership Levels (vincula classrooms já sincronizadas)
   // --------------------------------------------------------------------------
-  private async syncPlans(): Promise<void> {
+  async syncPlans(): Promise<void> {
     logger.info('Sincronizando níveis de assinatura...')
     const levels = await this.client.getMembershipLevels()
 
@@ -79,7 +79,7 @@ export class SyncOrchestrator {
   // --------------------------------------------------------------------------
   // 4. Members / Users (paginado) — returns the list for use in syncEnrollments
   // --------------------------------------------------------------------------
-  private async syncMembers(): Promise<MKUser[]> {
+  async syncMembers(): Promise<MKUser[]> {
     logger.info('Sincronizando membros...')
     const members = await fetchAllPages(
       (client, page, perPage) => client.getUsers(page, perPage),
@@ -102,7 +102,7 @@ export class SyncOrchestrator {
   // --------------------------------------------------------------------------
   // 5. Subscriptions / Memberships (paginado)
   // --------------------------------------------------------------------------
-  private async syncSubscriptions(): Promise<void> {
+  async syncSubscriptions(): Promise<void> {
     logger.info('Sincronizando assinaturas...')
     const subs = await fetchAllPages(
       (client, page, perPage) => client.getMemberships(page, perPage),
@@ -136,8 +136,15 @@ export class SyncOrchestrator {
   // --------------------------------------------------------------------------
   // 6. Enrollments — fetched per-user from GET /users/{id}
   // There is no standalone /enrollments endpoint in the MemberKit API.
+  // When called standalone (no members passed), fetches members from API.
   // --------------------------------------------------------------------------
-  private async syncEnrollments(members: MKUser[]): Promise<void> {
+  async syncEnrollments(members?: MKUser[]): Promise<void> {
+    if (!members) {
+      members = await fetchAllPages(
+        (client, page, perPage) => client.getUsers(page, perPage),
+        this.client,
+      )
+    }
     logger.info('Sincronizando matrículas...')
     let total = 0
     let synced = 0

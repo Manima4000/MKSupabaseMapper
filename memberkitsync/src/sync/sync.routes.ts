@@ -6,39 +6,106 @@ import { env } from '../config/env.js'
 
 // Controle de execução para evitar syncs simultâneos
 let syncRunning = false
+let currentSyncJob: string | null = null
+
+function validateApiKey(request: { query: unknown }, reply: { code: (n: number) => { send: (v: unknown) => unknown } }): boolean {
+  const { api_key } = request.query as Record<string, string | undefined>
+  if (env.WEBHOOK_API_KEY && api_key !== env.WEBHOOK_API_KEY) {
+    reply.code(401).send({ error: 'api_key inválido ou ausente' })
+    return false
+  }
+  return true
+}
+
+function checkConflict(reply: { code: (n: number) => { send: (v: unknown) => unknown } }): boolean {
+  if (syncRunning) {
+    reply.code(409).send({ error: `Sync já em andamento: ${currentSyncJob}` })
+    return false
+  }
+  return true
+}
+
+function runSync(job: string, fn: (orchestrator: SyncOrchestrator) => Promise<unknown>): void {
+  syncRunning = true
+  currentSyncJob = job
+  const client = new MemberKitClient()
+  const orchestrator = new SyncOrchestrator(client)
+
+  fn(orchestrator)
+    .then(() => logger.info({ job }, 'Sync parcial concluído com sucesso'))
+    .catch((err: unknown) => logger.error({ job, err }, 'Sync parcial falhou'))
+    .finally(() => {
+      syncRunning = false
+      currentSyncJob = null
+    })
+}
 
 export async function syncRoutes(fastify: FastifyInstance): Promise<void> {
-  // POST /api/sync
-  // Dispara o sync completo MemberKit → Supabase de forma assíncrona
-  // Protegido pelo mesmo WEBHOOK_API_KEY usado nos webhooks
-  fastify.post('/sync', async (request, reply) => {
-    // Valida api_key na query string
-    const { api_key } = request.query as Record<string, string | undefined>
-
-    if (env.WEBHOOK_API_KEY && api_key !== env.WEBHOOK_API_KEY) {
-      return reply.code(401).send({ error: 'api_key inválido ou ausente' })
-    }
-
-    if (syncRunning) {
-      return reply.code(409).send({ error: 'Sync já em andamento' })
-    }
-
-    // Responde imediatamente e roda o sync em background
-    reply.code(202).send({ ok: true, message: 'Sync iniciado em background' })
-
-    syncRunning = true
-    const client = new MemberKitClient()
-    const orchestrator = new SyncOrchestrator(client)
-
-    orchestrator.run()
-      .then(() => logger.info('Sync via API concluído com sucesso'))
-      .catch((err: unknown) => logger.error({ err }, 'Sync via API falhou'))
-      .finally(() => { syncRunning = false })
+  // GET /api/sync/status
+  fastify.get('/sync/status', async (_request, reply) => {
+    reply.send({ running: syncRunning, job: currentSyncJob })
   })
 
-  // GET /api/sync/status
-  // Verifica se um sync está em andamento
-  fastify.get('/sync/status', async (_request, reply) => {
-    reply.send({ running: syncRunning })
+  // POST /api/sync — sync completo
+  fastify.post('/sync', async (request, reply) => {
+    if (!validateApiKey(request, reply)) return
+    if (!checkConflict(reply)) return
+
+    reply.code(202).send({ ok: true, message: 'Sync completo iniciado em background' })
+    runSync('full', (o) => o.run())
+  })
+
+  // POST /api/sync/catalog — cursos, seções, aulas, vídeos, arquivos
+  fastify.post('/sync/catalog', async (request, reply) => {
+    if (!validateApiKey(request, reply)) return
+    if (!checkConflict(reply)) return
+
+    reply.code(202).send({ ok: true, message: 'Sync de catálogo iniciado em background' })
+    runSync('catalog', (o) => o.syncCatalog())
+  })
+
+  // POST /api/sync/classrooms — áreas de membros
+  fastify.post('/sync/classrooms', async (request, reply) => {
+    if (!validateApiKey(request, reply)) return
+    if (!checkConflict(reply)) return
+
+    reply.code(202).send({ ok: true, message: 'Sync de classrooms iniciado em background' })
+    runSync('classrooms', (o) => o.syncClassrooms())
+  })
+
+  // POST /api/sync/plans — planos de assinatura
+  fastify.post('/sync/plans', async (request, reply) => {
+    if (!validateApiKey(request, reply)) return
+    if (!checkConflict(reply)) return
+
+    reply.code(202).send({ ok: true, message: 'Sync de planos iniciado em background' })
+    runSync('plans', (o) => o.syncPlans())
+  })
+
+  // POST /api/sync/members — usuários/membros
+  fastify.post('/sync/members', async (request, reply) => {
+    if (!validateApiKey(request, reply)) return
+    if (!checkConflict(reply)) return
+
+    reply.code(202).send({ ok: true, message: 'Sync de membros iniciado em background' })
+    runSync('members', (o) => o.syncMembers())
+  })
+
+  // POST /api/sync/subscriptions — assinaturas (requer membros + planos já sincronizados)
+  fastify.post('/sync/subscriptions', async (request, reply) => {
+    if (!validateApiKey(request, reply)) return
+    if (!checkConflict(reply)) return
+
+    reply.code(202).send({ ok: true, message: 'Sync de assinaturas iniciado em background' })
+    runSync('subscriptions', (o) => o.syncSubscriptions())
+  })
+
+  // POST /api/sync/enrollments — matrículas (requer membros + cursos + classrooms já sincronizados)
+  fastify.post('/sync/enrollments', async (request, reply) => {
+    if (!validateApiKey(request, reply)) return
+    if (!checkConflict(reply)) return
+
+    reply.code(202).send({ ok: true, message: 'Sync de matrículas iniciado em background' })
+    runSync('enrollments', (o) => o.syncEnrollments())
   })
 }
