@@ -27,7 +27,7 @@ export function mkVideoToUpsertInput(mk: MKLessonPayload, lessonId: number): Ups
 }
 
 export function mkFilesToUpsertInput(mk: MKLessonPayload, lessonId: number): UpsertLessonFileInput[] {
-  return mk.files.map((f) => ({
+  return (mk.files ?? []).map((f) => ({
     mkId: f.id ?? null,
     lessonId,
     filename: f.filename,

@@ -32,8 +32,8 @@ export interface MKLesson {
   title: string
   position: number
   slug: string | null
-  video: MKLessonVideo | null
-  files: MKLessonFile[]
+  video?: MKLessonVideo | null
+  files?: MKLessonFile[]
 }
 
 export interface MKSection {
@@ -243,41 +243,51 @@ export class MemberKitClient {
   }
 
   // --------------------------------------------------------------------------
-  // Courses — handles pagination internally, returns full nested data.
-  // Supports both a plain array response and a paginated { courses, total_pages } wrapper.
+  // Courses — two-step fetch:
+  //   1. GET /courses to get the paginated list of course IDs
+  //   2. GET /courses/{id} for each course to get sections + lessons
   // --------------------------------------------------------------------------
   async getCourses(): Promise<MKCourse[]> {
+    // Step 1: collect all course stubs (id + basic fields)
     const { data: firstPage, headers: firstHeaders } = await this.get<MKCourse[] | MKCoursesResponse>('/courses', { page: 1, per_page: 100 })
 
-    const normalize = (c: MKCourse): MKCourse => ({
-      ...c,
-      sections: (c.sections ?? []).map(s => ({ ...s, lessons: s.lessons ?? [] })),
-    })
+    const stubs: MKCourse[] = []
 
-    // API returned a plain array — pagination info comes from headers
     if (Array.isArray(firstPage)) {
       const meta = this.parseMeta(firstHeaders, 1, firstPage.length)
-      const all: MKCourse[] = firstPage.map(normalize)
-
+      stubs.push(...firstPage)
       for (let page = 2; page <= meta.total_pages; page++) {
         const { data } = await this.get<MKCourse[]>('/courses', { page, per_page: 100 })
-        all.push(...(Array.isArray(data) ? data : []).map(normalize))
+        stubs.push(...(Array.isArray(data) ? data : []))
       }
-
-      return all
+    } else {
+      stubs.push(...firstPage.courses)
+      for (let page = 2; page <= firstPage.total_pages; page++) {
+        const { data } = await this.get<MKCoursesResponse>('/courses', { page, per_page: 100 })
+        stubs.push(...data.courses)
+      }
     }
 
-    // API returned a paginated wrapper
-    const all: MKCourse[] = firstPage.courses.map(normalize)
-    let page = 2
-
-    while (page <= firstPage.total_pages) {
-      const { data } = await this.get<MKCoursesResponse>('/courses', { page, per_page: 100 })
-      all.push(...data.courses.map(normalize))
-      page++
+    // Step 2: fetch full detail (sections + lessons) for each course
+    const results: MKCourse[] = []
+    for (const stub of stubs) {
+      const course = await this.getCourseDetail(stub.id)
+      results.push(course)
     }
 
-    return all
+    return results
+  }
+
+  // --------------------------------------------------------------------------
+  // Course detail — endpoint: /courses/{id}
+  // Returns the course with its sections and nested lessons.
+  // --------------------------------------------------------------------------
+  async getCourseDetail(courseId: number): Promise<MKCourse> {
+    const { data } = await this.get<MKCourse>(`/courses/${courseId}`)
+    return {
+      ...data,
+      sections: (data.sections ?? []).map(s => ({ ...s, lessons: s.lessons ?? [] })),
+    }
   }
 
   // --------------------------------------------------------------------------
