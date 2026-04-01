@@ -64,19 +64,18 @@ describe('buildUserActivity', () => {
   })
 
   it('maps all fields including custom occurredAt', () => {
-    const payload = { lesson_id: 5, progress: 80 }
-    const result = buildUserActivity(42, 'lesson_status_saved', payload, '2024-03-10T08:00:00Z')
+    const result = buildUserActivity(42, 'lesson_status_saved', 5, '2024-03-10T08:00:00Z')
 
     expect(result).toEqual({
       userId: 42,
       eventType: 'lesson_status_saved',
-      payload,
+      mkLessonId: 5,
       occurredAt: '2024-03-10T08:00:00Z',
     })
   })
 
   it('defaults occurredAt to now when not provided', () => {
-    const result = buildUserActivity(1, 'member.created', {})
+    const result = buildUserActivity(1, 'member.created', null)
 
     expect(result.occurredAt).toBe('2024-03-15T09:00:00.000Z')
   })

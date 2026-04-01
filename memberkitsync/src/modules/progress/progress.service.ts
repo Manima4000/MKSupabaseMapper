@@ -25,9 +25,9 @@ export async function handleLessonProgress(payload: LessonProgressWebhookPayload
 export async function logUserActivity(
   userId: number,
   eventType: string,
-  rawPayload: Record<string, unknown>,
+  mkLessonId: number | null,
   occurredAt?: string,
 ): Promise<UserActivity> {
-  const input = buildUserActivity(userId, eventType, rawPayload, occurredAt)
+  const input = buildUserActivity(userId, eventType, mkLessonId, occurredAt)
   return createUserActivity(input)
 }

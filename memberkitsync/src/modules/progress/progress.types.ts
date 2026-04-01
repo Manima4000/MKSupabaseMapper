@@ -11,8 +11,11 @@ export interface UpsertLessonProgressInput {
 }
 
 export interface CreateUserActivityInput {
+  mkId?: number | null
   userId: number
   eventType: string
-  payload: Record<string, unknown>
+  mkCourseId?: number | null
+  mkLessonId?: number | null
+  trackable?: Record<string, unknown> | null
   occurredAt: string
 }

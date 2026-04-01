@@ -35,9 +35,12 @@ export async function upsertLessonProgress(input: UpsertLessonProgressInput): Pr
 
 export async function createUserActivity(input: CreateUserActivityInput): Promise<UserActivity> {
   const row: UserActivityInsert = {
+    mk_id: input.mkId ?? null,
     user_id: input.userId,
     event_type: input.eventType,
-    payload: input.payload,
+    mk_course_id: input.mkCourseId ?? null,
+    mk_lesson_id: input.mkLessonId ?? null,
+    trackable: input.trackable ?? null,
     occurred_at: input.occurredAt,
   }
 
@@ -49,6 +52,25 @@ export async function createUserActivity(input: CreateUserActivityInput): Promis
 
   if (error) throw new SupabaseError('Falha ao criar user_activity', error)
   return data as UserActivity
+}
+
+// Upsert por mk_id — usado pelo sync histórico para evitar duplicatas em re-runs
+export async function upsertUserActivityByMkId(input: CreateUserActivityInput): Promise<void> {
+  const row: UserActivityInsert = {
+    mk_id: input.mkId ?? null,
+    user_id: input.userId,
+    event_type: input.eventType,
+    mk_course_id: input.mkCourseId ?? null,
+    mk_lesson_id: input.mkLessonId ?? null,
+    trackable: input.trackable ?? null,
+    occurred_at: input.occurredAt,
+  }
+
+  const { error } = await supabase
+    .from('user_activities')
+    .upsert(row, { onConflict: 'mk_id' })
+
+  if (error) throw new SupabaseError('Falha ao upsert user_activity', error)
 }
 
 export async function getLessonProgressByUserAndLesson(

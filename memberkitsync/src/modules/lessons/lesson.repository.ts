@@ -77,3 +77,13 @@ export async function getLessonByMkId(mkId: number): Promise<Lesson | null> {
   if (error) throw new SupabaseError(`Falha ao buscar lesson mk_id=${mkId}`, error)
   return data as Lesson | null
 }
+
+export async function getAllLessons(): Promise<Pick<Lesson, 'id' | 'mk_id'>[]> {
+  const { data, error } = await supabase
+    .from('lessons')
+    .select('id, mk_id')
+    .order('id')
+
+  if (error) throw new SupabaseError('Falha ao buscar todas as lessons', error)
+  return data as Pick<Lesson, 'id' | 'mk_id'>[]
+}

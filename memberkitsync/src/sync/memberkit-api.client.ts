@@ -165,16 +165,24 @@ export class MemberKitClient {
   private readonly baseUrl: string
   private readonly apiKey: string
 
-  // Sliding-window rate limiter: max 115 requests per 60-second window
   private readonly maxRequestsPerMinute = 115
   private requestTimestamps: number[] = []
+  // Serializes concurrent throttle() calls to prevent race conditions where
+  // multiple parallel Promise.all branches all pass the rate-limit check
+  // before any of them records their timestamp.
+  private throttleQueue: Promise<void> = Promise.resolve()
 
   constructor(baseUrl = env.MEMBERKIT_API_URL, apiKey = env.MEMBERKIT_API_KEY) {
     this.baseUrl = baseUrl.replace(/\/$/, '')
     this.apiKey = apiKey
   }
 
-  private async throttle(): Promise<void> {
+  private throttle(): Promise<void> {
+    this.throttleQueue = this.throttleQueue.then(() => this.doThrottle())
+    return this.throttleQueue
+  }
+
+  private async doThrottle(): Promise<void> {
     const now = Date.now()
     const windowStart = now - 60_000
     this.requestTimestamps = this.requestTimestamps.filter(t => t > windowStart)
@@ -210,9 +218,15 @@ export class MemberKitClient {
       url.searchParams.set(key, String(value))
     }
 
+    const reqStart = Date.now()
+    logger.debug({ path, params }, `GET ${path}`)
+
     const response = await fetch(url.toString(), {
       headers: { Accept: 'application/json' },
     })
+
+    const ms = Date.now() - reqStart
+    logger.debug({ path, status: response.status, ms }, `GET ${path} → ${response.status} (${ms}ms)`)
 
     if (response.status === 429) {
       const retryAfterHeader = response.headers.get('Retry-After')
@@ -268,25 +282,60 @@ export class MemberKitClient {
       }
     }
 
-    // Step 2: fetch full detail (sections + lessons) for each course
-    const results: MKCourse[] = []
-    for (const stub of stubs) {
-      const course = await this.getCourseDetail(stub.id)
-      results.push(course)
-    }
-
+    // Step 2: busca detalhes de todos os cursos em paralelo — o throttle
+    // garante no máximo 115 req/min; os Promises só enfileiram timestamps.
+    logger.info({ total: stubs.length }, `[getCourses] ${stubs.length} cursos encontrados — buscando detalhes em paralelo...`)
+    const results = await Promise.all(
+      stubs.map((stub, i) =>
+        this.getCourseDetail(stub.id).then(detail => {
+          logger.info(
+            { courseId: stub.id, name: stub.name, progress: `${i + 1}/${stubs.length}` },
+            `[getCourses] curso ${i + 1}/${stubs.length} concluído: "${stub.name}"`,
+          )
+          return detail
+        }),
+      ),
+    )
     return results
   }
 
   // --------------------------------------------------------------------------
   // Course detail — endpoint: /courses/{id}
-  // Returns the course with its sections and nested lessons.
+  // Returns the course with its sections and nested lessons (with video/files).
   // --------------------------------------------------------------------------
   async getCourseDetail(courseId: number): Promise<MKCourse> {
     const { data } = await this.get<MKCourse>(`/courses/${courseId}`)
+    const totalSections = data.sections?.length ?? 0
+    const totalLessons = data.sections?.reduce((sum, s) => sum + (s.lessons?.length ?? 0), 0) ?? 0
+    logger.info(
+      { courseId, name: data.name, sections: totalSections, lessons: totalLessons },
+      `[getCourseDetail] "${data.name}": ${totalSections} seções, ${totalLessons} aulas`,
+    )
+
+    // Dispara todos os getLessonDetail em paralelo (todas as seções de uma vez).
+    // O throttle serializa os timestamps e garante no máximo 115 req/min.
+    const allLessons = (data.sections ?? []).flatMap(s => s.lessons ?? [])
+    const lessonDetails = await Promise.all(
+      allLessons.map(l => this.getLessonDetail(l.id)),
+    )
+    const lessonMap = new Map(lessonDetails.map(l => [l.id, l]))
+
+    const sections = (data.sections ?? []).map(s => ({
+      ...s,
+      lessons: (s.lessons ?? []).map(l => lessonMap.get(l.id) ?? l),
+    }))
+    return { ...data, sections }
+  }
+
+  // --------------------------------------------------------------------------
+  // Lesson detail — endpoint: /lessons/{id}
+  // Returns a single lesson with its video and files.
+  // --------------------------------------------------------------------------
+  async getLessonDetail(lessonId: number): Promise<MKLesson> {
+    const { data } = await this.get<MKLesson>(`/lessons/${lessonId}`)
     return {
       ...data,
-      sections: (data.sections ?? []).map(s => ({ ...s, lessons: s.lessons ?? [] })),
+      files: data.files ?? [],
     }
   }
 

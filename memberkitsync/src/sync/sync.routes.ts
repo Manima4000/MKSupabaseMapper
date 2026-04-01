@@ -108,4 +108,26 @@ export async function syncRoutes(fastify: FastifyInstance): Promise<void> {
     reply.code(202).send({ ok: true, message: 'Sync de matrículas iniciado em background' })
     runSync('enrollments', (o) => o.syncEnrollments())
   })
+
+  // POST /api/sync/activities/from-db
+  // Sincroniza atividades dos usuários usando os usuários já salvos no banco,
+  // sem re-buscar a lista de membros na API do MemberKit.
+  fastify.post('/sync/activities/from-db', async (request, reply) => {
+    if (!validateApiKey(request, reply)) return
+    if (!checkConflict(reply)) return
+
+    reply.code(202).send({ ok: true, message: 'Sync de atividades (via banco) iniciado em background' })
+    runSync('activities:from-db', (o) => o.syncActivities())
+  })
+
+  // POST /api/sync/lesson-media/from-db
+  // Re-sincroniza vídeos e arquivos das aulas usando as aulas já salvas no banco,
+  // sem re-buscar o catálogo completo de cursos na API do MemberKit.
+  fastify.post('/sync/lesson-media/from-db', async (request, reply) => {
+    if (!validateApiKey(request, reply)) return
+    if (!checkConflict(reply)) return
+
+    reply.code(202).send({ ok: true, message: 'Sync de vídeos e arquivos (via banco) iniciado em background' })
+    runSync('lesson-media:from-db', (o) => o.syncLessonMedia())
+  })
 }

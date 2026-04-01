@@ -147,9 +147,12 @@ export interface LessonProgress {
 
 export interface UserActivity {
   id: number
+  mk_id: number | null
   user_id: number
   event_type: string
-  payload: Record<string, unknown>
+  mk_course_id: number | null
+  mk_lesson_id: number | null
+  trackable: Record<string, unknown> | null
   occurred_at: string
   created_at: string
 }

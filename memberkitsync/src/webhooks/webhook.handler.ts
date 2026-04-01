@@ -124,7 +124,7 @@ async function handleLessonStatusEvent(data: MKLessonStatusWebhookData, firedAt:
   })
 
   // Registra atividade do aluno
-  await logUserActivity(user.id, 'lesson_status_saved', data as unknown as Record<string, unknown>, firedAt)
+  await logUserActivity(user.id, 'lesson_status_saved', data.lesson_id, firedAt)
 }
 
 // ----------------------------------------------------------------------------

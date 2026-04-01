@@ -47,3 +47,13 @@ export async function getUserById(id: number): Promise<User | null> {
   if (error) throw new SupabaseError(`Falha ao buscar user id=${id}`, error)
   return data as User | null
 }
+
+export async function getAllUsers(): Promise<User[]> {
+  const { data, error } = await supabase
+    .from('users')
+    .select('id, mk_id')
+    .order('id')
+
+  if (error) throw new SupabaseError('Falha ao buscar todos os users', error)
+  return data as User[]
+}
