@@ -134,17 +134,6 @@ export interface Enrollment {
   updated_at: string
 }
 
-export interface LessonProgress {
-  id: number
-  mk_id: number | null
-  user_id: number
-  lesson_id: number
-  progress: number
-  completed_at: string | null
-  created_at: string
-  updated_at: string
-}
-
 export interface UserActivity {
   id: number
   mk_id: number | null
@@ -152,9 +141,20 @@ export interface UserActivity {
   event_type: string
   mk_course_id: number | null
   mk_lesson_id: number | null
-  trackable: Record<string, unknown> | null
+  trackable: import('../sync/memberkit-api.client.js').MKTrackable | null
   occurred_at: string
   created_at: string
+}
+
+export interface Comment {
+  id: number
+  mk_id: number | null
+  user_id: number
+  lesson_id: number
+  body: string
+  status: CommentStatus
+  created_at: string
+  updated_at: string
 }
 
 export interface WebhookLog {
@@ -182,8 +182,8 @@ export type MembershipLevelInsert = Omit<MembershipLevel, 'id' | 'created_at' | 
 export type UserInsert = Omit<User, 'id' | 'created_at' | 'updated_at'>
 export type MembershipInsert = Omit<Membership, 'id' | 'created_at' | 'updated_at'>
 export type EnrollmentInsert = Omit<Enrollment, 'id' | 'created_at' | 'updated_at'>
-export type LessonProgressInsert = Omit<LessonProgress, 'id' | 'created_at' | 'updated_at'>
 export type UserActivityInsert = Omit<UserActivity, 'id' | 'created_at'>
+export type CommentInsert = Omit<Comment, 'id' | 'created_at' | 'updated_at'>
 export type WebhookLogInsert = Omit<WebhookLog, 'id' | 'created_at'>
 
 // ============================================================================

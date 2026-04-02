@@ -39,10 +39,19 @@ export interface MKMemberWebhookData {
 
 export interface MKSubscriptionWebhookData {
   id: number
-  member_id: number
-  plan_id: number
   status: string
-  expire_at: string | null
+  expire_date: string | null
+  membership_level: {
+    id: number
+    name: string
+    trial_period: number
+    classroom_ids: number[]
+  }
+  user: {
+    id: number
+    full_name: string | null
+    email: string
+  }
 }
 
 export interface MKEnrollmentWebhookData {
@@ -56,16 +65,46 @@ export interface MKEnrollmentWebhookData {
 
 export interface MKLessonStatusWebhookData {
   id: number | null
-  member_id: number
-  lesson_id: number
   progress: number            // 0–100
   completed_at: string | null
+  created_at: string | null
+  updated_at: string | null
+  user: {
+    id: number
+    full_name: string | null
+    email: string
+  }
+  course: {
+    id: number
+    name: string
+  }
+  lesson: {
+    id: number
+    title: string
+    slug: string | null
+  }
 }
 
 export interface MKCommentWebhookData {
   id: number
-  member_id: number
-  lesson_id: number
-  body: string
+  content: string
   status: string
+  parent_id: number | null
+  classroom_id: number | null
+  created_at: string
+  updated_at: string
+  user: {
+    id: number
+    full_name: string | null
+    email: string
+  }
+  lesson: {
+    id: number
+    slug: string | null
+    title: string
+    course: {
+      id: number
+      name: string
+    }
+  }
 }

@@ -1,35 +1,20 @@
-import type { UpsertLessonProgressInput, CreateUserActivityInput } from './progress.types.js'
-import type { MKUserActivity } from '../../sync/memberkit-api.client.js'
-
-// Converte payload de webhook lesson_status_saved para input de progresso
-export function webhookLessonProgressToInput(payload: {
-  mk_id?: number | null
-  user_mk_id: number
-  lesson_mk_id: number
-  progress: number
-  completed_at?: string | null
-  user_id: number
-  lesson_id: number
-}): UpsertLessonProgressInput {
-  return {
-    mkId: payload.mk_id ?? null,
-    userId: payload.user_id,
-    lessonId: payload.lesson_id,
-    progress: payload.progress,
-    completedAt: payload.completed_at ?? null,
-  }
-}
+import type { CreateUserActivityInput } from './progress.types.js'
+import type { MKUserActivity, MKTrackable } from '../../sync/memberkit-api.client.js'
 
 export function buildUserActivity(
   userId: number,
   eventType: string,
   mkLessonId: number | null,
   occurredAt?: string,
+  trackable?: MKTrackable | null,
+  mkCourseId?: number | null,
 ): CreateUserActivityInput {
   return {
     userId,
     eventType,
+    mkCourseId: mkCourseId ?? null,
     mkLessonId,
+    trackable: trackable ?? null,
     occurredAt: occurredAt ?? new Date().toISOString(),
   }
 }

@@ -17,8 +17,10 @@ import { getCourseByMkId } from '../modules/courses/course.repository.js'
 import { getClassroomByMkId } from '../modules/classrooms/classroom.repository.js'
 import { upsertUserActivityByMkId } from '../modules/progress/progress.repository.js'
 import { mkActivityToCreateInput } from '../modules/progress/progress.mapper.js'
-import { getAllLessons, upsertLessonVideo, upsertLessonFiles } from '../modules/lessons/lesson.repository.js'
+import { getAllLessons, getLessonByMkId, upsertLessonVideo, upsertLessonFiles } from '../modules/lessons/lesson.repository.js'
 import { mkVideoToUpsertInput, mkFilesToUpsertInput } from '../modules/lessons/lesson.mapper.js'
+import { upsertComment } from '../modules/comments/comment.repository.js'
+import { mkCommentToUpsertInput } from '../modules/comments/comment.mapper.js'
 
 export class SyncOrchestrator {
   constructor(private readonly client: MemberKitClient) {}
@@ -34,6 +36,7 @@ export class SyncOrchestrator {
     await this.syncSubscriptions()
     await this.syncEnrollments(members)
     await this.syncActivities(members)
+    await this.syncComments()
 
     const elapsed = ((Date.now() - start) / 1000).toFixed(1)
     logger.info({ elapsed: `${elapsed}s` }, `Sync completo finalizado em ${elapsed}s`)
@@ -292,7 +295,103 @@ export class SyncOrchestrator {
   }
 
   // --------------------------------------------------------------------------
-  // 8. Lesson Media (standalone) — re-sync videos + files from DB lessons
+  // 8. Comments (paginado) — endpoint: /comments
+  // Deve ser executado após users e lessons estarem sincronizados.
+  // --------------------------------------------------------------------------
+  async syncComments(): Promise<void> {
+    logger.info('=== [8/8] Sincronizando comentários... ===')
+    const t = Date.now()
+
+    const comments = await fetchAllPages(
+      (client, page, perPage) => client.getComments(page, perPage),
+      this.client,
+      100,
+      'syncComments',
+    )
+
+    let synced = 0
+    await runConcurrent(comments, async mk => {
+      try {
+        const [user, lesson] = await Promise.all([
+          getUserByMkId(mk.user.id),
+          getLessonByMkId(mk.lesson.id),
+        ])
+
+        if (!user) {
+          logger.warn({ commentMkId: mk.id, userMkId: mk.user.id }, '[syncComments] Usuário não encontrado, pulando')
+          return
+        }
+        if (!lesson) {
+          logger.warn({ commentMkId: mk.id, lessonMkId: mk.lesson.id }, '[syncComments] Aula não encontrada, pulando')
+          return
+        }
+
+        await upsertComment(mkCommentToUpsertInput(mk, user.id, lesson.id))
+        synced++
+      } catch (err) {
+        logger.error({ commentMkId: mk.id, err }, '[syncComments] Erro ao sincronizar comentário')
+      }
+    }, 20, 'syncComments')
+
+    const elapsed = `${((Date.now() - t) / 1000).toFixed(1)}s`
+    logger.info({ total: comments.length, synced, elapsed }, `[syncComments] ${synced}/${comments.length} comentários em ${elapsed}`)
+  }
+
+  // --------------------------------------------------------------------------
+  // Comments (standalone, DB-based) — re-sincroniza comentários por aula
+  // Lê as aulas já no banco e busca GET /lessons/{mk_id}/comments para cada
+  // uma, sem precisar paginar o endpoint global /comments.
+  // Use quando quiser re-sincronizar comentários sem refazer o sync completo.
+  // --------------------------------------------------------------------------
+  async syncCommentsByLesson(): Promise<void> {
+    logger.info('=== [standalone] Sincronizando comentários por aula (DB-based)... ===')
+    const t = Date.now()
+
+    const lessons = await getAllLessons()
+    logger.info({ count: lessons.length }, `[syncCommentsByLesson] ${lessons.length} aulas encontradas no banco`)
+
+    let totalComments = 0
+    let synced = 0
+    let failed = 0
+
+    await runConcurrent(lessons, async ({ id: lessonInternalId, mk_id: lessonMkId }) => {
+      try {
+        const comments = await fetchAllPages(
+          (client, page, perPage) => client.getCommentsByLesson(lessonMkId, page, perPage),
+          this.client,
+          100,
+          `syncCommentsByLesson:lesson${lessonMkId}`,
+        )
+
+        totalComments += comments.length
+
+        await runConcurrent(comments, async mk => {
+          try {
+            const user = await getUserByMkId(mk.user.id)
+            if (!user) {
+              logger.warn({ commentMkId: mk.id, userMkId: mk.user.id }, '[syncCommentsByLesson] Usuário não encontrado, pulando')
+              return
+            }
+
+            await upsertComment(mkCommentToUpsertInput(mk, user.id, lessonInternalId))
+            synced++
+          } catch (err) {
+            logger.error({ commentMkId: mk.id, lessonMkId, err }, '[syncCommentsByLesson] Erro ao upsert comentário')
+            failed++
+          }
+        }, 10)
+      } catch (err) {
+        logger.error({ lessonMkId, err }, '[syncCommentsByLesson] Erro ao buscar comentários da aula')
+        failed++
+      }
+    }, 5, 'syncCommentsByLesson')
+
+    const elapsed = `${((Date.now() - t) / 1000).toFixed(1)}s`
+    logger.info({ total: totalComments, synced, failed, elapsed }, `[syncCommentsByLesson] ${synced}/${totalComments} comentários em ${elapsed}`)
+  }
+
+  // --------------------------------------------------------------------------
+  // 9. Lesson Media (standalone) — re-sync videos + files from DB lessons
   // Busca as lessons já no banco e re-sincroniza vídeo + arquivos de cada uma
   // chamando GET /lessons/{id} diretamente, sem refazer o catálogo inteiro.
   // --------------------------------------------------------------------------

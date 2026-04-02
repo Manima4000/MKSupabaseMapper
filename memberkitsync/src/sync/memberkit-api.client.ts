@@ -148,12 +148,82 @@ export interface MKEnrollment {
   expire_at: string | null
 }
 
+export interface MKComment {
+  id: number
+  content: string
+  status: string
+  parent_id: number | null
+  classroom_id: number | null
+  created_at: string
+  updated_at: string
+  lesson: {
+    id: number
+    title: string
+    url: string
+    course: {
+      id: number
+      name: string
+    }
+  }
+  user: {
+    id: number
+    full_name: string | null
+    email: string
+  }
+}
+
+export interface MKTrackableLessonStatus {
+  id: number
+  completed_at: string | null
+  created_at: string
+  updated_at: string
+}
+
+export interface MKTrackableRating {
+  id: number
+  stars: number
+  created_at: string
+  updated_at: string
+}
+
+export interface MKTrackableComment {
+  id: number
+  status: string
+  content: string
+  classroom_id: number | null
+  created_at: string
+  updated_at: string
+}
+
+export interface MKTrackableForumPost {
+  id: number
+  title: string
+  forum_id: number
+  created_at: string
+  updated_at: string
+}
+
+export interface MKTrackableForumComment {
+  id: number
+  content: string
+  forum_post_id: number
+  created_at: string
+  updated_at: string
+}
+
+export type MKTrackable =
+  | MKTrackableLessonStatus
+  | MKTrackableRating
+  | MKTrackableComment
+  | MKTrackableForumPost
+  | MKTrackableForumComment
+
 export interface MKUserActivity {
   id: number
   course_id: number | null
   lesson_id: number | null
-  trackable_type: string
-  trackable: Record<string, unknown>
+  trackable_type: 'LessonStatus' | 'Rating' | 'Comment' | 'ForumPost' | 'ForumComment' | string
+  trackable: MKTrackable | null
   created_at: string
 }
 
@@ -387,6 +457,25 @@ export class MemberKitClient {
       ...data,
       enrollments: data.enrollments ?? [],
     }
+  }
+
+  // --------------------------------------------------------------------------
+  // Comments (paginado) — endpoint: /comments
+  // --------------------------------------------------------------------------
+  async getComments(page: number, perPage: number): Promise<{ items: MKComment[]; meta: PaginationMeta }> {
+    const { data, headers } = await this.get<MKComment[]>('/comments', { page, per_page: perPage })
+    const items = Array.isArray(data) ? data : []
+    return { items, meta: this.parseMeta(headers, page, items.length) }
+  }
+
+  // --------------------------------------------------------------------------
+  // Comments por aula (paginado) — endpoint: /lessons/{lessonId}/comments
+  // Usado para re-sincronização baseada no banco (DB-based sync).
+  // --------------------------------------------------------------------------
+  async getCommentsByLesson(lessonId: number, page: number, perPage: number): Promise<{ items: MKComment[]; meta: PaginationMeta }> {
+    const { data, headers } = await this.get<MKComment[]>(`/lessons/${lessonId}/comments`, { page, per_page: perPage })
+    const items = Array.isArray(data) ? data : []
+    return { items, meta: this.parseMeta(headers, page, items.length) }
   }
 
   // --------------------------------------------------------------------------

@@ -42,7 +42,7 @@ export async function upsertLessonVideo(input: UpsertLessonVideoInput): Promise<
 
   const { data, error } = await supabase
     .from('lesson_videos')
-    .upsert(row, { onConflict: 'lesson_id' })
+    .upsert(row, { onConflict: 'mk_id' })
     .select()
     .single()
 
@@ -79,11 +79,22 @@ export async function getLessonByMkId(mkId: number): Promise<Lesson | null> {
 }
 
 export async function getAllLessons(): Promise<Pick<Lesson, 'id' | 'mk_id'>[]> {
-  const { data, error } = await supabase
-    .from('lessons')
-    .select('id, mk_id')
-    .order('id')
+  const PAGE_SIZE = 1000
+  const results: Pick<Lesson, 'id' | 'mk_id'>[] = []
+  let from = 0
 
-  if (error) throw new SupabaseError('Falha ao buscar todas as lessons', error)
-  return data as Pick<Lesson, 'id' | 'mk_id'>[]
+  while (true) {
+    const { data, error } = await supabase
+      .from('lessons')
+      .select('id, mk_id')
+      .order('id')
+      .range(from, from + PAGE_SIZE - 1)
+
+    if (error) throw new SupabaseError('Falha ao buscar todas as lessons', error)
+    results.push(...(data as Pick<Lesson, 'id' | 'mk_id'>[]))
+    if (data.length < PAGE_SIZE) break
+    from += PAGE_SIZE
+  }
+
+  return results
 }

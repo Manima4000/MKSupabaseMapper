@@ -5,20 +5,23 @@ import { syncUser } from '../modules/users/user.service.js'
 import { syncSubscription } from '../modules/memberships/membership.service.js'
 import { upsertEnrollment } from '../modules/enrollments/enrollment.repository.js'
 import { mkEnrollmentToUpsertInput } from '../modules/enrollments/enrollment.mapper.js'
-import { handleLessonProgress, logUserActivity } from '../modules/progress/progress.service.js'
+import { logUserActivity } from '../modules/progress/progress.service.js'
 import { getUserByMkId } from '../modules/users/user.repository.js'
 import { getMembershipLevelByMkId } from '../modules/memberships/membership.repository.js'
 import { getCourseByMkId } from '../modules/courses/course.repository.js'
 import { getClassroomByMkId } from '../modules/classrooms/classroom.repository.js'
 import { getLessonByMkId } from '../modules/lessons/lesson.repository.js'
+import { upsertComment } from '../modules/comments/comment.repository.js'
 import type {
   MKWebhookEnvelope,
   MKMemberWebhookData,
   MKSubscriptionWebhookData,
   MKEnrollmentWebhookData,
   MKLessonStatusWebhookData,
+  MKCommentWebhookData,
 } from './webhook.types.js'
 import type { WebhookLogInsert } from '../shared/types.js'
+import type { MKTrackableLessonStatus } from '../sync/memberkit-api.client.js'
 
 // Dispatcher principal: roteia cada evento para o handler correto
 export async function dispatchWebhook(envelope: MKWebhookEnvelope): Promise<void> {
@@ -47,8 +50,12 @@ export async function dispatchWebhook(envelope: MKWebhookEnvelope): Promise<void
         await handleEnrollmentEvent(data as unknown as MKEnrollmentWebhookData)
         break
 
-      case 'lesson_status_saved':
+      case 'lesson_status.saved':
         await handleLessonStatusEvent(data as unknown as MKLessonStatusWebhookData, fired_at)
+        break
+
+      case 'comment.created':
+        await handleCommentEvent(data as unknown as MKCommentWebhookData)
         break
 
       default:
@@ -73,15 +80,15 @@ async function handleMemberEvent(data: MKMemberWebhookData): Promise<void> {
 }
 
 async function handleSubscriptionEvent(data: MKSubscriptionWebhookData): Promise<void> {
-  const user = await getUserByMkId(data.member_id)
+  const user = await getUserByMkId(data.user.id)
   if (!user) {
-    logger.warn({ memberMkId: data.member_id }, 'Usuário não encontrado para webhook de assinatura')
+    logger.warn({ memberMkId: data.user.id }, 'Usuário não encontrado para webhook de assinatura')
     return
   }
 
-  const level = await getMembershipLevelByMkId(data.plan_id)
+  const level = await getMembershipLevelByMkId(data.membership_level.id)
   if (!level) {
-    logger.warn({ planMkId: data.plan_id }, 'Plano não encontrado para webhook de assinatura')
+    logger.warn({ planMkId: data.membership_level.id }, 'Plano não encontrado para webhook de assinatura')
     return
   }
 
@@ -104,27 +111,38 @@ async function handleEnrollmentEvent(data: MKEnrollmentWebhookData): Promise<voi
 }
 
 async function handleLessonStatusEvent(data: MKLessonStatusWebhookData, firedAt: string): Promise<void> {
-  const user = await getUserByMkId(data.member_id)
-  const lesson = await getLessonByMkId(data.lesson_id)
+  const user = await getUserByMkId(data.user.id)
 
-  if (!user || !lesson) {
-    logger.warn({ data }, 'Usuário ou aula não encontrado para webhook de progresso')
+  if (!user) {
+    logger.warn({ data }, 'Usuário não encontrado para webhook de progresso')
     return
   }
 
-  await handleLessonProgress({
-    mk_id: data.id ?? null,
-    user_id: user.id,
-    lesson_id: lesson.id,
-    progress: data.progress,
+  const trackable: MKTrackableLessonStatus = {
+    id: data.id ?? 0,
     completed_at: data.completed_at,
-    user_mk_id: data.member_id,
-    lesson_mk_id: data.lesson_id,
-    raw_payload: data as unknown as Record<string, unknown>,
-  })
+    created_at: data.created_at ?? firedAt,
+    updated_at: data.updated_at ?? firedAt,
+  }
+  await logUserActivity(user.id, 'lesson_status.saved', data.lesson.id, firedAt, trackable, data.course.id)
+}
 
-  // Registra atividade do aluno
-  await logUserActivity(user.id, 'lesson_status_saved', data.lesson_id, firedAt)
+async function handleCommentEvent(data: MKCommentWebhookData): Promise<void> {
+  const user = await getUserByMkId(data.user.id)
+  const lesson = await getLessonByMkId(data.lesson.id)
+
+  if (!user || !lesson) {
+    logger.warn({ data }, 'Usuário ou aula não encontrado para webhook de comentário')
+    return
+  }
+
+  await upsertComment({
+    mkId: data.id,
+    userId: user.id,
+    lessonId: lesson.id,
+    body: data.content,
+    status: data.status as import('../shared/types.js').CommentStatus,
+  })
 }
 
 // ----------------------------------------------------------------------------

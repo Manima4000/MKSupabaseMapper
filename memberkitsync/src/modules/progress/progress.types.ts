@@ -1,14 +1,7 @@
-import type { LessonProgress, LessonProgressInsert, UserActivity, UserActivityInsert } from '../../shared/types.js'
+import type { UserActivity, UserActivityInsert } from '../../shared/types.js'
+import type { MKTrackable } from '../../sync/memberkit-api.client.js'
 
-export type { LessonProgress, LessonProgressInsert, UserActivity, UserActivityInsert }
-
-export interface UpsertLessonProgressInput {
-  mkId: number | null
-  userId: number
-  lessonId: number
-  progress: number
-  completedAt: string | null
-}
+export type { UserActivity, UserActivityInsert }
 
 export interface CreateUserActivityInput {
   mkId?: number | null
@@ -16,6 +9,6 @@ export interface CreateUserActivityInput {
   eventType: string
   mkCourseId?: number | null
   mkLessonId?: number | null
-  trackable?: Record<string, unknown> | null
+  trackable?: MKTrackable | null
   occurredAt: string
 }

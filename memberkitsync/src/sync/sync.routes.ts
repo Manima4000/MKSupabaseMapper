@@ -130,4 +130,24 @@ export async function syncRoutes(fastify: FastifyInstance): Promise<void> {
     reply.code(202).send({ ok: true, message: 'Sync de vídeos e arquivos (via banco) iniciado em background' })
     runSync('lesson-media:from-db', (o) => o.syncLessonMedia())
   })
+
+  // POST /api/sync/comments — pagina GET /comments na API do MemberKit
+  fastify.post('/sync/comments', async (request, reply) => {
+    if (!validateApiKey(request, reply)) return
+    if (!checkConflict(reply)) return
+
+    reply.code(202).send({ ok: true, message: 'Sync de comentários iniciado em background' })
+    runSync('comments', (o) => o.syncComments())
+  })
+
+  // POST /api/sync/comments/from-db
+  // Re-sincroniza comentários por aula usando as aulas já salvas no banco,
+  // sem paginar o endpoint global /comments da API do MemberKit.
+  fastify.post('/sync/comments/from-db', async (request, reply) => {
+    if (!validateApiKey(request, reply)) return
+    if (!checkConflict(reply)) return
+
+    reply.code(202).send({ ok: true, message: 'Sync de comentários (via banco) iniciado em background' })
+    runSync('comments:from-db', (o) => o.syncCommentsByLesson())
+  })
 }
