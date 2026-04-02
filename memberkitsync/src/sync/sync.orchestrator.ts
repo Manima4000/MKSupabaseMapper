@@ -21,6 +21,8 @@ import { getAllLessons, getLessonByMkId, upsertLessonVideo, upsertLessonFiles } 
 import { mkVideoToUpsertInput, mkFilesToUpsertInput } from '../modules/lessons/lesson.mapper.js'
 import { upsertComment } from '../modules/comments/comment.repository.js'
 import { mkCommentToUpsertInput } from '../modules/comments/comment.mapper.js'
+import { upsertQuizAttempt } from '../modules/quiz_attempts/quiz_attempt.repository.js'
+import { mkQuizAttemptToUpsertInput } from '../modules/quiz_attempts/quiz_attempt.mapper.js'
 
 export class SyncOrchestrator {
   constructor(private readonly client: MemberKitClient) {}
@@ -37,6 +39,7 @@ export class SyncOrchestrator {
     await this.syncEnrollments(members)
     await this.syncActivities(members)
     await this.syncComments()
+    await this.syncQuizAttempts()
 
     const elapsed = ((Date.now() - start) / 1000).toFixed(1)
     logger.info({ elapsed: `${elapsed}s` }, `Sync completo finalizado em ${elapsed}s`)
@@ -424,5 +427,41 @@ export class SyncOrchestrator {
 
     const elapsed = `${((Date.now() - t) / 1000).toFixed(1)}s`
     logger.info({ total: lessons.length, synced, failed, elapsed }, `[syncLessonMedia] ${synced}/${lessons.length} aulas em ${elapsed}`)
+  }
+
+  // --------------------------------------------------------------------------
+  // 10. Quiz Attempts (paginado) — endpoint: /quiz_attempts
+  // Deve ser executado após users estarem sincronizados.
+  // --------------------------------------------------------------------------
+  async syncQuizAttempts(): Promise<void> {
+    logger.info('=== [syncQuizAttempts] Sincronizando tentativas de quiz... ===')
+    const t = Date.now()
+
+    const attempts = await fetchAllPages(
+      (client, page, perPage) => client.getQuizAttempts(page, perPage),
+      this.client,
+      100,
+      'syncQuizAttempts',
+    )
+
+    let synced = 0
+    await runConcurrent(attempts, async mk => {
+      try {
+        const user = await getUserByMkId(mk.user.id)
+
+        if (!user) {
+          logger.warn({ attemptMkId: mk.id, userMkId: mk.user.id }, '[syncQuizAttempts] Usuário não encontrado, pulando')
+          return
+        }
+
+        await upsertQuizAttempt(mkQuizAttemptToUpsertInput(mk, user.id))
+        synced++
+      } catch (err) {
+        logger.error({ attemptMkId: mk.id, err }, '[syncQuizAttempts] Erro ao sincronizar tentativa de quiz')
+      }
+    }, 20, 'syncQuizAttempts')
+
+    const elapsed = `${((Date.now() - t) / 1000).toFixed(1)}s`
+    logger.info({ total: attempts.length, synced, elapsed }, `[syncQuizAttempts] ${synced}/${attempts.length} tentativas em ${elapsed}`)
   }
 }

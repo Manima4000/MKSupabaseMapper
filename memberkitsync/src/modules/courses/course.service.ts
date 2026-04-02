@@ -3,11 +3,11 @@ import { mkCategoryToUpsertInput, mkCourseToUpsertInput } from './course.mapper.
 import { upsertCategory, upsertCourse, getCategoryByMkId } from './course.repository.js'
 import { upsertSection } from '../sections/section.repository.js'
 import { mkSectionToUpsertInput } from '../sections/section.mapper.js'
-import { upsertLesson, upsertLessonVideo, upsertLessonFiles } from '../lessons/lesson.repository.js'
-import { mkLessonToUpsertInput, mkVideoToUpsertInput, mkFilesToUpsertInput } from '../lessons/lesson.mapper.js'
+import { upsertLesson } from '../lessons/lesson.repository.js'
+import { mkLessonToUpsertInput } from '../lessons/lesson.mapper.js'
 import type { MKCoursePayload, Course } from './course.types.js'
 
-// Sincroniza um curso completo: categorias → curso → sections → lessons → vídeos/arquivos
+// Sincroniza catálogo: categorias → curso → sections → lessons (vídeos/arquivos via syncLessonMedia)
 export async function syncCourse(mkCourse: MKCoursePayload): Promise<Course> {
   // 1. Upsert categoria (se existir)
   let categoryId: number | null = null
@@ -26,13 +26,7 @@ export async function syncCourse(mkCourse: MKCoursePayload): Promise<Course> {
     logger.debug({ mkId: mkSection.id, sectionId: section.id }, 'Section sincronizada')
 
     for (const mkLesson of mkSection.lessons) {
-      const lesson = await upsertLesson(mkLessonToUpsertInput(mkLesson, section.id))
-
-      const videoInput = mkVideoToUpsertInput(mkLesson, lesson.id)
-      if (videoInput) await upsertLessonVideo(videoInput)
-
-      const fileInputs = mkFilesToUpsertInput(mkLesson, lesson.id)
-      if (fileInputs.length > 0) await upsertLessonFiles(fileInputs)
+      await upsertLesson(mkLessonToUpsertInput(mkLesson, section.id))
     }
   }
 

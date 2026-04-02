@@ -157,6 +157,19 @@ export interface Comment {
   updated_at: string
 }
 
+export interface QuizAttempt {
+  id: number
+  mk_id: number
+  user_id: number
+  quiz_mk_id: number
+  quiz_title: string
+  answered_questions_count: number
+  correct_answers_count: number
+  started_at: string | null
+  created_at: string
+  updated_at: string
+}
+
 export interface WebhookLog {
   id: number
   event_type: string
@@ -184,6 +197,7 @@ export type MembershipInsert = Omit<Membership, 'id' | 'created_at' | 'updated_a
 export type EnrollmentInsert = Omit<Enrollment, 'id' | 'created_at' | 'updated_at'>
 export type UserActivityInsert = Omit<UserActivity, 'id' | 'created_at'>
 export type CommentInsert = Omit<Comment, 'id' | 'created_at' | 'updated_at'>
+export type QuizAttemptInsert = Omit<QuizAttempt, 'id' | 'created_at' | 'updated_at'>
 export type WebhookLogInsert = Omit<WebhookLog, 'id' | 'created_at'>
 
 // ============================================================================

@@ -150,4 +150,14 @@ export async function syncRoutes(fastify: FastifyInstance): Promise<void> {
     reply.code(202).send({ ok: true, message: 'Sync de comentários (via banco) iniciado em background' })
     runSync('comments:from-db', (o) => o.syncCommentsByLesson())
   })
+
+  // POST /api/sync/quiz-attempts — pagina GET /quiz_attempts na API do MemberKit
+  // Requer que os membros já estejam sincronizados no banco.
+  fastify.post('/sync/quiz-attempts', async (request, reply) => {
+    if (!validateApiKey(request, reply)) return
+    if (!checkConflict(reply)) return
+
+    reply.code(202).send({ ok: true, message: 'Sync de tentativas de quiz iniciado em background' })
+    runSync('quiz-attempts', (o) => o.syncQuizAttempts())
+  })
 }

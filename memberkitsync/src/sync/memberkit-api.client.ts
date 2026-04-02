@@ -218,6 +218,25 @@ export type MKTrackable =
   | MKTrackableForumPost
   | MKTrackableForumComment
 
+export interface MKQuizAttempt {
+  id: number
+  answered_questions_count: number
+  correct_answers_count: number
+  quiz: {
+    id: number
+    title: string
+    description: string | null
+  }
+  user: {
+    id: number
+    full_name: string | null
+    email: string
+  }
+  started_at: string | null
+  created_at: string
+  updated_at: string
+}
+
 export interface MKUserActivity {
   id: number
   course_id: number | null
@@ -381,20 +400,7 @@ export class MemberKitClient {
       { courseId, name: data.name, sections: totalSections, lessons: totalLessons },
       `[getCourseDetail] "${data.name}": ${totalSections} seções, ${totalLessons} aulas`,
     )
-
-    // Dispara todos os getLessonDetail em paralelo (todas as seções de uma vez).
-    // O throttle serializa os timestamps e garante no máximo 115 req/min.
-    const allLessons = (data.sections ?? []).flatMap(s => s.lessons ?? [])
-    const lessonDetails = await Promise.all(
-      allLessons.map(l => this.getLessonDetail(l.id)),
-    )
-    const lessonMap = new Map(lessonDetails.map(l => [l.id, l]))
-
-    const sections = (data.sections ?? []).map(s => ({
-      ...s,
-      lessons: (s.lessons ?? []).map(l => lessonMap.get(l.id) ?? l),
-    }))
-    return { ...data, sections }
+    return data
   }
 
   // --------------------------------------------------------------------------
@@ -474,6 +480,15 @@ export class MemberKitClient {
   // --------------------------------------------------------------------------
   async getCommentsByLesson(lessonId: number, page: number, perPage: number): Promise<{ items: MKComment[]; meta: PaginationMeta }> {
     const { data, headers } = await this.get<MKComment[]>(`/lessons/${lessonId}/comments`, { page, per_page: perPage })
+    const items = Array.isArray(data) ? data : []
+    return { items, meta: this.parseMeta(headers, page, items.length) }
+  }
+
+  // --------------------------------------------------------------------------
+  // Quiz Attempts (paginado) — endpoint: /quiz_attempts
+  // --------------------------------------------------------------------------
+  async getQuizAttempts(page: number, perPage: number): Promise<{ items: MKQuizAttempt[]; meta: PaginationMeta }> {
+    const { data, headers } = await this.get<MKQuizAttempt[]>('/quiz_attempts', { page, per_page: perPage })
     const items = Array.isArray(data) ? data : []
     return { items, meta: this.parseMeta(headers, page, items.length) }
   }
