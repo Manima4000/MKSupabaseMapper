@@ -1,0 +1,9 @@
+# Automatically merged by `docker compose up` — development only.
+services:
+  memberkitsync:
+    build:
+      target: development
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./memberkitsync/src:/app/src:ro

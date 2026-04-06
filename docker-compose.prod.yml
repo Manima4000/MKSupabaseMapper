@@ -1,0 +1,13 @@
+# Production overrides — nginx handles external traffic, no ports exposed.
+# Usage: docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+services:
+  memberkitsync:
+    build:
+      target: production
+    restart: always
+    networks:
+      - nginx_network
+
+networks:
+  nginx_network:
+    external: true
