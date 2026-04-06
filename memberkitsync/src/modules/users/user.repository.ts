@@ -48,6 +48,22 @@ export async function getUserById(id: number): Promise<User | null> {
   return data as User | null
 }
 
+export async function updateUserLoginData(
+  mkId: number,
+  data: {
+    sign_in_count: number
+    current_sign_in_at: string | null
+    last_seen_at: string | null
+  },
+): Promise<void> {
+  const { error } = await supabase
+    .from('users')
+    .update(data)
+    .eq('mk_id', mkId)
+
+  if (error) throw new SupabaseError(`Falha ao atualizar login data user mk_id=${mkId}`, error)
+}
+
 export async function getAllUsers(): Promise<User[]> {
   const { data, error } = await supabase
     .from('users')

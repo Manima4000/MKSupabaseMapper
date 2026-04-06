@@ -157,6 +157,16 @@ export interface Comment {
   updated_at: string
 }
 
+export interface LessonRating {
+  id: number
+  mk_id: number
+  user_id: number
+  lesson_id: number
+  stars: number
+  created_at: string
+  updated_at: string
+}
+
 export interface QuizAttempt {
   id: number
   mk_id: number
@@ -198,6 +208,7 @@ export type MembershipInsert = Omit<Membership, 'id' | 'created_at' | 'updated_a
 export type EnrollmentInsert = Omit<Enrollment, 'id' | 'created_at' | 'updated_at'>
 export type UserActivityInsert = Omit<UserActivity, 'id' | 'created_at'>
 export type CommentInsert = Omit<Comment, 'id' | 'created_at' | 'updated_at'>
+export type LessonRatingInsert = Omit<LessonRating, 'id' | 'created_at' | 'updated_at'>
 export type QuizAttemptInsert = Omit<QuizAttempt, 'id' | 'created_at' | 'updated_at'>
 export type WebhookLogInsert = Omit<WebhookLog, 'id' | 'created_at'>
 

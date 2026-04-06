@@ -1,16 +1,25 @@
 // Tipos dos payloads de webhook enviados pela MemberKit
-// NOTE: Ajuste conforme os eventos reais configurados na sua conta MemberKit
 
 export type MKWebhookEventType =
   | 'member.created'
   | 'member.updated'
-  | 'subscription.created'
-  | 'subscription.updated'
-  | 'subscription.expired'
+  | 'membership.created'
+  | 'membership.updated'
   | 'enrollment.created'
   | 'enrollment.updated'
-  | 'lesson_status_saved'
+  | 'lesson_status.saved'
   | 'comment.created'
+  | 'user.last_seen'
+  | 'user.signed_in'
+  | 'lesson.created'
+  | 'lesson.updated'
+  | 'rating.saved'
+  | 'lesson_file.downloaded'
+  | 'invite_pass.created'
+  | 'integration_log.received'
+  | 'page_agreement.accepted'
+  | 'forum_post.created'
+  | 'login.sent'
   | string // fallback para eventos desconhecidos
 
 // Envelope genérico do webhook
@@ -37,6 +46,7 @@ export interface MKMemberWebhookData {
   meta: Record<string, unknown>
 }
 
+// membership.created / membership.updated
 export interface MKSubscriptionWebhookData {
   id: number
   status: string
@@ -54,15 +64,22 @@ export interface MKSubscriptionWebhookData {
   }
 }
 
+// enrollment.created / enrollment.updated
+// Real payload: user.id (not member_id), classroom_id (not member_area_id), expire_date (not expire_at)
 export interface MKEnrollmentWebhookData {
   id: number
-  member_id: number
   course_id: number
-  member_area_id: number | null
+  classroom_id: number | null
   status: string
-  expire_at: string | null
+  expire_date: string | null
+  user: {
+    id: number
+    full_name: string | null
+    email: string
+  }
 }
 
+// lesson_status.saved
 export interface MKLessonStatusWebhookData {
   id: number | null
   progress: number            // 0–100
@@ -85,6 +102,7 @@ export interface MKLessonStatusWebhookData {
   }
 }
 
+// comment.created
 export interface MKCommentWebhookData {
   id: number
   content: string
@@ -106,5 +124,122 @@ export interface MKCommentWebhookData {
       id: number
       name: string
     }
+  }
+}
+
+// user.last_seen / user.signed_in  (same payload shape)
+export interface MKUserLoginWebhookData {
+  id: number
+  full_name: string | null
+  email: string
+  sign_in_count: number
+  current_sign_in_at: string | null
+  last_seen_at: string | null
+  created_at: string
+  updated_at: string
+}
+
+// lesson.created / lesson.updated
+export interface MKLessonCatalogWebhookData {
+  id: number
+  slug: string | null
+  title: string
+  position: number
+  created_at: string
+  updated_at: string
+  section: {
+    id: number
+    slug: string | null
+    name: string
+    position: number
+    created_at: string
+    updated_at: string
+  }
+  course: {
+    id: number
+    name: string
+    position: number
+    created_at: string
+    updated_at: string
+    category: {
+      id: number
+      name: string
+      position: number
+    } | null
+  }
+  video: {
+    id: number
+    source: string
+    uid: string
+    duration: number
+  } | null
+  files: Array<{
+    id: number
+    filename: string
+    url: string
+  }>
+}
+
+// rating.saved
+export interface MKRatingWebhookData {
+  id: number
+  stars: number
+  created_at: string
+  updated_at: string
+  user: {
+    id: number
+    full_name: string | null
+    email: string
+  }
+  lesson: {
+    id: number
+    slug: string | null
+    title: string
+    course: {
+      id: number
+      name: string
+    }
+  }
+}
+
+// lesson_file.downloaded
+export interface MKLessonFileDownloadedWebhookData {
+  user: {
+    id: number
+    full_name: string | null
+    email: string
+  }
+  lesson: {
+    id: number
+    slug: string | null
+    title: string
+  }
+  file: {
+    id: number
+    filename: string
+    url: string
+  }
+  clicked_at: string
+}
+
+// invite_pass.created
+export interface MKInvitePassWebhookData {
+  id: number
+  created_at: string
+  updated_at: string
+  user: {
+    id: number
+    full_name: string | null
+    email: string
+    sign_in_count: number
+    current_sign_in_at: string | null
+    last_seen_at: string | null
+    metadata: Record<string, unknown>
+    created_at: string
+    updated_at: string
+  }
+  invite: {
+    id: number
+    title: string
   }
 }

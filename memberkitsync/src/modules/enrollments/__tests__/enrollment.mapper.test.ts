@@ -4,11 +4,11 @@ import type { MKEnrollmentPayload } from '../enrollment.types.js'
 
 const base: MKEnrollmentPayload = {
   id: 100,
-  member_id: 1,
   course_id: 2,
-  member_area_id: 3,
+  classroom_id: 3,
   status: 'active',
-  expire_at: '2025-12-31T23:59:59Z',
+  expire_date: '2025-12-31T23:59:59Z',
+  user: { id: 1, full_name: 'Test User', email: 'test@example.com' },
 }
 
 describe('mkEnrollmentToUpsertInput', () => {
@@ -32,7 +32,7 @@ describe('mkEnrollmentToUpsertInput', () => {
   })
 
   it('accepts null expireDate', () => {
-    const result = mkEnrollmentToUpsertInput({ ...base, expire_at: null }, 10, 20, null)
+    const result = mkEnrollmentToUpsertInput({ ...base, expire_date: null }, 10, 20, null)
 
     expect(result.expireDate).toBeNull()
   })

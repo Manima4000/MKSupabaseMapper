@@ -7,12 +7,23 @@ import { syncSubscription } from '../modules/memberships/membership.service.js'
 import { upsertEnrollment } from '../modules/enrollments/enrollment.repository.js'
 import { mkEnrollmentToUpsertInput } from '../modules/enrollments/enrollment.mapper.js'
 import { logUserActivity } from '../modules/progress/progress.service.js'
-import { getUserByMkId } from '../modules/users/user.repository.js'
+import {
+  getUserByMkId,
+  upsertUser,
+  updateUserLoginData,
+} from '../modules/users/user.repository.js'
 import { getMembershipLevelByMkId } from '../modules/memberships/membership.repository.js'
 import { getCourseByMkId } from '../modules/courses/course.repository.js'
 import { getClassroomByMkId } from '../modules/classrooms/classroom.repository.js'
-import { getLessonByMkId } from '../modules/lessons/lesson.repository.js'
+import {
+  getLessonByMkId,
+  upsertLesson,
+  upsertLessonVideo,
+  upsertLessonFiles,
+} from '../modules/lessons/lesson.repository.js'
+import { upsertSection } from '../modules/sections/section.repository.js'
 import { upsertComment } from '../modules/comments/comment.repository.js'
+import { upsertLessonRating } from '../modules/lesson_ratings/lesson_rating.repository.js'
 import type {
   MKWebhookEnvelope,
   MKMemberWebhookData,
@@ -20,6 +31,11 @@ import type {
   MKEnrollmentWebhookData,
   MKLessonStatusWebhookData,
   MKCommentWebhookData,
+  MKUserLoginWebhookData,
+  MKLessonCatalogWebhookData,
+  MKRatingWebhookData,
+  MKLessonFileDownloadedWebhookData,
+  MKInvitePassWebhookData,
 } from './webhook.types.js'
 import type { WebhookLogInsert } from '../shared/types.js'
 import type { MKTrackableLessonStatus } from '../sync/memberkit-api.client.js'
@@ -49,9 +65,9 @@ export async function dispatchWebhook(envelope: MKWebhookEnvelope): Promise<void
         await handleMemberEvent(data as unknown as MKMemberWebhookData)
         break
 
-      case 'subscription.created':
-      case 'subscription.updated':
-      case 'subscription.expired':
+      // NOTE: MemberKit fires membership.created / membership.updated (not subscription.*)
+      case 'membership.created':
+      case 'membership.updated':
         await handleSubscriptionEvent(data as unknown as MKSubscriptionWebhookData)
         break
 
@@ -66,6 +82,36 @@ export async function dispatchWebhook(envelope: MKWebhookEnvelope): Promise<void
 
       case 'comment.created':
         await handleCommentEvent(data as unknown as MKCommentWebhookData)
+        break
+
+      case 'user.last_seen':
+      case 'user.signed_in':
+        await handleUserLoginEvent(data as unknown as MKUserLoginWebhookData)
+        break
+
+      case 'lesson.created':
+      case 'lesson.updated':
+        await handleLessonCatalogEvent(data as unknown as MKLessonCatalogWebhookData)
+        break
+
+      case 'rating.saved':
+        await handleRatingEvent(data as unknown as MKRatingWebhookData)
+        break
+
+      case 'lesson_file.downloaded':
+        await handleLessonFileDownloadedEvent(data as unknown as MKLessonFileDownloadedWebhookData, fired_at)
+        break
+
+      case 'invite_pass.created':
+        await handleInvitePassEvent(data as unknown as MKInvitePassWebhookData)
+        break
+
+      // Received and logged, but no DB action needed
+      case 'integration_log.received':
+      case 'page_agreement.accepted':
+      case 'forum_post.created':
+      case 'login.sent':
+        logger.info({ event }, 'Evento de webhook registrado mas não processado')
         break
 
       default:
@@ -106,9 +152,9 @@ async function handleSubscriptionEvent(data: MKSubscriptionWebhookData): Promise
 }
 
 async function handleEnrollmentEvent(data: MKEnrollmentWebhookData): Promise<void> {
-  const user = await getUserByMkId(data.member_id)
+  const user = await getUserByMkId(data.user.id)
   const course = await getCourseByMkId(data.course_id)
-  const classroom = data.member_area_id ? await getClassroomByMkId(data.member_area_id) : null
+  const classroom = data.classroom_id ? await getClassroomByMkId(data.classroom_id) : null
 
   if (!user || !course) {
     logger.warn({ data }, 'Usuário ou curso não encontrado para webhook de matrícula')
@@ -120,7 +166,10 @@ async function handleEnrollmentEvent(data: MKEnrollmentWebhookData): Promise<voi
   )
 }
 
-async function handleLessonStatusEvent(data: MKLessonStatusWebhookData, firedAt: string): Promise<void> {
+async function handleLessonStatusEvent(
+  data: MKLessonStatusWebhookData,
+  firedAt: string,
+): Promise<void> {
   const user = await getUserByMkId(data.user.id)
 
   if (!user) {
@@ -152,6 +201,104 @@ async function handleCommentEvent(data: MKCommentWebhookData): Promise<void> {
     lessonId: lesson.id,
     body: data.content,
     status: data.status as import('../shared/types.js').CommentStatus,
+  })
+}
+
+async function handleUserLoginEvent(data: MKUserLoginWebhookData): Promise<void> {
+  await updateUserLoginData(data.id, {
+    sign_in_count: data.sign_in_count,
+    current_sign_in_at: data.current_sign_in_at,
+    last_seen_at: data.last_seen_at,
+  })
+}
+
+async function handleLessonCatalogEvent(data: MKLessonCatalogWebhookData): Promise<void> {
+  const course = await getCourseByMkId(data.course.id)
+  if (!course) {
+    logger.warn({ courseMkId: data.course.id }, 'Curso não encontrado para webhook de aula')
+    return
+  }
+
+  const section = await upsertSection({
+    mkId: data.section.id,
+    courseId: course.id,
+    name: data.section.name,
+    position: data.section.position,
+    slug: data.section.slug,
+  })
+
+  const lesson = await upsertLesson({
+    mkId: data.id,
+    sectionId: section.id,
+    title: data.title,
+    position: data.position,
+    slug: data.slug,
+  })
+
+  if (data.video) {
+    await upsertLessonVideo({
+      mkId: data.video.id ?? null,
+      lessonId: lesson.id,
+      uid: data.video.uid ?? null,
+      source: data.video.source ?? null,
+      durationSeconds: data.video.duration ?? null,
+    })
+  }
+
+  if (data.files.length > 0) {
+    await upsertLessonFiles(
+      data.files.map((f) => ({
+        mkId: f.id ?? null,
+        lessonId: lesson.id,
+        filename: f.filename,
+        url: f.url,
+      })),
+    )
+  }
+}
+
+async function handleRatingEvent(data: MKRatingWebhookData): Promise<void> {
+  const user = await getUserByMkId(data.user.id)
+  const lesson = await getLessonByMkId(data.lesson.id)
+
+  if (!user || !lesson) {
+    logger.warn({ data }, 'Usuário ou aula não encontrado para webhook de avaliação')
+    return
+  }
+
+  await upsertLessonRating({
+    mkId: data.id,
+    userId: user.id,
+    lessonId: lesson.id,
+    stars: data.stars,
+  })
+}
+
+async function handleLessonFileDownloadedEvent(
+  data: MKLessonFileDownloadedWebhookData,
+  firedAt: string,
+): Promise<void> {
+  const user = await getUserByMkId(data.user.id)
+
+  if (!user) {
+    logger.warn({ data }, 'Usuário não encontrado para webhook de download de material')
+    return
+  }
+
+  await logUserActivity(user.id, 'lesson_file.downloaded', data.lesson.id, firedAt, null, null)
+}
+
+async function handleInvitePassEvent(data: MKInvitePassWebhookData): Promise<void> {
+  await upsertUser({
+    mkId: data.user.id,
+    fullName: data.user.full_name ?? '',
+    email: data.user.email,
+    blocked: false,
+    unlimited: false,
+    signInCount: data.user.sign_in_count,
+    currentSignInAt: data.user.current_sign_in_at,
+    lastSeenAt: data.user.last_seen_at,
+    metadata: data.user.metadata ?? {},
   })
 }
 

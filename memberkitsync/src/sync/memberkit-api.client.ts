@@ -137,15 +137,19 @@ export interface MKMembership {
 // Keep MKSubscription as an alias for backwards compatibility within the codebase
 export type MKSubscription = MKMembership
 
-// MKEnrollment is kept for the webhook path (enrollment.created / enrollment.updated),
-// which does send a full payload with id and member_id.
+// Webhook enrollment payload shape (enrollment.created / enrollment.updated).
+// NOTE: real MK payload uses user.id (nested), classroom_id, and expire_date.
 export interface MKEnrollment {
   id: number
-  member_id: number
   course_id: number
-  member_area_id: number | null
+  classroom_id: number | null
   status: string
-  expire_at: string | null
+  expire_date: string | null
+  user: {
+    id: number
+    full_name: string | null
+    email: string
+  }
 }
 
 export interface MKComment {

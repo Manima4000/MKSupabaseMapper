@@ -18,6 +18,7 @@ describe('buildUserActivity', () => {
       userId: 42,
       eventType: 'lesson_status_saved',
       mkLessonId: 5,
+      mkCourseId: null,
       trackable: null,
       occurredAt: '2024-03-10T08:00:00Z',
     })

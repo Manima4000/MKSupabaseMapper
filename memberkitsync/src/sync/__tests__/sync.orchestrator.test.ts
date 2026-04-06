@@ -9,6 +9,9 @@ vi.mock('../../shared/logger.js', () => ({
 
 vi.mock('../../shared/pagination.js', () => ({
   fetchAllPages: vi.fn(),
+  runConcurrent: vi.fn(async (items: unknown[], fn: (item: unknown) => Promise<unknown>) => {
+    for (const item of items) await fn(item)
+  }),
 }))
 
 vi.mock('../../modules/courses/course.service.js', () => ({
@@ -119,8 +122,8 @@ describe('SyncOrchestrator.run()', () => {
     expect(client.getCourses).toHaveBeenCalledOnce()
     expect(client.getClassrooms).toHaveBeenCalledOnce()
     expect(client.getMembershipLevels).toHaveBeenCalledOnce()
-    // fetchAllPages is used for members and subscriptions only
-    expect(mockFetchAllPages).toHaveBeenCalledTimes(2)
+    // fetchAllPages is used for members, subscriptions, comments, and quiz attempts
+    expect(mockFetchAllPages).toHaveBeenCalledTimes(4)
     // getUserDetail is not called when there are no members
     expect(client.getUserDetail).not.toHaveBeenCalled()
   })
@@ -233,7 +236,7 @@ describe('SyncOrchestrator.run()', () => {
   describe('syncSubscriptions', () => {
     it('calls syncSubscription when user and level are found', async () => {
       const client = makeMockClient()
-      const subs = [{ id: 100, member_id: 1, plan_id: 2, status: 'active', expire_at: null }]
+      const subs = [{ id: 100, status: 'active', expire_date: null, user: { id: 1, full_name: 'X', email: 'x@x.com' }, membership_level_id: 2 }]
       mockFetchAllPages
         .mockResolvedValueOnce([])   // members
         .mockResolvedValueOnce(subs) // subscriptions

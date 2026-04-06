@@ -11,7 +11,7 @@ function normalizeStatus(raw: string): EnrollmentStatus {
   return STATUS_MAP[raw] ?? 'inactive'
 }
 
-// Used by the webhook path — payload has id + member_id + expire_at
+// Used by the webhook path — payload has id + user.id + classroom_id + expire_date
 export function mkEnrollmentToUpsertInput(
   mk: MKEnrollmentPayload,
   userId: number,
@@ -24,7 +24,7 @@ export function mkEnrollmentToUpsertInput(
     courseId,
     classroomId,
     status: normalizeStatus(mk.status),
-    expireDate: mk.expire_at ?? null,
+    expireDate: mk.expire_date ?? null,
   }
 }
 
