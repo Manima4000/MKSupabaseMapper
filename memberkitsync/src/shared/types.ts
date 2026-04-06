@@ -174,6 +174,7 @@ export interface WebhookLog {
   id: number
   event_type: string
   payload: Record<string, unknown>
+  payload_hash: string | null
   status: WebhookLogStatus
   error_message: string | null
   processed_at: string | null

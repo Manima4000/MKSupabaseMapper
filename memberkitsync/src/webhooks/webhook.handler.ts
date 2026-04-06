@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto'
 import { logger } from '../shared/logger.js'
 import { supabase } from '../config/supabase.js'
 import { SupabaseError } from '../shared/errors.js'
@@ -27,10 +28,19 @@ import type { MKTrackableLessonStatus } from '../sync/memberkit-api.client.js'
 export async function dispatchWebhook(envelope: MKWebhookEnvelope): Promise<void> {
   const { event, data, fired_at } = envelope
 
+  const payloadHash = createHash('sha256').update(JSON.stringify(envelope)).digest('hex')
+
+  // Verifica idempotência: ignora se o mesmo webhook já foi processado com sucesso
+  const duplicate = await isAlreadyProcessed(payloadHash)
+  if (duplicate) {
+    logger.info({ event, payloadHash }, 'Webhook duplicado ignorado (já processado)')
+    return
+  }
+
   logger.info({ event }, 'Webhook recebido')
 
   // Registra o webhook no log (auditoria)
-  const logId = await insertWebhookLog(event, envelope, 'received')
+  const logId = await insertWebhookLog(event, envelope, 'received', payloadHash)
 
   try {
     switch (event) {
@@ -149,14 +159,32 @@ async function handleCommentEvent(data: MKCommentWebhookData): Promise<void> {
 // Webhook log helpers
 // ----------------------------------------------------------------------------
 
+async function isAlreadyProcessed(payloadHash: string): Promise<boolean> {
+  const { data, error } = await supabase
+    .from('webhook_logs')
+    .select('id')
+    .eq('payload_hash', payloadHash)
+    .eq('status', 'processed')
+    .maybeSingle()
+
+  if (error) {
+    // Em caso de erro na consulta, permite prosseguir (melhor processar duas vezes do que perder)
+    logger.warn({ error }, 'Erro ao verificar duplicidade de webhook, prosseguindo')
+    return false
+  }
+  return data !== null
+}
+
 async function insertWebhookLog(
   eventType: string,
   payload: Record<string, unknown>,
   status: 'received' | 'processed' | 'failed',
+  payloadHash: string,
 ): Promise<number> {
   const row: WebhookLogInsert = {
     event_type: eventType,
     payload,
+    payload_hash: payloadHash,
     status,
     error_message: null,
     processed_at: null,

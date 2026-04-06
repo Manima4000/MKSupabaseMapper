@@ -20,4 +20,7 @@ CREATE TABLE quiz_attempts (
 CREATE INDEX IF NOT EXISTS idx_quiz_attempts_user_id    ON quiz_attempts (user_id);
 CREATE INDEX IF NOT EXISTS idx_quiz_attempts_quiz_mk_id ON quiz_attempts (quiz_mk_id);
 
-SELECT trigger_set_updated_at('quiz_attempts');
+CREATE TRIGGER set_updated_at
+    BEFORE UPDATE ON quiz_attempts
+    FOR EACH ROW
+    EXECUTE FUNCTION trigger_set_updated_at();
