@@ -15,6 +15,10 @@ const envSchema = z.object({
   // Chave de API usada como query param na URL do webhook (?api_key=...)
   WEBHOOK_API_KEY: z.string().min(1).optional(),
 
+  // Chave de API para proteger os endpoints REST internos (/api/*)
+  // Enviada via header: Authorization: Bearer <API_KEY>
+  API_KEY: z.string().min(1).optional(),
+
   LOG_LEVEL: z
     .enum(['fatal', 'error', 'warn', 'info', 'debug', 'trace'])
     .default('info'),

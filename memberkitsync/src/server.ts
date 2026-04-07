@@ -12,6 +12,17 @@ async function bootstrap(): Promise<void> {
     },
   })
 
+  // Protege todos os endpoints /api/* com Bearer token
+  app.addHook('onRequest', async (request, reply) => {
+    if (!request.url.startsWith('/api/')) return
+    if (!env.API_KEY) return // sem chave configurada → sem proteção (dev)
+
+    const auth = request.headers['authorization']
+    if (!auth || auth !== `Bearer ${env.API_KEY}`) {
+      reply.code(401).send({ error: 'Não autorizado' })
+    }
+  })
+
   // Registra rotas
   await app.register(webhookRoutes, { prefix: '/webhooks' })
   await app.register(userRoutes, { prefix: '/api' })
