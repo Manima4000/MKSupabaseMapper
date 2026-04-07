@@ -13,19 +13,23 @@ export function validateApiKey(apiKey: string | undefined): void {
 }
 
 // Valida e faz parse do corpo do webhook
+// MemberKit envia o tipo do evento no campo "type" (não "event")
 export function parseWebhookBody(body: unknown): MKWebhookEnvelope {
-  if (typeof body !== 'object' || body === null || !('event' in body) || !('data' in body)) {
+  if (typeof body !== 'object' || body === null || !('data' in body)) {
     throw new WebhookValidationError('Payload de webhook malformado')
   }
 
   const envelope = body as Record<string, unknown>
 
-  if (typeof envelope['event'] !== 'string') {
-    throw new WebhookValidationError('Campo "event" ausente ou inválido')
+  // MemberKit usa "type", mas suportamos "event" como fallback
+  const eventValue = envelope['type'] ?? envelope['event']
+
+  if (typeof eventValue !== 'string') {
+    throw new WebhookValidationError('Campo "type" ausente ou inválido')
   }
 
   return {
-    event: envelope['event'] as string,
+    event: eventValue,
     fired_at: typeof envelope['fired_at'] === 'string' ? envelope['fired_at'] : new Date().toISOString(),
     data: (envelope['data'] ?? {}) as Record<string, unknown>,
   }
