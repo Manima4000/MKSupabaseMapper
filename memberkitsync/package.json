@@ -10,7 +10,8 @@
     "dev": "tsx watch src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js",
-    "sync": "tsx src/sync/sync.command.ts"
+    "sync": "tsx src/sync/sync.command.ts",
+    "replay": "tsx src/webhooks/replay.command.ts"
   },
   "keywords": [],
   "author": "",

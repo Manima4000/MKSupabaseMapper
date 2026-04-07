@@ -41,10 +41,10 @@ import type { WebhookLogInsert } from '../shared/types.js'
 import type { MKTrackableLessonStatus } from '../sync/memberkit-api.client.js'
 
 // Dispatcher principal: roteia cada evento para o handler correto
-export async function dispatchWebhook(envelope: MKWebhookEnvelope): Promise<void> {
+export async function dispatchWebhook(envelope: MKWebhookEnvelope, forcedHash?: string): Promise<void> {
   const { event, data, fired_at } = envelope
 
-  const payloadHash = createHash('sha256').update(JSON.stringify(envelope)).digest('hex')
+  const payloadHash = forcedHash ?? createHash('sha256').update(JSON.stringify(envelope)).digest('hex')
 
   // Verifica idempotência: ignora se o mesmo webhook já foi processado com sucesso
   const duplicate = await isAlreadyProcessed(payloadHash)

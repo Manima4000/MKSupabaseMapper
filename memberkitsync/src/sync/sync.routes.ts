@@ -2,6 +2,7 @@ import type { FastifyInstance } from 'fastify'
 import { MemberKitClient } from './memberkit-api.client.js'
 import { SyncOrchestrator } from './sync.orchestrator.js'
 import { logger } from '../shared/logger.js'
+import { syncUser } from '../modules/users/user.service.js'
 
 // Controle de execução para evitar syncs simultâneos
 let syncRunning = false
@@ -137,5 +138,20 @@ export async function syncRoutes(fastify: FastifyInstance): Promise<void> {
 
     reply.code(202).send({ ok: true, message: 'Sync de tentativas de quiz iniciado em background' })
     runSync('quiz-attempts', (o) => o.syncQuizAttempts())
+  })
+
+  // POST /api/sync/users/:mkId — busca um usuário na API do MemberKit e cria/atualiza no banco
+  fastify.post<{ Params: { mkId: string } }>('/sync/users/:mkId', async (request, reply) => {
+    const mkId = Number(request.params.mkId)
+    if (isNaN(mkId)) {
+      return reply.code(400).send({ error: 'mkId inválido' })
+    }
+
+    const client = new MemberKitClient()
+    const detail = await client.getUserDetail(mkId)
+    const user = await syncUser(detail)
+
+    logger.info({ mkId, userId: user.id }, 'Usuário criado/atualizado via endpoint')
+    return reply.send({ ok: true, user })
   })
 }

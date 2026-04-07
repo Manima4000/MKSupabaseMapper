@@ -12,17 +12,6 @@ async function bootstrap(): Promise<void> {
     },
   })
 
-  // Redireciona HTTP → HTTPS quando FORCE_HTTPS=true (usa x-forwarded-proto do proxy)
-  if (env.FORCE_HTTPS) {
-    app.addHook('onRequest', async (request, reply) => {
-      const proto = request.headers['x-forwarded-proto']
-      if (proto && proto !== 'https') {
-        const host = request.headers['host'] ?? ''
-        reply.redirect(`https://${host}${request.url}`, 301)
-      }
-    })
-  }
-
   // Protege todos os endpoints /api/* com Bearer token
   app.addHook('onRequest', async (request, reply) => {
     if (!request.url.startsWith('/api/')) return
