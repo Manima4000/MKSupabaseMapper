@@ -17,20 +17,6 @@ async function bootstrap(): Promise<void> {
   await app.register(userRoutes, { prefix: '/api' })
   await app.register(syncRoutes, { prefix: '/api' })
 
-  // Health check
-  app.get('/', async (_req, reply) => {
-    reply.type('text/html').send(`
-      <html><body style="font-family:sans-serif;padding:2rem">
-        <h2>MemberKit Sync — online</h2>
-        <p>Status: <strong style="color:green">OK</strong></p>
-        <p>Horario: ${new Date().toISOString()}</p>
-        <ul>
-          <li><a href="/health">/health</a> — JSON health check</li>
-          <li><a href="/api/users">/api/users</a> — lista de alunos</li>
-        </ul>
-      </body></html>
-    `)
-  })
   app.get('/health', async () => ({ status: 'ok', timestamp: new Date().toISOString() }))
 
   // Handler global de erros
