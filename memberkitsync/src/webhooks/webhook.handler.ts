@@ -1,7 +1,7 @@
 import { createHash } from 'node:crypto'
 import { logger } from '../shared/logger.js'
 import { supabase } from '../config/supabase.js'
-import { SupabaseError } from '../shared/errors.js'
+import { SupabaseError, WebhookSkipError } from '../shared/errors.js'
 import { syncUser } from '../modules/users/user.service.js'
 import { syncSubscription } from '../modules/memberships/membership.service.js'
 import { upsertEnrollment } from '../modules/enrollments/enrollment.repository.js'
@@ -120,6 +120,11 @@ export async function dispatchWebhook(envelope: MKWebhookEnvelope): Promise<void
 
     await updateWebhookLog(logId, 'processed')
   } catch (err) {
+    if (err instanceof WebhookSkipError) {
+      logger.warn({ event, reason: err.message }, 'Webhook ignorado por dependência ausente')
+      await updateWebhookLog(logId, 'skipped', err.message)
+      return
+    }
     const message = err instanceof Error ? err.message : String(err)
     logger.error({ event, err }, 'Erro ao processar webhook')
     await updateWebhookLog(logId, 'failed', message)
@@ -138,14 +143,12 @@ async function handleMemberEvent(data: MKMemberWebhookData): Promise<void> {
 async function handleSubscriptionEvent(data: MKSubscriptionWebhookData): Promise<void> {
   const user = await getUserByMkId(data.user.id)
   if (!user) {
-    logger.warn({ memberMkId: data.user.id }, 'Usuário não encontrado para webhook de assinatura')
-    return
+    throw new WebhookSkipError(`Usuário mk_id=${data.user.id} não encontrado — assinatura mk_id=${data.id} não processada`)
   }
 
   const level = await getMembershipLevelByMkId(data.membership_level.id)
   if (!level) {
-    logger.warn({ planMkId: data.membership_level.id }, 'Plano não encontrado para webhook de assinatura')
-    return
+    throw new WebhookSkipError(`Plano mk_id=${data.membership_level.id} não encontrado — assinatura mk_id=${data.id} não processada`)
   }
 
   await syncSubscription(data, user.id, level.id)
@@ -156,9 +159,11 @@ async function handleEnrollmentEvent(data: MKEnrollmentWebhookData): Promise<voi
   const course = await getCourseByMkId(data.course_id)
   const classroom = data.classroom_id ? await getClassroomByMkId(data.classroom_id) : null
 
-  if (!user || !course) {
-    logger.warn({ data }, 'Usuário ou curso não encontrado para webhook de matrícula')
-    return
+  if (!user) {
+    throw new WebhookSkipError(`Usuário mk_id=${data.user.id} não encontrado — matrícula mk_id=${data.id} não processada`)
+  }
+  if (!course) {
+    throw new WebhookSkipError(`Curso mk_id=${data.course_id} não encontrado — matrícula mk_id=${data.id} não processada`)
   }
 
   await upsertEnrollment(
@@ -173,8 +178,7 @@ async function handleLessonStatusEvent(
   const user = await getUserByMkId(data.user.id)
 
   if (!user) {
-    logger.warn({ data }, 'Usuário não encontrado para webhook de progresso')
-    return
+    throw new WebhookSkipError(`Usuário mk_id=${data.user.id} não encontrado — progresso de aula mk_id=${data.lesson.id} não processado`)
   }
 
   const trackable: MKTrackableLessonStatus = {
@@ -190,9 +194,11 @@ async function handleCommentEvent(data: MKCommentWebhookData): Promise<void> {
   const user = await getUserByMkId(data.user.id)
   const lesson = await getLessonByMkId(data.lesson.id)
 
-  if (!user || !lesson) {
-    logger.warn({ data }, 'Usuário ou aula não encontrado para webhook de comentário')
-    return
+  if (!user) {
+    throw new WebhookSkipError(`Usuário mk_id=${data.user.id} não encontrado — comentário mk_id=${data.id} não processado`)
+  }
+  if (!lesson) {
+    throw new WebhookSkipError(`Aula mk_id=${data.lesson.id} não encontrada — comentário mk_id=${data.id} não processado`)
   }
 
   await upsertComment({
@@ -215,8 +221,7 @@ async function handleUserLoginEvent(data: MKUserLoginWebhookData): Promise<void>
 async function handleLessonCatalogEvent(data: MKLessonCatalogWebhookData): Promise<void> {
   const course = await getCourseByMkId(data.course.id)
   if (!course) {
-    logger.warn({ courseMkId: data.course.id }, 'Curso não encontrado para webhook de aula')
-    return
+    throw new WebhookSkipError(`Curso mk_id=${data.course.id} não encontrado — aula mk_id=${data.id} não processada`)
   }
 
   const section = await upsertSection({
@@ -261,9 +266,11 @@ async function handleRatingEvent(data: MKRatingWebhookData): Promise<void> {
   const user = await getUserByMkId(data.user.id)
   const lesson = await getLessonByMkId(data.lesson.id)
 
-  if (!user || !lesson) {
-    logger.warn({ data }, 'Usuário ou aula não encontrado para webhook de avaliação')
-    return
+  if (!user) {
+    throw new WebhookSkipError(`Usuário mk_id=${data.user.id} não encontrado — avaliação mk_id=${data.id} não processada`)
+  }
+  if (!lesson) {
+    throw new WebhookSkipError(`Aula mk_id=${data.lesson.id} não encontrada — avaliação mk_id=${data.id} não processada`)
   }
 
   await upsertLessonRating({
@@ -281,8 +288,7 @@ async function handleLessonFileDownloadedEvent(
   const user = await getUserByMkId(data.user.id)
 
   if (!user) {
-    logger.warn({ data }, 'Usuário não encontrado para webhook de download de material')
-    return
+    throw new WebhookSkipError(`Usuário mk_id=${data.user.id} não encontrado — download de material não registrado`)
   }
 
   await logUserActivity(user.id, 'lesson_file.downloaded', data.lesson.id, firedAt, null, null)
@@ -349,7 +355,7 @@ async function insertWebhookLog(
 
 async function updateWebhookLog(
   id: number,
-  status: 'processed' | 'failed',
+  status: 'processed' | 'skipped' | 'failed',
   errorMessage?: string,
 ): Promise<void> {
   const { error } = await supabase

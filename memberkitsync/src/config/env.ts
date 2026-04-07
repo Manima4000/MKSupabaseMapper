@@ -19,6 +19,12 @@ const envSchema = z.object({
   // Enviada via header: Authorization: Bearer <API_KEY>
   API_KEY: z.string().min(1).optional(),
 
+  // Redireciona HTTP → HTTPS usando o header x-forwarded-proto (set pelo proxy)
+  FORCE_HTTPS: z
+    .string()
+    .transform((v) => v === 'true' || v === '1')
+    .default('false'),
+
   LOG_LEVEL: z
     .enum(['fatal', 'error', 'warn', 'info', 'debug', 'trace'])
     .default('info'),

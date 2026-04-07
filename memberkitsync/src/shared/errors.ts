@@ -43,3 +43,10 @@ export class WebhookValidationError extends AppError {
     this.name = 'WebhookValidationError'
   }
 }
+
+export class WebhookSkipError extends Error {
+  constructor(message: string) {
+    super(message)
+    this.name = 'WebhookSkipError'
+  }
+}

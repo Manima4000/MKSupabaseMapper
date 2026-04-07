@@ -7,7 +7,7 @@
 export type MembershipStatus = 'inactive' | 'pending' | 'active' | 'expired'
 export type EnrollmentStatus = 'inactive' | 'pending' | 'active' | 'expired'
 export type CommentStatus = 'pending' | 'approved' | 'rejected'
-export type WebhookLogStatus = 'received' | 'processed' | 'failed'
+export type WebhookLogStatus = 'received' | 'processed' | 'skipped' | 'failed'
 
 // ============================================================================
 // DATABASE ROW TYPES (what SELECT returns)
