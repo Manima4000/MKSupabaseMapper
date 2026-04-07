@@ -32,10 +32,17 @@ describe('buildUserActivity', () => {
 
   it('includes trackable when provided', () => {
     const result = buildUserActivity(10, 'lesson_status_saved', 3, '2024-03-10T08:00:00Z', {
-      progress: 100,
+      id: 99,
       completed_at: '2024-03-10T08:00:00Z',
+      created_at: '2024-03-10T08:00:00Z',
+      updated_at: '2024-03-10T08:00:00Z',
     })
 
-    expect(result.trackable).toEqual({ progress: 100, completed_at: '2024-03-10T08:00:00Z' })
+    expect(result.trackable).toEqual({
+      id: 99,
+      completed_at: '2024-03-10T08:00:00Z',
+      created_at: '2024-03-10T08:00:00Z',
+      updated_at: '2024-03-10T08:00:00Z',
+    })
   })
 })
