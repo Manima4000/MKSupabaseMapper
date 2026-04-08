@@ -8,8 +8,10 @@ export function buildUserActivity(
   occurredAt?: string,
   trackable?: MKTrackable | null,
   mkCourseId?: number | null,
+  mkId?: number | null,
 ): CreateUserActivityInput {
   return {
+    mkId: mkId ?? null,
     userId,
     eventType,
     mkCourseId: mkCourseId ?? null,

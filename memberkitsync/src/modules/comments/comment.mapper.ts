@@ -12,5 +12,6 @@ export function mkCommentToUpsertInput(
     lessonId,
     body: mk.content,
     status: (mk.status as CommentStatus) ?? 'pending',
+    createdAt: mk.created_at,
   }
 }

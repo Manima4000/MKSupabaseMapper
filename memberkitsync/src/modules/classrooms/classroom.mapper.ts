@@ -4,5 +4,6 @@ export function mkClassroomToUpsertInput(mk: MKClassroomPayload): UpsertClassroo
   return {
     mkId: mk.id,
     name: mk.name,
+    ...(mk.created_at !== undefined && { createdAt: mk.created_at }),
   }
 }

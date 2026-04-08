@@ -7,4 +7,5 @@ export interface UpsertCommentInput {
   lessonId: number  // internal DB lesson_id (already resolved)
   body: string
   status: CommentStatus
+  createdAt?: string
 }

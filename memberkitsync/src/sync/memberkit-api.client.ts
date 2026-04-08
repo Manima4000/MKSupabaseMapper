@@ -12,6 +12,7 @@ export interface MKCategory {
   id: number
   name: string
   position: number
+  created_at?: string
 }
 
 export interface MKLessonFile {
@@ -32,6 +33,7 @@ export interface MKLesson {
   title: string
   position: number
   slug: string | null
+  created_at?: string
   video?: MKLessonVideo | null
   files?: MKLessonFile[]
 }
@@ -41,6 +43,7 @@ export interface MKSection {
   name: string
   position: number
   slug: string | null
+  created_at?: string
   lessons: MKLesson[]
 }
 
@@ -48,6 +51,7 @@ export interface MKCourse {
   id: number
   name: string
   position: number
+  created_at?: string
   category: MKCategory | null
   sections: MKSection[]
 }
@@ -69,6 +73,7 @@ export interface MKUser {
   current_sign_in_at: string | null
   last_seen_at: string | null
   meta: Record<string, unknown>
+  created_at?: string
 }
 
 // Keep MKMember as an alias for backwards compatibility within the codebase
@@ -110,6 +115,7 @@ export interface MKUserDetail extends MKUser {
 export interface MKClassroom {
   id: number
   name: string
+  created_at?: string
 }
 
 export interface MKMembershipLevel {
@@ -117,6 +123,7 @@ export interface MKMembershipLevel {
   name: string
   trial_period: number
   classroom_ids: number[]
+  created_at?: string
 }
 
 // Keep MKPlan as an alias for backwards compatibility within the codebase
@@ -127,6 +134,7 @@ export interface MKMembership {
   status: string
   membership_level_id: number
   expire_date: string | null
+  created_at?: string
   user: {
     id: number
     full_name: string | null
@@ -145,6 +153,7 @@ export interface MKEnrollment {
   classroom_id: number | null
   status: string
   expire_date: string | null
+  created_at?: string
   user: {
     id: number
     full_name: string | null

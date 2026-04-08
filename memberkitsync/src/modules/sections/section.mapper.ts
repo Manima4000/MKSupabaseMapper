@@ -7,5 +7,6 @@ export function mkSectionToUpsertInput(mk: MKSectionPayload, courseId: number): 
     name: mk.name,
     position: mk.position,
     slug: mk.slug ?? null,
+    ...(mk.created_at !== undefined && { createdAt: mk.created_at }),
   }
 }

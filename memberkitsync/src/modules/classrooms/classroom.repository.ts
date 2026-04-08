@@ -6,6 +6,7 @@ export async function upsertClassroom(input: UpsertClassroomInput): Promise<Clas
   const row: ClassroomInsert = {
     mk_id: input.mkId,
     name: input.name,
+    ...(input.createdAt !== undefined && { created_at: input.createdAt }),
   }
 
   const { data, error } = await supabase

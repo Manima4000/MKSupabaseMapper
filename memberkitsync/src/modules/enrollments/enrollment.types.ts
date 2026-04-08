@@ -16,4 +16,5 @@ export interface UpsertEnrollmentInput {
   classroomId: number | null
   status: EnrollmentStatus
   expireDate: string | null
+  createdAt?: string
 }

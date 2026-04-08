@@ -9,4 +9,5 @@ export interface UpsertQuizAttemptInput {
   answeredQuestionsCount: number
   correctAnswersCount: number
   startedAt: string | null
+  createdAt?: string
 }

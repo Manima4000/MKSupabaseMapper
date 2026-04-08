@@ -8,7 +8,12 @@ export interface PaginationMeta {
 }
 
 // Busca page 1 para descobrir total_pages, depois busca as demais páginas
-// sequencialmente para não causar burst de requests e evitar 429.
+// em paralelo para não causar burst de requests e evitar 429.
+//
+// Fallback "fetch-until-empty": se o endpoint não retornar o header Total-Pages
+// (parseMeta devolve total_pages=1 por padrão), mas a primeira página retornou
+// exatamente `perPage` itens, assumimos que pode haver mais páginas e seguimos
+// buscando sequencialmente até receber uma página com menos de `perPage` itens.
 export async function fetchAllPages<T>(
   fetcher: (client: MemberKitClient, page: number, perPage: number) => Promise<{ items: T[]; meta: PaginationMeta }>,
   client: MemberKitClient,
@@ -23,23 +28,47 @@ export async function fetchAllPages<T>(
     `[${label}] ${meta.total_count} registros em ${meta.total_pages} página(s)`,
   )
 
-  if (meta.total_pages <= 1) return firstItems
+  // Se o endpoint informou total_pages > 1, busca todas as páginas restantes em paralelo.
+  if (meta.total_pages > 1) {
+    const remaining = await Promise.all(
+      Array.from({ length: meta.total_pages - 1 }, (_, i) =>
+        fetcher(client, i + 2, perPage),
+      ),
+    )
 
-  // Dispara todas as páginas restantes em paralelo — o throttle do cliente
-  // serializa os timestamps e garante no máximo 115 req/min automaticamente.
-  const remaining = await Promise.all(
-    Array.from({ length: meta.total_pages - 1 }, (_, i) =>
-      fetcher(client, i + 2, perPage),
-    ),
+    const allItems: T[] = [...firstItems]
+    for (const { items } of remaining) {
+      allItems.push(...items)
+    }
+
+    const elapsed = ((Date.now() - pageStart) / 1000).toFixed(1)
+    logger.info({ label, total: allItems.length, elapsed: `${elapsed}s` }, `[${label}] ${allItems.length} registros carregados em ${elapsed}s`)
+    return allItems
+  }
+
+  // Fallback: total_pages não veio nos headers (valor padrão = 1), mas recebemos
+  // uma página cheia — pode haver mais. Itera sequencialmente até página incompleta.
+  if (firstItems.length < perPage) return firstItems
+
+  logger.debug(
+    { label, perPage },
+    `[${label}] total_pages não disponível nos headers — usando fallback sequencial (fetch-until-empty)`,
   )
 
   const allItems: T[] = [...firstItems]
-  for (const { items } of remaining) {
+  let page = 2
+
+  while (true) {
+    const { items } = await fetcher(client, page, perPage)
     allItems.push(...items)
+    logger.debug({ label, page, fetched: items.length, total: allItems.length }, `[${label}] página ${page}: ${items.length} itens`)
+
+    if (items.length < perPage) break
+    page++
   }
 
   const elapsed = ((Date.now() - pageStart) / 1000).toFixed(1)
-  logger.info({ label, total: allItems.length, elapsed: `${elapsed}s` }, `[${label}] ${allItems.length} registros carregados em ${elapsed}s`)
+  logger.info({ label, total: allItems.length, elapsed: `${elapsed}s` }, `[${label}] ${allItems.length} registros carregados em ${elapsed}s (fallback sequencial, ${page} páginas)`)
   return allItems
 }
 

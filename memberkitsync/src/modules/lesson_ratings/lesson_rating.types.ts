@@ -6,4 +6,5 @@ export interface UpsertLessonRatingInput {
   userId: number
   lessonId: number
   stars: number
+  createdAt?: string
 }

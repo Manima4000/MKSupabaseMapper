@@ -187,7 +187,7 @@ async function handleLessonStatusEvent(
     created_at: data.created_at ?? firedAt,
     updated_at: data.updated_at ?? firedAt,
   }
-  await logUserActivity(user.id, 'lesson_status.saved', data.lesson.id, firedAt, trackable, data.course.id)
+  await logUserActivity(user.id, 'LessonStatus', data.lesson.id, firedAt, trackable, data.course.id, data.id)
 }
 
 async function handleCommentEvent(data: MKCommentWebhookData): Promise<void> {
@@ -207,6 +207,7 @@ async function handleCommentEvent(data: MKCommentWebhookData): Promise<void> {
     lessonId: lesson.id,
     body: data.content,
     status: data.status as import('../shared/types.js').CommentStatus,
+    createdAt: data.created_at,
   })
 }
 
@@ -230,6 +231,7 @@ async function handleLessonCatalogEvent(data: MKLessonCatalogWebhookData): Promi
     name: data.section.name,
     position: data.section.position,
     slug: data.section.slug,
+    createdAt: data.section.created_at,
   })
 
   const lesson = await upsertLesson({
@@ -238,6 +240,7 @@ async function handleLessonCatalogEvent(data: MKLessonCatalogWebhookData): Promi
     title: data.title,
     position: data.position,
     slug: data.slug,
+    createdAt: data.created_at,
   })
 
   if (data.video) {
@@ -278,6 +281,7 @@ async function handleRatingEvent(data: MKRatingWebhookData): Promise<void> {
     userId: user.id,
     lessonId: lesson.id,
     stars: data.stars,
+    createdAt: data.created_at,
   })
 }
 

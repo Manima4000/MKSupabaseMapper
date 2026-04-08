@@ -25,6 +25,7 @@ export function mkEnrollmentToUpsertInput(
     classroomId,
     status: normalizeStatus(mk.status),
     expireDate: mk.expire_date ?? null,
+    ...(mk.created_at !== undefined && { createdAt: mk.created_at }),
   }
 }
 

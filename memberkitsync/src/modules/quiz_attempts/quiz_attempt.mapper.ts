@@ -13,5 +13,6 @@ export function mkQuizAttemptToUpsertInput(
     answeredQuestionsCount: mk.answered_questions_count,
     correctAnswersCount: mk.correct_answers_count,
     startedAt: mk.started_at ?? null,
+    ...(mk.created_at !== undefined && { createdAt: mk.created_at }),
   }
 }

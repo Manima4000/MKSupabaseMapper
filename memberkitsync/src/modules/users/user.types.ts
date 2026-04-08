@@ -17,4 +17,5 @@ export interface UpsertUserInput {
   currentSignInAt: string | null
   lastSeenAt: string | null
   metadata: Record<string, unknown>
+  createdAt?: string
 }

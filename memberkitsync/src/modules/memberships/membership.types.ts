@@ -18,6 +18,7 @@ export interface MKSubscriptionPayload {
   status: string
   expire_date?: string | null
   expire_at?: string | null
+  created_at?: string
 }
 
 export type MKPlanPayload = MKMembershipLevel
@@ -26,6 +27,7 @@ export interface UpsertMembershipLevelInput {
   mkId: number
   name: string
   trialPeriod: number
+  createdAt?: string
 }
 
 export interface UpsertMembershipInput {
@@ -34,4 +36,5 @@ export interface UpsertMembershipInput {
   membershipLevelId: number
   status: MembershipStatus
   expireDate: string | null
+  createdAt?: string
 }

@@ -10,6 +10,7 @@ export async function upsertEnrollment(input: UpsertEnrollmentInput): Promise<En
     classroom_id: input.classroomId,
     status: input.status,
     expire_date: input.expireDate,
+    ...(input.createdAt !== undefined && { created_at: input.createdAt }),
   }
 
   // Webhook path: conflict on mk_id (the enrollment has a known MemberKit ID).

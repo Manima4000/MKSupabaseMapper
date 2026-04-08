@@ -14,6 +14,7 @@ export async function upsertUser(input: UpsertUserInput): Promise<User> {
     current_sign_in_at: input.currentSignInAt,
     last_seen_at: input.lastSeenAt,
     metadata: input.metadata,
+    ...(input.createdAt !== undefined && { created_at: input.createdAt }),
   }
 
   const { data, error } = await supabase

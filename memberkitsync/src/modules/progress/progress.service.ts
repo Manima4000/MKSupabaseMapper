@@ -10,7 +10,8 @@ export async function logUserActivity(
   occurredAt?: string,
   trackable?: MKTrackable | null,
   mkCourseId?: number | null,
+  mkId?: number | null,
 ): Promise<UserActivity> {
-  const input = buildUserActivity(userId, eventType, mkLessonId, occurredAt, trackable, mkCourseId)
+  const input = buildUserActivity(userId, eventType, mkLessonId, occurredAt, trackable, mkCourseId, mkId)
   return createUserActivity(input)
 }

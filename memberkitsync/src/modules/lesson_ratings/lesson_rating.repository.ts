@@ -8,6 +8,7 @@ export async function upsertLessonRating(input: UpsertLessonRatingInput): Promis
     user_id: input.userId,
     lesson_id: input.lessonId,
     stars: input.stars,
+    ...(input.createdAt !== undefined && { created_at: input.createdAt }),
   }
 
   const { data, error } = await supabase

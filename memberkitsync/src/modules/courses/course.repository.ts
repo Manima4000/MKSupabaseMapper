@@ -12,6 +12,7 @@ export async function upsertCategory(input: UpsertCategoryInput): Promise<Catego
     mk_id: input.mkId,
     name: input.name,
     position: input.position,
+    ...(input.createdAt !== undefined && { created_at: input.createdAt }),
   }
 
   const { data, error } = await supabase
@@ -45,6 +46,7 @@ export async function upsertCourse(input: UpsertCourseInput): Promise<Course> {
     name: input.name,
     position: input.position,
     category_id: input.categoryId,
+    ...(input.createdAt !== undefined && { created_at: input.createdAt }),
   }
 
   const { data, error } = await supabase

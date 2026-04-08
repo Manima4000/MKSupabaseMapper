@@ -44,6 +44,7 @@ export interface MKMemberWebhookData {
   current_sign_in_at: string | null
   last_seen_at: string | null
   meta: Record<string, unknown>
+  created_at?: string
 }
 
 // membership.created / membership.updated
@@ -51,6 +52,7 @@ export interface MKSubscriptionWebhookData {
   id: number
   status: string
   expire_date: string | null
+  created_at?: string
   membership_level: {
     id: number
     name: string
@@ -72,6 +74,7 @@ export interface MKEnrollmentWebhookData {
   classroom_id: number | null
   status: string
   expire_date: string | null
+  created_at?: string
   user: {
     id: number
     full_name: string | null

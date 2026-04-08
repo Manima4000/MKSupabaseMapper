@@ -11,5 +11,6 @@ export function mkMemberToUpsertInput(mk: MKUserPayload): UpsertUserInput {
     currentSignInAt: mk.current_sign_in_at ?? null,
     lastSeenAt: mk.last_seen_at ?? null,
     metadata: mk.meta ?? {},
+    ...(mk.created_at !== undefined && { createdAt: mk.created_at }),
   }
 }

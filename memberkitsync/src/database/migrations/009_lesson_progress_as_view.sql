@@ -22,7 +22,7 @@ SELECT DISTINCT ON (ua.user_id, l.id)
     (ua.trackable->>'completed_at')::TIMESTAMPTZ        AS completed_at
 FROM user_activities ua
 JOIN lessons l ON l.mk_id = ua.mk_lesson_id
-WHERE ua.event_type = 'lesson_status.saved'
+WHERE ua.event_type = 'LessonStatus'
   AND ua.mk_lesson_id IS NOT NULL
   AND ua.trackable->>'completed_at' IS NOT NULL
 ORDER BY ua.user_id, l.id, ua.occurred_at DESC;

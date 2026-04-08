@@ -14,6 +14,7 @@ export interface UpsertCategoryInput {
   mkId: number
   name: string
   position: number
+  createdAt?: string
 }
 
 export interface UpsertCourseInput {
@@ -21,4 +22,5 @@ export interface UpsertCourseInput {
   name: string
   position: number
   categoryId: number | null
+  createdAt?: string
 }
