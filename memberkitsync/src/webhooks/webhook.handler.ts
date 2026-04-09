@@ -141,9 +141,21 @@ async function handleMemberEvent(data: MKMemberWebhookData): Promise<void> {
 }
 
 async function handleSubscriptionEvent(data: MKSubscriptionWebhookData): Promise<void> {
-  const user = await getUserByMkId(data.user.id)
+  let user = await getUserByMkId(data.user.id)
   if (!user) {
-    throw new WebhookSkipError(`Usuário mk_id=${data.user.id} não encontrado — assinatura mk_id=${data.id} não processada`)
+    logger.info({ mkId: data.user.id }, 'Usuário não encontrado no banco — criando a partir do webhook de assinatura')
+    user = await upsertUser({
+      mkId: data.user.id,
+      fullName: data.user.full_name ?? data.user.email,
+      email: data.user.email,
+      blocked: false,
+      unlimited: false,
+      signInCount: data.user.sign_in_count,
+      currentSignInAt: data.user.current_sign_in_at,
+      lastSeenAt: data.user.last_seen_at,
+      metadata: data.user.metadata ?? {},
+      ...(data.user.created_at !== undefined && { createdAt: data.user.created_at }),
+    })
   }
 
   const level = await getMembershipLevelByMkId(data.membership_level.id)

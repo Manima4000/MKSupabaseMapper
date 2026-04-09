@@ -350,11 +350,13 @@ export class MemberKitClient {
   }
 
   // Reads MemberKit's pagination headers into a PaginationMeta object.
+  // Headers: Current-Page, Page-Limit, Total-Pages, Total-Count, Link
   private parseMeta(headers: Headers, page: number, itemCount: number): PaginationMeta {
     return {
       current_page: parseInt(headers.get('Current-Page') ?? String(page), 10),
       total_pages: parseInt(headers.get('Total-Pages') ?? '1', 10),
       total_count: parseInt(headers.get('Total-Count') ?? String(itemCount), 10),
+      page_limit: parseInt(headers.get('Page-Limit') ?? '0', 10),
     }
   }
 

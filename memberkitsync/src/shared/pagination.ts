@@ -5,6 +5,7 @@ export interface PaginationMeta {
   current_page: number
   total_pages: number
   total_count: number
+  page_limit: number  // valor real retornado pelo servidor (Page-Limit header)
 }
 
 // Busca page 1 para descobrir total_pages, depois busca as demais páginas
@@ -12,20 +13,28 @@ export interface PaginationMeta {
 //
 // Fallback "fetch-until-empty": se o endpoint não retornar o header Total-Pages
 // (parseMeta devolve total_pages=1 por padrão), mas a primeira página retornou
-// exatamente `perPage` itens, assumimos que pode haver mais páginas e seguimos
-// buscando sequencialmente até receber uma página com menos de `perPage` itens.
+// exatamente `page_limit` itens (limite real do servidor), assumimos que pode
+// haver mais páginas e seguimos buscando sequencialmente até página incompleta.
+//
+// NOTA: MemberKit limita a 50 itens por página (Page-Limit header). O perPage
+// enviado na request é um máximo desejado; o servidor pode reduzir.
 export async function fetchAllPages<T>(
   fetcher: (client: MemberKitClient, page: number, perPage: number) => Promise<{ items: T[]; meta: PaginationMeta }>,
   client: MemberKitClient,
-  perPage = 100,
+  perPage = 50,
   label = 'fetchAllPages',
 ): Promise<T[]> {
   const pageStart = Date.now()
   const { items: firstItems, meta } = await fetcher(client, 1, perPage)
 
+  // Usa o limite real retornado pelo servidor para comparações de página completa.
+  // Se o header Page-Limit não veio, usa o que o servidor efetivamente retornou
+  // na primeira página como estimativa do tamanho de página real.
+  const serverPageLimit = meta.page_limit > 0 ? meta.page_limit : firstItems.length
+
   logger.info(
-    { label, totalCount: meta.total_count, totalPages: meta.total_pages, perPage },
-    `[${label}] ${meta.total_count} registros em ${meta.total_pages} página(s)`,
+    { label, totalCount: meta.total_count, totalPages: meta.total_pages, serverPageLimit },
+    `[${label}] ${meta.total_count} registros em ${meta.total_pages} página(s) (limite do servidor: ${serverPageLimit}/página)`,
   )
 
   // Se o endpoint informou total_pages > 1, busca todas as páginas restantes em paralelo.
@@ -47,11 +56,13 @@ export async function fetchAllPages<T>(
   }
 
   // Fallback: total_pages não veio nos headers (valor padrão = 1), mas recebemos
-  // uma página cheia — pode haver mais. Itera sequencialmente até página incompleta.
-  if (firstItems.length < perPage) return firstItems
+  // uma página cheia pelo limite real do servidor — pode haver mais páginas.
+  // Compara contra serverPageLimit (não o perPage do cliente) para evitar falso
+  // positivo quando o servidor silenciosamente limita a 50 e recebemos perPage=100.
+  if (firstItems.length < serverPageLimit) return firstItems
 
   logger.debug(
-    { label, perPage },
+    { label, serverPageLimit },
     `[${label}] total_pages não disponível nos headers — usando fallback sequencial (fetch-until-empty)`,
   )
 
@@ -63,7 +74,7 @@ export async function fetchAllPages<T>(
     allItems.push(...items)
     logger.debug({ label, page, fetched: items.length, total: allItems.length }, `[${label}] página ${page}: ${items.length} itens`)
 
-    if (items.length < perPage) break
+    if (items.length < serverPageLimit) break
     page++
   }
 

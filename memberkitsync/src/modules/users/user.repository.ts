@@ -66,11 +66,22 @@ export async function updateUserLoginData(
 }
 
 export async function getAllUsers(): Promise<User[]> {
-  const { data, error } = await supabase
-    .from('users')
-    .select('id, mk_id')
-    .order('id')
+  const PAGE = 1000
+  const all: User[] = []
+  let from = 0
 
-  if (error) throw new SupabaseError('Falha ao buscar todos os users', error)
-  return data as User[]
+  while (true) {
+    const { data, error } = await supabase
+      .from('users')
+      .select('id, mk_id')
+      .order('id')
+      .range(from, from + PAGE - 1)
+
+    if (error) throw new SupabaseError('Falha ao buscar todos os users', error)
+    all.push(...(data as User[]))
+    if (data.length < PAGE) break
+    from += PAGE
+  }
+
+  return all
 }
