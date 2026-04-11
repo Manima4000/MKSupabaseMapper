@@ -3,6 +3,10 @@ import { MemberKitClient } from './memberkit-api.client.js'
 import { SyncOrchestrator } from './sync.orchestrator.js'
 import { logger } from '../shared/logger.js'
 import { syncUser } from '../modules/users/user.service.js'
+import { supabase } from '../config/supabase.js'
+import { dispatchWebhook } from '../webhooks/webhook.handler.js'
+import type { WebhookLog } from '../shared/types.js'
+import type { MKWebhookEnvelope } from '../webhooks/webhook.types.js'
 
 // Controle de execução para evitar syncs simultâneos
 let syncRunning = false

@@ -216,11 +216,6 @@ export interface MKLessonFileDownloadedWebhookData {
     id: number
     full_name: string | null
     email: string
-    sign_in_count?: number
-    current_sign_in_at?: string | null
-    last_seen_at?: string | null
-    metadata?: Record<string, unknown>
-    created_at?: string
   }
   lesson: {
     id: number

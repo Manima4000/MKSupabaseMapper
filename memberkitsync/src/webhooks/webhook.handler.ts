@@ -373,22 +373,7 @@ async function handleLessonFileDownloadedEvent(
   data: MKLessonFileDownloadedWebhookData,
   firedAt: string,
 ): Promise<void> {
-  let user = await getUserByMkId(data.user.id)
-  if (!user) {
-    logger.info({ mkId: data.user.id }, 'Usuário não encontrado no banco — criando a partir do webhook de download de arquivo')
-    user = await upsertUser({
-      mkId: data.user.id,
-      fullName: data.user.full_name ?? data.user.email,
-      email: data.user.email,
-      blocked: false,
-      unlimited: false,
-      signInCount: data.user.sign_in_count ?? 0,
-      currentSignInAt: data.user.current_sign_in_at ?? null,
-      lastSeenAt: data.user.last_seen_at ?? null,
-      metadata: data.user.metadata ?? {},
-      ...(data.user.created_at !== undefined && { createdAt: data.user.created_at }),
-    })
-  }
+  const user = await resolveOrCreateUser(data.user)
 
   const lesson = await getLessonByMkId(data.lesson.id)
 
