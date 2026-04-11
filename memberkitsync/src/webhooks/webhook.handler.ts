@@ -6,7 +6,8 @@ import { syncUser } from '../modules/users/user.service.js'
 import { syncSubscription } from '../modules/memberships/membership.service.js'
 import { upsertEnrollment } from '../modules/enrollments/enrollment.repository.js'
 import { mkEnrollmentToUpsertInput } from '../modules/enrollments/enrollment.mapper.js'
-import { logUserActivity } from '../modules/progress/progress.service.js'
+import { upsertLessonProgress } from '../modules/lesson_progress/lesson_progress.repository.js'
+import { insertLessonFileDownload } from '../modules/lesson_file_downloads/lesson_file_download.repository.js'
 import {
   getUserByMkId,
   upsertUser,
@@ -38,7 +39,6 @@ import type {
   MKInvitePassWebhookData,
 } from './webhook.types.js'
 import type { WebhookLogInsert } from '../shared/types.js'
-import type { MKTrackableLessonStatus } from '../sync/memberkit-api.client.js'
 
 // Dispatcher principal: roteia cada evento para o handler correto
 export async function dispatchWebhook(envelope: MKWebhookEnvelope, forcedHash?: string): Promise<void> {
@@ -193,13 +193,19 @@ async function handleLessonStatusEvent(
     throw new WebhookSkipError(`Usuário mk_id=${data.user.id} não encontrado — progresso de aula mk_id=${data.lesson.id} não processado`)
   }
 
-  const trackable: MKTrackableLessonStatus = {
-    id: data.id ?? 0,
-    completed_at: data.completed_at,
-    created_at: data.created_at ?? firedAt,
-    updated_at: data.updated_at ?? firedAt,
+  const lesson = await getLessonByMkId(data.lesson.id)
+  if (!lesson) {
+    throw new WebhookSkipError(`Aula mk_id=${data.lesson.id} não encontrada — progresso do usuário mk_id=${data.user.id} não processado`)
   }
-  await logUserActivity(user.id, 'LessonStatus', data.lesson.id, firedAt, trackable, data.course.id, data.id)
+
+  await upsertLessonProgress({
+    mkId: data.id ?? null,
+    userId: user.id,
+    lessonId: lesson.id,
+    completedAt: data.completed_at,
+    // Use the event's own created_at as the canonical time; fall back to fired_at
+    occurredAt: data.created_at ?? firedAt,
+  })
 }
 
 async function handleCommentEvent(data: MKCommentWebhookData): Promise<void> {
@@ -307,7 +313,15 @@ async function handleLessonFileDownloadedEvent(
     throw new WebhookSkipError(`Usuário mk_id=${data.user.id} não encontrado — download de material não registrado`)
   }
 
-  await logUserActivity(user.id, 'lesson_file.downloaded', data.lesson.id, firedAt, null, null)
+  const lesson = await getLessonByMkId(data.lesson.id)
+
+  await insertLessonFileDownload({
+    userId: user.id,
+    lessonId: lesson?.id ?? null,
+    fileId: data.file.id,
+    // clicked_at is when the student actually downloaded the file
+    occurredAt: data.clicked_at,
+  })
 }
 
 async function handleInvitePassEvent(data: MKInvitePassWebhookData): Promise<void> {
@@ -321,6 +335,7 @@ async function handleInvitePassEvent(data: MKInvitePassWebhookData): Promise<voi
     currentSignInAt: data.user.current_sign_in_at,
     lastSeenAt: data.user.last_seen_at,
     metadata: data.user.metadata ?? {},
+    createdAt: data.user.created_at,
   })
 }
 

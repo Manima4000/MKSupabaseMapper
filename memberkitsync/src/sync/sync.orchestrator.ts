@@ -1,6 +1,6 @@
 import { logger } from '../shared/logger.js'
 import { fetchAllPages, runConcurrent } from '../shared/pagination.js'
-import type { MKUser } from './memberkit-api.client.js'
+import type { MKUser, MKUserActivity, MKTrackableForumPost, MKTrackableForumComment } from './memberkit-api.client.js'
 import type { User } from '../modules/users/user.types.js'
 import { MemberKitClient } from './memberkit-api.client.js'
 import { syncCourse } from '../modules/courses/course.service.js'
@@ -15,10 +15,13 @@ import { getUserByMkId, getAllUsers } from '../modules/users/user.repository.js'
 import { getMembershipLevelByMkId } from '../modules/memberships/membership.repository.js'
 import { getCourseByMkId } from '../modules/courses/course.repository.js'
 import { getClassroomByMkId } from '../modules/classrooms/classroom.repository.js'
-import { upsertUserActivityByMkId } from '../modules/progress/progress.repository.js'
-import { mkActivityToCreateInput } from '../modules/progress/progress.mapper.js'
+import { upsertLessonProgress } from '../modules/lesson_progress/lesson_progress.repository.js'
+import { upsertForumPost } from '../modules/forum_posts/forum_post.repository.js'
+import { upsertForumComment } from '../modules/forum_comments/forum_comment.repository.js'
+import { insertLessonFileDownload } from '../modules/lesson_file_downloads/lesson_file_download.repository.js'
 import { getAllLessons, getLessonByMkId, upsertLessonVideo, upsertLessonFiles } from '../modules/lessons/lesson.repository.js'
 import { mkVideoToUpsertInput, mkFilesToUpsertInput } from '../modules/lessons/lesson.mapper.js'
+import { deleteOrphanedCourses } from '../modules/courses/course.repository.js'
 import { upsertComment } from '../modules/comments/comment.repository.js'
 import { mkCommentToUpsertInput } from '../modules/comments/comment.mapper.js'
 import { upsertQuizAttempt } from '../modules/quiz_attempts/quiz_attempt.repository.js'
@@ -32,6 +35,7 @@ export class SyncOrchestrator {
     const start = Date.now()
 
     await this.syncCatalog()
+    await this.syncLessonMedia()
     await this.syncClassrooms()
     await this.syncPlans()
     const members = await this.syncMembers()
@@ -54,6 +58,9 @@ export class SyncOrchestrator {
     const courses = await this.client.getCourses()
     logger.info({ count: courses.length }, `${courses.length} cursos encontrados`)
 
+    // Coleta os mk_ids de cursos da API para purgar órfãos depois
+    const apiCourseMkIds = courses.map(c => c.id)
+
     await runConcurrent(courses, async course => {
       try {
         await syncCourse(course)
@@ -61,6 +68,12 @@ export class SyncOrchestrator {
         logger.error({ mkId: course.id, err }, 'Erro ao sincronizar curso')
       }
     }, 20, 'syncCatalog')
+
+    // Purgar cursos que não existem mais na API — cascade remove sections/lessons/videos/files
+    const deletedCourses = await deleteOrphanedCourses(apiCourseMkIds)
+    if (deletedCourses > 0) {
+      logger.info({ deletedCourses }, '[syncCatalog] Cursos órfãos removidos do banco (cascade)')
+    }
 
     const elapsed = `${((Date.now() - t) / 1000).toFixed(1)}s`
     logger.info({ count: courses.length, elapsed }, `[syncCatalog] ${courses.length} cursos em ${elapsed}`)
@@ -282,10 +295,10 @@ export class SyncOrchestrator {
 
         await runConcurrent(activities, async activity => {
           try {
-            await upsertUserActivityByMkId(mkActivityToCreateInput(activity, internalId))
+            await routeActivity(activity, internalId)
             syncedActivities++
           } catch (err) {
-            logger.error({ memberMkId: mkId, activityId: activity.id, err }, '[syncActivities] Erro ao upsert atividade')
+            logger.error({ memberMkId: mkId, activityId: activity.id, type: activity.trackable_type, err }, '[syncActivities] Erro ao upsert atividade')
           }
         }, 10)
       } catch (err) {
@@ -463,5 +476,79 @@ export class SyncOrchestrator {
 
     const elapsed = `${((Date.now() - t) / 1000).toFixed(1)}s`
     logger.info({ total: attempts.length, synced, elapsed }, `[syncQuizAttempts] ${synced}/${attempts.length} tentativas em ${elapsed}`)
+  }
+}
+
+// ----------------------------------------------------------------------------
+// Routes a single MKUserActivity to its dedicated table based on trackable_type.
+// Comment, Rating, and QuizAttempt are already handled by their own sync methods
+// (syncComments, syncQuizAttempts) — skip them here to avoid double work.
+// ----------------------------------------------------------------------------
+async function routeActivity(activity: MKUserActivity, userId: number): Promise<void> {
+  switch (activity.trackable_type) {
+    case 'LessonStatus': {
+      if (!activity.lesson_id) return
+      const lesson = await getLessonByMkId(activity.lesson_id)
+      if (!lesson) {
+        logger.warn({ mkLessonId: activity.lesson_id }, '[routeActivity] Aula não encontrada para LessonStatus, pulando')
+        return
+      }
+      const trackable = activity.trackable as { completed_at?: string | null } | null
+      await upsertLessonProgress({
+        mkId: activity.id,
+        userId,
+        lessonId: lesson.id,
+        completedAt: trackable?.completed_at ?? null,
+        occurredAt: activity.created_at,
+      })
+      break
+    }
+
+    case 'ForumPost': {
+      if (!activity.trackable) return
+      const fp = activity.trackable as MKTrackableForumPost
+      await upsertForumPost({
+        mkId: fp.id,
+        userId,
+        forumId: fp.forum_id,
+        title: fp.title,
+        occurredAt: activity.created_at,
+        createdAt: fp.created_at,
+      })
+      break
+    }
+
+    case 'ForumComment': {
+      if (!activity.trackable) return
+      const fc = activity.trackable as MKTrackableForumComment
+      await upsertForumComment({
+        mkId: fc.id,
+        userId,
+        forumPostId: fc.forum_post_id,
+        content: fc.content,
+        occurredAt: activity.created_at,
+        createdAt: fc.created_at,
+      })
+      break
+    }
+
+    case 'lesson_file.downloaded': {
+      const lesson = activity.lesson_id ? await getLessonByMkId(activity.lesson_id) : null
+      await insertLessonFileDownload({
+        userId,
+        lessonId: lesson?.id ?? null,
+        occurredAt: activity.created_at,
+      })
+      break
+    }
+
+    // Already synced by syncComments / syncQuizAttempts / rating.saved webhook
+    case 'Comment':
+    case 'Rating':
+    case 'QuizAttempt':
+      break
+
+    default:
+      logger.debug({ type: activity.trackable_type, activityId: activity.id }, '[routeActivity] Tipo de atividade sem tabela dedicada, ignorando')
   }
 }

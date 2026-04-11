@@ -51,6 +51,7 @@ vi.mock('../../modules/enrollments/enrollment.mapper.js', () => ({
 
 vi.mock('../../modules/users/user.repository.js', () => ({
   getUserByMkId: vi.fn(),
+  getAllUsers: vi.fn().mockResolvedValue([]),
 }))
 
 vi.mock('../../modules/memberships/membership.repository.js', () => ({
@@ -59,6 +60,51 @@ vi.mock('../../modules/memberships/membership.repository.js', () => ({
 
 vi.mock('../../modules/courses/course.repository.js', () => ({
   getCourseByMkId: vi.fn(),
+  deleteOrphanedCourses: vi.fn().mockResolvedValue(0),
+}))
+
+vi.mock('../../modules/lessons/lesson.repository.js', () => ({
+  getAllLessons: vi.fn().mockResolvedValue([]),
+  getLessonByMkId: vi.fn(),
+  upsertLessonVideo: vi.fn(),
+  upsertLessonFiles: vi.fn(),
+}))
+
+vi.mock('../../modules/lesson_progress/lesson_progress.repository.js', () => ({
+  upsertLessonProgress: vi.fn(),
+}))
+
+vi.mock('../../modules/forum_posts/forum_post.repository.js', () => ({
+  upsertForumPost: vi.fn(),
+}))
+
+vi.mock('../../modules/forum_comments/forum_comment.repository.js', () => ({
+  upsertForumComment: vi.fn(),
+}))
+
+vi.mock('../../modules/lesson_file_downloads/lesson_file_download.repository.js', () => ({
+  insertLessonFileDownload: vi.fn(),
+}))
+
+vi.mock('../../modules/comments/comment.repository.js', () => ({
+  upsertComment: vi.fn(),
+}))
+
+vi.mock('../../modules/comments/comment.mapper.js', () => ({
+  mkCommentToUpsertInput: vi.fn(),
+}))
+
+vi.mock('../../modules/quiz_attempts/quiz_attempt.repository.js', () => ({
+  upsertQuizAttempt: vi.fn(),
+}))
+
+vi.mock('../../modules/quiz_attempts/quiz_attempt.mapper.js', () => ({
+  mkQuizAttemptToUpsertInput: vi.fn(),
+}))
+
+vi.mock('../../modules/lessons/lesson.mapper.js', () => ({
+  mkVideoToUpsertInput: vi.fn(),
+  mkFilesToUpsertInput: vi.fn().mockReturnValue([]),
 }))
 
 // ---------------------------------------------------------------------------

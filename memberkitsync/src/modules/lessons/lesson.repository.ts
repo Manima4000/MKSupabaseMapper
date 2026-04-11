@@ -43,7 +43,7 @@ export async function upsertLessonVideo(input: UpsertLessonVideoInput): Promise<
 
   const { data, error } = await supabase
     .from('lesson_videos')
-    .upsert(row, { onConflict: 'mk_id' })
+    .upsert(row, { onConflict: 'lesson_id' })
     .select()
     .single()
 
@@ -77,6 +77,18 @@ export async function getLessonByMkId(mkId: number): Promise<Lesson | null> {
 
   if (error) throw new SupabaseError(`Falha ao buscar lesson mk_id=${mkId}`, error)
   return data as Lesson | null
+}
+
+export async function deleteOrphanedLessons(knownMkIds: number[]): Promise<number> {
+  if (knownMkIds.length === 0) return 0
+
+  const { error, count } = await supabase
+    .from('lessons')
+    .delete({ count: 'exact' })
+    .not('mk_id', 'in', `(${knownMkIds.join(',')})`)
+
+  if (error) throw new SupabaseError('Falha ao deletar lessons órfãs', error)
+  return count ?? 0
 }
 
 export async function getAllLessons(): Promise<Pick<Lesson, 'id' | 'mk_id'>[]> {

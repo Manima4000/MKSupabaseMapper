@@ -180,6 +180,48 @@ export interface QuizAttempt {
   updated_at: string
 }
 
+export interface LessonProgress {
+  id: number
+  mk_id: number | null
+  user_id: number
+  lesson_id: number
+  completed_at: string | null
+  occurred_at: string
+  created_at: string
+  updated_at: string
+}
+
+export interface ForumPost {
+  id: number
+  mk_id: number
+  user_id: number
+  forum_id: number
+  title: string
+  occurred_at: string
+  created_at: string
+  updated_at: string
+}
+
+export interface ForumComment {
+  id: number
+  mk_id: number
+  user_id: number
+  forum_post_id: number
+  content: string
+  occurred_at: string
+  created_at: string
+  updated_at: string
+}
+
+export interface LessonFileDownload {
+  id: number
+  user_id: number
+  lesson_id: number | null
+  file_id: number | null
+  occurred_at: string
+  created_at: string
+}
+
 export interface WebhookLog {
   id: number
   event_type: string
@@ -211,6 +253,11 @@ export type CommentInsert = Omit<Comment, 'id' | 'created_at' | 'updated_at'> & 
 export type LessonRatingInsert = Omit<LessonRating, 'id' | 'created_at' | 'updated_at'> & { created_at?: string }
 export type QuizAttemptInsert = Omit<QuizAttempt, 'id' | 'created_at' | 'updated_at'> & { created_at?: string }
 export type WebhookLogInsert = Omit<WebhookLog, 'id' | 'created_at'>
+export type LessonProgressInsert = Omit<LessonProgress, 'id' | 'created_at' | 'updated_at'> & { created_at?: string }
+export type ForumPostInsert = Omit<ForumPost, 'id' | 'created_at' | 'updated_at'> & { created_at?: string }
+export type ForumCommentInsert = Omit<ForumComment, 'id' | 'created_at' | 'updated_at'> & { created_at?: string }
+export type LessonFileDownloadInsert = Omit<LessonFileDownload, 'id' | 'created_at'> & { created_at?: string }
+
 
 // ============================================================================
 // VIEW TYPES

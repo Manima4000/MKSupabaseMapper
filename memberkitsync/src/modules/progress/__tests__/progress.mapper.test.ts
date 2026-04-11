@@ -15,6 +15,7 @@ describe('buildUserActivity', () => {
     const result = buildUserActivity(42, 'lesson_status_saved', 5, '2024-03-10T08:00:00Z')
 
     expect(result).toEqual({
+      mkId: null,
       userId: 42,
       eventType: 'lesson_status_saved',
       mkLessonId: 5,

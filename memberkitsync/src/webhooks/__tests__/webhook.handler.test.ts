@@ -56,8 +56,12 @@ vi.mock('../../modules/enrollments/enrollment.mapper.js', () => ({
   })),
 }))
 
-vi.mock('../../modules/progress/progress.service.js', () => ({
-  logUserActivity: vi.fn(),
+vi.mock('../../modules/lesson_progress/lesson_progress.repository.js', () => ({
+  upsertLessonProgress: vi.fn(),
+}))
+
+vi.mock('../../modules/lesson_file_downloads/lesson_file_download.repository.js', () => ({
+  insertLessonFileDownload: vi.fn(),
 }))
 
 vi.mock('../../modules/users/user.repository.js', () => ({
@@ -105,7 +109,8 @@ import { syncUser } from '../../modules/users/user.service.js'
 import { syncSubscription } from '../../modules/memberships/membership.service.js'
 import { upsertEnrollment } from '../../modules/enrollments/enrollment.repository.js'
 import { mkEnrollmentToUpsertInput } from '../../modules/enrollments/enrollment.mapper.js'
-import { logUserActivity } from '../../modules/progress/progress.service.js'
+import { upsertLessonProgress } from '../../modules/lesson_progress/lesson_progress.repository.js'
+import { insertLessonFileDownload } from '../../modules/lesson_file_downloads/lesson_file_download.repository.js'
 import { getUserByMkId, upsertUser, updateUserLoginData } from '../../modules/users/user.repository.js'
 import { getMembershipLevelByMkId } from '../../modules/memberships/membership.repository.js'
 import { getCourseByMkId } from '../../modules/courses/course.repository.js'
@@ -133,7 +138,8 @@ beforeEach(() => {
   vi.mocked(syncUser).mockResolvedValue(undefined as never)
   vi.mocked(syncSubscription).mockResolvedValue(undefined as never)
   vi.mocked(upsertEnrollment).mockResolvedValue(undefined as never)
-  vi.mocked(logUserActivity).mockResolvedValue(undefined as never)
+  vi.mocked(upsertLessonProgress).mockResolvedValue(undefined)
+  vi.mocked(insertLessonFileDownload).mockResolvedValue(undefined)
   vi.mocked(upsertUser).mockResolvedValue({ id: 10 } as never)
   vi.mocked(updateUserLoginData).mockResolvedValue(undefined)
   vi.mocked(getUserByMkId).mockResolvedValue({ id: 10, mk_id: 1, email: 'a@b.com' } as never)
@@ -198,10 +204,12 @@ describe('dispatchWebhook', () => {
       expect(syncSubscription).toHaveBeenCalledOnce()
     })
 
-    it('skips when user is not found', async () => {
+    it('creates user from webhook data when not found, then syncs subscription', async () => {
       vi.mocked(getUserByMkId).mockResolvedValueOnce(null)
+      vi.mocked(upsertUser).mockResolvedValueOnce({ id: 10 } as never)
       await dispatchWebhook(envelope('membership.created', subData))
-      expect(syncSubscription).not.toHaveBeenCalled()
+      expect(upsertUser).toHaveBeenCalledOnce()
+      expect(syncSubscription).toHaveBeenCalledOnce()
     })
 
     it('skips when membership level is not found', async () => {
@@ -285,24 +293,33 @@ describe('dispatchWebhook', () => {
       lesson: { id: 4, title: 'Aula 1', slug: 'aula-1' },
     }
 
-    it('calls logUserActivity with correct args', async () => {
+    it('calls upsertLessonProgress with correct args', async () => {
       await dispatchWebhook(envelope('lesson_status.saved', progressData))
 
       expect(getUserByMkId).toHaveBeenCalledWith(1)
-      expect(logUserActivity).toHaveBeenCalledWith(
-        10,
-        'lesson_status.saved',
-        4,
-        FIRED_AT,
-        expect.objectContaining({ id: 555, completed_at: '2024-09-04T10:00:00Z' }),
-        2,
+      expect(getLessonByMkId).toHaveBeenCalledWith(4)
+      expect(upsertLessonProgress).toHaveBeenCalledWith(
+        expect.objectContaining({
+          mkId: 555,
+          userId: 10,
+          lessonId: 40,
+          completedAt: '2024-09-04T10:00:00Z',
+          // occurredAt uses data.created_at (not fired_at)
+          occurredAt: '2024-09-04T09:00:00Z',
+        }),
       )
     })
 
     it('skips when user is not found', async () => {
       vi.mocked(getUserByMkId).mockResolvedValueOnce(null)
       await dispatchWebhook(envelope('lesson_status.saved', progressData))
-      expect(logUserActivity).not.toHaveBeenCalled()
+      expect(upsertLessonProgress).not.toHaveBeenCalled()
+    })
+
+    it('skips when lesson is not found', async () => {
+      vi.mocked(getLessonByMkId).mockResolvedValueOnce(null)
+      await dispatchWebhook(envelope('lesson_status.saved', progressData))
+      expect(upsertLessonProgress).not.toHaveBeenCalled()
     })
   })
 
@@ -453,7 +470,9 @@ describe('dispatchWebhook', () => {
 
       expect(getUserByMkId).toHaveBeenCalledWith(1)
       expect(getLessonByMkId).toHaveBeenCalledWith(4)
-      expect(upsertLessonRating).toHaveBeenCalledWith({ mkId: 88, userId: 10, lessonId: 40, stars: 5 })
+      expect(upsertLessonRating).toHaveBeenCalledWith(
+        expect.objectContaining({ mkId: 88, userId: 10, lessonId: 40, stars: 5 }),
+      )
     })
 
     it('skips when user is not found', async () => {
@@ -479,17 +498,21 @@ describe('dispatchWebhook', () => {
       clicked_at: FIRED_AT,
     }
 
-    it('calls logUserActivity with lesson_file.downloaded', async () => {
+    it('calls insertLessonFileDownload with user, lesson and file id', async () => {
       await dispatchWebhook(envelope('lesson_file.downloaded', dlData))
 
       expect(getUserByMkId).toHaveBeenCalledWith(1)
-      expect(logUserActivity).toHaveBeenCalledWith(10, 'lesson_file.downloaded', 4, FIRED_AT, null, null)
+      expect(getLessonByMkId).toHaveBeenCalledWith(4)
+      expect(insertLessonFileDownload).toHaveBeenCalledWith(
+        // occurredAt uses data.clicked_at (not fired_at)
+        expect.objectContaining({ userId: 10, lessonId: 40, fileId: 11, occurredAt: FIRED_AT }),
+      )
     })
 
     it('skips when user is not found', async () => {
       vi.mocked(getUserByMkId).mockResolvedValueOnce(null)
       await dispatchWebhook(envelope('lesson_file.downloaded', dlData))
-      expect(logUserActivity).not.toHaveBeenCalled()
+      expect(insertLessonFileDownload).not.toHaveBeenCalled()
     })
   })
 
@@ -533,7 +556,7 @@ describe('dispatchWebhook', () => {
       expect(syncUser).not.toHaveBeenCalled()
       expect(syncSubscription).not.toHaveBeenCalled()
       expect(upsertEnrollment).not.toHaveBeenCalled()
-      expect(logUserActivity).not.toHaveBeenCalled()
+      expect(upsertLessonProgress).not.toHaveBeenCalled()
       expect(upsertLessonRating).not.toHaveBeenCalled()
     })
   })

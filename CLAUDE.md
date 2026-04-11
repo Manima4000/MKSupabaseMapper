@@ -41,7 +41,14 @@ SupabaseProject/
         │   ├── classrooms/
         │   ├── memberships/
         │   ├── enrollments/
-        │   └── progress/
+        │   ├── lesson_progress/
+        │   ├── comments/
+        │   ├── lesson_ratings/
+        │   ├── quiz_attempts/
+        │   ├── forum_posts/
+        │   ├── forum_comments/
+        │   ├── lesson_file_downloads/
+        │   └── progress/         # legacy — only user_activities table (kept for historical data)
         ├── sync/
         │   ├── memberkit-api.client.ts   # HTTP client for MemberKit REST API
         │   ├── sync.orchestrator.ts      # Orchestrates a full sync in FK order
@@ -80,11 +87,18 @@ Every domain entity follows the same 4-file pattern:
 | users | yes | sync + resolve by mk_id |
 | courses | yes | cascades into sections → lessons → videos/files |
 | sections | no | only used internally by course.service |
-| lessons | yes | exposes resolveLessonByMkId for webhook handler |
+| lessons | yes | exposes getLessonByMkId for webhook handler |
 | classrooms | no | simple upsert |
 | memberships | yes | syncs plans (with classroom links) and subscriptions |
 | enrollments | no | simple upsert |
-| progress | yes | handles lesson progress + user activity logging |
+| lesson_progress | no | upsert by (user_id, lesson_id) |
+| comments | no | upsert by mk_id |
+| lesson_ratings | no | upsert by mk_id |
+| quiz_attempts | no | upsert by mk_id |
+| forum_posts | no | upsert by mk_id |
+| forum_comments | no | upsert by mk_id |
+| lesson_file_downloads | no | upsert by (user_id, occurred_at) |
+| progress | legacy | kept only because user_activities table still exists |
 
 ---
 
@@ -96,31 +110,51 @@ Every domain entity follows the same 4-file pattern:
 MemberKitClient
     ↓ getCourses()
 SyncOrchestrator.syncCatalog()
-    → upsertCategory → upsertCourse → upsertSection → upsertLesson → upsertLessonVideo/Files
+    → upsertCategory → upsertCourse → upsertSection → upsertLesson → deleteOrphanedCourses
+
+    ↓ lessons (from DB) + GET /lessons/{id}
+SyncOrchestrator.syncLessonMedia()
+    → upsertLessonVideo → upsertLessonFiles
 
     ↓ getClassrooms()
 SyncOrchestrator.syncClassrooms()
     → upsertClassroom
 
-    ↓ getPlans()
+    ↓ getMembershipLevels()
 SyncOrchestrator.syncPlans()
     → upsertMembershipLevel → linkMembershipLevelToClassroom
 
-    ↓ getMembers() [paginated]
+    ↓ getUsers() [paginated]
 SyncOrchestrator.syncMembers()
     → upsertUser
 
-    ↓ getSubscriptions() [paginated]
+    ↓ getMemberships() [paginated]
 SyncOrchestrator.syncSubscriptions()
     → upsertMembership (resolves user and level by mk_id first)
 
-    ↓ getEnrollments() [paginated]
+    ↓ getUserDetail() per user (enrollments are nested inside)
 SyncOrchestrator.syncEnrollments()
     → upsertEnrollment (resolves user, course, classroom by mk_id first)
+
+    ↓ getUserActivities() per user [paginated]
+SyncOrchestrator.syncActivities()  — routes each trackable_type to its table:
+    LessonStatus          → upsertLessonProgress   (upsert by user_id + lesson_id)
+    ForumPost             → upsertForumPost         (upsert by mk_id)
+    ForumComment          → upsertForumComment      (upsert by mk_id)
+    lesson_file.downloaded→ insertLessonFileDownload (upsert by user_id + occurred_at)
+    Comment / Rating / QuizAttempt → skipped (handled by own sync methods below)
+
+    ↓ getComments() [paginated]
+SyncOrchestrator.syncComments()
+    → upsertComment (resolves user + lesson by mk_id)
+
+    ↓ getQuizAttempts() [paginated]
+SyncOrchestrator.syncQuizAttempts()
+    → upsertQuizAttempt (resolves user by mk_id)
 ```
 
 The sync order **must** respect foreign key constraints:
-`courses/categories` → `sections` → `lessons` → `classrooms` → `plans` → `members` → `subscriptions` → `enrollments`
+`courses/categories` → `sections` → `lessons` → `classrooms` → `plans` → `members` → `subscriptions` → `enrollments` → `activities/comments/quizzes`
 
 ### Webhook (real-time updates)
 
@@ -130,13 +164,21 @@ POST /webhooks/memberkit
     ↓ parseWebhookBody
     ↓ reply 200 immediately
     ↓ dispatchWebhook (async, non-blocking)
+        → check idempotency via payload_hash (skip if already processed)
         → insertWebhookLog (status: received)
         → route by event type:
-            member.created / member.updated   → syncUser
-            subscription.*                    → syncSubscription
-            enrollment.*                      → upsertEnrollment
-            lesson_status_saved               → handleLessonProgress + logUserActivity
-        → updateWebhookLog (status: processed | failed)
+            member.created / member.updated      → upsertUser
+            membership.created / .updated        → upsertMembership (creates user if not found)
+            enrollment.created / .updated        → upsertEnrollment
+            lesson_status.saved                  → upsertLessonProgress
+            comment.created                      → upsertComment
+            user.last_seen / user.signed_in      → updateUserLoginData
+            lesson.created / lesson.updated      → upsertSection + upsertLesson + video/files
+            rating.saved                         → upsertLessonRating
+            lesson_file.downloaded               → insertLessonFileDownload (with file_id)
+            invite_pass.created                  → upsertUser
+            forum_post.created / login.sent / …  → logged only (no DB write)
+        → updateWebhookLog (status: processed | skipped | failed)
 ```
 
 Webhooks respond **200 immediately** and process in the background to avoid MK sender timeouts on slow operations.
@@ -145,14 +187,28 @@ Webhooks respond **200 immediately** and process in the background to avoid MK s
 
 ## Database schema
 
-All migrations live in `src/database/migrations/`. Run them manually in the Supabase dashboard (SQL Editor) **before** the first sync.
+All migrations live in `src/database/migrations/`. Run them in order in the Supabase SQL Editor.
 
 | File | What it does |
 |---|---|
-| `001_create_tables.sql` | Creates all 17 tables |
-| `002_create_indexes.sql` | Indexes for all common query patterns |
-| `003_functions_and_views.sql` | Views for progress tracking + SQL functions |
-| `004_create_rls_policies.sql` | Row Level Security (service_role = full access, anon = read catalog) |
+| `001_create_tables.sql` | Base tables |
+| `002_create_indexes.sql` | Indexes for common query patterns |
+| `003_functions_and_views.sql` | Initial views + functions |
+| `004_create_rls_policies.sql` | Row Level Security |
+| `005_enrollments_nullable_mkid.sql` | Makes enrollment mk_id nullable |
+| `006_add_mk_id_to_user_activities.sql` | Adds mk_id to user_activities |
+| `007_user_activities_explicit_columns.sql` | Replaces payload JSONB with typed columns |
+| `008_alter_quiz_attempts.sql` | Rebuilds quiz_attempts to match MK API |
+| `009_lesson_progress_as_view.sql` | Drops lesson_progress table, creates view over user_activities |
+| `010_add_webhook_logs_hash.sql` | Adds payload_hash for idempotency |
+| `011_add_lesson_ratings.sql` | Creates lesson_ratings table |
+| `012_webhook_logs_skipped_status.sql` | Adds "skipped" status to webhook_logs |
+| `013_weekly_engagement_views.sql` | Weekly engagement analytics views |
+| `014_rebuild_analytics_views.sql` | Expands analytics views (quiz, ratings, funnel) |
+| `015_webhook_logs_add_replayed_status.sql` | Adds "replayed" status to webhook_logs |
+| `016_normalize_lesson_status_event_type.sql` | Normalizes LessonStatus event_type |
+| `017_normalize_activity_tables.sql` | **Normalizes user_activities into dedicated tables** |
+| `018_fix_lesson_videos_mk_id_unique.sql` | Drops UNIQUE from lesson_videos.mk_id (same video ID can appear in multiple lessons) |
 
 ### Tables
 
@@ -161,8 +217,8 @@ All migrations live in `src/database/migrations/`. Run them manually in the Supa
 - `courses` — courses (e.g., "Matemática 1 - ESA")
 - `sections` — modules inside a course
 - `lessons` — individual classes inside a section
-- `lesson_videos` — 1:1 with lessons (stores video uid, source, duration)
-- `lesson_files` — 1:N with lessons (stores filename + URL)
+- `lesson_videos` — 1:1 with lessons (video uid, source, duration)
+- `lesson_files` — 1:N with lessons (filename + URL)
 
 **Subscriptions & Classrooms**
 - `classrooms` — MK member areas / turmas
@@ -174,35 +230,50 @@ All migrations live in `src/database/migrations/`. Run them manually in the Supa
 - `memberships` — student ↔ plan subscriptions
 - `enrollments` — student ↔ course ↔ classroom
 
-**Tracking**
-- `lesson_progress` — per-lesson completion % per student (upserted by user_id + lesson_id)
-- `user_activities` — append-only log of all webhook events per student
-- `comments` — lesson comments (created via webhook)
-- `quiz_attempts` — quiz scores
-- `webhook_logs` — full audit trail of every webhook received (supports replay)
+**Tracking** — each activity type has its own dedicated table
+- `lesson_progress` — latest completion state per (user, lesson); UNIQUE (user_id, lesson_id)
+- `lesson_ratings` — star ratings per (user, lesson); UNIQUE (user_id, lesson_id)
+- `quiz_attempts` — quiz attempts per student; upsert by mk_id
+- `comments` — lesson comments; upsert by mk_id
+- `forum_posts` — MK forum posts; upsert by mk_id
+- `forum_comments` — MK forum replies; upsert by mk_id
+- `lesson_file_downloads` — file download log; upsert by (user_id, occurred_at)
+- `user_activities` — legacy table (historical data from before migration 017; not written to by new code)
+- `webhook_logs` — full audit trail of every webhook received; supports replay
 
 ### Key design decisions in the schema
 
-- Every table has an `mk_id INTEGER UNIQUE` column — this is MemberKit's ID, used as the upsert key.
+- Most tables have an `mk_id INTEGER UNIQUE` column — used as the upsert key.
+- **Exception:** `lesson_videos.mk_id` is NOT unique — MemberKit reuses video IDs across lessons. The upsert key for `lesson_videos` is `lesson_id` (1:1 with lessons).
 - Internal `id` (BIGINT auto-increment) is the FK used between tables — never the mk_id.
-- `lesson_progress` has a `UNIQUE (user_id, lesson_id)` constraint — upsert is safe.
-- `webhook_logs` stores every webhook with status `received → processed | failed` for auditability and retry support.
+- `lesson_progress` keeps only the **latest** event per (user, lesson) — upsert replaces on conflict.
+- `lesson_file_downloads` is append-only except dedup on (user_id, occurred_at).
+- `webhook_logs` stores every webhook payload for auditability and replay support.
 
 ### Views
 
 | View | Purpose |
 |---|---|
+| `vw_lesson_progress` | Simple select over `lesson_progress` table (used by other views) |
 | `vw_student_course_progress` | Progress % per student per course |
 | `vw_student_section_progress` | Progress % per student per section/module |
-| `vw_inactive_students` | Students with active subscriptions but no login in 7+ days |
-| `vw_subscription_summary` | Dashboard: count of active/pending/expired per plan |
+| `vw_inactive_students` | Students inactive 7+ days with active subscription |
+| `vw_subscription_summary` | Count active/pending/expired per plan |
+| `vw_student_overview` | One row per student: subscriptions, lessons, quizzes, ratings, comments |
+| `vw_lesson_stats` | Per lesson: completions, completion rate, avg stars, comments |
+| `vw_course_funnel` | Funnel per course: enrolled → started → halfway → completed |
+| `vw_student_quiz_summary` | Quiz accuracy per student |
+| `vw_lesson_ratings_summary` | Star distribution per lesson |
+| `vw_weekly_lessons_completed` | Weekly count of lessons completed |
+| `vw_weekly_active_students` | Weekly unique active students |
+| `vw_weekly_active_students_by_subscription` | Weekly active students broken down by plan |
 
 ### Functions
 
 | Function | Purpose |
 |---|---|
-| `fn_student_full_progress(user_id)` | Returns full nested JSON: courses → sections → lessons with completion state |
-| `fn_resolve_mk_id(table, mk_id)` | Translates a MemberKit ID to the internal `id` |
+| `fn_student_full_progress(user_id)` | Full nested JSON: courses → sections → lessons with completion |
+| `fn_resolve_mk_id(table, mk_id)` | Translates MemberKit ID to internal `id` |
 | `trigger_set_updated_at()` | Auto-updates `updated_at` on every UPDATE |
 
 ---
@@ -211,22 +282,39 @@ All migrations live in `src/database/migrations/`. Run them manually in the Supa
 
 File: `src/sync/memberkit-api.client.ts`
 
-The client uses Node.js native `fetch` (Node 18+). Authentication is via `?api_key=` query parameter.
+The client uses Node.js native `fetch` (Node 18+). Authentication is via `?api_key=` query parameter. Built-in rate limiter caps at 115 req/min with automatic 429 retry.
 
 | Method | MK endpoint | Returns |
 |---|---|---|
-| `getCourses()` | `GET /courses` | Full catalog (sections + lessons nested) |
-| `getClassrooms()` | `GET /member_areas` | All classrooms |
-| `getPlans()` | `GET /plans` | Plans with their linked classrooms |
-| `getMembers(page, perPage)` | `GET /members` | Paginated members |
-| `getSubscriptions(page, perPage)` | `GET /subscriptions` | Paginated subscriptions |
-| `getEnrollments(page, perPage)` | `GET /enrollments` | Paginated enrollments |
+| `getCourses()` | `GET /courses` + `GET /courses/{id}` | Full catalog (sections + lessons nested) |
+| `getLessonDetail(id)` | `GET /lessons/{id}` | Single lesson with video + files |
+| `getClassrooms()` | `GET /classrooms` | All classrooms |
+| `getMembershipLevels()` | `GET /membership_levels` | Plans with classroom_ids |
+| `getUsers(page, perPage)` | `GET /users` | Paginated users |
+| `getMemberships(page, perPage)` | `GET /memberships` | Paginated subscriptions |
+| `getUserDetail(id)` | `GET /users/{id}` | Full profile + inline enrollments[] |
+| `getComments(page, perPage)` | `GET /comments` | Paginated comments |
+| `getCommentsByLesson(id, page, perPage)` | `GET /lessons/{id}/comments` | Comments for one lesson |
+| `getQuizAttempts(page, perPage)` | `GET /quiz_attempts` | Paginated quiz attempts |
+| `getUserActivities(userId, page, perPage)` | `GET /users/{id}/activities` | Paginated activities per user |
 
 **The `MK*` interfaces are best-guess shapes.** If MemberKit's actual API returns different field names, only the interfaces and mappers in this file need to change — nothing else.
 
+### MKUserActivity trackable_type values
+
+| trackable_type | Destination table | Notes |
+|---|---|---|
+| `LessonStatus` | `lesson_progress` | upsert by (user_id, lesson_id) |
+| `ForumPost` | `forum_posts` | upsert by trackable.id |
+| `ForumComment` | `forum_comments` | upsert by trackable.id |
+| `lesson_file.downloaded` | `lesson_file_downloads` | no file_id available from activity API |
+| `Comment` | `comments` | skipped — already synced by syncComments() |
+| `Rating` | `lesson_ratings` | skipped — already synced by rating.saved webhook |
+| `QuizAttempt` | `quiz_attempts` | skipped — already synced by syncQuizAttempts() |
+
 ### Pagination
 
-`src/shared/pagination.ts` exposes `fetchAllPages()`. It loops through every page of a paginated endpoint and accumulates all results into a single array. Used by sync orchestrator for members, subscriptions, and enrollments.
+`src/shared/pagination.ts` exposes `fetchAllPages()`. Loops through all pages and accumulates results into a single array. Used by sync orchestrator for users, memberships, activities, comments, and quiz attempts.
 
 ---
 
@@ -235,10 +323,18 @@ The client uses Node.js native `fetch` (Node 18+). Authentication is via `?api_k
 | MK event | Handler action |
 |---|---|
 | `member.created` / `member.updated` | upsert user |
-| `subscription.created` / `subscription.updated` / `subscription.expired` | upsert membership (resolves user + plan by mk_id) |
+| `membership.created` / `membership.updated` | upsert membership; creates user from payload if not found |
 | `enrollment.created` / `enrollment.updated` | upsert enrollment |
-| `lesson_status_saved` | upsert lesson_progress + insert user_activity |
-| `comment.created` | (not yet handled — falls through to "unhandled" log) |
+| `lesson_status.saved` | upsert lesson_progress (occurred_at = data.created_at) |
+| `comment.created` | upsert comment |
+| `user.last_seen` / `user.signed_in` | update user login fields only |
+| `lesson.created` / `lesson.updated` | upsert section + lesson + video + files |
+| `rating.saved` | upsert lesson_rating |
+| `lesson_file.downloaded` | insert lesson_file_download with file_id (occurred_at = clicked_at) |
+| `invite_pass.created` | upsert user with created_at from payload |
+| `forum_post.created` / `login.sent` / `integration_log.received` / `page_agreement.accepted` | logged in webhook_logs only, no DB write |
+
+**Note:** MemberKit fires `membership.*` (not `subscription.*`). Events named `subscription.*` are silently ignored.
 
 ### Autenticação do webhook
 

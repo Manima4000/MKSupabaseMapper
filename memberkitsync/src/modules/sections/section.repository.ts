@@ -22,6 +22,18 @@ export async function upsertSection(input: UpsertSectionInput): Promise<Section>
   return data as Section
 }
 
+export async function deleteOrphanedSections(knownMkIds: number[]): Promise<number> {
+  if (knownMkIds.length === 0) return 0
+
+  const { error, count } = await supabase
+    .from('sections')
+    .delete({ count: 'exact' })
+    .not('mk_id', 'in', `(${knownMkIds.join(',')})`)
+
+  if (error) throw new SupabaseError('Falha ao deletar sections órfãs', error)
+  return count ?? 0
+}
+
 export async function getSectionByMkId(mkId: number): Promise<Section | null> {
   const { data, error } = await supabase
     .from('sections')

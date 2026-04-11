@@ -59,6 +59,18 @@ export async function upsertCourse(input: UpsertCourseInput): Promise<Course> {
   return data as Course
 }
 
+export async function deleteOrphanedCourses(knownMkIds: number[]): Promise<number> {
+  if (knownMkIds.length === 0) return 0
+
+  const { error, count } = await supabase
+    .from('courses')
+    .delete({ count: 'exact' })
+    .not('mk_id', 'in', `(${knownMkIds.join(',')})`)
+
+  if (error) throw new SupabaseError('Falha ao deletar courses órfãos', error)
+  return count ?? 0
+}
+
 export async function getCourseByMkId(mkId: number): Promise<Course | null> {
   const { data, error } = await supabase
     .from('courses')
