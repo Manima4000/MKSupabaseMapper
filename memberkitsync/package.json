@@ -11,7 +11,9 @@
     "build": "tsc",
     "start": "node dist/server.js",
     "sync": "tsx src/sync/sync.command.ts",
-    "replay": "tsx src/webhooks/replay.command.ts"
+    "sync:prod": "node dist/sync/sync.command.js",
+    "replay": "tsx src/webhooks/replay.command.ts",
+    "replay:prod": "node dist/webhooks/replay.command.js"
   },
   "keywords": [],
   "author": "",
