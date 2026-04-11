@@ -245,8 +245,8 @@ describe('SyncOrchestrator.run()', () => {
     it('calls syncUser once per member returned by fetchAllPages', async () => {
       const client = makeMockClient()
       const members = [
-        { id: 1, name: 'Alice', email: 'alice@test.com', blocked: false, unlimited: false, sign_in_count: 1, current_sign_in_at: null, last_seen_at: null, meta: {} },
-        { id: 2, name: 'Bob', email: 'bob@test.com', blocked: false, unlimited: false, sign_in_count: 0, current_sign_in_at: null, last_seen_at: null, meta: {} },
+        { id: 1, name: 'Alice', email: 'alice@test.com', blocked: false, unlimited: false, sign_in_count: 1, current_sign_in_at: null, last_seen_at: null, metadata: {} },
+        { id: 2, name: 'Bob', email: 'bob@test.com', blocked: false, unlimited: false, sign_in_count: 0, current_sign_in_at: null, last_seen_at: null, metadata: {} },
       ]
       mockFetchAllPages
         .mockResolvedValueOnce(members)  // members call
@@ -262,8 +262,8 @@ describe('SyncOrchestrator.run()', () => {
     it('continues syncing remaining members when one throws', async () => {
       const client = makeMockClient()
       const members = [
-        { id: 1, name: 'Bad', email: 'bad@test.com', blocked: false, unlimited: false, sign_in_count: 0, current_sign_in_at: null, last_seen_at: null, meta: {} },
-        { id: 2, name: 'Good', email: 'good@test.com', blocked: false, unlimited: false, sign_in_count: 0, current_sign_in_at: null, last_seen_at: null, meta: {} },
+        { id: 1, name: 'Bad', email: 'bad@test.com', blocked: false, unlimited: false, sign_in_count: 0, current_sign_in_at: null, last_seen_at: null, metadata: {} },
+        { id: 2, name: 'Good', email: 'good@test.com', blocked: false, unlimited: false, sign_in_count: 0, current_sign_in_at: null, last_seen_at: null, metadata: {} },
       ]
       mockFetchAllPages
         .mockResolvedValueOnce(members)
@@ -314,7 +314,7 @@ describe('SyncOrchestrator.run()', () => {
     it('calls getUserDetail once per member and upsertEnrollment per enrollment', async () => {
       const client = makeMockClient()
       const members = [
-        { id: 1, name: 'Alice', email: 'alice@test.com', blocked: false, unlimited: false, sign_in_count: 1, current_sign_in_at: null, last_seen_at: null, meta: {} },
+        { id: 1, name: 'Alice', email: 'alice@test.com', blocked: false, unlimited: false, sign_in_count: 1, current_sign_in_at: null, last_seen_at: null, metadata: {} },
       ]
       mockFetchAllPages
         .mockResolvedValueOnce(members)  // members
@@ -340,7 +340,7 @@ describe('SyncOrchestrator.run()', () => {
     it('skips enrollments when course is not found', async () => {
       const client = makeMockClient()
       const members = [
-        { id: 1, name: 'Alice', email: 'alice@test.com', blocked: false, unlimited: false, sign_in_count: 1, current_sign_in_at: null, last_seen_at: null, meta: {} },
+        { id: 1, name: 'Alice', email: 'alice@test.com', blocked: false, unlimited: false, sign_in_count: 1, current_sign_in_at: null, last_seen_at: null, metadata: {} },
       ]
       mockFetchAllPages
         .mockResolvedValueOnce(members)
@@ -363,7 +363,7 @@ describe('SyncOrchestrator.run()', () => {
     it('skips all enrollments when user is not found in DB', async () => {
       const client = makeMockClient()
       const members = [
-        { id: 1, name: 'Alice', email: 'alice@test.com', blocked: false, unlimited: false, sign_in_count: 1, current_sign_in_at: null, last_seen_at: null, meta: {} },
+        { id: 1, name: 'Alice', email: 'alice@test.com', blocked: false, unlimited: false, sign_in_count: 1, current_sign_in_at: null, last_seen_at: null, metadata: {} },
       ]
       mockFetchAllPages
         .mockResolvedValueOnce(members)
@@ -385,7 +385,7 @@ describe('SyncOrchestrator.run()', () => {
     it('handles null classroom_id (no classroom lookup)', async () => {
       const client = makeMockClient()
       const members = [
-        { id: 1, name: 'Alice', email: 'alice@test.com', blocked: false, unlimited: false, sign_in_count: 1, current_sign_in_at: null, last_seen_at: null, meta: {} },
+        { id: 1, name: 'Alice', email: 'alice@test.com', blocked: false, unlimited: false, sign_in_count: 1, current_sign_in_at: null, last_seen_at: null, metadata: {} },
       ]
       mockFetchAllPages
         .mockResolvedValueOnce(members)

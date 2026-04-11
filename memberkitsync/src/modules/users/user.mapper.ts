@@ -10,7 +10,7 @@ export function mkMemberToUpsertInput(mk: MKUserPayload): UpsertUserInput {
     signInCount: mk.sign_in_count,
     currentSignInAt: mk.current_sign_in_at ?? null,
     lastSeenAt: mk.last_seen_at ?? null,
-    metadata: mk.meta ?? {},
+    metadata: mk.metadata ?? {},
     ...(mk.created_at !== undefined && { createdAt: mk.created_at }),
   }
 }

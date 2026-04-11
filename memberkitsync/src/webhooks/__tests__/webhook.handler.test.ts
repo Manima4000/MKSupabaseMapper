@@ -195,7 +195,7 @@ describe('dispatchWebhook', () => {
     const memberData = {
       id: 42, full_name: 'João Silva', email: 'joao@test.com',
       blocked: false, unlimited: false, sign_in_count: 5,
-      current_sign_in_at: null, last_seen_at: null, meta: {},
+      current_sign_in_at: null, last_seen_at: null, metadata: {},
     }
 
     it('calls syncUser for member.created', async () => {
@@ -729,7 +729,7 @@ describe('dispatchWebhook', () => {
         dispatchWebhook(envelope('member.created', {
           id: 1, full_name: 'X', email: 'x@test.com',
           blocked: false, unlimited: false, sign_in_count: 0,
-          current_sign_in_at: null, last_seen_at: null, meta: {},
+          current_sign_in_at: null, last_seen_at: null, metadata: {},
         })),
       ).rejects.toThrow('DB explodiu')
     })
@@ -744,7 +744,7 @@ describe('dispatchWebhook', () => {
       await dispatchWebhook(envelope('member.created', {
         id: 1, full_name: 'X', email: 'x@test.com',
         blocked: false, unlimited: false, sign_in_count: 0,
-        current_sign_in_at: null, last_seen_at: null, meta: {},
+        current_sign_in_at: null, last_seen_at: null, metadata: {},
       }))
 
       expect(syncUser).not.toHaveBeenCalled()

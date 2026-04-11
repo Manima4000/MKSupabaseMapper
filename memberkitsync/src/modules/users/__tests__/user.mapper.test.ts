@@ -11,7 +11,7 @@ const base: MKUserPayload = {
   sign_in_count: 10,
   current_sign_in_at: '2024-01-01T00:00:00Z',
   last_seen_at: '2024-01-15T12:00:00Z',
-  meta: { plan: 'gold', tags: ['esa'] },
+  metadata: { plan: 'gold', tags: ['esa'] },
 }
 
 describe('mkMemberToUpsertInput', () => {
@@ -38,9 +38,9 @@ describe('mkMemberToUpsertInput', () => {
     expect(result.lastSeenAt).toBeNull()
   })
 
-  it('defaults metadata to empty object when meta is undefined-like', () => {
-    // meta is typed as Record<string,unknown>, but API may return null/undefined
-    const result = mkMemberToUpsertInput({ ...base, meta: undefined as unknown as Record<string, unknown> })
+  it('defaults metadata to empty object when metadata is undefined-like', () => {
+    // metadata is typed as Record<string,unknown>, but API may return null/undefined
+    const result = mkMemberToUpsertInput({ ...base, metadata: undefined as unknown as Record<string, unknown> })
 
     expect(result.metadata).toEqual({})
   })

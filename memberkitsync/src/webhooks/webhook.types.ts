@@ -43,7 +43,7 @@ export interface MKMemberWebhookData {
   sign_in_count: number
   current_sign_in_at: string | null
   last_seen_at: string | null
-  meta: Record<string, unknown>
+  metadata: Record<string, unknown>
   created_at?: string
 }
 

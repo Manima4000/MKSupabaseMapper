@@ -72,7 +72,7 @@ export interface MKUser {
   sign_in_count: number
   current_sign_in_at: string | null
   last_seen_at: string | null
-  meta: Record<string, unknown>
+  metadata: Record<string, unknown>
   created_at?: string
 }
 
@@ -101,6 +101,7 @@ export interface MKUserMetadata {
   cpf_cnpj: string | null
   phone_local_code: string | null
   phone_number: string | null
+  [key: string]: unknown
 }
 
 // Full user detail returned by GET /users/{id}
