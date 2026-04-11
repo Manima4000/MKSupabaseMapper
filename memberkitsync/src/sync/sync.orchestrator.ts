@@ -1,6 +1,6 @@
 import { logger } from '../shared/logger.js'
 import { fetchAllPages, runConcurrent } from '../shared/pagination.js'
-import type { MKUser, MKUserActivity, MKTrackableForumPost, MKTrackableForumComment } from './memberkit-api.client.js'
+import type { MKUser, MKUserActivity, MKTrackableForumPost, MKTrackableForumComment, MKTrackableRating } from './memberkit-api.client.js'
 import type { User } from '../modules/users/user.types.js'
 import { MemberKitClient } from './memberkit-api.client.js'
 import { syncCourse } from '../modules/courses/course.service.js'
@@ -26,6 +26,8 @@ import { upsertComment } from '../modules/comments/comment.repository.js'
 import { mkCommentToUpsertInput } from '../modules/comments/comment.mapper.js'
 import { upsertQuizAttempt } from '../modules/quiz_attempts/quiz_attempt.repository.js'
 import { mkQuizAttemptToUpsertInput } from '../modules/quiz_attempts/quiz_attempt.mapper.js'
+import { upsertLessonRating } from '../modules/lesson_ratings/lesson_rating.repository.js'
+import { createUserActivity } from '../modules/progress/progress.repository.js'
 
 export class SyncOrchestrator {
   constructor(private readonly client: MemberKitClient) {}
@@ -542,13 +544,39 @@ async function routeActivity(activity: MKUserActivity, userId: number): Promise<
       break
     }
 
-    // Already synced by syncComments / syncQuizAttempts / rating.saved webhook
+    case 'Rating': {
+      if (!activity.trackable || !activity.lesson_id) return
+      const rating = activity.trackable as MKTrackableRating
+      const lesson = await getLessonByMkId(activity.lesson_id)
+      if (!lesson) {
+        logger.warn({ mkLessonId: activity.lesson_id }, '[routeActivity] Aula não encontrada para Rating, pulando')
+        return
+      }
+      await upsertLessonRating({
+        mkId: rating.id,
+        userId,
+        lessonId: lesson.id,
+        stars: rating.stars,
+        createdAt: rating.created_at,
+      })
+      break
+    }
+
+    // Already synced by syncComments / syncQuizAttempts
     case 'Comment':
-    case 'Rating':
     case 'QuizAttempt':
       break
 
     default:
-      logger.debug({ type: activity.trackable_type, activityId: activity.id }, '[routeActivity] Tipo de atividade sem tabela dedicada, ignorando')
+      logger.debug({ type: activity.trackable_type, activityId: activity.id }, '[routeActivity] Tipo desconhecido, salvando em user_activities')
+      await createUserActivity({
+        mkId: activity.id,
+        userId,
+        eventType: activity.trackable_type,
+        mkCourseId: activity.course_id,
+        mkLessonId: activity.lesson_id,
+        trackable: activity.trackable,
+        occurredAt: activity.created_at,
+      })
   }
 }

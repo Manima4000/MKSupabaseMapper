@@ -3,7 +3,8 @@ import { logger } from '../shared/logger.js'
 import { supabase } from '../config/supabase.js'
 import { SupabaseError, WebhookSkipError } from '../shared/errors.js'
 import { syncUser } from '../modules/users/user.service.js'
-import { syncSubscription } from '../modules/memberships/membership.service.js'
+import { syncPlan, syncSubscription } from '../modules/memberships/membership.service.js'
+import { syncCourse } from '../modules/courses/course.service.js'
 import { upsertEnrollment } from '../modules/enrollments/enrollment.repository.js'
 import { mkEnrollmentToUpsertInput } from '../modules/enrollments/enrollment.mapper.js'
 import { upsertLessonProgress } from '../modules/lesson_progress/lesson_progress.repository.js'
@@ -14,7 +15,7 @@ import {
   updateUserLoginData,
 } from '../modules/users/user.repository.js'
 import { getMembershipLevelByMkId } from '../modules/memberships/membership.repository.js'
-import { getCourseByMkId } from '../modules/courses/course.repository.js'
+import { getCourseByMkId, upsertCategory, upsertCourse } from '../modules/courses/course.repository.js'
 import { getClassroomByMkId } from '../modules/classrooms/classroom.repository.js'
 import {
   getLessonByMkId,
@@ -25,6 +26,7 @@ import {
 import { upsertSection } from '../modules/sections/section.repository.js'
 import { upsertComment } from '../modules/comments/comment.repository.js'
 import { upsertLessonRating } from '../modules/lesson_ratings/lesson_rating.repository.js'
+import { MemberKitClient } from '../sync/memberkit-api.client.js'
 import type {
   MKWebhookEnvelope,
   MKMemberWebhookData,
@@ -39,6 +41,55 @@ import type {
   MKInvitePassWebhookData,
 } from './webhook.types.js'
 import type { WebhookLogInsert } from '../shared/types.js'
+
+// Singleton lazy do cliente MK — instanciado apenas quando um webhook precisar chamar a API,
+// preservando o estado do rate limiter entre webhooks concorrentes.
+let _mkClient: MemberKitClient | null = null
+function getMkClient(): MemberKitClient {
+  if (!_mkClient) _mkClient = new MemberKitClient()
+  return _mkClient
+}
+
+// ----------------------------------------------------------------------------
+// Helpers de resolução de dependências
+// ----------------------------------------------------------------------------
+
+// Retorna o usuário do banco. Se não existir, cria um registro mínimo a partir
+// dos campos presentes em todos os payloads de webhook que carregam dados de user.
+async function resolveOrCreateUser(mkUser: { id: number; full_name: string | null; email: string }) {
+  const existing = await getUserByMkId(mkUser.id)
+  if (existing) return existing
+
+  logger.info({ mkId: mkUser.id }, 'Usuário não encontrado no banco — criando registro mínimo a partir do webhook')
+  return upsertUser({
+    mkId: mkUser.id,
+    fullName: mkUser.full_name ?? mkUser.email,
+    email: mkUser.email,
+    blocked: false,
+    unlimited: false,
+    signInCount: 0,
+    currentSignInAt: null,
+    lastSeenAt: null,
+    metadata: {},
+  })
+}
+
+// Retorna a aula do banco. Se não existir, sincroniza o curso completo via MK API
+// (o que cria a aula em cascata) e tenta buscar novamente.
+async function resolveOrSyncLesson(lessonMkId: number, courseMkId: number) {
+  const existing = await getLessonByMkId(lessonMkId)
+  if (existing) return existing
+
+  logger.info({ lessonMkId, courseMkId }, 'Aula não encontrada no banco — sincronizando curso completo da MK API')
+  const mkCourse = await getMkClient().getCourseDetail(courseMkId)
+  await syncCourse(mkCourse)
+
+  const lesson = await getLessonByMkId(lessonMkId)
+  if (!lesson) {
+    throw new WebhookSkipError(`Aula mk_id=${lessonMkId} não encontrada mesmo após sincronizar curso mk_id=${courseMkId}`)
+  }
+  return lesson
+}
 
 // Dispatcher principal: roteia cada evento para o handler correto
 export async function dispatchWebhook(envelope: MKWebhookEnvelope, forcedHash?: string): Promise<void> {
@@ -158,25 +209,40 @@ async function handleSubscriptionEvent(data: MKSubscriptionWebhookData): Promise
     })
   }
 
-  const level = await getMembershipLevelByMkId(data.membership_level.id)
+  let level = await getMembershipLevelByMkId(data.membership_level.id)
   if (!level) {
-    throw new WebhookSkipError(`Plano mk_id=${data.membership_level.id} não encontrado — assinatura mk_id=${data.id} não processada`)
+    logger.info({ mkId: data.membership_level.id }, 'Plano não encontrado no banco — criando a partir do webhook de assinatura')
+    level = await syncPlan(data.membership_level)
   }
 
   await syncSubscription(data, user.id, level.id)
 }
 
 async function handleEnrollmentEvent(data: MKEnrollmentWebhookData): Promise<void> {
-  const user = await getUserByMkId(data.user.id)
-  const course = await getCourseByMkId(data.course_id)
-  const classroom = data.classroom_id ? await getClassroomByMkId(data.classroom_id) : null
-
+  let user = await getUserByMkId(data.user.id)
   if (!user) {
-    throw new WebhookSkipError(`Usuário mk_id=${data.user.id} não encontrado — matrícula mk_id=${data.id} não processada`)
+    logger.info({ mkId: data.user.id }, 'Usuário não encontrado no banco — criando a partir do webhook de matrícula')
+    user = await upsertUser({
+      mkId: data.user.id,
+      fullName: data.user.full_name ?? data.user.email,
+      email: data.user.email,
+      blocked: false,
+      unlimited: false,
+      signInCount: 0,
+      currentSignInAt: null,
+      lastSeenAt: null,
+      metadata: {},
+    })
   }
+
+  let course = await getCourseByMkId(data.course_id)
   if (!course) {
-    throw new WebhookSkipError(`Curso mk_id=${data.course_id} não encontrado — matrícula mk_id=${data.id} não processada`)
+    logger.info({ mkId: data.course_id }, 'Curso não encontrado no banco — buscando na MK API e sincronizando')
+    const mkCourse = await getMkClient().getCourseDetail(data.course_id)
+    course = await syncCourse(mkCourse)
   }
+
+  const classroom = data.classroom_id ? await getClassroomByMkId(data.classroom_id) : null
 
   await upsertEnrollment(
     mkEnrollmentToUpsertInput(data, user.id, course.id, classroom?.id ?? null),
@@ -187,16 +253,10 @@ async function handleLessonStatusEvent(
   data: MKLessonStatusWebhookData,
   firedAt: string,
 ): Promise<void> {
-  const user = await getUserByMkId(data.user.id)
-
-  if (!user) {
-    throw new WebhookSkipError(`Usuário mk_id=${data.user.id} não encontrado — progresso de aula mk_id=${data.lesson.id} não processado`)
-  }
-
-  const lesson = await getLessonByMkId(data.lesson.id)
-  if (!lesson) {
-    throw new WebhookSkipError(`Aula mk_id=${data.lesson.id} não encontrada — progresso do usuário mk_id=${data.user.id} não processado`)
-  }
+  const [user, lesson] = await Promise.all([
+    resolveOrCreateUser(data.user),
+    resolveOrSyncLesson(data.lesson.id, data.course.id),
+  ])
 
   await upsertLessonProgress({
     mkId: data.id ?? null,
@@ -209,15 +269,10 @@ async function handleLessonStatusEvent(
 }
 
 async function handleCommentEvent(data: MKCommentWebhookData): Promise<void> {
-  const user = await getUserByMkId(data.user.id)
-  const lesson = await getLessonByMkId(data.lesson.id)
-
-  if (!user) {
-    throw new WebhookSkipError(`Usuário mk_id=${data.user.id} não encontrado — comentário mk_id=${data.id} não processado`)
-  }
-  if (!lesson) {
-    throw new WebhookSkipError(`Aula mk_id=${data.lesson.id} não encontrada — comentário mk_id=${data.id} não processado`)
-  }
+  const [user, lesson] = await Promise.all([
+    resolveOrCreateUser(data.user),
+    resolveOrSyncLesson(data.lesson.id, data.lesson.course.id),
+  ])
 
   await upsertComment({
     mkId: data.id,
@@ -238,9 +293,25 @@ async function handleUserLoginEvent(data: MKUserLoginWebhookData): Promise<void>
 }
 
 async function handleLessonCatalogEvent(data: MKLessonCatalogWebhookData): Promise<void> {
-  const course = await getCourseByMkId(data.course.id)
+  let course = await getCourseByMkId(data.course.id)
   if (!course) {
-    throw new WebhookSkipError(`Curso mk_id=${data.course.id} não encontrado — aula mk_id=${data.id} não processada`)
+    logger.info({ mkId: data.course.id }, 'Curso não encontrado no banco — criando a partir dos dados do webhook lesson.created/updated')
+    let categoryId: number | null = null
+    if (data.course.category) {
+      const cat = await upsertCategory({
+        mkId: data.course.category.id,
+        name: data.course.category.name,
+        position: data.course.category.position,
+      })
+      categoryId = cat.id
+    }
+    course = await upsertCourse({
+      mkId: data.course.id,
+      name: data.course.name,
+      position: data.course.position,
+      categoryId,
+      createdAt: data.course.created_at,
+    })
   }
 
   const section = await upsertSection({
@@ -284,15 +355,10 @@ async function handleLessonCatalogEvent(data: MKLessonCatalogWebhookData): Promi
 }
 
 async function handleRatingEvent(data: MKRatingWebhookData): Promise<void> {
-  const user = await getUserByMkId(data.user.id)
-  const lesson = await getLessonByMkId(data.lesson.id)
-
-  if (!user) {
-    throw new WebhookSkipError(`Usuário mk_id=${data.user.id} não encontrado — avaliação mk_id=${data.id} não processada`)
-  }
-  if (!lesson) {
-    throw new WebhookSkipError(`Aula mk_id=${data.lesson.id} não encontrada — avaliação mk_id=${data.id} não processada`)
-  }
+  const [user, lesson] = await Promise.all([
+    resolveOrCreateUser(data.user),
+    resolveOrSyncLesson(data.lesson.id, data.lesson.course.id),
+  ])
 
   await upsertLessonRating({
     mkId: data.id,
@@ -307,11 +373,7 @@ async function handleLessonFileDownloadedEvent(
   data: MKLessonFileDownloadedWebhookData,
   firedAt: string,
 ): Promise<void> {
-  const user = await getUserByMkId(data.user.id)
-
-  if (!user) {
-    throw new WebhookSkipError(`Usuário mk_id=${data.user.id} não encontrado — download de material não registrado`)
-  }
+  const user = await resolveOrCreateUser(data.user)
 
   const lesson = await getLessonByMkId(data.lesson.id)
 

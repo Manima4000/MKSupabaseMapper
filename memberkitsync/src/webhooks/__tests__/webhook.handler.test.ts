@@ -9,6 +9,9 @@ const mockMaybySingle = vi.hoisted(() =>
 const mockSingle = vi.hoisted(() =>
   vi.fn().mockResolvedValue({ data: { id: 1 }, error: null }),
 )
+// Shared reference for MemberKitClient.getCourseDetail — same object used
+// by the handler's lazy singleton and accessible from every test.
+const mockGetCourseDetail = vi.hoisted(() => vi.fn())
 
 // ---------------------------------------------------------------------------
 // Supabase mock — thenable chain so `await chain.update().eq()` works
@@ -25,7 +28,6 @@ vi.mock('../../config/supabase.js', () => {
     c.maybySingle = mockMaybySingle
     c.maybeSingle = mockMaybySingle
     c.single = mockSingle
-    // Makes `await supabase.from().update().eq()` resolve without hanging
     c.then = (resolve: (v: unknown) => unknown) =>
       Promise.resolve({ data: null, error: null }).then(resolve)
     return c
@@ -37,12 +39,28 @@ vi.mock('../../shared/logger.js', () => ({
   logger: { info: vi.fn(), warn: vi.fn(), error: vi.fn(), debug: vi.fn() },
 }))
 
+// MemberKitClient lazy singleton — the handler calls `new MemberKitClient()`
+// once and reuses it. Must use a class (not arrow fn) so `new` works.
+// The getCourseDetail property points to our hoisted vi.fn() reference —
+// implementations set via mockGetCourseDetail.mockResolvedValue(...) in
+// beforeEach are always picked up even though the instance is created once.
+vi.mock('../../sync/memberkit-api.client.js', () => ({
+  MemberKitClient: class MockMemberKitClient {
+    getCourseDetail = mockGetCourseDetail
+  },
+}))
+
 vi.mock('../../modules/users/user.service.js', () => ({
   syncUser: vi.fn(),
 }))
 
 vi.mock('../../modules/memberships/membership.service.js', () => ({
+  syncPlan: vi.fn(),
   syncSubscription: vi.fn(),
+}))
+
+vi.mock('../../modules/courses/course.service.js', () => ({
+  syncCourse: vi.fn(),
 }))
 
 vi.mock('../../modules/enrollments/enrollment.repository.js', () => ({
@@ -76,6 +94,8 @@ vi.mock('../../modules/memberships/membership.repository.js', () => ({
 
 vi.mock('../../modules/courses/course.repository.js', () => ({
   getCourseByMkId: vi.fn(),
+  upsertCategory: vi.fn(),
+  upsertCourse: vi.fn(),
 }))
 
 vi.mock('../../modules/classrooms/classroom.repository.js', () => ({
@@ -106,14 +126,15 @@ vi.mock('../../modules/lesson_ratings/lesson_rating.repository.js', () => ({
 // ---------------------------------------------------------------------------
 import { dispatchWebhook } from '../webhook.handler.js'
 import { syncUser } from '../../modules/users/user.service.js'
-import { syncSubscription } from '../../modules/memberships/membership.service.js'
+import { syncPlan, syncSubscription } from '../../modules/memberships/membership.service.js'
+import { syncCourse } from '../../modules/courses/course.service.js'
 import { upsertEnrollment } from '../../modules/enrollments/enrollment.repository.js'
 import { mkEnrollmentToUpsertInput } from '../../modules/enrollments/enrollment.mapper.js'
 import { upsertLessonProgress } from '../../modules/lesson_progress/lesson_progress.repository.js'
 import { insertLessonFileDownload } from '../../modules/lesson_file_downloads/lesson_file_download.repository.js'
 import { getUserByMkId, upsertUser, updateUserLoginData } from '../../modules/users/user.repository.js'
 import { getMembershipLevelByMkId } from '../../modules/memberships/membership.repository.js'
-import { getCourseByMkId } from '../../modules/courses/course.repository.js'
+import { getCourseByMkId, upsertCategory, upsertCourse } from '../../modules/courses/course.repository.js'
 import { getClassroomByMkId } from '../../modules/classrooms/classroom.repository.js'
 import { getLessonByMkId, upsertLesson, upsertLessonVideo, upsertLessonFiles } from '../../modules/lessons/lesson.repository.js'
 import { upsertSection } from '../../modules/sections/section.repository.js'
@@ -124,6 +145,8 @@ import { upsertLessonRating } from '../../modules/lesson_ratings/lesson_rating.r
 // Helpers
 // ---------------------------------------------------------------------------
 const FIRED_AT = '2024-09-04T09:00:00.000-03:00'
+// Minimal MK course shape returned by getCourseDetail in fallback paths
+const MOCK_MK_COURSE = { id: 2, name: 'Matemática', position: 1, category: null, sections: [] }
 
 function envelope(event: string, data: Record<string, unknown>) {
   return { event, fired_at: FIRED_AT, data }
@@ -134,9 +157,11 @@ beforeEach(() => {
   mockSingle.mockResolvedValue({ data: { id: 1 }, error: null })
   mockMaybySingle.mockResolvedValue({ data: null, error: null }) // not a duplicate by default
 
-  // Default successful mocks
+  // Default: all lookups succeed, all writes succeed
   vi.mocked(syncUser).mockResolvedValue(undefined as never)
+  vi.mocked(syncPlan).mockResolvedValue({ id: 50, mk_id: 5 } as never)
   vi.mocked(syncSubscription).mockResolvedValue(undefined as never)
+  vi.mocked(syncCourse).mockResolvedValue({ id: 20, mk_id: 2 } as never)
   vi.mocked(upsertEnrollment).mockResolvedValue(undefined as never)
   vi.mocked(upsertLessonProgress).mockResolvedValue(undefined)
   vi.mocked(insertLessonFileDownload).mockResolvedValue(undefined)
@@ -153,6 +178,9 @@ beforeEach(() => {
   vi.mocked(upsertLessonFiles).mockResolvedValue(undefined)
   vi.mocked(upsertComment).mockResolvedValue(undefined as never)
   vi.mocked(upsertLessonRating).mockResolvedValue(undefined as never)
+  vi.mocked(upsertCategory).mockResolvedValue({ id: 5, mk_id: 9 } as never)
+  vi.mocked(upsertCourse).mockResolvedValue({ id: 20, mk_id: 2 } as never)
+  mockGetCourseDetail.mockResolvedValue(MOCK_MK_COURSE)
 })
 
 // ===========================================================================
@@ -188,7 +216,8 @@ describe('dispatchWebhook', () => {
     const subData = {
       id: 200, status: 'active', expire_date: null,
       membership_level: { id: 5, name: 'Prata', trial_period: 0, classroom_ids: [1] },
-      user: { id: 1, full_name: 'João', email: 'joao@test.com' },
+      user: { id: 1, full_name: 'João', email: 'joao@test.com', sign_in_count: 3,
+              current_sign_in_at: null, last_seen_at: null, metadata: {} },
     }
 
     it('calls syncSubscription with resolved user and level IDs', async () => {
@@ -204,18 +233,22 @@ describe('dispatchWebhook', () => {
       expect(syncSubscription).toHaveBeenCalledOnce()
     })
 
-    it('creates user from webhook data when not found, then syncs subscription', async () => {
+    it('creates user from webhook payload when not found, then syncs subscription', async () => {
       vi.mocked(getUserByMkId).mockResolvedValueOnce(null)
-      vi.mocked(upsertUser).mockResolvedValueOnce({ id: 10 } as never)
+
       await dispatchWebhook(envelope('membership.created', subData))
+
       expect(upsertUser).toHaveBeenCalledOnce()
       expect(syncSubscription).toHaveBeenCalledOnce()
     })
 
-    it('skips when membership level is not found', async () => {
+    it('creates membership level from webhook payload when not found, then syncs subscription', async () => {
       vi.mocked(getMembershipLevelByMkId).mockResolvedValueOnce(null)
+
       await dispatchWebhook(envelope('membership.created', subData))
-      expect(syncSubscription).not.toHaveBeenCalled()
+
+      expect(syncPlan).toHaveBeenCalledWith(subData.membership_level)
+      expect(syncSubscription).toHaveBeenCalledOnce()
     })
 
     it('does NOT handle old subscription.created event name (regression guard)', async () => {
@@ -232,19 +265,18 @@ describe('dispatchWebhook', () => {
   // ---- enrollment events ---------------------------------------------------
 
   describe('enrollment.created / enrollment.updated', () => {
-    // Real MK payload shape: user.id nested, classroom_id, expire_date
     const enrollData = {
       id: 300, status: 'active', expire_date: null,
       course_id: 2, classroom_id: 3,
       user: { id: 1, full_name: 'João', email: 'joao@test.com' },
     }
 
-    it('resolves user via data.user.id (not data.member_id) — bug fix', async () => {
+    it('resolves user via data.user.id — happy path', async () => {
       await dispatchWebhook(envelope('enrollment.created', enrollData))
       expect(getUserByMkId).toHaveBeenCalledWith(1)
     })
 
-    it('resolves classroom via data.classroom_id (not data.member_area_id) — bug fix', async () => {
+    it('resolves classroom via data.classroom_id — happy path', async () => {
       await dispatchWebhook(envelope('enrollment.created', enrollData))
       expect(getClassroomByMkId).toHaveBeenCalledWith(3)
     })
@@ -262,20 +294,29 @@ describe('dispatchWebhook', () => {
       expect(upsertEnrollment).toHaveBeenCalledOnce()
     })
 
-    it('skips when user is not found', async () => {
-      vi.mocked(getUserByMkId).mockResolvedValueOnce(null)
-      await dispatchWebhook(envelope('enrollment.created', enrollData))
-      expect(upsertEnrollment).not.toHaveBeenCalled()
-    })
-
-    it('skips when course is not found', async () => {
-      vi.mocked(getCourseByMkId).mockResolvedValueOnce(null)
-      await dispatchWebhook(envelope('enrollment.created', enrollData))
-      expect(upsertEnrollment).not.toHaveBeenCalled()
-    })
-
     it('handles enrollment.updated', async () => {
       await dispatchWebhook(envelope('enrollment.updated', enrollData))
+      expect(upsertEnrollment).toHaveBeenCalledOnce()
+    })
+
+    it('creates user from webhook payload when not found, then creates enrollment', async () => {
+      vi.mocked(getUserByMkId).mockResolvedValueOnce(null)
+
+      await dispatchWebhook(envelope('enrollment.created', enrollData))
+
+      expect(upsertUser).toHaveBeenCalledWith(
+        expect.objectContaining({ mkId: 1, email: 'joao@test.com', fullName: 'João' }),
+      )
+      expect(upsertEnrollment).toHaveBeenCalledOnce()
+    })
+
+    it('fetches course from MK API when not found in DB, syncs it, then creates enrollment', async () => {
+      vi.mocked(getCourseByMkId).mockResolvedValueOnce(null)
+
+      await dispatchWebhook(envelope('enrollment.created', enrollData))
+
+      expect(mockGetCourseDetail).toHaveBeenCalledWith(2)
+      expect(syncCourse).toHaveBeenCalledWith(MOCK_MK_COURSE)
       expect(upsertEnrollment).toHaveBeenCalledOnce()
     })
   })
@@ -293,7 +334,7 @@ describe('dispatchWebhook', () => {
       lesson: { id: 4, title: 'Aula 1', slug: 'aula-1' },
     }
 
-    it('calls upsertLessonProgress with correct args', async () => {
+    it('calls upsertLessonProgress with correct args — happy path', async () => {
       await dispatchWebhook(envelope('lesson_status.saved', progressData))
 
       expect(getUserByMkId).toHaveBeenCalledWith(1)
@@ -304,21 +345,46 @@ describe('dispatchWebhook', () => {
           userId: 10,
           lessonId: 40,
           completedAt: '2024-09-04T10:00:00Z',
-          // occurredAt uses data.created_at (not fired_at)
-          occurredAt: '2024-09-04T09:00:00Z',
+          occurredAt: '2024-09-04T09:00:00Z', // uses data.created_at, not fired_at
         }),
       )
     })
 
-    it('skips when user is not found', async () => {
-      vi.mocked(getUserByMkId).mockResolvedValueOnce(null)
-      await dispatchWebhook(envelope('lesson_status.saved', progressData))
-      expect(upsertLessonProgress).not.toHaveBeenCalled()
+    it('falls back to fired_at when data.created_at is null', async () => {
+      await dispatchWebhook(envelope('lesson_status.saved', { ...progressData, created_at: null }))
+
+      expect(upsertLessonProgress).toHaveBeenCalledWith(
+        expect.objectContaining({ occurredAt: FIRED_AT }),
+      )
     })
 
-    it('skips when lesson is not found', async () => {
-      vi.mocked(getLessonByMkId).mockResolvedValueOnce(null)
+    it('creates user from payload when not found in DB, then upserts progress', async () => {
+      vi.mocked(getUserByMkId).mockResolvedValueOnce(null)
+
       await dispatchWebhook(envelope('lesson_status.saved', progressData))
+
+      expect(upsertUser).toHaveBeenCalledWith(
+        expect.objectContaining({ mkId: 1, email: 'joao@test.com' }),
+      )
+      expect(upsertLessonProgress).toHaveBeenCalledOnce()
+    })
+
+    it('syncs course from MK API when lesson not found, then upserts progress', async () => {
+      // First getLessonByMkId call: not found. Second call (after syncCourse): found.
+      vi.mocked(getLessonByMkId).mockResolvedValueOnce(null)
+
+      await dispatchWebhook(envelope('lesson_status.saved', progressData))
+
+      expect(mockGetCourseDetail).toHaveBeenCalledWith(2)
+      expect(syncCourse).toHaveBeenCalledWith(MOCK_MK_COURSE)
+      expect(upsertLessonProgress).toHaveBeenCalledOnce()
+    })
+
+    it('skips with WebhookSkipError if lesson still not found after course sync', async () => {
+      vi.mocked(getLessonByMkId).mockResolvedValue(null) // both calls return null
+
+      await dispatchWebhook(envelope('lesson_status.saved', progressData))
+
       expect(upsertLessonProgress).not.toHaveBeenCalled()
     })
   })
@@ -334,7 +400,7 @@ describe('dispatchWebhook', () => {
       lesson: { id: 4, slug: 'aula-1', title: 'Aula 1', course: { id: 2, name: 'Matemática' } },
     }
 
-    it('calls upsertComment with resolved IDs', async () => {
+    it('calls upsertComment with resolved IDs — happy path', async () => {
       await dispatchWebhook(envelope('comment.created', commentData))
 
       expect(getUserByMkId).toHaveBeenCalledWith(1)
@@ -344,15 +410,32 @@ describe('dispatchWebhook', () => {
       )
     })
 
-    it('skips when user is not found', async () => {
+    it('creates user from payload when not found in DB, then upserts comment', async () => {
       vi.mocked(getUserByMkId).mockResolvedValueOnce(null)
+
       await dispatchWebhook(envelope('comment.created', commentData))
-      expect(upsertComment).not.toHaveBeenCalled()
+
+      expect(upsertUser).toHaveBeenCalledWith(
+        expect.objectContaining({ mkId: 1, email: 'joao@test.com' }),
+      )
+      expect(upsertComment).toHaveBeenCalledOnce()
     })
 
-    it('skips when lesson is not found', async () => {
+    it('syncs course from MK API when lesson not found, then upserts comment', async () => {
       vi.mocked(getLessonByMkId).mockResolvedValueOnce(null)
+
       await dispatchWebhook(envelope('comment.created', commentData))
+
+      expect(mockGetCourseDetail).toHaveBeenCalledWith(2)
+      expect(syncCourse).toHaveBeenCalledWith(MOCK_MK_COURSE)
+      expect(upsertComment).toHaveBeenCalledOnce()
+    })
+
+    it('skips if lesson still not found after course sync', async () => {
+      vi.mocked(getLessonByMkId).mockResolvedValue(null)
+
+      await dispatchWebhook(envelope('comment.created', commentData))
+
       expect(upsertComment).not.toHaveBeenCalled()
     })
   })
@@ -395,12 +478,12 @@ describe('dispatchWebhook', () => {
       id: 4, slug: 'aula-1', title: 'Aula 1', position: 1,
       created_at: '2024-09-01T00:00:00Z', updated_at: '2024-09-04T00:00:00Z',
       section: { id: 6, slug: 'modulo-1', name: 'Módulo 1', position: 1, created_at: '', updated_at: '' },
-      course: { id: 2, name: 'Matemática', position: 1, created_at: '', updated_at: '', category: null },
+      course: { id: 2, name: 'Matemática', position: 1, created_at: '2024-01-01T00:00:00Z', updated_at: '', category: null },
       video: { id: 9, source: 'vimeo', uid: 'abc123', duration: 600 },
       files: [] as unknown[],
     }
 
-    it('upserts section then lesson for lesson.created', async () => {
+    it('upserts section then lesson — happy path', async () => {
       await dispatchWebhook(envelope('lesson.created', lessonData))
 
       expect(getCourseByMkId).toHaveBeenCalledWith(2)
@@ -442,11 +525,41 @@ describe('dispatchWebhook', () => {
       expect(upsertLessonFiles).not.toHaveBeenCalled()
     })
 
-    it('skips when course not found', async () => {
+    it('creates course from webhook payload when not found in DB — no MK API call', async () => {
       vi.mocked(getCourseByMkId).mockResolvedValueOnce(null)
+
       await dispatchWebhook(envelope('lesson.created', lessonData))
-      expect(upsertSection).not.toHaveBeenCalled()
-      expect(upsertLesson).not.toHaveBeenCalled()
+
+      // Must NOT call the MK API — all data is already in the payload
+      expect(mockGetCourseDetail).not.toHaveBeenCalled()
+      expect(upsertCourse).toHaveBeenCalledWith(
+        expect.objectContaining({ mkId: 2, name: 'Matemática' }),
+      )
+      expect(upsertSection).toHaveBeenCalledOnce()
+      expect(upsertLesson).toHaveBeenCalledOnce()
+    })
+
+    it('creates category when course has one and course not in DB', async () => {
+      vi.mocked(getCourseByMkId).mockResolvedValueOnce(null)
+      const lessonWithCategory = {
+        ...lessonData,
+        course: { ...lessonData.course, category: { id: 9, name: 'Militares', position: 1 } },
+      }
+
+      await dispatchWebhook(envelope('lesson.created', lessonWithCategory))
+
+      expect(upsertCategory).toHaveBeenCalledWith(
+        expect.objectContaining({ mkId: 9, name: 'Militares' }),
+      )
+      expect(upsertCourse).toHaveBeenCalledWith(
+        expect.objectContaining({ categoryId: 5 }), // id from upsertCategory mock
+      )
+    })
+
+    it('does not upsert category when course already exists', async () => {
+      // getCourseByMkId returns the course → no creation path
+      await dispatchWebhook(envelope('lesson.created', lessonData))
+      expect(upsertCategory).not.toHaveBeenCalled()
     })
 
     it('handles lesson.updated', async () => {
@@ -465,7 +578,7 @@ describe('dispatchWebhook', () => {
       lesson: { id: 4, slug: 'aula-1', title: 'Aula 1', course: { id: 2, name: 'Matemática' } },
     }
 
-    it('calls upsertLessonRating with resolved IDs and stars', async () => {
+    it('calls upsertLessonRating with resolved IDs and stars — happy path', async () => {
       await dispatchWebhook(envelope('rating.saved', ratingData))
 
       expect(getUserByMkId).toHaveBeenCalledWith(1)
@@ -475,15 +588,32 @@ describe('dispatchWebhook', () => {
       )
     })
 
-    it('skips when user is not found', async () => {
+    it('creates user from payload when not found in DB, then upserts rating', async () => {
       vi.mocked(getUserByMkId).mockResolvedValueOnce(null)
+
       await dispatchWebhook(envelope('rating.saved', ratingData))
-      expect(upsertLessonRating).not.toHaveBeenCalled()
+
+      expect(upsertUser).toHaveBeenCalledWith(
+        expect.objectContaining({ mkId: 1, email: 'joao@test.com' }),
+      )
+      expect(upsertLessonRating).toHaveBeenCalledOnce()
     })
 
-    it('skips when lesson is not found', async () => {
+    it('syncs course from MK API when lesson not found, then upserts rating', async () => {
       vi.mocked(getLessonByMkId).mockResolvedValueOnce(null)
+
       await dispatchWebhook(envelope('rating.saved', ratingData))
+
+      expect(mockGetCourseDetail).toHaveBeenCalledWith(2)
+      expect(syncCourse).toHaveBeenCalledWith(MOCK_MK_COURSE)
+      expect(upsertLessonRating).toHaveBeenCalledOnce()
+    })
+
+    it('skips if lesson still not found after course sync', async () => {
+      vi.mocked(getLessonByMkId).mockResolvedValue(null)
+
+      await dispatchWebhook(envelope('rating.saved', ratingData))
+
       expect(upsertLessonRating).not.toHaveBeenCalled()
     })
   })
@@ -498,21 +628,36 @@ describe('dispatchWebhook', () => {
       clicked_at: FIRED_AT,
     }
 
-    it('calls insertLessonFileDownload with user, lesson and file id', async () => {
+    it('calls insertLessonFileDownload with user, lesson and file id — happy path', async () => {
       await dispatchWebhook(envelope('lesson_file.downloaded', dlData))
 
       expect(getUserByMkId).toHaveBeenCalledWith(1)
       expect(getLessonByMkId).toHaveBeenCalledWith(4)
       expect(insertLessonFileDownload).toHaveBeenCalledWith(
-        // occurredAt uses data.clicked_at (not fired_at)
+        // occurredAt uses data.clicked_at, not fired_at
         expect.objectContaining({ userId: 10, lessonId: 40, fileId: 11, occurredAt: FIRED_AT }),
       )
     })
 
-    it('skips when user is not found', async () => {
+    it('creates user from payload when not found in DB, then inserts download', async () => {
       vi.mocked(getUserByMkId).mockResolvedValueOnce(null)
+
       await dispatchWebhook(envelope('lesson_file.downloaded', dlData))
-      expect(insertLessonFileDownload).not.toHaveBeenCalled()
+
+      expect(upsertUser).toHaveBeenCalledWith(
+        expect.objectContaining({ mkId: 1, email: 'joao@test.com' }),
+      )
+      expect(insertLessonFileDownload).toHaveBeenCalledOnce()
+    })
+
+    it('inserts download with lessonId null when lesson not found', async () => {
+      vi.mocked(getLessonByMkId).mockResolvedValueOnce(null)
+
+      await dispatchWebhook(envelope('lesson_file.downloaded', dlData))
+
+      expect(insertLessonFileDownload).toHaveBeenCalledWith(
+        expect.objectContaining({ lessonId: null }),
+      )
     })
   })
 
@@ -594,7 +739,6 @@ describe('dispatchWebhook', () => {
 
   describe('duplicate webhook guard', () => {
     it('skips all processing when payload hash was already processed', async () => {
-      // Make maybySingle return a non-null record → duplicate found
       mockMaybySingle.mockResolvedValueOnce({ data: { id: 42 }, error: null })
 
       await dispatchWebhook(envelope('member.created', {
@@ -604,6 +748,43 @@ describe('dispatchWebhook', () => {
       }))
 
       expect(syncUser).not.toHaveBeenCalled()
+    })
+  })
+
+  // ---- resolveOrCreateUser — campos do registro mínimo --------------------
+
+  describe('resolveOrCreateUser (via enrollment fallback)', () => {
+    const enrollData = {
+      id: 300, status: 'active', expire_date: null,
+      course_id: 2, classroom_id: null,
+      user: { id: 7, full_name: null, email: 'semNome@test.com' },
+    }
+
+    it('uses email as fullName when full_name is null', async () => {
+      vi.mocked(getUserByMkId).mockResolvedValueOnce(null)
+
+      await dispatchWebhook(envelope('enrollment.created', enrollData))
+
+      expect(upsertUser).toHaveBeenCalledWith(
+        expect.objectContaining({ fullName: 'semNome@test.com' }),
+      )
+    })
+
+    it('creates user with safe defaults (blocked: false, signInCount: 0, metadata: {})', async () => {
+      vi.mocked(getUserByMkId).mockResolvedValueOnce(null)
+
+      await dispatchWebhook(envelope('enrollment.created', enrollData))
+
+      expect(upsertUser).toHaveBeenCalledWith(
+        expect.objectContaining({
+          blocked: false,
+          unlimited: false,
+          signInCount: 0,
+          currentSignInAt: null,
+          lastSeenAt: null,
+          metadata: {},
+        }),
+      )
     })
   })
 
