@@ -13,7 +13,7 @@ export async function insertLessonFileDownload(input: InsertLessonFileDownloadIn
 
   const { error } = await supabase
     .from('lesson_file_downloads')
-    .upsert(row, { onConflict: 'user_id,occurred_at' })
+    .upsert(row, { onConflict: 'user_id,file_id' })
 
   if (error) throw new SupabaseError(`Falha ao upsert lesson_file_download user=${input.userId}`, error)
 }

@@ -211,21 +211,31 @@ export interface MKRatingWebhookData {
 }
 
 // lesson_file.downloaded
+// Payload real: data.user, data.lesson, data.file, data.clicked_at (sem campo trackable)
 export interface MKLessonFileDownloadedWebhookData {
   user: {
     id: number
     full_name: string | null
     email: string
+    sign_in_count?: number
+    current_sign_in_at?: string | null
+    last_seen_at?: string | null
+    metadata?: Record<string, unknown>
+    created_at?: string
   }
   lesson: {
     id: number
     slug: string | null
     title: string
+    created_at?: string
   }
-  file: {
+  file?: {
     id: number
     filename: string
     url: string
+    content_type?: string
+    byte_size?: number
+    created_at?: string
   }
   clicked_at: string
 }

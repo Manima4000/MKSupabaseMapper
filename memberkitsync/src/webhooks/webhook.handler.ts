@@ -150,7 +150,7 @@ export async function dispatchWebhook(envelope: MKWebhookEnvelope, forcedHash?: 
         break
 
       case 'lesson_file.downloaded':
-        await handleLessonFileDownloadedEvent(data as unknown as MKLessonFileDownloadedWebhookData, fired_at)
+        await handleLessonFileDownloadedEvent(data as unknown as MKLessonFileDownloadedWebhookData)
         break
 
       case 'invite_pass.created':
@@ -371,7 +371,6 @@ async function handleRatingEvent(data: MKRatingWebhookData): Promise<void> {
 
 async function handleLessonFileDownloadedEvent(
   data: MKLessonFileDownloadedWebhookData,
-  firedAt: string,
 ): Promise<void> {
   const user = await resolveOrCreateUser(data.user)
 
@@ -380,7 +379,7 @@ async function handleLessonFileDownloadedEvent(
   await insertLessonFileDownload({
     userId: user.id,
     lessonId: lesson?.id ?? null,
-    fileId: data.file.id,
+    fileId: data.file?.id ?? null,
     // clicked_at is when the student actually downloaded the file
     occurredAt: data.clicked_at,
   })
