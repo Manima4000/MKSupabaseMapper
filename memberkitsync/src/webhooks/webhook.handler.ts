@@ -3,6 +3,7 @@ import { logger } from '../shared/logger.js'
 import { supabase } from '../config/supabase.js'
 import { SupabaseError, WebhookSkipError } from '../shared/errors.js'
 import { syncUser } from '../modules/users/user.service.js'
+import { extractPhone } from '../modules/users/user.mapper.js'
 import { syncPlan, syncSubscription } from '../modules/memberships/membership.service.js'
 import { syncCourse } from '../modules/courses/course.service.js'
 import { upsertEnrollment } from '../modules/enrollments/enrollment.repository.js'
@@ -65,6 +66,7 @@ async function resolveOrCreateUser(mkUser: { id: number; full_name: string | nul
     mkId: mkUser.id,
     fullName: mkUser.full_name ?? mkUser.email,
     email: mkUser.email,
+    phone: null, // payload mínimo: sem metadata disponível
     blocked: false,
     unlimited: false,
     signInCount: 0,
@@ -199,6 +201,7 @@ async function handleSubscriptionEvent(data: MKSubscriptionWebhookData): Promise
       mkId: data.user.id,
       fullName: data.user.full_name ?? data.user.email,
       email: data.user.email,
+      phone: extractPhone(data.user.metadata ?? {}),
       blocked: false,
       unlimited: false,
       signInCount: data.user.sign_in_count,
@@ -227,12 +230,13 @@ async function handleEnrollmentEvent(data: MKEnrollmentWebhookData): Promise<voi
       mkId: data.user.id,
       fullName: data.user.full_name ?? data.user.email,
       email: data.user.email,
+      phone: extractPhone(data.user.metadata ?? {}),
       blocked: false,
       unlimited: false,
       signInCount: 0,
       currentSignInAt: null,
       lastSeenAt: null,
-      metadata: {},
+      metadata: data.user.metadata ?? {},
     })
   }
 
@@ -393,6 +397,7 @@ async function handleInvitePassEvent(data: MKInvitePassWebhookData): Promise<voi
     mkId: data.user.id,
     fullName: data.user.full_name ?? '',
     email: data.user.email,
+    phone: extractPhone(data.user.metadata ?? {}),
     blocked: false,
     unlimited: false,
     signInCount: data.user.sign_in_count,

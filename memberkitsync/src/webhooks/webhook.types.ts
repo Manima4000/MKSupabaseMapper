@@ -87,6 +87,7 @@ export interface MKEnrollmentWebhookData {
     id: number
     full_name: string | null
     email: string
+    metadata?: Record<string, unknown>
   }
 }
 

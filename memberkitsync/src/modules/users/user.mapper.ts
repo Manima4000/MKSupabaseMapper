@@ -1,6 +1,6 @@
 import type { MKUserPayload, UpsertUserInput } from './user.types.js'
 
-function extractPhone(metadata: Record<string, unknown>): string | null {
+export function extractPhone(metadata: Record<string, unknown>): string | null {
   const code = metadata.phone_local_code as string | null | undefined
   const number = metadata.phone_number as string | null | undefined
   if (code && number) return `${code}${number}`
