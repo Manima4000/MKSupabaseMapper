@@ -22,6 +22,7 @@ describe('mkMemberToUpsertInput', () => {
       mkId: 42,
       fullName: 'João Silva',
       email: 'joao@example.com',
+      phone: null,
       blocked: false,
       unlimited: true,
       signInCount: 10,
