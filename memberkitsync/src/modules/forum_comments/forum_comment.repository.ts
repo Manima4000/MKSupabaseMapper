@@ -10,6 +10,7 @@ export async function upsertForumComment(input: UpsertForumCommentInput): Promis
     content: input.content,
     occurred_at: input.occurredAt,
     ...(input.createdAt !== undefined && { created_at: input.createdAt }),
+    ...(input.updatedAt !== undefined && { updated_at: input.updatedAt }),
   }
 
   const { error } = await supabase

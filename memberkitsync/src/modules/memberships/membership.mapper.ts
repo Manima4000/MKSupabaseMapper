@@ -12,6 +12,7 @@ export function mkPlanToUpsertInput(mk: MKPlanPayload): UpsertMembershipLevelInp
     name: mk.name,
     trialPeriod: mk.trial_period,
     ...(mk.created_at !== undefined && { createdAt: mk.created_at }),
+    ...(mk.updated_at !== undefined && { updatedAt: mk.updated_at }),
   }
 }
 
@@ -42,5 +43,6 @@ export function mkSubscriptionToUpsertInput(
     status: normalizeStatus(mk.status),
     expireDate,
     ...(mk.created_at !== undefined && { createdAt: mk.created_at }),
+    ...(mk.updated_at !== undefined && { updatedAt: mk.updated_at }),
   }
 }

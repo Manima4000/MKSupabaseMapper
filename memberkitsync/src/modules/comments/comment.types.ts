@@ -8,4 +8,5 @@ export interface UpsertCommentInput {
   body: string
   status: CommentStatus
   createdAt?: string
+  updatedAt?: string
 }

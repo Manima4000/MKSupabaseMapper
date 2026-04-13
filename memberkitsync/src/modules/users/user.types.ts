@@ -11,6 +11,7 @@ export interface UpsertUserInput {
   mkId: number
   fullName: string
   email: string
+  phone: string | null
   blocked: boolean
   unlimited: boolean
   signInCount: number
@@ -18,4 +19,5 @@ export interface UpsertUserInput {
   lastSeenAt: string | null
   metadata: Record<string, unknown>
   createdAt?: string
+  updatedAt?: string
 }

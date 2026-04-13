@@ -206,6 +206,7 @@ async function handleSubscriptionEvent(data: MKSubscriptionWebhookData): Promise
       lastSeenAt: data.user.last_seen_at,
       metadata: data.user.metadata ?? {},
       ...(data.user.created_at !== undefined && { createdAt: data.user.created_at }),
+      ...(data.user.updated_at !== undefined && { updatedAt: data.user.updated_at }),
     })
   }
 
@@ -281,6 +282,7 @@ async function handleCommentEvent(data: MKCommentWebhookData): Promise<void> {
     body: data.content,
     status: data.status as import('../shared/types.js').CommentStatus,
     createdAt: data.created_at,
+    updatedAt: data.updated_at,
   })
 }
 
@@ -366,6 +368,7 @@ async function handleRatingEvent(data: MKRatingWebhookData): Promise<void> {
     lessonId: lesson.id,
     stars: data.stars,
     createdAt: data.created_at,
+    updatedAt: data.updated_at,
   })
 }
 

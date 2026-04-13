@@ -516,6 +516,7 @@ async function routeActivity(activity: MKUserActivity, userId: number): Promise<
         title: fp.title,
         occurredAt: activity.created_at,
         createdAt: fp.created_at,
+        updatedAt: fp.updated_at,
       })
       break
     }
@@ -530,6 +531,7 @@ async function routeActivity(activity: MKUserActivity, userId: number): Promise<
         content: fc.content,
         occurredAt: activity.created_at,
         createdAt: fc.created_at,
+        updatedAt: fc.updated_at,
       })
       break
     }
@@ -558,6 +560,7 @@ async function routeActivity(activity: MKUserActivity, userId: number): Promise<
         lessonId: lesson.id,
         stars: rating.stars,
         createdAt: rating.created_at,
+        updatedAt: rating.updated_at,
       })
       break
     }

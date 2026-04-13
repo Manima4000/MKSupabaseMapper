@@ -8,4 +8,5 @@ export interface UpsertForumPostInput {
   title: string
   occurredAt: string
   createdAt?: string
+  updatedAt?: string
 }

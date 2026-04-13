@@ -8,6 +8,7 @@ export async function upsertUser(input: UpsertUserInput): Promise<User> {
     mk_id: input.mkId,
     full_name: input.fullName,
     email: input.email,
+    phone: input.phone,
     blocked: input.blocked,
     unlimited: input.unlimited,
     sign_in_count: input.signInCount,
@@ -15,6 +16,7 @@ export async function upsertUser(input: UpsertUserInput): Promise<User> {
     last_seen_at: input.lastSeenAt,
     metadata: input.metadata,
     ...(input.createdAt !== undefined && { created_at: input.createdAt }),
+    ...(input.updatedAt !== undefined && { updated_at: input.updatedAt }),
   }
 
   const { data, error } = await supabase

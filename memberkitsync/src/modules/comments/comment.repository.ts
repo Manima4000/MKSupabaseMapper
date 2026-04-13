@@ -10,6 +10,7 @@ export async function upsertComment(input: UpsertCommentInput): Promise<Comment>
     body: input.body,
     status: input.status,
     ...(input.createdAt !== undefined && { created_at: input.createdAt }),
+    ...(input.updatedAt !== undefined && { updated_at: input.updatedAt }),
   }
 
   const { data, error } = await supabase

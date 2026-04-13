@@ -45,6 +45,7 @@ export interface MKMemberWebhookData {
   last_seen_at: string | null
   metadata: Record<string, unknown>
   created_at?: string
+  updated_at?: string
 }
 
 // membership.created / membership.updated
@@ -53,6 +54,7 @@ export interface MKSubscriptionWebhookData {
   status: string
   expire_date: string | null
   created_at?: string
+  updated_at?: string
   membership_level: {
     id: number
     name: string
@@ -68,6 +70,7 @@ export interface MKSubscriptionWebhookData {
     last_seen_at: string | null
     metadata: Record<string, unknown> | null
     created_at?: string
+    updated_at?: string
   }
 }
 

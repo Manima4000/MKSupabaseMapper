@@ -13,5 +13,6 @@ export function mkCommentToUpsertInput(
     body: mk.content,
     status: (mk.status as CommentStatus) ?? 'pending',
     createdAt: mk.created_at,
+    updatedAt: mk.updated_at,
   }
 }

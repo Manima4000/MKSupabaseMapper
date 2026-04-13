@@ -74,6 +74,7 @@ export interface MKUser {
   last_seen_at: string | null
   metadata: Record<string, unknown>
   created_at?: string
+  updated_at?: string
 }
 
 // Keep MKMember as an alias for backwards compatibility within the codebase
@@ -125,6 +126,7 @@ export interface MKMembershipLevel {
   trial_period: number
   classroom_ids: number[]
   created_at?: string
+  updated_at?: string
 }
 
 // Keep MKPlan as an alias for backwards compatibility within the codebase
@@ -136,10 +138,13 @@ export interface MKMembership {
   membership_level_id: number
   expire_date: string | null
   created_at?: string
+  updated_at?: string
   user: {
     id: number
     full_name: string | null
     email: string
+    created_at?: string
+    updated_at?: string
   }
 }
 

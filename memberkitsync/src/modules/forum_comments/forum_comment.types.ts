@@ -8,4 +8,5 @@ export interface UpsertForumCommentInput {
   content: string
   occurredAt: string
   createdAt?: string
+  updatedAt?: string
 }

@@ -19,6 +19,7 @@ export async function upsertMembershipLevel(input: UpsertMembershipLevelInput): 
     name: input.name,
     trial_period: input.trialPeriod,
     ...(input.createdAt !== undefined && { created_at: input.createdAt }),
+    ...(input.updatedAt !== undefined && { updated_at: input.updatedAt }),
   }
 
   const { data, error } = await supabase
@@ -54,6 +55,7 @@ export async function upsertMembership(input: UpsertMembershipInput): Promise<Me
     status: input.status,
     expire_date: input.expireDate,
     ...(input.createdAt !== undefined && { created_at: input.createdAt }),
+    ...(input.updatedAt !== undefined && { updated_at: input.updatedAt }),
   }
 
   const { data, error } = await supabase

@@ -101,6 +101,7 @@ export interface User {
   mk_id: number
   full_name: string
   email: string
+  phone: string | null
   blocked: boolean
   unlimited: boolean
   sign_in_count: number
@@ -237,25 +238,25 @@ export interface WebhookLog {
 // INSERT TYPES (omit auto-generated fields)
 // ============================================================================
 
-export type CategoryInsert = Omit<Category, 'id' | 'created_at' | 'updated_at'> & { created_at?: string }
-export type CourseInsert = Omit<Course, 'id' | 'created_at' | 'updated_at'> & { created_at?: string }
-export type SectionInsert = Omit<Section, 'id' | 'created_at' | 'updated_at'> & { created_at?: string }
-export type LessonInsert = Omit<Lesson, 'id' | 'created_at' | 'updated_at'> & { created_at?: string }
+export type CategoryInsert = Omit<Category, 'id' | 'created_at' | 'updated_at'> & { created_at?: string; updated_at?: string }
+export type CourseInsert = Omit<Course, 'id' | 'created_at' | 'updated_at'> & { created_at?: string; updated_at?: string }
+export type SectionInsert = Omit<Section, 'id' | 'created_at' | 'updated_at'> & { created_at?: string; updated_at?: string }
+export type LessonInsert = Omit<Lesson, 'id' | 'created_at' | 'updated_at'> & { created_at?: string; updated_at?: string }
 export type LessonVideoInsert = Omit<LessonVideo, 'id' | 'created_at'> & { created_at?: string }
 export type LessonFileInsert = Omit<LessonFile, 'id' | 'created_at'> & { created_at?: string }
-export type ClassroomInsert = Omit<Classroom, 'id' | 'created_at' | 'updated_at'> & { created_at?: string }
-export type MembershipLevelInsert = Omit<MembershipLevel, 'id' | 'created_at' | 'updated_at'> & { created_at?: string }
-export type UserInsert = Omit<User, 'id' | 'created_at' | 'updated_at'> & { created_at?: string }
-export type MembershipInsert = Omit<Membership, 'id' | 'created_at' | 'updated_at'> & { created_at?: string }
-export type EnrollmentInsert = Omit<Enrollment, 'id' | 'created_at' | 'updated_at'> & { created_at?: string }
+export type ClassroomInsert = Omit<Classroom, 'id' | 'created_at' | 'updated_at'> & { created_at?: string; updated_at?: string }
+export type MembershipLevelInsert = Omit<MembershipLevel, 'id' | 'created_at' | 'updated_at'> & { created_at?: string; updated_at?: string }
+export type UserInsert = Omit<User, 'id' | 'created_at' | 'updated_at'> & { created_at?: string; updated_at?: string }
+export type MembershipInsert = Omit<Membership, 'id' | 'created_at' | 'updated_at'> & { created_at?: string; updated_at?: string }
+export type EnrollmentInsert = Omit<Enrollment, 'id' | 'created_at' | 'updated_at'> & { created_at?: string; updated_at?: string }
 export type UserActivityInsert = Omit<UserActivity, 'id' | 'created_at'>
-export type CommentInsert = Omit<Comment, 'id' | 'created_at' | 'updated_at'> & { created_at?: string }
-export type LessonRatingInsert = Omit<LessonRating, 'id' | 'created_at' | 'updated_at'> & { created_at?: string }
-export type QuizAttemptInsert = Omit<QuizAttempt, 'id' | 'created_at' | 'updated_at'> & { created_at?: string }
+export type CommentInsert = Omit<Comment, 'id' | 'created_at' | 'updated_at'> & { created_at?: string; updated_at?: string }
+export type LessonRatingInsert = Omit<LessonRating, 'id' | 'created_at' | 'updated_at'> & { created_at?: string; updated_at?: string }
+export type QuizAttemptInsert = Omit<QuizAttempt, 'id' | 'created_at' | 'updated_at'> & { created_at?: string; updated_at?: string }
 export type WebhookLogInsert = Omit<WebhookLog, 'id' | 'created_at'>
-export type LessonProgressInsert = Omit<LessonProgress, 'id' | 'created_at' | 'updated_at'> & { created_at?: string }
-export type ForumPostInsert = Omit<ForumPost, 'id' | 'created_at' | 'updated_at'> & { created_at?: string }
-export type ForumCommentInsert = Omit<ForumComment, 'id' | 'created_at' | 'updated_at'> & { created_at?: string }
+export type LessonProgressInsert = Omit<LessonProgress, 'id' | 'created_at' | 'updated_at'> & { created_at?: string; updated_at?: string }
+export type ForumPostInsert = Omit<ForumPost, 'id' | 'created_at' | 'updated_at'> & { created_at?: string; updated_at?: string }
+export type ForumCommentInsert = Omit<ForumComment, 'id' | 'created_at' | 'updated_at'> & { created_at?: string; updated_at?: string }
 export type LessonFileDownloadInsert = Omit<LessonFileDownload, 'id' | 'created_at'> & { created_at?: string }
 
 

@@ -12,6 +12,7 @@ export async function upsertQuizAttempt(input: UpsertQuizAttemptInput): Promise<
     correct_answers_count: input.correctAnswersCount,
     started_at: input.startedAt,
     ...(input.createdAt !== undefined && { created_at: input.createdAt }),
+    ...(input.updatedAt !== undefined && { updated_at: input.updatedAt }),
   }
 
   const { data, error } = await supabase
