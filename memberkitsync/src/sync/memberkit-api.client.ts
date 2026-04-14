@@ -34,6 +34,7 @@ export interface MKLesson {
   position: number
   slug: string | null
   created_at?: string
+  updated_at?: string
   video?: MKLessonVideo | null
   files?: MKLessonFile[]
 }
@@ -44,6 +45,7 @@ export interface MKSection {
   position: number
   slug: string | null
   created_at?: string
+  updated_at?: string
   lessons: MKLesson[]
 }
 
@@ -52,6 +54,7 @@ export interface MKCourse {
   name: string
   position: number
   created_at?: string
+  updated_at?: string
   category: MKCategory | null
   sections: MKSection[]
 }
@@ -132,19 +135,17 @@ export interface MKMembershipLevel {
 // Keep MKPlan as an alias for backwards compatibility within the codebase
 export type MKPlan = MKMembershipLevel
 
+// NOTE: the /memberships REST endpoint does NOT return created_at or updated_at.
+// Those fields are only available in webhook payloads (MKSubscriptionWebhookData).
 export interface MKMembership {
   id: number
   status: string
   membership_level_id: number
   expire_date: string | null
-  created_at?: string
-  updated_at?: string
   user: {
     id: number
     full_name: string | null
     email: string
-    created_at?: string
-    updated_at?: string
   }
 }
 

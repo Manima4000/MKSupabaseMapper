@@ -317,6 +317,7 @@ async function handleLessonCatalogEvent(data: MKLessonCatalogWebhookData): Promi
       position: data.course.position,
       categoryId,
       createdAt: data.course.created_at,
+      updatedAt: data.course.updated_at,
     })
   }
 
@@ -327,6 +328,7 @@ async function handleLessonCatalogEvent(data: MKLessonCatalogWebhookData): Promi
     position: data.section.position,
     slug: data.section.slug,
     createdAt: data.section.created_at,
+    updatedAt: data.section.updated_at,
   })
 
   const lesson = await upsertLesson({
@@ -336,6 +338,7 @@ async function handleLessonCatalogEvent(data: MKLessonCatalogWebhookData): Promi
     position: data.position,
     slug: data.slug,
     createdAt: data.created_at,
+    updatedAt: data.updated_at,
   })
 
   if (data.video) {

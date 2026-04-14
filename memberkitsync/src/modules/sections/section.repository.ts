@@ -10,6 +10,7 @@ export async function upsertSection(input: UpsertSectionInput): Promise<Section>
     position: input.position,
     slug: input.slug,
     ...(input.createdAt !== undefined && { created_at: input.createdAt }),
+    ...(input.updatedAt !== undefined && { updated_at: input.updatedAt }),
   }
 
   const { data, error } = await supabase

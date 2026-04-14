@@ -21,5 +21,6 @@ export function mkCourseToUpsertInput(mk: MKCoursePayload, categoryId: number | 
     position: mk.position,
     categoryId,
     ...(mk.created_at !== undefined && { createdAt: mk.created_at }),
+    ...(mk.updated_at !== undefined && { updatedAt: mk.updated_at }),
   }
 }

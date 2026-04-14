@@ -47,6 +47,7 @@ export async function upsertCourse(input: UpsertCourseInput): Promise<Course> {
     position: input.position,
     category_id: input.categoryId,
     ...(input.createdAt !== undefined && { created_at: input.createdAt }),
+    ...(input.updatedAt !== undefined && { updated_at: input.updatedAt }),
   }
 
   const { data, error } = await supabase

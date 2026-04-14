@@ -13,6 +13,7 @@ export function mkLessonToUpsertInput(mk: MKLessonPayload, sectionId: number): U
     position: mk.position,
     slug: mk.slug ?? null,
     ...(mk.created_at !== undefined && { createdAt: mk.created_at }),
+    ...(mk.updated_at !== undefined && { updatedAt: mk.updated_at }),
   }
 }
 

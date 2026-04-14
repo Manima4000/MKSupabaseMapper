@@ -20,6 +20,7 @@ export async function upsertLesson(input: UpsertLessonInput): Promise<Lesson> {
     position: input.position,
     slug: input.slug,
     ...(input.createdAt !== undefined && { created_at: input.createdAt }),
+    ...(input.updatedAt !== undefined && { updated_at: input.updatedAt }),
   }
 
   const { data, error } = await supabase

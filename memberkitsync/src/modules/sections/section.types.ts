@@ -11,4 +11,5 @@ export interface UpsertSectionInput {
   position: number
   slug: string | null
   createdAt?: string
+  updatedAt?: string
 }

@@ -18,6 +18,7 @@ export interface UpsertLessonInput {
   position: number
   slug: string | null
   createdAt?: string
+  updatedAt?: string
 }
 
 export interface UpsertLessonVideoInput {

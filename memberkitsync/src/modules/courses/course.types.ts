@@ -23,4 +23,5 @@ export interface UpsertCourseInput {
   position: number
   categoryId: number | null
   createdAt?: string
+  updatedAt?: string
 }
