@@ -4,5 +4,9 @@
       "WebFetch(domain:ajuda.memberkit.com.br)",
       "WebSearch"
     ]
-  }
+  },
+  "enabledMcpjsonServers": [
+    "supabase"
+  ],
+  "enableAllProjectMcpServers": true
 }

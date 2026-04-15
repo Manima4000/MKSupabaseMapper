@@ -1,0 +1,36 @@
+{
+  "name": "EdTech Pro",
+  "dataColors": [
+    "#2563EB",
+    "#10B981",
+    "#F59E0B",
+    "#EF4444",
+    "#8B5CF6",
+    "#06B6D4",
+    "#F97316",
+    "#6B7280"
+  ],
+  "background": "#F4F6FA",
+  "foreground": "#1E293B",
+  "tableAccent": "#2563EB",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "fontFamily": [{"value": "Segoe UI"}],
+        "fontSize": [{"value": 10}],
+        "color": [{"solid": {"color": "#1E293B"}}]
+      }
+    },
+    "card": {
+      "*": {
+        "background": [{"solid": {"color": "#FFFFFF"}}],
+        "border": [{"show": true, "color": {"solid": {"color": "#E2E8F0"}}, "radius": 8}]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [{"solid": {"color": "#F4F6FA"}}]
+      }
+    }
+  }
+}

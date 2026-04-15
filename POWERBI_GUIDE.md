@@ -1,66 +1,441 @@
 # Guia Power BI — MemberKit Student Tracking
 
 ## Checklist Geral
-- [ ] Passo 0 — Conectar ao Supabase
-- [ ] Passo 1 — Ajustes no Power Query
-- [ ] Passo 2 — Criar Medidas DAX
-- [ ] Passo 3 — Configurar Tema
-- [ ] Passo 4 — Página 1: Visão Geral
-- [ ] Passo 5 — Página 2: Alunos em Risco
-- [ ] Passo 6 — Página 3: Assinaturas
-- [ ] Passo 7 — Página 4: Conteúdo & Cursos
-- [ ] Passo 8 — Página 5: Velocidade & Quiz
-- [ ] Passo 9 — Slicers Globais e Navegação
-- [ ] Passo 10 — Ajustes Finais e Publicação
+- [ ] Passo 0 — Aplicar migration 033 no Supabase SQL Editor
+- [ ] Passo 1 — Conectar ao Supabase no Power BI
+- [ ] Passo 2 — Power Query: tipos de dados
+- [ ] Passo 3 — Medidas DAX
+- [ ] Passo 4 — Página 1: Visão Geral (gráficos do chefe)
+- [ ] Passo 5 — Página 2: Assinaturas
+- [ ] Passo 6 — Navegação e ajustes finais
 
 ---
 
-## Passo 0 — Conectar ao Supabase
+## Estrutura Visual Adotada
 
-- [ ] Abrir **Power BI Desktop**
-- [ ] **Obter Dados → Banco de dados PostgreSQL**
-- [ ] Preencher:
-  - Servidor: `db.SEUPROJETO.supabase.co` (Supabase → Settings → Database → Connection string)
-  - Banco de dados: `postgres`
-  - Modo: **Import** (melhor performance; agendamos refresh depois)
+Cada página segue o mesmo padrão de 3 zonas — isso é o que diferencia relatórios amadores de profissionais:
+
+```
+┌──────────────────────────────────────────────────────┐
+│  HEADER  │  Título da página + Slicer de Período     │
+├──────┬───────────────────────────────────────────────┤
+│      │  KPI 1  │  KPI 2  │  KPI 3  │  KPI 4         │
+│ NAV  ├───────────────────────────────────────────────┤
+│      │                                               │
+│      │         GRÁFICOS PRINCIPAIS                   │
+│      │         (2 colunas, 2 linhas)                 │
+│      │                                               │
+└──────┴───────────────────────────────────────────────┘
+```
+
+**Regras de design aplicadas:**
+- Máximo **4 KPI cards** por página
+- Máximo **6 gráficos** por página
+- Máximo **3 cores** primárias + variações de opacidade
+- Fundo `#F4F6FA`, cards em branco com sombra leve
+- Fonte única: **Segoe UI** em toda a aplicação
+
+---
+
+## Passo 0 — Aplicar migration 033 no Supabase
+
+Antes de conectar o Power BI, a migration precisa estar aplicada no banco.
+
+- [ ] Abrir o arquivo `memberkitsync/src/database/migrations/033_powerbi_boss_charts.sql`
+- [ ] Copiar o conteúdo completo
+- [ ] No Supabase Dashboard → **SQL Editor → New query** → colar e executar
+- [ ] Confirmar que as views foram criadas: `SELECT * FROM vw_weekly_global_stats LIMIT 5;`
+
+**O que a migration faz:**
+- Cria `vw_weekly_global_stats` — 1 linha por semana com total de aulas, alunos ativos, média e mediana
+- Recria `vw_yearly_weekly_comparison` incluindo 2024 (antes era só 2025+)
+- Remove `vw_weekly_active_students` (absorvida na view global)
+
+---
+
+## Passo 1 — Conectar ao Supabase no Power BI
+
+- [ ] **Power BI Desktop → Obter Dados → Banco de dados PostgreSQL**
+- [ ] Servidor: `db.SEUPROJETO.supabase.co` | Banco: `postgres`
+- [ ] Modo: **Import**
 - [ ] Credenciais: usuário `postgres` + senha do projeto
-- [ ] No **Navigator**, expandir `public` e selecionar **todas as views `vw_*`**
+- [ ] No Navigator, expandir `public` e selecionar as views:
+  - `vw_weekly_global_stats` ← **nova: serve os 3 gráficos do chefe**
+  - `vw_yearly_weekly_comparison` ← **atualizada: agora inclui 2024**
+  - `vw_student_weekly_activity`
+  - `vw_subscription_summary`
+  - `vw_subscription_engagement`
+  - `vw_subscription_weekly_trend_normalized`
+  - `vw_subscription_risk_distribution`
 - [ ] Clicar **Carregar**
 
-> Se DirectQuery ficar lento depois, troque por Import com refresh agendado a cada 1h.
+> `vw_weekly_active_students` foi removida — não selecionar. Tudo que ela fornecia agora está em `vw_weekly_global_stats[active_students]`.
 
 ---
 
-## Passo 1 — Ajustes no Power Query
+## Passo 2 — Power Query: tipos de dados
 
-- [ ] **Página Inicial → Transformar Dados** (abre Power Query Editor)
-- [x] Para cada view que tiver `week_start`: coluna → tipo **Data**
-- [x] Colunas `*_pct`: tipo **Número Decimal**
-- [x] Colunas `*_count` / `*_id`: tipo **Número Inteiro**
-- [ ] Coluna `active_subscription_names` (array PostgreSQL):
-  - Selecionar a coluna → **Transformar → Extrair Valores** → Delimitador: `, `
-  - Isso converte `{ESA,Marinha}` em texto `ESA, Marinha`
+- [ ] **Página Inicial → Transformar Dados**
+- [ ] `vw_weekly_global_stats[week_start]`: tipo **Data**
+- [ ] `vw_weekly_global_stats[total_lessons_completed]`: tipo **Número Inteiro**
+- [ ] `vw_weekly_global_stats[active_students]`: tipo **Número Inteiro**
+- [ ] `vw_weekly_global_stats[avg_lessons_per_active_student]`: tipo **Número Decimal**
+- [ ] `vw_weekly_global_stats[median_lessons_per_active_student]`: tipo **Número Decimal**
+- [ ] `vw_yearly_weekly_comparison[year]`: tipo **Número Inteiro**
+- [ ] `vw_yearly_weekly_comparison[iso_week]`: tipo **Número Inteiro**
+- [ ] `vw_yearly_weekly_comparison[lessons_completed]`: tipo **Número Inteiro**
+- [ ] Colunas `*_pct`: tipo **Número Decimal**
 - [ ] **Fechar e Aplicar**
 
 ---
 
-## Passo 2 — Criar Medidas DAX
+## Passo 3 — Medidas DAX
 
-Ir em **Modelagem → Nova Medida** e criar:
+### 3.1 — Tabela de Períodos (slicer de filtro)
+
+> **Modelagem → Nova Tabela**
 
 ```dax
--- Página 2: Cards de risco
-Alunos Risco Critico =
-COUNTROWS(FILTER(vw_at_risk_students, vw_at_risk_students[risk_level] = "critical"))
+Periodos =
+DATATABLE(
+    "Periodo",  STRING,
+    "Ordem",    INTEGER,
+    "DiasBack", INTEGER,
+    {
+        {"7 dias",    1,     7},
+        {"30 dias",   2,    30},
+        {"90 dias",   3,    90},
+        {"1 ano",     4,   365},
+        {"Tudo",      5, 99999}
+    }
+)
+```
 
-Alunos Risco Alto =
-COUNTROWS(FILTER(vw_at_risk_students, vw_at_risk_students[risk_level] = "high"))
+- [x] Tabela criada
+- [x] Ordenar coluna `Periodo` por `Ordem`: selecionar coluna `Periodo` → **Ferramentas de Coluna → Classificar por Coluna → Ordem**
 
-Alunos Risco Medio =
-COUNTROWS(FILTER(vw_at_risk_students, vw_at_risk_students[risk_level] = "medium"))
+### 3.2 — Medida base de período
 
--- Página 3: Taxa de engajamento
-Taxa Engajamento =
+> **Modelagem → Nova Medida**
+
+```dax
+Data Inicio Periodo =
+VAR DiasBack = SELECTEDVALUE(Periodos[DiasBack], 99999)
+RETURN IF(DiasBack = 99999, DATE(2000,1,1), TODAY() - DiasBack)
+```
+
+- [x] Medida criada
+
+### 3.3 — Medidas globais (gráficos do chefe)
+
+> Todas baseadas em `vw_weekly_global_stats`. Pasta de exibição: `_Globais`.
+
+> **⚠️ Por que usar `REMOVEFILTERS` aqui:** os gráficos de série temporal (Gráficos 1a, 2 e 3) têm hierarquia de datas no eixo X (Ano → Mês → Dia). Ao clicar em "2025" no gráfico para fazer drill-down, o Power BI aplica um cross-filter em todos os visuais da página restringindo `week_start` ao ano de 2025. Os KPI cards então calculam `week_start >= DataInicio` (ex: 8/abr/2026 se o slicer está em "7 dias") **E** `week_start em 2025` — interseção vazia → card em branco.
+>
+> A solução é `REMOVEFILTERS(vw_weekly_global_stats[week_start])` dentro do `CALCULATE`: isso descarta o cross-filter do gráfico sobre `week_start` e re-aplica **só** o filtro do slicer de período. O valor do slicer (`DataInicio`) já foi capturado como VAR antes do `CALCULATE`, então fica imune à remoção.
+
+```dax
+[Total Aulas Concluidas] =
+VAR DataInicio = [Data Inicio Periodo]
+RETURN
+CALCULATE(
+    SUM(vw_weekly_global_stats[total_lessons_completed]),
+    REMOVEFILTERS(vw_weekly_global_stats[week_start]),
+    vw_weekly_global_stats[week_start] >= DataInicio
+)
+```
+
+```dax
+[Alunos Ativos] =
+VAR DataInicio = [Data Inicio Periodo]
+RETURN
+CALCULATE(
+    SUM(vw_weekly_global_stats[active_students]),
+    REMOVEFILTERS(vw_weekly_global_stats[week_start]),
+    vw_weekly_global_stats[week_start] >= DataInicio
+)
+```
+
+```dax
+[Media Aulas por Aluno Ativo] =
+-- Média das médias semanais no período selecionado.
+-- Cada semana já tem sua própria avg calculada no banco.
+VAR DataInicio = [Data Inicio Periodo]
+RETURN
+CALCULATE(
+    AVERAGE(vw_weekly_global_stats[avg_lessons_per_active_student]),
+    REMOVEFILTERS(vw_weekly_global_stats[week_start]),
+    vw_weekly_global_stats[week_start] >= DataInicio
+)
+```
+
+```dax
+[Mediana Aulas por Aluno Ativo] =
+-- Mediana das medianas semanais no período selecionado.
+VAR DataInicio = [Data Inicio Periodo]
+RETURN
+CALCULATE(
+    AVERAGE(vw_weekly_global_stats[median_lessons_per_active_student]),
+    REMOVEFILTERS(vw_weekly_global_stats[week_start]),
+    vw_weekly_global_stats[week_start] >= DataInicio
+)
+```
+
+> **Nota sobre a mediana no DAX:** Power BI não tem função MEDIAN que respeite contexto de filtro para dados externos. A coluna `median_lessons_per_active_student` já vem calculada corretamente para cada semana pelo banco (PERCENTILE_CONT). A medida acima faz a média dessas medianas semanais — é uma aproximação razoável para mostrar no KPI card. Os gráficos de linha usam a coluna diretamente (sem DAX), o que é exato.
+
+- [x] Medidas criadas e organizadas na pasta `_Globais`
+
+### 3.4 — Medidas para Assinaturas (Passo 5)
+
+> As medidas de assinaturas são criadas diretamente no Passo 5.2. Não é necessário criar nada aqui antecipadamente.
+
+---
+
+## Passo 4 — Página 1: Visão Geral (Gráficos do Chefe)
+
+**Objetivo:** 4 gráficos de série temporal atendendo exatamente ao que foi pedido.
+
+- [ ] Renomear para `Visão Geral`
+
+### Layout da página
+
+```
+┌──────────────────────────────────────────────────────────────────────┐
+│  Visão Geral                        [7d][30d][90d][1a][Tudo]         │  ← HEADER
+├────────────────┬─────────────────┬──────────────────┬────────────────┤
+│  Total Aulas   │  Alunos Ativos  │  Média Aulas/    │  Mediana       │  ← KPIs
+│  Concluídas    │  (acum. período)│  Aluno Ativo/Sem │  Aulas/Aluno   │
+├──────────────────────────────────┬───────────────────────────────────┤
+│                                  │                                   │
+│  Gráfico 1a: Total Aulas/Semana  │  Gráfico 2: Alunos Ativos/Semana  │
+│  (barras, série completa 2023+)  │  (área, série completa 2023+)     │
+│                                  │                                   │
+├──────────────────────────────────┴───────────────────────────────────┤
+│                                                                      │
+│  Gráfico 1b: Aulas/Semana — 2024 vs 2025 vs 2026 (linhas sobrepostas)│
+│                                                                      │
+├──────────────────────────────────────────────────────────────────────┤
+│                                                                      │
+│  Gráfico 3: Média e Mediana de Aulas por Aluno Ativo/Semana          │
+│  (2 linhas sobrepostas)                                              │
+└──────────────────────────────────────────────────────────────────────┘
+```
+
+### 4.1 — Header + Slicer de Período
+
+- [ ] **Inserir → Caixa de Texto** → `Visão Geral` → Segoe UI 18pt Bold, cor `#1E293B`
+- [x] **Inserir → Segmentação de Dados** → campo `Periodos[Periodo]`
+  - Estilo: **Mosaico** | Cor selecionado: `#2563EB` (azul) + texto branco
+  - Posicionar canto superior direito
+
+> **Atenção:** o slicer de período afeta os KPI cards e os gráficos 1a, 2 e 3. O gráfico 1b (ano contra ano) **não** é afetado — ele sempre mostra o ano inteiro por design.
+
+### 4.2 — 4 KPI Cards
+
+> **Inserir → Cartão** (4x). Fonte 28pt, fundo branco, borda `#E2E8F0`, raio 8.
+
+| # | Rótulo | Medida | Formato |
+|---|--------|--------|---------|
+| 1 | Total Aulas Concluídas | `[Total Aulas Concluidas]` | Número inteiro |
+| 2 | Alunos Ativos (período) | `[Alunos Ativos]` | Número inteiro |
+| 3 | Média Aulas/Aluno/Sem | `[Media Aulas por Aluno Ativo]` | `0.0` |
+| 4 | Mediana Aulas/Aluno/Sem | `[Mediana Aulas por Aluno Ativo]` | `0.0` |
+
+> **Cards 3 e 4 juntos** permitem ver se a distribuição é simétrica (média ≈ mediana) ou se poucos alunos muito ativos puxam a média para cima (média > mediana).
+
+> **Alternativa ao REMOVEFILTERS nas medidas:** se preferir não alterar o DAX, é possível desativar o cross-filter dos gráficos nos cards via **Editar Interações**. Selecionar cada gráfico de série temporal (1a, 2, 3) → **Formato → Editar Interações** → clicar no ícone **"Nenhum"** (🚫) sobre cada KPI card. Com isso, clicar no gráfico não afeta os cards. A desvantagem é que os cards sempre mostram o total do período do slicer, mesmo quando o gráfico está com drill em um ano específico — o `REMOVEFILTERS` no DAX é a solução mais coerente.
+
+- [x] 4 cards criados
+
+### 4.3 — Gráfico 1a: Total de Aulas Concluídas por Semana (série completa)
+
+> **Inserir → Gráfico de Colunas Empilhadas**
+
+- [x] Eixo X: `vw_weekly_global_stats[week_start]`
+- [x] Valores Y: `vw_weekly_global_stats[total_lessons_completed]` (Soma) — cor `#2563EB`
+- [x] Título: **"Aulas Concluídas por Semana"**
+- [ ] Formato → Eixo X → Tipo: **Data Contínua** (para que semanas sem dados apareçam como lacunas e não somam)
+- [ ] Formato → Eixo Y → Título: **"Aulas Concluídas"**
+- [ ] Formato → Linhas de grade → cor `#F1F5F9`
+
+> O slicer de período filtra automaticamente pelo `[Total Aulas Concluidas]`, mas as barras no gráfico usam a coluna direta — crie uma interação: selecionar o slicer → **Formato → Editar Interações** → ativar filtro neste gráfico. Alternativamente, adicionar `[Data Inicio Periodo]` como filtro visual neste gráfico.
+
+- [ ] Gráfico criado
+
+### 4.4 — Gráfico 2: Alunos Ativos por Semana (série completa)
+
+**Definição:** alunos que concluíram ao menos 1 aula naquela semana (não login, não visita — conclusão de aula).
+
+> **Inserir → Gráfico de Área**
+
+- [x] Eixo X: `vw_weekly_global_stats[week_start]`
+- [x] Valores: `vw_weekly_global_stats[active_students]` (Soma) — cor `#10B981` (verde), opacidade 20%
+- [ ] Linha: cor `#10B981`, espessura 2.5px
+- [ ] Título: **"Alunos que Estudaram por Semana"**
+- [ ] Formato → Eixo X → Tipo: **Data Contínua**
+- [ ] Formato → Eixo Y → Título: **"Alunos Ativos"**
+
+- [ ] Gráfico criado
+
+### 4.5 — Gráfico 1b: Ano Contra Ano — 2024, 2025 e 2026
+
+**Objetivo:** comparar o mesmo período do ano entre anos diferentes. Eixo X = semana ISO (1 a 53), uma linha por ano.
+
+> **Inserir → Gráfico de Linhas**
+
+- [x] Eixo X: `vw_yearly_weekly_comparison[iso_week]`
+- [x] Valores: `vw_yearly_weekly_comparison[lessons_completed]` (Soma)
+- [x] Legenda: `vw_yearly_weekly_comparison[year]`
+- [ ] Formato → Linha 2024: cor `#94A3B8` (cinza claro), estilo **pontilhado**, espessura 1.5px
+- [ ] Formato → Linha 2025: cor `#60A5FA` (azul claro), estilo **tracejado**, espessura 2px
+- [ ] Formato → Linha 2026: cor `#2563EB` (azul escuro), sólida, espessura 3px
+- [ ] Formato → Marcadores: ativar apenas para 2026
+- [ ] Formato → Rótulos de dados: desativar (muitos pontos)
+- [ ] Formato → Legenda → posição: **Topo Direito**
+- [x] Título: **"Aulas/Semana — 2024 vs 2025 vs 2026"**
+- [x] Formato → Eixo X → Título: **"Semana do Ano (ISO)"**
+- [x] Formato → Eixo Y → Título: **"Aulas Concluídas"**
+
+> **Como ler:** o eixo X mostra a semana do ano (ex: semana 10 = início de março). Cada linha é um ano. Se a linha de 2026 está acima das de 2025 e 2024 na semana 10, 2026 está melhor nessa época do ano.
+>
+> **Atenção:** 2024 começa só na semana 42 (out/2023 é quando os dados começam — mas o `ISOYEAR` é 2023 nesse caso, portanto não aparece). Os primeiros dados de 2024 são de jan/2024 (semana 1). As semanas de 2026 só vão até a semana atual.
+
+- [ ] Gráfico criado
+
+### 4.6 — Gráfico 3: Média e Mediana de Aulas por Aluno Ativo
+
+**Objetivo:** dado que o aluno estudou naquela semana, quantas aulas ele fez? Média e mediana permitem ver a distribuição — se média >> mediana, tem outliers puxando para cima.
+
+> **Inserir → Gráfico de Linhas**
+
+- [x] Eixo X: `vw_weekly_global_stats[week_start]`
+- [x] Valores (2 séries):
+  - `vw_weekly_global_stats[avg_lessons_per_active_student]` (Média) — cor `#F59E0B` (laranja), espessura 2.5px
+  - `vw_weekly_global_stats[median_lessons_per_active_student]` (Média) — cor `#8B5CF6` (roxo), espessura 2px, estilo tracejado
+- [ ] Formato → Marcadores: desativar (muitas semanas)
+- [ ] Formato → Legenda → posição: **Topo Direito**, renomear séries:
+  - `avg_lessons_per_active_student` → **"Média"**
+  - `median_lessons_per_active_student` → **"Mediana"**
+- [ ] Título: **"Aulas por Aluno Ativo na Semana"**
+- [ ] Formato → Eixo X → Tipo: **Data Contínua**
+- [ ] Formato → Eixo Y → Título: **"Aulas / Aluno"**
+
+> **Por que média pode ser enganosa aqui:** se na semana 5 alguns alunos fizeram 40 aulas (revisão intensiva pré-prova), a média sobe muito. A mediana mostra o comportamento do aluno típico. Ambas juntas revelam isso.
+
+- [ ] Gráfico criado
+
+- [ ] **Página 1 concluída**
+
+---
+
+## Passo (antigo 3) — Tema Profissional (JSON)
+
+> Copiar o JSON abaixo → salvar como `tema_edtech.json` → **Power BI → Exibir → Temas → Procurar temas → selecionar o arquivo**
+
+```json
+{
+  "name": "EdTech Pro",
+  "dataColors": [
+    "#2563EB",
+    "#10B981",
+    "#F59E0B",
+    "#EF4444",
+    "#8B5CF6",
+    "#06B6D4",
+    "#F97316",
+    "#6B7280"
+  ],
+  "background": "#F4F6FA",
+  "foreground": "#1E293B",
+  "tableAccent": "#2563EB",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "fontFamily": [{"value": "Segoe UI"}],
+        "fontSize": [{"value": 10}],
+        "color": [{"solid": {"color": "#1E293B"}}]
+      }
+    },
+    "card": {
+      "*": {
+        "background": [{"solid": {"color": "#FFFFFF"}}],
+        "border": [{"show": true, "color": {"solid": {"color": "#E2E8F0"}}, "radius": 8}]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [{"solid": {"color": "#F4F6FA"}}]
+      }
+    }
+  }
+}
+```
+
+- [x] Arquivo `tema_edtech.json` criado na área de trabalho
+- [x] Tema importado no Power BI
+
+---
+
+
+---
+
+## Passo 5 — Página 2: Assinaturas (manter para depois)
+
+**Objetivo**: Comparar a saúde de cada plano de assinatura usando métricas **normalizadas por aluno** — elimina a distorção de planos com volumes muito diferentes.
+
+- [x] Criar nova página → Renomear para `Assinaturas`
+
+### Filosofia desta página
+
+O problema de mostrar dados brutos (total de aulas, total de horas) é que um plano com 200 alunos sempre "ganha" de um com 15. Isso não diz nada sobre a qualidade do engajamento. Por isso, **todos os gráficos principais usam métricas por aluno** (aulas/aluno, horas/aluno, % de risco). Os números absolutos ficam apenas nos KPIs de contexto.
+
+### Views utilizadas
+
+| View | O que fornece |
+|---|---|
+| `vw_subscription_summary` | Contagens por status (ativo, pendente, expirado) |
+| `vw_subscription_engagement` | Métricas normalizadas: avg_progress, avg_hours_per_student, risco |
+| `vw_subscription_weekly_trend_normalized` | Tendência semanal com lessons_per_student e hours_per_student |
+| `vw_subscription_risk_distribution` | % de alunos em cada faixa de risco por plano |
+
+### Layout da página
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│  Assinaturas                                                     │  ← HEADER
+├──────────────┬───────────────┬───────────────┬───────────────────┤
+│  Total Ativos │  % Engajados  │  Progresso    │  Em Risco         │  ← KPIs
+│               │               │  Médio        │  Crítico          │
+├──────────────────────────────┬───────────────────────────────────┤
+│                              │                                   │
+│  Aulas/Aluno por Semana      │  Distribuição de Risco            │
+│  (linhas por plano)          │  (barras empilhadas 100%)         │
+│                              │                                   │
+├──────────────────────────────┴───────────────────────────────────┤
+│                                                                  │
+│  Visão Geral por Plano (tabela com métricas normalizadas)        │
+│                                                                  │
+└──────────────────────────────────────────────────────────────────┘
+```
+
+### 5.1 — Header
+
+- [ ] **Inserir → Caixa de Texto** → digitar `Assinaturas` → fonte **Segoe UI 18pt Bold**, cor `#1E293B`
+- [ ] **Inserir → Formas → Retângulo** → cobrir faixa do header → cor `#FFFFFF`, sem borda → enviar para trás
+
+> Esta página não tem slicer de período — os dados são sempre o estado atual + tendência histórica completa.
+
+### 5.2 — 4 KPI Cards
+
+**Novas medidas necessárias** (Modelagem → Nova Medida):
+
+```dax
+[Total Assinantes Ativos] =
+SUM(vw_subscription_summary[active_count])
+```
+
+```dax
+[Pct Engajados] =
 DIVIDE(
     SUM(vw_subscription_summary[engaged_active_count]),
     SUM(vw_subscription_summary[active_count]),
@@ -68,401 +443,153 @@ DIVIDE(
 )
 ```
 
-Depois criar uma **coluna calculada** na tabela `vw_student_quiz_summary`:
-
 ```dax
-Faixa Acuracia =
-SWITCH(TRUE(),
-    vw_student_quiz_summary[overall_accuracy_pct] >= 90, "90-100%",
-    vw_student_quiz_summary[overall_accuracy_pct] >= 70, "70-89%",
-    vw_student_quiz_summary[overall_accuracy_pct] >= 50, "50-69%",
-    "Abaixo de 50%"
-)
+[Progresso Medio Geral] =
+-- avg_progress_pct está na escala 0–100 no banco (ex: 36 = 36%).
+-- Dividir por 100 converte para 0–1 (ex: 0.36), que é o que o Power BI
+-- espera para formatar corretamente como Percentual (0%).
+DIVIDE(AVERAGE(vw_subscription_engagement[avg_progress_pct]), 100)
 ```
 
-- [x] Medida `Alunos Risco Critico` criada
-- [x] Medida `Alunos Risco Alto` criada
-- [x] Medida `Alunos Risco Medio` criada
-- [x] Medida `Taxa Engajamento` criada
-- [ ] Coluna calculada `Faixa Acuracia` criada
-
----
-
-## Passo 3 — Configurar Tema
-
-- [ ] **Exibir → Temas → Personalizar tema atual**
-- [ ] Definir paleta de cores:
-  - Cor 1: `#1B2A4A` (azul escuro)
-  - Cor 2: `#2E86AB` (azul)
-  - Cor 3: `#28A745` (verde)
-  - Cor 4: `#FD7E14` (laranja)
-  - Cor 5: `#DC3545` (vermelho)
-- [ ] Aba **Texto**: Fonte = `Segoe UI`, Tamanho = 10
-- [ ] Fundo da página: `#F5F5F5`
-- [ ] Salvar tema
-
----
-
-## Passo 4 — Página 1: Visão Geral
-
-Objetivo: responder em 5 segundos — *"Como está a plataforma hoje?"*
-
-- [x] Renomear a página para `Visao Geral`
-
-### 4.1 — 4 Cartões KPI no topo
-
-> **Como fazer**: Inserir → Visualizações → **Cartão** (ícone com número grande). Arrastar o campo para "Campos". Formato: fonte 32pt, fundo branco, borda cinza arredondada.
-
-| # | Cartão | Campo | Agregação |
-|---|--------|-------|-----------|
-| 1 | Alunos Ativos | `vw_subscription_summary[active_count]` | Soma |
-| 2 | Aulas Concluídas | `vw_student_overview[total_lessons_completed]` | Soma |
-| 3 | Horas de Estudo | `vw_student_overview[estimated_study_hours]` | Soma |
-| 4 | Taxa de Conclusão | `vw_course_funnel[completion_rate_pct]` | Média |
-
-- [x] Cartão 1 criado
-- [x] Cartão 2 criado
-- [x] Cartão 3 criado (formatar como `0.0 h`)
-- [x] Cartão 4 criado (formatar como `0.0%`)
-
-### 4.2 — Gráfico de Área: Tendência Semanal
-
-> **Inserir → Gráfico de Colunas e Linhas Combinado**
-
-- [x] Eixo X: `vw_weekly_active_students[week_start]`
-- [x] Colunas Y: `vw_weekly_lessons_completed[completed_lessons]`
-- [x] Linha Y: `vw_weekly_active_students[active_students]`
-- [x] Título: "Atividade Semanal"
-
-> Nota: se não conseguir cruzar as duas views no mesmo visual, crie dois gráficos separados lado a lado.
-
-### 4.3 — Rosca de Assinaturas (esquerda)
-
-> **Inserir → Gráfico de Rosca**
-
-- [x] Legenda: `vw_subscription_summary[level_name]`
-- [x] Valores: `vw_subscription_summary[active_count]`
-- [x] Formato → Rótulos de dados → Ativar → Mostrar **categoria + valor + percentual**
-- [x] Título: "Alunos por Plano"
-
-### 4.4 — Barras Empilhadas: Funil dos Top 5 Cursos (direita)
-
-> **Inserir → Gráfico de Barras Empilhadas**
-
-- [ ] Eixo Y: `vw_course_funnel[course_name]`
-- [ ] Valores: `started_students`, `halfway_students`, `completed_students`
-- [ ] Filtros no visual → `students_with_any_activity` → **Top N → 5**
-- [ ] Cores: verde claro (Iniciaram) → verde médio (Metade) → verde escuro (Concluíram)
-- [ ] Título: "Funil dos Cursos Mais Ativos"
-
----
-
-## Passo 5 — Página 2: Alunos em Risco
-
-Objetivo: *"Quem precisa de atenção AGORA?"*
-
-- [ ] Criar nova página → renomear para `Alunos em Risco`
-
-### 5.1 — 3 Cards de Risco Coloridos
-
-> **Inserir → Cartão** para cada um. Formato → Fundo → cor sólida.
-
-| # | Cartão | Medida DAX | Cor de fundo |
-|---|--------|-----------|-------------|
-| 1 | Risco Crítico | `Alunos Risco Critico` | `#DC3545` (vermelho) |
-| 2 | Risco Alto | `Alunos Risco Alto` | `#FD7E14` (laranja) |
-| 3 | Risco Médio | `Alunos Risco Medio` | `#FFC107` (amarelo) |
-
-- [x] Card Crítico (vermelho) criado
-- [x] Card Alto (laranja) criado
-- [x] Card Médio (amarelo) criado
-
-### 5.2 — Barras: Distribuição por Nível de Risco
-
-> **Inserir → Gráfico de Barras Clusterizadas**
-
-- [ ] Eixo: `vw_at_risk_students[risk_level]`
-- [ ] Valor: Contagem de `user_id`
-- [ ] Formatar → Cores de dados → cor manual por barra:
-  - critical → `#DC3545`
-  - high → `#FD7E14`
-  - medium → `#FFC107`
-  - low → `#28A745`
-- [ ] Título: "Distribuição de Risco"
-
-### 5.3 — Scatter Plot: Inatividade vs. Progresso
-
-> **Inserir → Gráfico de Dispersão**
-
-- [x] Eixo X: `vw_at_risk_students[days_since_last_seen]`
-- [x] Eixo Y: `vw_at_risk_students[avg_progress_pct]`
-- [x] Tamanho: `vw_at_risk_students[risk_score]`
-- [x] Legenda (cor): `vw_at_risk_students[risk_level]`
-- [ ] Detalhes: `vw_at_risk_students[full_name]`
-- [ ] Formato → Dicas de ferramenta → adicionar `email`
-- [ ] Título: "Inatividade vs. Progresso (bolha = gravidade)"
-
-> **Como ler o gráfico:**
-> - Eixo X (horizontal) = dias sem logar → quanto mais à direita, mais inativo
-> - Eixo Y (vertical) = progresso médio nos cursos (0-100%) → quanto mais abaixo, menos progrediu
-> - Tamanho da bolha = risk_score (0-100) → bolha maior = risco maior
-> - **Canto inferior direito** = aluno parado E sem progresso = prioridade máxima
-
-### 5.4 — Top 10 Críticos: Cartão de Várias Linhas
-
-> **Inserir → Cartão de Várias Linhas** (Multi-row card)
-
-- [ ] Campos: `full_name`, `days_since_last_seen`, `risk_score`
-- [ ] Filtros no visual → `risk_level` = "critical"
-- [ ] Filtros no visual → Top N → **10** por `risk_score` (decrescente)
-- [ ] Título: "Top 10 Alunos Críticos"
-
----
-
-## Passo 6 — Página 3: Assinaturas
-
-Objetivo: *"Como cada plano está evoluindo semana a semana?"*
-
-View principal: **`vw_subscription_weekly_trend`**
-Colunas: `week_start`, `subscription_name`, `active_students`, `lessons_completed`, `estimated_hours`
-
-- [ ] Criar nova página → renomear para `Assinaturas`
-
-### 6.1 — 3 KPI Cards: totais da semana mais recente
-
-> **Como fazer**: Criar medidas DAX que filtram apenas a semana mais recente.
-
-Criar estas medidas em **Modelagem → Nova Medida**:
-
 ```dax
-Alunos Ativos Ultima Semana =
-VAR UltimaSemana = MAX(vw_subscription_weekly_trend[week_start])
-RETURN
-CALCULATE(
-    SUM(vw_subscription_weekly_trend[active_students]),
-    vw_subscription_weekly_trend[week_start] = UltimaSemana
-)
-
-Aulas Concluidas Ultima Semana =
-VAR UltimaSemana = MAX(vw_subscription_weekly_trend[week_start])
-RETURN
-CALCULATE(
-    SUM(vw_subscription_weekly_trend[lessons_completed]),
-    vw_subscription_weekly_trend[week_start] = UltimaSemana
-)
-
-Horas Estudo Ultima Semana =
-VAR UltimaSemana = MAX(vw_subscription_weekly_trend[week_start])
-RETURN
-CALCULATE(
-    SUM(vw_subscription_weekly_trend[estimated_hours]),
-    vw_subscription_weekly_trend[week_start] = UltimaSemana
-)
+[Alunos Risco Critico] =
+SUM(vw_subscription_engagement[students_critical])
 ```
 
-| # | Cartão | Medida |
-|---|--------|--------|
-| 1 | Alunos Ativos (última semana) | `Alunos Ativos Ultima Semana` |
-| 2 | Aulas Concluídas (última semana) | `Aulas Concluidas Ultima Semana` |
-| 3 | Horas de Estudo (última semana) | `Horas Estudo Ultima Semana` |
+| # | Rótulo | Medida | Formato |
+|---|--------|--------|---------|
+| 1 | Assinantes Ativos | `[Total Assinantes Ativos]` | Número inteiro |
+| 2 | % Engajados | `[Pct Engajados]` | Percentual `0%` |
+| 3 | Progresso Médio | `[Progresso Medio Geral]` | Percentual `0%` |
+| 4 | Em Risco Crítico | `[Alunos Risco Critico]` | Número inteiro, cor vermelha `#EF4444` |
 
-- [x] 3 medidas DAX criadas
-- [x] 3 cartões criados
+**Formatação:** mesma do Passo 4.2 (fundo branco, borda `#E2E8F0`, raio 8, fonte 28).
 
-### 6.2 — Linhas: Alunos Ativos por Plano ao Longo do Tempo
+- [x] 4 medidas criadas
+- [x] 4 cards criados
+
+### 5.3 — Gráfico Principal Esquerda: Aulas por Aluno por Semana (por Plano)
+
+**Objetivo:** comparar o ritmo de estudo entre planos de forma justa — normalizado pelo número de alunos ativos daquela semana.
 
 > **Inserir → Gráfico de Linhas**
 
-- [x] Eixo X: `vw_subscription_weekly_trend[week_start]`
-- [x] Valores: `active_students` (agregação: Soma)
+- [x] Eixo X: `vw_subscription_weekly_trend_normalized[week_start]`
+- [x] Valores: `lessons_per_student` (Média)
 - [x] Legenda: `subscription_name`
-- [ ] Título: "Alunos Ativos por Semana"
+- [x] Formato → Linhas → espessura **2.5px**
+- [x] Formato → Marcadores → desativar (muitas semanas)
+- [x] Título: **"Aulas/Aluno por Semana"**
+- [ ] Formato → Eixo Y → Título: **"Aulas por Aluno"**
 
-> Cada linha = 1 plano. Permite ver se um plano está crescendo ou caindo.
+> **Por que este gráfico é poderoso:** se o plano A tem 200 alunos e o plano B tem 15, o total de aulas é inútil para comparação. Mas "aulas por aluno" mostra qual plano tem os alunos mais ativos. Se uma linha cai, os alunos daquele plano estão desengajando — independente do tamanho.
 
-### 6.3 — Barras Empilhadas: Aulas Concluídas por Plano (Semanal)
+### 5.4 — Gráfico Principal Direita: Distribuição de Risco por Plano
 
-> **Inserir → Gráfico de Barras Empilhadas**
+**Objetivo:** ver de relance qual plano tem o maior percentual de alunos em risco — não o maior número (que seria sempre o plano maior).
 
-- [x] Eixo X: `vw_subscription_weekly_trend[week_start]`
-- [x] Valores: `lessons_completed` (agregação: Soma)
-- [x] Legenda: `subscription_name`
-- [ ] Título: "Aulas Concluídas por Plano"
+> **Inserir → Gráfico de Barras Empilhadas 100%** (horizontal)
 
-> Mostra o volume total de aulas e qual plano contribui mais a cada semana.
+- [x] Eixo Y: `vw_subscription_risk_distribution[level_name]`
+- [x] Valores (nesta ordem):
+  - `low_pct` → cor `#10B981` (verde)
+  - `medium_pct` → cor `#F59E0B` (amarelo)
+  - `high_pct` → cor `#F97316` (laranja)
+  - `critical_pct` → cor `#EF4444` (vermelho)
+- [x] Formato → Rótulos de dados → Ativar → mostrar `%`
+- [x] Formato → Legenda → Ativar, posição: topo
+- [x] Título: **"Distribuição de Risco por Plano"**
 
-### 6.4 — Combo Chart: Horas de Estudo + Alunos Ativos
+> **Leitura:** barra toda verde = plano saudável. Quanto mais vermelho/laranja, mais alunos daquele plano estão em risco de abandono. Como é percentual, planos de tamanhos diferentes são diretamente comparáveis.
 
-> **Inserir → Gráfico de Colunas e Linhas Combinado**
+### 5.5 — Gráfico Rodapé: Tabela Resumo por Plano
 
-- [x] Eixo X: `vw_subscription_weekly_trend[week_start]`
-- [x] Colunas Y: `estimated_hours` (Soma) — horas totais de estudo
-- [x] Linha Y (eixo secundário): `active_students` (Soma)
-- [x] Legenda: `subscription_name`
-- [ ] Título: "Horas de Estudo vs. Alunos Ativos"
+**Objetivo:** painel de controle compacto com as métricas-chave de cada plano lado a lado.
 
-> Permite ver se quando mais alunos estão ativos as horas de estudo acompanham (engajamento profundo) ou não (engajamento superficial).
+> **Inserir → Tabela** (visual de tabela, NÃO matriz)
+
+- [ ] Campos (nesta ordem):
+  | Coluna | Fonte | Formato |
+  |--------|-------|---------|
+  | Plano | `vw_subscription_engagement[level_name]` | Texto |
+  | Ativos | `vw_subscription_engagement[active_students]` | Inteiro |
+  | Progresso Médio | `vw_subscription_engagement[avg_progress_pct]` | Formato personalizado `0.0"%"` (NÃO usar formato Percentual nativo — a coluna já está em 0–100) |
+  | Horas/Aluno | `vw_subscription_engagement[avg_study_hours_per_student]` | `0.0 "h"` |
+  | Aulas Totais | `vw_subscription_engagement[total_lessons_completed]` | Inteiro |
+  | % Risco Crítico | `vw_subscription_risk_distribution[critical_pct]` | `0.0 "%"` |
+
+- [x] Formato → Cabeçalho → fundo `#1E293B`, texto branco, fonte 10pt bold
+- [x] Formato → Linhas alternadas → ativar, cor `#F8FAFC`
+- [x] Formato → Bordas → cor `#E2E8F0`
+- [x] Título: **"Resumo por Plano"**
+
+> **Formatação condicional na coluna "% Risco Crítico":**
+> Selecionar coluna → Formato → Cor de fundo → Regras:
+> - `>= 30` → fundo `#FEE2E2` (vermelho claro)
+> - `>= 15` → fundo `#FEF3C7` (amarelo claro)
+> - `< 15` → fundo `#DCFCE7` (verde claro)
+
+> **Dica:** se o chefe quiser drill-down para ver alunos específicos de um plano, pode clicar na linha da tabela. Ative a interação: selecionar tabela → **Formato → Editar Interações** → escolher "Filtrar" nos gráficos acima. Ao clicar em um plano na tabela, os gráficos de linha e risco vão isolar aquele plano.
+
+- [ ] Página 2 concluída
 
 ---
 
-## Passo 7 — Página 4: Conteúdo & Cursos
+## Passo 6 — Navegação e Ajustes Finais
 
-Objetivo: *"Qual conteúdo engaja? Onde os alunos travam?"*
+### 6.1 — Barra de Navegação
 
-- [ ] Criar nova página → renomear para `Conteudo e Cursos`
+- [ ] Ir para **qualquer página**
+- [ ] **Inserir → Botões → Navegador de Páginas**
+- [ ] Formato → estilo: fundo `#1E293B`, texto branco, selecionado: `#2563EB`
+- [ ] Posicionar na faixa do header, à esquerda do título
+- [ ] Copiar para a outra página (Ctrl+C → ir para página 2 → Ctrl+V)
 
-### 7.1 — Funil Interativo por Curso
+### 6.2 — Alinhamento
 
-**Preparação no Power Query** (fazer antes):
-- [ ] Power Query → selecionar `vw_course_funnel`
-- [ ] Selecionar colunas: `course_id`, `course_name`, `started_students`, `halfway_students`, `completed_students`
-- [ ] **Transformar → Colunas não dinâmicas (Unpivot)** nas 3 colunas de estudantes
-- [ ] Renomear `Atributo` → `Etapa` e `Valor` → `Quantidade`
-- [ ] Substituir valores de `Etapa`:
-  - `started_students` → `1. Iniciaram`
-  - `halfway_students` → `2. Chegaram na Metade`
-  - `completed_students` → `3. Concluíram`
-- [ ] Fechar e Aplicar
+- [ ] Em cada página: selecionar todos os cards (Ctrl+A) → **Formato → Alinhar → Alinhar parte superior**
+- [ ] Selecionar os gráficos → **Formato → Distribuir → Distribuir horizontalmente**
 
-**Visual**:
-- [ ] **Inserir → Funil**
-- [ ] Grupo: `Etapa`
-- [ ] Valores: `Quantidade`
-- [ ] Adicionar **Slicer** ao lado: `course_name` como Dropdown
-- [ ] Título: "Funil de Conclusão"
-
-### 7.2 — Treemap: Aulas por Conclusões
-
-> **Inserir → Treemap**
-
-- [ ] Grupo (hierarquia): `course_name` → `section_name` → `title`
-- [ ] Valores: `vw_lesson_stats[total_completions]`
-- [ ] Título: "Aulas Mais Concluídas (clique para drill-down)"
-
-### 7.3 — Top 10 Aulas Mais Bem Avaliadas (esquerda)
-
-> **Inserir → Gráfico de Barras Horizontais**
-
-- [ ] Eixo: `vw_lesson_ratings_summary[title]`
-- [ ] Valor: `avg_stars`
-- [ ] Filtro Top N → 10 por `avg_stars` (desc)
-- [ ] Filtro adicional: `total_ratings >= 5` (evitar notas com poucos votos)
-- [ ] Rótulos de dados: ativar, mostrar nota média
-- [ ] Título: "Top 10 Mais Bem Avaliadas"
-
-### 7.4 — Top 10 Mais Comentadas (direita)
-
-> **Inserir → Gráfico de Barras Horizontais**
-
-- [ ] Eixo: `vw_lesson_stats[title]`
-- [ ] Valor: `total_comments`
-- [ ] Filtro Top N → 10 por `total_comments` (desc)
-- [ ] Título: "Top 10 Mais Comentadas"
-
----
-
-## Passo 8 — Página 5: Velocidade & Quiz
-
-Objetivo: *"Os alunos estão acelerando ou desacelerando?"*
-
-- [ ] Criar nova página → renomear para `Velocidade e Quiz`
-
-### 8.1 — Combo Chart: Ritmo de Aprendizado
-
-> **Inserir → Gráfico de Colunas e Linhas Combinado**
-
-- [ ] Eixo X: `vw_learning_velocity[week_start]`
-- [ ] Colunas Y: `lessons_completed`
-- [ ] Linha Y (eixo secundário): `cumulative_lessons`
-- [ ] Título: "Ritmo de Aprendizado (barras = semana, linha = acumulado)"
-
-### 8.2 — Barras + Linha: Horas de Estudo
-
-> **Inserir → Gráfico de Colunas e Linhas Combinado**
-
-- [ ] Eixo X: `vw_weekly_study_hours[week_start]`
-- [ ] Colunas Y: `total_study_hours`
-- [ ] Linha Y (eixo secundário): `avg_hours_per_student`
-- [ ] Título: "Horas de Estudo por Semana"
-
-### 8.3 — Barras: Distribuição de Acurácia no Quiz
-
-> **Inserir → Gráfico de Barras Clusterizadas**
-
-- [ ] Eixo: coluna calculada `Faixa Acuracia` (criada no Passo 2)
-- [ ] Valor: Contagem de `user_id`
-- [ ] Cores manuais:
-  - `90-100%` → `#28A745` (verde)
-  - `70-89%` → `#7BC87E` (verde claro)
-  - `50-69%` → `#FD7E14` (laranja)
-  - `Abaixo de 50%` → `#DC3545` (vermelho)
-- [ ] Título: "Distribuição de Acurácia nos Quizzes"
-
----
-
-## Passo 9 — Slicers Globais e Navegação
-
-### 9.1 — Slicers em cada página
-
-Para cada uma das 5 páginas:
-- [ ] **Inserir → Segmentação de Dados (Slicer)** → `week_start` → Tipo: **Entre** (intervalo de datas)
-- [ ] **Inserir → Segmentação de Dados** → `subscription_name` → Tipo: **Dropdown**
-- [ ] Posicionar no topo da página
-
-### 9.2 — Sincronizar slicers entre páginas
+### 6.3 — Sincronizar Slicer de Período
 
 - [ ] **Exibir → Sincronizar Segmentações de Dados**
-- [ ] Para o slicer de data: marcar **todas as páginas** nas colunas Sincronizar e Visível
-- [ ] Para o slicer de plano: marcar **todas as páginas**
+- [ ] Para o slicer `Periodos[Periodo]`: marcar apenas **página 1** (Visão Geral) em Sincronizar + Visível
+- [ ] Página 2 (Assinaturas) NÃO tem slicer de período — dados são sempre estado atual
 
-### 9.3 — Botões de Navegação
-
-- [ ] Em **qualquer página**: **Inserir → Botões → Navegador de Páginas**
-- [ ] Posicionar no topo
-- [ ] Copiar e colar em todas as demais páginas (Ctrl+C / Ctrl+V)
-- [ ] Formatar: fundo escuro, texto claro
-
----
-
-## Passo 10 — Ajustes Finais e Publicação
-
-### 10.1 — Alinhamento e espaçamento
-
-- [ ] Selecionar múltiplos visuais (Ctrl+Click) → **Formato → Alinhar** (topo, esquerda)
-- [ ] Distribuir horizontalmente / verticalmente para espaçamento uniforme
-
-### 10.2 — Tooltips customizadas
-
-- [ ] Em cada visual principal: Formato → Dicas de ferramenta → adicionar campos extras
-- [ ] Ex: no Scatter da Pág. 2, tooltip deve mostrar `full_name` + `email` + `risk_score`
-
-### 10.3 — Testar cross-filtering
-
-- [ ] Clicar em uma barra → verificar que todos os outros visuais da página filtram junto
-- [ ] Se um visual não dever filtrar outro, clicar nele → **Formato → Interações → Editar interações** → desativar
-
-### 10.4 — Publicar
+### 6.4 — Publicação
 
 - [ ] **Arquivo → Publicar → Serviço do Power BI**
-- [ ] Escolher workspace
-- [ ] No Power BI Service: **Conjunto de Dados → Configurações → Atualização agendada → a cada 1h** (se Import)
+- [ ] No Power BI Service: Dataset → Configurações → **Atualização agendada → a cada 1h**
 
 ---
 
-## Referência Rápida: Views e suas Colunas
+## Referência Rápida: Medidas e suas Páginas
 
-| View | Colunas Principais | Usado em |
-|------|-------------------|----------|
-| `vw_subscription_summary` | `level_name`, `active_count`, `pending_count`, `expired_count`, `engaged_active_count` | Pág. 1, 3 |
-| `vw_student_overview` | `full_name`, `email`, `total_lessons_completed`, `estimated_study_hours`, `days_since_last_seen` | Pág. 1 |
-| `vw_course_funnel` | `course_name`, `started_students`, `halfway_students`, `completed_students`, `completion_rate_pct` | Pág. 1, 4 |
-| `vw_weekly_active_students` | `week_start`, `active_students` | Pág. 1 |
-| `vw_weekly_lessons_completed` | `week_start`, `completed_lessons` | Pág. 1 |
-| `vw_at_risk_students` | `full_name`, `email`, `risk_level`, `risk_score`, `days_since_last_seen` | Pág. 2 |
-| `vw_weekly_active_students_by_subscription` | `week_start`, `subscription_name`, `active_students` | Pág. 3 |
-| `vw_subscription_engagement` | `subscription_name`, `avg_progress_pct` | Pág. 3 |
-| `vw_lesson_stats` | `title`, `course_name`, `section_name`, `total_completions`, `total_comments` | Pág. 4 |
-| `vw_lesson_ratings_summary` | `title`, `avg_stars`, `total_ratings` | Pág. 4 |
-| `vw_learning_velocity` | `week_start`, `lessons_completed`, `cumulative_lessons` | Pág. 5 |
-| `vw_weekly_study_hours` | `week_start`, `total_study_hours`, `avg_hours_per_student` | Pág. 5 |
-| `vw_student_quiz_summary` | `user_id`, `overall_accuracy_pct` | Pág. 5 |
+| Medida | Páginas | Depende de |
+|--------|---------|-----------|
+| `[Data Inicio Periodo]` | 1 | Slicer `Periodos` |
+| `[Total Aulas Concluidas]` | 1 | `vw_weekly_global_stats` + período |
+| `[Alunos Ativos]` | 1 | `vw_weekly_global_stats` + período |
+| `[Media Aulas por Aluno Ativo]` | 1 | `vw_weekly_global_stats` + período |
+| `[Mediana Aulas por Aluno Ativo]` | 1 | `vw_weekly_global_stats` + período |
+| `[Total Assinantes Ativos]` | 2 | `vw_subscription_summary` |
+| `[Pct Engajados]` | 2 | `vw_subscription_summary` |
+| `[Progresso Medio Geral]` | 2 | `vw_subscription_engagement` |
+| `[Alunos Risco Critico]` | 2 | `vw_subscription_engagement` |
+
+## Referência Rápida: Views por Página
+
+| Página | Views usadas |
+|--------|-------------|
+| Visão Geral | `vw_weekly_global_stats`, `vw_yearly_weekly_comparison` |
+| Assinaturas | `vw_subscription_summary`, `vw_subscription_engagement`, `vw_subscription_weekly_trend_normalized`, `vw_subscription_risk_distribution` |
+
+## Mapeamento: Pedido do Chefe → Gráfico → View
+
+| Pedido | Gráfico | View | Colunas |
+|--------|---------|------|---------|
+| Total aulas/semana desde 2023 | 1a (barras) | `vw_weekly_global_stats` | `week_start`, `total_lessons_completed` |
+| Ano contra ano 2024/2025/2026 | 1b (linhas sobrepostas) | `vw_yearly_weekly_comparison` | `iso_week`, `lessons_completed`, `year` |
+| Alunos que estudaram/semana desde 2023 | 2 (área) | `vw_weekly_global_stats` | `week_start`, `active_students` |
+| Média aulas/aluno ativo/semana | 3 (linha laranja) | `vw_weekly_global_stats` | `week_start`, `avg_lessons_per_active_student` |
+| Mediana aulas/aluno ativo/semana | 3 (linha roxa tracejada) | `vw_weekly_global_stats` | `week_start`, `median_lessons_per_active_student` |
