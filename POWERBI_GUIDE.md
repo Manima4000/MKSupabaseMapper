@@ -476,7 +476,7 @@ SUM(vw_subscription_engagement[students_critical])
 
 - [x] Eixo X: `vw_subscription_weekly_trend_normalized[week_start]`
 - [x] Valores: `lessons_per_student` (Média)
-- [x] Legenda: `subscription_name`
+- [x] Legenda: `level_name` ← **migration 034 renomeou de `subscription_name` para `level_name`**
 - [x] Formato → Linhas → espessura **2.5px**
 - [x] Formato → Marcadores → desativar (muitas semanas)
 - [x] Título: **"Aulas/Aluno por Semana"**
@@ -529,9 +529,25 @@ SUM(vw_subscription_engagement[students_critical])
 > - `>= 15` → fundo `#FEF3C7` (amarelo claro)
 > - `< 15` → fundo `#DCFCE7` (verde claro)
 
-> **Dica:** se o chefe quiser drill-down para ver alunos específicos de um plano, pode clicar na linha da tabela. Ative a interação: selecionar tabela → **Formato → Editar Interações** → escolher "Filtrar" nos gráficos acima. Ao clicar em um plano na tabela, os gráficos de linha e risco vão isolar aquele plano.
+> **Como funciona o click:** ao clicar em um plano na tabela ou em uma barra do gráfico de risco, o cross-filter propaga via `membership_level_id` para o Gráfico 1, isolando apenas a linha daquele plano. Isso funciona porque todos os visuais desta página compartilham o mesmo campo chave (ver 5.6 abaixo).
 
-- [ ] Página 2 concluída
+### 5.6 — Relacionamentos no Modelo (Model View)
+
+> **Importante:** sem estes relacionamentos, clicar em uma assinatura causa um cross-filter incorreto que seleciona uma data aleatória no Gráfico 1 em vez de filtrar pelo plano.
+
+**Migration aplicada:** `034_normalize_subscription_view_column_names` — padronizou `vw_subscription_weekly_trend_normalized` para usar `level_name` e `membership_level_id` (igual às demais views).
+
+**Criar os relacionamentos em Model View (Modelagem → Gerenciar Relações):**
+
+| De (1) | Para (N) | Coluna |
+|--------|----------|--------|
+| `vw_subscription_engagement[membership_level_id]` | `vw_subscription_weekly_trend_normalized[membership_level_id]` | membership_level_id |
+| `vw_subscription_engagement[membership_level_id]` | `vw_subscription_risk_distribution[membership_level_id]` | membership_level_id |
+
+> `vw_subscription_engagement` é a tabela "mestre" — tem 1 linha por plano. As outras têm N linhas por plano (N semanas / N faixas de risco).
+
+- [x] Relacionamentos criados no Model View
+- [x] Página 2 concluída
 
 ---
 
