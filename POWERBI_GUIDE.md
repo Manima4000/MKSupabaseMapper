@@ -98,15 +98,14 @@ Antes de conectar o Power BI, a migration precisa estar aplicada no banco.
 ```dax
 Periodos =
 DATATABLE(
-    "Periodo",  STRING,
-    "Ordem",    INTEGER,
-    "DiasBack", INTEGER,
+    "Periodo",   STRING,
+    "Ordem",     INTEGER,
+    "PeriodoID", STRING,
     {
-        {"7 dias",    1,     7},
-        {"30 dias",   2,    30},
-        {"90 dias",   3,    90},
-        {"1 ano",     4,   365},
-        {"Tudo",      5, 99999}
+        {"Semana Atual", 1, "SEMANA"},
+        {"Mês Atual",    2, "MES"},
+        {"Ano Atual",    3, "ANO"},
+        {"Ano Passado",  4, "ANO_PASSADO"}
     }
 )
 ```
@@ -114,45 +113,73 @@ DATATABLE(
 - [x] Tabela criada
 - [x] Ordenar coluna `Periodo` por `Ordem`: selecionar coluna `Periodo` → **Ferramentas de Coluna → Classificar por Coluna → Ordem**
 
-### 3.2 — Medida base de período
+### 3.2 — Medidas base de período
 
 > **Modelagem → Nova Medida**
 
 ```dax
 Data Inicio Periodo =
-VAR DiasBack = SELECTEDVALUE(Periodos[DiasBack], 99999)
-RETURN IF(DiasBack = 99999, DATE(2000,1,1), TODAY() - DiasBack)
+VAR PID  = SELECTEDVALUE(Periodos[PeriodoID], "ANO")
+VAR Hoje = TODAY()
+RETURN
+SWITCH(
+    PID,
+    "SEMANA",      Hoje - WEEKDAY(Hoje, 2) + 1,        -- segunda-feira da semana atual
+    "MES",         DATE(YEAR(Hoje), MONTH(Hoje), 1),
+    "ANO",         DATE(YEAR(Hoje), 1, 1),
+    "ANO_PASSADO", DATE(YEAR(Hoje) - 1, 1, 1),
+    DATE(YEAR(Hoje), 1, 1)
+)
 ```
 
-- [x] Medida criada
+```dax
+Data Fim Periodo =
+-- Necessário para "Ano Passado" ter limite de fim. Para os demais, retorna hoje.
+VAR PID  = SELECTEDVALUE(Periodos[PeriodoID], "ANO")
+VAR Hoje = TODAY()
+RETURN
+IF(
+    PID = "ANO_PASSADO",
+    DATE(YEAR(Hoje), 1, 1) - 1,   -- 31/dez do ano passado
+    Hoje
+)
+```
 
-### 3.3 — Medidas globais (gráficos do chefe)
+- [x] Medidas criadas
+
+### 3.3 — Medidas globais (KPI cards e gráficos)
 
 > Todas baseadas em `vw_weekly_global_stats`. Pasta de exibição: `_Globais`.
 
-> **⚠️ Por que usar `REMOVEFILTERS` aqui:** os gráficos de série temporal (Gráficos 1a, 2 e 3) têm hierarquia de datas no eixo X (Ano → Mês → Dia). Ao clicar em "2025" no gráfico para fazer drill-down, o Power BI aplica um cross-filter em todos os visuais da página restringindo `week_start` ao ano de 2025. Os KPI cards então calculam `week_start >= DataInicio` (ex: 8/abr/2026 se o slicer está em "7 dias") **E** `week_start em 2025` — interseção vazia → card em branco.
+> **⚠️ Por que usar `REMOVEFILTERS` aqui:** os gráficos de série temporal (Gráficos 1a, 2 e 3) têm hierarquia de datas no eixo X (Ano → Mês → Dia). Ao clicar em "2025" no gráfico para fazer drill-down, o Power BI aplica um cross-filter em todos os visuais da página restringindo `week_start` ao ano de 2025. Os KPI cards então calculam `week_start >= DataInicio` (ex: 01/abr/2026 se o slicer está em "Mês Atual") **E** `week_start em 2025` — interseção vazia → card em branco.
 >
-> A solução é `REMOVEFILTERS(vw_weekly_global_stats[week_start])` dentro do `CALCULATE`: isso descarta o cross-filter do gráfico sobre `week_start` e re-aplica **só** o filtro do slicer de período. O valor do slicer (`DataInicio`) já foi capturado como VAR antes do `CALCULATE`, então fica imune à remoção.
+> A solução é `REMOVEFILTERS(vw_weekly_global_stats[week_start])` dentro do `CALCULATE`: isso descarta o cross-filter do gráfico sobre `week_start` e re-aplica **só** o filtro do slicer de período. Os valores de `DataInicio` e `DataFim` são capturados como VAR antes do `CALCULATE`, então ficam imunes à remoção.
+
+#### Medidas para os KPI Cards
 
 ```dax
 [Total Aulas Concluidas] =
 VAR DataInicio = [Data Inicio Periodo]
+VAR DataFim    = [Data Fim Periodo]
 RETURN
 CALCULATE(
     SUM(vw_weekly_global_stats[total_lessons_completed]),
     REMOVEFILTERS(vw_weekly_global_stats[week_start]),
-    vw_weekly_global_stats[week_start] >= DataInicio
+    vw_weekly_global_stats[week_start] >= DataInicio,
+    vw_weekly_global_stats[week_start] <= DataFim
 )
 ```
 
 ```dax
 [Alunos Ativos] =
 VAR DataInicio = [Data Inicio Periodo]
+VAR DataFim    = [Data Fim Periodo]
 RETURN
 CALCULATE(
     SUM(vw_weekly_global_stats[active_students]),
     REMOVEFILTERS(vw_weekly_global_stats[week_start]),
-    vw_weekly_global_stats[week_start] >= DataInicio
+    vw_weekly_global_stats[week_start] >= DataInicio,
+    vw_weekly_global_stats[week_start] <= DataFim
 )
 ```
 
@@ -161,11 +188,13 @@ CALCULATE(
 -- Média das médias semanais no período selecionado.
 -- Cada semana já tem sua própria avg calculada no banco.
 VAR DataInicio = [Data Inicio Periodo]
+VAR DataFim    = [Data Fim Periodo]
 RETURN
 CALCULATE(
     AVERAGE(vw_weekly_global_stats[avg_lessons_per_active_student]),
     REMOVEFILTERS(vw_weekly_global_stats[week_start]),
-    vw_weekly_global_stats[week_start] >= DataInicio
+    vw_weekly_global_stats[week_start] >= DataInicio,
+    vw_weekly_global_stats[week_start] <= DataFim
 )
 ```
 
@@ -173,15 +202,69 @@ CALCULATE(
 [Mediana Aulas por Aluno Ativo] =
 -- Mediana das medianas semanais no período selecionado.
 VAR DataInicio = [Data Inicio Periodo]
+VAR DataFim    = [Data Fim Periodo]
 RETURN
 CALCULATE(
     AVERAGE(vw_weekly_global_stats[median_lessons_per_active_student]),
     REMOVEFILTERS(vw_weekly_global_stats[week_start]),
-    vw_weekly_global_stats[week_start] >= DataInicio
+    vw_weekly_global_stats[week_start] >= DataInicio,
+    vw_weekly_global_stats[week_start] <= DataFim
 )
 ```
 
-> **Nota sobre a mediana no DAX:** Power BI não tem função MEDIAN que respeite contexto de filtro para dados externos. A coluna `median_lessons_per_active_student` já vem calculada corretamente para cada semana pelo banco (PERCENTILE_CONT). A medida acima faz a média dessas medianas semanais — é uma aproximação razoável para mostrar no KPI card. Os gráficos de linha usam a coluna diretamente (sem DAX), o que é exato.
+> **Nota sobre a mediana no DAX:** Power BI não tem função MEDIAN que respeite contexto de filtro para dados externos. A coluna `median_lessons_per_active_student` já vem calculada corretamente para cada semana pelo banco (PERCENTILE_CONT). A medida acima faz a média dessas medianas semanais — é uma aproximação razoável para mostrar no KPI card.
+
+#### Medidas filtradas para os Gráficos (1a, 2 e 3)
+
+> **Por que são necessárias:** a segmentação `Periodos` é uma tabela **desconectada** — ela não possui relacionamento com `vw_weekly_global_stats`. Isso significa que ao selecionar "Mês Atual", o slicer **não** filtra automaticamente as linhas dos gráficos. A solução é usar medidas que retornam `BLANK()` para semanas fora do período: o Power BI oculta automaticamente do gráfico qualquer ponto cujo valor seja `BLANK()`.
+
+```dax
+[Aulas Semana Filtrado] =
+VAR DataInicio = [Data Inicio Periodo]
+VAR DataFim    = [Data Fim Periodo]
+VAR ws         = MAX(vw_weekly_global_stats[week_start])
+RETURN
+IF(
+    ws >= DataInicio && ws <= DataFim,
+    SUM(vw_weekly_global_stats[total_lessons_completed])
+)
+```
+
+```dax
+[Alunos Ativos Semana Filtrado] =
+VAR DataInicio = [Data Inicio Periodo]
+VAR DataFim    = [Data Fim Periodo]
+VAR ws         = MAX(vw_weekly_global_stats[week_start])
+RETURN
+IF(
+    ws >= DataInicio && ws <= DataFim,
+    SUM(vw_weekly_global_stats[active_students])
+)
+```
+
+```dax
+[Media Semana Filtrado] =
+VAR DataInicio = [Data Inicio Periodo]
+VAR DataFim    = [Data Fim Periodo]
+VAR ws         = MAX(vw_weekly_global_stats[week_start])
+RETURN
+IF(
+    ws >= DataInicio && ws <= DataFim,
+    AVERAGE(vw_weekly_global_stats[avg_lessons_per_active_student])
+)
+```
+
+```dax
+[Mediana Semana Filtrado] =
+VAR DataInicio = [Data Inicio Periodo]
+VAR DataFim    = [Data Fim Periodo]
+VAR ws         = MAX(vw_weekly_global_stats[week_start])
+RETURN
+IF(
+    ws >= DataInicio && ws <= DataFim,
+    AVERAGE(vw_weekly_global_stats[median_lessons_per_active_student])
+)
+```
 
 - [x] Medidas criadas e organizadas na pasta `_Globais`
 
@@ -252,13 +335,13 @@ CALCULATE(
 > **Inserir → Gráfico de Colunas Empilhadas**
 
 - [x] Eixo X: `vw_weekly_global_stats[week_start]`
-- [x] Valores Y: `vw_weekly_global_stats[total_lessons_completed]` (Soma) — cor `#2563EB`
+- [x] Valores Y: **`[Aulas Semana Filtrado]`** (medida) — cor `#2563EB`
 - [x] Título: **"Aulas Concluídas por Semana"**
 - [ ] Formato → Eixo X → Tipo: **Data Contínua** (para que semanas sem dados apareçam como lacunas e não somam)
 - [ ] Formato → Eixo Y → Título: **"Aulas Concluídas"**
 - [ ] Formato → Linhas de grade → cor `#F1F5F9`
 
-> O slicer de período filtra automaticamente pelo `[Total Aulas Concluidas]`, mas as barras no gráfico usam a coluna direta — crie uma interação: selecionar o slicer → **Formato → Editar Interações** → ativar filtro neste gráfico. Alternativamente, adicionar `[Data Inicio Periodo]` como filtro visual neste gráfico.
+> **Por que usar a medida e não a coluna direta:** a tabela `Periodos` é desconectada (sem relacionamento). Ao usar `[Aulas Semana Filtrado]` no eixo Y, semanas fora do período retornam `BLANK()` e são automaticamente ocultadas do gráfico. Se usar a coluna direta, o gráfico ignora o slicer e exibe todas as semanas sempre.
 
 - [ ] Gráfico criado
 
@@ -269,7 +352,7 @@ CALCULATE(
 > **Inserir → Gráfico de Área**
 
 - [x] Eixo X: `vw_weekly_global_stats[week_start]`
-- [x] Valores: `vw_weekly_global_stats[active_students]` (Soma) — cor `#10B981` (verde), opacidade 20%
+- [x] Valores: **`[Alunos Ativos Semana Filtrado]`** (medida) — cor `#10B981` (verde), opacidade 20%
 - [ ] Linha: cor `#10B981`, espessura 2.5px
 - [ ] Título: **"Alunos que Estudaram por Semana"**
 - [ ] Formato → Eixo X → Tipo: **Data Contínua**
@@ -310,8 +393,8 @@ CALCULATE(
 
 - [x] Eixo X: `vw_weekly_global_stats[week_start]`
 - [x] Valores (2 séries):
-  - `vw_weekly_global_stats[avg_lessons_per_active_student]` (Média) — cor `#F59E0B` (laranja), espessura 2.5px
-  - `vw_weekly_global_stats[median_lessons_per_active_student]` (Média) — cor `#8B5CF6` (roxo), espessura 2px, estilo tracejado
+  - **`[Media Semana Filtrado]`** (medida) — cor `#F59E0B` (laranja), espessura 2.5px
+  - **`[Mediana Semana Filtrado]`** (medida) — cor `#8B5CF6` (roxo), espessura 2px, estilo tracejado
 - [ ] Formato → Marcadores: desativar (muitas semanas)
 - [ ] Formato → Legenda → posição: **Topo Direito**, renomear séries:
   - `avg_lessons_per_active_student` → **"Média"**
@@ -581,17 +664,22 @@ SUM(vw_subscription_engagement[students_critical])
 
 ## Referência Rápida: Medidas e suas Páginas
 
-| Medida | Páginas | Depende de |
-|--------|---------|-----------|
-| `[Data Inicio Periodo]` | 1 | Slicer `Periodos` |
-| `[Total Aulas Concluidas]` | 1 | `vw_weekly_global_stats` + período |
-| `[Alunos Ativos]` | 1 | `vw_weekly_global_stats` + período |
-| `[Media Aulas por Aluno Ativo]` | 1 | `vw_weekly_global_stats` + período |
-| `[Mediana Aulas por Aluno Ativo]` | 1 | `vw_weekly_global_stats` + período |
-| `[Total Assinantes Ativos]` | 2 | `vw_subscription_summary` |
-| `[Pct Engajados]` | 2 | `vw_subscription_summary` |
-| `[Progresso Medio Geral]` | 2 | `vw_subscription_engagement` |
-| `[Alunos Risco Critico]` | 2 | `vw_subscription_engagement` |
+| Medida | Uso | Depende de |
+|--------|-----|-----------|
+| `[Data Inicio Periodo]` | base | Slicer `Periodos[PeriodoID]` |
+| `[Data Fim Periodo]` | base | Slicer `Periodos[PeriodoID]` |
+| `[Total Aulas Concluidas]` | KPI card | `vw_weekly_global_stats` + período |
+| `[Alunos Ativos]` | KPI card | `vw_weekly_global_stats` + período |
+| `[Media Aulas por Aluno Ativo]` | KPI card | `vw_weekly_global_stats` + período |
+| `[Mediana Aulas por Aluno Ativo]` | KPI card | `vw_weekly_global_stats` + período |
+| `[Aulas Semana Filtrado]` | Gráfico 1a (Y) | `vw_weekly_global_stats` + período |
+| `[Alunos Ativos Semana Filtrado]` | Gráfico 2 (Y) | `vw_weekly_global_stats` + período |
+| `[Media Semana Filtrado]` | Gráfico 3 (Y linha 1) | `vw_weekly_global_stats` + período |
+| `[Mediana Semana Filtrado]` | Gráfico 3 (Y linha 2) | `vw_weekly_global_stats` + período |
+| `[Total Assinantes Ativos]` | KPI card pág. 2 | `vw_subscription_summary` |
+| `[Pct Engajados]` | KPI card pág. 2 | `vw_subscription_summary` |
+| `[Progresso Medio Geral]` | KPI card pág. 2 | `vw_subscription_engagement` |
+| `[Alunos Risco Critico]` | KPI card pág. 2 | `vw_subscription_engagement` |
 
 ## Referência Rápida: Views por Página
 
