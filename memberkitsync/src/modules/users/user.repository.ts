@@ -1,5 +1,6 @@
 import { supabase } from '../../config/supabase.js'
 import { SupabaseError } from '../../shared/errors.js'
+import { logger } from '../../shared/logger.js'
 import type { User, UserInsert } from './user.types.js'
 import type { UpsertUserInput } from './user.types.js'
 
@@ -25,8 +26,34 @@ export async function upsertUser(input: UpsertUserInput): Promise<User> {
     .select()
     .single()
 
-  if (error) throw new SupabaseError(`Falha ao upsert user mk_id=${input.mkId}`, error)
-  return data as User
+  if (!error) return data as User
+
+  // Unique violation (pg code 23505): e-mail já existe com outro mk_id.
+  // Atualiza o registro existente pelo e-mail para refletir o novo mk_id/dados do MK.
+  if (error.code === '23505') {
+    logger.warn({ mkId: input.mkId, email: input.email }, 'Conflito de e-mail em upsertUser — atualizando usuário existente pelo e-mail')
+    const { data: updated, error: updateError } = await supabase
+      .from('users')
+      .update({
+        mk_id: row.mk_id,
+        full_name: row.full_name,
+        phone: row.phone,
+        blocked: row.blocked,
+        unlimited: row.unlimited,
+        sign_in_count: row.sign_in_count,
+        current_sign_in_at: row.current_sign_in_at,
+        last_seen_at: row.last_seen_at,
+        metadata: row.metadata,
+      })
+      .eq('email', input.email)
+      .select()
+      .single()
+
+    if (!updateError && updated) return updated as User
+    throw new SupabaseError(`Falha ao upsert user mk_id=${input.mkId} (conflito e-mail)`, updateError ?? error)
+  }
+
+  throw new SupabaseError(`Falha ao upsert user mk_id=${input.mkId}`, error)
 }
 
 export async function getUserByMkId(mkId: number): Promise<User | null> {

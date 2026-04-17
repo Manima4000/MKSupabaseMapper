@@ -12,10 +12,18 @@ export async function upsertLessonProgress(input: UpsertLessonProgressInput): Pr
     ...(input.createdAt !== undefined && { created_at: input.createdAt }),
   }
 
-  // Upsert by (user_id, lesson_id) — keep the most recent event
+  // Upsert by (user_id, lesson_id) — keep the most recent event.
+  // Retry uma vez em caso de race condition concorrente (dois webhooks simultâneos).
   const { error } = await supabase
     .from('lesson_progress')
     .upsert(row, { onConflict: 'user_id,lesson_id' })
 
-  if (error) throw new SupabaseError(`Falha ao upsert lesson_progress user=${input.userId} lesson=${input.lessonId}`, error)
+  if (!error) return
+
+  await new Promise((r) => setTimeout(r, 50))
+  const { error: retryError } = await supabase
+    .from('lesson_progress')
+    .upsert(row, { onConflict: 'user_id,lesson_id' })
+
+  if (retryError) throw new SupabaseError(`Falha ao upsert lesson_progress user=${input.userId} lesson=${input.lessonId}`, retryError)
 }

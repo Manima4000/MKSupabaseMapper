@@ -178,7 +178,12 @@ export async function dispatchWebhook(envelope: MKWebhookEnvelope, forcedHash?: 
       await updateWebhookLog(logId, 'skipped', err.message)
       return
     }
-    const message = err instanceof Error ? err.message : String(err)
+    let message = err instanceof Error ? err.message : String(err)
+    if (err instanceof SupabaseError && err.details != null) {
+      const pg = err.details as Record<string, unknown>
+      const extra = [pg['code'], pg['details'], pg['hint']].filter(Boolean).join(' | ')
+      if (extra) message += ` [${extra}]`
+    }
     logger.error({ event, err }, 'Erro ao processar webhook')
     await updateWebhookLog(logId, 'failed', message)
     throw err

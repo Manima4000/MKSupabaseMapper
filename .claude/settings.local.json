@@ -2,11 +2,12 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:ajuda.memberkit.com.br)",
-      "WebSearch"
+      "WebSearch",
+      "mcp__supabase__execute_sql"
     ]
   },
+  "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": [
     "supabase"
-  ],
-  "enableAllProjectMcpServers": true
+  ]
 }
