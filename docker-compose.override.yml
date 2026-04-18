@@ -7,3 +7,11 @@ services:
       - "3000:3000"
     volumes:
       - ./memberkitsync/src:/app/src:ro
+
+  frontend:
+    build:
+      target: development
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./frontend/src:/app/src:ro

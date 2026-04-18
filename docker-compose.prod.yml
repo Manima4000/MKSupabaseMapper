@@ -8,6 +8,13 @@ services:
     networks:
       - nginx_network
 
+  frontend:
+    build:
+      target: production
+    restart: always
+    networks:
+      - nginx_network
+
 networks:
   nginx_network:
     external: true

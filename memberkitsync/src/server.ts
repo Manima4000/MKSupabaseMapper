@@ -4,6 +4,7 @@ import { logger } from './shared/logger.js'
 import { webhookRoutes } from './webhooks/webhook.routes.js'
 import { userRoutes } from './modules/users/user.routes.js'
 import { syncRoutes } from './sync/sync.routes.js'
+import { analyticsRoutes } from './modules/analytics/analytics.routes.js'
 
 async function bootstrap(): Promise<void> {
   const app = Fastify({
@@ -27,6 +28,7 @@ async function bootstrap(): Promise<void> {
   await app.register(webhookRoutes, { prefix: '/webhooks' })
   await app.register(userRoutes, { prefix: '/api' })
   await app.register(syncRoutes, { prefix: '/api' })
+  await app.register(analyticsRoutes, { prefix: '/api' })
 
   app.get('/health', async () => ({ status: 'ok', timestamp: new Date().toISOString() }))
 
