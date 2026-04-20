@@ -1,19 +1,17 @@
 import { Suspense } from 'react'
-import Sidebar from '@/components/dashboard/sidebar'
+import Navbar from '@/components/dashboard/navbar'
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex h-full bg-[var(--bg-base)]">
+    <div className="flex flex-col min-h-screen bg-[var(--bg-base)]">
       <Suspense>
-        <Sidebar />
+        <Navbar />
       </Suspense>
-      <div className="flex-1 flex flex-col overflow-hidden">
-        <main className="flex-1 overflow-y-auto">
-          <div className="max-w-[1400px] mx-auto p-8 lg:p-12 w-full">
-            {children}
-          </div>
-        </main>
-      </div>
+      <main className="flex-1 overflow-y-auto overflow-x-hidden">
+        <div className="max-w-[1400px] mx-auto p-6 lg:p-10 w-full animate-fade-up">
+          {children}
+        </div>
+      </main>
     </div>
   )
 }
