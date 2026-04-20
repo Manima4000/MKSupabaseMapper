@@ -7,7 +7,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       <Suspense>
         <Navbar />
       </Suspense>
-      <main className="flex-1 overflow-y-auto overflow-x-hidden">
+      <main className="flex-1 overflow-y-auto overflow-x-hidden pt-16">
         <div className="max-w-[1400px] mx-auto p-6 lg:p-10 w-full animate-fade-up">
           {children}
         </div>
