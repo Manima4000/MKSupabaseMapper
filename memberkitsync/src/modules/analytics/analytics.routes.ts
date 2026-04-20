@@ -1,5 +1,9 @@
 import type { FastifyInstance } from 'fastify'
 import { getOverview, getSubscriptionAnalytics, getExpiringSoon } from './analytics.repository.js'
+import { withCache } from '../../shared/cache.js'
+
+const ONE_HOUR = 60 * 60 * 1000
+const FIFTEEN_MIN = 15 * 60 * 1000
 
 // Default: últimas 12 semanas
 function defaultRange(): { from: string; to: string } {
@@ -25,7 +29,7 @@ export async function analyticsRoutes(fastify: FastifyInstance): Promise<void> {
       const from = request.query.from && isValidDate(request.query.from) ? request.query.from : defaults.from
       const to = request.query.to && isValidDate(request.query.to) ? request.query.to : defaults.to
 
-      const data = await getOverview(from, to)
+      const data = await withCache(`overview:${from}:${to}`, ONE_HOUR, () => getOverview(from, to))
       return reply.send(data)
     },
   )
@@ -39,7 +43,8 @@ export async function analyticsRoutes(fastify: FastifyInstance): Promise<void> {
       const to = request.query.to && isValidDate(request.query.to) ? request.query.to : defaults.to
       const membershipLevelId = request.query.membershipLevelId ? parseInt(request.query.membershipLevelId) : undefined
 
-      const data = await getSubscriptionAnalytics(from, to, membershipLevelId)
+      const cacheKey = `subscriptions:${from}:${to}:${membershipLevelId ?? 'all'}`
+      const data = await withCache(cacheKey, ONE_HOUR, () => getSubscriptionAnalytics(from, to, membershipLevelId))
       return reply.send(data)
     },
   )
@@ -49,7 +54,8 @@ export async function analyticsRoutes(fastify: FastifyInstance): Promise<void> {
     '/analytics/expiring',
     async (request, reply) => {
       const membershipLevelId = request.query.membershipLevelId ? parseInt(request.query.membershipLevelId) : undefined
-      const data = await getExpiringSoon(membershipLevelId)
+      const cacheKey = `expiring:${membershipLevelId ?? 'all'}`
+      const data = await withCache(cacheKey, FIFTEEN_MIN, () => getExpiringSoon(membershipLevelId))
       return reply.send(data)
     },
   )
