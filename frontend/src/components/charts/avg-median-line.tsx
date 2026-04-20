@@ -5,52 +5,45 @@ import type { FormattedWeeklyStat } from './active-students-area'
 
 interface Props { data: FormattedWeeklyStat[] }
 
-const C1 = 'var(--accent-gold)'
-const C2 = '#F59E0B' // Amber for secondary line
+const C1 = 'var(--accent-blue)'
+const C2 = '#F59E0B'
 
 export default function AvgMedianLine({ data }: Props) {
   return (
-    <div
-      className="instrument-card animate-fade-up animate-delay-6 flex flex-col"
-      style={{ 
-        '--card-accent': C1,
-        boxShadow: '0 4px 20px rgba(0,0,0,0.4)',
-        background: 'linear-gradient(145deg, var(--bg-surface) 0%, var(--bg-base) 100%)'
-      } as React.CSSProperties}
-    >
-      <div className="px-6 pt-5 pb-4 flex items-center justify-between border-b border-white/[0.03]">
-        <p className="data-label" style={{ color: 'var(--text-primary)' }}>RENDIMENTO INDIVIDUAL</p>
+    <div className="bg-[var(--bg-surface)] border border-[var(--border-subtle)] rounded-xl p-6 shadow-sm flex flex-col h-[400px] animate-fade-up">
+      <div className="mb-6 flex flex-col gap-3">
+        <p className="text-[10px] font-bold uppercase tracking-widest text-[var(--text-muted)]">Rendimento Individual</p>
         <div className="flex items-center gap-4">
           {[['Média', C1], ['Mediana', C2]].map(([n, c]) => (
             <div key={n} className="flex items-center gap-2">
-              <div className="w-5 h-[2px] rounded-full" style={{ background: c }} />
-              <span className="data-label" style={{ fontSize: '9px', color: c }}>{n}</span>
+              <div className="w-4 h-[3px] rounded-full" style={{ background: c }} />
+              <span className="text-[11px] font-bold text-[var(--text-secondary)]">{n}</span>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="chart-scope mx-4 my-4 p-4" style={{ background: 'rgba(0,0,0,0.2)', borderRadius: '8px', border: '1px solid var(--border-subtle)' }}>
-        <ResponsiveContainer width="100%" height={220}>
+      <div className="flex-1 w-full">
+        <ResponsiveContainer width="100%" height="100%">
           <LineChart data={data} margin={{ top: 10, right: 10, bottom: 0, left: -20 }}>
-            <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.03)" vertical={false} />
-            <XAxis dataKey="label" tick={{ fontSize: 10, fill: 'var(--text-secondary)', fontFamily: 'var(--font-mono)' }} tickLine={false} axisLine={false} />
-            <YAxis tick={{ fontSize: 10, fill: 'var(--text-secondary)', fontFamily: 'var(--font-mono)' }} tickLine={false} axisLine={false} />
+            <CartesianGrid strokeDasharray="3 3" stroke="var(--border-subtle)" vertical={false} />
+            <XAxis dataKey="label" tick={{ fontSize: 10, fill: 'var(--text-muted)', fontWeight: 600 }} tickLine={false} axisLine={false} />
+            <YAxis tick={{ fontSize: 10, fill: 'var(--text-muted)', fontWeight: 600 }} tickLine={false} axisLine={false} />
             <Tooltip
+              cursor={{ stroke: 'var(--border-subtle)', strokeWidth: 1, strokeDasharray: '3 3' }}
               contentStyle={{ 
                 fontSize: 12, 
-                borderRadius: 4, 
-                border: '1px solid var(--accent-gold-dim)', 
-                background: 'var(--bg-deep)', 
+                borderRadius: 8, 
+                border: '1px solid var(--border-subtle)', 
+                background: 'var(--bg-surface)', 
                 color: 'var(--text-primary)', 
-                fontFamily: 'var(--font-mono)',
-                boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.5)'
+                boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)'
               }}
               formatter={(v, name) => [Number(v).toFixed(1), String(name)]}
               labelFormatter={(l) => `Semana ${l}`}
             />
-            <Line type="monotone" dataKey="Média"   stroke={C1} strokeWidth={2.5} dot={false} activeDot={{ r: 4, strokeWidth: 0, fill: C1 }} />
-            <Line type="monotone" dataKey="Mediana" stroke={C2} strokeWidth={2} dot={false} strokeDasharray="6 3" activeDot={{ r: 4, strokeWidth: 0, fill: C2 }} />
+            <Line type="monotone" dataKey="media" name="Média" stroke={C1} strokeWidth={3} dot={false} activeDot={{ r: 5, strokeWidth: 0, fill: C1 }} />
+            <Line type="monotone" dataKey="mediana" name="Mediana" stroke={C2} strokeWidth={2} dot={false} strokeDasharray="6 3" activeDot={{ r: 4, strokeWidth: 0, fill: C2 }} />
           </LineChart>
         </ResponsiveContainer>
       </div>

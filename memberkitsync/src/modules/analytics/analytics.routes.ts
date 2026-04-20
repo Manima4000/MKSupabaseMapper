@@ -1,5 +1,5 @@
 import type { FastifyInstance } from 'fastify'
-import { getOverview, getSubscriptionAnalytics, getStudentRiskScores } from './analytics.repository.js'
+import { getOverview, getSubscriptionAnalytics, getExpiringSoon } from './analytics.repository.js'
 
 // Default: últimas 12 semanas
 function defaultRange(): { from: string; to: string } {
@@ -44,13 +44,13 @@ export async function analyticsRoutes(fastify: FastifyInstance): Promise<void> {
     },
   )
 
-  // GET /api/analytics/risk?membershipLevelId=123
+  // GET /api/analytics/expiring?membershipLevelId=123
   fastify.get<{ Querystring: { membershipLevelId?: string } }>(
-    '/analytics/risk', 
+    '/analytics/expiring',
     async (request, reply) => {
       const membershipLevelId = request.query.membershipLevelId ? parseInt(request.query.membershipLevelId) : undefined
-      const data = await getStudentRiskScores(membershipLevelId)
+      const data = await getExpiringSoon(membershipLevelId)
       return reply.send(data)
-    }
+    },
   )
 }

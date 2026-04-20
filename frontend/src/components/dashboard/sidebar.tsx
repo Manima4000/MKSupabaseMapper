@@ -2,14 +2,13 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { LayoutGrid, CreditCard, Users, ChevronRight } from 'lucide-react'
+import { LayoutGrid, CreditCard, ChevronRight } from 'lucide-react'
 import { clsx } from 'clsx'
 import { useState } from 'react'
 
 const NAV = [
   { href: '/dashboard/overview',      label: 'Visão Geral',  icon: LayoutGrid },
   { href: '/dashboard/subscriptions', label: 'Assinaturas',  icon: CreditCard },
-  { href: '/dashboard/students',      label: 'Radar de Risco', icon: Users },
 ]
 
 export default function Sidebar() {

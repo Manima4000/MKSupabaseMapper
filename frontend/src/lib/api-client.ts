@@ -1,4 +1,4 @@
-import type { OverviewResponse, SubscriptionPageResponse } from '@/lib/types'
+import type { OverviewResponse, SubscriptionPageResponse, ExpiringResponse } from '@/lib/types'
 
 const BACKEND_URL = process.env.BACKEND_URL
 const BACKEND_API_KEY = process.env.BACKEND_API_KEY
@@ -28,8 +28,7 @@ export function fetchSubscriptions(from: string, to: string, membershipLevelId?:
   return apiFetch<SubscriptionPageResponse>(url)
 }
 
-export function fetchRiskScores(membershipLevelId?: number): Promise<any[]> {
-  let url = '/api/analytics/risk'
-  if (membershipLevelId) url += `?membershipLevelId=${membershipLevelId}`
-  return apiFetch<any[]>(url)
+export function fetchExpiringSoon(membershipLevelId?: number): Promise<ExpiringResponse> {
+  const qs = membershipLevelId ? `?membershipLevelId=${membershipLevelId}` : ''
+  return apiFetch<ExpiringResponse>(`/api/analytics/expiring${qs}`)
 }

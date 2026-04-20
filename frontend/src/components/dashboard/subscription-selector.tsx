@@ -5,17 +5,20 @@ import { SubscriptionSummaryRow } from '@/lib/types'
 
 interface Props {
   subscriptions: SubscriptionSummaryRow[]
+  defaultId?: number
 }
 
-export default function SubscriptionSelector({ subscriptions }: Props) {
+export default function SubscriptionSelector({ subscriptions, defaultId }: Props) {
   const searchParams = useSearchParams()
   const pathname = usePathname()
   const { replace } = useRouter()
-  
+
   const currentId = searchParams.get('membershipLevelId')
 
-  // Se não houver ID na URL mas houver assinaturas, selecionamos a primeira por padrão
-  const effectiveId = currentId || (subscriptions.length > 0 ? String(subscriptions[0].membership_level_id) : '')
+  const fallback = defaultId
+    ? String(defaultId)
+    : subscriptions.length > 0 ? String(subscriptions[0].membership_level_id) : ''
+  const effectiveId = currentId || fallback
 
   const handleSelect = (id: string) => {
     const params = new URLSearchParams(searchParams)

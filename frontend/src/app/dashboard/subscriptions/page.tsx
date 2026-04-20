@@ -1,14 +1,15 @@
 import { Suspense } from 'react'
-import { fetchSubscriptions, fetchOverview, fetchRiskScores } from '@/lib/api-client'
+import { fetchSubscriptions, fetchOverview, fetchExpiringSoon } from '@/lib/api-client'
 import { resolveRange, type RangePreset } from '@/lib/date-range'
 import { format, parseISO } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 import KpiCard from '@/components/dashboard/kpi-card'
 import DateRangePicker from '@/components/dashboard/date-range-picker'
-import WeeklyEfficiencyLine from '@/components/charts/weekly-velocity-line'
-import WeeklyLessonsChart from '@/components/charts/weekly-lessons-bar'
+import CombinedWeeklyStatsChart from '@/components/charts/combined-weekly-stats'
+import SubscriptionRetentionArea from '@/components/charts/subscription-retention-area'
 import SubscriptionSelector from '@/components/dashboard/subscription-selector'
-import StudentRiskTable from '@/components/dashboard/student-risk-table'
+import ExpiringSubscriptionsBar from '@/components/charts/expiring-subscriptions-bar'
+import ExpiringStudentsTable from '@/components/dashboard/expiring-students-table'
 import type { SubscriptionWeeklyTrendRow } from '@/lib/types'
 
 interface Props {
@@ -22,9 +23,8 @@ interface Props {
 
 /**
  * Pivota os dados para os gráficos.
- * Como o foco é em 1 plano agora, o pivot é simplificado.
  */
-function pivotTrendData(data: SubscriptionWeeklyTrendRow[], key: 'lessons_completed' | 'lessons_per_student'): { chartData: any[], planName: string } {
+function pivotTrendData(data: SubscriptionWeeklyTrendRow[]): { chartData: any[], planName: string } {
   if (!data || data.length === 0) return { chartData: [], planName: '' }
 
   const sortedData = [...data].sort((a, b) => new Date(a.week_start).getTime() - new Date(b.week_start).getTime())
@@ -32,7 +32,9 @@ function pivotTrendData(data: SubscriptionWeeklyTrendRow[], key: 'lessons_comple
   
   const chartData = sortedData.map(row => ({
     label: format(parseISO(row.week_start), 'dd/MM', { locale: ptBR }),
-    [row.level_name]: parseFloat(String(row[key] || 0))
+    totalLessons: parseFloat(String(row.lessons_completed || 0)),
+    avgLessons: parseFloat(String(row.lessons_per_student || 0)),
+    activeStudents: parseInt(String(row.active_students || 0))
   }))
 
   return { chartData, planName }
@@ -61,15 +63,15 @@ export default async function SubscriptionsPage({ searchParams }: Props) {
   }
 
   // Fetch de dados focado no plano
-  const [data, riskScores] = await Promise.all([
+  const [data, expiringData] = await Promise.all([
     fetchSubscriptions(range.from, range.to, selectedPlanId),
-    fetchRiskScores(selectedPlanId)
+    fetchExpiringSoon(selectedPlanId)
   ])
 
   const { kpis, weeklyTrend } = data
+  const { summary: expiringSummary, students: expiringStudents } = expiringData
 
-  const { chartData: volumeData, planName: currentPlan } = pivotTrendData(weeklyTrend, 'lessons_completed')
-  const { chartData: efficiencyData } = pivotTrendData(weeklyTrend, 'lessons_per_student')
+  const { chartData: combinedData, planName: currentPlan } = pivotTrendData(weeklyTrend)
 
   return (
     <div className="space-y-10 max-w-[1400px]">
@@ -104,7 +106,7 @@ export default async function SubscriptionsPage({ searchParams }: Props) {
         <div className="flex flex-col gap-4 items-end">
           <div className="flex gap-4">
             <Suspense>
-              <SubscriptionSelector subscriptions={subscriptionsList} />
+              <SubscriptionSelector subscriptions={subscriptionsList} defaultId={selectedPlanId} />
             </Suspense>
             <div className="p-1 rounded-lg bg-white/[0.03] border border-white/[0.05]">
               <Suspense>
@@ -149,13 +151,17 @@ export default async function SubscriptionsPage({ searchParams }: Props) {
 
       {/* ── Performance ────────────────────────────────────────────────── */}
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-        <WeeklyLessonsChart data={volumeData} plans={[currentPlan]} />
-        <WeeklyEfficiencyLine data={efficiencyData} plans={[currentPlan]} />
+        <CombinedWeeklyStatsChart data={combinedData} />
+        <SubscriptionRetentionArea data={combinedData} />
       </div>
 
-      {/* ── Ação (Radar de Risco) ───────────────────────────────────────── */}
+      {/* ── Alerta de Renovação ─────────────────────────────────────────── */}
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <ExpiringSubscriptionsBar data={expiringSummary} />
+        <div className="lg:col-span-1" />
+      </div>
       <div className="animate-fade-up">
-        <StudentRiskTable data={riskScores} />
+        <ExpiringStudentsTable data={expiringStudents} />
       </div>
 
     </div>

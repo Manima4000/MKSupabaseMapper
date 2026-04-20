@@ -26,20 +26,6 @@ export interface SubscriptionSummaryRow {
   total_count?: number
 }
 
-export interface SubscriptionRiskRow {
-  membership_level_id: number
-  level_name: string
-  active_students: number
-  critical_count: number
-  high_count: number
-  medium_count: number
-  low_count: number
-  critical_pct: number
-  high_pct: number
-  medium_pct: number
-  low_pct: number
-}
-
 export interface SubscriptionWeeklyTrendRow {
   week_start: string
   membership_level_id: number
@@ -51,20 +37,6 @@ export interface SubscriptionWeeklyTrendRow {
   hours_per_student: number
 }
 
-export interface SubscriptionEngagementRow {
-  membership_level_id: number
-  level_name: string
-  active_students: number
-  avg_progress_pct: number
-  total_lessons_completed: number
-  total_study_hours: number
-  avg_study_hours_per_student: number
-  students_critical: number
-  students_high: number
-  students_medium: number
-  students_low: number
-}
-
 export interface OverviewKpis {
   totalLessons: number
   activeStudents: number
@@ -72,11 +44,18 @@ export interface OverviewKpis {
   medianLessonsPerStudent: number
 }
 
+export interface NewEnrollmentSummaryRow {
+  membership_level_id: number
+  level_name: string
+  new_enrollments: number
+}
+
 export interface OverviewResponse {
   kpis: OverviewKpis
   weekly: WeeklyGlobalStat[]
   yearlyComparison: YearlyComparisonPoint[]
   subscriptions: SubscriptionSummaryRow[]
+  newEnrollments: NewEnrollmentSummaryRow[]
 }
 
 export interface SubscriptionPageResponse {
@@ -86,7 +65,35 @@ export interface SubscriptionPageResponse {
     avgProgress: number
     avgHoursPerStudent: number
   }
-  riskDistribution: SubscriptionRiskRow[]
   weeklyTrend: SubscriptionWeeklyTrendRow[]
-  engagementTable: SubscriptionEngagementRow[]
+}
+
+export interface ExpiringSubscriptionSummaryRow {
+  membership_level_id: number
+  level_name: string
+  expira_7d: number
+  expira_8_14d: number
+  expira_15_30d: number
+  recuperavel_7d: number
+  recuperavel_8_14d: number
+  recuperavel_15_30d: number
+}
+
+export interface ExpiringStudentRow {
+  membership_id: number
+  user_id: number
+  nome: string
+  email: string
+  telefone: string | null
+  plano: string
+  expire_date: string
+  dias_restantes: number
+  last_activity_date: string | null
+  ultima_avaliacao: string | null
+  recuperavel: boolean
+}
+
+export interface ExpiringResponse {
+  summary: ExpiringSubscriptionSummaryRow[]
+  students: ExpiringStudentRow[]
 }

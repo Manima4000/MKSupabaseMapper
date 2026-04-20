@@ -5,7 +5,7 @@ import { fetchOverview } from '@/lib/api-client'
 import { resolveRange, type RangePreset } from '@/lib/date-range'
 import KpiCard from '@/components/dashboard/kpi-card'
 import DateRangePicker from '@/components/dashboard/date-range-picker'
-import SubscriptionBreakdownBar from '@/components/charts/subscription-breakdown-bar'
+import NewEnrollmentsBar from '@/components/charts/new-enrollments-bar'
 import ActiveStudentsArea from '@/components/charts/active-students-area'
 import YearlyComparisonLine from '@/components/charts/yearly-comparison-line'
 import AvgMedianLine from '@/components/charts/avg-median-line'
@@ -29,22 +29,22 @@ export default async function OverviewPage({ searchParams }: Props) {
   const range = resolveRange(from, to, preset)
 
   const data = await fetchOverview(range.from, range.to)
-  const { kpis, weekly, yearlyComparison, subscriptions } = data
+  const { kpis, weekly, yearlyComparison, newEnrollments } = data
 
   // Formatação de dados no Servidor (Thin-Client pattern)
   
-  // 1. Assinaturas (Truncate nome)
-  const formattedSubscriptions = subscriptions.map(d => ({
+  // 1. Novas Matrículas (Truncate nome)
+  const formattedNewEnrollments = newEnrollments.map(d => ({
     name: d.level_name.length > 20 ? d.level_name.slice(0, 18) + '…' : d.level_name,
-    active_count: d.active_count
+    new_enrollments: d.new_enrollments
   }))
 
   // 2. Gráficos Semanais (Parse da Data e mapeamento de chaves)
   const formattedWeekly = weekly.map(d => ({
     label: format(parseISO(d.week_start), 'dd/MM', { locale: ptBR }),
     active_students: d.active_students,
-    Média: d.avg_lessons_per_active_student,
-    Mediana: d.median_lessons_per_active_student
+    media: d.avg_lessons_per_active_student,
+    mediana: d.median_lessons_per_active_student
   }))
 
   // 3. Pivotação do Gráfico Anual
@@ -58,25 +58,35 @@ export default async function OverviewPage({ searchParams }: Props) {
   }
 
   return (
-    <div className="space-y-12">
+    <div className="space-y-12 max-w-[1400px]">
 
       {/* ── Header ─────────────────────────────────────────────────────── */}
-      <div className="flex flex-wrap items-end justify-between gap-8 border-b border-[var(--border-subtle)] pb-10">
+      <div className="flex flex-wrap items-end justify-between gap-8 border-b border-white/[0.05] pb-10">
         <div className="animate-fade-up">
           <div className="flex items-center gap-2 mb-3">
-            <div className="w-2 h-2 rounded-full bg-[var(--accent-blue)]" />
-            <p className="text-[10px] font-bold uppercase tracking-widest text-[var(--accent-blue)]">
-              Relatório Geral
+            <div className="w-2 h-2 rounded-full bg-[var(--accent-blue)]" style={{ boxShadow: '0 0 8px var(--accent-blue)' }} />
+            <p className="data-label" style={{ color: 'var(--accent-blue)' }}>
+              RELATÓRIO GERAL
             </p>
           </div>
-          <h1 className="text-4xl font-extrabold tracking-tight text-[var(--text-primary)]">
+          <h1
+            style={{
+              fontFamily: 'var(--font-display)',
+              fontSize: '2.5rem',
+              fontWeight: 800,
+              color: 'var(--text-primary)',
+              letterSpacing: '-0.03em',
+              lineHeight: 1,
+              textTransform: 'uppercase',
+            }}
+          >
             Visão Geral
           </h1>
-          <p className="text-sm font-medium text-[var(--text-secondary)] mt-4">
+          <p className="font-sans text-sm mt-4" style={{ color: 'var(--text-secondary)' }}>
             Análise detalhada de engajamento e métricas de retenção.
           </p>
         </div>
-        <div className="p-1 rounded-xl bg-white border border-[var(--border-subtle)] shadow-sm">
+        <div className="p-1 rounded-xl bg-white/[0.03] border border-white/[0.05] shadow-sm">
           <Suspense>
             <DateRangePicker currentPreset={range.preset as RangePreset} />
           </Suspense>
@@ -102,14 +112,14 @@ export default async function OverviewPage({ searchParams }: Props) {
         <KpiCard
           title="Frequência Semanal"
           value={kpis.avgLessonsPerStudent.toFixed(1)}
-          subtitle="Média de aulas por aluno"
+          subtitle="Média ponderada semanal (lições/aluno ativo)"
           accent="var(--accent-blue)"
           delay={0.15}
         />
         <KpiCard
           title="Consistência"
           value={kpis.medianLessonsPerStudent.toFixed(1)}
-          subtitle="Ponto central da distribuição"
+          subtitle="Mediana semanal de engajamento"
           accent="var(--accent-blue)"
           delay={0.20}
         />
@@ -118,15 +128,15 @@ export default async function OverviewPage({ searchParams }: Props) {
       {/* ── Separador ──────────────────────────────────────────────────── */}
       <div className="flex items-center gap-4">
         <div className="flex items-center gap-2 shrink-0">
-          <p className="text-[10px] font-bold uppercase tracking-widest text-[var(--text-muted)]">Indicadores de Campo</p>
+          <p className="data-label" style={{ color: 'var(--text-muted)' }}>INDICADORES DE CAMPO</p>
         </div>
-        <div className="flex-1 h-px bg-[var(--border-subtle)]" />
+        <div className="flex-1 h-px bg-white/[0.03]" />
       </div>
 
       {/* ── Charts ─────────────────────────────────────────────────────── */}
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         <div className="group transition-all duration-300">
-          <SubscriptionBreakdownBar data={formattedSubscriptions} />
+          <NewEnrollmentsBar data={formattedNewEnrollments} />
         </div>
         <div className="group transition-all duration-300">
           <ActiveStudentsArea data={formattedWeekly} />

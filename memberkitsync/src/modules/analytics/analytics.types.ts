@@ -29,20 +29,6 @@ export interface SubscriptionSummaryRow {
   total_count?: number
 }
 
-export interface SubscriptionRiskRow {
-  membership_level_id: number
-  level_name: string
-  active_students: number
-  critical_count: number
-  high_count: number
-  medium_count: number
-  low_count: number
-  critical_pct: number
-  high_pct: number
-  medium_pct: number
-  low_pct: number
-}
-
 export interface SubscriptionWeeklyTrendRow {
   week_start: string
   membership_level_id: number
@@ -68,17 +54,34 @@ export interface SubscriptionEngagementRow {
   students_low: number
 }
 
-export interface StudentRiskRow {
+export interface ExpiringSubscriptionSummaryRow {
+  membership_level_id: number
+  level_name: string
+  expira_7d: number
+  expira_8_14d: number
+  expira_15_30d: number
+  recuperavel_7d: number
+  recuperavel_8_14d: number
+  recuperavel_15_30d: number
+}
+
+export interface ExpiringStudentRow {
+  membership_id: number
   user_id: number
   nome: string
   email: string
   telefone: string | null
-  planos_ativos: string
-  last_lesson_completed_at: string | null
-  dias_sem_concluir_aula: number | null
-  media_aulas_por_semana: number
-  aulas_semana_atual: number
-  risk_level: 'Crítico' | 'Alto' | 'Médio' | 'Baixo'
+  plano: string
+  expire_date: string
+  dias_restantes: number
+  last_activity_date: string | null
+  ultima_avaliacao: string | null
+  recuperavel: boolean
+}
+
+export interface ExpiringResponse {
+  summary: ExpiringSubscriptionSummaryRow[]
+  students: ExpiringStudentRow[]
 }
 
 // ─── API response ─────────────────────────────────────────────────────────────
@@ -90,11 +93,18 @@ export interface OverviewKpis {
   medianLessonsPerStudent: number
 }
 
+export interface NewEnrollmentSummaryRow {
+  membership_level_id: number
+  level_name: string
+  new_enrollments: number
+}
+
 export interface OverviewResponse {
   kpis: OverviewKpis
   weekly: WeeklyGlobalStat[]
   yearlyComparison: YearlyComparisonPoint[]
   subscriptions: SubscriptionSummaryRow[]
+  newEnrollments: NewEnrollmentSummaryRow[]
 }
 
 export interface SubscriptionPageResponse {
@@ -104,7 +114,5 @@ export interface SubscriptionPageResponse {
     avgProgress: number
     avgHoursPerStudent: number
   }
-  riskDistribution: SubscriptionRiskRow[]
   weeklyTrend: SubscriptionWeeklyTrendRow[]
-  engagementTable: SubscriptionEngagementRow[]
 }

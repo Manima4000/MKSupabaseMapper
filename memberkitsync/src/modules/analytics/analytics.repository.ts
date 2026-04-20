@@ -7,28 +7,31 @@ import type {
   WeeklyGlobalStat,
   YearlyComparisonPoint,
   SubscriptionPageResponse,
-  SubscriptionRiskRow,
   SubscriptionWeeklyTrendRow,
   SubscriptionEngagementRow,
-  StudentRiskRow,
+  NewEnrollmentSummaryRow,
+  ExpiringSubscriptionSummaryRow,
+  ExpiringStudentRow,
+  ExpiringResponse,
 } from './analytics.types.js'
 
+
 export async function getOverview(from: string, to: string): Promise<OverviewResponse> {
-  const [weekly, yearlyComparison, activeStudents, subscriptions] = await Promise.all([
+  const [weekly, yearlyComparison, activeStudents, subscriptions, newEnrollments] = await Promise.all([
     getWeeklyGlobalStats(from, to),
     getYearlyComparison(),
     getActiveStudentsCount(from, to),
     getSubscriptionSummary(),
+    getNewEnrollmentsSummary(from, to),
   ])
 
   const kpis = computeKpis(weekly, activeStudents)
 
-  return { kpis, weekly, yearlyComparison, subscriptions }
+  return { kpis, weekly, yearlyComparison, subscriptions, newEnrollments }
 }
 
 export async function getSubscriptionAnalytics(from: string, to: string, membershipLevelId?: number): Promise<SubscriptionPageResponse> {
-  const [risk, trend, engagement] = await Promise.all([
-    getSubscriptionRiskDistribution(membershipLevelId),
+  const [trend, engagement] = await Promise.all([
     getSubscriptionWeeklyTrend(from, to, membershipLevelId),
     getSubscriptionEngagement(membershipLevelId),
   ])
@@ -54,52 +57,81 @@ export async function getSubscriptionAnalytics(from: string, to: string, members
       avgProgress: Math.round(avgProgress * 10) / 10,
       avgHoursPerStudent: Math.round(avgHours * 10) / 10
     },
-    riskDistribution: risk,
     weeklyTrend: trend,
-    engagementTable: engagement
   }
 }
 
-export async function getStudentRiskScores(membershipLevelId?: number): Promise<StudentRiskRow[]> {
+export async function getExpiringSoon(membershipLevelId?: number): Promise<ExpiringResponse> {
+  const now    = new Date()
+  const in30d  = new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000)
+
   let query = supabase
-    .from('mvw_student_risk_score')
-    .select('*')
-  
-  // Se membershipLevelId for informado, buscamos apenas usuários que possuem esse plano ativo.
-  if (membershipLevelId) {
-    const { data: userIdsData } = await supabase
-      .from('memberships')
-      .select('user_id')
-      .eq('status', 'active')
-      .eq('membership_level_id', membershipLevelId)
+    .from('mvw_expiring_subscriptions')
+    .select('membership_id, membership_level_id, level_name, user_id, nome, email, telefone, expire_date, last_activity_date, ultima_avaliacao')
+    .gte('expire_date', now.toISOString())
+    .lte('expire_date', in30d.toISOString())
+    .order('expire_date', { ascending: true })
+    .limit(500)
 
-    const userIds = (userIdsData ?? []).map(u => u.user_id)
-    if (userIds.length > 0) {
-      query = query.in('user_id', userIds)
-    } else {
-      return [] // Nenhum usuário no plano
-    }
-  }
-
-  const { data, error } = await query.order('risk_level', { ascending: true })
-
-  if (error) throw new SupabaseError('Falha ao buscar mvw_student_risk_score', error)
-  return (data ?? []) as StudentRiskRow[]
-}
-
-async function getSubscriptionRiskDistribution(membershipLevelId?: number): Promise<SubscriptionRiskRow[]> {
-  let query = supabase
-    .from('mvw_subscription_risk_distribution')
-    .select('*')
-  
   if (membershipLevelId) {
     query = query.eq('membership_level_id', membershipLevelId)
   }
 
-  const { data, error } = await query.order('level_name')
+  const { data, error } = await query
 
-  if (error) throw new SupabaseError('Falha ao buscar mvw_subscription_risk_distribution', error)
-  return (data ?? []) as SubscriptionRiskRow[]
+  if (error) throw new SupabaseError('Falha ao buscar mvw_expiring_subscriptions', error)
+
+  const rows = data ?? []
+
+  // Agregação de resumo por plano × bucket em TypeScript
+  const in7d   = new Date(now.getTime() +  7 * 24 * 60 * 60 * 1000)
+  const in14d  = new Date(now.getTime() + 14 * 24 * 60 * 60 * 1000)
+  const ago30d = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000)
+
+  const levelMap = new Map<number, ExpiringSubscriptionSummaryRow>()
+  for (const row of rows) {
+    const exp = new Date(row.expire_date)
+    const recuperavel = row.last_activity_date != null && new Date(row.last_activity_date) >= ago30d
+    const entry = levelMap.get(row.membership_level_id) ?? {
+      membership_level_id: row.membership_level_id,
+      level_name: row.level_name,
+      expira_7d: 0, expira_8_14d: 0, expira_15_30d: 0,
+      recuperavel_7d: 0, recuperavel_8_14d: 0, recuperavel_15_30d: 0,
+    }
+    if (exp <= in7d) {
+      entry.expira_7d++
+      if (recuperavel) entry.recuperavel_7d++
+    } else if (exp <= in14d) {
+      entry.expira_8_14d++
+      if (recuperavel) entry.recuperavel_8_14d++
+    } else {
+      entry.expira_15_30d++
+      if (recuperavel) entry.recuperavel_15_30d++
+    }
+    levelMap.set(row.membership_level_id, entry)
+  }
+
+  const summary = Array.from(levelMap.values())
+    .sort((a, b) => b.expira_7d - a.expira_7d || (b.expira_8_14d + b.expira_15_30d) - (a.expira_8_14d + a.expira_15_30d))
+
+  const students: ExpiringStudentRow[] = rows.map(row => {
+    const recuperavel = row.last_activity_date != null && new Date(row.last_activity_date) >= ago30d
+    return {
+      membership_id: row.membership_id,
+      user_id: row.user_id,
+      nome: row.nome,
+      email: row.email,
+      telefone: row.telefone,
+      plano: row.level_name,
+      expire_date: row.expire_date,
+      dias_restantes: Math.ceil((new Date(row.expire_date).getTime() - now.getTime()) / (1000 * 60 * 60 * 24)),
+      last_activity_date: row.last_activity_date ?? null,
+      ultima_avaliacao: row.ultima_avaliacao ?? null,
+      recuperavel,
+    }
+  })
+
+  return { summary, students }
 }
 
 async function getSubscriptionWeeklyTrend(from: string, to: string, membershipLevelId?: number): Promise<SubscriptionWeeklyTrendRow[]> {
@@ -176,6 +208,14 @@ async function getSubscriptionSummary(): Promise<SubscriptionSummaryRow[]> {
 
   if (error) throw new SupabaseError('Falha ao buscar mvw_subscription_summary', error)
   return (data ?? []) as SubscriptionSummaryRow[]
+}
+
+async function getNewEnrollmentsSummary(from: string, to: string): Promise<NewEnrollmentSummaryRow[]> {
+  const { data, error } = await supabase
+    .rpc('fn_new_enrollments_summary', { p_from: from, p_to: to })
+
+  if (error) throw new SupabaseError('Falha ao contar novas matrículas', error)
+  return (data ?? []) as NewEnrollmentSummaryRow[]
 }
 
 function computeKpis(weekly: WeeklyGlobalStat[], activeStudents: number): OverviewKpis {
