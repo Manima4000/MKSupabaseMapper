@@ -68,6 +68,19 @@ export interface SubscriptionEngagementRow {
   students_low: number
 }
 
+export interface StudentRiskRow {
+  user_id: number
+  nome: string
+  email: string
+  telefone: string | null
+  planos_ativos: string
+  last_lesson_completed_at: string | null
+  dias_sem_concluir_aula: number | null
+  media_aulas_por_semana: number
+  aulas_semana_atual: number
+  risk_level: 'Crítico' | 'Alto' | 'Médio' | 'Baixo'
+}
+
 // ─── API response ─────────────────────────────────────────────────────────────
 
 export interface OverviewKpis {

@@ -58,35 +58,25 @@ export default async function OverviewPage({ searchParams }: Props) {
   }
 
   return (
-    <div className="space-y-10 max-w-[1400px]">
+    <div className="space-y-12">
 
       {/* ── Header ─────────────────────────────────────────────────────── */}
-      <div className="flex flex-wrap items-end justify-between gap-6 border-b border-white/[0.05] pb-8">
+      <div className="flex flex-wrap items-end justify-between gap-8 border-b border-[var(--border-subtle)] pb-10">
         <div className="animate-fade-up">
-          <div className="flex items-center gap-2 mb-2">
-            <div className="w-1.5 h-1.5 rounded-full bg-accent-gold" />
-            <p className="data-label" style={{ color: 'var(--accent-gold)' }}>
-              CENTRAL DE INTELIGÊNCIA
+          <div className="flex items-center gap-2 mb-3">
+            <div className="w-2 h-2 rounded-full bg-[var(--accent-blue)]" />
+            <p className="text-[10px] font-bold uppercase tracking-widest text-[var(--accent-blue)]">
+              Relatório Geral
             </p>
           </div>
-          <h1
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: '2.5rem',
-              fontWeight: 800,
-              color: 'var(--text-primary)',
-              letterSpacing: '-0.03em',
-              lineHeight: 1,
-              textTransform: 'uppercase',
-            }}
-          >
+          <h1 className="text-4xl font-extrabold tracking-tight text-[var(--text-primary)]">
             Visão Geral
           </h1>
-          <p className="font-sans text-sm mt-3" style={{ color: 'var(--text-secondary)' }}>
-            Monitoramento tático de engajamento: <span className="font-mono text-xs">{range.from}</span> — <span className="font-mono text-xs">{range.to}</span>
+          <p className="text-sm font-medium text-[var(--text-secondary)] mt-4">
+            Análise detalhada de engajamento e métricas de retenção.
           </p>
         </div>
-        <div className="p-1 rounded-lg bg-white/[0.03] border border-white/[0.05]">
+        <div className="p-1 rounded-xl bg-white border border-[var(--border-subtle)] shadow-sm">
           <Suspense>
             <DateRangePicker currentPreset={range.preset as RangePreset} />
           </Suspense>
@@ -94,44 +84,43 @@ export default async function OverviewPage({ searchParams }: Props) {
       </div>
 
       {/* ── KPIs ───────────────────────────────────────────────────────── */}
-      <div className="grid grid-cols-2 gap-5 xl:grid-cols-4">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
         <KpiCard
-          title="CONJUNTO DE AULAS"
+          title="Atividades Concluídas"
           value={kpis.totalLessons}
-          subtitle="Conclusões táticas no período"
-          accent="var(--accent-gold)"
+          subtitle="Total acumulado no período"
+          accent="var(--accent-blue)"
           delay={0.05}
         />
         <KpiCard
-          title="EFETIVO ATIVO"
+          title="Alunos Ativos"
           value={kpis.activeStudents}
-          subtitle="Alunos únicos em operação"
-          accent="var(--accent-gold)"
+          subtitle="Usuários engajados na plataforma"
+          accent="var(--accent-blue)"
           delay={0.10}
         />
         <KpiCard
-          title="RITMO DE ESTUDO (MÉD)"
+          title="Frequência Semanal"
           value={kpis.avgLessonsPerStudent.toFixed(1)}
-          subtitle="Aulas por aluno / semana"
-          accent="var(--accent-gold)"
+          subtitle="Média de aulas por aluno"
+          accent="var(--accent-blue)"
           delay={0.15}
         />
         <KpiCard
-          title="CONSTÂNCIA (MED)"
+          title="Consistência"
           value={kpis.medianLessonsPerStudent.toFixed(1)}
-          subtitle="Ponto central da tropa"
-          accent="var(--accent-gold)"
+          subtitle="Ponto central da distribuição"
+          accent="var(--accent-blue)"
           delay={0.20}
         />
       </div>
 
       {/* ── Separador ──────────────────────────────────────────────────── */}
-      <div className="flex items-center gap-6">
-        <div className="flex items-center gap-3 shrink-0">
-          <div className="w-8 h-[1px] bg-accent-gold" />
-          <p className="data-label" style={{ color: 'var(--text-primary)' }}>Relatórios de Campo</p>
+      <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 shrink-0">
+          <p className="text-[10px] font-bold uppercase tracking-widest text-[var(--text-muted)]">Indicadores de Campo</p>
         </div>
-        <div className="flex-1 h-px" style={{ background: 'var(--border-subtle)', opacity: 0.3 }} />
+        <div className="flex-1 h-px bg-[var(--border-subtle)]" />
       </div>
 
       {/* ── Charts ─────────────────────────────────────────────────────── */}

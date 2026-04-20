@@ -2,34 +2,31 @@
 
 /* ─── Design tokens (Tropa do Arcanjo Military Identity) ─────────────────────── */
 :root {
-  /* Colors */
-  --bg-base:    #0A0B0D;   /* Dark background */
-  --bg-surface: #121417;   /* Card surface */
-  --bg-deep:    #050607;   /* Deepest background */
-  --bg-nav:     #0D0F12;   /* Sidebar background */
+  /* Core Colors - SaaS Modern Palette */
+  --bg-base:    #F8FAFC;   /* Slate 50 - Main background */
+  --bg-surface: #FFFFFF;   /* White - Card/Surface background */
+  --bg-deep:    #F1F5F9;   /* Slate 100 - Deepest background for charts */
+  --bg-nav:     #FFFFFF;   /* White - Sidebar background */
 
-  /* Gold Palette (The 'Elite' Accent) */
-  --accent-gold:     #D4AF37;
-  --accent-gold-dim: #996515;
-  --accent-gold-glow: rgba(212, 175, 55, 0.3);
+  /* Functional Accents (Modern Blue) */
+  --accent-blue:      #3B82F6;
+  --accent-blue-dim:  #2563EB;
+  --accent-blue-glow: rgba(59, 130, 246, 0.1);
 
-  /* Military Borders & Accents */
-  --border-subtle: #1F2228;
-  --border-strong: #2D323A;
-  --border-gold:   #D4AF37;
+  /* Clean Borders & Accents */
+  --border-subtle: #E2E8F0; /* Slate 200 */
+  --border-strong: #CBD5E1; /* Slate 300 */
+  --border-accent: #3B82F6;
 
   /* Text & Contrast */
-  --text-primary:   #FFFFFF;
-  --text-secondary: #94A3B8;
-  --text-muted:     #64748B;
-  --text-inverse:   #0A0B0D;
+  --text-primary:   #0F172A; /* Slate 900 - Titles */
+  --text-secondary: #475569; /* Slate 600 - Secondary text */
+  --text-muted:     #64748B; /* Slate 500 - Supportive text */
+  --text-inverse:   #FFFFFF;
 
   /* Standard Status Colors */
-  --accent-blue:    #3B82F6;
-  --accent-cyan:    #06B6D4;
   --accent-emerald: #10B981;
   --accent-amber:   #F59E0B;
-  --accent-purple:  #8B5CF6;
   --accent-red:     #EF4444;
 
   /* Typography */
@@ -43,9 +40,6 @@ html, body { height: 100%; }
 
 body {
   background-color: var(--bg-base);
-  /* Dark military mesh pattern */
-  background-image: radial-gradient(circle, #1A1D23 1px, transparent 1px);
-  background-size: 24px 24px;
   color: var(--text-primary);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
@@ -54,8 +48,8 @@ body {
 /* ─── Scrollbar ──────────────────────────────────────────────────────────────── */
 ::-webkit-scrollbar        { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track  { background: transparent; }
-::-webkit-scrollbar-thumb  { background: #2D323A; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--accent-gold-dim); }
+::-webkit-scrollbar-thumb  { background: #E2E8F0; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #CBD5E1; }
 
 /* ─── Animations ─────────────────────────────────────────────────────────────── */
 @keyframes fade-up {

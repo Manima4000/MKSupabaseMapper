@@ -6,6 +6,11 @@ import type {
   SubscriptionSummaryRow,
   WeeklyGlobalStat,
   YearlyComparisonPoint,
+  SubscriptionPageResponse,
+  SubscriptionRiskRow,
+  SubscriptionWeeklyTrendRow,
+  SubscriptionEngagementRow,
+  StudentRiskRow,
 } from './analytics.types.js'
 
 export async function getOverview(from: string, to: string): Promise<OverviewResponse> {
@@ -19,6 +24,114 @@ export async function getOverview(from: string, to: string): Promise<OverviewRes
   const kpis = computeKpis(weekly, activeStudents)
 
   return { kpis, weekly, yearlyComparison, subscriptions }
+}
+
+export async function getSubscriptionAnalytics(from: string, to: string, membershipLevelId?: number): Promise<SubscriptionPageResponse> {
+  const [risk, trend, engagement] = await Promise.all([
+    getSubscriptionRiskDistribution(membershipLevelId),
+    getSubscriptionWeeklyTrend(from, to, membershipLevelId),
+    getSubscriptionEngagement(membershipLevelId),
+  ])
+
+  // Calcular KPIs específicos (ou globais se membershipLevelId for undefined)
+  const filteredEngagement = membershipLevelId 
+    ? engagement.filter(e => e.membership_level_id === membershipLevelId)
+    : engagement
+
+  const totalActive = filteredEngagement.reduce((sum, e) => sum + (e.active_students ?? 0), 0)
+  const criticalRisk = filteredEngagement.reduce((sum, e) => sum + (e.students_critical ?? 0), 0)
+  const avgProgress = totalActive > 0 
+    ? filteredEngagement.reduce((sum, e) => sum + (e.avg_progress_pct ?? 0) * (e.active_students ?? 0), 0) / totalActive 
+    : 0
+  const avgHours = totalActive > 0
+    ? filteredEngagement.reduce((sum, e) => sum + (e.total_study_hours ?? 0), 0) / totalActive
+    : 0
+
+  return {
+    kpis: {
+      totalActive,
+      criticalRisk,
+      avgProgress: Math.round(avgProgress * 10) / 10,
+      avgHoursPerStudent: Math.round(avgHours * 10) / 10
+    },
+    riskDistribution: risk,
+    weeklyTrend: trend,
+    engagementTable: engagement
+  }
+}
+
+export async function getStudentRiskScores(membershipLevelId?: number): Promise<StudentRiskRow[]> {
+  let query = supabase
+    .from('mvw_student_risk_score')
+    .select('*')
+  
+  // Se membershipLevelId for informado, buscamos apenas usuários que possuem esse plano ativo.
+  if (membershipLevelId) {
+    const { data: userIdsData } = await supabase
+      .from('memberships')
+      .select('user_id')
+      .eq('status', 'active')
+      .eq('membership_level_id', membershipLevelId)
+
+    const userIds = (userIdsData ?? []).map(u => u.user_id)
+    if (userIds.length > 0) {
+      query = query.in('user_id', userIds)
+    } else {
+      return [] // Nenhum usuário no plano
+    }
+  }
+
+  const { data, error } = await query.order('risk_level', { ascending: true })
+
+  if (error) throw new SupabaseError('Falha ao buscar mvw_student_risk_score', error)
+  return (data ?? []) as StudentRiskRow[]
+}
+
+async function getSubscriptionRiskDistribution(membershipLevelId?: number): Promise<SubscriptionRiskRow[]> {
+  let query = supabase
+    .from('mvw_subscription_risk_distribution')
+    .select('*')
+  
+  if (membershipLevelId) {
+    query = query.eq('membership_level_id', membershipLevelId)
+  }
+
+  const { data, error } = await query.order('level_name')
+
+  if (error) throw new SupabaseError('Falha ao buscar mvw_subscription_risk_distribution', error)
+  return (data ?? []) as SubscriptionRiskRow[]
+}
+
+async function getSubscriptionWeeklyTrend(from: string, to: string, membershipLevelId?: number): Promise<SubscriptionWeeklyTrendRow[]> {
+  let query = supabase
+    .from('mvw_subscription_weekly_trend_normalized')
+    .select('*')
+    .gte('week_start', from)
+    .lte('week_start', to)
+  
+  if (membershipLevelId) {
+    query = query.eq('membership_level_id', membershipLevelId)
+  }
+
+  const { data, error } = await query.order('week_start', { ascending: true })
+
+  if (error) throw new SupabaseError('Falha ao buscar mvw_subscription_weekly_trend_normalized', error)
+  return (data ?? []) as SubscriptionWeeklyTrendRow[]
+}
+
+async function getSubscriptionEngagement(membershipLevelId?: number): Promise<SubscriptionEngagementRow[]> {
+  let query = supabase
+    .from('mvw_subscription_engagement')
+    .select('*')
+  
+  if (membershipLevelId) {
+    query = query.eq('membership_level_id', membershipLevelId)
+  }
+
+  const { data, error } = await query.order('level_name')
+
+  if (error) throw new SupabaseError('Falha ao buscar mvw_subscription_engagement', error)
+  return (data ?? []) as SubscriptionEngagementRow[]
 }
 
 async function getWeeklyGlobalStats(from: string, to: string): Promise<WeeklyGlobalStat[]> {
@@ -57,7 +170,7 @@ async function getActiveStudentsCount(from: string, to: string): Promise<number>
 async function getSubscriptionSummary(): Promise<SubscriptionSummaryRow[]> {
   const { data, error } = await supabase
     .from('mvw_subscription_summary')
-    .select('level_name, active_count')
+    .select('membership_level_id, level_name, active_count')
     .gt('active_count', 0) // Remove planos sem nenhum aluno ativo para limpar o gráfico
     .order('active_count', { ascending: false }) // Os planos maiores primeiro (hierarquia militar)
 
