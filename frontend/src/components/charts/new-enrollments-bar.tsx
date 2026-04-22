@@ -11,7 +11,7 @@ interface Props { data: FormattedNewEnrollmentRow[] }
 
 export default function NewEnrollmentsBar({ data }: Props) {
   return (
-    <div className="bg-(--bg-surface) border border-(--border-subtle) rounded-xl p-6 shadow-sm flex flex-col h-100 animate-fade-up">
+    <div className="bg-(--bg-surface) border border-(--border-subtle) rounded-xl p-6 shadow-sm flex flex-col h-[400px] animate-fade-up">
       <div className="mb-6 flex flex-col gap-1">
         <p className="text-[10px] font-bold uppercase tracking-widest text-(--text-muted)">Novas Matrículas</p>
         <div className="flex items-center gap-2 mt-1">

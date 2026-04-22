@@ -25,4 +25,4 @@ services:
 
 networks:
   internal_supabase:
-    external: true
+    driver: bridge
