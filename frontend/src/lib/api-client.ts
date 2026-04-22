@@ -1,20 +1,26 @@
+import { cookies } from 'next/headers'
+import { redirect } from 'next/navigation'
 import type { OverviewResponse, SubscriptionPageResponse, ExpiringResponse } from '@/lib/types'
 
-const BACKEND_URL = process.env.BACKEND_URL
-const BACKEND_API_KEY = process.env.BACKEND_API_KEY
+const BACKEND_URL = process.env.BACKEND_URL ?? 'http://localhost:3000'
 
 async function apiFetch<T>(path: string): Promise<T> {
-  const headers: HeadersInit = {}
-  if (BACKEND_API_KEY) headers['Authorization'] = `Bearer ${BACKEND_API_KEY}`
+  const cookieStore = await cookies()
+  const token = cookieStore.get('access_token')?.value
 
   const res = await fetch(`${BACKEND_URL}${path}`, {
-    headers,
+    headers: token ? { Authorization: `Bearer ${token}` } : {},
     cache: 'no-store',
   })
+
+  if (res.status === 401) {
+    redirect('/login')
+  }
 
   if (!res.ok) {
     throw new Error(`Backend respondeu ${res.status} em ${path}`)
   }
+
   return res.json() as Promise<T>
 }
 

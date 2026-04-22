@@ -11,14 +11,14 @@ interface Props { data: FormattedNewEnrollmentRow[] }
 
 export default function NewEnrollmentsBar({ data }: Props) {
   return (
-    <div className="bg-[var(--bg-surface)] border border-[var(--border-subtle)] rounded-xl p-6 shadow-sm flex flex-col h-[400px] animate-fade-up">
+    <div className="bg-(--bg-surface) border border-(--border-subtle) rounded-xl p-6 shadow-sm flex flex-col h-100 animate-fade-up">
       <div className="mb-6 flex flex-col gap-1">
-        <p className="text-[10px] font-bold uppercase tracking-widest text-[var(--text-muted)]">Novas Matrículas</p>
+        <p className="text-[10px] font-bold uppercase tracking-widest text-(--text-muted)">Novas Matrículas</p>
         <div className="flex items-center gap-2 mt-1">
-          <div className="w-2 h-2 rounded-full bg-[var(--accent-gold)]" />
-          <span className="text-sm font-bold text-[var(--text-primary)]">Matrículas no Período</span>
+          <div className="w-2 h-2 rounded-full bg-(--accent-gold)" />
+          <span className="text-sm font-bold text-(--text-primary)">Matrículas no Período</span>
         </div>
-        <p className="text-[10px] text-[var(--text-muted)] mt-1">
+        <p className="text-[10px] text-(--text-muted) mt-1">
           ⚠ Dados registrados a partir de 07/04/2026
         </p>
       </div>
@@ -27,7 +27,7 @@ export default function NewEnrollmentsBar({ data }: Props) {
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={data} layout="vertical" margin={{ top: 10, right: 30, bottom: 0, left: 40 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="var(--border-subtle)" horizontal={true} vertical={false} />
-            <XAxis type="number" hide />
+            <XAxis type="number" tick={false} tickLine={false} axisLine={false} />
             <YAxis 
               dataKey="name" 
               type="category" 
