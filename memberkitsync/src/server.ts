@@ -59,6 +59,7 @@ async function bootstrap(): Promise<void> {
   // Para obter o token: POST /auth/login
   app.addHook('onRequest', async (request, reply) => {
     if (!request.url.startsWith('/api/')) return
+    if (request.url.startsWith('/api/auth/')) return
 
     const auth = request.headers['authorization']
     if (!auth?.startsWith('Bearer ')) {
@@ -85,7 +86,7 @@ async function bootstrap(): Promise<void> {
   })
 
   // ── Rotas ────────────────────────────────────────────────────────────────
-  await app.register(authRoutes, { prefix: '/auth' })
+  await app.register(authRoutes, { prefix: '/api/auth' })
   await app.register(webhookRoutes, { prefix: '/webhooks' })
   await app.register(userRoutes, { prefix: '/api' })
   await app.register(syncRoutes, { prefix: '/api' })
