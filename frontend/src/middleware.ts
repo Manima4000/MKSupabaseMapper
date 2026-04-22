@@ -1,11 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-function resolvedUrl(request: NextRequest, pathname: string): URL {
-  const proto = request.headers.get('x-forwarded-proto') ?? request.nextUrl.protocol.replace(':', '')
-  const host = request.headers.get('x-forwarded-host') ?? request.headers.get('host') ?? request.nextUrl.host
-  return new URL(pathname, `${proto}://${host}`)
-}
-
 function isTokenValid(token: string): boolean {
   try {
     const payload = JSON.parse(atob(token.split('.')[1]))
@@ -22,12 +16,16 @@ export function middleware(request: NextRequest) {
 
   // Redireciona /login → /dashboard se já autenticado com token válido
   if (pathname === '/login' && validToken) {
-    return NextResponse.redirect(resolvedUrl(request, '/dashboard/overview'))
+    const dashboardUrl = request.nextUrl.clone()
+    dashboardUrl.pathname = '/dashboard/overview'
+    dashboardUrl.searchParams.delete('redirect')
+    return NextResponse.redirect(dashboardUrl)
   }
 
   // Protege /dashboard/* — redireciona para /login se sem token válido
   if (pathname.startsWith('/dashboard') && !validToken) {
-    const loginUrl = resolvedUrl(request, '/login')
+    const loginUrl = request.nextUrl.clone()
+    loginUrl.pathname = '/login'
     loginUrl.searchParams.set('redirect', pathname)
     return NextResponse.redirect(loginUrl)
   }

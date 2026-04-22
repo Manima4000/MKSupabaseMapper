@@ -16,6 +16,9 @@ async function bootstrap(): Promise<void> {
     logger: { level: env.LOG_LEVEL },
     // Limita o tamanho do body em todas as rotas (proteção contra DoS)
     bodyLimit: 1_048_576, // 1 MB
+    // Confiar no proxy (Nginx/Docker) para identificar o IP real do cliente
+    // Necessário para o plugin de rate-limit não bloquear todos os usuários
+    trustProxy: true,
   })
 
   // ── Segurança: headers HTTP ──────────────────────────────────────────────
