@@ -1,26 +1,32 @@
 import { NextRequest, NextResponse } from 'next/server'
 
 function resolvedUrl(request: NextRequest, pathname: string): URL {
-  // When running behind a reverse proxy (e.g. Nginx Proxy Manager) that
-  // terminates SSL, request.nextUrl may carry http:// internally. Reading
-  // X-Forwarded-Proto ensures the redirect Location uses the correct scheme
-  // (https://) and avoids a Force-SSL redirect loop at the proxy level.
   const proto = request.headers.get('x-forwarded-proto') ?? request.nextUrl.protocol.replace(':', '')
   const host = request.headers.get('x-forwarded-host') ?? request.headers.get('host') ?? request.nextUrl.host
   return new URL(pathname, `${proto}://${host}`)
 }
 
+function isTokenValid(token: string): boolean {
+  try {
+    const payload = JSON.parse(atob(token.split('.')[1]))
+    return typeof payload.exp === 'number' && payload.exp * 1000 > Date.now()
+  } catch {
+    return false
+  }
+}
+
 export function middleware(request: NextRequest) {
   const token = request.cookies.get('access_token')?.value
+  const validToken = !!token && isTokenValid(token)
   const { pathname } = request.nextUrl
 
-  // Redireciona /login → /dashboard se já autenticado
-  if (pathname === '/login' && token) {
+  // Redireciona /login → /dashboard se já autenticado com token válido
+  if (pathname === '/login' && validToken) {
     return NextResponse.redirect(resolvedUrl(request, '/dashboard/overview'))
   }
 
-  // Protege /dashboard/* — redireciona para /login se sem token
-  if (pathname.startsWith('/dashboard') && !token) {
+  // Protege /dashboard/* — redireciona para /login se sem token válido
+  if (pathname.startsWith('/dashboard') && !validToken) {
     const loginUrl = resolvedUrl(request, '/login')
     loginUrl.searchParams.set('redirect', pathname)
     return NextResponse.redirect(loginUrl)
