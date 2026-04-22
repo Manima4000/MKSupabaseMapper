@@ -6,14 +6,17 @@ export function middleware(request: NextRequest) {
 
   // Redireciona /login → /dashboard se já autenticado
   if (pathname === '/login' && token) {
-    return NextResponse.redirect(new URL('/dashboard/overview', request.url))
+    const url = request.nextUrl.clone()
+    url.pathname = '/dashboard/overview'
+    return NextResponse.redirect(url)
   }
 
   // Protege /dashboard/* — redireciona para /login se sem token
   if (pathname.startsWith('/dashboard') && !token) {
-    const loginUrl = new URL('/login', request.url)
-    loginUrl.searchParams.set('redirect', pathname)
-    return NextResponse.redirect(loginUrl)
+    const url = request.nextUrl.clone()
+    url.pathname = '/login'
+    url.searchParams.set('redirect', pathname)
+    return NextResponse.redirect(url)
   }
 
   return NextResponse.next()
