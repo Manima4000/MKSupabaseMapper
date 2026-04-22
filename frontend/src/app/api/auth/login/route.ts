@@ -22,13 +22,19 @@ export async function POST(request: NextRequest) {
   const data = await res.json()
   const response = NextResponse.json({ ok: true, user: data.user })
 
-  const isProd = process.env.NODE_ENV === 'production'
+  // Detecta se a requisição original vinda do proxy (NPM/Nginx) era HTTPS
+  const xForwardedProto = request.headers.get('x-forwarded-proto')
+  const isSecure = xForwardedProto === 'https' || process.env.NODE_ENV === 'production'
+
   const cookieOpts = {
     httpOnly: true,
-    secure: isProd,
+    secure: isSecure, // Usa secure apenas se for HTTPS no proxy ou em produção (se HTTPS estiver configurado)
     sameSite: 'lax' as const,
     path: '/',
   }
+
+  // Debug (opcional, remova depois)
+  // console.log(`Set-Cookie: isSecure=${isSecure}, x-proto=${xForwardedProto}`)
 
   response.cookies.set('access_token', data.access_token, {
     ...cookieOpts,
