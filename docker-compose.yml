@@ -5,6 +5,8 @@ services:
       dockerfile: Dockerfile
     env_file:
       - .env
+    networks:
+      - internal_supabase
     restart: unless-stopped
 
   frontend:
@@ -15,6 +17,12 @@ services:
       - .env
     environment:
       PORT: "3001"
+    networks:
+      - internal_supabase
     depends_on:
       - memberkitsync
     restart: unless-stopped
+
+networks:
+  internal_supabase:
+    external: true

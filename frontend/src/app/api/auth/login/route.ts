@@ -33,8 +33,6 @@ export async function POST(request: NextRequest) {
     path: '/',
   }
 
-  // Debug (opcional, remova depois)
-  // console.log(`Set-Cookie: isSecure=${isSecure}, x-proto=${xForwardedProto}`)
 
   response.cookies.set('access_token', data.access_token, {
     ...cookieOpts,
