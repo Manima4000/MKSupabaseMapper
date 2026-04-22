@@ -14,7 +14,7 @@ async function apiFetch<T>(path: string): Promise<T> {
   })
 
   if (res.status === 401) {
-    redirect('/login')
+    redirect('/api/auth/logout')
   }
 
   if (!res.ok) {
