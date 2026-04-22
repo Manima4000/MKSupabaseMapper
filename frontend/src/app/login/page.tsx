@@ -73,6 +73,7 @@ function LoginForm() {
                 placeholder="admin@exemplo.com"
                 required
                 autoComplete="email"
+                suppressHydrationWarning
                 className="w-full px-4 py-2.5 rounded-xl border border-(--border-subtle) bg-(--bg-base) text-sm text-(--text-primary) placeholder:text-(--text-muted) outline-none focus:border-(--accent-blue) focus:ring-2 focus:ring-(--accent-blue-glow) transition-all"
               />
             </div>
