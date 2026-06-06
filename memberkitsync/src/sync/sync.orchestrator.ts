@@ -1,5 +1,5 @@
 import { logger } from '../shared/logger.js'
-import { fetchAllPages, runConcurrent } from '../shared/pagination.js'
+import { fetchAllPages, fetchPagesSince, runConcurrent } from '../shared/pagination.js'
 import type { MKUser, MKUserActivity, MKTrackableForumPost, MKTrackableForumComment, MKTrackableRating } from './memberkit-api.client.js'
 import type { User } from '../modules/users/user.types.js'
 import { MemberKitClient } from './memberkit-api.client.js'
@@ -442,6 +442,127 @@ export class SyncOrchestrator {
 
     const elapsed = `${((Date.now() - t) / 1000).toFixed(1)}s`
     logger.info({ total: lessons.length, synced, failed, elapsed }, `[syncLessonMedia] ${synced}/${lessons.length} aulas em ${elapsed}`)
+  }
+
+  // --------------------------------------------------------------------------
+  // Recovery: Activities since a given date — fetched per-user with early stop.
+  // Uses fetchPagesSince which stops pagination once items older than sinceDate
+  // are detected (assumes MK returns activities in reverse-chronological order).
+  // --------------------------------------------------------------------------
+  async syncActivitiesSince(sinceDate: Date): Promise<void> {
+    logger.info({ since: sinceDate.toISOString() }, '=== [recovery] Sincronizando atividades desde data de corte... ===')
+    const t = Date.now()
+
+    const dbUsers = await getAllUsers()
+    logger.info({ count: dbUsers.length }, `[syncActivitiesSince] ${dbUsers.length} usuários no banco`)
+
+    let totalActivities = 0
+    let syncedActivities = 0
+
+    await runConcurrent(dbUsers, async ({ id: internalId, mk_id: mkId }) => {
+      try {
+        const activities = await fetchPagesSince(
+          (client, page, perPage) => client.getUserActivities(mkId, page, perPage),
+          this.client,
+          sinceDate,
+          100,
+          `syncActivitiesSince:user${mkId}`,
+        )
+
+        totalActivities += activities.length
+
+        await runConcurrent(activities, async activity => {
+          try {
+            await routeActivity(activity, internalId)
+            syncedActivities++
+          } catch (err) {
+            logger.error({ memberMkId: mkId, activityId: activity.id, type: activity.trackable_type, err }, '[syncActivitiesSince] Erro ao upsert atividade')
+          }
+        }, 10)
+      } catch (err) {
+        logger.error({ memberMkId: mkId, err }, '[syncActivitiesSince] Erro ao buscar atividades')
+      }
+    }, 5, 'syncActivitiesSince')
+
+    const elapsed = `${((Date.now() - t) / 1000).toFixed(1)}s`
+    logger.info({ total: totalActivities, synced: syncedActivities, elapsed }, `[syncActivitiesSince] ${syncedActivities}/${totalActivities} atividades em ${elapsed}`)
+  }
+
+  // --------------------------------------------------------------------------
+  // Recovery: Comments since a given date — global /comments with early stop.
+  // --------------------------------------------------------------------------
+  async syncCommentsSince(sinceDate: Date): Promise<void> {
+    logger.info({ since: sinceDate.toISOString() }, '=== [recovery] Sincronizando comentários desde data de corte... ===')
+    const t = Date.now()
+
+    const comments = await fetchPagesSince(
+      (client, page, perPage) => client.getComments(page, perPage),
+      this.client,
+      sinceDate,
+      100,
+      'syncCommentsSince',
+    )
+
+    let synced = 0
+    await runConcurrent(comments, async mk => {
+      try {
+        const [user, lesson] = await Promise.all([
+          getUserByMkId(mk.user.id),
+          getLessonByMkId(mk.lesson.id),
+        ])
+
+        if (!user) {
+          logger.warn({ commentMkId: mk.id, userMkId: mk.user.id }, '[syncCommentsSince] Usuário não encontrado, pulando')
+          return
+        }
+        if (!lesson) {
+          logger.warn({ commentMkId: mk.id, lessonMkId: mk.lesson.id }, '[syncCommentsSince] Aula não encontrada, pulando')
+          return
+        }
+
+        await upsertComment(mkCommentToUpsertInput(mk, user.id, lesson.id))
+        synced++
+      } catch (err) {
+        logger.error({ commentMkId: mk.id, err }, '[syncCommentsSince] Erro ao sincronizar comentário')
+      }
+    }, 20, 'syncCommentsSince')
+
+    const elapsed = `${((Date.now() - t) / 1000).toFixed(1)}s`
+    logger.info({ total: comments.length, synced, elapsed }, `[syncCommentsSince] ${synced}/${comments.length} comentários em ${elapsed}`)
+  }
+
+  // --------------------------------------------------------------------------
+  // Recovery: Quiz Attempts since a given date — global /quiz_attempts with early stop.
+  // --------------------------------------------------------------------------
+  async syncQuizAttemptsSince(sinceDate: Date): Promise<void> {
+    logger.info({ since: sinceDate.toISOString() }, '=== [recovery] Sincronizando tentativas de quiz desde data de corte... ===')
+    const t = Date.now()
+
+    const attempts = await fetchPagesSince(
+      (client, page, perPage) => client.getQuizAttempts(page, perPage),
+      this.client,
+      sinceDate,
+      100,
+      'syncQuizAttemptsSince',
+    )
+
+    let synced = 0
+    await runConcurrent(attempts, async mk => {
+      try {
+        const user = await getUserByMkId(mk.user.id)
+        if (!user) {
+          logger.warn({ attemptMkId: mk.id, userMkId: mk.user.id }, '[syncQuizAttemptsSince] Usuário não encontrado, pulando')
+          return
+        }
+        await upsertQuizAttempt(mkQuizAttemptToUpsertInput(mk, user.id))
+        synced++
+      } catch (err) {
+        logger.error({ attemptMkId: mk.id, err }, '[syncQuizAttemptsSince] Erro ao sincronizar tentativa de quiz')
+      }
+    }, 20, 'syncQuizAttemptsSince')
+
+    const elapsed = `${((Date.now() - t) / 1000).toFixed(1)}s`
+    logger.info({ total: attempts.length, synced, elapsed }, `[syncQuizAttemptsSince] ${synced}/${attempts.length} tentativas em ${elapsed}`)
   }
 
   // --------------------------------------------------------------------------

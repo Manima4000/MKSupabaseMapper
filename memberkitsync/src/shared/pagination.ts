@@ -83,6 +83,52 @@ export async function fetchAllPages<T>(
   return allItems
 }
 
+// Like fetchAllPages but stops pagination early once a page's oldest item predates
+// sinceDate. Assumes the API returns items in reverse-chronological order (newest
+// first) — which is the MemberKit default for activities, comments, and quiz
+// attempts. Only returns items with created_at >= sinceDate.
+// If the API sorts ascending, the early stop won't trigger and all pages are fetched
+// (same behaviour as fetchAllPages, just with a date filter applied).
+export async function fetchPagesSince<T extends { created_at: string }>(
+  fetcher: (client: MemberKitClient, page: number, perPage: number) => Promise<{ items: T[]; meta: PaginationMeta }>,
+  client: MemberKitClient,
+  sinceDate: Date,
+  perPage = 100,
+  label = 'fetchPagesSince',
+): Promise<T[]> {
+  const sinceMs = sinceDate.getTime()
+  const allItems: T[] = []
+  let page = 1
+
+  while (true) {
+    const { items, meta } = await fetcher(client, page, perPage)
+
+    if (items.length === 0) break
+
+    const newItems = items.filter(item => new Date(item.created_at).getTime() >= sinceMs)
+    allItems.push(...newItems)
+
+    logger.debug(
+      { label, page, fetched: items.length, kept: newItems.length, total: allItems.length },
+      `[${label}] página ${page}: ${newItems.length}/${items.length} dentro do período`,
+    )
+
+    // When the oldest item on this page is before sinceDate, every subsequent page
+    // will be even older — stop here (relies on reverse-chron order).
+    const oldestOnPage = items[items.length - 1]
+    if (!oldestOnPage || new Date(oldestOnPage.created_at).getTime() < sinceMs) break
+
+    if (meta.total_pages > 1 && page >= meta.total_pages) break
+    page++
+  }
+
+  logger.info(
+    { label, total: allItems.length, pages: page },
+    `[${label}] ${allItems.length} registros desde ${sinceDate.toISOString().split('T')[0]} (${page} página(s) verificada(s))`,
+  )
+  return allItems
+}
+
 // Executa fn em paralelo sobre todos os items com no máximo `concurrency`
 // workers simultâneos. Útil para processar grandes listas sem disparar tudo
 // de uma vez (evita pressão excessiva de memória/conexões).
