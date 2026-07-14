@@ -1,6 +1,7 @@
 import { env } from '../config/env.js'
 import { MemberKitApiError } from '../shared/errors.js'
 import { logger } from '../shared/logger.js'
+import { runConcurrent } from '../shared/pagination.js'
 import type { PaginationMeta } from '../shared/pagination.js'
 
 // ============================================================================
@@ -393,20 +394,20 @@ export class MemberKitClient {
       }
     }
 
-    // Step 2: busca detalhes de todos os cursos em paralelo — o throttle
-    // garante no máximo 115 req/min; os Promises só enfileiram timestamps.
-    logger.info({ total: stubs.length }, `[getCourses] ${stubs.length} cursos encontrados — buscando detalhes em paralelo...`)
-    const results = await Promise.all(
-      stubs.map((stub, i) =>
-        this.getCourseDetail(stub.id).then(detail => {
-          logger.info(
-            { courseId: stub.id, name: stub.name, progress: `${i + 1}/${stubs.length}` },
-            `[getCourses] curso ${i + 1}/${stubs.length} concluído: "${stub.name}"`,
-          )
-          return detail
-        }),
-      ),
-    )
+    // Step 2: busca detalhes dos cursos com concorrência limitada. Disparar
+    // todos de uma vez (Promise.all sem limite) sobrecarrega conexões
+    // simultâneas e causa ETIMEDOUT sob carga — visto em produção com 132
+    // cursos, onde o tempo de resposta degradava progressivamente até travar.
+    logger.info({ total: stubs.length }, `[getCourses] ${stubs.length} cursos encontrados — buscando detalhes...`)
+    const results: MKCourse[] = []
+    await runConcurrent(stubs, async stub => {
+      try {
+        const detail = await this.getCourseDetail(stub.id)
+        results.push(detail)
+      } catch (err) {
+        logger.error({ courseId: stub.id, name: stub.name, err }, '[getCourses] Erro ao buscar detalhes do curso, pulando')
+      }
+    }, 20, 'getCourses')
     return results
   }
 

@@ -37,18 +37,18 @@ export async function fetchAllPages<T>(
     `[${label}] ${meta.total_count} registros em ${meta.total_pages} página(s) (limite do servidor: ${serverPageLimit}/página)`,
   )
 
-  // Se o endpoint informou total_pages > 1, busca todas as páginas restantes em paralelo.
+  // Se o endpoint informou total_pages > 1, busca as páginas restantes com
+  // concorrência limitada. Disparar todas de uma vez (Promise.all sem limite)
+  // sobrecarrega conexões simultâneas e causa ETIMEDOUT sob carga — mesmo
+  // problema visto em getCourses() com 132 requisições simultâneas.
   if (meta.total_pages > 1) {
-    const remaining = await Promise.all(
-      Array.from({ length: meta.total_pages - 1 }, (_, i) =>
-        fetcher(client, i + 2, perPage),
-      ),
-    )
-
+    const remainingPages = Array.from({ length: meta.total_pages - 1 }, (_, i) => i + 2)
     const allItems: T[] = [...firstItems]
-    for (const { items } of remaining) {
+
+    await runConcurrent(remainingPages, async page => {
+      const { items } = await fetcher(client, page, perPage)
       allItems.push(...items)
-    }
+    }, 10, label)
 
     const elapsed = ((Date.now() - pageStart) / 1000).toFixed(1)
     logger.info({ label, total: allItems.length, elapsed: `${elapsed}s` }, `[${label}] ${allItems.length} registros carregados em ${elapsed}s`)
