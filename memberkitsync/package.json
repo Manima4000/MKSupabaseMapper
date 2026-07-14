@@ -14,6 +14,8 @@
     "sync:prod": "node dist/sync/sync.command.js",
     "sync:recovery": "tsx src/sync/sync.recovery.command.ts",
     "sync:recovery:prod": "node dist/sync/sync.recovery.command.js",
+    "sync:activities": "tsx src/sync/sync.activities.command.ts",
+    "sync:activities:prod": "node dist/sync/sync.activities.command.js",
     "replay": "tsx src/webhooks/replay.command.ts",
     "replay:prod": "node dist/webhooks/replay.command.js"
   },

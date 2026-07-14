@@ -265,13 +265,14 @@ export class SyncOrchestrator {
     let usersToProcess: Array<{ internalId: number; mkId: number }>
 
     if (members) {
-      // Chamada via full sync: members já disponíveis, resolve internal id do banco
-      const resolved = await Promise.all(
-        members.map(async m => {
-          const user = await getUserByMkId(m.id)
-          return user ? { internalId: user.id, mkId: m.id } : null
-        }),
-      )
+      // Chamada via full sync: members já disponíveis, resolve internal id do banco.
+      // Concorrência limitada — disparar uma consulta por membro de uma vez (visto
+      // com 10k+ membros) esgota o pool de conexões do Supabase e causa ETIMEDOUT.
+      const resolved: Array<{ internalId: number; mkId: number } | null> = []
+      await runConcurrent(members, async m => {
+        const user = await getUserByMkId(m.id)
+        resolved.push(user ? { internalId: user.id, mkId: m.id } : null)
+      }, 20, 'syncActivities:resolveUsers')
       usersToProcess = resolved.filter((u): u is NonNullable<typeof u> => u !== null)
     } else {
       // Chamada standalone: usa usuários já no banco, sem precisar buscar na API do MK
