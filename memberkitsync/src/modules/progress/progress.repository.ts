@@ -18,12 +18,12 @@ export async function createUserActivity(input: CreateUserActivityInput): Promis
   }
 
   const { data, error } = await supabase
-    .from('user_activities')
+    .from('unmapped_activities')
     .insert(row)
     .select()
     .single()
 
-  if (error) throw new SupabaseError('Falha ao criar user_activity', error)
+  if (error) throw new SupabaseError('Falha ao criar unmapped_activity', error)
   return data as UserActivity
 }
 
@@ -39,8 +39,8 @@ export async function upsertUserActivityByMkId(input: CreateUserActivityInput): 
   }
 
   const { error } = await supabase
-    .from('user_activities')
+    .from('unmapped_activities')
     .upsert(row, { onConflict: 'mk_id' })
 
-  if (error) throw new SupabaseError('Falha ao upsert user_activity', error)
+  if (error) throw new SupabaseError('Falha ao upsert unmapped_activity', error)
 }

@@ -1,7 +1,6 @@
 import { logger } from '../shared/logger.js'
 import { fetchAllPages, fetchPagesSince, runConcurrent } from '../shared/pagination.js'
 import type { MKUser, MKUserActivity, MKTrackableForumPost, MKTrackableForumComment, MKTrackableRating } from './memberkit-api.client.js'
-import type { User } from '../modules/users/user.types.js'
 import { MemberKitClient } from './memberkit-api.client.js'
 import { syncCourse } from '../modules/courses/course.service.js'
 import { upsertClassroom } from '../modules/classrooms/classroom.repository.js'
@@ -27,7 +26,8 @@ import { mkCommentToUpsertInput } from '../modules/comments/comment.mapper.js'
 import { upsertQuizAttempt } from '../modules/quiz_attempts/quiz_attempt.repository.js'
 import { mkQuizAttemptToUpsertInput } from '../modules/quiz_attempts/quiz_attempt.mapper.js'
 import { upsertLessonRating } from '../modules/lesson_ratings/lesson_rating.repository.js'
-import { createUserActivity } from '../modules/progress/progress.repository.js'
+import { upsertUserActivityByMkId } from '../modules/progress/progress.repository.js'
+import { mkActivityToCreateInput } from '../modules/progress/progress.mapper.js'
 
 export class SyncOrchestrator {
   constructor(private readonly client: MemberKitClient) {}
@@ -693,15 +693,7 @@ async function routeActivity(activity: MKUserActivity, userId: number): Promise<
       break
 
     default:
-      logger.debug({ type: activity.trackable_type, activityId: activity.id }, '[routeActivity] Tipo desconhecido, salvando em user_activities')
-      await createUserActivity({
-        mkId: activity.id,
-        userId,
-        eventType: activity.trackable_type,
-        mkCourseId: activity.course_id,
-        mkLessonId: activity.lesson_id,
-        trackable: activity.trackable,
-        occurredAt: activity.created_at,
-      })
+      logger.debug({ type: activity.trackable_type, activityId: activity.id }, '[routeActivity] Tipo desconhecido, salvando em unmapped_activities')
+      await upsertUserActivityByMkId(mkActivityToCreateInput(activity, userId))
   }
 }

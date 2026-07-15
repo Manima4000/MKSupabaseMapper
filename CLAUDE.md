@@ -48,7 +48,7 @@ SupabaseProject/
         │   ├── forum_posts/
         │   ├── forum_comments/
         │   ├── lesson_file_downloads/
-        │   └── progress/         # legacy — only user_activities table (kept for historical data)
+        │   └── progress/         # writes unmapped_activities (catch-all for unrecognized trackable_type)
         ├── sync/
         │   ├── memberkit-api.client.ts   # HTTP client for MemberKit REST API
         │   ├── sync.orchestrator.ts      # Orchestrates a full sync in FK order
@@ -98,7 +98,7 @@ Every domain entity follows the same 4-file pattern:
 | forum_posts | no | upsert by mk_id |
 | forum_comments | no | upsert by mk_id |
 | lesson_file_downloads | no | upsert by (user_id, occurred_at) |
-| progress | legacy | kept only because user_activities table still exists |
+| progress | no | routeActivity() falls back to it for unmapped trackable_types |
 
 ---
 
@@ -209,6 +209,7 @@ All migrations live in `src/database/migrations/`. Run them in order in the Supa
 | `016_normalize_lesson_status_event_type.sql` | Normalizes LessonStatus event_type |
 | `017_normalize_activity_tables.sql` | **Normalizes user_activities into dedicated tables** |
 | `018_fix_lesson_videos_mk_id_unique.sql` | Drops UNIQUE from lesson_videos.mk_id (same video ID can appear in multiple lessons) |
+| `051_unmapped_activities_table.sql` | Creates `unmapped_activities` (replaces the dropped `user_activities` as the catch-all for unrecognized `trackable_type` values) |
 
 ### Tables
 
@@ -238,7 +239,7 @@ All migrations live in `src/database/migrations/`. Run them in order in the Supa
 - `forum_posts` — MK forum posts; upsert by mk_id
 - `forum_comments` — MK forum replies; upsert by mk_id
 - `lesson_file_downloads` — file download log; upsert by (user_id, occurred_at)
-- `user_activities` — legacy table (historical data from before migration 017; not written to by new code)
+- `unmapped_activities` — catch-all for activities whose `trackable_type` isn't mapped to a dedicated table yet; upsert by mk_id (the old `user_activities` table was dropped after migration 017 normalized known types)
 - `webhook_logs` — full audit trail of every webhook received; supports replay
 
 ### Key design decisions in the schema
