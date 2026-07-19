@@ -7,5 +7,11 @@ export type MKClassroomPayload = MKClassroom
 export interface UpsertClassroomInput {
   mkId: number
   name: string
+  master: boolean
+  courseName: string
+  usersCount: number
+  commentsCount: number
+  averageProgress: number
   createdAt?: string
+  updatedAt?: string
 }

@@ -4,6 +4,12 @@ export function mkClassroomToUpsertInput(mk: MKClassroomPayload): UpsertClassroo
   return {
     mkId: mk.id,
     name: mk.name,
+    master: mk.master,
+    courseName: mk.course_name,
+    usersCount: mk.users_count,
+    commentsCount: mk.comments_count,
+    averageProgress: mk.average_progress,
     ...(mk.created_at !== undefined && { createdAt: mk.created_at }),
+    ...(mk.updated_at !== undefined && { updatedAt: mk.updated_at }),
   }
 }
