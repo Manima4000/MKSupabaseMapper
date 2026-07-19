@@ -18,6 +18,8 @@
     "sync:activities:prod": "node dist/sync/sync.activities.command.js",
     "sync:members": "tsx src/sync/sync.members.command.ts",
     "sync:members:prod": "node dist/sync/sync.members.command.js",
+    "sync:classrooms": "tsx src/sync/sync.classrooms.command.ts",
+    "sync:classrooms:prod": "node dist/sync/sync.classrooms.command.js",
     "replay": "tsx src/webhooks/replay.command.ts",
     "replay:prod": "node dist/webhooks/replay.command.js"
   },
