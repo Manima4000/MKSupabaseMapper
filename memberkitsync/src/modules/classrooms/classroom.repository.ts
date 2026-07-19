@@ -6,7 +6,13 @@ export async function upsertClassroom(input: UpsertClassroomInput): Promise<Clas
   const row: ClassroomInsert = {
     mk_id: input.mkId,
     name: input.name,
+    master: input.master,
+    course_name: input.courseName,
+    users_count: input.usersCount,
+    comments_count: input.commentsCount,
+    average_progress: input.averageProgress,
     ...(input.createdAt !== undefined && { created_at: input.createdAt }),
+    ...(input.updatedAt !== undefined && { updated_at: input.updatedAt }),
   }
 
   const { data, error } = await supabase
