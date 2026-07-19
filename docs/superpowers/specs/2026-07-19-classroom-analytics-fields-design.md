@@ -42,8 +42,13 @@ membership_levels ↔ classrooms linking logic, which already works.
 
 ## Non-goals
 
-- No webhook changes — MemberKit does not expose classroom-related webhook
-  events.
+- No webhook changes. Verified in `webhook.types.ts` (lines 62, 82, 123) and
+  `webhook.handler.ts` (line 255): `classroom_id` appears only as an FK
+  resolved via `getClassroomByMkId()` for `enrollment.*` /
+  `membership.*` events. There is no `classroom.created` /
+  `classroom.updated` event type, and no webhook handler writes to
+  `classrooms`. All writes to `classrooms` — including the five new
+  fields — come exclusively from `syncClassrooms()` in the full sync.
 - No change to `sync.orchestrator.ts` call order.
 - No change to `membership_levels` or `membership_level_classrooms` schema
   or logic.
