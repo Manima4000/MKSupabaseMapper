@@ -77,6 +77,11 @@ export interface Classroom {
   id: number
   mk_id: number
   name: string
+  master: boolean
+  course_name: string | null
+  users_count: number
+  comments_count: number
+  average_progress: number
   created_at: string
   updated_at: string
 }
