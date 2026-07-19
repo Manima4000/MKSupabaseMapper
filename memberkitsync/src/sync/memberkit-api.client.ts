@@ -121,7 +121,13 @@ export interface MKUserDetail extends MKUser {
 export interface MKClassroom {
   id: number
   name: string
+  master: boolean
+  course_name: string
+  users_count: number
+  comments_count: number
+  average_progress: number
   created_at?: string
+  updated_at?: string
 }
 
 export interface MKMembershipLevel {
