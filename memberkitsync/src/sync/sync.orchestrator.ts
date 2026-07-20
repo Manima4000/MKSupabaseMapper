@@ -3,8 +3,7 @@ import { fetchAllPages, fetchPagesSince, runConcurrent } from '../shared/paginat
 import type { MKUser, MKUserActivity, MKTrackableForumPost, MKTrackableForumComment, MKTrackableRating } from './memberkit-api.client.js'
 import { MemberKitClient } from './memberkit-api.client.js'
 import { syncCourse } from '../modules/courses/course.service.js'
-import { upsertClassroom } from '../modules/classrooms/classroom.repository.js'
-import { mkClassroomToUpsertInput } from '../modules/classrooms/classroom.mapper.js'
+import { syncClassroom } from '../modules/classrooms/classroom.service.js'
 import { syncPlan } from '../modules/memberships/membership.service.js'
 import { syncUser } from '../modules/users/user.service.js'
 import { syncSubscription } from '../modules/memberships/membership.service.js'
@@ -89,7 +88,7 @@ export class SyncOrchestrator {
     const t = Date.now()
     const classrooms = await this.client.getClassrooms()
 
-    await runConcurrent(classrooms, mk => upsertClassroom(mkClassroomToUpsertInput(mk)), 20, 'syncClassrooms')
+    await runConcurrent(classrooms, mk => syncClassroom(mk), 20, 'syncClassrooms')
 
     const elapsed = `${((Date.now() - t) / 1000).toFixed(1)}s`
     logger.info({ count: classrooms.length, elapsed }, `[syncClassrooms] ${classrooms.length} classrooms em ${elapsed}`)

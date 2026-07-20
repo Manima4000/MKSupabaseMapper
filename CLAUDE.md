@@ -88,7 +88,7 @@ Every domain entity follows the same 4-file pattern:
 | courses | yes | cascades into sections → lessons → videos/files |
 | sections | no | only used internally by course.service |
 | lessons | yes | exposes getLessonByMkId for webhook handler |
-| classrooms | no | simple upsert |
+| classrooms | yes | resolves course_id from course_name (exact match against courses.name) before upsert |
 | memberships | yes | syncs plans (with classroom links) and subscriptions |
 | enrollments | no | simple upsert |
 | lesson_progress | no | upsert by (user_id, lesson_id) |
@@ -118,7 +118,7 @@ SyncOrchestrator.syncLessonMedia()
 
     ↓ getClassrooms()
 SyncOrchestrator.syncClassrooms()
-    → upsertClassroom
+    → syncClassroom (resolves course_id via getCourseByName(course_name)) → upsertClassroom
 
     ↓ getMembershipLevels()
 SyncOrchestrator.syncPlans()
@@ -210,6 +210,9 @@ All migrations live in `src/database/migrations/`. Run them in order in the Supa
 | `017_normalize_activity_tables.sql` | **Normalizes user_activities into dedicated tables** |
 | `018_fix_lesson_videos_mk_id_unique.sql` | Drops UNIQUE from lesson_videos.mk_id (same video ID can appear in multiple lessons) |
 | `051_unmapped_activities_table.sql` | Creates `unmapped_activities` (replaces the dropped `user_activities` as the catch-all for unrecognized `trackable_type` values) |
+| `052_add_classroom_analytics_fields.sql` | Adds master, course_name, users_count, comments_count, average_progress to classrooms |
+| `053_add_course_id_to_classrooms.sql` | Adds classrooms.course_id, resolved during sync by matching course_name against courses.name |
+| `054_membership_courses_view.sql` | Creates `vw_membership_courses` (membership_level → classroom → course) |
 
 ### Tables
 
@@ -247,6 +250,7 @@ All migrations live in `src/database/migrations/`. Run them in order in the Supa
 - Most tables have an `mk_id INTEGER UNIQUE` column — used as the upsert key.
 - **Exception:** `lesson_videos.mk_id` is NOT unique — MemberKit reuses video IDs across lessons. The upsert key for `lesson_videos` is `lesson_id` (1:1 with lessons).
 - Internal `id` (BIGINT auto-increment) is the FK used between tables — never the mk_id.
+- `classrooms.course_id` is resolved during sync by matching `classrooms.course_name` (free text from MemberKit) against `courses.name` (exact match). No match → `course_id` stays `NULL` silently; no log, no sync failure. If two courses share the same `name`, the match is non-deterministic (first row found).
 - `lesson_progress` keeps only the **latest** event per (user, lesson) — upsert replaces on conflict.
 - `lesson_file_downloads` is append-only except dedup on (user_id, occurred_at).
 - `webhook_logs` stores every webhook payload for auditability and replay support.
@@ -268,6 +272,7 @@ All migrations live in `src/database/migrations/`. Run them in order in the Supa
 | `vw_weekly_lessons_completed` | Weekly count of lessons completed |
 | `vw_weekly_active_students` | Weekly unique active students |
 | `vw_weekly_active_students_by_subscription` | Weekly active students broken down by plan |
+| `vw_membership_courses` | Courses included in each membership/subscription plan (membership_level → classroom → course, via classrooms.course_id) |
 
 ### Functions
 
