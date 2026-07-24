@@ -24,7 +24,7 @@ vi.mock('../../modules/classrooms/classroom.repository.js', () => ({
 }))
 
 vi.mock('../../modules/classrooms/classroom.mapper.js', () => ({
-  mkClassroomToUpsertInput: vi.fn((mk) => ({ mkId: mk.id, name: mk.name })),
+  mkClassroomToUpsertInput: vi.fn((mk, courseId) => ({ mkId: mk.id, name: mk.name, courseId })),
 }))
 
 vi.mock('../../modules/memberships/membership.service.js', () => ({
@@ -60,6 +60,7 @@ vi.mock('../../modules/memberships/membership.repository.js', () => ({
 
 vi.mock('../../modules/courses/course.repository.js', () => ({
   getCourseByMkId: vi.fn(),
+  getCourseByName: vi.fn(),
   deleteOrphanedCourses: vi.fn().mockResolvedValue(0),
 }))
 

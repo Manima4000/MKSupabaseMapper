@@ -1,11 +1,15 @@
 import type { MKClassroomPayload, UpsertClassroomInput } from './classroom.types.js'
 
-export function mkClassroomToUpsertInput(mk: MKClassroomPayload): UpsertClassroomInput {
+export function mkClassroomToUpsertInput(
+  mk: MKClassroomPayload,
+  courseId: number | null,
+): UpsertClassroomInput {
   return {
     mkId: mk.id,
     name: mk.name,
     master: mk.master,
     courseName: mk.course_name,
+    courseId,
     usersCount: mk.users_count,
     commentsCount: mk.comments_count,
     averageProgress: mk.average_progress,

@@ -8,6 +8,7 @@ export async function upsertClassroom(input: UpsertClassroomInput): Promise<Clas
     name: input.name,
     master: input.master,
     course_name: input.courseName,
+    course_id: input.courseId,
     users_count: input.usersCount,
     comments_count: input.commentsCount,
     average_progress: input.averageProgress,

@@ -82,3 +82,14 @@ export async function getCourseByMkId(mkId: number): Promise<Course | null> {
   if (error) throw new SupabaseError(`Falha ao buscar course mk_id=${mkId}`, error)
   return data as Course | null
 }
+
+export async function getCourseByName(name: string): Promise<Course | null> {
+  const { data, error } = await supabase
+    .from('courses')
+    .select()
+    .eq('name', name)
+    .limit(1)
+
+  if (error) throw new SupabaseError(`Falha ao buscar course name=${name}`, error)
+  return (data?.[0] as Course) ?? null
+}

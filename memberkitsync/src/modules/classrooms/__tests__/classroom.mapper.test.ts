@@ -16,11 +16,12 @@ describe('mkClassroomToUpsertInput', () => {
       updated_at: '2023-11-08T05:31:56Z',
     }
 
-    expect(mkClassroomToUpsertInput(mk)).toEqual({
+    expect(mkClassroomToUpsertInput(mk, 99)).toEqual({
       mkId: 15,
       name: 'Turma ESA 2024',
       master: true,
       courseName: 'Matemática 1 - ESA',
+      courseId: 99,
       usersCount: 42,
       commentsCount: 7,
       averageProgress: 63.5,
@@ -39,13 +40,14 @@ describe('mkClassroomToUpsertInput', () => {
       comments_count: 0,
       average_progress: 0,
     }
-    const result = mkClassroomToUpsertInput(mk)
+    const result = mkClassroomToUpsertInput(mk, null)
 
     expect(result).toEqual({
       mkId: 1,
       name: 'X',
       master: false,
       courseName: 'Curso Y',
+      courseId: null,
       usersCount: 0,
       commentsCount: 0,
       averageProgress: 0,

@@ -79,6 +79,7 @@ export interface Classroom {
   name: string
   master: boolean
   course_name: string | null
+  course_id: number | null
   users_count: number
   comments_count: number
   average_progress: number

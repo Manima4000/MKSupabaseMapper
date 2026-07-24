@@ -9,6 +9,7 @@ export interface UpsertClassroomInput {
   name: string
   master: boolean
   courseName: string
+  courseId: number | null
   usersCount: number
   commentsCount: number
   averageProgress: number
