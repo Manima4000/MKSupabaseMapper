@@ -179,14 +179,14 @@ All migrations live in `src/database/migrations/`. Run them manually in the Supa
 - `user_activities` — append-only log of all webhook events per student
 - `comments` — lesson comments (created via webhook)
 - `quiz_attempts` — quiz scores
-- `webhook_logs` — full audit trail of every webhook received (supports replay)
+- `webhook_logs` — stores un-processed webhooks (failed, skipped) for retry support (processed webhooks are deleted immediately to conserve database space)
 
 ### Key design decisions in the schema
 
 - Every table has an `mk_id INTEGER UNIQUE` column — this is MemberKit's ID, used as the upsert key.
 - Internal `id` (BIGINT auto-increment) is the FK used between tables — never the mk_id.
 - `lesson_progress` has a `UNIQUE (user_id, lesson_id)` constraint — upsert is safe.
-- `webhook_logs` stores every webhook with status `received → processed | failed` for auditability and retry support.
+- `webhook_logs` deletes webhooks as soon as status = `processed`, keeping only `failed` or `skipped` logs for retry support.
 
 ### Views
 

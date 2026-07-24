@@ -24,6 +24,7 @@ vi.mock('../../config/supabase.js', () => {
     c.eq = vi.fn(self)
     c.insert = vi.fn(self)
     c.update = vi.fn(self)
+    c.delete = vi.fn(self)
     c.upsert = vi.fn(self)
     c.maybySingle = mockMaybySingle
     c.maybeSingle = mockMaybySingle

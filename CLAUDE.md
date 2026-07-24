@@ -240,7 +240,7 @@ All migrations live in `src/database/migrations/`. Run them in order in the Supa
 - `forum_comments` — MK forum replies; upsert by mk_id
 - `lesson_file_downloads` — file download log; upsert by (user_id, occurred_at)
 - `unmapped_activities` — catch-all for activities whose `trackable_type` isn't mapped to a dedicated table yet; upsert by mk_id (the old `user_activities` table was dropped after migration 017 normalized known types)
-- `webhook_logs` — full audit trail of every webhook received; supports replay
+- `webhook_logs` — stores un-processed webhooks (failed, skipped) for retry support (processed webhooks are deleted immediately to conserve database space)
 
 ### Key design decisions in the schema
 
@@ -249,7 +249,7 @@ All migrations live in `src/database/migrations/`. Run them in order in the Supa
 - Internal `id` (BIGINT auto-increment) is the FK used between tables — never the mk_id.
 - `lesson_progress` keeps only the **latest** event per (user, lesson) — upsert replaces on conflict.
 - `lesson_file_downloads` is append-only except dedup on (user_id, occurred_at).
-- `webhook_logs` stores every webhook payload for auditability and replay support.
+- `webhook_logs` deletes webhooks as soon as they reach status `processed` to prevent table bloat, retaining only `failed` and `skipped` logs for retry purposes.
 
 ### Views
 

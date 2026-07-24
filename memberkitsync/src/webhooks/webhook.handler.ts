@@ -466,6 +466,17 @@ async function updateWebhookLog(
   status: 'processed' | 'skipped' | 'failed',
   errorMessage?: string,
 ): Promise<void> {
+  // Webhooks com status 'processed' são deletados imediatamente para evitar acúmulo de espaço no banco
+  if (status === 'processed') {
+    const { error } = await supabase
+      .from('webhook_logs')
+      .delete()
+      .eq('id', id)
+
+    if (error) logger.error({ id, error }, 'Falha ao deletar webhook_log processado')
+    return
+  }
+
   const { error } = await supabase
     .from('webhook_logs')
     .update({

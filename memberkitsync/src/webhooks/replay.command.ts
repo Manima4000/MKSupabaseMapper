@@ -96,10 +96,10 @@ async function main(): Promise<void> {
 
     try {
       await dispatchWebhook(envelope, (log as Record<string, unknown>).payload_hash as string)
-      // Marca o log original como 'replayed' para não aparecer em futuras execuções
+      // Deleta o log original após o reprocessamento com sucesso
       await supabase
         .from('webhook_logs')
-        .update({ status: 'replayed', processed_at: new Date().toISOString() })
+        .delete()
         .eq('id', log.id)
       processed++
       logger.info({ logId: log.id, event: log.event_type }, 'Webhook reprocessado com sucesso')
