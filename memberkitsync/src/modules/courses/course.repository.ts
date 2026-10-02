@@ -63,13 +63,13 @@ export async function upsertCourse(input: UpsertCourseInput): Promise<Course> {
 export async function deleteOrphanedCourses(knownMkIds: number[]): Promise<number> {
   if (knownMkIds.length === 0) return 0
 
-  const { error, count } = await supabase
-    .from('courses')
-    .delete({ count: 'exact' })
-    .not('mk_id', 'in', `(${knownMkIds.join(',')})`)
+  // Via RPC (fn_delete_orphaned_courses, migration 059): o cascade delete
+  // atinge tabelas grandes (lesson_progress, lesson_ratings) e estoura o
+  // statement_timeout=8s do PostgREST se feito via .delete() direto.
+  const { data, error } = await supabase.rpc('fn_delete_orphaned_courses', { known_mk_ids: knownMkIds })
 
   if (error) throw new SupabaseError('Falha ao deletar courses órfãos', error)
-  return count ?? 0
+  return (data as number) ?? 0
 }
 
 export async function getCourseByMkId(mkId: number): Promise<Course | null> {

@@ -1,0 +1,6402 @@
+[
+  {
+    "classificacao": 1,
+    "nome": "RAFAEL MOREIRA BICHUETTE",
+    "numero_inscricao": "112890-3",
+    "data_nascimento": "06/03/2009",
+    "oed": "BRASÍLIA",
+    "GI": 325
+  },
+  {
+    "classificacao": 2,
+    "nome": "DANILO PINHEIRO COELHO",
+    "numero_inscricao": "102924-3",
+    "data_nascimento": "22/08/2007",
+    "oed": "SÃO PAULO",
+    "GI": 325
+  },
+  {
+    "classificacao": 3,
+    "nome": "PEDRO DE CARVALHO WERMELINGER",
+    "numero_inscricao": "107606-6",
+    "data_nascimento": "18/08/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 320
+  },
+  {
+    "classificacao": 4,
+    "nome": "JUAN VIVAS DE CASTRO FIGUEIRA S",
+    "numero_inscricao": "102595-5",
+    "data_nascimento": "10/08/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 315
+  },
+  {
+    "classificacao": 5,
+    "nome": "NICOLAS COUTO DOVIGO",
+    "numero_inscricao": "102633-3",
+    "data_nascimento": "20/04/2007",
+    "oed": "SÃO PAULO",
+    "GI": 315
+  },
+  {
+    "classificacao": 6,
+    "nome": "RAFAEL TONIOLO CONTE",
+    "numero_inscricao": "102219-9",
+    "data_nascimento": "09/11/2004",
+    "oed": "SÃO PAULO",
+    "GI": 310
+  },
+  {
+    "classificacao": 7,
+    "nome": "PEDRO AUGUSTO ALVES DE ANDRADE",
+    "numero_inscricao": "105585-5",
+    "data_nascimento": "29/04/2003",
+    "oed": "SÃO PAULO",
+    "GI": 305
+  },
+  {
+    "classificacao": 8,
+    "nome": "PEDRO COTTA VIARD",
+    "numero_inscricao": "108226-3",
+    "data_nascimento": "03/03/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 305
+  },
+  {
+    "classificacao": 9,
+    "nome": "TIAGO LIMOEIRO PEREIRA",
+    "numero_inscricao": "112684-4",
+    "data_nascimento": "09/06/2004",
+    "oed": "BRASÍLIA",
+    "GI": 300
+  },
+  {
+    "classificacao": 10,
+    "nome": "LUIGI RISI DE SALLES",
+    "numero_inscricao": "105456-1",
+    "data_nascimento": "13/01/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 300
+  },
+  {
+    "classificacao": 11,
+    "nome": "GUSTAVO DE AGUIAR MEDEIROS",
+    "numero_inscricao": "104729-0",
+    "data_nascimento": "14/06/2005",
+    "oed": "SÃO PAULO",
+    "GI": 300
+  },
+  {
+    "classificacao": 12,
+    "nome": "ANDREY KALEL SOUZA SOARES",
+    "numero_inscricao": "104953-5",
+    "data_nascimento": "24/01/2006",
+    "oed": "SÃO PAULO",
+    "GI": 300
+  },
+  {
+    "classificacao": 13,
+    "nome": "BERNARDO DE ARAÚJO CRAVINHO",
+    "numero_inscricao": "108166-6",
+    "data_nascimento": "11/12/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 300
+  },
+  {
+    "classificacao": 14,
+    "nome": "PEDRO EMIDIO COSTA DOS SANTOS",
+    "numero_inscricao": "102753-9",
+    "data_nascimento": "11/09/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 295
+  },
+  {
+    "classificacao": 15,
+    "nome": "PEDRO HENRIQUE TOMÁS DA ROCHA",
+    "numero_inscricao": "105611-0",
+    "data_nascimento": "26/11/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 295
+  },
+  {
+    "classificacao": 16,
+    "nome": "NICHOLAS ZAGATI DO VALE",
+    "numero_inscricao": "108324-0",
+    "data_nascimento": "21/11/2009",
+    "oed": "BELO HORIZONTE",
+    "GI": 295
+  },
+  {
+    "classificacao": 17,
+    "nome": "MATHEUS SAROLDI HILLMER",
+    "numero_inscricao": "102801-3",
+    "data_nascimento": "20/02/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 295
+  },
+  {
+    "classificacao": 18,
+    "nome": "MAURÍCIO MUNHOZ SOARES MARTINHO",
+    "numero_inscricao": "111672-6",
+    "data_nascimento": "08/11/2007",
+    "oed": "SÃO PAULO",
+    "GI": 290
+  },
+  {
+    "classificacao": 19,
+    "nome": "MATTEO ASCURRA COELHO",
+    "numero_inscricao": "108831-5",
+    "data_nascimento": "09/12/2008",
+    "oed": "PARANAGUÁ",
+    "GI": 290
+  },
+  {
+    "classificacao": 20,
+    "nome": "GUILHERME ALMEIDA GOMES DA SILVA",
+    "numero_inscricao": "102641-3",
+    "data_nascimento": "19/05/2004",
+    "oed": "SÃO PAULO",
+    "GI": 290
+  },
+  {
+    "classificacao": 21,
+    "nome": "JOÃO MANOEL PINHEIRO ROCHA",
+    "numero_inscricao": "104470-0",
+    "data_nascimento": "30/12/2008",
+    "oed": "PORTO ALEGRE",
+    "GI": 290
+  },
+  {
+    "classificacao": 22,
+    "nome": "GABRIEL MARQUES GUEDES",
+    "numero_inscricao": "101244-1",
+    "data_nascimento": "18/05/2006",
+    "oed": "SÃO PAULO",
+    "GI": 285
+  },
+  {
+    "classificacao": 23,
+    "nome": "LUCAS LIMA DE ARAUJO",
+    "numero_inscricao": "100020-5",
+    "data_nascimento": "28/02/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 285
+  },
+  {
+    "classificacao": 24,
+    "nome": "LEONARDO RIOS MÁRMORE CAMPOS",
+    "numero_inscricao": "106951-0",
+    "data_nascimento": "29/10/2006",
+    "oed": "BRASÍLIA",
+    "GI": 285
+  },
+  {
+    "classificacao": 25,
+    "nome": "GUSTAVO GLOBIG FARINA",
+    "numero_inscricao": "108347-7",
+    "data_nascimento": "26/01/2008",
+    "oed": "PORTO ALEGRE",
+    "GI": 285
+  },
+  {
+    "classificacao": 26,
+    "nome": "FILIPE MORAIS GANDINE",
+    "numero_inscricao": "108697-7",
+    "data_nascimento": "09/09/2008",
+    "oed": "PARANAGUÁ",
+    "GI": 285
+  },
+  {
+    "classificacao": 27,
+    "nome": "FELIPE MARQUES DOS SANTOS",
+    "numero_inscricao": "113173-1",
+    "data_nascimento": "17/09/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 285
+  },
+  {
+    "classificacao": 28,
+    "nome": "CARLOS ALBERTO DE SOUZA NETO",
+    "numero_inscricao": "104927-9",
+    "data_nascimento": "18/06/2003",
+    "oed": "SÃO PAULO",
+    "GI": 285
+  },
+  {
+    "classificacao": 29,
+    "nome": "BERNARDO TONHÁ MOREIRA ISIDRO",
+    "numero_inscricao": "112357-1",
+    "data_nascimento": "31/03/2007",
+    "oed": "BRASÍLIA",
+    "GI": 285
+  },
+  {
+    "classificacao": 30,
+    "nome": "DANIEL QUEIROZ SANTOS",
+    "numero_inscricao": "110939-0",
+    "data_nascimento": "07/07/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 285
+  },
+  {
+    "classificacao": 31,
+    "nome": "IGOR SIBIAN DA FONTOURA SOARES",
+    "numero_inscricao": "109483-8",
+    "data_nascimento": "05/08/2005",
+    "oed": "PORTO ALEGRE",
+    "GI": 285
+  },
+  {
+    "classificacao": 32,
+    "nome": "FILIPE YA HU DAI LIMA",
+    "numero_inscricao": "101986-2",
+    "data_nascimento": "09/12/2007",
+    "oed": "SÃO PAULO",
+    "GI": 280
+  },
+  {
+    "classificacao": 33,
+    "nome": "ISADORA COIMBRA GARCIA PORTELLA",
+    "numero_inscricao": "107408-7",
+    "data_nascimento": "20/04/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 280
+  },
+  {
+    "classificacao": 34,
+    "nome": "FELIPE FARIAS BRANDÃO",
+    "numero_inscricao": "108059-1",
+    "data_nascimento": "05/07/2006",
+    "oed": "CORUMBÁ",
+    "GI": 280
+  },
+  {
+    "classificacao": 35,
+    "nome": "GUSTAVO HENRIQUE RIBEIRO DE SALLES",
+    "numero_inscricao": "105069-1",
+    "data_nascimento": "09/09/2005",
+    "oed": "SÃO PAULO",
+    "GI": 280
+  },
+  {
+    "classificacao": 36,
+    "nome": "GUILHERME ESTEVÃO MARTINS PIMENTA",
+    "numero_inscricao": "101774-4",
+    "data_nascimento": "24/05/2006",
+    "oed": "SÃO PAULO",
+    "GI": 280
+  },
+  {
+    "classificacao": 37,
+    "nome": "DAVI LOPES DE CASTRO",
+    "numero_inscricao": "107716-5",
+    "data_nascimento": "23/05/2006",
+    "oed": "PORTO ALEGRE",
+    "GI": 280
+  },
+  {
+    "classificacao": 38,
+    "nome": "ARTHUR ANDERSON MARTINHO",
+    "numero_inscricao": "107214-5",
+    "data_nascimento": "24/05/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 280
+  },
+  {
+    "classificacao": 39,
+    "nome": "GABRIEL GODOI DE ABREU",
+    "numero_inscricao": "108665-1",
+    "data_nascimento": "03/11/2008",
+    "oed": "BRASÍLIA",
+    "GI": 280
+  },
+  {
+    "classificacao": 40,
+    "nome": "FELIPE MARCIEL BONFIM DE ARAÚJO",
+    "numero_inscricao": "104770-8",
+    "data_nascimento": "04/02/2006",
+    "oed": "SÃO PAULO",
+    "GI": 280
+  },
+  {
+    "classificacao": 41,
+    "nome": "DANIEL CARVALHO BITTENCOURT CORREIA",
+    "numero_inscricao": "108031-3",
+    "data_nascimento": "10/01/2009",
+    "oed": "BELO HORIZONTE",
+    "GI": 280
+  },
+  {
+    "classificacao": 42,
+    "nome": "BRAYAN CARDINI CEZAR COSTA",
+    "numero_inscricao": "106894-7",
+    "data_nascimento": "26/04/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 280
+  },
+  {
+    "classificacao": 43,
+    "nome": "PEDRO SANTOS AMARAL DE SOUZA",
+    "numero_inscricao": "109705-1",
+    "data_nascimento": "26/10/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 280
+  },
+  {
+    "classificacao": 44,
+    "nome": "ENZO GOMES COLMENERO",
+    "numero_inscricao": "105457-0",
+    "data_nascimento": "07/08/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 275
+  },
+  {
+    "classificacao": 45,
+    "nome": "FABRICIO FARIAS BRANDAO",
+    "numero_inscricao": "110844-3",
+    "data_nascimento": "25/01/2005",
+    "oed": "CORUMBÁ",
+    "GI": 275
+  },
+  {
+    "classificacao": 46,
+    "nome": "FILIPE AUGUSTO ANTONIO CARNEIRO MAURICIO",
+    "numero_inscricao": "100473-2",
+    "data_nascimento": "15/05/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 275
+  },
+  {
+    "classificacao": 47,
+    "nome": "JOÃO VICTOR FERNANDES OLIVEIRA",
+    "numero_inscricao": "102236-7",
+    "data_nascimento": "03/12/2004",
+    "oed": "SÃO PAULO",
+    "GI": 275
+  },
+  {
+    "classificacao": 48,
+    "nome": "ARTHUR FERREIRA DA SILVA",
+    "numero_inscricao": "109478-2",
+    "data_nascimento": "29/11/2006",
+    "oed": "PORTO ALEGRE",
+    "GI": 275
+  },
+  {
+    "classificacao": 49,
+    "nome": "LUCAS NADAIS DA SILVA RIBEIRO",
+    "numero_inscricao": "101316-1",
+    "data_nascimento": "30/01/2009",
+    "oed": "SÃO PAULO",
+    "GI": 275
+  },
+  {
+    "classificacao": 50,
+    "nome": "PEDRO ARIEL DORNELA PEIXOTO",
+    "numero_inscricao": "103621-6",
+    "data_nascimento": "03/12/2005",
+    "oed": "BELO HORIZONTE",
+    "GI": 275
+  },
+  {
+    "classificacao": 51,
+    "nome": "GABRIEL MENDES DE OLIVEIRA PINHAL",
+    "numero_inscricao": "104943-9",
+    "data_nascimento": "21/07/2005",
+    "oed": "SÃO PAULO",
+    "GI": 275
+  },
+  {
+    "classificacao": 52,
+    "nome": "MURILO HENRIQUE DE BARROS PENHA",
+    "numero_inscricao": "102829-1",
+    "data_nascimento": "27/09/2006",
+    "oed": "SÃO PAULO",
+    "GI": 270
+  },
+  {
+    "classificacao": 53,
+    "nome": "MATHEUS VINÍCIUS BRAGA GOMES",
+    "numero_inscricao": "101248-4",
+    "data_nascimento": "31/03/2007",
+    "oed": "SÃO PAULO",
+    "GI": 270
+  },
+  {
+    "classificacao": 54,
+    "nome": "TIAGO SOUZA PLASTINA",
+    "numero_inscricao": "101723-4",
+    "data_nascimento": "29/09/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 270
+  },
+  {
+    "classificacao": 55,
+    "nome": "FELIPE CASTRO CARDOSO",
+    "numero_inscricao": "102408-0",
+    "data_nascimento": "23/10/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 270
+  },
+  {
+    "classificacao": 56,
+    "nome": "NICOLAS PIZA ARAÚJO FONSECA GUIMARÃES",
+    "numero_inscricao": "106420-9",
+    "data_nascimento": "20/03/2009",
+    "oed": "BRASÍLIA",
+    "GI": 270
+  },
+  {
+    "classificacao": 57,
+    "nome": "DANIEL KENZO ISHIKAWA YORINORI",
+    "numero_inscricao": "106665-0",
+    "data_nascimento": "08/07/2008",
+    "oed": "SÃO PAULO",
+    "GI": 270
+  },
+  {
+    "classificacao": 58,
+    "nome": "LUIS FELIPE APARECIDO COSTA BASTOS",
+    "numero_inscricao": "110684-3",
+    "data_nascimento": "30/03/2007",
+    "oed": "SÃO PAULO",
+    "GI": 270
+  },
+  {
+    "classificacao": 59,
+    "nome": "EDUARDO RODRIGUES TÔRRES",
+    "numero_inscricao": "100796-8",
+    "data_nascimento": "30/08/2007",
+    "oed": "BRASÍLIA",
+    "GI": 270
+  },
+  {
+    "classificacao": 60,
+    "nome": "SALATIEL PORTELA GARONCE",
+    "numero_inscricao": "103200-4",
+    "data_nascimento": "11/12/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 270
+  },
+  {
+    "classificacao": 61,
+    "nome": "GUILHERME CARVALHO COSTA",
+    "numero_inscricao": "111127-1",
+    "data_nascimento": "29/10/2007",
+    "oed": "BRASÍLIA",
+    "GI": 270
+  },
+  {
+    "classificacao": 62,
+    "nome": "MARCOS GABRIEL MARTINS TELES TIANO",
+    "numero_inscricao": "107809-6",
+    "data_nascimento": "03/01/2008",
+    "oed": "BRASÍLIA",
+    "GI": 265
+  },
+  {
+    "classificacao": 63,
+    "nome": "ANA CAROLINA PIRES SOUZA",
+    "numero_inscricao": "103852-9",
+    "data_nascimento": "30/05/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 265
+  },
+  {
+    "classificacao": 64,
+    "nome": "GUILHERME EBERT DE AVILA",
+    "numero_inscricao": "111487-8",
+    "data_nascimento": "08/04/2008",
+    "oed": "FLORIANÓPOLIS",
+    "GI": 265
+  },
+  {
+    "classificacao": 65,
+    "nome": "MARCELO FARIAS VIANA",
+    "numero_inscricao": "102936-6",
+    "data_nascimento": "17/08/2007",
+    "oed": "SÃO PAULO",
+    "GI": 265
+  },
+  {
+    "classificacao": 66,
+    "nome": "MARCELO HENRIQUE RODRIGUES",
+    "numero_inscricao": "102268-2",
+    "data_nascimento": "03/10/2004",
+    "oed": "BELO HORIZONTE",
+    "GI": 265
+  },
+  {
+    "classificacao": 67,
+    "nome": "RICARDO FONSECA OLIVE",
+    "numero_inscricao": "104761-0",
+    "data_nascimento": "17/06/2004",
+    "oed": "SÃO PAULO",
+    "GI": 265
+  },
+  {
+    "classificacao": 68,
+    "nome": "ANDRÉ HENRIQUE MARQUES ENGLER",
+    "numero_inscricao": "102717-6",
+    "data_nascimento": "25/07/2007",
+    "oed": "CORUMBÁ",
+    "GI": 265
+  },
+  {
+    "classificacao": 69,
+    "nome": "MARCUS VINICIUS MONTEIRO FERRAZ",
+    "numero_inscricao": "104926-0",
+    "data_nascimento": "02/12/2007",
+    "oed": "BRASÍLIA",
+    "GI": 265
+  },
+  {
+    "classificacao": 70,
+    "nome": "VALDIR JOSÉ WERMANN JÚNIOR",
+    "numero_inscricao": "113070-4",
+    "data_nascimento": "09/09/2008",
+    "oed": "PORTO ALEGRE",
+    "GI": 265
+  },
+  {
+    "classificacao": 71,
+    "nome": "GABRIEL PAVIN BATISTA",
+    "numero_inscricao": "109837-0",
+    "data_nascimento": "04/11/2007",
+    "oed": "PORTO ALEGRE",
+    "GI": 265
+  },
+  {
+    "classificacao": 72,
+    "nome": "GABRIEL REDON ROSA",
+    "numero_inscricao": "105025-3",
+    "data_nascimento": "17/01/2007",
+    "oed": "SÃO PAULO",
+    "GI": 260
+  },
+  {
+    "classificacao": 73,
+    "nome": "MIGUEL WINTER MATOS",
+    "numero_inscricao": "104481-4",
+    "data_nascimento": "26/08/2008",
+    "oed": "BRASÍLIA",
+    "GI": 260
+  },
+  {
+    "classificacao": 74,
+    "nome": "HENRIQUE TAVARES VIGATO",
+    "numero_inscricao": "101614-3",
+    "data_nascimento": "17/06/2007",
+    "oed": "SÃO PAULO",
+    "GI": 260
+  },
+  {
+    "classificacao": 75,
+    "nome": "LEANDRO MANHÃES PESSANHA",
+    "numero_inscricao": "104383-8",
+    "data_nascimento": "31/10/2006",
+    "oed": "SÃO PAULO",
+    "GI": 260
+  },
+  {
+    "classificacao": 76,
+    "nome": "JOÃO PEDRO DOMINGOS MARQUES",
+    "numero_inscricao": "104141-0",
+    "data_nascimento": "13/11/2006",
+    "oed": "BELO HORIZONTE",
+    "GI": 260
+  },
+  {
+    "classificacao": 77,
+    "nome": "LUCAS BENEDITO CARVALHO",
+    "numero_inscricao": "100216-3",
+    "data_nascimento": "08/05/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 260
+  },
+  {
+    "classificacao": 78,
+    "nome": "LUAN PAVANI DE LIMA",
+    "numero_inscricao": "102694-0",
+    "data_nascimento": "13/06/2006",
+    "oed": "SÃO PAULO",
+    "GI": 260
+  },
+  {
+    "classificacao": 79,
+    "nome": "MARCOS ANTONIO CORDEIRO FARIAS",
+    "numero_inscricao": "103523-0",
+    "data_nascimento": "10/05/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 260
+  },
+  {
+    "classificacao": 80,
+    "nome": "ARTUR COGO DUTRA",
+    "numero_inscricao": "100344-9",
+    "data_nascimento": "18/03/2006",
+    "oed": "PORTO ALEGRE",
+    "GI": 260
+  },
+  {
+    "classificacao": 81,
+    "nome": "VINÍCIUS BRAIDO CARDOSO",
+    "numero_inscricao": "101266-0",
+    "data_nascimento": "07/06/2006",
+    "oed": "PORTO ALEGRE",
+    "GI": 260
+  },
+  {
+    "classificacao": 82,
+    "nome": "JÉSSYCA DE OLIVEIRA DA SILVA",
+    "numero_inscricao": "101223-0",
+    "data_nascimento": "06/12/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 260
+  },
+  {
+    "classificacao": 83,
+    "nome": "LUIS FILIPE MACIEL GOMES",
+    "numero_inscricao": "105247-8",
+    "data_nascimento": "20/06/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 260
+  },
+  {
+    "classificacao": 84,
+    "nome": "THALES FRAGA PADRAO",
+    "numero_inscricao": "108213-2",
+    "data_nascimento": "17/06/2007",
+    "oed": "BELO HORIZONTE",
+    "GI": 255
+  },
+  {
+    "classificacao": 85,
+    "nome": "IGOR QUEIROZ MAIA",
+    "numero_inscricao": "113740-4",
+    "data_nascimento": "28/08/2007",
+    "oed": "SÃO PAULO",
+    "GI": 255
+  },
+  {
+    "classificacao": 86,
+    "nome": "CARLOS RAFAEL DE MELO FERNANDEZ VIDAL",
+    "numero_inscricao": "112337-9",
+    "data_nascimento": "14/01/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 255
+  },
+  {
+    "classificacao": 87,
+    "nome": "MELLKZEDHEKY ALVES RODRIGUES",
+    "numero_inscricao": "102483-0",
+    "data_nascimento": "04/08/2004",
+    "oed": "SÃO PAULO",
+    "GI": 255
+  },
+  {
+    "classificacao": 88,
+    "nome": "RICARDO DA SILVA PINTO",
+    "numero_inscricao": "100031-0",
+    "data_nascimento": "05/05/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 255
+  },
+  {
+    "classificacao": 89,
+    "nome": "PEDRO HENRIQUE AZEVEDO DO BRASIL",
+    "numero_inscricao": "109080-2",
+    "data_nascimento": "07/05/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 255
+  },
+  {
+    "classificacao": 90,
+    "nome": "FELIPE FELIX DE MACHADO CANDAL",
+    "numero_inscricao": "105090-7",
+    "data_nascimento": "07/02/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 255
+  },
+  {
+    "classificacao": 91,
+    "nome": "VINÍCIUS GIL COUTINHO DE BARROS",
+    "numero_inscricao": "107426-3",
+    "data_nascimento": "08/05/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 255
+  },
+  {
+    "classificacao": 92,
+    "nome": "RAFAEL MOTA SCHIAVO",
+    "numero_inscricao": "104946-3",
+    "data_nascimento": "06/12/2007",
+    "oed": "BRASÍLIA",
+    "GI": 255
+  },
+  {
+    "classificacao": 93,
+    "nome": "LAURA CERQUEIRA FAHEL",
+    "numero_inscricao": "104442-7",
+    "data_nascimento": "26/08/2004",
+    "oed": "SÃO PAULO",
+    "GI": 255
+  },
+  {
+    "classificacao": 94,
+    "nome": "RAPHAEL ZILIO MARTINS DE AMORIM",
+    "numero_inscricao": "102626-1",
+    "data_nascimento": "09/02/2007",
+    "oed": "SÃO PAULO",
+    "GI": 250
+  },
+  {
+    "classificacao": 95,
+    "nome": "JÓSHUA BRUNO PAZ PEREIRA",
+    "numero_inscricao": "105047-2",
+    "data_nascimento": "16/12/2005",
+    "oed": "SÃO PAULO",
+    "GI": 250
+  },
+  {
+    "classificacao": 96,
+    "nome": "ITALO GUSTAVO CINTRA",
+    "numero_inscricao": "104744-1",
+    "data_nascimento": "09/01/2005",
+    "oed": "SÃO PAULO",
+    "GI": 250
+  },
+  {
+    "classificacao": 97,
+    "nome": "LARA LUÍZA DE OLIVEIRA MENEZES",
+    "numero_inscricao": "101215-0",
+    "data_nascimento": "11/12/2004",
+    "oed": "SÃO PAULO",
+    "GI": 250
+  },
+  {
+    "classificacao": 98,
+    "nome": "LEONARDO ZACHI CHIARADIA",
+    "numero_inscricao": "104934-0",
+    "data_nascimento": "24/09/2003",
+    "oed": "SÃO PAULO",
+    "GI": 250
+  },
+  {
+    "classificacao": 99,
+    "nome": "GABRIEL MILLS LACERDA",
+    "numero_inscricao": "110285-0",
+    "data_nascimento": "12/03/2003",
+    "oed": "RIO DE JANEIRO",
+    "GI": 250
+  },
+  {
+    "classificacao": 100,
+    "nome": "ANDRÉ LUIZ MELO DE ANDRADE",
+    "numero_inscricao": "106359-9",
+    "data_nascimento": "05/04/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 250
+  },
+  {
+    "classificacao": 101,
+    "nome": "GABRIEL RODRIGUES SOARES",
+    "numero_inscricao": "113336-6",
+    "data_nascimento": "04/05/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 250
+  },
+  {
+    "classificacao": 102,
+    "nome": "MIGUEL CARVALHO PEREIRA MACEDO DE CARVALHO",
+    "numero_inscricao": "105319-8",
+    "data_nascimento": "08/02/2004",
+    "oed": "RIO DE JANEIRO",
+    "GI": 250
+  },
+  {
+    "classificacao": 103,
+    "nome": "ARTHUR DE CASTRO LACERDA",
+    "numero_inscricao": "102503-1",
+    "data_nascimento": "04/02/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 250
+  },
+  {
+    "classificacao": 104,
+    "nome": "VICENTE DIER OLIVEIRA CAMPELLO",
+    "numero_inscricao": "107767-5",
+    "data_nascimento": "11/12/2007",
+    "oed": "PORTO ALEGRE",
+    "GI": 250
+  },
+  {
+    "classificacao": 105,
+    "nome": "ARTHUR FERRO TEIXEIRA",
+    "numero_inscricao": "106802-3",
+    "data_nascimento": "19/12/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 250
+  },
+  {
+    "classificacao": 106,
+    "nome": "FELIPE DE ALMEIDA DIAS",
+    "numero_inscricao": "100449-2",
+    "data_nascimento": "17/03/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 250
+  },
+  {
+    "classificacao": 107,
+    "nome": "MARCUS VINICIUS SALES DE ALMEIDA",
+    "numero_inscricao": "109688-4",
+    "data_nascimento": "16/06/2009",
+    "oed": "PARANAGUÁ",
+    "GI": 250
+  },
+  {
+    "classificacao": 108,
+    "nome": "PEDRO HENRIQUE BEZERRA OLIVEIRA",
+    "numero_inscricao": "113037-6",
+    "data_nascimento": "27/04/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 245
+  },
+  {
+    "classificacao": 109,
+    "nome": "EWERTON FARINELLI DE MELO SILVA",
+    "numero_inscricao": "106137-4",
+    "data_nascimento": "22/01/2003",
+    "oed": "RIO DE JANEIRO",
+    "GI": 245
+  },
+  {
+    "classificacao": 110,
+    "nome": "HÉRCULES DO BOMFIM BORGES SILVA",
+    "numero_inscricao": "101046-2",
+    "data_nascimento": "29/04/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 245
+  },
+  {
+    "classificacao": 111,
+    "nome": "GABRIEL GREGÓRIO DE OLIVEIRA",
+    "numero_inscricao": "108262-6",
+    "data_nascimento": "26/03/2005",
+    "oed": "PARANAGUÁ",
+    "GI": 245
+  },
+  {
+    "classificacao": 112,
+    "nome": "ABNER DA SILVA TAVARES FELIX",
+    "numero_inscricao": "108084-0",
+    "data_nascimento": "21/06/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 245
+  },
+  {
+    "classificacao": 113,
+    "nome": "GIANN LUKA RODRIGUES GARCIA",
+    "numero_inscricao": "109210-3",
+    "data_nascimento": "13/02/2008",
+    "oed": "BELO HORIZONTE",
+    "GI": 245
+  },
+  {
+    "classificacao": 114,
+    "nome": "ROGER COUTINHO LIMA",
+    "numero_inscricao": "107881-1",
+    "data_nascimento": "28/01/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 245
+  },
+  {
+    "classificacao": 115,
+    "nome": "THULIO HENRIQUE ANDRADE MOREIRA",
+    "numero_inscricao": "102516-2",
+    "data_nascimento": "19/12/2005",
+    "oed": "SÃO PAULO",
+    "GI": 245
+  },
+  {
+    "classificacao": 116,
+    "nome": "FELIPE SOUZA SPERANDIO",
+    "numero_inscricao": "101545-8",
+    "data_nascimento": "15/11/2006",
+    "oed": "BELO HORIZONTE",
+    "GI": 245
+  },
+  {
+    "classificacao": 117,
+    "nome": "KAUÃ ANDERSON DA SILVA LISBOA",
+    "numero_inscricao": "112411-0",
+    "data_nascimento": "28/02/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 245
+  },
+  {
+    "classificacao": 118,
+    "nome": "APOLLO DUARTE CORREA MARQUES",
+    "numero_inscricao": "100186-5",
+    "data_nascimento": "17/01/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 245
+  },
+  {
+    "classificacao": 119,
+    "nome": "FÁBIO HENRIC DOS ANJOS CORREIA",
+    "numero_inscricao": "103247-7",
+    "data_nascimento": "16/07/2005",
+    "oed": "SÃO PAULO",
+    "GI": 245
+  },
+  {
+    "classificacao": 120,
+    "nome": "LUCAS AUGUSTO RODRIGUES PEREIRA",
+    "numero_inscricao": "101398-9",
+    "data_nascimento": "28/09/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 245
+  },
+  {
+    "classificacao": 121,
+    "nome": "HENRY KUHBAUCHE YAMADA",
+    "numero_inscricao": "104497-0",
+    "data_nascimento": "24/01/2006",
+    "oed": "SÃO PAULO",
+    "GI": 245
+  },
+  {
+    "classificacao": 122,
+    "nome": "GUILHERME WELLINGTON DE OLIVEIRA VELOSO",
+    "numero_inscricao": "104074-1",
+    "data_nascimento": "26/03/2007",
+    "oed": "SÃO PAULO",
+    "GI": 245
+  },
+  {
+    "classificacao": 123,
+    "nome": "LUANA LUIZA AMORIM CARTAXO",
+    "numero_inscricao": "102382-9",
+    "data_nascimento": "10/07/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 245
+  },
+  {
+    "classificacao": 124,
+    "nome": "WESLEY SANTANA LEITE",
+    "numero_inscricao": "107632-2",
+    "data_nascimento": "24/02/2003",
+    "oed": "RIO DE JANEIRO",
+    "GI": 245
+  },
+  {
+    "classificacao": 125,
+    "nome": "RAFAEL MAIA REED MAYR",
+    "numero_inscricao": "107899-3",
+    "data_nascimento": "17/12/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 240
+  },
+  {
+    "classificacao": 126,
+    "nome": "LUIZ FELIPE NERY BARBOSA",
+    "numero_inscricao": "106483-1",
+    "data_nascimento": "25/03/2004",
+    "oed": "RIO DE JANEIRO",
+    "GI": 240
+  },
+  {
+    "classificacao": 127,
+    "nome": "CAROLINA RODRIGUES BUENO DIAS",
+    "numero_inscricao": "100257-7",
+    "data_nascimento": "30/11/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 240
+  },
+  {
+    "classificacao": 128,
+    "nome": "TASSO ROCHA LUGON",
+    "numero_inscricao": "112715-0",
+    "data_nascimento": "28/11/2007",
+    "oed": "VITÓRIA",
+    "GI": 240
+  },
+  {
+    "classificacao": 129,
+    "nome": "ARTUR NANNI",
+    "numero_inscricao": "101238-8",
+    "data_nascimento": "19/12/2008",
+    "oed": "SÃO PAULO",
+    "GI": 240
+  },
+  {
+    "classificacao": 130,
+    "nome": "GABRIEL PALÁCIO DE CASTRO",
+    "numero_inscricao": "104514-7",
+    "data_nascimento": "09/04/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 240
+  },
+  {
+    "classificacao": 131,
+    "nome": "LUCAS LEANDRO DO CARMO GIANGIARULO",
+    "numero_inscricao": "109408-8",
+    "data_nascimento": "15/06/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 240
+  },
+  {
+    "classificacao": 132,
+    "nome": "VICTOR FRISON FRANCO",
+    "numero_inscricao": "107516-0",
+    "data_nascimento": "03/05/2007",
+    "oed": "VITÓRIA",
+    "GI": 235
+  },
+  {
+    "classificacao": 133,
+    "nome": "HENRY FERNANDES DA SILVA",
+    "numero_inscricao": "101618-6",
+    "data_nascimento": "09/12/2006",
+    "oed": "SÃO PAULO",
+    "GI": 235
+  },
+  {
+    "classificacao": 134,
+    "nome": "JULIA FERREIRA DE LIMA",
+    "numero_inscricao": "102741-6",
+    "data_nascimento": "07/03/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 235
+  },
+  {
+    "classificacao": 135,
+    "nome": "ALESSANDRO VINICIUS BRANDÃO DA SILVA",
+    "numero_inscricao": "106284-4",
+    "data_nascimento": "04/05/2006",
+    "oed": "SÃO PAULO",
+    "GI": 235
+  },
+  {
+    "classificacao": 136,
+    "nome": "JOÃO LUCAS SOUZA FRANÇA",
+    "numero_inscricao": "108259-7",
+    "data_nascimento": "10/04/2007",
+    "oed": "BRASÍLIA",
+    "GI": 235
+  },
+  {
+    "classificacao": 137,
+    "nome": "PEDRO ESQUIVEL GOMES PEDROSA",
+    "numero_inscricao": "101121-1",
+    "data_nascimento": "26/10/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 235
+  },
+  {
+    "classificacao": 138,
+    "nome": "LUCAS COSTA VIEIRA COUTINHO",
+    "numero_inscricao": "108322-3",
+    "data_nascimento": "12/11/2008",
+    "oed": "BRASÍLIA",
+    "GI": 235
+  },
+  {
+    "classificacao": 139,
+    "nome": "LUIZ GUILHERME IBRAHIM PIRES",
+    "numero_inscricao": "100690-6",
+    "data_nascimento": "19/05/2003",
+    "oed": "SÃO PAULO",
+    "GI": 235
+  },
+  {
+    "classificacao": 140,
+    "nome": "ALISSON IAN LEMES GUERRA",
+    "numero_inscricao": "101495-7",
+    "data_nascimento": "11/11/2009",
+    "oed": "BRASÍLIA",
+    "GI": 230
+  },
+  {
+    "classificacao": 141,
+    "nome": "VINICIUS VASCONCELLOS THURLER",
+    "numero_inscricao": "102258-6",
+    "data_nascimento": "19/01/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 230
+  },
+  {
+    "classificacao": 142,
+    "nome": "JULIA DARK DA SILVA",
+    "numero_inscricao": "102134-8",
+    "data_nascimento": "10/03/2007",
+    "oed": "BELO HORIZONTE",
+    "GI": 230
+  },
+  {
+    "classificacao": 143,
+    "nome": "JOSÉ PAULO CUNHA KAFA",
+    "numero_inscricao": "105082-7",
+    "data_nascimento": "29/04/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 230
+  },
+  {
+    "classificacao": 144,
+    "nome": "JOÃO PEDRO LEAL COSTA",
+    "numero_inscricao": "109262-1",
+    "data_nascimento": "19/08/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 230
+  },
+  {
+    "classificacao": 145,
+    "nome": "NICOLAS ARCKERMAN",
+    "numero_inscricao": "106738-9",
+    "data_nascimento": "15/08/2009",
+    "oed": "BELO HORIZONTE",
+    "GI": 225
+  },
+  {
+    "classificacao": 146,
+    "nome": "GUILHERME DA SILVA AZEVEDO",
+    "numero_inscricao": "110261-5",
+    "data_nascimento": "04/12/2003",
+    "oed": "RIO DE JANEIRO",
+    "GI": 225
+  },
+  {
+    "classificacao": 147,
+    "nome": "DAVI ROBERTO TARGINO",
+    "numero_inscricao": "104905-0",
+    "data_nascimento": "30/03/2009",
+    "oed": "BRASÍLIA",
+    "GI": 225
+  },
+  {
+    "classificacao": 148,
+    "nome": "JOSÉ RICARDO SANTOS DE ALMEIDA JUNIOR",
+    "numero_inscricao": "105276-9",
+    "data_nascimento": "23/05/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 149,
+    "nome": "PEDRO NOLASCO DE ASSIS",
+    "numero_inscricao": "109018-3",
+    "data_nascimento": "21/09/2009",
+    "oed": "BELO HORIZONTE",
+    "GI": 220
+  },
+  {
+    "classificacao": 150,
+    "nome": "JOÃO PEDRO DA CUNHA IANZER",
+    "numero_inscricao": "100652-7",
+    "data_nascimento": "26/12/2005",
+    "oed": "PORTO ALEGRE",
+    "GI": 220
+  },
+  {
+    "classificacao": 151,
+    "nome": "CARLOS EDUARDO OKAMOTO SCHALCH",
+    "numero_inscricao": "108950-2",
+    "data_nascimento": "26/02/2008",
+    "oed": "SÃO PAULO",
+    "GI": 220
+  },
+  {
+    "classificacao": 152,
+    "nome": "PEDRO CHIMENTO DOS REIS",
+    "numero_inscricao": "108081-5",
+    "data_nascimento": "30/06/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 153,
+    "nome": "LANAY DE ALCANTARA LINS",
+    "numero_inscricao": "107996-1",
+    "data_nascimento": "16/06/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 154,
+    "nome": "ARTUR MOURA LIMA",
+    "numero_inscricao": "103333-0",
+    "data_nascimento": "09/04/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 155,
+    "nome": "ALEXANDRE VIEIRA DO AMARAL",
+    "numero_inscricao": "109250-9",
+    "data_nascimento": "15/06/2007",
+    "oed": "BRASÍLIA",
+    "GI": 220
+  },
+  {
+    "classificacao": 156,
+    "nome": "MATHEUS DE OLIVEIRA TOMAZONI",
+    "numero_inscricao": "101341-0",
+    "data_nascimento": "12/09/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 157,
+    "nome": "GUILHERME DA SILVA ESTEVES",
+    "numero_inscricao": "100620-1",
+    "data_nascimento": "03/01/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 158,
+    "nome": "LUCAS MAKOSKI GUIMARÃES",
+    "numero_inscricao": "103157-0",
+    "data_nascimento": "08/10/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 159,
+    "nome": "FILIPE MESSIAS LOPES SANTOS",
+    "numero_inscricao": "108272-2",
+    "data_nascimento": "09/08/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 160,
+    "nome": "KAUÃ TELES PEREIRA DE PAIVA",
+    "numero_inscricao": "101427-9",
+    "data_nascimento": "17/12/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 161,
+    "nome": "JUAN AMORIM BARBOSA",
+    "numero_inscricao": "104270-4",
+    "data_nascimento": "09/09/2004",
+    "oed": "SÃO PAULO",
+    "GI": 210
+  },
+  {
+    "classificacao": 162,
+    "nome": "PEDRO PAIVA MENNA",
+    "numero_inscricao": "112240-5",
+    "data_nascimento": "28/01/2009",
+    "oed": "BRASÍLIA",
+    "GI": 285
+  },
+  {
+    "classificacao": 163,
+    "nome": "JOÃO TEIXEIRA DE FREITAS CHIARI COSTA",
+    "numero_inscricao": "113259-0",
+    "data_nascimento": "01/10/2004",
+    "oed": "BELO HORIZONTE",
+    "GI": 285
+  },
+  {
+    "classificacao": 164,
+    "nome": "GIOVANNI SIMAS DAHMER",
+    "numero_inscricao": "101136-9",
+    "data_nascimento": "23/09/2006",
+    "oed": "SÃO PAULO",
+    "GI": 280
+  },
+  {
+    "classificacao": 165,
+    "nome": "DAVI MICAEL DA ROSA",
+    "numero_inscricao": "109863-6",
+    "data_nascimento": "05/10/2006",
+    "oed": "PORTO ALEGRE",
+    "GI": 280
+  },
+  {
+    "classificacao": 166,
+    "nome": "SERGIO HENRIQUE GOMES ARAUJO MONTEIRO",
+    "numero_inscricao": "110608-5",
+    "data_nascimento": "17/12/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 275
+  },
+  {
+    "classificacao": 167,
+    "nome": "THIAGO BRASILEIRO DE SOUSA",
+    "numero_inscricao": "104746-8",
+    "data_nascimento": "27/12/2005",
+    "oed": "SÃO PAULO",
+    "GI": 270
+  },
+  {
+    "classificacao": 168,
+    "nome": "ANDRÉ DURAN NEGRÃO",
+    "numero_inscricao": "103717-1",
+    "data_nascimento": "29/01/2008",
+    "oed": "BRASÍLIA",
+    "GI": 270
+  },
+  {
+    "classificacao": 169,
+    "nome": "VENÂNCIO GAU ABREU E LIMA",
+    "numero_inscricao": "102802-1",
+    "data_nascimento": "26/05/2005",
+    "oed": "SÃO PAULO",
+    "GI": 270
+  },
+  {
+    "classificacao": 170,
+    "nome": "JOSÉ FLÁVIO CEDRINHO NETO",
+    "numero_inscricao": "104743-3",
+    "data_nascimento": "06/07/2006",
+    "oed": "SÃO PAULO",
+    "GI": 265
+  },
+  {
+    "classificacao": 171,
+    "nome": "THIAGO MARTINS DE OLIVEIRA PUPO",
+    "numero_inscricao": "104030-3",
+    "data_nascimento": "20/10/2007",
+    "oed": "SÃO PAULO",
+    "GI": 265
+  },
+  {
+    "classificacao": 172,
+    "nome": "DANIEL ARAUJO DANTAS",
+    "numero_inscricao": "103985-5",
+    "data_nascimento": "02/05/2007",
+    "oed": "BELO HORIZONTE",
+    "GI": 265
+  },
+  {
+    "classificacao": 173,
+    "nome": "GUILHERME REBOUÇAS DE ARAÚJO SENA ROCHA",
+    "numero_inscricao": "102772-3",
+    "data_nascimento": "24/10/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 265
+  },
+  {
+    "classificacao": 174,
+    "nome": "ALESSANDRO GENARI FERNANDES DA SILVA",
+    "numero_inscricao": "104976-2",
+    "data_nascimento": "28/06/2004",
+    "oed": "SÃO PAULO",
+    "GI": 265
+  },
+  {
+    "classificacao": 175,
+    "nome": "DAVI DE AGUIAR FEITOSA LIMA",
+    "numero_inscricao": "101036-6",
+    "data_nascimento": "21/04/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 265
+  },
+  {
+    "classificacao": 176,
+    "nome": "ERICK MATOS DA CONCEIÇÃO",
+    "numero_inscricao": "106528-7",
+    "data_nascimento": "12/08/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 265
+  },
+  {
+    "classificacao": 177,
+    "nome": "LUCAS ANDRÉ BASTOS DA COSTA",
+    "numero_inscricao": "112399-3",
+    "data_nascimento": "20/10/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 265
+  },
+  {
+    "classificacao": 178,
+    "nome": "RYAN DE SOUSA FRANÇA",
+    "numero_inscricao": "101982-0",
+    "data_nascimento": "01/05/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 265
+  },
+  {
+    "classificacao": 179,
+    "nome": "NATALIA DA SILVA GOMES ANDRADE",
+    "numero_inscricao": "109541-9",
+    "data_nascimento": "09/12/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 265
+  },
+  {
+    "classificacao": 180,
+    "nome": "VICENTE HEPP",
+    "numero_inscricao": "109069-3",
+    "data_nascimento": "16/04/2009",
+    "oed": "PORTO ALEGRE",
+    "GI": 265
+  },
+  {
+    "classificacao": 181,
+    "nome": "HENRIQUE MARTINS DE PAIVA",
+    "numero_inscricao": "109064-2",
+    "data_nascimento": "01/12/2006",
+    "oed": "BELO HORIZONTE",
+    "GI": 260
+  },
+  {
+    "classificacao": 182,
+    "nome": "MATEUS MARQUES ARAUJO",
+    "numero_inscricao": "107980-6",
+    "data_nascimento": "05/09/2007",
+    "oed": "BELO HORIZONTE",
+    "GI": 260
+  },
+  {
+    "classificacao": 183,
+    "nome": "SAMUEL OLIVEIRA BENEVIDES BARROS",
+    "numero_inscricao": "107555-7",
+    "data_nascimento": "28/06/2006",
+    "oed": "VITÓRIA",
+    "GI": 260
+  },
+  {
+    "classificacao": 184,
+    "nome": "LEONARDO ROCHA KOPKE",
+    "numero_inscricao": "102684-3",
+    "data_nascimento": "30/07/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 260
+  },
+  {
+    "classificacao": 185,
+    "nome": "FELIPE JEOVA FERREIRA SARDINHA",
+    "numero_inscricao": "104765-2",
+    "data_nascimento": "21/04/2003",
+    "oed": "RIO DE JANEIRO",
+    "GI": 260
+  },
+  {
+    "classificacao": 186,
+    "nome": "BRUNO WEIRICH BAUER",
+    "numero_inscricao": "112012-7",
+    "data_nascimento": "04/05/2006",
+    "oed": "PORTO ALEGRE",
+    "GI": 260
+  },
+  {
+    "classificacao": 187,
+    "nome": "ERIC FRANCISCO DA SILVA",
+    "numero_inscricao": "110669-1",
+    "data_nascimento": "31/12/2007",
+    "oed": "BRASÍLIA",
+    "GI": 260
+  },
+  {
+    "classificacao": 188,
+    "nome": "ALEXANDRE CAMPOS LESSA BARBOSA",
+    "numero_inscricao": "101840-5",
+    "data_nascimento": "24/06/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 260
+  },
+  {
+    "classificacao": 189,
+    "nome": "EDUARDO GONÇALVES CRESPO DE MELO",
+    "numero_inscricao": "109088-8",
+    "data_nascimento": "23/12/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 260
+  },
+  {
+    "classificacao": 190,
+    "nome": "HUGO FABIANO CORREA MACHADO",
+    "numero_inscricao": "100738-6",
+    "data_nascimento": "25/03/2004",
+    "oed": "RIO DE JANEIRO",
+    "GI": 260
+  },
+  {
+    "classificacao": 191,
+    "nome": "ROBINSON VAGNER BISPO JUNIOR",
+    "numero_inscricao": "108695-0",
+    "data_nascimento": "03/12/2004",
+    "oed": "SÃO PAULO",
+    "GI": 260
+  },
+  {
+    "classificacao": 192,
+    "nome": "PEDRO HENRIQUE PINTO DE OLIVEIRA",
+    "numero_inscricao": "102557-6",
+    "data_nascimento": "26/03/2006",
+    "oed": "BELO HORIZONTE",
+    "GI": 260
+  },
+  {
+    "classificacao": 193,
+    "nome": "LUCAS BLANCO AGUILAR DIAS",
+    "numero_inscricao": "101770-1",
+    "data_nascimento": "07/07/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 260
+  },
+  {
+    "classificacao": 194,
+    "nome": "MIGUEL CLAUDIO FERRO DE SÁ FERREIRA VASCONCELOS",
+    "numero_inscricao": "102978-8",
+    "data_nascimento": "30/10/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 255
+  },
+  {
+    "classificacao": 195,
+    "nome": "MATHEUS AUGUSTO MORAIS LOUZADA",
+    "numero_inscricao": "108053-2",
+    "data_nascimento": "18/06/2007",
+    "oed": "BRASÍLIA",
+    "GI": 255
+  },
+  {
+    "classificacao": 196,
+    "nome": "ITALO MATHIAS MAZEI BELLO",
+    "numero_inscricao": "109092-5",
+    "data_nascimento": "10/07/2007",
+    "oed": "CUIABÁ",
+    "GI": 255
+  },
+  {
+    "classificacao": 197,
+    "nome": "LUCAS BAPTISTA LEAL",
+    "numero_inscricao": "101129-7",
+    "data_nascimento": "15/06/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 255
+  },
+  {
+    "classificacao": 198,
+    "nome": "EMMANUEL ANTONIO DE OLIVEIRA CALUNGA",
+    "numero_inscricao": "100036-0",
+    "data_nascimento": "20/02/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 255
+  },
+  {
+    "classificacao": 199,
+    "nome": "JOSÉ EDUARDO FERNANDES ROCHA",
+    "numero_inscricao": "107921-6",
+    "data_nascimento": "06/02/2003",
+    "oed": "BELO HORIZONTE",
+    "GI": 255
+  },
+  {
+    "classificacao": 200,
+    "nome": "LUIGI ALANIS PERONIO",
+    "numero_inscricao": "113354-2",
+    "data_nascimento": "25/06/2004",
+    "oed": "PORTO ALEGRE",
+    "GI": 255
+  },
+  {
+    "classificacao": 201,
+    "nome": "LORENZO BALLIN STOCO",
+    "numero_inscricao": "103088-5",
+    "data_nascimento": "29/12/2008",
+    "oed": "PARANAGUÁ",
+    "GI": 250
+  },
+  {
+    "classificacao": 202,
+    "nome": "LEONARDO DE OLIVEIRA BOENO",
+    "numero_inscricao": "106011-0",
+    "data_nascimento": "29/04/2008",
+    "oed": "PORTO ALEGRE",
+    "GI": 250
+  },
+  {
+    "classificacao": 203,
+    "nome": "THÉO BARRETO TELES",
+    "numero_inscricao": "103282-1",
+    "data_nascimento": "09/03/2004",
+    "oed": "RIO DE JANEIRO",
+    "GI": 250
+  },
+  {
+    "classificacao": 204,
+    "nome": "GUSTAVO SABBATINO DANTAS DA SILVA",
+    "numero_inscricao": "105080-0",
+    "data_nascimento": "18/08/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 250
+  },
+  {
+    "classificacao": 205,
+    "nome": "GUILHERME OLIVEIRA GUATIMOSIM",
+    "numero_inscricao": "100576-0",
+    "data_nascimento": "18/03/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 250
+  },
+  {
+    "classificacao": 206,
+    "nome": "HENRIQUE PARENTE DE ALCANTARA",
+    "numero_inscricao": "101287-1",
+    "data_nascimento": "11/07/2005",
+    "oed": "SÃO PAULO",
+    "GI": 250
+  },
+  {
+    "classificacao": 207,
+    "nome": "JOÃO PEDRO ESPINOSA GOMES NETTO",
+    "numero_inscricao": "102959-3",
+    "data_nascimento": "12/08/2006",
+    "oed": "SÃO PAULO",
+    "GI": 250
+  },
+  {
+    "classificacao": 208,
+    "nome": "ARTHUR DA SILVA MAIA",
+    "numero_inscricao": "104583-3",
+    "data_nascimento": "24/07/2006",
+    "oed": "SÃO PAULO",
+    "GI": 250
+  },
+  {
+    "classificacao": 209,
+    "nome": "ARTHUR PEREIRA LEITE DIAS",
+    "numero_inscricao": "107692-0",
+    "data_nascimento": "16/12/2007",
+    "oed": "BELO HORIZONTE",
+    "GI": 250
+  },
+  {
+    "classificacao": 210,
+    "nome": "JOAO AUGUSTO MATOS DE BARROS",
+    "numero_inscricao": "101376-0",
+    "data_nascimento": "22/09/2003",
+    "oed": "RIO DE JANEIRO",
+    "GI": 250
+  },
+  {
+    "classificacao": 211,
+    "nome": "BERNNARDO NIEVIEROWSKI MACEDO",
+    "numero_inscricao": "105219-5",
+    "data_nascimento": "16/09/2005",
+    "oed": "PORTO ALEGRE",
+    "GI": 250
+  },
+  {
+    "classificacao": 212,
+    "nome": "KAIO LUCAS MIRANDA DE ALMEIDA",
+    "numero_inscricao": "100308-6",
+    "data_nascimento": "23/05/2008",
+    "oed": "BELO HORIZONTE",
+    "GI": 250
+  },
+  {
+    "classificacao": 213,
+    "nome": "GABRIELA RICARTES SALAZAR",
+    "numero_inscricao": "101260-1",
+    "data_nascimento": "28/11/2006",
+    "oed": "SÃO PAULO",
+    "GI": 250
+  },
+  {
+    "classificacao": 214,
+    "nome": "GABRIEL FROZI MATUELLA",
+    "numero_inscricao": "109898-6",
+    "data_nascimento": "25/11/2007",
+    "oed": "PORTO ALEGRE",
+    "GI": 250
+  },
+  {
+    "classificacao": 215,
+    "nome": "LUIZ GUILHERME DA SILVA ROSA",
+    "numero_inscricao": "101290-0",
+    "data_nascimento": "19/10/2004",
+    "oed": "SÃO PAULO",
+    "GI": 245
+  },
+  {
+    "classificacao": 216,
+    "nome": "GUSTAVO DE SOUZA",
+    "numero_inscricao": "101218-5",
+    "data_nascimento": "13/04/2007",
+    "oed": "SÃO PAULO",
+    "GI": 245
+  },
+  {
+    "classificacao": 217,
+    "nome": "PEDRO DIAS GAIER",
+    "numero_inscricao": "101285-5",
+    "data_nascimento": "03/06/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 245
+  },
+  {
+    "classificacao": 218,
+    "nome": "VITOR ANSOLIN PISSININ",
+    "numero_inscricao": "113692-0",
+    "data_nascimento": "19/11/2007",
+    "oed": "PORTO ALEGRE",
+    "GI": 245
+  },
+  {
+    "classificacao": 219,
+    "nome": "IAGO COSTA DE SOUSA",
+    "numero_inscricao": "113233-9",
+    "data_nascimento": "22/09/2005",
+    "oed": "BRASÍLIA",
+    "GI": 245
+  },
+  {
+    "classificacao": 220,
+    "nome": "RALPH ALVES RIGOTTI FILHO",
+    "numero_inscricao": "106327-3",
+    "data_nascimento": "07/04/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 245
+  },
+  {
+    "classificacao": 221,
+    "nome": "VINICIUS DE SOUSA NUNES",
+    "numero_inscricao": "101995-0",
+    "data_nascimento": "07/04/2007",
+    "oed": "SÃO PAULO",
+    "GI": 245
+  },
+  {
+    "classificacao": 222,
+    "nome": "FELIPE PRUDENCIO MOURA",
+    "numero_inscricao": "107583-0",
+    "data_nascimento": "21/10/2006",
+    "oed": "VITÓRIA",
+    "GI": 245
+  },
+  {
+    "classificacao": 223,
+    "nome": "IAGO DINIZ DE SOUSA",
+    "numero_inscricao": "104421-6",
+    "data_nascimento": "20/11/2007",
+    "oed": "BRASÍLIA",
+    "GI": 245
+  },
+  {
+    "classificacao": 224,
+    "nome": "DANIEL TEIXEIRA DE LIMA",
+    "numero_inscricao": "102849-4",
+    "data_nascimento": "19/09/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 245
+  },
+  {
+    "classificacao": 225,
+    "nome": "MATHEUS SOARES FRANCHIN",
+    "numero_inscricao": "104580-9",
+    "data_nascimento": "10/01/2008",
+    "oed": "SÃO PAULO",
+    "GI": 245
+  },
+  {
+    "classificacao": 226,
+    "nome": "LUIS PEDRO FERREIRA SILVA",
+    "numero_inscricao": "101910-9",
+    "data_nascimento": "17/09/2005",
+    "oed": "BRASÍLIA",
+    "GI": 245
+  },
+  {
+    "classificacao": 227,
+    "nome": "SAMUEL DOS REIS XAVIER",
+    "numero_inscricao": "104945-5",
+    "data_nascimento": "06/06/2006",
+    "oed": "SÃO PAULO",
+    "GI": 245
+  },
+  {
+    "classificacao": 228,
+    "nome": "MURILO KENJI SANTOS KOSEKI",
+    "numero_inscricao": "104983-4",
+    "data_nascimento": "11/01/2008",
+    "oed": "SÃO PAULO",
+    "GI": 245
+  },
+  {
+    "classificacao": 229,
+    "nome": "RICARDO XAVIER MELO DE LIRA",
+    "numero_inscricao": "104486-5",
+    "data_nascimento": "17/03/2004",
+    "oed": "RIO DE JANEIRO",
+    "GI": 245
+  },
+  {
+    "classificacao": 230,
+    "nome": "LUCAS TONIOLO TECHE",
+    "numero_inscricao": "113151-2",
+    "data_nascimento": "23/08/2007",
+    "oed": "BRASÍLIA",
+    "GI": 245
+  },
+  {
+    "classificacao": 231,
+    "nome": "JOÃO PEDRO BARBOSA",
+    "numero_inscricao": "103825-4",
+    "data_nascimento": "11/04/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 245
+  },
+  {
+    "classificacao": 232,
+    "nome": "DANIEL JORGE NOBRE LAGARES",
+    "numero_inscricao": "110221-0",
+    "data_nascimento": "09/08/2008",
+    "oed": "BRASÍLIA",
+    "GI": 245
+  },
+  {
+    "classificacao": 233,
+    "nome": "EDUARDO ALMEIDA KERN",
+    "numero_inscricao": "108318-6",
+    "data_nascimento": "01/01/2007",
+    "oed": "PORTO ALEGRE",
+    "GI": 240
+  },
+  {
+    "classificacao": 234,
+    "nome": "PEDRO VERGUEIRO BORGES PEREIRA",
+    "numero_inscricao": "104386-2",
+    "data_nascimento": "18/10/2006",
+    "oed": "SÃO PAULO",
+    "GI": 240
+  },
+  {
+    "classificacao": 235,
+    "nome": "RUAN FURTADO DELGADO",
+    "numero_inscricao": "104351-2",
+    "data_nascimento": "06/02/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 240
+  },
+  {
+    "classificacao": 236,
+    "nome": "JOVIANO JOSÉ DOS SANTOS",
+    "numero_inscricao": "101235-3",
+    "data_nascimento": "29/06/2005",
+    "oed": "SÃO PAULO",
+    "GI": 240
+  },
+  {
+    "classificacao": 237,
+    "nome": "HENRIQUE DE CARVALHO SILVA",
+    "numero_inscricao": "101958-0",
+    "data_nascimento": "03/11/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 240
+  },
+  {
+    "classificacao": 238,
+    "nome": "HEITOR KUTLAK DIAS E SILVA",
+    "numero_inscricao": "101122-0",
+    "data_nascimento": "27/01/2009",
+    "oed": "SÃO PAULO",
+    "GI": 240
+  },
+  {
+    "classificacao": 239,
+    "nome": "THIAGO MÔÇO DA CUNHA GAMA",
+    "numero_inscricao": "100138-0",
+    "data_nascimento": "10/05/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 240
+  },
+  {
+    "classificacao": 240,
+    "nome": "ALLINSON OLIVEIRA DE VASCONCELOS JÚNIOR",
+    "numero_inscricao": "108870-2",
+    "data_nascimento": "09/07/2007",
+    "oed": "BRASÍLIA",
+    "GI": 240
+  },
+  {
+    "classificacao": 241,
+    "nome": "FELIPE DE OLIVEIRA QUEIROZ",
+    "numero_inscricao": "101564-2",
+    "data_nascimento": "06/03/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 240
+  },
+  {
+    "classificacao": 242,
+    "nome": "SIEL CAMERA ALVES",
+    "numero_inscricao": "100861-0",
+    "data_nascimento": "10/03/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 240
+  },
+  {
+    "classificacao": 243,
+    "nome": "PEDRO HUGO MALHEIROS DA CONCEICAO",
+    "numero_inscricao": "104231-7",
+    "data_nascimento": "04/08/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 240
+  },
+  {
+    "classificacao": 244,
+    "nome": "FILIPE GOMES PIMENTEL DE CASTRO",
+    "numero_inscricao": "111280-5",
+    "data_nascimento": "20/01/2006",
+    "oed": "BRASÍLIA",
+    "GI": 240
+  },
+  {
+    "classificacao": 245,
+    "nome": "GABRIEL PINTO",
+    "numero_inscricao": "100045-9",
+    "data_nascimento": "05/11/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 240
+  },
+  {
+    "classificacao": 246,
+    "nome": "DAVI MAIA CASCARDO ALEXANDRE E SILVA",
+    "numero_inscricao": "109164-5",
+    "data_nascimento": "14/06/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 240
+  },
+  {
+    "classificacao": 247,
+    "nome": "JONATHAN ALEXANDRO GOMES DA SILVA",
+    "numero_inscricao": "105844-0",
+    "data_nascimento": "29/05/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 240
+  },
+  {
+    "classificacao": 248,
+    "nome": "FERNANDO VICTOR LUSTOSA BELELI",
+    "numero_inscricao": "105558-0",
+    "data_nascimento": "04/09/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 235
+  },
+  {
+    "classificacao": 249,
+    "nome": "FELIPE ZANELA DE RESENDE PAIXÃO",
+    "numero_inscricao": "108045-2",
+    "data_nascimento": "18/04/2007",
+    "oed": "BRASÍLIA",
+    "GI": 235
+  },
+  {
+    "classificacao": 250,
+    "nome": "GABRIEL MARIA DANTAS ROCHA",
+    "numero_inscricao": "102500-7",
+    "data_nascimento": "19/02/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 235
+  },
+  {
+    "classificacao": 251,
+    "nome": "PEDRO BARROS FILLIPPI",
+    "numero_inscricao": "108751-5",
+    "data_nascimento": "08/08/2008",
+    "oed": "BRASÍLIA",
+    "GI": 235
+  },
+  {
+    "classificacao": 252,
+    "nome": "MIGUEL LOPES SILVA DE SANTANA",
+    "numero_inscricao": "104606-0",
+    "data_nascimento": "12/07/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 235
+  },
+  {
+    "classificacao": 253,
+    "nome": "ENZO BONFANTE TERGOLINO",
+    "numero_inscricao": "106406-5",
+    "data_nascimento": "10/02/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 235
+  },
+  {
+    "classificacao": 254,
+    "nome": "GUSTAVO AVILA SCHNEIDER",
+    "numero_inscricao": "109008-7",
+    "data_nascimento": "21/06/2006",
+    "oed": "PORTO ALEGRE",
+    "GI": 235
+  },
+  {
+    "classificacao": 255,
+    "nome": "ENZO DE PAULO DIAS SILVA",
+    "numero_inscricao": "112244-8",
+    "data_nascimento": "05/01/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 235
+  },
+  {
+    "classificacao": 256,
+    "nome": "ROGER DA SILVA CUNHA",
+    "numero_inscricao": "101108-6",
+    "data_nascimento": "09/08/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 235
+  },
+  {
+    "classificacao": 257,
+    "nome": "DAVI LOPES VANZIN",
+    "numero_inscricao": "103164-2",
+    "data_nascimento": "03/05/2007",
+    "oed": "BRASÍLIA",
+    "GI": 235
+  },
+  {
+    "classificacao": 258,
+    "nome": "CHRISTIAN ANNIELO DE MESQUITA GOMES",
+    "numero_inscricao": "106572-0",
+    "data_nascimento": "03/08/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 235
+  },
+  {
+    "classificacao": 259,
+    "nome": "HENRIQUE FREIRE SILVA ROSA",
+    "numero_inscricao": "102161-2",
+    "data_nascimento": "02/02/2008",
+    "oed": "BELO HORIZONTE",
+    "GI": 235
+  },
+  {
+    "classificacao": 260,
+    "nome": "JOAO PAULO RIBEIRO ROLIM",
+    "numero_inscricao": "107390-6",
+    "data_nascimento": "03/06/2005",
+    "oed": "SÃO PAULO",
+    "GI": 235
+  },
+  {
+    "classificacao": 261,
+    "nome": "GUSTAVO TOMIELLO MIOTTO",
+    "numero_inscricao": "100613-0",
+    "data_nascimento": "27/11/2006",
+    "oed": "PORTO ALEGRE",
+    "GI": 235
+  },
+  {
+    "classificacao": 262,
+    "nome": "LUÍS GUILHERME BOMFIM SANTOS BARBOSA",
+    "numero_inscricao": "102151-6",
+    "data_nascimento": "15/08/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 235
+  },
+  {
+    "classificacao": 263,
+    "nome": "LUCAS HALLAK FIGUEIREDO",
+    "numero_inscricao": "107984-9",
+    "data_nascimento": "08/01/2008",
+    "oed": "VITÓRIA",
+    "GI": 235
+  },
+  {
+    "classificacao": 264,
+    "nome": "DANIEL TAKESHI BASTOS IAMADA",
+    "numero_inscricao": "100246-2",
+    "data_nascimento": "04/01/2008",
+    "oed": "BRASÍLIA",
+    "GI": 235
+  },
+  {
+    "classificacao": 265,
+    "nome": "RAFAEL VIEIRA DOS SANTOS",
+    "numero_inscricao": "104072-5",
+    "data_nascimento": "25/06/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 235
+  },
+  {
+    "classificacao": 266,
+    "nome": "GUILHERME DE SOUSA FERREIRA",
+    "numero_inscricao": "102397-6",
+    "data_nascimento": "22/04/2008",
+    "oed": "BRASÍLIA",
+    "GI": 235
+  },
+  {
+    "classificacao": 267,
+    "nome": "JOAO VITOR VALENTE MARQUES",
+    "numero_inscricao": "106460-4",
+    "data_nascimento": "08/05/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 235
+  },
+  {
+    "classificacao": 268,
+    "nome": "BEATRIZ DA FONSECA ALVES DE FARIA",
+    "numero_inscricao": "102776-6",
+    "data_nascimento": "20/10/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 235
+  },
+  {
+    "classificacao": 269,
+    "nome": "BERNARDO BENDER SINISCALCHI",
+    "numero_inscricao": "101484-2",
+    "data_nascimento": "02/03/2009",
+    "oed": "SÃO PAULO",
+    "GI": 235
+  },
+  {
+    "classificacao": 270,
+    "nome": "DANIEL HIPOLITO DE FREITAS CEZIMBRA MORAES",
+    "numero_inscricao": "102712-5",
+    "data_nascimento": "24/04/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 235
+  },
+  {
+    "classificacao": 271,
+    "nome": "FERNANDO MATHEUS DE JESUS SANTAREM",
+    "numero_inscricao": "100032-8",
+    "data_nascimento": "17/03/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 235
+  },
+  {
+    "classificacao": 272,
+    "nome": "LUAN VITOR DE SANTANA DA COSTA",
+    "numero_inscricao": "104236-8",
+    "data_nascimento": "18/02/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 235
+  },
+  {
+    "classificacao": 273,
+    "nome": "CARLOS EDUARDO FRANETA NUNES",
+    "numero_inscricao": "101507-9",
+    "data_nascimento": "26/07/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 235
+  },
+  {
+    "classificacao": 274,
+    "nome": "BEATRIZ DE MELLO BARROS MONTEIRO DE CARVALHO",
+    "numero_inscricao": "112721-4",
+    "data_nascimento": "14/07/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 235
+  },
+  {
+    "classificacao": 275,
+    "nome": "LEONARDO DA SILVA XIMENES",
+    "numero_inscricao": "102091-9",
+    "data_nascimento": "27/12/2004",
+    "oed": "RIO DE JANEIRO",
+    "GI": 235
+  },
+  {
+    "classificacao": 276,
+    "nome": "ENZO LEMOS VALMOR",
+    "numero_inscricao": "101326-8",
+    "data_nascimento": "14/04/2004",
+    "oed": "BRASÍLIA",
+    "GI": 235
+  },
+  {
+    "classificacao": 277,
+    "nome": "MURILO GONCALVES DE SOUSA",
+    "numero_inscricao": "100525-0",
+    "data_nascimento": "07/10/2005",
+    "oed": "SÃO PAULO",
+    "GI": 230
+  },
+  {
+    "classificacao": 278,
+    "nome": "JHON WAYNE SOUSA ARAUJO",
+    "numero_inscricao": "101164-1",
+    "data_nascimento": "29/03/2006",
+    "oed": "BRASÍLIA",
+    "GI": 230
+  },
+  {
+    "classificacao": 279,
+    "nome": "LUCA RODRIGUES FACCHINI",
+    "numero_inscricao": "106693-3",
+    "data_nascimento": "11/08/2008",
+    "oed": "SÃO PAULO",
+    "GI": 230
+  },
+  {
+    "classificacao": 280,
+    "nome": "VINICIUS CABALDI BASSO",
+    "numero_inscricao": "102973-7",
+    "data_nascimento": "13/09/2007",
+    "oed": "PORTO ALEGRE",
+    "GI": 230
+  },
+  {
+    "classificacao": 281,
+    "nome": "IAN CARPES RIBEIRO",
+    "numero_inscricao": "108320-7",
+    "data_nascimento": "12/12/2004",
+    "oed": "CORUMBÁ",
+    "GI": 230
+  },
+  {
+    "classificacao": 282,
+    "nome": "ANDRE LUIZ PINTO BASTOS",
+    "numero_inscricao": "106777-6",
+    "data_nascimento": "28/08/2003",
+    "oed": "RIO DE JANEIRO",
+    "GI": 230
+  },
+  {
+    "classificacao": 283,
+    "nome": "MATEUS AUGUSTO DE LARA CAVASSIN",
+    "numero_inscricao": "101836-8",
+    "data_nascimento": "16/04/2006",
+    "oed": "PARANAGUÁ",
+    "GI": 230
+  },
+  {
+    "classificacao": 284,
+    "nome": "LEONARDO CHITOLINA BORTOLI",
+    "numero_inscricao": "110023-0",
+    "data_nascimento": "13/02/2009",
+    "oed": "PORTO ALEGRE",
+    "GI": 230
+  },
+  {
+    "classificacao": 285,
+    "nome": "PEDRO POLICENO DE OLIVEIRA COOPER",
+    "numero_inscricao": "102102-2",
+    "data_nascimento": "03/10/2003",
+    "oed": "PARANAGUÁ",
+    "GI": 230
+  },
+  {
+    "classificacao": 286,
+    "nome": "AUGUSTO CESAR COSTA DIAS",
+    "numero_inscricao": "104382-0",
+    "data_nascimento": "16/06/2009",
+    "oed": "BELO HORIZONTE",
+    "GI": 230
+  },
+  {
+    "classificacao": 287,
+    "nome": "JOÃO PEDRO MOURA SILVINO",
+    "numero_inscricao": "102208-4",
+    "data_nascimento": "16/01/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 230
+  },
+  {
+    "classificacao": 288,
+    "nome": "DAVI OLIVEIRA MARINI",
+    "numero_inscricao": "103802-7",
+    "data_nascimento": "04/05/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 230
+  },
+  {
+    "classificacao": 289,
+    "nome": "JOÃO PEDRO GOMES GONÇALVES",
+    "numero_inscricao": "104427-5",
+    "data_nascimento": "13/10/2003",
+    "oed": "SÃO PAULO",
+    "GI": 230
+  },
+  {
+    "classificacao": 290,
+    "nome": "RODOLFO KUBICA NETO",
+    "numero_inscricao": "108103-3",
+    "data_nascimento": "28/04/2005",
+    "oed": "FLORIANÓPOLIS",
+    "GI": 230
+  },
+  {
+    "classificacao": 291,
+    "nome": "JULIA LOPES DA SILVA",
+    "numero_inscricao": "110805-6",
+    "data_nascimento": "23/06/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 230
+  },
+  {
+    "classificacao": 292,
+    "nome": "RODRIGO QUEIROZ ARRUDA",
+    "numero_inscricao": "101998-5",
+    "data_nascimento": "20/09/2007",
+    "oed": "SÃO PAULO",
+    "GI": 230
+  },
+  {
+    "classificacao": 293,
+    "nome": "BERNARDO FERREIRA MAGALHAES TEIXEIRA",
+    "numero_inscricao": "103655-8",
+    "data_nascimento": "31/03/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 230
+  },
+  {
+    "classificacao": 294,
+    "nome": "MARIA EDUARDA DOS SANTOS GOUVÊA",
+    "numero_inscricao": "108181-8",
+    "data_nascimento": "20/05/2008",
+    "oed": "BRASÍLIA",
+    "GI": 230
+  },
+  {
+    "classificacao": 295,
+    "nome": "EDUARDO PAULINO JESUS IBIAPINA RODRIGUES",
+    "numero_inscricao": "104920-1",
+    "data_nascimento": "05/05/2005",
+    "oed": "SÃO PAULO",
+    "GI": 230
+  },
+  {
+    "classificacao": 296,
+    "nome": "JOÃO VICTOR DA SILVA MARANHA",
+    "numero_inscricao": "108507-7",
+    "data_nascimento": "22/06/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 230
+  },
+  {
+    "classificacao": 297,
+    "nome": "BRUNO CANAVAL PICCAZZIO",
+    "numero_inscricao": "111144-0",
+    "data_nascimento": "20/09/2004",
+    "oed": "SÃO PAULO",
+    "GI": 230
+  },
+  {
+    "classificacao": 298,
+    "nome": "JOÃO VICTOR KRUSE RAMOS BARBOSA",
+    "numero_inscricao": "105102-9",
+    "data_nascimento": "24/05/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 230
+  },
+  {
+    "classificacao": 299,
+    "nome": "LAURA VIOLANTE CALVÃO BASTOS",
+    "numero_inscricao": "107599-5",
+    "data_nascimento": "01/11/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 230
+  },
+  {
+    "classificacao": 300,
+    "nome": "JOAQUIM JOSÉ CARDOSO DA CUNHA",
+    "numero_inscricao": "101743-7",
+    "data_nascimento": "05/10/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 230
+  },
+  {
+    "classificacao": 301,
+    "nome": "IVAN SERVA ZAMBALDI LARA",
+    "numero_inscricao": "101974-0",
+    "data_nascimento": "23/01/2006",
+    "oed": "BELO HORIZONTE",
+    "GI": 230
+  },
+  {
+    "classificacao": 302,
+    "nome": "PEDRO HENRIQUE MOREIRA ALMEIDA",
+    "numero_inscricao": "103735-8",
+    "data_nascimento": "23/10/2004",
+    "oed": "BELO HORIZONTE",
+    "GI": 230
+  },
+  {
+    "classificacao": 303,
+    "nome": "ENZO BEDIN MARTINHÃO",
+    "numero_inscricao": "106773-3",
+    "data_nascimento": "17/11/2008",
+    "oed": "BRASÍLIA",
+    "GI": 230
+  },
+  {
+    "classificacao": 304,
+    "nome": "LUCAS HENRIQUES COSTA PINHEIRO",
+    "numero_inscricao": "112489-0",
+    "data_nascimento": "20/04/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 230
+  },
+  {
+    "classificacao": 305,
+    "nome": "ARTHUR DA SILVA NORONHA",
+    "numero_inscricao": "109448-3",
+    "data_nascimento": "25/04/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 230
+  },
+  {
+    "classificacao": 306,
+    "nome": "ISABELLA DANTAS XAVIER",
+    "numero_inscricao": "112989-3",
+    "data_nascimento": "03/01/2009",
+    "oed": "VITÓRIA",
+    "GI": 230
+  },
+  {
+    "classificacao": 307,
+    "nome": "LUIZA CALLIGARO PETERLONGO LORENZINI MENEGOTTO",
+    "numero_inscricao": "107662-1",
+    "data_nascimento": "25/12/2008",
+    "oed": "PORTO ALEGRE",
+    "GI": 230
+  },
+  {
+    "classificacao": 308,
+    "nome": "YAGO RAMIRES DE MELO BEZERRA",
+    "numero_inscricao": "108221-2",
+    "data_nascimento": "20/12/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 230
+  },
+  {
+    "classificacao": 309,
+    "nome": "GABRIEL FORTUNATO BARROS",
+    "numero_inscricao": "106915-7",
+    "data_nascimento": "25/06/2008",
+    "oed": "BELO HORIZONTE",
+    "GI": 230
+  },
+  {
+    "classificacao": 310,
+    "nome": "DANIEL GILEADE CARVALHO DE JESUS",
+    "numero_inscricao": "113045-6",
+    "data_nascimento": "17/03/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 230
+  },
+  {
+    "classificacao": 311,
+    "nome": "LUIZ GUSTAVO DOS SANTOS DE OLIVEIRA",
+    "numero_inscricao": "100751-1",
+    "data_nascimento": "21/08/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 225
+  },
+  {
+    "classificacao": 312,
+    "nome": "LAEL CARLOS DE AQUINO SILVA E ROCHA",
+    "numero_inscricao": "113236-3",
+    "data_nascimento": "28/02/2009",
+    "oed": "BRASÍLIA",
+    "GI": 225
+  },
+  {
+    "classificacao": 313,
+    "nome": "GIOVANNA RODRIGUES ALVES",
+    "numero_inscricao": "112122-6",
+    "data_nascimento": "05/11/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 225
+  },
+  {
+    "classificacao": 314,
+    "nome": "GUILHERME LOPES VIEIRA",
+    "numero_inscricao": "104557-7",
+    "data_nascimento": "22/05/2004",
+    "oed": "SÃO PAULO",
+    "GI": 225
+  },
+  {
+    "classificacao": 315,
+    "nome": "VITOR CORREA FREITAS",
+    "numero_inscricao": "102243-9",
+    "data_nascimento": "08/05/2006",
+    "oed": "SÃO PAULO",
+    "GI": 225
+  },
+  {
+    "classificacao": 316,
+    "nome": "HENRIQUE NUNES DE MIRANDA PASSOS",
+    "numero_inscricao": "110469-6",
+    "data_nascimento": "10/12/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 225
+  },
+  {
+    "classificacao": 317,
+    "nome": "PAULO HENRIQUE VARGAS TESCH",
+    "numero_inscricao": "112701-1",
+    "data_nascimento": "17/07/2008",
+    "oed": "PORTO ALEGRE",
+    "GI": 225
+  },
+  {
+    "classificacao": 318,
+    "nome": "LUIS MIGUEL DA SILVA PAULA",
+    "numero_inscricao": "104041-8",
+    "data_nascimento": "03/11/2008",
+    "oed": "SÃO PAULO",
+    "GI": 225
+  },
+  {
+    "classificacao": 319,
+    "nome": "MATHEUS RAMOS BRANDAO",
+    "numero_inscricao": "103272-5",
+    "data_nascimento": "03/04/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 225
+  },
+  {
+    "classificacao": 320,
+    "nome": "PEDRO LOUREIRO MOTA DE ARAUJO",
+    "numero_inscricao": "101501-0",
+    "data_nascimento": "10/12/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 225
+  },
+  {
+    "classificacao": 321,
+    "nome": "LUCAS LIMA DOS SANTOS SOUSA",
+    "numero_inscricao": "100810-0",
+    "data_nascimento": "24/01/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 225
+  },
+  {
+    "classificacao": 322,
+    "nome": "ARTHUR GABRIEL QUARESMA DE ARAÚJO",
+    "numero_inscricao": "100797-6",
+    "data_nascimento": "12/07/2008",
+    "oed": "BRASÍLIA",
+    "GI": 225
+  },
+  {
+    "classificacao": 323,
+    "nome": "LUCAS OLIVEIRA DA PAZ",
+    "numero_inscricao": "106706-3",
+    "data_nascimento": "19/08/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 225
+  },
+  {
+    "classificacao": 324,
+    "nome": "MARCOS EDUARDO RAMOS MARTINS",
+    "numero_inscricao": "104014-3",
+    "data_nascimento": "02/06/2007",
+    "oed": "SÃO PAULO",
+    "GI": 225
+  },
+  {
+    "classificacao": 325,
+    "nome": "DAVI LOBO EL ZAYEK",
+    "numero_inscricao": "107559-0",
+    "data_nascimento": "28/01/2008",
+    "oed": "BRASÍLIA",
+    "GI": 225
+  },
+  {
+    "classificacao": 326,
+    "nome": "FERNANDO LINK LEITÃO",
+    "numero_inscricao": "108905-1",
+    "data_nascimento": "13/07/2007",
+    "oed": "SÃO PAULO",
+    "GI": 225
+  },
+  {
+    "classificacao": 327,
+    "nome": "ARTUR TIN LUN DAI LIMA",
+    "numero_inscricao": "107251-6",
+    "data_nascimento": "09/12/2007",
+    "oed": "SÃO PAULO",
+    "GI": 225
+  },
+  {
+    "classificacao": 328,
+    "nome": "LUCAS CARVALHO BLECK ANTUNES",
+    "numero_inscricao": "109776-4",
+    "data_nascimento": "19/04/2009",
+    "oed": "SÃO PAULO",
+    "GI": 225
+  },
+  {
+    "classificacao": 329,
+    "nome": "LUCAS BERNARDO MOREIRA",
+    "numero_inscricao": "107641-0",
+    "data_nascimento": "14/12/2004",
+    "oed": "RIO DE JANEIRO",
+    "GI": 225
+  },
+  {
+    "classificacao": 330,
+    "nome": "JOÃO PEDRO GOMES DA COSTA",
+    "numero_inscricao": "100343-0",
+    "data_nascimento": "01/05/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 225
+  },
+  {
+    "classificacao": 331,
+    "nome": "LUÍZA SCHWANTES",
+    "numero_inscricao": "112075-0",
+    "data_nascimento": "02/06/2008",
+    "oed": "PORTO ALEGRE",
+    "GI": 225
+  },
+  {
+    "classificacao": 332,
+    "nome": "ISIS SILVA LOPES",
+    "numero_inscricao": "110696-6",
+    "data_nascimento": "14/04/2006",
+    "oed": "SÃO PAULO",
+    "GI": 225
+  },
+  {
+    "classificacao": 333,
+    "nome": "ARTHUR LUDTKE HIRSCHMANN",
+    "numero_inscricao": "108899-9",
+    "data_nascimento": "25/07/2005",
+    "oed": "PORTO ALEGRE",
+    "GI": 225
+  },
+  {
+    "classificacao": 334,
+    "nome": "PEDRO HENRIQUE BARROS ALVES",
+    "numero_inscricao": "111278-4",
+    "data_nascimento": "23/01/2007",
+    "oed": "CORUMBÁ",
+    "GI": 225
+  },
+  {
+    "classificacao": 335,
+    "nome": "GABRIEL MASCENE GOMES",
+    "numero_inscricao": "107733-3",
+    "data_nascimento": "18/10/2003",
+    "oed": "BRASÍLIA",
+    "GI": 225
+  },
+  {
+    "classificacao": 336,
+    "nome": "VICTÓRIA LUIZA OLIVEIRA SILVA SANTOS",
+    "numero_inscricao": "106348-4",
+    "data_nascimento": "04/10/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 225
+  },
+  {
+    "classificacao": 337,
+    "nome": "LOGAN MAIA CARMO",
+    "numero_inscricao": "105507-0",
+    "data_nascimento": "19/05/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 225
+  },
+  {
+    "classificacao": 338,
+    "nome": "IAN PRADO VIEIRA",
+    "numero_inscricao": "100120-8",
+    "data_nascimento": "30/10/2004",
+    "oed": "SÃO PAULO",
+    "GI": 225
+  },
+  {
+    "classificacao": 339,
+    "nome": "JÚLIA LOPES DE SOUZA PEREIRA DA SILVA",
+    "numero_inscricao": "104937-5",
+    "data_nascimento": "16/05/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 225
+  },
+  {
+    "classificacao": 340,
+    "nome": "FELIPE BERNARDO NUNES DA SILVA",
+    "numero_inscricao": "105257-4",
+    "data_nascimento": "29/08/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 225
+  },
+  {
+    "classificacao": 341,
+    "nome": "ARTHUR HENRIQUE DA CUNHA PEREIRA",
+    "numero_inscricao": "104357-1",
+    "data_nascimento": "13/01/2007",
+    "oed": "SÃO PAULO",
+    "GI": 225
+  },
+  {
+    "classificacao": 342,
+    "nome": "DAVI GOMES DE SOUZA",
+    "numero_inscricao": "103945-0",
+    "data_nascimento": "23/08/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 225
+  },
+  {
+    "classificacao": 343,
+    "nome": "SOFIA VILANOVA MARINHO",
+    "numero_inscricao": "100285-0",
+    "data_nascimento": "29/02/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 225
+  },
+  {
+    "classificacao": 344,
+    "nome": "RENAN LUIZ FUINA MONTEIRO",
+    "numero_inscricao": "104524-3",
+    "data_nascimento": "16/06/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 225
+  },
+  {
+    "classificacao": 345,
+    "nome": "GUILHERME TOLEDO BEZERRA DE MELLO",
+    "numero_inscricao": "104959-4",
+    "data_nascimento": "24/10/2008",
+    "oed": "PORTO ALEGRE",
+    "GI": 225
+  },
+  {
+    "classificacao": 346,
+    "nome": "ALAN SUAREZMORETZSOHN",
+    "numero_inscricao": "100882-1",
+    "data_nascimento": "04/03/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 225
+  },
+  {
+    "classificacao": 347,
+    "nome": "MATHEUS OLIVEIRA SANTOS",
+    "numero_inscricao": "105903-9",
+    "data_nascimento": "20/07/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 225
+  },
+  {
+    "classificacao": 348,
+    "nome": "DANIEL BARTOQUE MARCELINO",
+    "numero_inscricao": "101696-0",
+    "data_nascimento": "30/01/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 225
+  },
+  {
+    "classificacao": 349,
+    "nome": "DANIEL LIMA FOURAUX",
+    "numero_inscricao": "105492-4",
+    "data_nascimento": "03/10/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 225
+  },
+  {
+    "classificacao": 350,
+    "nome": "JOÃO PEDRO MATOS VEIGA",
+    "numero_inscricao": "105059-5",
+    "data_nascimento": "02/03/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 225
+  },
+  {
+    "classificacao": 351,
+    "nome": "BERNARDO DE CASTRO ALVIM",
+    "numero_inscricao": "110089-8",
+    "data_nascimento": "22/02/2008",
+    "oed": "BELO HORIZONTE",
+    "GI": 225
+  },
+  {
+    "classificacao": 352,
+    "nome": "MAICOM WARNECKE OLIVEIRA",
+    "numero_inscricao": "102329-8",
+    "data_nascimento": "04/04/2005",
+    "oed": "SÃO PAULO",
+    "GI": 225
+  },
+  {
+    "classificacao": 353,
+    "nome": "JHONNATAN COCK DA CRUZ ANDRADE",
+    "numero_inscricao": "104991-4",
+    "data_nascimento": "24/07/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 225
+  },
+  {
+    "classificacao": 354,
+    "nome": "DANIEL MOTTA FERREIRA",
+    "numero_inscricao": "113518-5",
+    "data_nascimento": "18/07/2007",
+    "oed": "SÃO PAULO",
+    "GI": 225
+  },
+  {
+    "classificacao": 355,
+    "nome": "GABRIEL NOGUEIRA DE OLIVEIRA",
+    "numero_inscricao": "100225-1",
+    "data_nascimento": "22/05/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 225
+  },
+  {
+    "classificacao": 356,
+    "nome": "ISABELLA GOTTQTROY FREIRE",
+    "numero_inscricao": "112799-4",
+    "data_nascimento": "12/06/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 225
+  },
+  {
+    "classificacao": 357,
+    "nome": "GUILHERME BORGES NOBRE",
+    "numero_inscricao": "105057-9",
+    "data_nascimento": "08/05/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 225
+  },
+  {
+    "classificacao": 358,
+    "nome": "GABRIEL DANTAS RODRIGUES",
+    "numero_inscricao": "101159-6",
+    "data_nascimento": "28/10/2008",
+    "oed": "SÃO PAULO",
+    "GI": 225
+  },
+  {
+    "classificacao": 359,
+    "nome": "MIGUEL ANTONIO DE SOUSA LOPES",
+    "numero_inscricao": "108523-7",
+    "data_nascimento": "28/04/2008",
+    "oed": "VITÓRIA",
+    "GI": 225
+  },
+  {
+    "classificacao": 360,
+    "nome": "DAVI BARD PEREIRA",
+    "numero_inscricao": "100077-4",
+    "data_nascimento": "24/04/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 225
+  },
+  {
+    "classificacao": 361,
+    "nome": "RONALD DE SANTANA CORDEIRO",
+    "numero_inscricao": "101497-3",
+    "data_nascimento": "22/11/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 362,
+    "nome": "ARIEL DE SOUZA CHAVES SANTOS ROSALLA",
+    "numero_inscricao": "109033-5",
+    "data_nascimento": "14/03/2007",
+    "oed": "SÃO PAULO",
+    "GI": 220
+  },
+  {
+    "classificacao": 363,
+    "nome": "MAIARA FERREIRA ALVES",
+    "numero_inscricao": "104886-6",
+    "data_nascimento": "30/01/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 364,
+    "nome": "RAFAEL OLIVEIRA CORONEL",
+    "numero_inscricao": "109986-6",
+    "data_nascimento": "15/02/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 365,
+    "nome": "JEFFERSON DE MENEZES NASCIMENTO",
+    "numero_inscricao": "110202-5",
+    "data_nascimento": "21/04/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 366,
+    "nome": "LUCAS HENRIQUE GOMES SOARES",
+    "numero_inscricao": "109145-0",
+    "data_nascimento": "10/09/2008",
+    "oed": "BELO HORIZONTE",
+    "GI": 220
+  },
+  {
+    "classificacao": 367,
+    "nome": "GABRIEL GOMES CARVALHO DE SOUZA",
+    "numero_inscricao": "107521-5",
+    "data_nascimento": "18/09/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 368,
+    "nome": "GABRIEL SABINO LOBO",
+    "numero_inscricao": "100548-7",
+    "data_nascimento": "16/08/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 369,
+    "nome": "GUSTAVO DE OLIVEIRA VICENTE",
+    "numero_inscricao": "100469-5",
+    "data_nascimento": "01/08/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 370,
+    "nome": "JOÃO VITOR BENEVIDES DE SÁ",
+    "numero_inscricao": "107865-1",
+    "data_nascimento": "27/06/2007",
+    "oed": "VITÓRIA",
+    "GI": 220
+  },
+  {
+    "classificacao": 371,
+    "nome": "FELIPE CAVALCANTE TORREIRO PINHEIRO LESSA",
+    "numero_inscricao": "107292-0",
+    "data_nascimento": "15/03/2005",
+    "oed": "BRASÍLIA",
+    "GI": 220
+  },
+  {
+    "classificacao": 372,
+    "nome": "ALEXANDRE LIMA DE SOUSA JUNIOR",
+    "numero_inscricao": "100135-5",
+    "data_nascimento": "04/08/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 373,
+    "nome": "LUCAS BARBOSA BOZAN",
+    "numero_inscricao": "102043-3",
+    "data_nascimento": "01/09/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 374,
+    "nome": "PEDRO LUCAS DA SILVA ARAÚJO",
+    "numero_inscricao": "100580-7",
+    "data_nascimento": "02/08/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 375,
+    "nome": "FELIPE ARAKAKI COARY",
+    "numero_inscricao": "105049-9",
+    "data_nascimento": "01/08/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 376,
+    "nome": "ARTHUR CAVALCANTE DE ARAÚJO PEREIRA",
+    "numero_inscricao": "105343-8",
+    "data_nascimento": "23/02/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 377,
+    "nome": "LEONARDO SOARES BERTASSO",
+    "numero_inscricao": "112323-0",
+    "data_nascimento": "08/09/2005",
+    "oed": "SÃO PAULO",
+    "GI": 220
+  },
+  {
+    "classificacao": 378,
+    "nome": "JUAN DE SOUZA SANTOS",
+    "numero_inscricao": "106228-9",
+    "data_nascimento": "11/02/2006",
+    "oed": "SÃO PAULO",
+    "GI": 220
+  },
+  {
+    "classificacao": 379,
+    "nome": "CAIO ALEX FEITOZA DA SILVA",
+    "numero_inscricao": "100728-0",
+    "data_nascimento": "22/05/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 380,
+    "nome": "WAGNER EDUARDO LAGUNA LOPES",
+    "numero_inscricao": "111839-3",
+    "data_nascimento": "08/07/2005",
+    "oed": "PORTO ALEGRE",
+    "GI": 220
+  },
+  {
+    "classificacao": 381,
+    "nome": "ERICK YU CHAN",
+    "numero_inscricao": "108729-1",
+    "data_nascimento": "19/10/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 382,
+    "nome": "JOÃO PEDRO TERTO MELO SATURNINO",
+    "numero_inscricao": "101979-0",
+    "data_nascimento": "25/09/2006",
+    "oed": "SÃO PAULO",
+    "GI": 220
+  },
+  {
+    "classificacao": 383,
+    "nome": "GABRIEL GARCIA DE MIRANDA",
+    "numero_inscricao": "101533-5",
+    "data_nascimento": "05/01/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 384,
+    "nome": "ALEXANDRE SANTOS TEIXEIRA",
+    "numero_inscricao": "104801-4",
+    "data_nascimento": "08/12/2008",
+    "oed": "BRASÍLIA",
+    "GI": 220
+  },
+  {
+    "classificacao": 385,
+    "nome": "ADRIANO HENRIQUE DO NASCIMENTO CARVALHO",
+    "numero_inscricao": "112336-0",
+    "data_nascimento": "18/02/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 386,
+    "nome": "CHARLESTON MEDEIROS AVELINO JÚNIOR",
+    "numero_inscricao": "104828-4",
+    "data_nascimento": "16/01/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 387,
+    "nome": "DANIEL SAINT-MARTIN LEITE",
+    "numero_inscricao": "101800-0",
+    "data_nascimento": "31/08/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 388,
+    "nome": "FELLIPE AUGUSTO OLIVEIRA COSTA",
+    "numero_inscricao": "100066-0",
+    "data_nascimento": "24/10/2006",
+    "oed": "BELO HORIZONTE",
+    "GI": 220
+  },
+  {
+    "classificacao": 389,
+    "nome": "JOÃO PEDRO DE FREITAS BARROS MOIZÉS",
+    "numero_inscricao": "108934-2",
+    "data_nascimento": "26/02/2007",
+    "oed": "SÃO PAULO",
+    "GI": 220
+  },
+  {
+    "classificacao": 390,
+    "nome": "GUSTAVO LOPES HUMMEL",
+    "numero_inscricao": "110647-2",
+    "data_nascimento": "10/10/2006",
+    "oed": "SÃO PAULO",
+    "GI": 220
+  },
+  {
+    "classificacao": 391,
+    "nome": "DAVI DA COSTA FONSECA",
+    "numero_inscricao": "102223-6",
+    "data_nascimento": "18/06/2004",
+    "oed": "VITÓRIA",
+    "GI": 220
+  },
+  {
+    "classificacao": 392,
+    "nome": "GABRIEL BORGES DA SILVA VIEIRA",
+    "numero_inscricao": "105782-6",
+    "data_nascimento": "09/09/2006",
+    "oed": "VITÓRIA",
+    "GI": 220
+  },
+  {
+    "classificacao": 393,
+    "nome": "RYAN CARLOS DUTRA DE MELLO",
+    "numero_inscricao": "101342-8",
+    "data_nascimento": "23/11/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 394,
+    "nome": "KAWAN AMARAL DE MELO",
+    "numero_inscricao": "101200-3",
+    "data_nascimento": "18/05/2007",
+    "oed": "SÃO PAULO",
+    "GI": 220
+  },
+  {
+    "classificacao": 395,
+    "nome": "KAUAN ARAUJO PINHEIRO",
+    "numero_inscricao": "100301-9",
+    "data_nascimento": "05/03/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 396,
+    "nome": "MIGUEL PARENTE RAMOS DE ALMEIDA",
+    "numero_inscricao": "109954-0",
+    "data_nascimento": "29/08/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 397,
+    "nome": "MIGUEL LOURENÇO RODRIGUES",
+    "numero_inscricao": "101373-5",
+    "data_nascimento": "05/01/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 398,
+    "nome": "MARIA LUIZA DE SOUZA COSTA",
+    "numero_inscricao": "107358-6",
+    "data_nascimento": "11/07/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 399,
+    "nome": "ERICK DE SOUZA ALVES",
+    "numero_inscricao": "103564-3",
+    "data_nascimento": "10/03/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 400,
+    "nome": "ALEX RUSCIANO MARQUES JANEIRO",
+    "numero_inscricao": "105551-3",
+    "data_nascimento": "14/11/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 401,
+    "nome": "RONALDO FERREIRA DIAS",
+    "numero_inscricao": "105349-7",
+    "data_nascimento": "19/06/2004",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 402,
+    "nome": "PEDRO DE PAULA EVENCIO DE CARVALHO",
+    "numero_inscricao": "100646-3",
+    "data_nascimento": "19/08/2005",
+    "oed": "SÃO PAULO",
+    "GI": 220
+  },
+  {
+    "classificacao": 403,
+    "nome": "PEDRO GASPARETTO BALDISSERA",
+    "numero_inscricao": "106202-7",
+    "data_nascimento": "08/05/2006",
+    "oed": "BRASÍLIA",
+    "GI": 220
+  },
+  {
+    "classificacao": 404,
+    "nome": "LUCAS JOAQUIM PARRA DE LIMA",
+    "numero_inscricao": "105052-8",
+    "data_nascimento": "30/04/2007",
+    "oed": "SÃO PAULO",
+    "GI": 220
+  },
+  {
+    "classificacao": 405,
+    "nome": "ENRICO NUNES BARRETO DE VASCONCELLOS PEREIRA",
+    "numero_inscricao": "102799-3",
+    "data_nascimento": "21/01/2004",
+    "oed": "SÃO PAULO",
+    "GI": 220
+  },
+  {
+    "classificacao": 406,
+    "nome": "ANDRÉ MÜLLER DE OLIVEIRA",
+    "numero_inscricao": "112869-8",
+    "data_nascimento": "02/02/2007",
+    "oed": "PORTO ALEGRE",
+    "GI": 220
+  },
+  {
+    "classificacao": 407,
+    "nome": "CARLOS HENRIQUE BRANDÃO GONÇALVES FILHO",
+    "numero_inscricao": "103081-8",
+    "data_nascimento": "25/02/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 408,
+    "nome": "VITOR TAVARES FERRARI",
+    "numero_inscricao": "108954-5",
+    "data_nascimento": "07/10/2006",
+    "oed": "CORUMBÁ",
+    "GI": 220
+  },
+  {
+    "classificacao": 409,
+    "nome": "PEDRO HENRIQUE DAUDT DANIELLI",
+    "numero_inscricao": "102100-6",
+    "data_nascimento": "05/06/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 410,
+    "nome": "GUILHERME DE ALMEIDA RIBEIRO",
+    "numero_inscricao": "102057-2",
+    "data_nascimento": "31/03/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 411,
+    "nome": "DAVI AMANCIO BUENO",
+    "numero_inscricao": "100382-8",
+    "data_nascimento": "14/07/2006",
+    "oed": "BELO HORIZONTE",
+    "GI": 220
+  },
+  {
+    "classificacao": 412,
+    "nome": "HENRIQUE ANDRADE BRAGA",
+    "numero_inscricao": "101325-0",
+    "data_nascimento": "07/04/2007",
+    "oed": "PORTO ALEGRE",
+    "GI": 220
+  },
+  {
+    "classificacao": 413,
+    "nome": "FERNANDA CARMO ROSADO DE SOUSA",
+    "numero_inscricao": "105900-4",
+    "data_nascimento": "15/01/2008",
+    "oed": "BELO HORIZONTE",
+    "GI": 220
+  },
+  {
+    "classificacao": 414,
+    "nome": "GUSTAVO SUREDA LEBEIS PIRES",
+    "numero_inscricao": "103949-2",
+    "data_nascimento": "19/05/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 415,
+    "nome": "DANIEL HENRIQUE SILVA",
+    "numero_inscricao": "102686-0",
+    "data_nascimento": "15/08/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 416,
+    "nome": "ALESSANDRO VENZON",
+    "numero_inscricao": "100504-9",
+    "data_nascimento": "21/01/2005",
+    "oed": "FLORIANÓPOLIS",
+    "GI": 220
+  },
+  {
+    "classificacao": 417,
+    "nome": "PEDRO SAVAGÉ LEÃO MOTA",
+    "numero_inscricao": "104679-9",
+    "data_nascimento": "30/09/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 418,
+    "nome": "MARCUS VINICIUS MORENO DOS SANTOS NETO",
+    "numero_inscricao": "108198-1",
+    "data_nascimento": "31/03/2008",
+    "oed": "VITÓRIA",
+    "GI": 220
+  },
+  {
+    "classificacao": 419,
+    "nome": "MARIA BEATRIZ PEREIRA",
+    "numero_inscricao": "108730-4",
+    "data_nascimento": "25/08/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 420,
+    "nome": "DANIEL BENJAMIN DA SILVA",
+    "numero_inscricao": "107356-0",
+    "data_nascimento": "10/09/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 421,
+    "nome": "GABRIEL BENTO LOPES",
+    "numero_inscricao": "100143-5",
+    "data_nascimento": "28/10/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 422,
+    "nome": "JOÃO PEDRO DA SILVA LIMA",
+    "numero_inscricao": "103504-5",
+    "data_nascimento": "18/06/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 423,
+    "nome": "DAVI CIPRANDI PÊGO",
+    "numero_inscricao": "102173-5",
+    "data_nascimento": "21/12/2003",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 424,
+    "nome": "GABRIEL FONSECA MARINHO",
+    "numero_inscricao": "104062-9",
+    "data_nascimento": "14/03/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 425,
+    "nome": "LUIS FELIPE SANTOS OLIVEIRA VIDAL",
+    "numero_inscricao": "110003-8",
+    "data_nascimento": "05/04/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 426,
+    "nome": "DAVI FERREIRA SODRÉ FAGUNDES",
+    "numero_inscricao": "106905-0",
+    "data_nascimento": "22/03/2003",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 427,
+    "nome": "VAGNER LUIS GONÇALVES DE SOUZA",
+    "numero_inscricao": "105678-6",
+    "data_nascimento": "22/03/2004",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 428,
+    "nome": "MATEUS MUNIZ GOMES",
+    "numero_inscricao": "102172-7",
+    "data_nascimento": "04/05/2008",
+    "oed": "BELO HORIZONTE",
+    "GI": 220
+  },
+  {
+    "classificacao": 429,
+    "nome": "SOPHIA ROXO COIMBRA",
+    "numero_inscricao": "101859-5",
+    "data_nascimento": "24/02/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 430,
+    "nome": "PEDRO MARIANO CARDOSO PERES",
+    "numero_inscricao": "100295-6",
+    "data_nascimento": "25/08/2007",
+    "oed": "BRASÍLIA",
+    "GI": 220
+  },
+  {
+    "classificacao": 431,
+    "nome": "LUIZA COSTA PINTO TABIRA",
+    "numero_inscricao": "100486-3",
+    "data_nascimento": "23/08/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 220
+  },
+  {
+    "classificacao": 432,
+    "nome": "RAFAEL MARTINS GARLET",
+    "numero_inscricao": "107828-0",
+    "data_nascimento": "15/02/2007",
+    "oed": "PORTO ALEGRE",
+    "GI": 215
+  },
+  {
+    "classificacao": 433,
+    "nome": "GABRIELA SOUZA ALMEIDA",
+    "numero_inscricao": "103634-7",
+    "data_nascimento": "13/12/2005",
+    "oed": "SÃO PAULO",
+    "GI": 215
+  },
+  {
+    "classificacao": 434,
+    "nome": "ENZO TEO RANGEL DE OLIVEIRA",
+    "numero_inscricao": "110493-6",
+    "data_nascimento": "15/04/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 435,
+    "nome": "GUILHERME GRAVINO FIGUEIREDO GONÇALVES",
+    "numero_inscricao": "104909-2",
+    "data_nascimento": "07/07/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 436,
+    "nome": "BERNARDO MAGALHÃES RODRIGUES GRACIOLLI XAVIER",
+    "numero_inscricao": "103017-2",
+    "data_nascimento": "26/07/2006",
+    "oed": "BRASÍLIA",
+    "GI": 215
+  },
+  {
+    "classificacao": 437,
+    "nome": "DAVI RODRIGUES PESSANHA",
+    "numero_inscricao": "105686-6",
+    "data_nascimento": "16/03/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 438,
+    "nome": "HEITOR VIANA DE SOUZA",
+    "numero_inscricao": "102625-3",
+    "data_nascimento": "26/05/2009",
+    "oed": "BRASÍLIA",
+    "GI": 215
+  },
+  {
+    "classificacao": 439,
+    "nome": "THIAGO NUNES MENDES",
+    "numero_inscricao": "107096-7",
+    "data_nascimento": "05/03/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 440,
+    "nome": "GABRIELA MENDONÇA COSTA SARGACEIRA",
+    "numero_inscricao": "102181-5",
+    "data_nascimento": "14/05/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 441,
+    "nome": "ENZO PAES",
+    "numero_inscricao": "108028-4",
+    "data_nascimento": "08/11/2007",
+    "oed": "SÃO PAULO",
+    "GI": 215
+  },
+  {
+    "classificacao": 442,
+    "nome": "ARTHUR DE SÁ RODRIGUES",
+    "numero_inscricao": "110038-8",
+    "data_nascimento": "16/12/2006",
+    "oed": "BRASÍLIA",
+    "GI": 215
+  },
+  {
+    "classificacao": 443,
+    "nome": "MATHEUS ANTUNES ESCLAUZERO",
+    "numero_inscricao": "110511-1",
+    "data_nascimento": "27/09/2006",
+    "oed": "VITÓRIA",
+    "GI": 215
+  },
+  {
+    "classificacao": 444,
+    "nome": "FERNANDO ELIAS DOS SANTOS JUNIOR",
+    "numero_inscricao": "108497-1",
+    "data_nascimento": "16/05/2005",
+    "oed": "SÃO PAULO",
+    "GI": 215
+  },
+  {
+    "classificacao": 445,
+    "nome": "MATEUS OLIVEIRA SOARES",
+    "numero_inscricao": "109900-6",
+    "data_nascimento": "31/10/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 446,
+    "nome": "VITOR LUCAS ALVES DOS SANTOS",
+    "numero_inscricao": "103440-5",
+    "data_nascimento": "22/04/2007",
+    "oed": "SÃO PAULO",
+    "GI": 215
+  },
+  {
+    "classificacao": 447,
+    "nome": "NICOLAS ANDRADE CARNEIRO",
+    "numero_inscricao": "101189-5",
+    "data_nascimento": "11/07/2009",
+    "oed": "SÃO PAULO",
+    "GI": 215
+  },
+  {
+    "classificacao": 448,
+    "nome": "LUCAS MACHADO EVANGELISTA",
+    "numero_inscricao": "105172-3",
+    "data_nascimento": "02/03/2009",
+    "oed": "BELO HORIZONTE",
+    "GI": 215
+  },
+  {
+    "classificacao": 449,
+    "nome": "BRENDON ITURBIDE NUNES SANTOS",
+    "numero_inscricao": "111513-3",
+    "data_nascimento": "27/04/2006",
+    "oed": "BRASÍLIA",
+    "GI": 215
+  },
+  {
+    "classificacao": 450,
+    "nome": "ARTHUR GABRIEL FERREIRA",
+    "numero_inscricao": "110478-4",
+    "data_nascimento": "26/06/2008",
+    "oed": "PARANAGUÁ",
+    "GI": 215
+  },
+  {
+    "classificacao": 451,
+    "nome": "ALEXANDRE SILVA DE SOUZA FILHO",
+    "numero_inscricao": "104635-0",
+    "data_nascimento": "13/07/2006",
+    "oed": "VITÓRIA",
+    "GI": 215
+  },
+  {
+    "classificacao": 452,
+    "nome": "NICOLAS COUTO CHRISTO",
+    "numero_inscricao": "107269-8",
+    "data_nascimento": "01/06/2007",
+    "oed": "SÃO PAULO",
+    "GI": 215
+  },
+  {
+    "classificacao": 453,
+    "nome": "JONAS BARROS DE OLIVEIRA",
+    "numero_inscricao": "107594-4",
+    "data_nascimento": "11/04/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 454,
+    "nome": "GIULIA ANDRESS SALES COUTO",
+    "numero_inscricao": "101456-0",
+    "data_nascimento": "10/10/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 455,
+    "nome": "PEDRO HENRIQUE DA CRUZ ESTRADA",
+    "numero_inscricao": "101139-3",
+    "data_nascimento": "28/11/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 456,
+    "nome": "SAMARA BERGAMI VILLA NOVA",
+    "numero_inscricao": "113566-0",
+    "data_nascimento": "01/08/2006",
+    "oed": "SÃO PAULO",
+    "GI": 215
+  },
+  {
+    "classificacao": 457,
+    "nome": "DANILO DE MELO REIS ALVES",
+    "numero_inscricao": "103178-1",
+    "data_nascimento": "30/10/2008",
+    "oed": "BRASÍLIA",
+    "GI": 215
+  },
+  {
+    "classificacao": 458,
+    "nome": "ANDRÉ LUIZ CARVALHO DE OLIVEIRA",
+    "numero_inscricao": "112903-3",
+    "data_nascimento": "24/05/2006",
+    "oed": "BRASÍLIA",
+    "GI": 215
+  },
+  {
+    "classificacao": 459,
+    "nome": "JOAO VICTOR SILVARES RIBEIRO GRILLO",
+    "numero_inscricao": "112322-1",
+    "data_nascimento": "05/03/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 460,
+    "nome": "PEDRO HENRIQUE DA SILVA VILLAR",
+    "numero_inscricao": "105939-7",
+    "data_nascimento": "31/08/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 461,
+    "nome": "BRENO DE OLIVEIRA CARDOSO",
+    "numero_inscricao": "110458-1",
+    "data_nascimento": "14/07/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 462,
+    "nome": "JOÃO VICTOR PEREIRA DOS SANTOS",
+    "numero_inscricao": "107607-4",
+    "data_nascimento": "07/02/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 463,
+    "nome": "MARCOS AVELINO GOMES FILHO",
+    "numero_inscricao": "103105-2",
+    "data_nascimento": "09/03/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 464,
+    "nome": "JÚLIO CÉSAR CARPES CORRÊA",
+    "numero_inscricao": "110444-2",
+    "data_nascimento": "29/09/2008",
+    "oed": "BELO HORIZONTE",
+    "GI": 215
+  },
+  {
+    "classificacao": 465,
+    "nome": "BERNARDO MEDEIROS DA SILVA",
+    "numero_inscricao": "110303-6",
+    "data_nascimento": "21/05/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 466,
+    "nome": "ANA BEATRIZ DE OLIVEIRA LIMA",
+    "numero_inscricao": "101754-1",
+    "data_nascimento": "16/09/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 467,
+    "nome": "AQUILES MENDES DE LIMA",
+    "numero_inscricao": "102222-8",
+    "data_nascimento": "05/04/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 468,
+    "nome": "LUÍS ALMEIDA MACHADO",
+    "numero_inscricao": "102531-4",
+    "data_nascimento": "01/10/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 469,
+    "nome": "EMANUEL DA SILVA DE MATTOS",
+    "numero_inscricao": "103335-7",
+    "data_nascimento": "16/11/2007",
+    "oed": "FLORIANÓPOLIS",
+    "GI": 215
+  },
+  {
+    "classificacao": 470,
+    "nome": "JEFFERSON COELHO DE VASCONCELOS JÚNIOR",
+    "numero_inscricao": "100430-2",
+    "data_nascimento": "18/06/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 471,
+    "nome": "MIGUEL ANGELO DUARTE COSTA",
+    "numero_inscricao": "109873-2",
+    "data_nascimento": "01/02/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 472,
+    "nome": "LUCIANA FERRAZ PERROUT",
+    "numero_inscricao": "105272-6",
+    "data_nascimento": "23/06/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 473,
+    "nome": "MATHEUS MONTEIRO BOLDRIM",
+    "numero_inscricao": "105398-0",
+    "data_nascimento": "27/06/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 474,
+    "nome": "ANA BEATRIZ BARBOSA PAZO SERPA",
+    "numero_inscricao": "103039-1",
+    "data_nascimento": "31/08/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 475,
+    "nome": "ARTHUR MAGALHAES EIRAS",
+    "numero_inscricao": "107503-9",
+    "data_nascimento": "09/12/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 476,
+    "nome": "GUILHERME SOUZA REZENDE",
+    "numero_inscricao": "104588-4",
+    "data_nascimento": "09/01/2008",
+    "oed": "VITÓRIA",
+    "GI": 215
+  },
+  {
+    "classificacao": 477,
+    "nome": "ERIC LUCAS DE OLIVEIRA MESQUITA",
+    "numero_inscricao": "102680-0",
+    "data_nascimento": "03/03/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 478,
+    "nome": "RHENAN DE OLIVEIRA TEIXEIRA",
+    "numero_inscricao": "105399-9",
+    "data_nascimento": "06/05/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 479,
+    "nome": "MIGUEL DE OLIVEIRA DACRI",
+    "numero_inscricao": "108594-0",
+    "data_nascimento": "26/07/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 480,
+    "nome": "JANAINA RAIO DE LUAR DA CONCEIÇÃO SILVA",
+    "numero_inscricao": "104174-4",
+    "data_nascimento": "08/01/2004",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 481,
+    "nome": "RENAN DA SILVA GAMA DE MORAIS",
+    "numero_inscricao": "100860-2",
+    "data_nascimento": "01/02/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 482,
+    "nome": "ANDRÉ CORRILER ZANARDI",
+    "numero_inscricao": "108048-7",
+    "data_nascimento": "03/01/2008",
+    "oed": "CUIABÁ",
+    "GI": 215
+  },
+  {
+    "classificacao": 483,
+    "nome": "ISABELLE SOARES TOSCANO",
+    "numero_inscricao": "100264-9",
+    "data_nascimento": "24/01/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 484,
+    "nome": "VICTOR MESQUITA DE ALMEIDA",
+    "numero_inscricao": "108062-0",
+    "data_nascimento": "05/07/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 485,
+    "nome": "BRENNO FRÓES ALBERNAZ",
+    "numero_inscricao": "100233-1",
+    "data_nascimento": "04/04/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 486,
+    "nome": "YAN MAIA MARTINS XAVIER",
+    "numero_inscricao": "109299-8",
+    "data_nascimento": "26/03/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 487,
+    "nome": "EMANUEL SOARES DE CASTRO",
+    "numero_inscricao": "102583-2",
+    "data_nascimento": "24/03/2007",
+    "oed": "PORTO ALEGRE",
+    "GI": 215
+  },
+  {
+    "classificacao": 488,
+    "nome": "LUIS FELIPE DE ARAUJO SOUZA",
+    "numero_inscricao": "108237-8",
+    "data_nascimento": "14/08/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 489,
+    "nome": "GUSTAVO CARDOSO RIBEIRO BARBOSA",
+    "numero_inscricao": "108714-4",
+    "data_nascimento": "03/02/2007",
+    "oed": "BELO HORIZONTE",
+    "GI": 215
+  },
+  {
+    "classificacao": 490,
+    "nome": "YSAAK DIAS RODRIGUES",
+    "numero_inscricao": "109942-8",
+    "data_nascimento": "18/10/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 491,
+    "nome": "DAVI DINIZ FERNANDES",
+    "numero_inscricao": "102160-4",
+    "data_nascimento": "14/05/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 492,
+    "nome": "PIETRO ALVES DA SILVA",
+    "numero_inscricao": "107600-7",
+    "data_nascimento": "25/06/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 493,
+    "nome": "HENRIQUE GUEDES DE JESUS",
+    "numero_inscricao": "105719-9",
+    "data_nascimento": "16/06/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 494,
+    "nome": "ARTHUR AMARAL VILLAS BOAS COUTINHO",
+    "numero_inscricao": "104592-1",
+    "data_nascimento": "03/03/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 495,
+    "nome": "PEDRO DIAS RODRIGUES DE SOUZA",
+    "numero_inscricao": "100876-8",
+    "data_nascimento": "04/04/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 496,
+    "nome": "GABRIEL ANSELMO NASCIMENTO",
+    "numero_inscricao": "100971-0",
+    "data_nascimento": "31/03/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 497,
+    "nome": "MATHEUS PAIVA LEITE",
+    "numero_inscricao": "101127-0",
+    "data_nascimento": "10/06/2008",
+    "oed": "SÃO PAULO",
+    "GI": 215
+  },
+  {
+    "classificacao": 498,
+    "nome": "ARTHUR FREIDINGER PEREIRA DA SILVA",
+    "numero_inscricao": "107485-3",
+    "data_nascimento": "24/11/2004",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 499,
+    "nome": "RONALDO HENRIQUE BERNARDINO MORAIS",
+    "numero_inscricao": "103794-8",
+    "data_nascimento": "22/08/2005",
+    "oed": "FLORIANÓPOLIS",
+    "GI": 215
+  },
+  {
+    "classificacao": 500,
+    "nome": "FELIPE DOS REIS DE OLIVEIRA LIMA",
+    "numero_inscricao": "109801-1",
+    "data_nascimento": "18/02/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 501,
+    "nome": "LUIS GUILHERME ALVES BRITO",
+    "numero_inscricao": "101352-4",
+    "data_nascimento": "10/05/2004",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 502,
+    "nome": "AMANDA LAVIOLA NOGUEIRA",
+    "numero_inscricao": "110488-0",
+    "data_nascimento": "18/03/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 503,
+    "nome": "THERION DE SOUZA MONTEIRO",
+    "numero_inscricao": "110951-8",
+    "data_nascimento": "06/09/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 215
+  },
+  {
+    "classificacao": 504,
+    "nome": "BERNARDO MENEGUZZI DOS SANTOS",
+    "numero_inscricao": "109563-8",
+    "data_nascimento": "05/02/2008",
+    "oed": "SÃO PAULO",
+    "GI": 215
+  },
+  {
+    "classificacao": 505,
+    "nome": "ANDRÉ CARDOSO ANTUNES BILATE PIZOEIRO",
+    "numero_inscricao": "100703-6",
+    "data_nascimento": "05/06/2004",
+    "oed": "BELO HORIZONTE",
+    "GI": 215
+  },
+  {
+    "classificacao": 506,
+    "nome": "IGOR GUIMARÃES DA ROCHA",
+    "numero_inscricao": "105466-8",
+    "data_nascimento": "23/08/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 507,
+    "nome": "ANTONIO CAIQUE GUIMARAES DE PAULA",
+    "numero_inscricao": "101971-5",
+    "data_nascimento": "10/11/2004",
+    "oed": "SÃO PAULO",
+    "GI": 210
+  },
+  {
+    "classificacao": 508,
+    "nome": "FELIPE MATOS SARTORIO",
+    "numero_inscricao": "100843-4",
+    "data_nascimento": "21/10/2003",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 509,
+    "nome": "BERNARDO RIBEIRO LEDA DE ANDRADE",
+    "numero_inscricao": "107281-5",
+    "data_nascimento": "25/12/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 510,
+    "nome": "IURY VILAS BOAS ALVES",
+    "numero_inscricao": "101388-2",
+    "data_nascimento": "15/09/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 511,
+    "nome": "FERNANDO CASTRO RIBEIRO",
+    "numero_inscricao": "104412-8",
+    "data_nascimento": "29/07/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 512,
+    "nome": "CARLOS EDUARDO DE ALMEIDA FIALHO",
+    "numero_inscricao": "104618-2",
+    "data_nascimento": "17/06/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 513,
+    "nome": "TIAGO LUSTOSA MIRANDA SPEROTTO",
+    "numero_inscricao": "108069-8",
+    "data_nascimento": "12/05/2008",
+    "oed": "VITÓRIA",
+    "GI": 210
+  },
+  {
+    "classificacao": 514,
+    "nome": "PEDRO MONTEIRO TEIXEIRA",
+    "numero_inscricao": "106415-3",
+    "data_nascimento": "24/12/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 515,
+    "nome": "LORENZO WOICZEKOSKI VERÍSSIMO",
+    "numero_inscricao": "104381-1",
+    "data_nascimento": "25/08/2007",
+    "oed": "PORTO ALEGRE",
+    "GI": 210
+  },
+  {
+    "classificacao": 516,
+    "nome": "SÉRGIO HENRIQUE GOMES COUTINHO",
+    "numero_inscricao": "102109-0",
+    "data_nascimento": "28/06/2006",
+    "oed": "SÃO PAULO",
+    "GI": 210
+  },
+  {
+    "classificacao": 517,
+    "nome": "ARTHUR LAUTON MACHADO LOPES GOMES",
+    "numero_inscricao": "107580-5",
+    "data_nascimento": "19/01/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 518,
+    "nome": "PEDRO LUCAS MORAES SILVEIRA",
+    "numero_inscricao": "107107-0",
+    "data_nascimento": "05/07/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 519,
+    "nome": "MARIA LUÍSA SARAIVA DE ALBUQUERQUE",
+    "numero_inscricao": "101473-8",
+    "data_nascimento": "13/10/2005",
+    "oed": "BRASÍLIA",
+    "GI": 210
+  },
+  {
+    "classificacao": 520,
+    "nome": "DAVI OLIVEIRA DE CARVALHO",
+    "numero_inscricao": "111139-4",
+    "data_nascimento": "18/07/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 521,
+    "nome": "GABRIEL DE SOUZA FERNANDES",
+    "numero_inscricao": "108931-8",
+    "data_nascimento": "28/09/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 522,
+    "nome": "MARCOS CORRÊA DE CARVALHO",
+    "numero_inscricao": "105040-5",
+    "data_nascimento": "27/04/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 523,
+    "nome": "SAMUEL ALEX RODRIGUES GUEDES",
+    "numero_inscricao": "111686-5",
+    "data_nascimento": "02/06/2009",
+    "oed": "BELO HORIZONTE",
+    "GI": 210
+  },
+  {
+    "classificacao": 524,
+    "nome": "ADLER RAUL GUIMARÃES",
+    "numero_inscricao": "107109-7",
+    "data_nascimento": "15/04/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 525,
+    "nome": "PEDRO HENRIQUE MOREIRA COELHO",
+    "numero_inscricao": "108734-7",
+    "data_nascimento": "21/06/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 526,
+    "nome": "JOÃO GABRIEL FREITAS DE ASSIS",
+    "numero_inscricao": "108291-7",
+    "data_nascimento": "11/08/2005",
+    "oed": "BRASÍLIA",
+    "GI": 210
+  },
+  {
+    "classificacao": 527,
+    "nome": "GABRIEL CARVALHO CLEFFS DE SOUZA",
+    "numero_inscricao": "107861-9",
+    "data_nascimento": "15/12/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 528,
+    "nome": "PEDRO LUCAS DA SILVA ARAUJO",
+    "numero_inscricao": "105714-8",
+    "data_nascimento": "05/04/2004",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 529,
+    "nome": "ARTHUR REBELO DELBONS",
+    "numero_inscricao": "108341-8",
+    "data_nascimento": "23/09/2004",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 530,
+    "nome": "KAUÃ GONÇALVES CORDEIRO DA SILVA",
+    "numero_inscricao": "108243-1",
+    "data_nascimento": "02/03/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 531,
+    "nome": "NÍCOLAS MACIEL MARINHO",
+    "numero_inscricao": "113145-9",
+    "data_nascimento": "09/06/2009",
+    "oed": "PORTO ALEGRE",
+    "GI": 210
+  },
+  {
+    "classificacao": 532,
+    "nome": "BERNARDO CROMWELL ARAUJO FERREIRA FALCÃO",
+    "numero_inscricao": "107034-2",
+    "data_nascimento": "06/01/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 533,
+    "nome": "JOÃO EDUARDO ROCHA MARTINS",
+    "numero_inscricao": "108367-0",
+    "data_nascimento": "04/10/2006",
+    "oed": "CORUMBÁ",
+    "GI": 210
+  },
+  {
+    "classificacao": 534,
+    "nome": "GUILHERME MENESES MADY",
+    "numero_inscricao": "104998-1",
+    "data_nascimento": "12/12/2008",
+    "oed": "BRASÍLIA",
+    "GI": 210
+  },
+  {
+    "classificacao": 535,
+    "nome": "GUSTAVO DE BRITO OLIVEIRA",
+    "numero_inscricao": "106144-6",
+    "data_nascimento": "27/04/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 536,
+    "nome": "SÉRGIO VICTOR SOUZA DE OLIVEIRA LOPES",
+    "numero_inscricao": "105212-8",
+    "data_nascimento": "07/05/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 537,
+    "nome": "LYVIA DIAS PRESTES LUCIO",
+    "numero_inscricao": "110411-9",
+    "data_nascimento": "08/03/2005",
+    "oed": "SÃO PAULO",
+    "GI": 210
+  },
+  {
+    "classificacao": 538,
+    "nome": "OLIVERBECKMAN ALMEIDA DE AQUINO",
+    "numero_inscricao": "103824-6",
+    "data_nascimento": "31/12/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 539,
+    "nome": "JHONATAN LUCAS MASSA",
+    "numero_inscricao": "105409-4",
+    "data_nascimento": "01/11/2004",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 540,
+    "nome": "LUIZ FELIPE DA COSTA FERREIRA",
+    "numero_inscricao": "108327-4",
+    "data_nascimento": "23/03/2006",
+    "oed": "PORTO ALEGRE",
+    "GI": 210
+  },
+  {
+    "classificacao": 541,
+    "nome": "VITOR FARIA BALBINO",
+    "numero_inscricao": "112064-5",
+    "data_nascimento": "23/01/2003",
+    "oed": "VITÓRIA",
+    "GI": 210
+  },
+  {
+    "classificacao": 542,
+    "nome": "NICOLAS DE ARAUJO LIMA",
+    "numero_inscricao": "106074-2",
+    "data_nascimento": "24/12/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 543,
+    "nome": "PEDRO HENRIQUE SILVA DOS ANJOS",
+    "numero_inscricao": "105824-7",
+    "data_nascimento": "25/08/2004",
+    "oed": "BELO HORIZONTE",
+    "GI": 210
+  },
+  {
+    "classificacao": 544,
+    "nome": "ELTON WESLLEY DOS SANTOS COSTA",
+    "numero_inscricao": "109447-5",
+    "data_nascimento": "29/06/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 545,
+    "nome": "ANA JÚLIA NASCIMENTO COELHO",
+    "numero_inscricao": "103839-3",
+    "data_nascimento": "03/07/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 546,
+    "nome": "RALPH MARQUES PAUL",
+    "numero_inscricao": "108865-7",
+    "data_nascimento": "04/12/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 547,
+    "nome": "GABRIEL HENRIQUE LUIZ DO NASCIMENTO",
+    "numero_inscricao": "102718-4",
+    "data_nascimento": "16/04/2007",
+    "oed": "SÃO PAULO",
+    "GI": 210
+  },
+  {
+    "classificacao": 548,
+    "nome": "KARINA DA SILVA LOPES",
+    "numero_inscricao": "101572-2",
+    "data_nascimento": "08/12/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 549,
+    "nome": "DANIEL MUNIZ FERNANDES",
+    "numero_inscricao": "109396-6",
+    "data_nascimento": "31/03/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 550,
+    "nome": "GUSTAVO ALBERTASSI VIEIRA",
+    "numero_inscricao": "107847-5",
+    "data_nascimento": "17/09/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 551,
+    "nome": "MARVIN GONÇALVES PEREIRA",
+    "numero_inscricao": "112937-5",
+    "data_nascimento": "21/10/2008",
+    "oed": "PORTO ALEGRE",
+    "GI": 210
+  },
+  {
+    "classificacao": 552,
+    "nome": "DANIEL NUNES GALVÃO",
+    "numero_inscricao": "105480-1",
+    "data_nascimento": "25/02/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 553,
+    "nome": "RAFAELA RODRIGUES CARNEIRO",
+    "numero_inscricao": "112806-5",
+    "data_nascimento": "11/09/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 554,
+    "nome": "LETÍCIA VITÓRIA QUEIROZ NASCIMENTO DA SILVA",
+    "numero_inscricao": "100768-5",
+    "data_nascimento": "13/09/2004",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 555,
+    "nome": "ERICK FONSECA DA SILVA ALVES",
+    "numero_inscricao": "108629-9",
+    "data_nascimento": "15/02/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 556,
+    "nome": "SOPHIA FONSECA CAMPANELLA",
+    "numero_inscricao": "107784-3",
+    "data_nascimento": "17/01/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 557,
+    "nome": "PEDRO HENRIQUE GUEDES BELO",
+    "numero_inscricao": "111177-3",
+    "data_nascimento": "27/05/2003",
+    "oed": "SÃO PAULO",
+    "GI": 210
+  },
+  {
+    "classificacao": 558,
+    "nome": "ENZO DE LIMA SANTOS",
+    "numero_inscricao": "108666-0",
+    "data_nascimento": "07/11/2008",
+    "oed": "CORUMBÁ",
+    "GI": 210
+  },
+  {
+    "classificacao": 559,
+    "nome": "MARIA EDUARDA DOS SANTOS VENTURA",
+    "numero_inscricao": "104711-8",
+    "data_nascimento": "22/04/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 560,
+    "nome": "ARTHUR FELICIANO NEVES SILVA",
+    "numero_inscricao": "100760-0",
+    "data_nascimento": "06/04/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 561,
+    "nome": "ARTHUR HORNKE CAVALHEIRO",
+    "numero_inscricao": "108879-6",
+    "data_nascimento": "20/10/2007",
+    "oed": "FLORIANÓPOLIS",
+    "GI": 210
+  },
+  {
+    "classificacao": 562,
+    "nome": "KAIO FIRMINO DE ARAUJO",
+    "numero_inscricao": "113579-1",
+    "data_nascimento": "13/02/2005",
+    "oed": "BRASÍLIA",
+    "GI": 210
+  },
+  {
+    "classificacao": 563,
+    "nome": "DAVI MARTINS BRANDAO",
+    "numero_inscricao": "113730-8",
+    "data_nascimento": "28/12/2007",
+    "oed": "BRASÍLIA",
+    "GI": 210
+  },
+  {
+    "classificacao": 564,
+    "nome": "ALANA MIRANDA DE SENA",
+    "numero_inscricao": "110533-0",
+    "data_nascimento": "11/05/2006",
+    "oed": "BRASÍLIA",
+    "GI": 210
+  },
+  {
+    "classificacao": 565,
+    "nome": "PEDRO DANIEL DO NASCIMENTO BAUER",
+    "numero_inscricao": "100564-7",
+    "data_nascimento": "05/08/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 566,
+    "nome": "PEDRO LUIS ASSAFRÃO WALTER",
+    "numero_inscricao": "101879-8",
+    "data_nascimento": "27/07/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 567,
+    "nome": "GABRIELLY PIRES COUTO",
+    "numero_inscricao": "106657-0",
+    "data_nascimento": "28/01/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 568,
+    "nome": "FELIPE HODIE VEIGA DE CARVALHO",
+    "numero_inscricao": "108705-6",
+    "data_nascimento": "14/01/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 569,
+    "nome": "MIGUEL ANGELO FABRICIO VIANA",
+    "numero_inscricao": "104549-7",
+    "data_nascimento": "27/08/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 570,
+    "nome": "JOAO PEDRO RODRIGUES PINTO",
+    "numero_inscricao": "100146-0",
+    "data_nascimento": "19/11/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 571,
+    "nome": "PEDRO GODOY NUNES",
+    "numero_inscricao": "105323-5",
+    "data_nascimento": "20/04/2009",
+    "oed": "BELO HORIZONTE",
+    "GI": 210
+  },
+  {
+    "classificacao": 572,
+    "nome": "MIGUEL MAURILIO PEDINOTTI DA SILVA",
+    "numero_inscricao": "107077-2",
+    "data_nascimento": "03/07/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 573,
+    "nome": "SOPHIA DE ALMEIDA CABRAL",
+    "numero_inscricao": "103193-3",
+    "data_nascimento": "01/12/2008",
+    "oed": "SÃO PAULO",
+    "GI": 210
+  },
+  {
+    "classificacao": 574,
+    "nome": "VITOR MENDES MORENO",
+    "numero_inscricao": "113039-2",
+    "data_nascimento": "08/04/2006",
+    "oed": "SÃO PAULO",
+    "GI": 210
+  },
+  {
+    "classificacao": 575,
+    "nome": "ENZO CEZAR DE SOUZA VIEIRA",
+    "numero_inscricao": "107543-4",
+    "data_nascimento": "16/11/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 576,
+    "nome": "ANTÔNIO MIGUEL MARINHO CARDOSO",
+    "numero_inscricao": "107334-0",
+    "data_nascimento": "03/10/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 577,
+    "nome": "ANA LETÍCIA MARQUES DA SILVA",
+    "numero_inscricao": "103012-1",
+    "data_nascimento": "27/02/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 578,
+    "nome": "DANIEL IAN FARIAS MARQUES",
+    "numero_inscricao": "102289-3",
+    "data_nascimento": "12/08/2004",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 579,
+    "nome": "SAMUEL SANTOS SURCIN",
+    "numero_inscricao": "100349-0",
+    "data_nascimento": "06/12/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 580,
+    "nome": "GUILHERME GONÇALVES DE MOURA",
+    "numero_inscricao": "101621-5",
+    "data_nascimento": "07/11/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 581,
+    "nome": "JOÃO PEDRO MEDEIROS CABRAL",
+    "numero_inscricao": "101155-3",
+    "data_nascimento": "06/03/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 582,
+    "nome": "LUÍS FELIPE PEDROZO DA CUNHA",
+    "numero_inscricao": "107741-3",
+    "data_nascimento": "13/06/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 210
+  },
+  {
+    "classificacao": 583,
+    "nome": "GUILHERME GOMES DE CARVALHO",
+    "numero_inscricao": "102771-5",
+    "data_nascimento": "28/11/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 584,
+    "nome": "MATHEUS DÁVILA REIS",
+    "numero_inscricao": "108913-1",
+    "data_nascimento": "15/07/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 585,
+    "nome": "GABRIEL FASSINI DANNEBROCK",
+    "numero_inscricao": "102578-7",
+    "data_nascimento": "05/07/2006",
+    "oed": "PORTO ALEGRE",
+    "GI": 205
+  },
+  {
+    "classificacao": 586,
+    "nome": "MAITÊ COELHO MONTE NEGRO",
+    "numero_inscricao": "108674-0",
+    "data_nascimento": "27/06/2007",
+    "oed": "BRASÍLIA",
+    "GI": 205
+  },
+  {
+    "classificacao": 587,
+    "nome": "JULIO CESAR SALAZAR ALBUQUERQUE",
+    "numero_inscricao": "102589-1",
+    "data_nascimento": "14/08/2006",
+    "oed": "VITÓRIA",
+    "GI": 205
+  },
+  {
+    "classificacao": 588,
+    "nome": "ARTHUR DE JESUS FERNANDES GOMES",
+    "numero_inscricao": "108297-6",
+    "data_nascimento": "19/10/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 589,
+    "nome": "GUILHERME BREÇANO FERREIRA NOBRE DIAS",
+    "numero_inscricao": "108927-0",
+    "data_nascimento": "11/11/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 590,
+    "nome": "MANUELA GUEDES MARÇAL MANACEZ",
+    "numero_inscricao": "101367-1",
+    "data_nascimento": "04/08/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 591,
+    "nome": "JOÃO PEDRO ISIDRO DE LIMA",
+    "numero_inscricao": "101967-8",
+    "data_nascimento": "08/04/2008",
+    "oed": "BRASÍLIA",
+    "GI": 205
+  },
+  {
+    "classificacao": 592,
+    "nome": "ARTHUR LOUBACK DA SILVA",
+    "numero_inscricao": "113754-3",
+    "data_nascimento": "06/07/2007",
+    "oed": "SÃO PAULO",
+    "GI": 205
+  },
+  {
+    "classificacao": 593,
+    "nome": "PEDRO HENRIQUE BRAGA SERPA",
+    "numero_inscricao": "110512-0",
+    "data_nascimento": "10/07/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 594,
+    "nome": "LUISA TEIXEIRA MANSUR",
+    "numero_inscricao": "100319-0",
+    "data_nascimento": "16/01/2007",
+    "oed": "SÃO PAULO",
+    "GI": 205
+  },
+  {
+    "classificacao": 595,
+    "nome": "PEDRO HENRIQUE TEIXEIRA MARTINS",
+    "numero_inscricao": "102039-6",
+    "data_nascimento": "06/11/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 596,
+    "nome": "EDUARDA MAGANO CAMARGO NERY",
+    "numero_inscricao": "107813-3",
+    "data_nascimento": "17/06/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 597,
+    "nome": "WILLIAM MAURICIO MARCELINO VALLE",
+    "numero_inscricao": "101435-9",
+    "data_nascimento": "09/09/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 598,
+    "nome": "RAFAEL DE CASTRO BRASILEIRO",
+    "numero_inscricao": "108660-0",
+    "data_nascimento": "25/05/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 599,
+    "nome": "MARCOS FELIPE BATISTA SANTOS",
+    "numero_inscricao": "100585-8",
+    "data_nascimento": "19/12/2007",
+    "oed": "SÃO PAULO",
+    "GI": 205
+  },
+  {
+    "classificacao": 600,
+    "nome": "JOSE EDUARDO TERRAS MELLO",
+    "numero_inscricao": "105592-7",
+    "data_nascimento": "23/06/2006",
+    "oed": "SÃO PAULO",
+    "GI": 205
+  },
+  {
+    "classificacao": 601,
+    "nome": "VITOR DE FREITAS TALLASSI",
+    "numero_inscricao": "105043-0",
+    "data_nascimento": "30/04/2004",
+    "oed": "VITÓRIA",
+    "GI": 205
+  },
+  {
+    "classificacao": 602,
+    "nome": "LUCAS GRUENING GOLOMBIESKI",
+    "numero_inscricao": "107166-0",
+    "data_nascimento": "28/04/2008",
+    "oed": "PARANAGUÁ",
+    "GI": 205
+  },
+  {
+    "classificacao": 603,
+    "nome": "VICTORIA LUISA SENHORINI DAINEZ VILLAÇA DA SILVA",
+    "numero_inscricao": "112820-9",
+    "data_nascimento": "17/07/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 604,
+    "nome": "DAVI CARDOSO RIBEIRO DOS SANTOS",
+    "numero_inscricao": "113751-9",
+    "data_nascimento": "07/09/2008",
+    "oed": "SÃO PAULO",
+    "GI": 205
+  },
+  {
+    "classificacao": 605,
+    "nome": "LUIZ HENRIQUE CARVALHO FERRAZ",
+    "numero_inscricao": "108199-0",
+    "data_nascimento": "08/04/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 606,
+    "nome": "IGOR DE OLIVEIRA VALERIO",
+    "numero_inscricao": "100130-4",
+    "data_nascimento": "26/06/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 607,
+    "nome": "ANDRE LUIZ CAVALCANTI RODRIGUES",
+    "numero_inscricao": "106029-1",
+    "data_nascimento": "11/11/2004",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 608,
+    "nome": "GABRIEL DA PAZ NOGUEIRA",
+    "numero_inscricao": "110227-9",
+    "data_nascimento": "25/10/2008",
+    "oed": "BRASÍLIA",
+    "GI": 205
+  },
+  {
+    "classificacao": 609,
+    "nome": "VITOR NOGUEIRA ELERATI",
+    "numero_inscricao": "101444-7",
+    "data_nascimento": "09/10/2006",
+    "oed": "BELO HORIZONTE",
+    "GI": 205
+  },
+  {
+    "classificacao": 610,
+    "nome": "ERICK D'ANGELLES SIQUEIRA DO NASCIMENTO",
+    "numero_inscricao": "101372-7",
+    "data_nascimento": "30/09/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 611,
+    "nome": "VALCIR RODRIGUES DA SILVA JÚNIOR",
+    "numero_inscricao": "103461-6",
+    "data_nascimento": "06/01/2008",
+    "oed": "SÃO PAULO",
+    "GI": 205
+  },
+  {
+    "classificacao": 612,
+    "nome": "MARIA EDUARDA FERREIRA DE OLIVEIRA",
+    "numero_inscricao": "106340-9",
+    "data_nascimento": "06/09/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 613,
+    "nome": "ARTHUR VARGAS MENDONÇA",
+    "numero_inscricao": "113359-3",
+    "data_nascimento": "27/05/2008",
+    "oed": "FLORIANÓPOLIS",
+    "GI": 205
+  },
+  {
+    "classificacao": 614,
+    "nome": "LUIZ FELIPE ARAUJO MORAIS",
+    "numero_inscricao": "104841-0",
+    "data_nascimento": "10/01/2004",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 615,
+    "nome": "GABRIEL LAMELLAS DA CUNHA",
+    "numero_inscricao": "103658-2",
+    "data_nascimento": "27/04/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 616,
+    "nome": "MARCOS ANTÔNIO FARIA DOS SANTOS MACHADO",
+    "numero_inscricao": "101719-7",
+    "data_nascimento": "08/10/2007",
+    "oed": "VITÓRIA",
+    "GI": 205
+  },
+  {
+    "classificacao": 617,
+    "nome": "FELIPE AUGUSTO DA COSTA PINHO",
+    "numero_inscricao": "109424-8",
+    "data_nascimento": "26/11/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 618,
+    "nome": "MARCELO VINÍCIUS COUTINHO PUIZ",
+    "numero_inscricao": "103384-0",
+    "data_nascimento": "10/12/2008",
+    "oed": "SÃO PAULO",
+    "GI": 205
+  },
+  {
+    "classificacao": 619,
+    "nome": "RAFAEL SILVA DE OLIVEIRA",
+    "numero_inscricao": "100700-1",
+    "data_nascimento": "08/01/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 620,
+    "nome": "ASAFE FERNANDES ARAÚJO",
+    "numero_inscricao": "107265-5",
+    "data_nascimento": "15/09/2008",
+    "oed": "BRASÍLIA",
+    "GI": 205
+  },
+  {
+    "classificacao": 621,
+    "nome": "LÍBERO LUCIANO DE MIRANDA NETO",
+    "numero_inscricao": "102154-0",
+    "data_nascimento": "01/04/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 622,
+    "nome": "GABRIEL GALVÃO SILVA",
+    "numero_inscricao": "105758-6",
+    "data_nascimento": "09/05/2009",
+    "oed": "SÃO PAULO",
+    "GI": 205
+  },
+  {
+    "classificacao": 623,
+    "nome": "NICOLE DA CUNHA VILAS BOAS",
+    "numero_inscricao": "100189-0",
+    "data_nascimento": "15/01/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 624,
+    "nome": "JEAN FELIPE ALVES DE OLIVEIRA",
+    "numero_inscricao": "109337-6",
+    "data_nascimento": "28/12/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 625,
+    "nome": "LUCAS DA COSTA OLIVEIRA",
+    "numero_inscricao": "104721-4",
+    "data_nascimento": "07/01/2004",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 626,
+    "nome": "DAVI AUGUSTO ZANDONÁ PEREIRA",
+    "numero_inscricao": "100218-0",
+    "data_nascimento": "16/10/2007",
+    "oed": "PORTO ALEGRE",
+    "GI": 205
+  },
+  {
+    "classificacao": 627,
+    "nome": "RODRIGO KAUÃ DE SOUSA MORAIS",
+    "numero_inscricao": "109778-0",
+    "data_nascimento": "11/04/2006",
+    "oed": "BRASÍLIA",
+    "GI": 205
+  },
+  {
+    "classificacao": 628,
+    "nome": "DAVI AMORIM VITORIO",
+    "numero_inscricao": "102174-3",
+    "data_nascimento": "16/06/2006",
+    "oed": "FLORIANÓPOLIS",
+    "GI": 205
+  },
+  {
+    "classificacao": 629,
+    "nome": "JOÃO PEDRO BENTIN DE CASTRO",
+    "numero_inscricao": "106187-6",
+    "data_nascimento": "31/10/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 630,
+    "nome": "JULIA FERNANDES CAVALCANTE",
+    "numero_inscricao": "112308-8",
+    "data_nascimento": "20/11/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 631,
+    "nome": "BERNARDO DE MEDEIROS GOMES",
+    "numero_inscricao": "105989-9",
+    "data_nascimento": "12/06/2007",
+    "oed": "BRASÍLIA",
+    "GI": 205
+  },
+  {
+    "classificacao": 632,
+    "nome": "MATHEUS DOURADO MADUREIRA",
+    "numero_inscricao": "104907-6",
+    "data_nascimento": "08/06/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 633,
+    "nome": "JOÃO MARCIO SILVA DA CUNHA",
+    "numero_inscricao": "101810-6",
+    "data_nascimento": "18/11/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 634,
+    "nome": "GUILHERME AMORIM DA CUNHA",
+    "numero_inscricao": "104996-5",
+    "data_nascimento": "12/04/2003",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 635,
+    "nome": "RUAN AUGUSTO ABREU DE MESQUITA",
+    "numero_inscricao": "102198-9",
+    "data_nascimento": "23/07/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 636,
+    "nome": "JOÃO CARLOS DE OLIVEIRA ALVES LIMA",
+    "numero_inscricao": "101328-4",
+    "data_nascimento": "10/06/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 637,
+    "nome": "PEDRO HENRIQUE PILGER HORN",
+    "numero_inscricao": "110703-7",
+    "data_nascimento": "03/04/2007",
+    "oed": "PORTO ALEGRE",
+    "GI": 205
+  },
+  {
+    "classificacao": 638,
+    "nome": "JOÃO PAULO BRANDT ROSSA DA SILVA",
+    "numero_inscricao": "111821-1",
+    "data_nascimento": "13/05/2008",
+    "oed": "BRASÍLIA",
+    "GI": 205
+  },
+  {
+    "classificacao": 639,
+    "nome": "DANILO DE SOUZA NORONHA",
+    "numero_inscricao": "112353-9",
+    "data_nascimento": "29/03/2004",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 640,
+    "nome": "ANA LUIZA FEITOZA LEMOS",
+    "numero_inscricao": "100450-5",
+    "data_nascimento": "02/04/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 641,
+    "nome": "EDUARDO ANICETO OLIVEIRA NITA",
+    "numero_inscricao": "100046-7",
+    "data_nascimento": "28/05/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 642,
+    "nome": "THÉO ALMEIDA FERREIRA PRADO DOS SANTOS",
+    "numero_inscricao": "100174-2",
+    "data_nascimento": "05/08/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 643,
+    "nome": "JEFERSON DE MOURA SILVA",
+    "numero_inscricao": "105260-3",
+    "data_nascimento": "01/04/2003",
+    "oed": "SÃO PAULO",
+    "GI": 205
+  },
+  {
+    "classificacao": 644,
+    "nome": "MARCUS VINÍCIUS SBROGLIO",
+    "numero_inscricao": "103649-4",
+    "data_nascimento": "15/03/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 645,
+    "nome": "AFONSO OLIVEIRA DE SOUSA",
+    "numero_inscricao": "108264-2",
+    "data_nascimento": "13/03/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 646,
+    "nome": "ANDREW VIDOTO SILVA",
+    "numero_inscricao": "112894-6",
+    "data_nascimento": "14/10/2005",
+    "oed": "VITÓRIA",
+    "GI": 205
+  },
+  {
+    "classificacao": 647,
+    "nome": "GUILHERME FARIA GALLO LOURENÇO",
+    "numero_inscricao": "101972-3",
+    "data_nascimento": "07/07/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 648,
+    "nome": "NYCOLLAS EDUARDO MOTA DA SILVA",
+    "numero_inscricao": "101581-0",
+    "data_nascimento": "16/04/2004",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 649,
+    "nome": "NICOLAS SPADA MAURER",
+    "numero_inscricao": "110581-6",
+    "data_nascimento": "04/04/2007",
+    "oed": "PORTO ALEGRE",
+    "GI": 205
+  },
+  {
+    "classificacao": 650,
+    "nome": "LUÍS FELIPE REGUEIRA DE ARAÚJO",
+    "numero_inscricao": "108756-6",
+    "data_nascimento": "27/08/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 651,
+    "nome": "GABRIELA TOSTES SOUZA",
+    "numero_inscricao": "110126-8",
+    "data_nascimento": "24/01/2003",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 652,
+    "nome": "FELIPE VIANA DA NÓBREGA CAMPOS",
+    "numero_inscricao": "109523-2",
+    "data_nascimento": "26/12/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 653,
+    "nome": "NATHIELLE DE LEMOS VEIGA",
+    "numero_inscricao": "109787-9",
+    "data_nascimento": "17/12/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 654,
+    "nome": "JOÃO PEDRO GALVÃO CAPUTO",
+    "numero_inscricao": "108749-4",
+    "data_nascimento": "05/03/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 655,
+    "nome": "ELIAUDSON DE SOUZA HUGUININ JUNIOR",
+    "numero_inscricao": "102040-9",
+    "data_nascimento": "27/04/2007",
+    "oed": "VITÓRIA",
+    "GI": 205
+  },
+  {
+    "classificacao": 656,
+    "nome": "GUSTAVO NOVAES DE MELLO OLIVEIRA",
+    "numero_inscricao": "100930-6",
+    "data_nascimento": "29/10/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 657,
+    "nome": "MIGUEL FERREIRA LEÃO DOS REIS DA SILVA",
+    "numero_inscricao": "102394-1",
+    "data_nascimento": "14/07/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 658,
+    "nome": "GUILHERME LUVEZUTTI LEME",
+    "numero_inscricao": "105811-6",
+    "data_nascimento": "31/10/2006",
+    "oed": "SÃO PAULO",
+    "GI": 205
+  },
+  {
+    "classificacao": 659,
+    "nome": "MALTHUS LIRA GRINALDO",
+    "numero_inscricao": "109300-0",
+    "data_nascimento": "08/04/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 660,
+    "nome": "GUSTAVO FRIZZERA VIEIRA",
+    "numero_inscricao": "104673-0",
+    "data_nascimento": "15/03/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 661,
+    "nome": "EMANUELLE GOULART MONSORES ARAÚJO",
+    "numero_inscricao": "105351-8",
+    "data_nascimento": "19/08/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 662,
+    "nome": "ANDRE LUIZ SARMENTO MENDES PEREIRA",
+    "numero_inscricao": "104426-7",
+    "data_nascimento": "04/01/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 663,
+    "nome": "LUCAS SANTOS GONZAGA LIMA",
+    "numero_inscricao": "111243-4",
+    "data_nascimento": "06/02/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 664,
+    "nome": "LÍVIA LACERDA DE QUEIROZ",
+    "numero_inscricao": "105679-4",
+    "data_nascimento": "26/10/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 205
+  },
+  {
+    "classificacao": 665,
+    "nome": "HUGO SERGIO CASTRO DINIZ",
+    "numero_inscricao": "110720-5",
+    "data_nascimento": "09/11/2004",
+    "oed": "BRASÍLIA",
+    "GI": 200
+  },
+  {
+    "classificacao": 666,
+    "nome": "JULIANO DA SILVA SALIM",
+    "numero_inscricao": "104584-1",
+    "data_nascimento": "25/05/2003",
+    "oed": "SÃO PAULO",
+    "GI": 200
+  },
+  {
+    "classificacao": 667,
+    "nome": "JOÃO PEDRO MESQUITA CANCELLA",
+    "numero_inscricao": "107153-0",
+    "data_nascimento": "01/11/2006",
+    "oed": "BRASÍLIA",
+    "GI": 200
+  },
+  {
+    "classificacao": 668,
+    "nome": "GUILHERME CARREIRO LIMA PEREIRA",
+    "numero_inscricao": "100074-0",
+    "data_nascimento": "07/08/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 669,
+    "nome": "GUILHERME MARINHO FREIRE",
+    "numero_inscricao": "110502-3",
+    "data_nascimento": "29/05/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 670,
+    "nome": "PEDRO MACHADO ANGONESI",
+    "numero_inscricao": "101187-9",
+    "data_nascimento": "27/02/2008",
+    "oed": "PORTO ALEGRE",
+    "GI": 200
+  },
+  {
+    "classificacao": 671,
+    "nome": "NICOLAS DE OLIVEIRA FONSECA",
+    "numero_inscricao": "109790-8",
+    "data_nascimento": "25/10/2005",
+    "oed": "SÃO PAULO",
+    "GI": 200
+  },
+  {
+    "classificacao": 672,
+    "nome": "GABRIEL DE OLIVEIRA DA SILVA RIBEIRO",
+    "numero_inscricao": "100024-8",
+    "data_nascimento": "29/03/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 673,
+    "nome": "ISAAC NUNES COELHO DOS SANTOS",
+    "numero_inscricao": "101337-2",
+    "data_nascimento": "24/03/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 674,
+    "nome": "DANIEL VINHAS CAIRO DE SOUSA",
+    "numero_inscricao": "108278-1",
+    "data_nascimento": "08/11/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 675,
+    "nome": "EDUARDO BALTHAZAR PAULICHI CARRION SOUZA",
+    "numero_inscricao": "102847-8",
+    "data_nascimento": "22/05/2006",
+    "oed": "SÃO PAULO",
+    "GI": 200
+  },
+  {
+    "classificacao": 676,
+    "nome": "VICTOR AGUIAR GOMES",
+    "numero_inscricao": "104311-7",
+    "data_nascimento": "18/10/2007",
+    "oed": "PORTO ALEGRE",
+    "GI": 200
+  },
+  {
+    "classificacao": 677,
+    "nome": "RODRIGO MURAO PANNEITZ",
+    "numero_inscricao": "107855-5",
+    "data_nascimento": "08/01/2009",
+    "oed": "SÃO PAULO",
+    "GI": 200
+  },
+  {
+    "classificacao": 678,
+    "nome": "PEDRO HENRIQUE SIEBEN",
+    "numero_inscricao": "103434-1",
+    "data_nascimento": "05/05/2009",
+    "oed": "PORTO ALEGRE",
+    "GI": 200
+  },
+  {
+    "classificacao": 679,
+    "nome": "HEITOR MATEUS OLIVEIRA DE ALMEIDA",
+    "numero_inscricao": "104982-6",
+    "data_nascimento": "11/10/2006",
+    "oed": "SÃO PAULO",
+    "GI": 200
+  },
+  {
+    "classificacao": 680,
+    "nome": "GABRIEL SANTOS DE OLIVEIRA",
+    "numero_inscricao": "105637-2",
+    "data_nascimento": "27/04/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 681,
+    "nome": "LUCAS SALAZAR PASSOS MAIA",
+    "numero_inscricao": "109270-1",
+    "data_nascimento": "08/05/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 682,
+    "nome": "CELSO BENITES GEDEÃO MARTINS",
+    "numero_inscricao": "104938-3",
+    "data_nascimento": "07/06/2004",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 683,
+    "nome": "MURILO SACONI NEGRI",
+    "numero_inscricao": "106080-6",
+    "data_nascimento": "25/08/2007",
+    "oed": "VITÓRIA",
+    "GI": 200
+  },
+  {
+    "classificacao": 684,
+    "nome": "VICENZO DE SAMPAIO RODRIGUES GRAZINOLI GARRIDO",
+    "numero_inscricao": "107935-5",
+    "data_nascimento": "14/02/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 685,
+    "nome": "ITALO POIANI GROSSI ROCHA",
+    "numero_inscricao": "110130-5",
+    "data_nascimento": "10/03/2008",
+    "oed": "BELO HORIZONTE",
+    "GI": 200
+  },
+  {
+    "classificacao": 686,
+    "nome": "MIGUEL BITTENCOURT FIORINI",
+    "numero_inscricao": "112680-1",
+    "data_nascimento": "11/12/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 687,
+    "nome": "ANA CAROLINA DA SILVA SOLIDADE DOS SANTOS",
+    "numero_inscricao": "102274-6",
+    "data_nascimento": "29/03/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 688,
+    "nome": "KAUÃ VALADARES GALLITO",
+    "numero_inscricao": "106881-6",
+    "data_nascimento": "18/12/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 689,
+    "nome": "THAIS LOPES MARTIRE",
+    "numero_inscricao": "106539-1",
+    "data_nascimento": "30/07/2003",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 690,
+    "nome": "ARTHUR REIS VOLPINI",
+    "numero_inscricao": "107116-9",
+    "data_nascimento": "23/04/2007",
+    "oed": "BELO HORIZONTE",
+    "GI": 200
+  },
+  {
+    "classificacao": 691,
+    "nome": "ENZO MATOS COSTA",
+    "numero_inscricao": "101214-2",
+    "data_nascimento": "28/05/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 692,
+    "nome": "ISAAC MAURICIO MORENO DA CUNHA",
+    "numero_inscricao": "100609-2",
+    "data_nascimento": "25/01/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 693,
+    "nome": "DOUGLAS RYAN RAMOS CARVALHO",
+    "numero_inscricao": "111187-0",
+    "data_nascimento": "15/01/2003",
+    "oed": "BRASÍLIA",
+    "GI": 200
+  },
+  {
+    "classificacao": 694,
+    "nome": "CAIQUE DA SILVA CERQUEIRA SOUSA",
+    "numero_inscricao": "106363-6",
+    "data_nascimento": "17/12/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 695,
+    "nome": "EDUARDO GONÇALVES LUZ",
+    "numero_inscricao": "103924-9",
+    "data_nascimento": "25/06/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 696,
+    "nome": "RUBENS RICARDO SATHLER FREITAS",
+    "numero_inscricao": "105828-0",
+    "data_nascimento": "07/04/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 697,
+    "nome": "NÍCOLAS MEDEIROS ALCANTELADO",
+    "numero_inscricao": "105980-5",
+    "data_nascimento": "20/03/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 698,
+    "nome": "LUIS EDUARDO LOPES DAS NEVES",
+    "numero_inscricao": "106560-7",
+    "data_nascimento": "09/06/2004",
+    "oed": "SÃO PAULO",
+    "GI": 200
+  },
+  {
+    "classificacao": 699,
+    "nome": "GUSTAVO GONÇALVES DA SILVA",
+    "numero_inscricao": "105681-5",
+    "data_nascimento": "22/12/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 700,
+    "nome": "JOÃO PEDRO CHAGAS DE OLIVEIRA MARQUES",
+    "numero_inscricao": "101059-3",
+    "data_nascimento": "04/10/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 701,
+    "nome": "ARTHUR SANTOS DO CARMO",
+    "numero_inscricao": "108606-1",
+    "data_nascimento": "06/05/2004",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 702,
+    "nome": "JULIA FARIAS FERNANDES",
+    "numero_inscricao": "100165-4",
+    "data_nascimento": "18/07/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 703,
+    "nome": "JENNIFER MEIRELLES FERNANDES NERES",
+    "numero_inscricao": "110658-7",
+    "data_nascimento": "15/02/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 704,
+    "nome": "SAMUEL DONATO DE BARROS PIMENTEL",
+    "numero_inscricao": "104029-0",
+    "data_nascimento": "05/09/2003",
+    "oed": "SÃO PAULO",
+    "GI": 200
+  },
+  {
+    "classificacao": 705,
+    "nome": "FELIPE ESPINDOLA ANDRADE DE LIMA",
+    "numero_inscricao": "113284-9",
+    "data_nascimento": "27/05/2008",
+    "oed": "BRASÍLIA",
+    "GI": 200
+  },
+  {
+    "classificacao": 706,
+    "nome": "MATHEUS BOTELHO SILVA",
+    "numero_inscricao": "101717-0",
+    "data_nascimento": "21/06/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 707,
+    "nome": "RAFAEL FROEDER RICHTER BUTZKE",
+    "numero_inscricao": "103431-7",
+    "data_nascimento": "03/02/2004",
+    "oed": "SÃO PAULO",
+    "GI": 200
+  },
+  {
+    "classificacao": 708,
+    "nome": "FABRICIO SILVA DE FARIA",
+    "numero_inscricao": "112247-2",
+    "data_nascimento": "26/09/2003",
+    "oed": "PORTO ALEGRE",
+    "GI": 200
+  },
+  {
+    "classificacao": 709,
+    "nome": "LUÍS HENRIQUE GUIMARÃES MONTAI",
+    "numero_inscricao": "104739-6",
+    "data_nascimento": "03/08/2008",
+    "oed": "SÃO PAULO",
+    "GI": 200
+  },
+  {
+    "classificacao": 710,
+    "nome": "RENAN DUTRA DE SOUZA",
+    "numero_inscricao": "107655-0",
+    "data_nascimento": "21/02/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 711,
+    "nome": "GABRIEL FARIA LOPES",
+    "numero_inscricao": "100475-9",
+    "data_nascimento": "25/01/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 712,
+    "nome": "DANIEL BATISTA DE CARVALHO",
+    "numero_inscricao": "102598-0",
+    "data_nascimento": "28/10/2006",
+    "oed": "SÃO PAULO",
+    "GI": 200
+  },
+  {
+    "classificacao": 713,
+    "nome": "MATHEUS HENRIQUE CHINOLLI CARNEIRO",
+    "numero_inscricao": "112932-4",
+    "data_nascimento": "01/06/2007",
+    "oed": "PARANAGUÁ",
+    "GI": 200
+  },
+  {
+    "classificacao": 714,
+    "nome": "ARTHUR GODOY CAMPINHO",
+    "numero_inscricao": "106441-0",
+    "data_nascimento": "09/07/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 715,
+    "nome": "DAVI LOPES MACEDO",
+    "numero_inscricao": "101458-6",
+    "data_nascimento": "29/07/2008",
+    "oed": "BRASÍLIA",
+    "GI": 200
+  },
+  {
+    "classificacao": 716,
+    "nome": "VICTOR HUGO DE SOUZA MACEDO",
+    "numero_inscricao": "108587-8",
+    "data_nascimento": "19/12/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 717,
+    "nome": "JOÃO VICTOR SILVA MÍSCULA",
+    "numero_inscricao": "108655-5",
+    "data_nascimento": "25/04/2009",
+    "oed": "BRASÍLIA",
+    "GI": 200
+  },
+  {
+    "classificacao": 718,
+    "nome": "LUIS FELIPE NAZARO SANCHES",
+    "numero_inscricao": "102751-2",
+    "data_nascimento": "12/03/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 719,
+    "nome": "ARTHUR LOURENÇO PEREGRINE",
+    "numero_inscricao": "107388-5",
+    "data_nascimento": "08/04/2008",
+    "oed": "BRASÍLIA",
+    "GI": 200
+  },
+  {
+    "classificacao": 720,
+    "nome": "AMANDA COUTINHO SOTER",
+    "numero_inscricao": "106140-3",
+    "data_nascimento": "30/08/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 721,
+    "nome": "GUILHERME AQUINO SANTANA",
+    "numero_inscricao": "109673-7",
+    "data_nascimento": "08/05/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 722,
+    "nome": "ENZO FERREIRA GUEDES",
+    "numero_inscricao": "101919-2",
+    "data_nascimento": "03/08/2008",
+    "oed": "VITÓRIA",
+    "GI": 200
+  },
+  {
+    "classificacao": 723,
+    "nome": "DIOGO NEVES CARVALHO",
+    "numero_inscricao": "105014-9",
+    "data_nascimento": "01/03/2004",
+    "oed": "SÃO PAULO",
+    "GI": 200
+  },
+  {
+    "classificacao": 724,
+    "nome": "DAVID MAGALHÃES DA SILVA",
+    "numero_inscricao": "102629-6",
+    "data_nascimento": "07/06/2005",
+    "oed": "BRASÍLIA",
+    "GI": 200
+  },
+  {
+    "classificacao": 725,
+    "nome": "LUCIANO SALAROLI OLIVEIRA",
+    "numero_inscricao": "100293-0",
+    "data_nascimento": "06/08/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 726,
+    "nome": "GEAZI GABRIEL DOS SANTOS CARDOSO",
+    "numero_inscricao": "110010-0",
+    "data_nascimento": "16/12/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 727,
+    "nome": "ARTHUR MIRANDA FERREIRA",
+    "numero_inscricao": "102637-6",
+    "data_nascimento": "13/09/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 728,
+    "nome": "EDUARDO JOSE ABREU PALMA",
+    "numero_inscricao": "101280-4",
+    "data_nascimento": "08/06/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 729,
+    "nome": "MATHEUS DE MAGALHÃES DINIZ DA SILVA",
+    "numero_inscricao": "101899-0",
+    "data_nascimento": "16/09/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 730,
+    "nome": "LUIS HENRIQUE NASCIMENTO DA SILVA",
+    "numero_inscricao": "110498-7",
+    "data_nascimento": "25/10/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 731,
+    "nome": "JOABE GABRIEL SANTOS MESQUITA",
+    "numero_inscricao": "108233-5",
+    "data_nascimento": "07/07/2006",
+    "oed": "SÃO PAULO",
+    "GI": 200
+  },
+  {
+    "classificacao": 732,
+    "nome": "ARTHUR MEIRELLES CONSIDERA MORAES",
+    "numero_inscricao": "107232-1",
+    "data_nascimento": "08/04/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 733,
+    "nome": "MILENNA GARCIA VIEIRA DA SILVA",
+    "numero_inscricao": "107801-0",
+    "data_nascimento": "20/07/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 734,
+    "nome": "ANNA JULIA MEDEIROS SANTOS DE BASTIANI",
+    "numero_inscricao": "106930-9",
+    "data_nascimento": "29/03/2007",
+    "oed": "PORTO ALEGRE",
+    "GI": 200
+  },
+  {
+    "classificacao": 735,
+    "nome": "HIGOR MACEDO MAIA DA SILVA",
+    "numero_inscricao": "105673-5",
+    "data_nascimento": "17/03/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 736,
+    "nome": "LARISSA AKEMI FUKUDA CARVALHO",
+    "numero_inscricao": "100489-8",
+    "data_nascimento": "12/04/2006",
+    "oed": "BRASÍLIA",
+    "GI": 200
+  },
+  {
+    "classificacao": 737,
+    "nome": "KARL KOPP FONTES MATINHA",
+    "numero_inscricao": "103390-4",
+    "data_nascimento": "11/01/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 738,
+    "nome": "ARTHUR SODRÉ DOS SANTOS",
+    "numero_inscricao": "110245-5",
+    "data_nascimento": "09/04/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 739,
+    "nome": "ROGER BONOW MENDES NETO",
+    "numero_inscricao": "102436-2",
+    "data_nascimento": "23/11/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 740,
+    "nome": "PEDRO AUGUSTO MENESES PACHECO DOMENECH",
+    "numero_inscricao": "110319-1",
+    "data_nascimento": "12/02/2004",
+    "oed": "SÃO PAULO",
+    "GI": 200
+  },
+  {
+    "classificacao": 741,
+    "nome": "ANA LUIZA BRAGA PATARO",
+    "numero_inscricao": "106552-7",
+    "data_nascimento": "01/10/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 742,
+    "nome": "RODRIGO COSTA DA SILVA",
+    "numero_inscricao": "111110-8",
+    "data_nascimento": "05/04/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 743,
+    "nome": "PAOLA COSTA BARBOSA DOS SANTOS",
+    "numero_inscricao": "111444-8",
+    "data_nascimento": "27/12/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 744,
+    "nome": "ERICK GABRIEL DIAS",
+    "numero_inscricao": "109939-9",
+    "data_nascimento": "04/02/2004",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 745,
+    "nome": "LORENA RODRIGUES GOMES",
+    "numero_inscricao": "101623-1",
+    "data_nascimento": "25/11/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 746,
+    "nome": "MIGUEL BARCELLOS DA SILVA",
+    "numero_inscricao": "107132-9",
+    "data_nascimento": "04/04/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 747,
+    "nome": "BERNARDO ALVES DA SILVA",
+    "numero_inscricao": "112443-5",
+    "data_nascimento": "31/10/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 748,
+    "nome": "KALÉO ALVES MAZZA",
+    "numero_inscricao": "112451-5",
+    "data_nascimento": "20/02/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 749,
+    "nome": "GUSTAVO SILVA SOEIRO",
+    "numero_inscricao": "107867-8",
+    "data_nascimento": "14/08/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 750,
+    "nome": "GUSTAVO LENTZ DA CRUZ",
+    "numero_inscricao": "106130-7",
+    "data_nascimento": "03/03/2009",
+    "oed": "FLORIANÓPOLIS",
+    "GI": 200
+  },
+  {
+    "classificacao": 751,
+    "nome": "IGOR NASCIMENTO DAS CHAGAS",
+    "numero_inscricao": "103690-2",
+    "data_nascimento": "18/07/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 752,
+    "nome": "JOÃO VÍTOR MENDONÇA DOS SANTOS",
+    "numero_inscricao": "104496-1",
+    "data_nascimento": "29/10/2007",
+    "oed": "BRASÍLIA",
+    "GI": 200
+  },
+  {
+    "classificacao": 753,
+    "nome": "BEATRIZ ZACHARSKI ANTUNES",
+    "numero_inscricao": "105548-4",
+    "data_nascimento": "05/12/2008",
+    "oed": "BRASÍLIA",
+    "GI": 200
+  },
+  {
+    "classificacao": 754,
+    "nome": "ICARO MATEUS FRANCISCONI COELHO",
+    "numero_inscricao": "102573-6",
+    "data_nascimento": "18/10/2006",
+    "oed": "VITÓRIA",
+    "GI": 200
+  },
+  {
+    "classificacao": 755,
+    "nome": "ARTHUR DO AMARAL FERREIRA COSTA",
+    "numero_inscricao": "104662-5",
+    "data_nascimento": "11/08/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 756,
+    "nome": "DANIEL GOMES FERNANDES",
+    "numero_inscricao": "109401-0",
+    "data_nascimento": "25/05/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 757,
+    "nome": "ARTHUR RIBEIRO BARBOZA MARTINS",
+    "numero_inscricao": "107044-9",
+    "data_nascimento": "19/06/2006",
+    "oed": "BRASÍLIA",
+    "GI": 200
+  },
+  {
+    "classificacao": 758,
+    "nome": "RUAN DA SILVA TEIXEIRA",
+    "numero_inscricao": "107182-0",
+    "data_nascimento": "31/10/2008",
+    "oed": "SÃO PAULO",
+    "GI": 200
+  },
+  {
+    "classificacao": 759,
+    "nome": "FELIPE WYZYKOWSKI RIBEIRO E SILVA",
+    "numero_inscricao": "110472-5",
+    "data_nascimento": "05/03/2009",
+    "oed": "CORUMBÁ",
+    "GI": 200
+  },
+  {
+    "classificacao": 760,
+    "nome": "MATEUS VIDAL DE OLIVEIRA",
+    "numero_inscricao": "103145-8",
+    "data_nascimento": "01/09/2003",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 761,
+    "nome": "CARLOS FELIPE ALVARENGA FALCÃO",
+    "numero_inscricao": "109485-4",
+    "data_nascimento": "17/09/2004",
+    "oed": "SÃO PAULO",
+    "GI": 200
+  },
+  {
+    "classificacao": 762,
+    "nome": "DAVI ARRUDA CORREA",
+    "numero_inscricao": "106393-5",
+    "data_nascimento": "21/07/2008",
+    "oed": "BRASÍLIA",
+    "GI": 200
+  },
+  {
+    "classificacao": 763,
+    "nome": "ARTUR MENDES PELLENZ",
+    "numero_inscricao": "105793-0",
+    "data_nascimento": "31/03/2006",
+    "oed": "PORTO ALEGRE",
+    "GI": 200
+  },
+  {
+    "classificacao": 764,
+    "nome": "LYANDRA RIBEIRO POZZI",
+    "numero_inscricao": "106355-6",
+    "data_nascimento": "03/04/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 765,
+    "nome": "RAFAEL DE OLIVEIRA CARVALHO",
+    "numero_inscricao": "106793-6",
+    "data_nascimento": "31/05/2005",
+    "oed": "BELO HORIZONTE",
+    "GI": 200
+  },
+  {
+    "classificacao": 766,
+    "nome": "LUCAS VIANNA GOMES",
+    "numero_inscricao": "109890-0",
+    "data_nascimento": "02/06/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 767,
+    "nome": "GUILHERME DA SILVA AZEREDO DOS SANTOS",
+    "numero_inscricao": "111547-5",
+    "data_nascimento": "18/07/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 768,
+    "nome": "RAFAEL SCARDANZAN DA SILVA",
+    "numero_inscricao": "105098-2",
+    "data_nascimento": "12/07/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 769,
+    "nome": "IGOR RODRIGUES DE MELO",
+    "numero_inscricao": "107782-7",
+    "data_nascimento": "22/02/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 770,
+    "nome": "CAIO BARBOZA GAGLIARDI",
+    "numero_inscricao": "103253-0",
+    "data_nascimento": "25/01/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 771,
+    "nome": "PEDRO OTÁVIO PAVAN DE ALMEIDA",
+    "numero_inscricao": "100253-4",
+    "data_nascimento": "20/09/2007",
+    "oed": "SÃO PAULO",
+    "GI": 200
+  },
+  {
+    "classificacao": 772,
+    "nome": "SAMUEL CAMARINHA VIEIRA",
+    "numero_inscricao": "100654-3",
+    "data_nascimento": "29/03/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 773,
+    "nome": "FILIPI TAWAN SANTOS CRUZ",
+    "numero_inscricao": "104105-8",
+    "data_nascimento": "05/04/2007",
+    "oed": "BRASÍLIA",
+    "GI": 200
+  },
+  {
+    "classificacao": 774,
+    "nome": "MATHEUS NUNES SOARES SILVA",
+    "numero_inscricao": "111176-5",
+    "data_nascimento": "15/07/2008",
+    "oed": "BRASÍLIA",
+    "GI": 200
+  },
+  {
+    "classificacao": 775,
+    "nome": "FELIPE OIRING DE SOUSA",
+    "numero_inscricao": "106287-9",
+    "data_nascimento": "06/11/2007",
+    "oed": "BRASÍLIA",
+    "GI": 200
+  },
+  {
+    "classificacao": 776,
+    "nome": "ARTHUR SOUTO CABRAL",
+    "numero_inscricao": "102281-8",
+    "data_nascimento": "03/03/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 777,
+    "nome": "MURILO BELO DA SILVA",
+    "numero_inscricao": "101714-6",
+    "data_nascimento": "23/02/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 778,
+    "nome": "LUCAS CARNEIRO DE SOUSA ROCHA",
+    "numero_inscricao": "105888-8",
+    "data_nascimento": "18/11/2003",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 779,
+    "nome": "ANA CRISTINA FARIA DA SILVA GUEDES",
+    "numero_inscricao": "109712-3",
+    "data_nascimento": "18/02/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 780,
+    "nome": "CHRISTIAN GERALDO DOS SANTOS DUARTE",
+    "numero_inscricao": "110063-6",
+    "data_nascimento": "04/05/2008",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 781,
+    "nome": "PEDRO DANIEL DE SANTANA DA SILVA",
+    "numero_inscricao": "107427-1",
+    "data_nascimento": "17/03/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 782,
+    "nome": "MIGUEL RIBEIRO SCHUMACHER DIAS DE CASTRO",
+    "numero_inscricao": "103685-7",
+    "data_nascimento": "07/06/2005",
+    "oed": "PORTO ALEGRE",
+    "GI": 200
+  },
+  {
+    "classificacao": 783,
+    "nome": "CARLOS ALBERTO DA COSTA AMORIM NETO",
+    "numero_inscricao": "104812-9",
+    "data_nascimento": "23/01/2008",
+    "oed": "SÃO PAULO",
+    "GI": 200
+  },
+  {
+    "classificacao": 784,
+    "nome": "CLÉO BAEUMLE DE OLIVEIRA",
+    "numero_inscricao": "110633-3",
+    "data_nascimento": "21/01/2005",
+    "oed": "FLORIANÓPOLIS",
+    "GI": 200
+  },
+  {
+    "classificacao": 785,
+    "nome": "JOÃO GABRIEL DE CARVALHO ARRUDA",
+    "numero_inscricao": "108281-0",
+    "data_nascimento": "25/10/2004",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 786,
+    "nome": "GABRIEL AKIRA YOKOTA ALENCAR",
+    "numero_inscricao": "101175-6",
+    "data_nascimento": "30/06/2008",
+    "oed": "SÃO PAULO",
+    "GI": 200
+  },
+  {
+    "classificacao": 787,
+    "nome": "SOFIA DE CASTRO GOMES",
+    "numero_inscricao": "111897-5",
+    "data_nascimento": "05/02/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 788,
+    "nome": "SAMIRA YOSHITOME KONDO",
+    "numero_inscricao": "107811-7",
+    "data_nascimento": "06/04/2009",
+    "oed": "SÃO PAULO",
+    "GI": 200
+  },
+  {
+    "classificacao": 789,
+    "nome": "GABRIEL LIMA DA SILVA COELHO",
+    "numero_inscricao": "107760-8",
+    "data_nascimento": "13/02/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 790,
+    "nome": "JOÃO VITOR FRONZA DA SILVA",
+    "numero_inscricao": "112052-2",
+    "data_nascimento": "17/12/2008",
+    "oed": "PARANAGUÁ",
+    "GI": 200
+  },
+  {
+    "classificacao": 791,
+    "nome": "DIOGO GATTASS DIAS PAIVA",
+    "numero_inscricao": "111716-3",
+    "data_nascimento": "25/04/2007",
+    "oed": "BRASÍLIA",
+    "GI": 200
+  },
+  {
+    "classificacao": 792,
+    "nome": "GABRIELA GONÇALVES ALMEIDA",
+    "numero_inscricao": "110831-2",
+    "data_nascimento": "10/12/2005",
+    "oed": "SÃO PAULO",
+    "GI": 200
+  },
+  {
+    "classificacao": 793,
+    "nome": "MARCOS VINÍCIUS MELANDA COSTA",
+    "numero_inscricao": "108625-6",
+    "data_nascimento": "16/02/2006",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 794,
+    "nome": "JOÃO VITOR GRILLO DE ABREU FARIA",
+    "numero_inscricao": "107224-1",
+    "data_nascimento": "25/02/2007",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 795,
+    "nome": "STANLEY BRAGA DE OLIVEIRA",
+    "numero_inscricao": "105753-5",
+    "data_nascimento": "17/08/2005",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 796,
+    "nome": "LEONARDO PICCIRILLO",
+    "numero_inscricao": "104705-4",
+    "data_nascimento": "23/10/2004",
+    "oed": "SÃO PAULO",
+    "GI": 200
+  },
+  {
+    "classificacao": 797,
+    "nome": "EVELYN DO ESPIRITO SANTO",
+    "numero_inscricao": "100222-7",
+    "data_nascimento": "28/09/2006",
+    "oed": "SÃO PAULO",
+    "GI": 200
+  },
+  {
+    "classificacao": 798,
+    "nome": "MARCOS JANDER WIEDERMANN BARBOSA DA LUZ",
+    "numero_inscricao": "100023-0",
+    "data_nascimento": "16/11/2008",
+    "oed": "PARANAGUÁ",
+    "GI": 200
+  },
+  {
+    "classificacao": 799,
+    "nome": "PIETRO RESENDE MESQUITA",
+    "numero_inscricao": "107846-7",
+    "data_nascimento": "12/01/2009",
+    "oed": "RIO DE JANEIRO",
+    "GI": 200
+  },
+  {
+    "classificacao": 800,
+    "nome": "NICOLAS LUIZ MOSTARDEIRO",
+    "numero_inscricao": "112393-4",
+    "data_nascimento": "07/02/2008",
+    "oed": "FLORIANÓPOLIS",
+    "GI": 195
+  }
+]

@@ -26,13 +26,12 @@ export async function upsertSection(input: UpsertSectionInput): Promise<Section>
 export async function deleteOrphanedSections(knownMkIds: number[]): Promise<number> {
   if (knownMkIds.length === 0) return 0
 
-  const { error, count } = await supabase
-    .from('sections')
-    .delete({ count: 'exact' })
-    .not('mk_id', 'in', `(${knownMkIds.join(',')})`)
+  // Via RPC (fn_delete_orphaned_sections, migration 059) — mesmo motivo de
+  // deleteOrphanedCourses: cascade pode estourar o statement_timeout=8s.
+  const { data, error } = await supabase.rpc('fn_delete_orphaned_sections', { known_mk_ids: knownMkIds })
 
   if (error) throw new SupabaseError('Falha ao deletar sections órfãs', error)
-  return count ?? 0
+  return (data as number) ?? 0
 }
 
 export async function getSectionByMkId(mkId: number): Promise<Section | null> {

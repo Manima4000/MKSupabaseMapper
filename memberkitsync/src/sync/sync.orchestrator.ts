@@ -17,9 +17,10 @@ import { upsertLessonProgress } from '../modules/lesson_progress/lesson_progress
 import { upsertForumPost } from '../modules/forum_posts/forum_post.repository.js'
 import { upsertForumComment } from '../modules/forum_comments/forum_comment.repository.js'
 import { insertLessonFileDownload } from '../modules/lesson_file_downloads/lesson_file_download.repository.js'
-import { getAllLessons, getLessonByMkId, upsertLessonVideo, upsertLessonFiles } from '../modules/lessons/lesson.repository.js'
+import { getAllLessons, getLessonByMkId, upsertLessonVideo, upsertLessonFiles, deleteOrphanedLessons } from '../modules/lessons/lesson.repository.js'
 import { mkVideoToUpsertInput, mkFilesToUpsertInput } from '../modules/lessons/lesson.mapper.js'
 import { deleteOrphanedCourses } from '../modules/courses/course.repository.js'
+import { deleteOrphanedSections } from '../modules/sections/section.repository.js'
 import { upsertComment } from '../modules/comments/comment.repository.js'
 import { mkCommentToUpsertInput } from '../modules/comments/comment.mapper.js'
 import { upsertQuizAttempt } from '../modules/quiz_attempts/quiz_attempt.repository.js'
@@ -59,8 +60,10 @@ export class SyncOrchestrator {
     const courses = await this.client.getCourses()
     logger.info({ count: courses.length }, `${courses.length} cursos encontrados`)
 
-    // Coleta os mk_ids de cursos da API para purgar órfãos depois
+    // Coleta os mk_ids de cursos/sections/lessons da API para purgar órfãos depois
     const apiCourseMkIds = courses.map(c => c.id)
+    const apiSectionMkIds = courses.flatMap(c => c.sections.map(s => s.id))
+    const apiLessonMkIds = courses.flatMap(c => c.sections.flatMap(s => s.lessons.map(l => l.id)))
 
     await runConcurrent(courses, async course => {
       try {
@@ -74,6 +77,18 @@ export class SyncOrchestrator {
     const deletedCourses = await deleteOrphanedCourses(apiCourseMkIds)
     if (deletedCourses > 0) {
       logger.info({ deletedCourses }, '[syncCatalog] Cursos órfãos removidos do banco (cascade)')
+    }
+
+    // Purgar sections/lessons que sumiram de cursos que ainda existem
+    // (reorganização dentro do curso, sem remover o curso inteiro)
+    const deletedSections = await deleteOrphanedSections(apiSectionMkIds)
+    if (deletedSections > 0) {
+      logger.info({ deletedSections }, '[syncCatalog] Sections órfãs removidas do banco (cascade)')
+    }
+
+    const deletedLessons = await deleteOrphanedLessons(apiLessonMkIds)
+    if (deletedLessons > 0) {
+      logger.info({ deletedLessons }, '[syncCatalog] Lessons órfãs removidas do banco (cascade)')
     }
 
     const elapsed = `${((Date.now() - t) / 1000).toFixed(1)}s`

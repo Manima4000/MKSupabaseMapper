@@ -20,6 +20,8 @@
     "sync:members:prod": "node dist/sync/sync.members.command.js",
     "sync:classrooms": "tsx src/sync/sync.classrooms.command.ts",
     "sync:classrooms:prod": "node dist/sync/sync.classrooms.command.js",
+    "sync:catalog": "tsx src/sync/sync.catalog.command.ts",
+    "sync:catalog:prod": "node dist/sync/sync.catalog.command.js",
     "replay": "tsx src/webhooks/replay.command.ts",
     "replay:prod": "node dist/webhooks/replay.command.js"
   },

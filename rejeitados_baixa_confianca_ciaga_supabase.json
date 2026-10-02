@@ -1,0 +1,4262 @@
+[
+  {
+    "supabase_user_id": 30882,
+    "supabase_full_name": "Eduardo",
+    "supabase_email": "elourencocamposdelima@gmail.com",
+    "candidato_nome_lista": "EDUARDO ALMEIDA KERN",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31894,
+    "supabase_full_name": "Miguel",
+    "supabase_email": "miguelporciuncula38@gmail.com",
+    "candidato_nome_lista": "MIGUEL WINTER MATOS",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30621,
+    "supabase_full_name": "Matheus",
+    "supabase_email": "matheus.camargo.1909@gmail.com",
+    "candidato_nome_lista": "MATHEUS SOARES FRANCHIN",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30780,
+    "supabase_full_name": "André",
+    "supabase_email": "lucasandremelo5@gmail.com",
+    "candidato_nome_lista": "ANDRÉ CORRILER ZANARDI",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30810,
+    "supabase_full_name": "Davi de",
+    "supabase_email": "davi.oliiveiras22@gmail.com",
+    "candidato_nome_lista": "DAVI DE AGUIAR FEITOSA LIMA",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30800,
+    "supabase_full_name": "Guilherme",
+    "supabase_email": "guilhermepereiragomes33.com@gmai.com",
+    "candidato_nome_lista": "GUILHERME DE SOUSA FERREIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30979,
+    "supabase_full_name": "RAFAELA",
+    "supabase_email": "olvrafaela021@gmail.com",
+    "candidato_nome_lista": "RAFAELA RODRIGUES CARNEIRO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32106,
+    "supabase_full_name": "Abreu 🇧🇷",
+    "supabase_email": "abreuh1712@gmail.com",
+    "candidato_nome_lista": "GABRIEL GODOI DE ABREU",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30847,
+    "supabase_full_name": "Nicolas",
+    "supabase_email": "10nick01927@gmail.com",
+    "candidato_nome_lista": "NICOLAS ARCKERMAN",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30948,
+    "supabase_full_name": "Otávio",
+    "supabase_email": "otaviodasilveira17@gmail.com",
+    "candidato_nome_lista": "PEDRO OTÁVIO PAVAN DE ALMEIDA",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31008,
+    "supabase_full_name": "Vidal",
+    "supabase_email": "luquitoninja@gmail.com",
+    "candidato_nome_lista": "MATEUS VIDAL DE OLIVEIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30938,
+    "supabase_full_name": "lorenzo",
+    "supabase_email": "lorenzoportella2@gmail.com",
+    "candidato_nome_lista": "LORENZO BALLIN STOCO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31087,
+    "supabase_full_name": "Fernando",
+    "supabase_email": "kskakqkqnaoandisns@gmail.com",
+    "candidato_nome_lista": "FERNANDO LINK LEITÃO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30773,
+    "supabase_full_name": "Heitor",
+    "supabase_email": "hloco731@gmail.com",
+    "candidato_nome_lista": "HEITOR VIANA DE SOUZA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30733,
+    "supabase_full_name": "Roger",
+    "supabase_email": "rogersnt1404@gmail.com",
+    "candidato_nome_lista": "ROGER COUTINHO LIMA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30983,
+    "supabase_full_name": "Raphael do",
+    "supabase_email": "raphaelamaralsoares@gmail.com",
+    "candidato_nome_lista": "RAPHAEL ZILIO MARTINS DE AMORIM",
+    "fuzzy_score": 0.88,
+    "match_type": "contained_tokens",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 36629,
+    "supabase_full_name": "Nicholas",
+    "supabase_email": "nicholasoliveira745@gmail.com",
+    "candidato_nome_lista": "NICHOLAS ZAGATI DO VALE",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 164948,
+    "supabase_full_name": "Arthur",
+    "supabase_email": "arthurmarinhozeus@gmail.com",
+    "candidato_nome_lista": "ARTHUR SOUTO CABRAL",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30884,
+    "supabase_full_name": "Luiza",
+    "supabase_email": "luizaxz550@gmail.com",
+    "candidato_nome_lista": "LUÍZA SCHWANTES",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30934,
+    "supabase_full_name": "Miguel",
+    "supabase_email": "miguel.parente2005@gmail.com",
+    "candidato_nome_lista": "MIGUEL WINTER MATOS",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31230,
+    "supabase_full_name": "Kauan",
+    "supabase_email": "galvarrocmf@gmail.com",
+    "candidato_nome_lista": "KAUAN ARAUJO PINHEIRO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30725,
+    "supabase_full_name": "Daniel",
+    "supabase_email": "df103409@gmail.com",
+    "candidato_nome_lista": "DANIEL QUEIROZ SANTOS",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30735,
+    "supabase_full_name": "Anderson",
+    "supabase_email": "andersonnathan452@gmail.com",
+    "candidato_nome_lista": "ARTHUR ANDERSON MARTINHO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31195,
+    "supabase_full_name": "Mauricio",
+    "supabase_email": "mauricinhorsp@gmail.com",
+    "candidato_nome_lista": "MAURÍCIO MUNHOZ SOARES MARTINHO",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31215,
+    "supabase_full_name": "Lucas",
+    "supabase_email": "lcdelet@gmail.com",
+    "candidato_nome_lista": "LUCAS HALLAK FIGUEIREDO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30976,
+    "supabase_full_name": "Queiroz",
+    "supabase_email": "10616288@cooltura.com.br",
+    "candidato_nome_lista": "RODRIGO QUEIROZ ARRUDA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "SEM_EMAIL",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30808,
+    "supabase_full_name": "Caio",
+    "supabase_email": "caiohenrique.bezerracavalcanti@gmail.com",
+    "candidato_nome_lista": "CAIO BARBOZA GAGLIARDI",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30947,
+    "supabase_full_name": "Tiago",
+    "supabase_email": "tiagobrlara@gmail.com",
+    "candidato_nome_lista": "TIAGO LIMOEIRO PEREIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31238,
+    "supabase_full_name": "caio",
+    "supabase_email": "ribeirolimacaio0202@gmail.com",
+    "candidato_nome_lista": "CAIO BARBOZA GAGLIARDI",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30906,
+    "supabase_full_name": "Thiago",
+    "supabase_email": "thiagopinto0910@gmail.com",
+    "candidato_nome_lista": "THIAGO NUNES MENDES",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30946,
+    "supabase_full_name": "Larissa",
+    "supabase_email": "larissanuneslou@gmail.com",
+    "candidato_nome_lista": "LARISSA AKEMI FUKUDA CARVALHO",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31214,
+    "supabase_full_name": "Guilherme",
+    "supabase_email": "guileunam2@hotmail.com",
+    "candidato_nome_lista": "GUILHERME DE SOUSA FERREIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30796,
+    "supabase_full_name": "Murilo",
+    "supabase_email": "murilotokudakino@gmail.com",
+    "candidato_nome_lista": "MURILO BELO DA SILVA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30970,
+    "supabase_full_name": "Flavio",
+    "supabase_email": "kauan.da.conceicao.flavio@gmail.com",
+    "candidato_nome_lista": "JOSÉ FLÁVIO CEDRINHO NETO",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30950,
+    "supabase_full_name": "Artur",
+    "supabase_email": "turzinff777@gmail.com",
+    "candidato_nome_lista": "ARTUR NANNI",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31226,
+    "supabase_full_name": "Marcio",
+    "supabase_email": "marciorcmf10@gmail.com",
+    "candidato_nome_lista": "JOÃO MARCIO SILVA DA CUNHA",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31001,
+    "supabase_full_name": "fernanda",
+    "supabase_email": "fernandalimacast@gmail.com",
+    "candidato_nome_lista": "FERNANDA CARMO ROSADO DE SOUSA",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30881,
+    "supabase_full_name": "Jhonatan",
+    "supabase_email": "jhonatansantossilva500@gmail.com",
+    "candidato_nome_lista": "JHONATAN LUCAS MASSA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31210,
+    "supabase_full_name": "Joao",
+    "supabase_email": "joaomendesios04@gmail.com",
+    "candidato_nome_lista": "JOÃO PEDRO BARBOSA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30955,
+    "supabase_full_name": "RAFAELA",
+    "supabase_email": "sanntskrafaela021@gmail.com",
+    "candidato_nome_lista": "RAFAELA RODRIGUES CARNEIRO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 164332,
+    "supabase_full_name": "Eduardo",
+    "supabase_email": "vanessamrchavante@gmail.com",
+    "candidato_nome_lista": "EDUARDO ALMEIDA KERN",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31248,
+    "supabase_full_name": "Felipe",
+    "supabase_email": "felipebonifaciotf@gmail.com",
+    "candidato_nome_lista": "FELIPE OIRING DE SOUSA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31287,
+    "supabase_full_name": "Pietro",
+    "supabase_email": "pietrodiaslou23@gmail.com",
+    "candidato_nome_lista": "PIETRO ALVES DA SILVA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31317,
+    "supabase_full_name": "Marcos",
+    "supabase_email": "estudosdiante@gmail.com",
+    "candidato_nome_lista": "MARCOS CORRÊA DE CARVALHO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31526,
+    "supabase_full_name": "Amanda",
+    "supabase_email": "amandasuylan12@gmail.com",
+    "candidato_nome_lista": "AMANDA LAVIOLA NOGUEIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 165246,
+    "supabase_full_name": "Arthur",
+    "supabase_email": "arthurkeven648@gmail.com",
+    "candidato_nome_lista": "ARTHUR SOUTO CABRAL",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31636,
+    "supabase_full_name": "Ian",
+    "supabase_email": "ianantonio058@gmail.com",
+    "candidato_nome_lista": "IAN CARPES RIBEIRO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31737,
+    "supabase_full_name": "Kauan",
+    "supabase_email": "pvpstiff@gmail.com",
+    "candidato_nome_lista": "KAUAN ARAUJO PINHEIRO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31606,
+    "supabase_full_name": "Pietro",
+    "supabase_email": "nescau6555@gmail.com",
+    "candidato_nome_lista": "PIETRO ALVES DA SILVA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31223,
+    "supabase_full_name": "Emanuel",
+    "supabase_email": "emanuelliradantas@gmail.com",
+    "candidato_nome_lista": "EMANUEL DA SILVA DE MATTOS",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31461,
+    "supabase_full_name": "Guilherme",
+    "supabase_email": "guilhermetinoco2008@gmail.com",
+    "candidato_nome_lista": "GUILHERME DE SOUSA FERREIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31703,
+    "supabase_full_name": "joao",
+    "supabase_email": "joaoantoniocaldas123@gmail.com",
+    "candidato_nome_lista": "JOÃO PEDRO BARBOSA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31723,
+    "supabase_full_name": "Thais",
+    "supabase_email": "thaismelene3015@gmail.com",
+    "candidato_nome_lista": "THAIS LOPES MARTIRE",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31199,
+    "supabase_full_name": "Gustavo",
+    "supabase_email": "gutiwkkd@gmail.com",
+    "candidato_nome_lista": "GUSTAVO DE SOUZA",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33888,
+    "supabase_full_name": "Rafael",
+    "supabase_email": "rvpbastos@gmail.com",
+    "candidato_nome_lista": "RAFAEL MOREIRA BICHUETTE",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31509,
+    "supabase_full_name": "Ítalo",
+    "supabase_email": "italor77@gmail.com",
+    "candidato_nome_lista": "ITALO GUSTAVO CINTRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31439,
+    "supabase_full_name": "Marcos",
+    "supabase_email": "marcoseduardoliveira@gmail.com",
+    "candidato_nome_lista": "MARCOS CORRÊA DE CARVALHO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31589,
+    "supabase_full_name": "Gustavo",
+    "supabase_email": "rumoaefomm2025@gmail.com",
+    "candidato_nome_lista": "GUSTAVO DE SOUZA",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31670,
+    "supabase_full_name": "Júlia",
+    "supabase_email": "jbestetci@icloud.com",
+    "candidato_nome_lista": "JULIA LOPES DA SILVA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31286,
+    "supabase_full_name": "Marcus",
+    "supabase_email": "marcusff77@gmail.com",
+    "candidato_nome_lista": "MARCUS VINÍCIUS SBROGLIO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31660,
+    "supabase_full_name": "Filipe",
+    "supabase_email": "queirozfilipe88@gmail.com",
+    "candidato_nome_lista": "FILIPE MORAIS GANDINE",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31299,
+    "supabase_full_name": "Sofia",
+    "supabase_email": "sofivieira505@gmail.com",
+    "candidato_nome_lista": "SOFIA DE CASTRO GOMES",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31268,
+    "supabase_full_name": "joao",
+    "supabase_email": "jpsanches1201@gmail.com",
+    "candidato_nome_lista": "JOÃO PEDRO BARBOSA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31517,
+    "supabase_full_name": "Arthur",
+    "supabase_email": "arthurcpricuma@gmail.com",
+    "candidato_nome_lista": "ARTHUR SOUTO CABRAL",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 164298,
+    "supabase_full_name": "Matheus",
+    "supabase_email": "matheusvitorcfl@gmail.com",
+    "candidato_nome_lista": "MATHEUS SOARES FRANCHIN",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31316,
+    "supabase_full_name": "Caio",
+    "supabase_email": "kaiov6983@gmail.com",
+    "candidato_nome_lista": "CAIO BARBOZA GAGLIARDI",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31266,
+    "supabase_full_name": "renan",
+    "supabase_email": "redradepaclima@gmail.com",
+    "candidato_nome_lista": "RENAN DUTRA DE SOUZA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31654,
+    "supabase_full_name": "arthur",
+    "supabase_email": "arthurrlima770@gmail.com",
+    "candidato_nome_lista": "ARTHUR SOUTO CABRAL",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31734,
+    "supabase_full_name": "Joaquim",
+    "supabase_email": "quimdasilva17@gmail.com",
+    "candidato_nome_lista": "JOAQUIM JOSÉ CARDOSO DA CUNHA",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31743,
+    "supabase_full_name": "Murilo",
+    "supabase_email": "muriloabreu124@gmail.com",
+    "candidato_nome_lista": "MURILO BELO DA SILVA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31694,
+    "supabase_full_name": "Davi",
+    "supabase_email": "daviviebandeira@gmail.com",
+    "candidato_nome_lista": "DAVI LOPES VANZIN",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31301,
+    "supabase_full_name": "Pedro",
+    "supabase_email": "pedrovitor.carvalho2011@gmail.com",
+    "candidato_nome_lista": "PEDRO MONTEIRO TEIXEIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31460,
+    "supabase_full_name": "VIANA",
+    "supabase_email": "shelderviana10@gmail.com",
+    "candidato_nome_lista": "MARCELO FARIAS VIANA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31610,
+    "supabase_full_name": "pedro",
+    "supabase_email": "pedrinho2804mm@gmail.com",
+    "candidato_nome_lista": "PEDRO MONTEIRO TEIXEIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31540,
+    "supabase_full_name": "Carlos",
+    "supabase_email": "luizeu0109@gmail.com",
+    "candidato_nome_lista": "RYAN CARLOS DUTRA DE MELLO",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31639,
+    "supabase_full_name": "Alana",
+    "supabase_email": "limaalana157@gmail.com",
+    "candidato_nome_lista": "ALANA MIRANDA DE SENA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32583,
+    "supabase_full_name": "Pedro",
+    "supabase_email": "pedrohknauer6@gmail.com",
+    "candidato_nome_lista": "PEDRO MONTEIRO TEIXEIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31620,
+    "supabase_full_name": "Matheus",
+    "supabase_email": "matheusdanova7@gmail.com",
+    "candidato_nome_lista": "MATHEUS SOARES FRANCHIN",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31769,
+    "supabase_full_name": "Arthur",
+    "supabase_email": "engenheirosamthur@gmail.com",
+    "candidato_nome_lista": "ARTHUR SOUTO CABRAL",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31422,
+    "supabase_full_name": "Guilherme",
+    "supabase_email": "guilhermedeoliveira0008@gmail.com",
+    "candidato_nome_lista": "GUILHERME DE SOUSA FERREIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31512,
+    "supabase_full_name": "paulo",
+    "supabase_email": "paulodragon448@gmail.com",
+    "candidato_nome_lista": "JOAO PAULO RIBEIRO ROLIM",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31741,
+    "supabase_full_name": "Matheus",
+    "supabase_email": "bolso1820@gmail.com",
+    "candidato_nome_lista": "MATHEUS SOARES FRANCHIN",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31323,
+    "supabase_full_name": "Laura",
+    "supabase_email": "lauradasneves8@gmail",
+    "candidato_nome_lista": "LAURA CERQUEIRA FAHEL",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31466,
+    "supabase_full_name": "Arthur",
+    "supabase_email": "arthhurnh21@gmail.com",
+    "candidato_nome_lista": "ARTHUR SOUTO CABRAL",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31345,
+    "supabase_full_name": "Arthur",
+    "supabase_email": "arthurvitoriohs1@gmail.com",
+    "candidato_nome_lista": "ARTHUR SOUTO CABRAL",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31426,
+    "supabase_full_name": "Enzo",
+    "supabase_email": "enzomt23129745@matrizeducacao.com.br",
+    "candidato_nome_lista": "ENZO PAES",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31584,
+    "supabase_full_name": "Vinicius",
+    "supabase_email": "vcarneiro877@gmail.com",
+    "candidato_nome_lista": "MARCUS VINÍCIUS SBROGLIO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31544,
+    "supabase_full_name": "francisco",
+    "supabase_email": "francisco.costta02@gmail.com",
+    "candidato_nome_lista": "ERIC FRANCISCO DA SILVA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31284,
+    "supabase_full_name": "Guilherme",
+    "supabase_email": "guilherme52henrique84@gmail.com",
+    "candidato_nome_lista": "GUILHERME DE SOUSA FERREIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31608,
+    "supabase_full_name": "Guilherme",
+    "supabase_email": "guilhermekxkx120@gmail.com",
+    "candidato_nome_lista": "GUILHERME DE SOUSA FERREIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31457,
+    "supabase_full_name": "murilo",
+    "supabase_email": "contato.murilo2209@gmail.com",
+    "candidato_nome_lista": "MURILO BELO DA SILVA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31437,
+    "supabase_full_name": "Henrique",
+    "supabase_email": "henriquestepple02@gmail.com",
+    "candidato_nome_lista": "HENRIQUE ANDRADE BRAGA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31468,
+    "supabase_full_name": "Enzo",
+    "supabase_email": "enzogcamargo2025@icloud.com",
+    "candidato_nome_lista": "ENZO PAES",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30917,
+    "supabase_full_name": "Marques 🔰",
+    "supabase_email": "v.mpinheiro3@gmail.com",
+    "candidato_nome_lista": "RALPH MARQUES PAUL",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31275,
+    "supabase_full_name": "Pedro",
+    "supabase_email": "pedrofaustino158@gmail.com",
+    "candidato_nome_lista": "PEDRO MONTEIRO TEIXEIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31315,
+    "supabase_full_name": "Marcos",
+    "supabase_email": "estudanteavante@gmail.com",
+    "candidato_nome_lista": "MARCOS CORRÊA DE CARVALHO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31463,
+    "supabase_full_name": "Kauã",
+    "supabase_email": "estudantekaua16@gmail.com",
+    "candidato_nome_lista": "KAUÃ VALADARES GALLITO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31563,
+    "supabase_full_name": "Carlos",
+    "supabase_email": "carlosmito.248491@gmail.com",
+    "candidato_nome_lista": "RYAN CARLOS DUTRA DE MELLO",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31473,
+    "supabase_full_name": "Davi",
+    "supabase_email": "davii.santoss75@gmail.com",
+    "candidato_nome_lista": "DAVI LOPES VANZIN",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32600,
+    "supabase_full_name": "Carlos ",
+    "supabase_email": "rezede80@gmail.com",
+    "candidato_nome_lista": "RYAN CARLOS DUTRA DE MELLO",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 164168,
+    "supabase_full_name": "Giovanna",
+    "supabase_email": "dealmeidagiovanna1@gmail.com",
+    "candidato_nome_lista": "GIOVANNA RODRIGUES ALVES",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31787,
+    "supabase_full_name": "Renan",
+    "supabase_email": "10renan.maia@gmail.com",
+    "candidato_nome_lista": "RENAN DUTRA DE SOUZA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31867,
+    "supabase_full_name": "Luan",
+    "supabase_email": "luanquerido10@gmail.com",
+    "candidato_nome_lista": "LUAN PAVANI DE LIMA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31988,
+    "supabase_full_name": "de Jesus",
+    "supabase_email": "cauan8mil@gmail.com",
+    "candidato_nome_lista": "HENRIQUE GUEDES DE JESUS",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31289,
+    "supabase_full_name": "Felipe",
+    "supabase_email": "felipefernandesdavila@gmail.com",
+    "candidato_nome_lista": "FELIPE OIRING DE SOUSA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104355,
+    "supabase_full_name": "Arthur",
+    "supabase_email": "moriah.avaliacao@gmail.com",
+    "candidato_nome_lista": "ARTHUR SOUTO CABRAL",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31786,
+    "supabase_full_name": "Caio",
+    "supabase_email": "caioaralves@gmail.com",
+    "candidato_nome_lista": "CAIO BARBOZA GAGLIARDI",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32099,
+    "supabase_full_name": "Andrade",
+    "supabase_email": "77daviandrade77@gmail.com",
+    "candidato_nome_lista": "HENRIQUE ANDRADE BRAGA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 165198,
+    "supabase_full_name": "Gustavo",
+    "supabase_email": "gustcost54@gmail.com",
+    "candidato_nome_lista": "GUSTAVO DE SOUZA",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 133568,
+    "supabase_full_name": "Arthur⚜️",
+    "supabase_email": "pauloarthur70204@gmail.com",
+    "candidato_nome_lista": "ARTHUR SOUTO CABRAL",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 163979,
+    "supabase_full_name": "Arthur",
+    "supabase_email": "moriah.aviacao@gmail.com",
+    "candidato_nome_lista": "ARTHUR SOUTO CABRAL",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31305,
+    "supabase_full_name": "Arthur",
+    "supabase_email": "arthurnh21@gmail.com",
+    "candidato_nome_lista": "ARTHUR SOUTO CABRAL",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 164173,
+    "supabase_full_name": "Leonardo",
+    "supabase_email": "leonardofortaleza00@gmail.com",
+    "candidato_nome_lista": "LEONARDO PICCIRILLO",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32831,
+    "supabase_full_name": "Vinicius",
+    "supabase_email": "vinicius16042007@gmail.com",
+    "candidato_nome_lista": "MARCUS VINÍCIUS SBROGLIO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32621,
+    "supabase_full_name": "Mendes",
+    "supabase_email": "jmendespires07@gmail.com",
+    "candidato_nome_lista": "AQUILES MENDES DE LIMA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32516,
+    "supabase_full_name": "Lucas",
+    "supabase_email": "lucasmeirads03@gmail.com",
+    "candidato_nome_lista": "LUCAS HALLAK FIGUEIREDO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32486,
+    "supabase_full_name": "daniel",
+    "supabase_email": "danielfavareslima2015@gmail.com",
+    "candidato_nome_lista": "DANIEL QUEIROZ SANTOS",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 133566,
+    "supabase_full_name": "Gabriel",
+    "supabase_email": "gabrieldesouzaaalves@gmail.com",
+    "candidato_nome_lista": "GABRIEL PINTO",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 35990,
+    "supabase_full_name": "João",
+    "supabase_email": "joao.laura1712@gmail.com",
+    "candidato_nome_lista": "JOÃO PEDRO BARBOSA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31977,
+    "supabase_full_name": "Nicolas",
+    "supabase_email": "theustp7@gmail.com",
+    "candidato_nome_lista": "NICOLAS ARCKERMAN",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32652,
+    "supabase_full_name": "Gustavo",
+    "supabase_email": "francogustavo728@gmail.com",
+    "candidato_nome_lista": "GUSTAVO DE SOUZA",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32379,
+    "supabase_full_name": "Maria",
+    "supabase_email": "casanovarenata90@gmail.com",
+    "candidato_nome_lista": "MARIA BEATRIZ PEREIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 133421,
+    "supabase_full_name": "Danilo",
+    "supabase_email": "pereira.d.santos1@gmail.com",
+    "candidato_nome_lista": "DANILO PINHEIRO COELHO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33424,
+    "supabase_full_name": "Rubens",
+    "supabase_email": "rubsilva461@gmail.com",
+    "candidato_nome_lista": "RUBENS RICARDO SATHLER FREITAS",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31295,
+    "supabase_full_name": "André",
+    "supabase_email": "andre.icloud.ademcuam1@gmail.com",
+    "candidato_nome_lista": "ANDRÉ CORRILER ZANARDI",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32927,
+    "supabase_full_name": "Arthur",
+    "supabase_email": "arthurjoaquim355@gmail.com",
+    "candidato_nome_lista": "ARTHUR SOUTO CABRAL",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32518,
+    "supabase_full_name": "Iago",
+    "supabase_email": "iagokauan73@gmail.com",
+    "candidato_nome_lista": "IAGO COSTA DE SOUSA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32455,
+    "supabase_full_name": "Bezerra!!",
+    "supabase_email": "arthurbezerra1500@gmail.com",
+    "candidato_nome_lista": "GUILHERME TOLEDO BEZERRA DE MELLO",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 164031,
+    "supabase_full_name": "murilo",
+    "supabase_email": "murilogsousa794@gmail.com",
+    "candidato_nome_lista": "MURILO BELO DA SILVA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33546,
+    "supabase_full_name": "Kauã",
+    "supabase_email": "kauaareis33@gmail.com",
+    "candidato_nome_lista": "KAUÃ VALADARES GALLITO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32988,
+    "supabase_full_name": "marcos",
+    "supabase_email": "alanzinho08.pocoto@gmail.com",
+    "candidato_nome_lista": "MARCOS CORRÊA DE CARVALHO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32970,
+    "supabase_full_name": "guilherme",
+    "supabase_email": "guilherme34henrique65@gmail.com",
+    "candidato_nome_lista": "GUILHERME DE SOUSA FERREIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33267,
+    "supabase_full_name": "Guilherme",
+    "supabase_email": "gui030407@gmail.com",
+    "candidato_nome_lista": "GUILHERME DE SOUSA FERREIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 36855,
+    "supabase_full_name": "carlos",
+    "supabase_email": "ismeniaduduzao27@gmail.com",
+    "candidato_nome_lista": "RYAN CARLOS DUTRA DE MELLO",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 164261,
+    "supabase_full_name": "Renan",
+    "supabase_email": "renandasilvagama2008@gmail.com",
+    "candidato_nome_lista": "RENAN DUTRA DE SOUZA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32092,
+    "supabase_full_name": "lorena",
+    "supabase_email": "lorenatavalask24@gmail.com",
+    "candidato_nome_lista": "LORENA RODRIGUES GOMES",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33357,
+    "supabase_full_name": "da motta",
+    "supabase_email": "abraaombarros@gmail.com",
+    "candidato_nome_lista": "DANIEL MOTTA FERREIRA",
+    "fuzzy_score": 0.89,
+    "match_type": "contained_tokens",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33333,
+    "supabase_full_name": "Andrade",
+    "supabase_email": "adilon.andrade05@gmail.com",
+    "candidato_nome_lista": "HENRIQUE ANDRADE BRAGA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33248,
+    "supabase_full_name": "Guilherme",
+    "supabase_email": "martinezs0056@icloud.com",
+    "candidato_nome_lista": "GUILHERME DE SOUSA FERREIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 143607,
+    "supabase_full_name": "Gustavo",
+    "supabase_email": "figueiredobiscardeg@gmail.com",
+    "candidato_nome_lista": "GUSTAVO DE SOUZA",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33149,
+    "supabase_full_name": "Marcos",
+    "supabase_email": "mvfdneto@gmail.com",
+    "candidato_nome_lista": "MARCOS CORRÊA DE CARVALHO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 163945,
+    "supabase_full_name": "Arthur",
+    "supabase_email": "arthurvx32@gmail.com",
+    "candidato_nome_lista": "ARTHUR SOUTO CABRAL",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31775,
+    "supabase_full_name": "ana",
+    "supabase_email": "analeticiacaldeira832@gmail.com",
+    "candidato_nome_lista": "ANA JÚLIA NASCIMENTO COELHO",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33977,
+    "supabase_full_name": "Arthur",
+    "supabase_email": "arthurdsmarques448@gmail.com",
+    "candidato_nome_lista": "ARTHUR SOUTO CABRAL",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31331,
+    "supabase_full_name": "Marcelo",
+    "supabase_email": "zmarceloblack@gmail.com",
+    "candidato_nome_lista": "MARCELO FARIAS VIANA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32679,
+    "supabase_full_name": "Luiza",
+    "supabase_email": "danielanobre761@gmail.com",
+    "candidato_nome_lista": "LUÍZA SCHWANTES",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31386,
+    "supabase_full_name": "Vinicius",
+    "supabase_email": "vnvinicius021@gmail.com",
+    "candidato_nome_lista": "MARCUS VINÍCIUS SBROGLIO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 36529,
+    "supabase_full_name": "Arthur",
+    "supabase_email": "arthursantiagosv@gmail.com",
+    "candidato_nome_lista": "ARTHUR SOUTO CABRAL",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31271,
+    "supabase_full_name": "Lara",
+    "supabase_email": "eulalamaques@icloud.com",
+    "candidato_nome_lista": "LARA LUÍZA DE OLIVEIRA MENEZES",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 35519,
+    "supabase_full_name": "Erick",
+    "supabase_email": "erickcavalcante2006@gmail.com",
+    "candidato_nome_lista": "ERICK GABRIEL DIAS",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33884,
+    "supabase_full_name": "Thiago",
+    "supabase_email": "thiagojunior575@gmail.com",
+    "candidato_nome_lista": "THIAGO NUNES MENDES",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 34046,
+    "supabase_full_name": "Neves",
+    "supabase_email": "thered99890354@gmail.com",
+    "candidato_nome_lista": "DIOGO NEVES CARVALHO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 35331,
+    "supabase_full_name": "Luan",
+    "supabase_email": "luanvictorestudos@gmail.com",
+    "candidato_nome_lista": "LUAN PAVANI DE LIMA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32015,
+    "supabase_full_name": "Gabriel",
+    "supabase_email": "gabriel2007_rj@hotmail.com",
+    "candidato_nome_lista": "GABRIEL PINTO",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33485,
+    "supabase_full_name": "Fortunato",
+    "supabase_email": "isabellefortunato02@gmail.com",
+    "candidato_nome_lista": "GABRIEL FORTUNATO BARROS",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32935,
+    "supabase_full_name": "Lucas",
+    "supabase_email": "lucas.estudar17@gmail.com",
+    "candidato_nome_lista": "LUCAS HALLAK FIGUEIREDO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33975,
+    "supabase_full_name": "Kauã",
+    "supabase_email": "isakaua1206@gmail.com",
+    "candidato_nome_lista": "KAUÃ VALADARES GALLITO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33179,
+    "supabase_full_name": "Pedro",
+    "supabase_email": "xxkauaalves@gmail.com",
+    "candidato_nome_lista": "PEDRO MONTEIRO TEIXEIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 143587,
+    "supabase_full_name": "Luisa",
+    "supabase_email": "luisamariadc00@gmail.com",
+    "candidato_nome_lista": "LUISA TEIXEIRA MANSUR",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 34062,
+    "supabase_full_name": "nunes ✈️",
+    "supabase_email": "lucasnunesbirds@gmail.com",
+    "candidato_nome_lista": "DANIEL NUNES GALVÃO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33903,
+    "supabase_full_name": "Almeida",
+    "supabase_email": "g4briellferreir4@gmail.com",
+    "candidato_nome_lista": "GABRIELA GONÇALVES ALMEIDA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33992,
+    "supabase_full_name": "Alex",
+    "supabase_email": "neto.tokuhashi@gmail.com",
+    "candidato_nome_lista": "CAIO ALEX FEITOZA DA SILVA",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33173,
+    "supabase_full_name": "Morais",
+    "supabase_email": "magicprawn194@gmail.com",
+    "candidato_nome_lista": "FILIPE MORAIS GANDINE",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 143589,
+    "supabase_full_name": "Igor",
+    "supabase_email": "7038.albuquerque@gmail.com",
+    "candidato_nome_lista": "IGOR RODRIGUES DE MELO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33791,
+    "supabase_full_name": "Eduarda",
+    "supabase_email": "eduardaalle7@gmail.com",
+    "candidato_nome_lista": "MARIA EDUARDA FERREIRA DE OLIVEIRA",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 34061,
+    "supabase_full_name": "Giovanna",
+    "supabase_email": "giovannaribeirotavora@gmail.com",
+    "candidato_nome_lista": "GIOVANNA RODRIGUES ALVES",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33095,
+    "supabase_full_name": "Hugo",
+    "supabase_email": "hugo.rodrigues005@gmail.com",
+    "candidato_nome_lista": "HUGO SERGIO CASTRO DINIZ",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33642,
+    "supabase_full_name": "erick",
+    "supabase_email": "erickfeitosa000@gmail.com",
+    "candidato_nome_lista": "ERICK GABRIEL DIAS",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 164983,
+    "supabase_full_name": "gabriel",
+    "supabase_email": "gabrieldolzani2008@gmail.com",
+    "candidato_nome_lista": "GABRIEL PINTO",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 34613,
+    "supabase_full_name": "Pedro",
+    "supabase_email": "ventiladorloucocoringa@gmail.com",
+    "candidato_nome_lista": "PEDRO MONTEIRO TEIXEIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 143604,
+    "supabase_full_name": "Nicolas",
+    "supabase_email": "nicolasdaraujo959@gmail.com",
+    "candidato_nome_lista": "NICOLAS ARCKERMAN",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 34771,
+    "supabase_full_name": "Enzo",
+    "supabase_email": "enzo@studioartemis.co",
+    "candidato_nome_lista": "ENZO PAES",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 36960,
+    "supabase_full_name": "Leonardo",
+    "supabase_email": "leocandido130305@gmail.com",
+    "candidato_nome_lista": "LEONARDO PICCIRILLO",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33045,
+    "supabase_full_name": "mello",
+    "supabase_email": "joaogabrielmello606@gmail.com",
+    "candidato_nome_lista": "RYAN CARLOS DUTRA DE MELLO",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 34984,
+    "supabase_full_name": "DANIEL",
+    "supabase_email": "daniel.papiro2712@gmail.com",
+    "candidato_nome_lista": "DANIEL QUEIROZ SANTOS",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32576,
+    "supabase_full_name": "Fernanda",
+    "supabase_email": "fernandaportosantiago@gmail.com",
+    "candidato_nome_lista": "FERNANDA CARMO ROSADO DE SOUSA",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 35129,
+    "supabase_full_name": "Sophia",
+    "supabase_email": "sophialimabr912@gmail.com",
+    "candidato_nome_lista": "SOPHIA FONSECA CAMPANELLA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32914,
+    "supabase_full_name": "mateus",
+    "supabase_email": "mateuscarmo2007@gmail.com",
+    "candidato_nome_lista": "MATEUS MUNIZ GOMES",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 143616,
+    "supabase_full_name": "Sales",
+    "supabase_email": "gabriel.sales.correa@gmail.com",
+    "candidato_nome_lista": "MARCUS VINICIUS SALES DE ALMEIDA",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 39172,
+    "supabase_full_name": "Vitória",
+    "supabase_email": "dmzconcursos@gmail.com",
+    "candidato_nome_lista": "LETÍCIA VITÓRIA QUEIROZ NASCIMENTO DA SILVA",
+    "fuzzy_score": 0.936,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 164989,
+    "supabase_full_name": "Daniel",
+    "supabase_email": "galvaodaniel540@gmail.com",
+    "candidato_nome_lista": "DANIEL QUEIROZ SANTOS",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31186,
+    "supabase_full_name": "Larissa",
+    "supabase_email": "larissanloureiro@gmail.com",
+    "candidato_nome_lista": "LARISSA AKEMI FUKUDA CARVALHO",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 143594,
+    "supabase_full_name": "Henrique",
+    "supabase_email": "revelleshenrique71@gmail.com",
+    "candidato_nome_lista": "HENRIQUE ANDRADE BRAGA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 165170,
+    "supabase_full_name": "Kaua",
+    "supabase_email": "kauaassuncao44@gmail.com",
+    "candidato_nome_lista": "KAUÃ VALADARES GALLITO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 38414,
+    "supabase_full_name": "Matheus",
+    "supabase_email": "matheuspimentafilho@gmail.com",
+    "candidato_nome_lista": "MATHEUS SOARES FRANCHIN",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32635,
+    "supabase_full_name": "Medeiros 🪖",
+    "supabase_email": "serei.militar.eear@gmail.com",
+    "candidato_nome_lista": "GUSTAVO DE AGUIAR MEDEIROS",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31900,
+    "supabase_full_name": "Bernardo",
+    "supabase_email": "bernardoccoura@gmail.com",
+    "candidato_nome_lista": "LUCAS BERNARDO MOREIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 165262,
+    "supabase_full_name": "Vinícius",
+    "supabase_email": "jonnhixii@gmail.com",
+    "candidato_nome_lista": "MARCUS VINÍCIUS SBROGLIO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 35717,
+    "supabase_full_name": "Kauã",
+    "supabase_email": "kauaassuncao2005@gmail.com",
+    "candidato_nome_lista": "KAUÃ VALADARES GALLITO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33439,
+    "supabase_full_name": "Giovanna",
+    "supabase_email": "giovannafernandes473@gmail.com",
+    "candidato_nome_lista": "GIOVANNA RODRIGUES ALVES",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 35706,
+    "supabase_full_name": "Castro",
+    "supabase_email": "wandriacastropaz@gmail.com",
+    "candidato_nome_lista": "GABRIEL PALÁCIO DE CASTRO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 165267,
+    "supabase_full_name": "Cézar",
+    "supabase_email": "lucassz0053@gmail.com",
+    "candidato_nome_lista": "BRAYAN CARDINI CEZAR COSTA",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 35744,
+    "supabase_full_name": "kauan",
+    "supabase_email": "kauanmagri493@gmail.com",
+    "candidato_nome_lista": "KAUAN ARAUJO PINHEIRO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33694,
+    "supabase_full_name": "Francisco",
+    "supabase_email": "franciscobrmokfa@gmail.com",
+    "candidato_nome_lista": "ERIC FRANCISCO DA SILVA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 36131,
+    "supabase_full_name": "sophia",
+    "supabase_email": "sph.academico@gmail.com",
+    "candidato_nome_lista": "SOPHIA FONSECA CAMPANELLA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 36117,
+    "supabase_full_name": "Arthur",
+    "supabase_email": "arthurx1177@gmail.com",
+    "candidato_nome_lista": "ARTHUR SOUTO CABRAL",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31809,
+    "supabase_full_name": "Gabriel",
+    "supabase_email": "paivag171@gmail.com",
+    "candidato_nome_lista": "GABRIEL PINTO",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 34313,
+    "supabase_full_name": "José ",
+    "supabase_email": "levevizinlr18@gmail.com",
+    "candidato_nome_lista": "JOVIANO JOSÉ DOS SANTOS",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 163970,
+    "supabase_full_name": "Guilherme",
+    "supabase_email": "gs9284240@gmail.com",
+    "candidato_nome_lista": "GUILHERME DE SOUSA FERREIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 38139,
+    "supabase_full_name": "Igor",
+    "supabase_email": "igornchagas18@gmail.com",
+    "candidato_nome_lista": "IGOR RODRIGUES DE MELO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31624,
+    "supabase_full_name": "Pedro",
+    "supabase_email": "pedrotilulu@gmail.com",
+    "candidato_nome_lista": "PEDRO MONTEIRO TEIXEIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 164073,
+    "supabase_full_name": "Davi",
+    "supabase_email": "daviplanco1612@gmail.com",
+    "candidato_nome_lista": "DAVI LOPES VANZIN",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33550,
+    "supabase_full_name": "Gustavo",
+    "supabase_email": "gx10968@gmail.com",
+    "candidato_nome_lista": "GUSTAVO DE SOUZA",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 164198,
+    "supabase_full_name": "sophia",
+    "supabase_email": "sophiapandrade10@gmail.com",
+    "candidato_nome_lista": "SOPHIA FONSECA CAMPANELLA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 37554,
+    "supabase_full_name": "Luan",
+    "supabase_email": "m0923.luan@gmail.com",
+    "candidato_nome_lista": "LUAN PAVANI DE LIMA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 164367,
+    "supabase_full_name": "Lucas",
+    "supabase_email": "fatedesign1@gmail.com",
+    "candidato_nome_lista": "LUCAS HALLAK FIGUEIREDO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 163929,
+    "supabase_full_name": "gabriel",
+    "supabase_email": "baslozano@outlook.com",
+    "candidato_nome_lista": "GABRIEL PINTO",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32260,
+    "supabase_full_name": "Evelyn",
+    "supabase_email": "evelynspirit28@hotmail.com",
+    "candidato_nome_lista": "EVELYN DO ESPIRITO SANTO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 164095,
+    "supabase_full_name": "Kaio",
+    "supabase_email": "kaio987555@gmail.com",
+    "candidato_nome_lista": "KAIO FIRMINO DE ARAUJO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 164078,
+    "supabase_full_name": "Caio",
+    "supabase_email": "matarcanjoesa@gmaik.com",
+    "candidato_nome_lista": "CAIO BARBOZA GAGLIARDI",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31814,
+    "supabase_full_name": "Gabriel",
+    "supabase_email": "gabrielsantos06of@gmail.com",
+    "candidato_nome_lista": "GABRIEL PINTO",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 37841,
+    "supabase_full_name": "Matheus",
+    "supabase_email": "matheus23cerqueira@gmail.com",
+    "candidato_nome_lista": "MATHEUS SOARES FRANCHIN",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 164454,
+    "supabase_full_name": "Alanis",
+    "supabase_email": "alanissp2010@gmail.com",
+    "candidato_nome_lista": "LUIGI ALANIS PERONIO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33887,
+    "supabase_full_name": "dos santos",
+    "supabase_email": "nikolas.wilker1@gmail.com",
+    "candidato_nome_lista": "RAFAEL VIEIRA DOS SANTOS",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 39077,
+    "supabase_full_name": "Arthur",
+    "supabase_email": "arthurkortkamp3@gmail.com",
+    "candidato_nome_lista": "ARTHUR SOUTO CABRAL",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33922,
+    "supabase_full_name": "Miguel",
+    "supabase_email": "miguel2007arthur@gmail.com",
+    "candidato_nome_lista": "MIGUEL WINTER MATOS",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33564,
+    "supabase_full_name": "Laura",
+    "supabase_email": "lauradasneves8@gmail.com",
+    "candidato_nome_lista": "LAURA CERQUEIRA FAHEL",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30656,
+    "supabase_full_name": "Pedro",
+    "supabase_email": "pedropt2000@gmail.com",
+    "candidato_nome_lista": "PEDRO MONTEIRO TEIXEIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33800,
+    "supabase_full_name": "Moreira",
+    "supabase_email": "moreiraarmyeb@gmail.com",
+    "candidato_nome_lista": "RAFAEL MOREIRA BICHUETTE",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33853,
+    "supabase_full_name": "Meirelles.",
+    "supabase_email": "brunomrf2018@gmail.com",
+    "candidato_nome_lista": "ARTHUR MEIRELLES CONSIDERA MORAES",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33952,
+    "supabase_full_name": "Brayan ⚓️",
+    "supabase_email": "brayanalvespereira50@gmail.com",
+    "candidato_nome_lista": "BRAYAN CARDINI CEZAR COSTA",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 164115,
+    "supabase_full_name": "Lucas",
+    "supabase_email": "lucas.buenomuller@gmail.com",
+    "candidato_nome_lista": "LUCAS HALLAK FIGUEIREDO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33027,
+    "supabase_full_name": "Soares",
+    "supabase_email": "daniesb17@gmail.com",
+    "candidato_nome_lista": "MATHEUS SOARES FRANCHIN",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32251,
+    "supabase_full_name": "Ryan",
+    "supabase_email": "ryanmicael12@gmail.com",
+    "candidato_nome_lista": "RYAN DE SOUSA FRANÇA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 35540,
+    "supabase_full_name": "Breno",
+    "supabase_email": "brenovasconcelos200310@gmail.com",
+    "candidato_nome_lista": "BRENO DE OLIVEIRA CARDOSO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 164215,
+    "supabase_full_name": "Alex",
+    "supabase_email": "artzzconta1@gmail.com",
+    "candidato_nome_lista": "CAIO ALEX FEITOZA DA SILVA",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31964,
+    "supabase_full_name": "Paiva!!",
+    "supabase_email": "iagoneto0505@gmail.com",
+    "candidato_nome_lista": "PEDRO PAIVA MENNA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 35045,
+    "supabase_full_name": "Marcos",
+    "supabase_email": "marcossantosccb.com.br@gmail.com",
+    "candidato_nome_lista": "MARCOS CORRÊA DE CARVALHO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33933,
+    "supabase_full_name": "Felipe",
+    "supabase_email": "fragafelipe2007@gmail.com",
+    "candidato_nome_lista": "FELIPE OIRING DE SOUSA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30994,
+    "supabase_full_name": "LUCAS 遁",
+    "supabase_email": "lubriel2009@gmail.com",
+    "candidato_nome_lista": "LUCAS HALLAK FIGUEIREDO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 143678,
+    "supabase_full_name": "julia",
+    "supabase_email": "julia.dryl47@gmail.com",
+    "candidato_nome_lista": "JULIA LOPES DA SILVA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32213,
+    "supabase_full_name": "Alexandre",
+    "supabase_email": "alexandrecampelo031@gmail.com",
+    "candidato_nome_lista": "ALEXANDRE VIEIRA DO AMARAL",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 37406,
+    "supabase_full_name": "Thiago",
+    "supabase_email": "tf208403@gmail.com",
+    "candidato_nome_lista": "THIAGO NUNES MENDES",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33311,
+    "supabase_full_name": "Kauã",
+    "supabase_email": "kauademellolopes@gmail.com",
+    "candidato_nome_lista": "KAUÃ VALADARES GALLITO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33634,
+    "supabase_full_name": "Arthur",
+    "supabase_email": "arthurfernandesdm@gmail.com",
+    "candidato_nome_lista": "ARTHUR SOUTO CABRAL",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 39115,
+    "supabase_full_name": "Gabriel",
+    "supabase_email": "lucasfpaiva7@gmail.com",
+    "candidato_nome_lista": "GABRIEL PINTO",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 165015,
+    "supabase_full_name": "Davi",
+    "supabase_email": "daviestudos2411@gmail.com",
+    "candidato_nome_lista": "DAVI LOPES VANZIN",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32387,
+    "supabase_full_name": "Kauã",
+    "supabase_email": "kmmottasantos@gmail.com",
+    "candidato_nome_lista": "KAUÃ VALADARES GALLITO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 37530,
+    "supabase_full_name": "Brenno",
+    "supabase_email": "brennobreta@gmail.com",
+    "candidato_nome_lista": "BRENNO FRÓES ALBERNAZ",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 35338,
+    "supabase_full_name": "Sergio ",
+    "supabase_email": "serginhorufino1@gmail.com",
+    "candidato_nome_lista": "HUGO SERGIO CASTRO DINIZ",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30985,
+    "supabase_full_name": "Gabriel",
+    "supabase_email": "gabrielfontesc321@gmail.com",
+    "candidato_nome_lista": "GABRIEL PINTO",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 34495,
+    "supabase_full_name": "joao",
+    "supabase_email": "zardly1@gmail.com",
+    "candidato_nome_lista": "JOÃO PEDRO BARBOSA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 133697,
+    "supabase_full_name": "Rafael",
+    "supabase_email": "rfsamartini@gmail.com",
+    "candidato_nome_lista": "RAFAEL MOREIRA BICHUETTE",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 164910,
+    "supabase_full_name": "Bernardo",
+    "supabase_email": "bernard08fs@gmail.com",
+    "candidato_nome_lista": "LUCAS BERNARDO MOREIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 143710,
+    "supabase_full_name": "Elias",
+    "supabase_email": "elliassggoiss@gmail.com",
+    "candidato_nome_lista": "FERNANDO ELIAS DOS SANTOS JUNIOR",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 164913,
+    "supabase_full_name": "Souza",
+    "supabase_email": "lorenasouz177@gmail.com",
+    "candidato_nome_lista": "GUSTAVO DE SOUZA",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32846,
+    "supabase_full_name": "ALVES",
+    "supabase_email": "lalvesaraujo38@gmail.com",
+    "candidato_nome_lista": "ERICK DE SOUZA ALVES",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 143715,
+    "supabase_full_name": "Emanuel",
+    "supabase_email": "emanuel.s.audia3@gmail.com",
+    "candidato_nome_lista": "EMANUEL DA SILVA DE MATTOS",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 143716,
+    "supabase_full_name": "Emanuel",
+    "supabase_email": "emanuel.s.audia3@gamil.com",
+    "candidato_nome_lista": "EMANUEL DA SILVA DE MATTOS",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33358,
+    "supabase_full_name": "Kauã",
+    "supabase_email": "kauaandrewrm@gmail.com",
+    "candidato_nome_lista": "KAUÃ VALADARES GALLITO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 36368,
+    "supabase_full_name": "Gabriel",
+    "supabase_email": "gabrielfariagfl@gmail.com",
+    "candidato_nome_lista": "GABRIEL PINTO",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32712,
+    "supabase_full_name": "Leonardo..",
+    "supabase_email": "leonardokssoares@gmail.com",
+    "candidato_nome_lista": "LEONARDO PICCIRILLO",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 143725,
+    "supabase_full_name": "miguel",
+    "supabase_email": "miguellima24911@gmail.com",
+    "candidato_nome_lista": "MIGUEL WINTER MATOS",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32346,
+    "supabase_full_name": "Barros",
+    "supabase_email": "gbarrosom33@gmail.com",
+    "candidato_nome_lista": "JONAS BARROS DE OLIVEIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32539,
+    "supabase_full_name": "Raul",
+    "supabase_email": "raulfelipeta@gmail.com",
+    "candidato_nome_lista": "ADLER RAUL GUIMARÃES",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31220,
+    "supabase_full_name": "Davi",
+    "supabase_email": "davifbsilva2205@gmail.com",
+    "candidato_nome_lista": "DAVI LOPES VANZIN",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32954,
+    "supabase_full_name": "lara",
+    "supabase_email": "la.bruno2008@gmail.com",
+    "candidato_nome_lista": "LARA LUÍZA DE OLIVEIRA MENEZES",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 133424,
+    "supabase_full_name": "Sophia ",
+    "supabase_email": "susulippi@gmail.com",
+    "candidato_nome_lista": "SOPHIA FONSECA CAMPANELLA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31342,
+    "supabase_full_name": "luan",
+    "supabase_email": "luansoares0897@gmail.com",
+    "candidato_nome_lista": "LUAN PAVANI DE LIMA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104374,
+    "supabase_full_name": "Artur",
+    "supabase_email": "depaula3929@gmail.com",
+    "candidato_nome_lista": "ARTUR NANNI",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 48767,
+    "supabase_full_name": "Anderson",
+    "supabase_email": "andersonsantos4910@gmail.com",
+    "candidato_nome_lista": "ARTHUR ANDERSON MARTINHO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31351,
+    "supabase_full_name": "João",
+    "supabase_email": "jvitorrs2011@gmail.com",
+    "candidato_nome_lista": "JOÃO PEDRO BARBOSA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31341,
+    "supabase_full_name": "arthur",
+    "supabase_email": "secundaria25102003@gmail.com",
+    "candidato_nome_lista": "ARTHUR SOUTO CABRAL",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31371,
+    "supabase_full_name": "Gustavo",
+    "supabase_email": "gustavo.gabriel.27279@gmail.com",
+    "candidato_nome_lista": "GUSTAVO DE SOUZA",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31359,
+    "supabase_full_name": "William",
+    "supabase_email": "melow309@gmail.com",
+    "candidato_nome_lista": "WILLIAM MAURICIO MARCELINO VALLE",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31334,
+    "supabase_full_name": "Miguel",
+    "supabase_email": "kvalomiguel@gmail.com",
+    "candidato_nome_lista": "MIGUEL WINTER MATOS",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31401,
+    "supabase_full_name": "gabriel",
+    "supabase_email": "ladeslautiktukbs@gmail.com",
+    "candidato_nome_lista": "GABRIEL PINTO",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104376,
+    "supabase_full_name": "rafael",
+    "supabase_email": "faelaposta19@gmail.com",
+    "candidato_nome_lista": "RAFAEL MOREIRA BICHUETTE",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31354,
+    "supabase_full_name": "luciana",
+    "supabase_email": "lucianafgdacosta@gmail.com",
+    "candidato_nome_lista": "LUCIANA FERRAZ PERROUT",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31358,
+    "supabase_full_name": "Gabriel",
+    "supabase_email": "sacramentodamascenogabriel@gmail.com",
+    "candidato_nome_lista": "GABRIEL PINTO",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31367,
+    "supabase_full_name": "kaua",
+    "supabase_email": "klima08072008@gmail.com",
+    "candidato_nome_lista": "KAUÃ VALADARES GALLITO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31395,
+    "supabase_full_name": "Ana",
+    "supabase_email": "anaclaragama2407@gmail.com",
+    "candidato_nome_lista": "ANA JÚLIA NASCIMENTO COELHO",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 34053,
+    "supabase_full_name": "Arthur",
+    "supabase_email": "arthurcostta2107@gmail.com",
+    "candidato_nome_lista": "ARTHUR SOUTO CABRAL",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 48757,
+    "supabase_full_name": "Matheus",
+    "supabase_email": "matheusshm2015@gmail.com",
+    "candidato_nome_lista": "MATHEUS SOARES FRANCHIN",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31327,
+    "supabase_full_name": "Arthur",
+    "supabase_email": "arthurlimadesouza2009@gmail.com",
+    "candidato_nome_lista": "ARTHUR SOUTO CABRAL",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 35307,
+    "supabase_full_name": "Davi",
+    "supabase_email": "davi.ipameri@gmail.com",
+    "candidato_nome_lista": "DAVI LOPES VANZIN",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104379,
+    "supabase_full_name": "Ronaldo",
+    "supabase_email": "ronaldogomesrique@gmail.com",
+    "candidato_nome_lista": "RONALDO FERREIRA DIAS",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31416,
+    "supabase_full_name": "Bruno",
+    "supabase_email": "brunolimzz33@gmail.com",
+    "candidato_nome_lista": "BRUNO CANAVAL PICCAZZIO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 85600,
+    "supabase_full_name": "Alexandre",
+    "supabase_email": "alessf1307@gmail.com",
+    "candidato_nome_lista": "ALEXANDRE VIEIRA DO AMARAL",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 85641,
+    "supabase_full_name": "Lucas",
+    "supabase_email": "lucaseec2023@gmail.com",
+    "candidato_nome_lista": "LUCAS HALLAK FIGUEIREDO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 85617,
+    "supabase_full_name": "arthur",
+    "supabase_email": "arthurribeirooo2026@gmail.com",
+    "candidato_nome_lista": "ARTHUR SOUTO CABRAL",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 85546,
+    "supabase_full_name": "Arthur",
+    "supabase_email": "arthurleon0423@hotmail.com",
+    "candidato_nome_lista": "ARTHUR SOUTO CABRAL",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 85604,
+    "supabase_full_name": "Ryan",
+    "supabase_email": "ryan2br23@gmail.com",
+    "candidato_nome_lista": "RYAN DE SOUSA FRANÇA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 85574,
+    "supabase_full_name": "Igor",
+    "supabase_email": "igorsilvanozs@gmail.com",
+    "candidato_nome_lista": "IGOR RODRIGUES DE MELO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 35520,
+    "supabase_full_name": "Daniel",
+    "supabase_email": "daniellimasantanelli@gmail.com",
+    "candidato_nome_lista": "DANIEL QUEIROZ SANTOS",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 85533,
+    "supabase_full_name": "Gustavo",
+    "supabase_email": "gugu2231gugu@gmail.com",
+    "candidato_nome_lista": "GUSTAVO DE SOUZA",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 85665,
+    "supabase_full_name": "victor",
+    "supabase_email": "victoreduardoazevedo22@gmail.com",
+    "candidato_nome_lista": "VICTOR FRISON FRANCO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 85654,
+    "supabase_full_name": "Joao",
+    "supabase_email": "jvnicacio987@gmail.com",
+    "candidato_nome_lista": "JOÃO PEDRO BARBOSA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 85598,
+    "supabase_full_name": "pedro",
+    "supabase_email": "nauanf89@gmail.com",
+    "candidato_nome_lista": "PEDRO MONTEIRO TEIXEIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 85520,
+    "supabase_full_name": "Paulo",
+    "supabase_email": "dasilvagoncalvespauloisaque@gmail.com",
+    "candidato_nome_lista": "JOAO PAULO RIBEIRO ROLIM",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31393,
+    "supabase_full_name": "Lucas",
+    "supabase_email": "lucasegydio@outlook.com",
+    "candidato_nome_lista": "LUCAS HALLAK FIGUEIREDO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30613,
+    "supabase_full_name": "Cruz",
+    "supabase_email": "dcruzlevii7@gmail.com",
+    "candidato_nome_lista": "GUSTAVO LENTZ DA CRUZ",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31353,
+    "supabase_full_name": "Beatriz",
+    "supabase_email": "calixtabeatriz2@gmail.com",
+    "candidato_nome_lista": "MARIA BEATRIZ PEREIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31735,
+    "supabase_full_name": "guilherme",
+    "supabase_email": "guilhermesoaresdasilva2007@gmail.com",
+    "candidato_nome_lista": "GUILHERME DE SOUSA FERREIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104390,
+    "supabase_full_name": "alexandre",
+    "supabase_email": "alexandre2007.questao@gmail.com",
+    "candidato_nome_lista": "ALEXANDRE VIEIRA DO AMARAL",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30580,
+    "supabase_full_name": "pedro",
+    "supabase_email": "gupp.ff@gmail.com",
+    "candidato_nome_lista": "PEDRO MONTEIRO TEIXEIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104389,
+    "supabase_full_name": "Daniel",
+    "supabase_email": "dlclucas10@gmail.com",
+    "candidato_nome_lista": "DANIEL QUEIROZ SANTOS",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31046,
+    "supabase_full_name": "De Souza⚓",
+    "supabase_email": "arthurdesouza2609@gmail.com",
+    "candidato_nome_lista": "GUSTAVO DE SOUZA",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30998,
+    "supabase_full_name": "Gustavo",
+    "supabase_email": "gus.meneses100@gmail.com",
+    "candidato_nome_lista": "GUSTAVO DE SOUZA",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31221,
+    "supabase_full_name": "Gabriel",
+    "supabase_email": "gabrielbrandaopvt@icloud.com",
+    "candidato_nome_lista": "GABRIEL PINTO",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104391,
+    "supabase_full_name": "Pedro",
+    "supabase_email": "pedrinhosampaio450@gmail.com",
+    "candidato_nome_lista": "PEDRO MONTEIRO TEIXEIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30954,
+    "supabase_full_name": "Erick Da",
+    "supabase_email": "eriickalves15@gmail.com",
+    "candidato_nome_lista": "ERICK GABRIEL DIAS",
+    "fuzzy_score": 0.89,
+    "match_type": "contained_tokens",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31003,
+    "supabase_full_name": "Thiago",
+    "supabase_email": "thiagopipasvlogs0000@gmail.com",
+    "candidato_nome_lista": "THIAGO NUNES MENDES",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30699,
+    "supabase_full_name": "Pedro",
+    "supabase_email": "pedrohg0303@gmail.com",
+    "candidato_nome_lista": "PEDRO MONTEIRO TEIXEIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30679,
+    "supabase_full_name": "Alexandre",
+    "supabase_email": "alexandre.filho@aluno.colegioperfil.com.br",
+    "candidato_nome_lista": "ALEXANDRE VIEIRA DO AMARAL",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30902,
+    "supabase_full_name": "lacerda",
+    "supabase_email": "raiolucas9@gmail.com",
+    "candidato_nome_lista": "GABRIEL MILLS LACERDA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31302,
+    "supabase_full_name": "Thiago",
+    "supabase_email": "perseu0935@gmail.com",
+    "candidato_nome_lista": "THIAGO NUNES MENDES",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30787,
+    "supabase_full_name": "Guilherme",
+    "supabase_email": "guilher55111@gmail.com",
+    "candidato_nome_lista": "GUILHERME DE SOUSA FERREIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31596,
+    "supabase_full_name": "samara",
+    "supabase_email": "kitty.cahty@gmail.com",
+    "candidato_nome_lista": "SAMARA BERGAMI VILLA NOVA",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31617,
+    "supabase_full_name": "Guilherme",
+    "supabase_email": "costaguilcdg@gmail.com",
+    "candidato_nome_lista": "GUILHERME DE SOUSA FERREIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30835,
+    "supabase_full_name": "Juan",
+    "supabase_email": "juancristianferreir@gmail.com",
+    "candidato_nome_lista": "JUAN AMORIM BARBOSA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31675,
+    "supabase_full_name": "Carlos",
+    "supabase_email": "carloseduardofreitas558@gmail.com",
+    "candidato_nome_lista": "RYAN CARLOS DUTRA DE MELLO",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30806,
+    "supabase_full_name": "Guilherme",
+    "supabase_email": "guiesteves2010@gmail.com",
+    "candidato_nome_lista": "GUILHERME DE SOUSA FERREIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30870,
+    "supabase_full_name": "Luiza",
+    "supabase_email": "rodriguessilvaluiza90@gmail.com",
+    "candidato_nome_lista": "LUÍZA SCHWANTES",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30940,
+    "supabase_full_name": "Fellipe",
+    "supabase_email": "fellipemedeiros26022003@gmail.com",
+    "candidato_nome_lista": "FELLIPE AUGUSTO OLIVEIRA COSTA",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33000,
+    "supabase_full_name": "Caio",
+    "supabase_email": "caioepcar101@gmail.com",
+    "candidato_nome_lista": "CAIO BARBOZA GAGLIARDI",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32719,
+    "supabase_full_name": "Marcos",
+    "supabase_email": "mguilhermemartini@gmail.com",
+    "candidato_nome_lista": "MARCOS CORRÊA DE CARVALHO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30831,
+    "supabase_full_name": "Caio",
+    "supabase_email": "caioow.novo@gmail.com",
+    "candidato_nome_lista": "CAIO BARBOZA GAGLIARDI",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 133592,
+    "supabase_full_name": "Kauã",
+    "supabase_email": "kaua.rodriguesp16@gmail.com",
+    "candidato_nome_lista": "KAUÃ VALADARES GALLITO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30794,
+    "supabase_full_name": "jorge",
+    "supabase_email": "prisguersonjp@gmail.com",
+    "candidato_nome_lista": "DANIEL JORGE NOBRE LAGARES",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31628,
+    "supabase_full_name": "Giovanna",
+    "supabase_email": "gigiestudos015@gmail.com",
+    "candidato_nome_lista": "GIOVANNA RODRIGUES ALVES",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30995,
+    "supabase_full_name": "Bernardo",
+    "supabase_email": "bernardosmdutra07@gmail.com",
+    "candidato_nome_lista": "LUCAS BERNARDO MOREIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31418,
+    "supabase_full_name": "kaua",
+    "supabase_email": "depaulakaua@gmail.com",
+    "candidato_nome_lista": "KAUÃ VALADARES GALLITO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31194,
+    "supabase_full_name": "Fernando",
+    "supabase_email": "fernandojuniorlemos@gmail.com",
+    "candidato_nome_lista": "FERNANDO LINK LEITÃO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31629,
+    "supabase_full_name": "Andre",
+    "supabase_email": "dezingustavo05@gmail.com",
+    "candidato_nome_lista": "ANDRÉ CORRILER ZANARDI",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32611,
+    "supabase_full_name": "Almeida",
+    "supabase_email": "nr60031@gmail.com",
+    "candidato_nome_lista": "GABRIELA GONÇALVES ALMEIDA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32045,
+    "supabase_full_name": "Isaac.",
+    "supabase_email": "isaacsevero25@gmail.com",
+    "candidato_nome_lista": "ISAAC NUNES COELHO DOS SANTOS",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32158,
+    "supabase_full_name": "Victor",
+    "supabase_email": "victor.barbeits12@gmail.com",
+    "candidato_nome_lista": "VICTOR FRISON FRANCO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 34170,
+    "supabase_full_name": "Gabriel",
+    "supabase_email": "sofia018strey@gmail.com",
+    "candidato_nome_lista": "GABRIEL PINTO",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32349,
+    "supabase_full_name": "Gabriel",
+    "supabase_email": "limarochag4@gmail.com",
+    "candidato_nome_lista": "GABRIEL PINTO",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33545,
+    "supabase_full_name": "Julia",
+    "supabase_email": "juliabeltrame25@gmail.com",
+    "candidato_nome_lista": "JULIA LOPES DA SILVA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104404,
+    "supabase_full_name": "Henry",
+    "supabase_email": "ruan100mito@gmail.com",
+    "candidato_nome_lista": "HENRY KUHBAUCHE YAMADA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 34507,
+    "supabase_full_name": "Luca",
+    "supabase_email": "lucaeleal@gmail.com",
+    "candidato_nome_lista": "LUCA RODRIGUES FACCHINI",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32662,
+    "supabase_full_name": "Esteves",
+    "supabase_email": "arthur10esteves@gmail.com",
+    "candidato_nome_lista": "GUILHERME DA SILVA ESTEVES",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104405,
+    "supabase_full_name": "William",
+    "supabase_email": "williammartinsteixeiravianna@gmail.com",
+    "candidato_nome_lista": "WILLIAM MAURICIO MARCELINO VALLE",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33607,
+    "supabase_full_name": "Scardanzan",
+    "supabase_email": "rafatudow@gmail.com",
+    "candidato_nome_lista": "RAFAEL SCARDANZAN DA SILVA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32833,
+    "supabase_full_name": "Davi",
+    "supabase_email": "davioliveira22233@gmail.com",
+    "candidato_nome_lista": "DAVI LOPES VANZIN",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104412,
+    "supabase_full_name": "Silva",
+    "supabase_email": "rafaelfreitassilva.2008@gmail.com",
+    "candidato_nome_lista": "KARINA DA SILVA LOPES",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104413,
+    "supabase_full_name": "Vinicius",
+    "supabase_email": "vinijudo27102007@gmail.com",
+    "candidato_nome_lista": "MARCUS VINÍCIUS SBROGLIO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104418,
+    "supabase_full_name": "Alex",
+    "supabase_email": "alexcostafilho08@gmail.com",
+    "candidato_nome_lista": "CAIO ALEX FEITOZA DA SILVA",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32911,
+    "supabase_full_name": "Luigi",
+    "supabase_email": "luigibastos2008@yahoo.com",
+    "candidato_nome_lista": "LUIGI RISI DE SALLES",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104410,
+    "supabase_full_name": "Higor",
+    "supabase_email": "highstore077@gmail.com",
+    "candidato_nome_lista": "HIGOR MACEDO MAIA DA SILVA",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33308,
+    "supabase_full_name": "Vitória",
+    "supabase_email": "vitoriadinizlima06@gmail.com",
+    "candidato_nome_lista": "LETÍCIA VITÓRIA QUEIROZ NASCIMENTO DA SILVA",
+    "fuzzy_score": 0.936,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104417,
+    "supabase_full_name": "Miguel",
+    "supabase_email": "estudapconcurso1321@gmail.com",
+    "candidato_nome_lista": "MIGUEL WINTER MATOS",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33541,
+    "supabase_full_name": "Bernardo⚓",
+    "supabase_email": "bernardobitupita@gmail.com",
+    "candidato_nome_lista": "LUCAS BERNARDO MOREIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33220,
+    "supabase_full_name": "Davi",
+    "supabase_email": "davij8moura@gmail.com",
+    "candidato_nome_lista": "DAVI LOPES VANZIN",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33351,
+    "supabase_full_name": "Guilherme",
+    "supabase_email": "ansre9431@gmail.com",
+    "candidato_nome_lista": "GUILHERME DE SOUSA FERREIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104420,
+    "supabase_full_name": "Giovanna",
+    "supabase_email": "giovannatavora9@gmail.com",
+    "candidato_nome_lista": "GIOVANNA RODRIGUES ALVES",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33511,
+    "supabase_full_name": "Nogueira",
+    "supabase_email": "gb405695@gmail.com",
+    "candidato_nome_lista": "VITOR NOGUEIRA ELERATI",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 34349,
+    "supabase_full_name": "Fabio",
+    "supabase_email": "pizzariataz35@gmail.com",
+    "candidato_nome_lista": "FÁBIO HENRIC DOS ANJOS CORREIA",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33894,
+    "supabase_full_name": "Gabriel",
+    "supabase_email": "gabrielbrazilcariello30@gmail.com",
+    "candidato_nome_lista": "GABRIEL PINTO",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 34216,
+    "supabase_full_name": "França 🦅",
+    "supabase_email": "anaaeguii@gmail.com",
+    "candidato_nome_lista": "RYAN DE SOUSA FRANÇA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104443,
+    "supabase_full_name": "Joao",
+    "supabase_email": "fabianaborges407@gmail.com",
+    "candidato_nome_lista": "JOÃO PEDRO BARBOSA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104439,
+    "supabase_full_name": "Matheus",
+    "supabase_email": "moraiss1912@gmail.com",
+    "candidato_nome_lista": "MATHEUS SOARES FRANCHIN",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104445,
+    "supabase_full_name": "mateus",
+    "supabase_email": "mateusbloch@gmail.com",
+    "candidato_nome_lista": "MATEUS MUNIZ GOMES",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 35851,
+    "supabase_full_name": "Jonas",
+    "supabase_email": "jonasvicenterosa@hotmail.com",
+    "candidato_nome_lista": "JONAS BARROS DE OLIVEIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 34599,
+    "supabase_full_name": "miguel",
+    "supabase_email": "mbarbosathome059@gmail.com",
+    "candidato_nome_lista": "MIGUEL WINTER MATOS",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33159,
+    "supabase_full_name": "Breno",
+    "supabase_email": "willik.breno.ferreira@gmail.com",
+    "candidato_nome_lista": "BRENO DE OLIVEIRA CARDOSO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104305,
+    "supabase_full_name": "Gustavo",
+    "supabase_email": "gustavobatistadeoliveira2008@gmail.com",
+    "candidato_nome_lista": "GUSTAVO DE SOUZA",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32972,
+    "supabase_full_name": "Paulo",
+    "supabase_email": "paulojosedacosta75@gmail.com",
+    "candidato_nome_lista": "JOAO PAULO RIBEIRO ROLIM",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104460,
+    "supabase_full_name": "victor",
+    "supabase_email": "victor.ceretta0910@gmail.com",
+    "candidato_nome_lista": "VICTOR FRISON FRANCO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104459,
+    "supabase_full_name": "Davi",
+    "supabase_email": "davieduardo233@gmail.com",
+    "candidato_nome_lista": "DAVI LOPES VANZIN",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 34776,
+    "supabase_full_name": "Caio",
+    "supabase_email": "matarcanjoesa2026@gmail.com",
+    "candidato_nome_lista": "CAIO BARBOZA GAGLIARDI",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 133464,
+    "supabase_full_name": "Fonseca",
+    "supabase_email": "maryfonseca58821@gmail.com",
+    "candidato_nome_lista": "RICARDO FONSECA OLIVE",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 133452,
+    "supabase_full_name": "Danilo",
+    "supabase_email": "barbozadanilo439@gmail.com",
+    "candidato_nome_lista": "DANILO PINHEIRO COELHO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104467,
+    "supabase_full_name": "Miguel",
+    "supabase_email": "migueltrusty27@gmail.com",
+    "candidato_nome_lista": "MIGUEL WINTER MATOS",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 35811,
+    "supabase_full_name": "Bernardo",
+    "supabase_email": "bernardo.pinciara@gmail.com",
+    "candidato_nome_lista": "LUCAS BERNARDO MOREIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33877,
+    "supabase_full_name": "Silva",
+    "supabase_email": "isaque_s.santos@outlook.com",
+    "candidato_nome_lista": "KARINA DA SILVA LOPES",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104493,
+    "supabase_full_name": "Vinícius",
+    "supabase_email": "creppeeerzac@gmail.com",
+    "candidato_nome_lista": "MARCUS VINÍCIUS SBROGLIO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 133624,
+    "supabase_full_name": "Matheus",
+    "supabase_email": "carvalhoduartematheus18@gmail.com",
+    "candidato_nome_lista": "MATHEUS SOARES FRANCHIN",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104494,
+    "supabase_full_name": "Gabriel",
+    "supabase_email": "gabrielalvarino04@gmail.com",
+    "candidato_nome_lista": "GABRIEL PINTO",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32244,
+    "supabase_full_name": "Salles",
+    "supabase_email": "joaopedrosallesdelima@gmail.com",
+    "candidato_nome_lista": "LUIGI RISI DE SALLES",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104505,
+    "supabase_full_name": "erick",
+    "supabase_email": "elierick.goncalves@gmail.com",
+    "candidato_nome_lista": "ERICK GABRIEL DIAS",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104507,
+    "supabase_full_name": "aquiles",
+    "supabase_email": "aquilesmanoel2011@gmail.com",
+    "candidato_nome_lista": "AQUILES MENDES DE LIMA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104526,
+    "supabase_full_name": "Ruan",
+    "supabase_email": "chagasruan54@gmail.com",
+    "candidato_nome_lista": "RUAN FURTADO DELGADO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104542,
+    "supabase_full_name": "Luiza",
+    "supabase_email": "raiane.silva202124ll@gmail.com",
+    "candidato_nome_lista": "LUÍZA SCHWANTES",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104567,
+    "supabase_full_name": "Felipe",
+    "supabase_email": "felipelimadasilva45@gmail.com",
+    "candidato_nome_lista": "FELIPE OIRING DE SOUSA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104557,
+    "supabase_full_name": "Augusto",
+    "supabase_email": "augustolopessoares3.0@gmail.com",
+    "candidato_nome_lista": "MATHEUS AUGUSTO MORAIS LOUZADA",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 144002,
+    "supabase_full_name": "Sophia",
+    "supabase_email": "sososms333@gmail.com",
+    "candidato_nome_lista": "SOPHIA FONSECA CAMPANELLA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104531,
+    "supabase_full_name": "Alana",
+    "supabase_email": "contatoalanaprocpio11@gmail.com",
+    "candidato_nome_lista": "ALANA MIRANDA DE SENA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104573,
+    "supabase_full_name": "Vinicius",
+    "supabase_email": "vinigabriel.cortes@gmail.com",
+    "candidato_nome_lista": "MARCUS VINÍCIUS SBROGLIO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104588,
+    "supabase_full_name": "diogo",
+    "supabase_email": "daniedigo03@gmail.com",
+    "candidato_nome_lista": "DIOGO NEVES CARVALHO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 36486,
+    "supabase_full_name": "Gabriel",
+    "supabase_email": "gb.rrodrigues05@gmail.com",
+    "candidato_nome_lista": "GABRIEL PINTO",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 85672,
+    "supabase_full_name": "Davi",
+    "supabase_email": "gomesdelimadavi30@gmail.com",
+    "candidato_nome_lista": "DAVI LOPES VANZIN",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 34798,
+    "supabase_full_name": "Gustavo",
+    "supabase_email": "gtzinn10fx@gmail.com",
+    "candidato_nome_lista": "GUSTAVO DE SOUZA",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33854,
+    "supabase_full_name": "Torres",
+    "supabase_email": "anacarolinaltorres@gmail.com",
+    "candidato_nome_lista": "EDUARDO RODRIGUES TÔRRES",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32806,
+    "supabase_full_name": "manoel",
+    "supabase_email": "mouraneto578@gmail.com",
+    "candidato_nome_lista": "JOÃO MANOEL PINHEIRO ROCHA",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31273,
+    "supabase_full_name": "Sofia",
+    "supabase_email": "soareslopessofia@gmail.com",
+    "candidato_nome_lista": "SOFIA DE CASTRO GOMES",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 48783,
+    "supabase_full_name": "thiago",
+    "supabase_email": "barbosathiagolento@gmail.com",
+    "candidato_nome_lista": "THIAGO NUNES MENDES",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32469,
+    "supabase_full_name": "Leal",
+    "supabase_email": "lealzin262@gmail.com",
+    "candidato_nome_lista": "LUCAS BAPTISTA LEAL",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33265,
+    "supabase_full_name": "joao",
+    "supabase_email": "joaomarcellofialho@gmail.com",
+    "candidato_nome_lista": "JOÃO PEDRO BARBOSA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 85623,
+    "supabase_full_name": "Andrey",
+    "supabase_email": "andreyandrade070105@gmail.com",
+    "candidato_nome_lista": "ANDREY KALEL SOUZA SOARES",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 133612,
+    "supabase_full_name": "Vasconcellos",
+    "supabase_email": "davivascsilva@gmail.com",
+    "candidato_nome_lista": "VINICIUS VASCONCELLOS THURLER",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31219,
+    "supabase_full_name": "Jonathan",
+    "supabase_email": "jonathann.dos.santos.pessoa@gmail.com",
+    "candidato_nome_lista": "JONATHAN ALEXANDRO GOMES DA SILVA",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33864,
+    "supabase_full_name": "ruan",
+    "supabase_email": "dragonballlegalgt0@gmail.com",
+    "candidato_nome_lista": "RUAN FURTADO DELGADO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32156,
+    "supabase_full_name": "Júlia",
+    "supabase_email": "julia3familiamiranda@gmail.com",
+    "candidato_nome_lista": "JULIA LOPES DA SILVA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30812,
+    "supabase_full_name": "Lopes",
+    "supabase_email": "heitorlopes32@gmail.com",
+    "candidato_nome_lista": "DAVI LOPES VANZIN",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 32016,
+    "supabase_full_name": "Lucas",
+    "supabase_email": "santacruzcorrealucas@gmail.com",
+    "candidato_nome_lista": "LUCAS HALLAK FIGUEIREDO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 35893,
+    "supabase_full_name": "davi",
+    "supabase_email": "davifonsecadesantana397@gmail.com",
+    "candidato_nome_lista": "DAVI LOPES VANZIN",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 144031,
+    "supabase_full_name": "Pedro",
+    "supabase_email": "pedrofilipe88er@gmail.com",
+    "candidato_nome_lista": "PEDRO MONTEIRO TEIXEIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104509,
+    "supabase_full_name": "sophia",
+    "supabase_email": "sophiaashido@gmail.com",
+    "candidato_nome_lista": "SOPHIA FONSECA CAMPANELLA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 144040,
+    "supabase_full_name": "Gabriel",
+    "supabase_email": "bielrochalgamer@gmail.com",
+    "candidato_nome_lista": "GABRIEL PINTO",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 30629,
+    "supabase_full_name": "Pedro",
+    "supabase_email": "psoaresmuzimachado@gmail.com",
+    "candidato_nome_lista": "PEDRO MONTEIRO TEIXEIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104474,
+    "supabase_full_name": "Paulo",
+    "supabase_email": "kaezartist725@gmail.com",
+    "candidato_nome_lista": "JOAO PAULO RIBEIRO ROLIM",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104475,
+    "supabase_full_name": "Maitê",
+    "supabase_email": "maitenunes08@gmail.com",
+    "candidato_nome_lista": "MAITÊ COELHO MONTE NEGRO",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31494,
+    "supabase_full_name": "Peres",
+    "supabase_email": "liviaperes.personal@gmail.com",
+    "candidato_nome_lista": "PEDRO MARIANO CARDOSO PERES",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 133582,
+    "supabase_full_name": "Raphael",
+    "supabase_email": "raphaelsantocsilva@gmail.com",
+    "candidato_nome_lista": "RAPHAEL ZILIO MARTINS DE AMORIM",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 133679,
+    "supabase_full_name": "Castro",
+    "supabase_email": "decastrorafaela3@gmail.com",
+    "candidato_nome_lista": "GABRIEL PALÁCIO DE CASTRO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 104491,
+    "supabase_full_name": "Vitor",
+    "supabase_email": "jvcarvalhodemoraes@gmail.com",
+    "candidato_nome_lista": "VITOR NOGUEIRA ELERATI",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 31102,
+    "supabase_full_name": "Vinicius",
+    "supabase_email": "filgueiraviniciussbx@gmail.com",
+    "candidato_nome_lista": "MARCUS VINÍCIUS SBROGLIO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 33088,
+    "supabase_full_name": "Matheus",
+    "supabase_email": "matheusvictordj@gmail.com",
+    "candidato_nome_lista": "MATHEUS SOARES FRANCHIN",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 35662,
+    "supabase_full_name": "Letícia",
+    "supabase_email": "bragalopes0800@gmail.com",
+    "candidato_nome_lista": "ANA LETÍCIA MARQUES DA SILVA",
+    "fuzzy_score": 0.94,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 144027,
+    "supabase_full_name": "Gabriela",
+    "supabase_email": "gabrielahanae@gmail.com",
+    "candidato_nome_lista": "GABRIELA TOSTES SOUZA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 144037,
+    "supabase_full_name": "arthur",
+    "supabase_email": "thurcmelo12@gmail.com",
+    "candidato_nome_lista": "ARTHUR SOUTO CABRAL",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 36752,
+    "supabase_full_name": "Vinicius",
+    "supabase_email": "viniciusl.hamerski@gmail.com",
+    "candidato_nome_lista": "MARCUS VINÍCIUS SBROGLIO",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 37016,
+    "supabase_full_name": "Gabriel",
+    "supabase_email": "reisg5074@gmail.com",
+    "candidato_nome_lista": "GABRIEL PINTO",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 37119,
+    "supabase_full_name": "Italo",
+    "supabase_email": "italofreitas419@gmail.com",
+    "candidato_nome_lista": "ITALO GUSTAVO CINTRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 37133,
+    "supabase_full_name": "carvalho",
+    "supabase_email": "subcarvalho098@gmail.com",
+    "candidato_nome_lista": "PEDRO DE CARVALHO WERMELINGER",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 37464,
+    "supabase_full_name": "Gabriel",
+    "supabase_email": "bieldasilvamaciel@gmail.com",
+    "candidato_nome_lista": "GABRIEL PINTO",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 37708,
+    "supabase_full_name": "Marcelo",
+    "supabase_email": "marcelinhosalgado@icloud.com",
+    "candidato_nome_lista": "MARCELO FARIAS VIANA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 38079,
+    "supabase_full_name": "PEREIRA",
+    "supabase_email": "eikealexandre07@gmail.com",
+    "candidato_nome_lista": "TIAGO LIMOEIRO PEREIRA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 38133,
+    "supabase_full_name": "rodrigo",
+    "supabase_email": "rodrigggogpimentel@gmail.com",
+    "candidato_nome_lista": "RODRIGO QUEIROZ ARRUDA",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 38037,
+    "supabase_full_name": "Sampaio",
+    "supabase_email": "caiodealmeidalisboa@gmail.com",
+    "candidato_nome_lista": "VICENZO DE SAMPAIO RODRIGUES GRAZINOLI GARRIDO",
+    "fuzzy_score": 0.936,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 38543,
+    "supabase_full_name": "Mateus",
+    "supabase_email": "castamateus7@gmail.com",
+    "candidato_nome_lista": "MATEUS MUNIZ GOMES",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 38667,
+    "supabase_full_name": "Caio",
+    "supabase_email": "caio85297@gmail.com",
+    "candidato_nome_lista": "CAIO BARBOZA GAGLIARDI",
+    "fuzzy_score": 0.9467,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  },
+  {
+    "supabase_user_id": 39430,
+    "supabase_full_name": "Gustavo",
+    "supabase_email": "gustavohenrique03.90@gmail.com",
+    "candidato_nome_lista": "GUSTAVO DE SOUZA",
+    "fuzzy_score": 0.96,
+    "match_type": "contained_substring",
+    "email_confirma_sobrenome": "NAO",
+    "motivo_rejeicao": "nome_supabase_com_1_token_e_email_nao_confirma"
+  }
+]

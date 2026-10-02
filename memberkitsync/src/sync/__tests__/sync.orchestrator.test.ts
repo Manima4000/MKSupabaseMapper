@@ -64,11 +64,16 @@ vi.mock('../../modules/courses/course.repository.js', () => ({
   deleteOrphanedCourses: vi.fn().mockResolvedValue(0),
 }))
 
+vi.mock('../../modules/sections/section.repository.js', () => ({
+  deleteOrphanedSections: vi.fn().mockResolvedValue(0),
+}))
+
 vi.mock('../../modules/lessons/lesson.repository.js', () => ({
   getAllLessons: vi.fn().mockResolvedValue([]),
   getLessonByMkId: vi.fn(),
   upsertLessonVideo: vi.fn(),
   upsertLessonFiles: vi.fn(),
+  deleteOrphanedLessons: vi.fn().mockResolvedValue(0),
 }))
 
 vi.mock('../../modules/lesson_progress/lesson_progress.repository.js', () => ({

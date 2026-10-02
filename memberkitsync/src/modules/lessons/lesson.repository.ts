@@ -83,13 +83,12 @@ export async function getLessonByMkId(mkId: number): Promise<Lesson | null> {
 export async function deleteOrphanedLessons(knownMkIds: number[]): Promise<number> {
   if (knownMkIds.length === 0) return 0
 
-  const { error, count } = await supabase
-    .from('lessons')
-    .delete({ count: 'exact' })
-    .not('mk_id', 'in', `(${knownMkIds.join(',')})`)
+  // Via RPC (fn_delete_orphaned_lessons, migration 059) — mesmo motivo de
+  // deleteOrphanedCourses: cascade pode estourar o statement_timeout=8s.
+  const { data, error } = await supabase.rpc('fn_delete_orphaned_lessons', { known_mk_ids: knownMkIds })
 
   if (error) throw new SupabaseError('Falha ao deletar lessons órfãs', error)
-  return count ?? 0
+  return (data as number) ?? 0
 }
 
 export async function getAllLessons(): Promise<Pick<Lesson, 'id' | 'mk_id'>[]> {

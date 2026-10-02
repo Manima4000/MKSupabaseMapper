@@ -1,0 +1,8002 @@
+[
+  {
+    "classificacao": 1,
+    "nome": "ROBERTO BEDÊ BRUNO",
+    "numero_inscricao": "108750-7",
+    "data_nascimento": "04/04/2008",
+    "oed": "FORTALEZA",
+    "GI": 330
+  },
+  {
+    "classificacao": 2,
+    "nome": "NATALIA ROSA VINHAES",
+    "numero_inscricao": "108279-0",
+    "data_nascimento": "08/07/2006",
+    "oed": "SÃO LUIS",
+    "GI": 320
+  },
+  {
+    "classificacao": 3,
+    "nome": "SÉRGIO CARNEIRO BITTENCOURT",
+    "numero_inscricao": "108274-9",
+    "data_nascimento": "20/04/2009",
+    "oed": "SALVADOR",
+    "GI": 315
+  },
+  {
+    "classificacao": 4,
+    "nome": "JOÃO PEDRO UCHOA RODRIGUES",
+    "numero_inscricao": "105953-0",
+    "data_nascimento": "29/09/2008",
+    "oed": "FORTALEZA",
+    "GI": 305
+  },
+  {
+    "classificacao": 5,
+    "nome": "ALVARO BONAVIDES DE CASTRO CAMPOS",
+    "numero_inscricao": "108890-5",
+    "data_nascimento": "31/10/2007",
+    "oed": "FORTALEZA",
+    "GI": 305
+  },
+  {
+    "classificacao": 6,
+    "nome": "DAVI FECURY ZENNI TRIFONI",
+    "numero_inscricao": "108173-8",
+    "data_nascimento": "01/02/2006",
+    "oed": "SÃO LUIS",
+    "GI": 300
+  },
+  {
+    "classificacao": 7,
+    "nome": "ANA HELOÍSA CORRÊA QUARESMA",
+    "numero_inscricao": "111518-4",
+    "data_nascimento": "19/12/2008",
+    "oed": "BELÉM",
+    "GI": 300
+  },
+  {
+    "classificacao": 8,
+    "nome": "CAIO EDUARDO MACAMBIRA ARAUJO",
+    "numero_inscricao": "107530-3",
+    "data_nascimento": "30/12/2004",
+    "oed": "FORTALEZA",
+    "GI": 295
+  },
+  {
+    "classificacao": 9,
+    "nome": "LUCAS LEONIDAS DE SOUSA TOBIAS",
+    "numero_inscricao": "108578-0",
+    "data_nascimento": "07/10/2007",
+    "oed": "FORTALEZA",
+    "GI": 295
+  },
+  {
+    "classificacao": 10,
+    "nome": "GABRIEL BASTOS VASCONCELOS DUARTE",
+    "numero_inscricao": "108104-1",
+    "data_nascimento": "04/10/2006",
+    "oed": "RECIFE",
+    "GI": 290
+  },
+  {
+    "classificacao": 11,
+    "nome": "ELIAS DO NASCIMENTO BARROS",
+    "numero_inscricao": "109031-9",
+    "data_nascimento": "11/01/2007",
+    "oed": "FORTALEZA",
+    "GI": 290
+  },
+  {
+    "classificacao": 12,
+    "nome": "FRANCISCO LEVI BARROS DA CUNHA",
+    "numero_inscricao": "108117-2",
+    "data_nascimento": "29/03/2007",
+    "oed": "FORTALEZA",
+    "GI": 290
+  },
+  {
+    "classificacao": 13,
+    "nome": "JOAO PEDRO FREITAS AZEVEDO",
+    "numero_inscricao": "107532-0",
+    "data_nascimento": "23/02/2008",
+    "oed": "FORTALEZA",
+    "GI": 285
+  },
+  {
+    "classificacao": 14,
+    "nome": "ANTONIO VINICIUS CANDEIRA SOEIRO MOREIRA",
+    "numero_inscricao": "107988-1",
+    "data_nascimento": "31/05/2007",
+    "oed": "FORTALEZA",
+    "GI": 285
+  },
+  {
+    "classificacao": 15,
+    "nome": "JOÃO LUÍS DA LUZ MIRANDA",
+    "numero_inscricao": "102867-0",
+    "data_nascimento": "01/02/2007",
+    "oed": "RECIFE",
+    "GI": 285
+  },
+  {
+    "classificacao": 16,
+    "nome": "GUILHERME BEZERRA GEROSINO DA SILVA",
+    "numero_inscricao": "110998-0",
+    "data_nascimento": "04/05/2007",
+    "oed": "RECIFE",
+    "GI": 280
+  },
+  {
+    "classificacao": 17,
+    "nome": "JOÃO MARCELO CAMURÇA FERNANDES NASARÉ",
+    "numero_inscricao": "106086-5",
+    "data_nascimento": "29/05/2008",
+    "oed": "FORTALEZA",
+    "GI": 280
+  },
+  {
+    "classificacao": 18,
+    "nome": "CAIQUE MONAUER AMORIM",
+    "numero_inscricao": "109213-8",
+    "data_nascimento": "10/01/2007",
+    "oed": "BELÉM",
+    "GI": 280
+  },
+  {
+    "classificacao": 19,
+    "nome": "PEDRO MANOEL DE ALMEIDA SENA",
+    "numero_inscricao": "108973-0",
+    "data_nascimento": "31/05/2008",
+    "oed": "FORTALEZA",
+    "GI": 280
+  },
+  {
+    "classificacao": 20,
+    "nome": "LUIS GUSTAVO SOUSA DE FARIAS",
+    "numero_inscricao": "107492-5",
+    "data_nascimento": "01/08/2005",
+    "oed": "FORTALEZA",
+    "GI": 280
+  },
+  {
+    "classificacao": 21,
+    "nome": "PEDRO SANTANA DE FARIA",
+    "numero_inscricao": "108110-5",
+    "data_nascimento": "31/03/2006",
+    "oed": "RECIFE",
+    "GI": 280
+  },
+  {
+    "classificacao": 22,
+    "nome": "HEITOR MONTENEGRO CHALEGRE",
+    "numero_inscricao": "107261-2",
+    "data_nascimento": "25/11/2008",
+    "oed": "RECIFE",
+    "GI": 280
+  },
+  {
+    "classificacao": 23,
+    "nome": "WIVIANE CASSIMIRO MACHADO",
+    "numero_inscricao": "103971-6",
+    "data_nascimento": "19/05/2005",
+    "oed": "FORTALEZA",
+    "GI": 280
+  },
+  {
+    "classificacao": 24,
+    "nome": "GABRIEL WILLIAM FERREIRA",
+    "numero_inscricao": "108893-0",
+    "data_nascimento": "26/11/2008",
+    "oed": "FORTALEZA",
+    "GI": 280
+  },
+  {
+    "classificacao": 25,
+    "nome": "JOÃO PAULO KEUFFER COSTA",
+    "numero_inscricao": "107394-9",
+    "data_nascimento": "18/11/2005",
+    "oed": "BELÉM",
+    "GI": 275
+  },
+  {
+    "classificacao": 26,
+    "nome": "ARTHUR BARROSO UCHOA",
+    "numero_inscricao": "108364-5",
+    "data_nascimento": "14/05/2007",
+    "oed": "FORTALEZA",
+    "GI": 275
+  },
+  {
+    "classificacao": 27,
+    "nome": "ISADORA BARROSO SILVA LÔBO",
+    "numero_inscricao": "108481-6",
+    "data_nascimento": "13/06/2009",
+    "oed": "FORTALEZA",
+    "GI": 275
+  },
+  {
+    "classificacao": 28,
+    "nome": "GABRIEL MENDES MENALI",
+    "numero_inscricao": "108288-8",
+    "data_nascimento": "14/08/2006",
+    "oed": "FORTALEZA",
+    "GI": 270
+  },
+  {
+    "classificacao": 29,
+    "nome": "PAULO ROGER SANTOS DE MENEZES",
+    "numero_inscricao": "108499-8",
+    "data_nascimento": "24/10/2007",
+    "oed": "FORTALEZA",
+    "GI": 270
+  },
+  {
+    "classificacao": 30,
+    "nome": "LETICIA MOREIRA NAHON",
+    "numero_inscricao": "101190-8",
+    "data_nascimento": "27/03/2008",
+    "oed": "FORTALEZA",
+    "GI": 270
+  },
+  {
+    "classificacao": 31,
+    "nome": "JOAO MAGNO ABREU ALVES",
+    "numero_inscricao": "108461-3",
+    "data_nascimento": "05/05/2009",
+    "oed": "FORTALEZA",
+    "GI": 270
+  },
+  {
+    "classificacao": 32,
+    "nome": "GUSTAVO OLIVEIRA SILVA",
+    "numero_inscricao": "106300-3",
+    "data_nascimento": "05/06/2004",
+    "oed": "BELÉM",
+    "GI": 270
+  },
+  {
+    "classificacao": 33,
+    "nome": "GEORGE RAFAEL ALMEIDA FIGUEIREDO",
+    "numero_inscricao": "108696-9",
+    "data_nascimento": "14/03/2008",
+    "oed": "FORTALEZA",
+    "GI": 265
+  },
+  {
+    "classificacao": 34,
+    "nome": "JOÃO ALEXANDRE LIMA DE ALBUQUERQUE PONTES",
+    "numero_inscricao": "111785-0",
+    "data_nascimento": "14/03/2009",
+    "oed": "RECIFE",
+    "GI": 265
+  },
+  {
+    "classificacao": 35,
+    "nome": "VINICIUS BORGES DE MELLO",
+    "numero_inscricao": "107882-0",
+    "data_nascimento": "21/08/2003",
+    "oed": "FORTALEZA",
+    "GI": 265
+  },
+  {
+    "classificacao": 36,
+    "nome": "VINICIUS MENDES DE OLIVEIRA",
+    "numero_inscricao": "108554-4",
+    "data_nascimento": "08/04/2007",
+    "oed": "NATAL",
+    "GI": 265
+  },
+  {
+    "classificacao": 37,
+    "nome": "JOÃO MARCELO ZANELLA DE SOUSA",
+    "numero_inscricao": "105204-8",
+    "data_nascimento": "12/12/2008",
+    "oed": "BELÉM",
+    "GI": 265
+  },
+  {
+    "classificacao": 38,
+    "nome": "PEDRO ROCHA DO NASCIMENTO",
+    "numero_inscricao": "101760-5",
+    "data_nascimento": "13/07/2006",
+    "oed": "MANAUS",
+    "GI": 260
+  },
+  {
+    "classificacao": 39,
+    "nome": "ISAAC AVELINO BATISTA RODRIGUES",
+    "numero_inscricao": "101674-1",
+    "data_nascimento": "17/12/2008",
+    "oed": "PARNAÍBA",
+    "GI": 260
+  },
+  {
+    "classificacao": 40,
+    "nome": "JOAO MARCELO CARVALHO E CARVALHO",
+    "numero_inscricao": "108631-0",
+    "data_nascimento": "15/08/2009",
+    "oed": "SÃO LUIS",
+    "GI": 260
+  },
+  {
+    "classificacao": 41,
+    "nome": "FRANKLIN DA SILVA COSTA",
+    "numero_inscricao": "102212-1",
+    "data_nascimento": "07/07/2007",
+    "oed": "RECIFE",
+    "GI": 255
+  },
+  {
+    "classificacao": 42,
+    "nome": "VICTORIA DIAS ALVES",
+    "numero_inscricao": "108377-6",
+    "data_nascimento": "26/01/2006",
+    "oed": "FORTALEZA",
+    "GI": 255
+  },
+  {
+    "classificacao": 43,
+    "nome": "RENAN DOS SANTOS GONÇALVES",
+    "numero_inscricao": "106785-6",
+    "data_nascimento": "30/11/2006",
+    "oed": "BELÉM",
+    "GI": 255
+  },
+  {
+    "classificacao": 44,
+    "nome": "PEDRO SILVA TORRES DE OLIVEIRA",
+    "numero_inscricao": "106440-1",
+    "data_nascimento": "01/12/2009",
+    "oed": "FORTALEZA",
+    "GI": 250
+  },
+  {
+    "classificacao": 45,
+    "nome": "NATHAN DE SOUZA LANNES",
+    "numero_inscricao": "108174-6",
+    "data_nascimento": "21/09/2004",
+    "oed": "FORTALEZA",
+    "GI": 250
+  },
+  {
+    "classificacao": 46,
+    "nome": "CARLOS DOS SANTOS FONSECA NETO",
+    "numero_inscricao": "108669-4",
+    "data_nascimento": "16/02/2008",
+    "oed": "FORTALEZA",
+    "GI": 250
+  },
+  {
+    "classificacao": 47,
+    "nome": "JOÃO GABRIEL DAS NEVES ALVES",
+    "numero_inscricao": "108057-5",
+    "data_nascimento": "28/10/2008",
+    "oed": "RECIFE",
+    "GI": 250
+  },
+  {
+    "classificacao": 48,
+    "nome": "MARIA EDUARDA BALREIRA PINTO",
+    "numero_inscricao": "108290-9",
+    "data_nascimento": "10/12/2007",
+    "oed": "FORTALEZA",
+    "GI": 250
+  },
+  {
+    "classificacao": 49,
+    "nome": "PEDRO GABRIEL VERAS DE OLIVEIRA",
+    "numero_inscricao": "102095-1",
+    "data_nascimento": "04/02/2008",
+    "oed": "RECIFE",
+    "GI": 245
+  },
+  {
+    "classificacao": 50,
+    "nome": "JOSENILDO DE ALENCAR GUEDES JUNIOR",
+    "numero_inscricao": "108976-4",
+    "data_nascimento": "30/11/2005",
+    "oed": "NATAL",
+    "GI": 245
+  },
+  {
+    "classificacao": 51,
+    "nome": "ARTUR DE SOUZA COLINO",
+    "numero_inscricao": "104984-2",
+    "data_nascimento": "22/01/2009",
+    "oed": "BELÉM",
+    "GI": 245
+  },
+  {
+    "classificacao": 52,
+    "nome": "PEDRO NOGUEIRA CAVALCANTI CAJADO",
+    "numero_inscricao": "108255-4",
+    "data_nascimento": "30/10/2003",
+    "oed": "SALVADOR",
+    "GI": 245
+  },
+  {
+    "classificacao": 53,
+    "nome": "ANDRE LUIZ CAMPOS CUNHA",
+    "numero_inscricao": "103790-5",
+    "data_nascimento": "28/02/2007",
+    "oed": "BELÉM",
+    "GI": 245
+  },
+  {
+    "classificacao": 54,
+    "nome": "LUCAS GABRIEL FERREIRA SANTANA",
+    "numero_inscricao": "108575-5",
+    "data_nascimento": "29/11/2007",
+    "oed": "FORTALEZA",
+    "GI": 245
+  },
+  {
+    "classificacao": 55,
+    "nome": "JOSE HENRIQUE ARAUJO ALCANTARA",
+    "numero_inscricao": "109221-8",
+    "data_nascimento": "23/03/2007",
+    "oed": "FORTALEZA",
+    "GI": 240
+  },
+  {
+    "classificacao": 56,
+    "nome": "LUIZ GUSTAVO CARVALHO DE SOUSA AZEVEDO",
+    "numero_inscricao": "109661-4",
+    "data_nascimento": "24/10/2006",
+    "oed": "PARNAÍBA",
+    "GI": 240
+  },
+  {
+    "classificacao": 57,
+    "nome": "GABRIEL LIMA FONSECA DE CARVALHO",
+    "numero_inscricao": "109192-8",
+    "data_nascimento": "21/03/2007",
+    "oed": "FORTALEZA",
+    "GI": 240
+  },
+  {
+    "classificacao": 58,
+    "nome": "FRANCISCO RODRIGUES DA SILVA NETO",
+    "numero_inscricao": "108932-6",
+    "data_nascimento": "26/04/2009",
+    "oed": "FORTALEZA",
+    "GI": 240
+  },
+  {
+    "classificacao": 59,
+    "nome": "DEYVISON ALCÂNTARA DA SILVA",
+    "numero_inscricao": "108153-5",
+    "data_nascimento": "10/07/2006",
+    "oed": "FORTALEZA",
+    "GI": 240
+  },
+  {
+    "classificacao": 60,
+    "nome": "MATEUS SALES VIEIRA ROCHA BASTOS",
+    "numero_inscricao": "111308-2",
+    "data_nascimento": "15/01/2007",
+    "oed": "FORTALEZA",
+    "GI": 240
+  },
+  {
+    "classificacao": 61,
+    "nome": "MATHEUS FERNANDES ULISSES",
+    "numero_inscricao": "108604-5",
+    "data_nascimento": "14/09/2005",
+    "oed": "FORTALEZA",
+    "GI": 235
+  },
+  {
+    "classificacao": 62,
+    "nome": "HEITOR CHAVES ALBUQUERQUE",
+    "numero_inscricao": "112454-0",
+    "data_nascimento": "01/06/2007",
+    "oed": "FORTALEZA",
+    "GI": 235
+  },
+  {
+    "classificacao": 63,
+    "nome": "DAVI SANTOS DA CRUZ FILHO",
+    "numero_inscricao": "101567-7",
+    "data_nascimento": "17/01/2008",
+    "oed": "SALVADOR",
+    "GI": 235
+  },
+  {
+    "classificacao": 64,
+    "nome": "ISABELLA GONÇALVES FERNANDES",
+    "numero_inscricao": "106338-8",
+    "data_nascimento": "06/04/2009",
+    "oed": "SÃO LUIS",
+    "GI": 235
+  },
+  {
+    "classificacao": 65,
+    "nome": "EDUARDO HENRIQUE SILVA CAVALCANTI",
+    "numero_inscricao": "102157-5",
+    "data_nascimento": "30/10/2007",
+    "oed": "RECIFE",
+    "GI": 230
+  },
+  {
+    "classificacao": 66,
+    "nome": "LUIS EDUARDO ARAUJO COSTA",
+    "numero_inscricao": "104832-1",
+    "data_nascimento": "06/07/2007",
+    "oed": "FORTALEZA",
+    "GI": 230
+  },
+  {
+    "classificacao": 67,
+    "nome": "PEDRO GABRIEL TAVARES LIMA",
+    "numero_inscricao": "113986-4",
+    "data_nascimento": "05/02/2005",
+    "oed": "SALVADOR",
+    "GI": 230
+  },
+  {
+    "classificacao": 68,
+    "nome": "JOAO LUCAS FERNANDES FELIPE",
+    "numero_inscricao": "108401-5",
+    "data_nascimento": "26/11/2004",
+    "oed": "FORTALEZA",
+    "GI": 230
+  },
+  {
+    "classificacao": 69,
+    "nome": "ENZO BALEKI",
+    "numero_inscricao": "105147-5",
+    "data_nascimento": "28/03/2008",
+    "oed": "NATAL",
+    "GI": 225
+  },
+  {
+    "classificacao": 70,
+    "nome": "VINÍCIUS ARTHUR PRADO FIRMEZA",
+    "numero_inscricao": "110869-7",
+    "data_nascimento": "18/10/2009",
+    "oed": "FORTALEZA",
+    "GI": 225
+  },
+  {
+    "classificacao": 71,
+    "nome": "PEDRO LUCAS MELO BRAGA DE OLIVEIRA",
+    "numero_inscricao": "107454-6",
+    "data_nascimento": "09/04/2008",
+    "oed": "FORTALEZA",
+    "GI": 225
+  },
+  {
+    "classificacao": 72,
+    "nome": "PEDRO DA SILVEIRA REGAZIO",
+    "numero_inscricao": "108054-0",
+    "data_nascimento": "12/01/2004",
+    "oed": "FORTALEZA",
+    "GI": 220
+  },
+  {
+    "classificacao": 73,
+    "nome": "ANTÔNIO SANTOS DO NASCIMENTO",
+    "numero_inscricao": "102073-2",
+    "data_nascimento": "02/04/2009",
+    "oed": "RECIFE",
+    "GI": 220
+  },
+  {
+    "classificacao": 74,
+    "nome": "ANDRÉ FEITOSA GOMES SILVA",
+    "numero_inscricao": "108643-2",
+    "data_nascimento": "14/04/2007",
+    "oed": "RECIFE",
+    "GI": 220
+  },
+  {
+    "classificacao": 75,
+    "nome": "VINICIUS LACERDA DE OLIVEIRA",
+    "numero_inscricao": "111125-5",
+    "data_nascimento": "04/12/2005",
+    "oed": "RECIFE",
+    "GI": 220
+  },
+  {
+    "classificacao": 76,
+    "nome": "DAVI BEN GURION LOPES VINHAS",
+    "numero_inscricao": "111782-5",
+    "data_nascimento": "07/04/2007",
+    "oed": "RECIFE",
+    "GI": 210
+  },
+  {
+    "classificacao": 77,
+    "nome": "MARÍLIA TAYNÁ PIRES DA COSTA",
+    "numero_inscricao": "106211-5",
+    "data_nascimento": "23/07/2007",
+    "oed": "SALVADOR",
+    "GI": 210
+  },
+  {
+    "classificacao": 78,
+    "nome": "GUILHERME DE CARVALHO FROTA PORTO",
+    "numero_inscricao": "108140-4",
+    "data_nascimento": "20/10/2009",
+    "oed": "FORTALEZA",
+    "GI": 205
+  },
+  {
+    "classificacao": 79,
+    "nome": "MIGUEL ESPINDOLA PAPA",
+    "numero_inscricao": "109159-0",
+    "data_nascimento": "20/08/2009",
+    "oed": "FORTALEZA",
+    "GI": 290
+  },
+  {
+    "classificacao": 80,
+    "nome": "LUIZ CLAUDIO DE SA CAVALCANTE GENEROSO",
+    "numero_inscricao": "108414-6",
+    "data_nascimento": "17/12/2007",
+    "oed": "FORTALEZA",
+    "GI": 285
+  },
+  {
+    "classificacao": 81,
+    "nome": "PAULO COSTA BELLO",
+    "numero_inscricao": "108506-9",
+    "data_nascimento": "22/09/2005",
+    "oed": "FORTALEZA",
+    "GI": 285
+  },
+  {
+    "classificacao": 82,
+    "nome": "LEONARDO AZEVEDO RIBEIRO",
+    "numero_inscricao": "108895-6",
+    "data_nascimento": "19/06/2006",
+    "oed": "FORTALEZA",
+    "GI": 285
+  },
+  {
+    "classificacao": 83,
+    "nome": "LUCAS MAIA PEREIRA",
+    "numero_inscricao": "108583-5",
+    "data_nascimento": "09/02/2007",
+    "oed": "FORTALEZA",
+    "GI": 275
+  },
+  {
+    "classificacao": 84,
+    "nome": "ULYSSE VINICIUS XYPAS",
+    "numero_inscricao": "108918-2",
+    "data_nascimento": "21/01/2006",
+    "oed": "RECIFE",
+    "GI": 275
+  },
+  {
+    "classificacao": 85,
+    "nome": "LEVI FREITAS NUNES",
+    "numero_inscricao": "108560-8",
+    "data_nascimento": "17/12/2008",
+    "oed": "FORTALEZA",
+    "GI": 270
+  },
+  {
+    "classificacao": 86,
+    "nome": "MIGUEL MENEZES REIS",
+    "numero_inscricao": "108219-1",
+    "data_nascimento": "28/09/2007",
+    "oed": "FORTALEZA",
+    "GI": 270
+  },
+  {
+    "classificacao": 87,
+    "nome": "LEVI MAIA SALMITO",
+    "numero_inscricao": "108562-4",
+    "data_nascimento": "29/10/2007",
+    "oed": "FORTALEZA",
+    "GI": 265
+  },
+  {
+    "classificacao": 88,
+    "nome": "SAMUEL AURELIANO SIQUEIRA BARBOZA DA MACENA",
+    "numero_inscricao": "109162-9",
+    "data_nascimento": "12/12/2007",
+    "oed": "RECIFE",
+    "GI": 265
+  },
+  {
+    "classificacao": 89,
+    "nome": "LUIS GUSTAVO RODRIGUES PAIVA",
+    "numero_inscricao": "101049-7",
+    "data_nascimento": "04/01/2007",
+    "oed": "SÃO LUIS",
+    "GI": 265
+  },
+  {
+    "classificacao": 90,
+    "nome": "GUILHERME BRAGA LUNA",
+    "numero_inscricao": "107998-8",
+    "data_nascimento": "31/03/2006",
+    "oed": "FORTALEZA",
+    "GI": 265
+  },
+  {
+    "classificacao": 91,
+    "nome": "ANA CAROLINA DE OLIVEIRA SANTOS",
+    "numero_inscricao": "109125-8",
+    "data_nascimento": "20/10/2006",
+    "oed": "FORTALEZA",
+    "GI": 265
+  },
+  {
+    "classificacao": 92,
+    "nome": "IURI PAULO BITTENCOURT MARQUES PINTO",
+    "numero_inscricao": "108550-1",
+    "data_nascimento": "21/09/2006",
+    "oed": "RECIFE",
+    "GI": 260
+  },
+  {
+    "classificacao": 93,
+    "nome": "PEDRO ARAUJO LUZ SPADA",
+    "numero_inscricao": "106060-3",
+    "data_nascimento": "22/12/2008",
+    "oed": "FORTALEZA",
+    "GI": 260
+  },
+  {
+    "classificacao": 94,
+    "nome": "ARTHUR DE PAULA JANUARIO",
+    "numero_inscricao": "103981-2",
+    "data_nascimento": "14/11/2008",
+    "oed": "FORTALEZA",
+    "GI": 260
+  },
+  {
+    "classificacao": 95,
+    "nome": "LUCAS PRACA OLIVEIRA",
+    "numero_inscricao": "108588-6",
+    "data_nascimento": "20/07/2007",
+    "oed": "FORTALEZA",
+    "GI": 255
+  },
+  {
+    "classificacao": 96,
+    "nome": "GUILHERME GONÇALVES ARAÚJO",
+    "numero_inscricao": "107462-6",
+    "data_nascimento": "02/09/2008",
+    "oed": "FORTALEZA",
+    "GI": 255
+  },
+  {
+    "classificacao": 97,
+    "nome": "ARTUR CASTELO BRANCO DE FRANCA",
+    "numero_inscricao": "107994-5",
+    "data_nascimento": "26/03/2008",
+    "oed": "FORTALEZA",
+    "GI": 255
+  },
+  {
+    "classificacao": 98,
+    "nome": "WELLINGTON DAS NEVES DE MELO FILHO",
+    "numero_inscricao": "104900-9",
+    "data_nascimento": "12/08/2004",
+    "oed": "SALVADOR",
+    "GI": 255
+  },
+  {
+    "classificacao": 99,
+    "nome": "KAIO RODRIGUES MARINHO DE ALMEIDA",
+    "numero_inscricao": "102888-1",
+    "data_nascimento": "31/10/2008",
+    "oed": "BELÉM",
+    "GI": 255
+  },
+  {
+    "classificacao": 100,
+    "nome": "PEDRO HENRIQUE PORTELA REIS",
+    "numero_inscricao": "100353-7",
+    "data_nascimento": "19/01/2006",
+    "oed": "NATAL",
+    "GI": 255
+  },
+  {
+    "classificacao": 101,
+    "nome": "CESAR AUGUSTO SANTOS AMILTON",
+    "numero_inscricao": "106968-3",
+    "data_nascimento": "19/01/2008",
+    "oed": "RECIFE",
+    "GI": 255
+  },
+  {
+    "classificacao": 102,
+    "nome": "ARTHUR CAVALCANTE PERES ARAGÃO",
+    "numero_inscricao": "106995-8",
+    "data_nascimento": "18/09/2006",
+    "oed": "FORTALEZA",
+    "GI": 255
+  },
+  {
+    "classificacao": 103,
+    "nome": "CARLOS ASAFE PEREIRA ARAÚJO",
+    "numero_inscricao": "107500-4",
+    "data_nascimento": "19/04/2007",
+    "oed": "FORTALEZA",
+    "GI": 250
+  },
+  {
+    "classificacao": 104,
+    "nome": "JOSÉ MIGUEL HOLANDA ROCHA",
+    "numero_inscricao": "108886-8",
+    "data_nascimento": "06/05/2006",
+    "oed": "FORTALEZA",
+    "GI": 250
+  },
+  {
+    "classificacao": 105,
+    "nome": "THIAGO QUARESMA ADELINO DO NASCIMENTO",
+    "numero_inscricao": "102119-6",
+    "data_nascimento": "12/07/2008",
+    "oed": "RECIFE",
+    "GI": 250
+  },
+  {
+    "classificacao": 106,
+    "nome": "LUCAS TAVARES VITORIANO",
+    "numero_inscricao": "108593-1",
+    "data_nascimento": "03/04/2006",
+    "oed": "FORTALEZA",
+    "GI": 250
+  },
+  {
+    "classificacao": 107,
+    "nome": "ANDRÉ PRADO PARAGUAI",
+    "numero_inscricao": "105791-4",
+    "data_nascimento": "25/06/2003",
+    "oed": "FORTALEZA",
+    "GI": 250
+  },
+  {
+    "classificacao": 108,
+    "nome": "LUÍS HENRIQUE PITTA IGLESIAS DE MELO",
+    "numero_inscricao": "105701-7",
+    "data_nascimento": "15/02/2009",
+    "oed": "RECIFE",
+    "GI": 250
+  },
+  {
+    "classificacao": 109,
+    "nome": "MATHEUS CÉSAR DOS SANTOS ARAÚJO",
+    "numero_inscricao": "108191-4",
+    "data_nascimento": "15/03/2003",
+    "oed": "FORTALEZA",
+    "GI": 250
+  },
+  {
+    "classificacao": 110,
+    "nome": "LUIZ ANTONIO BARROS LUZ",
+    "numero_inscricao": "113182-0",
+    "data_nascimento": "06/05/2005",
+    "oed": "BELÉM",
+    "GI": 250
+  },
+  {
+    "classificacao": 111,
+    "nome": "HENRY SERGIO TELES",
+    "numero_inscricao": "100593-8",
+    "data_nascimento": "02/08/2006",
+    "oed": "RECIFE",
+    "GI": 250
+  },
+  {
+    "classificacao": 112,
+    "nome": "LUIZ HENRIQUE DE QUEIROZ MELO FILHO",
+    "numero_inscricao": "102314-0",
+    "data_nascimento": "20/12/2005",
+    "oed": "NATAL",
+    "GI": 250
+  },
+  {
+    "classificacao": 113,
+    "nome": "GABRIEL DO NASCIMENTO PEREIRA GONÇALVES",
+    "numero_inscricao": "110854-0",
+    "data_nascimento": "26/01/2007",
+    "oed": "RECIFE",
+    "GI": 250
+  },
+  {
+    "classificacao": 114,
+    "nome": "MATHEUS LEONARDO FACÓ",
+    "numero_inscricao": "108460-5",
+    "data_nascimento": "23/01/2009",
+    "oed": "FORTALEZA",
+    "GI": 245
+  },
+  {
+    "classificacao": 115,
+    "nome": "VINICIUS OTAVIANO NOGUEIRA PARENTE",
+    "numero_inscricao": "105907-1",
+    "data_nascimento": "18/08/2006",
+    "oed": "FORTALEZA",
+    "GI": 245
+  },
+  {
+    "classificacao": 116,
+    "nome": "RICARDO DE OLIVEIRA PINTO FILHO",
+    "numero_inscricao": "112318-4",
+    "data_nascimento": "25/03/2005",
+    "oed": "FORTALEZA",
+    "GI": 245
+  },
+  {
+    "classificacao": 117,
+    "nome": "VINICIUS NICOLAU MARTINS DOS SANTOS",
+    "numero_inscricao": "107624-2",
+    "data_nascimento": "29/06/2005",
+    "oed": "FORTALEZA",
+    "GI": 245
+  },
+  {
+    "classificacao": 118,
+    "nome": "CAIO ESTANISLAU DOS SANTOS",
+    "numero_inscricao": "108922-0",
+    "data_nascimento": "25/10/2008",
+    "oed": "FORTALEZA",
+    "GI": 245
+  },
+  {
+    "classificacao": 119,
+    "nome": "TALLES DE JESUS MONTEIRO",
+    "numero_inscricao": "108362-9",
+    "data_nascimento": "23/03/2006",
+    "oed": "FORTALEZA",
+    "GI": 245
+  },
+  {
+    "classificacao": 120,
+    "nome": "LUIZ ANTONIO DAMASCENO FERNANDES",
+    "numero_inscricao": "108030-5",
+    "data_nascimento": "14/01/2008",
+    "oed": "SÃO LUIS",
+    "GI": 245
+  },
+  {
+    "classificacao": 121,
+    "nome": "LEONARDO DE LIMA SCHULER",
+    "numero_inscricao": "111779-6",
+    "data_nascimento": "13/04/2009",
+    "oed": "RECIFE",
+    "GI": 245
+  },
+  {
+    "classificacao": 122,
+    "nome": "ENZO SHUKI TSUNODA",
+    "numero_inscricao": "106571-1",
+    "data_nascimento": "27/02/2004",
+    "oed": "FORTALEZA",
+    "GI": 245
+  },
+  {
+    "classificacao": 123,
+    "nome": "GABRIEL ATHOS NUNES MAIA",
+    "numero_inscricao": "108702-1",
+    "data_nascimento": "22/11/2007",
+    "oed": "FORTALEZA",
+    "GI": 245
+  },
+  {
+    "classificacao": 124,
+    "nome": "PAULO DE CASTRO ESPINHEIRA",
+    "numero_inscricao": "108254-6",
+    "data_nascimento": "08/08/2004",
+    "oed": "SALVADOR",
+    "GI": 245
+  },
+  {
+    "classificacao": 125,
+    "nome": "BRENO CASTRO OLIVEIRA",
+    "numero_inscricao": "108955-3",
+    "data_nascimento": "01/11/2007",
+    "oed": "SÃO LUIS",
+    "GI": 245
+  },
+  {
+    "classificacao": 126,
+    "nome": "DANILO ALMEIDA FERREIRA",
+    "numero_inscricao": "108448-8",
+    "data_nascimento": "12/08/2005",
+    "oed": "FORTALEZA",
+    "GI": 245
+  },
+  {
+    "classificacao": 127,
+    "nome": "FÁBIO GABRIEL DA SILVA COSTA",
+    "numero_inscricao": "105294-5",
+    "data_nascimento": "18/01/2005",
+    "oed": "RECIFE",
+    "GI": 245
+  },
+  {
+    "classificacao": 128,
+    "nome": "LUAN VITO JANSEN PEREIRA",
+    "numero_inscricao": "110152-4",
+    "data_nascimento": "10/11/2004",
+    "oed": "RECIFE",
+    "GI": 245
+  },
+  {
+    "classificacao": 129,
+    "nome": "JOAO GABRIEL PEIXOTO FELICIANO",
+    "numero_inscricao": "106365-2",
+    "data_nascimento": "28/08/2004",
+    "oed": "SALVADOR",
+    "GI": 245
+  },
+  {
+    "classificacao": 130,
+    "nome": "ÁFIO CARVALHÊDO MAIA",
+    "numero_inscricao": "108137-5",
+    "data_nascimento": "15/03/2007",
+    "oed": "FORTALEZA",
+    "GI": 240
+  },
+  {
+    "classificacao": 131,
+    "nome": "NICOLAS LEANDRO DE MELO MARQUES ROCHA",
+    "numero_inscricao": "110423-1",
+    "data_nascimento": "16/12/2009",
+    "oed": "FORTALEZA",
+    "GI": 240
+  },
+  {
+    "classificacao": 132,
+    "nome": "ANA CAROLINA ESTEVES PEREIRA",
+    "numero_inscricao": "107982-2",
+    "data_nascimento": "22/09/2004",
+    "oed": "FORTALEZA",
+    "GI": 240
+  },
+  {
+    "classificacao": 133,
+    "nome": "ITALO NASCIMENTO AQUINO",
+    "numero_inscricao": "101499-0",
+    "data_nascimento": "13/01/2009",
+    "oed": "FORTALEZA",
+    "GI": 240
+  },
+  {
+    "classificacao": 134,
+    "nome": "DAVI EMANUEL NERY DE SOUZA",
+    "numero_inscricao": "108095-4",
+    "data_nascimento": "25/07/2005",
+    "oed": "FORTALEZA",
+    "GI": 240
+  },
+  {
+    "classificacao": 135,
+    "nome": "BERNARDO MENESES TAVARES",
+    "numero_inscricao": "108599-0",
+    "data_nascimento": "12/01/2007",
+    "oed": "FORTALEZA",
+    "GI": 240
+  },
+  {
+    "classificacao": 136,
+    "nome": "GLAUCO ANTONIO DE CARVALHO XAVIER FILHO",
+    "numero_inscricao": "112275-5",
+    "data_nascimento": "18/05/2007",
+    "oed": "FORTALEZA",
+    "GI": 240
+  },
+  {
+    "classificacao": 137,
+    "nome": "THOMAS ALENCAR DE MORAES",
+    "numero_inscricao": "110782-0",
+    "data_nascimento": "14/10/2008",
+    "oed": "FORTALEZA",
+    "GI": 240
+  },
+  {
+    "classificacao": 138,
+    "nome": "YAN SILVA MACIEL",
+    "numero_inscricao": "106570-3",
+    "data_nascimento": "09/10/2006",
+    "oed": "FORTALEZA",
+    "GI": 240
+  },
+  {
+    "classificacao": 139,
+    "nome": "YOHAN PETTERSON GONCALVES RODRIGUES",
+    "numero_inscricao": "107603-1",
+    "data_nascimento": "06/04/2004",
+    "oed": "FORTALEZA",
+    "GI": 240
+  },
+  {
+    "classificacao": 140,
+    "nome": "LEONARDO ICHIRO MATOS GOTO",
+    "numero_inscricao": "108761-1",
+    "data_nascimento": "08/10/2005",
+    "oed": "SALVADOR",
+    "GI": 240
+  },
+  {
+    "classificacao": 141,
+    "nome": "EDUARDO OPATA VETTORAZZI",
+    "numero_inscricao": "100653-5",
+    "data_nascimento": "23/01/2006",
+    "oed": "SALVADOR",
+    "GI": 240
+  },
+  {
+    "classificacao": 142,
+    "nome": "GABRIEL HENRIQUE TORRES DE SANTANA",
+    "numero_inscricao": "102149-5",
+    "data_nascimento": "07/02/2007",
+    "oed": "RECIFE",
+    "GI": 240
+  },
+  {
+    "classificacao": 143,
+    "nome": "MATHEUS DE ALMEIDA RODRIGUES",
+    "numero_inscricao": "101033-1",
+    "data_nascimento": "06/11/2007",
+    "oed": "SALVADOR",
+    "GI": 240
+  },
+  {
+    "classificacao": 144,
+    "nome": "JOSÉ MATHEUS RAMON SOARES",
+    "numero_inscricao": "101382-3",
+    "data_nascimento": "07/05/2003",
+    "oed": "SALVADOR",
+    "GI": 240
+  },
+  {
+    "classificacao": 145,
+    "nome": "KAYKE MESQUITA GOMES",
+    "numero_inscricao": "107456-2",
+    "data_nascimento": "26/12/2008",
+    "oed": "FORTALEZA",
+    "GI": 235
+  },
+  {
+    "classificacao": 146,
+    "nome": "LUCCA CÉSAR JESUS DE MENEZES",
+    "numero_inscricao": "107611-1",
+    "data_nascimento": "12/11/2006",
+    "oed": "BELÉM",
+    "GI": 235
+  },
+  {
+    "classificacao": 147,
+    "nome": "JOÃO GABRIEL FERNANDEZ GARRIDO GURGEL",
+    "numero_inscricao": "109169-6",
+    "data_nascimento": "07/06/2007",
+    "oed": "SALVADOR",
+    "GI": 235
+  },
+  {
+    "classificacao": 148,
+    "nome": "FELIPE RODRIGUES VIANA DE FREITAS",
+    "numero_inscricao": "105263-8",
+    "data_nascimento": "12/04/2004",
+    "oed": "NATAL",
+    "GI": 235
+  },
+  {
+    "classificacao": 149,
+    "nome": "JOÃO PEDRO SILVA LAUREANO LUIZ",
+    "numero_inscricao": "101666-1",
+    "data_nascimento": "07/06/2006",
+    "oed": "RECIFE",
+    "GI": 235
+  },
+  {
+    "classificacao": 150,
+    "nome": "JOÃO PEDRO FONSECA DAS NEVES BRAGA",
+    "numero_inscricao": "109163-7",
+    "data_nascimento": "15/07/2008",
+    "oed": "RECIFE",
+    "GI": 235
+  },
+  {
+    "classificacao": 151,
+    "nome": "HENRIQUE SOUZA SILVEIRA DA COSTA",
+    "numero_inscricao": "100795-0",
+    "data_nascimento": "12/09/2003",
+    "oed": "RECIFE",
+    "GI": 235
+  },
+  {
+    "classificacao": 152,
+    "nome": "RICARDO CAMPIONI SCACALOSSI",
+    "numero_inscricao": "107837-9",
+    "data_nascimento": "16/10/2004",
+    "oed": "FORTALEZA",
+    "GI": 235
+  },
+  {
+    "classificacao": 153,
+    "nome": "HEITOR RYAN RODRIGUES BATISTA",
+    "numero_inscricao": "106556-0",
+    "data_nascimento": "03/07/2008",
+    "oed": "PARNAÍBA",
+    "GI": 235
+  },
+  {
+    "classificacao": 154,
+    "nome": "ICARO ROCHA OVIL VIEIRA SERAPIÃO",
+    "numero_inscricao": "100321-1",
+    "data_nascimento": "18/06/2005",
+    "oed": "SALVADOR",
+    "GI": 235
+  },
+  {
+    "classificacao": 155,
+    "nome": "LUCAS XEREZ SOARES SIQUEIRA",
+    "numero_inscricao": "108399-5",
+    "data_nascimento": "25/10/2008",
+    "oed": "FORTALEZA",
+    "GI": 235
+  },
+  {
+    "classificacao": 156,
+    "nome": "HERTON PINTO SOUSA FILHO",
+    "numero_inscricao": "108124-4",
+    "data_nascimento": "21/12/2007",
+    "oed": "FORTALEZA",
+    "GI": 235
+  },
+  {
+    "classificacao": 157,
+    "nome": "JOÃO BELARMINO DA SILVA NETO",
+    "numero_inscricao": "105210-1",
+    "data_nascimento": "01/06/2008",
+    "oed": "RECIFE",
+    "GI": 235
+  },
+  {
+    "classificacao": 158,
+    "nome": "JOSÉ LEVI LOPES RODRIGUES",
+    "numero_inscricao": "101387-4",
+    "data_nascimento": "15/10/2008",
+    "oed": "FORTALEZA",
+    "GI": 235
+  },
+  {
+    "classificacao": 159,
+    "nome": "PHILIPPE CERNICKY",
+    "numero_inscricao": "108885-0",
+    "data_nascimento": "17/03/2009",
+    "oed": "FORTALEZA",
+    "GI": 235
+  },
+  {
+    "classificacao": 160,
+    "nome": "ARTUR MARCONDES PESSOA COSTA",
+    "numero_inscricao": "112548-9",
+    "data_nascimento": "18/01/2007",
+    "oed": "PARNAÍBA",
+    "GI": 230
+  },
+  {
+    "classificacao": 161,
+    "nome": "KAUAN EMANUEL BARROSO CHAVES",
+    "numero_inscricao": "108424-2",
+    "data_nascimento": "09/01/2007",
+    "oed": "FORTALEZA",
+    "GI": 230
+  },
+  {
+    "classificacao": 162,
+    "nome": "ARISTOPHANES FERREIRA TEODOSIO",
+    "numero_inscricao": "107016-6",
+    "data_nascimento": "24/01/2004",
+    "oed": "MANAUS",
+    "GI": 230
+  },
+  {
+    "classificacao": 163,
+    "nome": "MATHEUS AUGUSTO DE HOLANDA BORGES",
+    "numero_inscricao": "108282-9",
+    "data_nascimento": "05/06/2005",
+    "oed": "FORTALEZA",
+    "GI": 230
+  },
+  {
+    "classificacao": 164,
+    "nome": "MARIA EUGENIA PINTO GONDIM MEDEIROS",
+    "numero_inscricao": "109138-9",
+    "data_nascimento": "05/06/2004",
+    "oed": "FORTALEZA",
+    "GI": 230
+  },
+  {
+    "classificacao": 165,
+    "nome": "CAMILA CAROLINA MARIA VILARIM",
+    "numero_inscricao": "104795-1",
+    "data_nascimento": "26/05/2006",
+    "oed": "RECIFE",
+    "GI": 230
+  },
+  {
+    "classificacao": 166,
+    "nome": "FELIPE LOPES GORDILHO",
+    "numero_inscricao": "112079-2",
+    "data_nascimento": "16/03/2009",
+    "oed": "SALVADOR",
+    "GI": 230
+  },
+  {
+    "classificacao": 167,
+    "nome": "THIAGO DE PAULA CAVALCANTI",
+    "numero_inscricao": "108369-6",
+    "data_nascimento": "15/02/2007",
+    "oed": "FORTALEZA",
+    "GI": 230
+  },
+  {
+    "classificacao": 168,
+    "nome": "ARTUR FAHEINA CAMINHA",
+    "numero_inscricao": "106339-6",
+    "data_nascimento": "20/08/2007",
+    "oed": "FORTALEZA",
+    "GI": 230
+  },
+  {
+    "classificacao": 169,
+    "nome": "FABIANO ALVES DE CARVALHO FILHO",
+    "numero_inscricao": "108208-7",
+    "data_nascimento": "07/09/2005",
+    "oed": "FORTALEZA",
+    "GI": 230
+  },
+  {
+    "classificacao": 170,
+    "nome": "EFRAIM LEITE LOPES",
+    "numero_inscricao": "106216-6",
+    "data_nascimento": "04/02/2004",
+    "oed": "RECIFE",
+    "GI": 230
+  },
+  {
+    "classificacao": 171,
+    "nome": "DAVI HEITOR DE SOUSA SOBRINHO",
+    "numero_inscricao": "101732-2",
+    "data_nascimento": "30/09/2006",
+    "oed": "BELÉM",
+    "GI": 230
+  },
+  {
+    "classificacao": 172,
+    "nome": "ANTONY CARDOSO DOS SANTOS",
+    "numero_inscricao": "107446-6",
+    "data_nascimento": "07/03/2005",
+    "oed": "FORTALEZA",
+    "GI": 230
+  },
+  {
+    "classificacao": 173,
+    "nome": "SAMUEL REIS ANDRADE",
+    "numero_inscricao": "109144-2",
+    "data_nascimento": "14/01/2005",
+    "oed": "SALVADOR",
+    "GI": 230
+  },
+  {
+    "classificacao": 174,
+    "nome": "LUCAS GUSMÃO VILAS BOAS",
+    "numero_inscricao": "107236-4",
+    "data_nascimento": "19/02/2008",
+    "oed": "SALVADOR",
+    "GI": 230
+  },
+  {
+    "classificacao": 175,
+    "nome": "VINICIUS QUEIROZ DIAS",
+    "numero_inscricao": "109128-2",
+    "data_nascimento": "15/05/2008",
+    "oed": "FORTALEZA",
+    "GI": 230
+  },
+  {
+    "classificacao": 176,
+    "nome": "DANIEL ALMEIDA COLARES PETI",
+    "numero_inscricao": "109606-7",
+    "data_nascimento": "25/07/2008",
+    "oed": "FORTALEZA",
+    "GI": 230
+  },
+  {
+    "classificacao": 177,
+    "nome": "PEDRO ARIEL VARANDAS TEIXEIRA",
+    "numero_inscricao": "105373-7",
+    "data_nascimento": "10/04/2005",
+    "oed": "RECIFE",
+    "GI": 230
+  },
+  {
+    "classificacao": 178,
+    "nome": "EDUARDO SILVA MARQUES",
+    "numero_inscricao": "108336-2",
+    "data_nascimento": "19/05/2004",
+    "oed": "NATAL",
+    "GI": 230
+  },
+  {
+    "classificacao": 179,
+    "nome": "MATHEUS BRITO LIMA",
+    "numero_inscricao": "112492-9",
+    "data_nascimento": "15/10/2008",
+    "oed": "FORTALEZA",
+    "GI": 230
+  },
+  {
+    "classificacao": 180,
+    "nome": "ISAAC COSTA DE SOUZA",
+    "numero_inscricao": "102585-9",
+    "data_nascimento": "09/09/2005",
+    "oed": "RECIFE",
+    "GI": 230
+  },
+  {
+    "classificacao": 181,
+    "nome": "LUCAS PEREIRA ZOLLINGER",
+    "numero_inscricao": "105062-4",
+    "data_nascimento": "23/01/2006",
+    "oed": "SALVADOR",
+    "GI": 230
+  },
+  {
+    "classificacao": 182,
+    "nome": "ARTHUR TELES VILA NOVA",
+    "numero_inscricao": "102986-8",
+    "data_nascimento": "08/06/2009",
+    "oed": "RECIFE",
+    "GI": 230
+  },
+  {
+    "classificacao": 183,
+    "nome": "FRANCISCO BRENO GOMES FROTA",
+    "numero_inscricao": "108203-6",
+    "data_nascimento": "13/09/2008",
+    "oed": "FORTALEZA",
+    "GI": 230
+  },
+  {
+    "classificacao": 184,
+    "nome": "ENRICO SOARES DE PAIVA",
+    "numero_inscricao": "112559-3",
+    "data_nascimento": "20/02/2009",
+    "oed": "FORTALEZA",
+    "GI": 230
+  },
+  {
+    "classificacao": 185,
+    "nome": "PEDRO HENRIQUE NUNES PAULINO",
+    "numero_inscricao": "100314-0",
+    "data_nascimento": "22/12/2006",
+    "oed": "FORTALEZA",
+    "GI": 230
+  },
+  {
+    "classificacao": 186,
+    "nome": "LUCAS RIBEIRO UBAL",
+    "numero_inscricao": "100030-1",
+    "data_nascimento": "30/03/2004",
+    "oed": "RECIFE",
+    "GI": 230
+  },
+  {
+    "classificacao": 187,
+    "nome": "DAVI DO NASCIMENTO TELES BARATA",
+    "numero_inscricao": "103291-0",
+    "data_nascimento": "25/11/2008",
+    "oed": "NATAL",
+    "GI": 230
+  },
+  {
+    "classificacao": 188,
+    "nome": "CAIO LUAN SOUSA NEVES",
+    "numero_inscricao": "103094-9",
+    "data_nascimento": "09/07/2009",
+    "oed": "FORTALEZA",
+    "GI": 230
+  },
+  {
+    "classificacao": 189,
+    "nome": "DANIEL CABRAL DE ALBUQUERQUE",
+    "numero_inscricao": "110994-8",
+    "data_nascimento": "28/06/2008",
+    "oed": "SALVADOR",
+    "GI": 230
+  },
+  {
+    "classificacao": 190,
+    "nome": "LUIZ CAVALCANTI STEDILE",
+    "numero_inscricao": "109181-3",
+    "data_nascimento": "24/03/2009",
+    "oed": "FORTALEZA",
+    "GI": 225
+  },
+  {
+    "classificacao": 191,
+    "nome": "JESSE DE ARAUJO FIGUEIRA",
+    "numero_inscricao": "108361-0",
+    "data_nascimento": "16/05/2003",
+    "oed": "FORTALEZA",
+    "GI": 225
+  },
+  {
+    "classificacao": 192,
+    "nome": "JOAO LUCAS DO VALE BANDEIRA",
+    "numero_inscricao": "108206-0",
+    "data_nascimento": "22/09/2009",
+    "oed": "FORTALEZA",
+    "GI": 225
+  },
+  {
+    "classificacao": 193,
+    "nome": "LUCA FERNANDES PAULINO",
+    "numero_inscricao": "107048-1",
+    "data_nascimento": "06/12/2008",
+    "oed": "FORTALEZA",
+    "GI": 225
+  },
+  {
+    "classificacao": 194,
+    "nome": "PEDRO HENRIQUE BATISTA VENERANDA",
+    "numero_inscricao": "108896-4",
+    "data_nascimento": "26/12/2009",
+    "oed": "FORTALEZA",
+    "GI": 225
+  },
+  {
+    "classificacao": 195,
+    "nome": "SEVERINO RAFAEL GONÇALVES DA SILVA",
+    "numero_inscricao": "109751-0",
+    "data_nascimento": "21/12/2006",
+    "oed": "FORTALEZA",
+    "GI": 225
+  },
+  {
+    "classificacao": 196,
+    "nome": "HUGO NORONHA DE CASTRO SOUTO",
+    "numero_inscricao": "111310-3",
+    "data_nascimento": "21/03/2006",
+    "oed": "FORTALEZA",
+    "GI": 225
+  },
+  {
+    "classificacao": 197,
+    "nome": "CAIO BENAZI GOUVÊA",
+    "numero_inscricao": "107535-4",
+    "data_nascimento": "15/05/2007",
+    "oed": "FORTALEZA",
+    "GI": 225
+  },
+  {
+    "classificacao": 198,
+    "nome": "ANTONIO MARCOS NOGUEIRA DOS SANTOS",
+    "numero_inscricao": "101727-7",
+    "data_nascimento": "20/09/2005",
+    "oed": "SALVADOR",
+    "GI": 225
+  },
+  {
+    "classificacao": 199,
+    "nome": "ANA LETICIA DA SILVA DOS SANTOS",
+    "numero_inscricao": "104099-5",
+    "data_nascimento": "19/05/2004",
+    "oed": "FORTALEZA",
+    "GI": 225
+  },
+  {
+    "classificacao": 200,
+    "nome": "THIAGO TELLIS DE OLIVEIRA SILVA",
+    "numero_inscricao": "103181-0",
+    "data_nascimento": "24/08/2005",
+    "oed": "RECIFE",
+    "GI": 225
+  },
+  {
+    "classificacao": 201,
+    "nome": "NATHAN CARVALHO DE SOUZA",
+    "numero_inscricao": "106943-0",
+    "data_nascimento": "26/08/2004",
+    "oed": "SALVADOR",
+    "GI": 225
+  },
+  {
+    "classificacao": 202,
+    "nome": "MATHEUS BARROS PINTO",
+    "numero_inscricao": "104075-0",
+    "data_nascimento": "06/10/2005",
+    "oed": "RECIFE",
+    "GI": 225
+  },
+  {
+    "classificacao": 203,
+    "nome": "NICOLAS AUGUSTO MINEIRO JONES",
+    "numero_inscricao": "110454-9",
+    "data_nascimento": "05/05/2009",
+    "oed": "MANAUS",
+    "GI": 225
+  },
+  {
+    "classificacao": 204,
+    "nome": "JOÃO PEDRO MELO QUEIROZ",
+    "numero_inscricao": "103860-9",
+    "data_nascimento": "23/06/2004",
+    "oed": "SALVADOR",
+    "GI": 225
+  },
+  {
+    "classificacao": 205,
+    "nome": "BRUNO GABRIEL DANTAS BRITO",
+    "numero_inscricao": "108502-6",
+    "data_nascimento": "15/07/2006",
+    "oed": "MANAUS",
+    "GI": 225
+  },
+  {
+    "classificacao": 206,
+    "nome": "NATHÁLIA CRISTINA SIMÕES RAYOL",
+    "numero_inscricao": "103218-6",
+    "data_nascimento": "14/12/2006",
+    "oed": "BELÉM",
+    "GI": 225
+  },
+  {
+    "classificacao": 207,
+    "nome": "VICTOR ALEXANDRE SILVEIRA RODRIGUES",
+    "numero_inscricao": "101332-1",
+    "data_nascimento": "03/07/2004",
+    "oed": "NATAL",
+    "GI": 225
+  },
+  {
+    "classificacao": 208,
+    "nome": "DANIEL AZAMBUJA MERGULHÃO",
+    "numero_inscricao": "100215-5",
+    "data_nascimento": "14/02/2008",
+    "oed": "BELÉM",
+    "GI": 225
+  },
+  {
+    "classificacao": 209,
+    "nome": "RODRIGO DE ALVINO NASCIMENTO MOURA PEREIRA DOS SANTOS",
+    "numero_inscricao": "103175-7",
+    "data_nascimento": "30/04/2005",
+    "oed": "RECIFE",
+    "GI": 225
+  },
+  {
+    "classificacao": 210,
+    "nome": "RAFAEL MORAES SPIRITO",
+    "numero_inscricao": "109664-9",
+    "data_nascimento": "22/03/2003",
+    "oed": "SALVADOR",
+    "GI": 225
+  },
+  {
+    "classificacao": 211,
+    "nome": "SAMUEL LUCENA ROCHA",
+    "numero_inscricao": "113421-1",
+    "data_nascimento": "30/10/2007",
+    "oed": "BELÉM",
+    "GI": 225
+  },
+  {
+    "classificacao": 212,
+    "nome": "MATHEUS CORTEZ DE SIQUEIRA",
+    "numero_inscricao": "101965-1",
+    "data_nascimento": "21/03/2006",
+    "oed": "NATAL",
+    "GI": 225
+  },
+  {
+    "classificacao": 213,
+    "nome": "CAIO EDUARDO PEREIRA CERQUEIRA",
+    "numero_inscricao": "104914-8",
+    "data_nascimento": "08/04/2009",
+    "oed": "SALVADOR",
+    "GI": 225
+  },
+  {
+    "classificacao": 214,
+    "nome": "ANTONIO AQUILES CLEMENTE LINHARES",
+    "numero_inscricao": "101546-6",
+    "data_nascimento": "11/11/2008",
+    "oed": "FORTALEZA",
+    "GI": 225
+  },
+  {
+    "classificacao": 215,
+    "nome": "JOÃO PEDRO FREITAS DE MELO",
+    "numero_inscricao": "112796-0",
+    "data_nascimento": "08/01/2008",
+    "oed": "FORTALEZA",
+    "GI": 220
+  },
+  {
+    "classificacao": 216,
+    "nome": "RODRIGO FRAGA SILVEIRA GUERRA",
+    "numero_inscricao": "106809-0",
+    "data_nascimento": "26/05/2009",
+    "oed": "FORTALEZA",
+    "GI": 220
+  },
+  {
+    "classificacao": 217,
+    "nome": "FELIPE GABRIEL NEVES OLIVEIRA",
+    "numero_inscricao": "108413-8",
+    "data_nascimento": "27/10/2005",
+    "oed": "FORTALEZA",
+    "GI": 220
+  },
+  {
+    "classificacao": 218,
+    "nome": "GUILHERME ALBUQUERQUE SARAIVA",
+    "numero_inscricao": "109057-0",
+    "data_nascimento": "04/08/2004",
+    "oed": "FORTALEZA",
+    "GI": 220
+  },
+  {
+    "classificacao": 219,
+    "nome": "CAIO HENRIQUE LIMA FEITOZA",
+    "numero_inscricao": "105189-7",
+    "data_nascimento": "24/08/2005",
+    "oed": "RECIFE",
+    "GI": 220
+  },
+  {
+    "classificacao": 220,
+    "nome": "ESTER DIOGO ALVES",
+    "numero_inscricao": "108105-0",
+    "data_nascimento": "13/07/2008",
+    "oed": "FORTALEZA",
+    "GI": 220
+  },
+  {
+    "classificacao": 221,
+    "nome": "GUILHERME SOUSA SILVA",
+    "numero_inscricao": "107399-0",
+    "data_nascimento": "28/12/2009",
+    "oed": "FORTALEZA",
+    "GI": 220
+  },
+  {
+    "classificacao": 222,
+    "nome": "BENNY PEREIRA FREITAS",
+    "numero_inscricao": "109149-3",
+    "data_nascimento": "26/11/2008",
+    "oed": "FORTALEZA",
+    "GI": 220
+  },
+  {
+    "classificacao": 223,
+    "nome": "RONALD MATEUS FERNANDES CARNEIRO",
+    "numero_inscricao": "111114-0",
+    "data_nascimento": "28/02/2003",
+    "oed": "RECIFE",
+    "GI": 220
+  },
+  {
+    "classificacao": 224,
+    "nome": "ANTONIO GABRIEL MARTINS DA SILVA",
+    "numero_inscricao": "107985-7",
+    "data_nascimento": "03/06/2006",
+    "oed": "FORTALEZA",
+    "GI": 220
+  },
+  {
+    "classificacao": 225,
+    "nome": "JOÃO PEDRO LEAL BRAGANTE",
+    "numero_inscricao": "109190-1",
+    "data_nascimento": "21/07/2008",
+    "oed": "BELÉM",
+    "GI": 220
+  },
+  {
+    "classificacao": 226,
+    "nome": "RAFHAEL MARTINO SILVA MACEDO",
+    "numero_inscricao": "108822-7",
+    "data_nascimento": "22/04/2006",
+    "oed": "FORTALEZA",
+    "GI": 220
+  },
+  {
+    "classificacao": 227,
+    "nome": "ANDRÉ DA SILVA DE SÁ",
+    "numero_inscricao": "108933-4",
+    "data_nascimento": "28/12/2005",
+    "oed": "BELÉM",
+    "GI": 220
+  },
+  {
+    "classificacao": 228,
+    "nome": "LUCAS SANTOS GUERRA PINHEIRO DE MELO",
+    "numero_inscricao": "111988-0",
+    "data_nascimento": "12/09/2007",
+    "oed": "RECIFE",
+    "GI": 220
+  },
+  {
+    "classificacao": 229,
+    "nome": "DAVI PASSOS ALMEIDA",
+    "numero_inscricao": "107590-1",
+    "data_nascimento": "23/07/2003",
+    "oed": "SALVADOR",
+    "GI": 220
+  },
+  {
+    "classificacao": 230,
+    "nome": "MATEUS KEN ICHI CAVALCANTI URA",
+    "numero_inscricao": "108268-5",
+    "data_nascimento": "20/09/2007",
+    "oed": "FORTALEZA",
+    "GI": 220
+  },
+  {
+    "classificacao": 231,
+    "nome": "PEDRO HENRIQUE XAVIER RODRIGUES",
+    "numero_inscricao": "109335-0",
+    "data_nascimento": "12/11/2005",
+    "oed": "RECIFE",
+    "GI": 220
+  },
+  {
+    "classificacao": 232,
+    "nome": "ISAQUE SILVA SANTOS",
+    "numero_inscricao": "100671-1",
+    "data_nascimento": "14/06/2003",
+    "oed": "RECIFE",
+    "GI": 220
+  },
+  {
+    "classificacao": 233,
+    "nome": "RAFAEL DAVI MEDEIROS E SILVA",
+    "numero_inscricao": "101689-9",
+    "data_nascimento": "17/02/2009",
+    "oed": "BELÉM",
+    "GI": 220
+  },
+  {
+    "classificacao": 234,
+    "nome": "NOAM MOUSINHO MENDONÇA DA SILVA",
+    "numero_inscricao": "111384-0",
+    "data_nascimento": "06/02/2008",
+    "oed": "RECIFE",
+    "GI": 220
+  },
+  {
+    "classificacao": 235,
+    "nome": "FELIPE RIBEIRO DE BARROS LIMA",
+    "numero_inscricao": "102870-0",
+    "data_nascimento": "13/12/2006",
+    "oed": "RECIFE",
+    "GI": 220
+  },
+  {
+    "classificacao": 236,
+    "nome": "JOÃO PEDRO POHL MENDONÇA",
+    "numero_inscricao": "109403-7",
+    "data_nascimento": "06/02/2009",
+    "oed": "RECIFE",
+    "GI": 220
+  },
+  {
+    "classificacao": 237,
+    "nome": "LEVI ARAUJO CARRILHO OBADOWSKI",
+    "numero_inscricao": "109415-0",
+    "data_nascimento": "29/09/2007",
+    "oed": "NATAL",
+    "GI": 220
+  },
+  {
+    "classificacao": 238,
+    "nome": "AMANDA MEL CRUZ DA SILVA",
+    "numero_inscricao": "104805-7",
+    "data_nascimento": "26/10/2003",
+    "oed": "RECIFE",
+    "GI": 220
+  },
+  {
+    "classificacao": 239,
+    "nome": "MAXWEEL WAGNER MAGALHÃES ALBUQ",
+    "numero_inscricao": "109998-9",
+    "data_nascimento": "27/09/2008",
+    "oed": "FORTALEZA",
+    "GI": 215
+  },
+  {
+    "classificacao": 240,
+    "nome": "ÁLVARO HENRIQUE ANDRADE DA SILVA",
+    "numero_inscricao": "113203-0",
+    "data_nascimento": "06/11/2005",
+    "oed": "RECIFE",
+    "GI": 215
+  },
+  {
+    "classificacao": 241,
+    "nome": "GABRIEL ROCHA ANDRADE DA SILVA",
+    "numero_inscricao": "109132-0",
+    "data_nascimento": "09/09/2003",
+    "oed": "FORTALEZA",
+    "GI": 215
+  },
+  {
+    "classificacao": 242,
+    "nome": "ARTHUR SARAIVA ALBUQUERQUE",
+    "numero_inscricao": "107968-9",
+    "data_nascimento": "08/08/2008",
+    "oed": "FORTALEZA",
+    "GI": 215
+  },
+  {
+    "classificacao": 243,
+    "nome": "LUCCA COELHO MUCHER APOLLONIO",
+    "numero_inscricao": "107795-8",
+    "data_nascimento": "20/10/2006",
+    "oed": "SALVADOR",
+    "GI": 215
+  },
+  {
+    "classificacao": 244,
+    "nome": "CAIO LEONARDO DA SILVA SANTOS",
+    "numero_inscricao": "108736-3",
+    "data_nascimento": "25/05/2006",
+    "oed": "RECIFE",
+    "GI": 215
+  },
+  {
+    "classificacao": 245,
+    "nome": "PEDRO HENRIQUE ROCHA SILVA",
+    "numero_inscricao": "107373-8",
+    "data_nascimento": "20/10/2008",
+    "oed": "FORTALEZA",
+    "GI": 215
+  },
+  {
+    "classificacao": 246,
+    "nome": "LOGAN FERNANDO PEDROSA RODRIGUES LEAL FONTES",
+    "numero_inscricao": "102448-5",
+    "data_nascimento": "05/09/2005",
+    "oed": "FORTALEZA",
+    "GI": 215
+  },
+  {
+    "classificacao": 247,
+    "nome": "PEDRO CAUÃ MOTA SALES",
+    "numero_inscricao": "112307-0",
+    "data_nascimento": "06/11/2006",
+    "oed": "FORTALEZA",
+    "GI": 215
+  },
+  {
+    "classificacao": 248,
+    "nome": "DAVI AMARAL CRUZ",
+    "numero_inscricao": "105205-6",
+    "data_nascimento": "18/10/2007",
+    "oed": "SALVADOR",
+    "GI": 215
+  },
+  {
+    "classificacao": 249,
+    "nome": "JOSÉ RICARDO FURTADO MONTEIRO",
+    "numero_inscricao": "104535-8",
+    "data_nascimento": "06/03/2008",
+    "oed": "BELÉM",
+    "GI": 215
+  },
+  {
+    "classificacao": 250,
+    "nome": "KAYO GUSTAVO LOPES DA COSTA",
+    "numero_inscricao": "102323-9",
+    "data_nascimento": "04/11/2008",
+    "oed": "FORTALEZA",
+    "GI": 215
+  },
+  {
+    "classificacao": 251,
+    "nome": "RAIMUNDO ANDREO DA SILVA LUZ",
+    "numero_inscricao": "106076-9",
+    "data_nascimento": "27/02/2008",
+    "oed": "BELÉM",
+    "GI": 215
+  },
+  {
+    "classificacao": 252,
+    "nome": "BENJAMIM BRASIL DE GOES",
+    "numero_inscricao": "102692-3",
+    "data_nascimento": "10/08/2007",
+    "oed": "NATAL",
+    "GI": 215
+  },
+  {
+    "classificacao": 253,
+    "nome": "ORION BAI-YU WADA",
+    "numero_inscricao": "108392-8",
+    "data_nascimento": "28/07/2006",
+    "oed": "FORTALEZA",
+    "GI": 215
+  },
+  {
+    "classificacao": 254,
+    "nome": "LARA MORAIS ARAUJO",
+    "numero_inscricao": "103920-6",
+    "data_nascimento": "25/10/2007",
+    "oed": "RECIFE",
+    "GI": 215
+  },
+  {
+    "classificacao": 255,
+    "nome": "JOÃO VICTOR SANTARÉM CEMEAS",
+    "numero_inscricao": "107711-4",
+    "data_nascimento": "28/10/2009",
+    "oed": "BELÉM",
+    "GI": 215
+  },
+  {
+    "classificacao": 256,
+    "nome": "RAFAEL TOLEDO LANDIM",
+    "numero_inscricao": "107323-6",
+    "data_nascimento": "20/05/2008",
+    "oed": "FORTALEZA",
+    "GI": 215
+  },
+  {
+    "classificacao": 257,
+    "nome": "LUIZ PEDRO DOS SANTOS NASCIMENTO",
+    "numero_inscricao": "101631-1",
+    "data_nascimento": "08/03/2006",
+    "oed": "NATAL",
+    "GI": 215
+  },
+  {
+    "classificacao": 258,
+    "nome": "ARTHUR DE MACENA BEZ",
+    "numero_inscricao": "112689-5",
+    "data_nascimento": "20/10/2007",
+    "oed": "FORTALEZA",
+    "GI": 215
+  },
+  {
+    "classificacao": 259,
+    "nome": "ENZO ANDRADE COELHO",
+    "numero_inscricao": "107482-9",
+    "data_nascimento": "10/03/2006",
+    "oed": "SALVADOR",
+    "GI": 215
+  },
+  {
+    "classificacao": 260,
+    "nome": "KAUAN BARROSO RODRIGUES",
+    "numero_inscricao": "106408-1",
+    "data_nascimento": "03/01/2004",
+    "oed": "FORTALEZA",
+    "GI": 215
+  },
+  {
+    "classificacao": 261,
+    "nome": "MARIA CLARA ANDRADE MOUSSE",
+    "numero_inscricao": "108330-3",
+    "data_nascimento": "29/04/2009",
+    "oed": "MANAUS",
+    "GI": 215
+  },
+  {
+    "classificacao": 262,
+    "nome": "GISELE SOARES DE MEDEIROS",
+    "numero_inscricao": "103568-6",
+    "data_nascimento": "08/07/2003",
+    "oed": "FORTALEZA",
+    "GI": 215
+  },
+  {
+    "classificacao": 263,
+    "nome": "FABRÍCIO GUEDES VIEIRA",
+    "numero_inscricao": "108121-0",
+    "data_nascimento": "13/11/2009",
+    "oed": "FORTALEZA",
+    "GI": 215
+  },
+  {
+    "classificacao": 264,
+    "nome": "MARIA EDUARDA PIMENTEL DE ALBUQUERQUE",
+    "numero_inscricao": "107290-3",
+    "data_nascimento": "29/01/2007",
+    "oed": "NATAL",
+    "GI": 215
+  },
+  {
+    "classificacao": 265,
+    "nome": "JOSÉ LOPES TARGINO",
+    "numero_inscricao": "103530-1",
+    "data_nascimento": "30/01/2009",
+    "oed": "RECIFE",
+    "GI": 215
+  },
+  {
+    "classificacao": 266,
+    "nome": "LEONARDO KEITI SAITO SOARES",
+    "numero_inscricao": "106761-0",
+    "data_nascimento": "05/06/2007",
+    "oed": "SALVADOR",
+    "GI": 215
+  },
+  {
+    "classificacao": 267,
+    "nome": "EDUARDO HENRIQUE MONTEIRO BARBOSA",
+    "numero_inscricao": "102431-1",
+    "data_nascimento": "28/03/2005",
+    "oed": "BELÉM",
+    "GI": 215
+  },
+  {
+    "classificacao": 268,
+    "nome": "ATHOS DAVI RUIZ DE OLIVEIRA ANDRADE",
+    "numero_inscricao": "109044-0",
+    "data_nascimento": "05/08/2008",
+    "oed": "FORTALEZA",
+    "GI": 215
+  },
+  {
+    "classificacao": 269,
+    "nome": "RAFAEL MONTEIRO DOS SANTOS LUIZ",
+    "numero_inscricao": "109022-0",
+    "data_nascimento": "13/04/2003",
+    "oed": "SALVADOR",
+    "GI": 215
+  },
+  {
+    "classificacao": 270,
+    "nome": "ANA ELISA SALDAÑA FARIAS",
+    "numero_inscricao": "102225-2",
+    "data_nascimento": "28/07/2006",
+    "oed": "NATAL",
+    "GI": 215
+  },
+  {
+    "classificacao": 271,
+    "nome": "EFRAHIM FERNANDES DE OLIVEIRA",
+    "numero_inscricao": "101842-1",
+    "data_nascimento": "06/04/2004",
+    "oed": "MANAUS",
+    "GI": 215
+  },
+  {
+    "classificacao": 272,
+    "nome": "JOAO GUILHERME OLIVEIRA DE LIMA",
+    "numero_inscricao": "102177-8",
+    "data_nascimento": "16/09/2003",
+    "oed": "RECIFE",
+    "GI": 215
+  },
+  {
+    "classificacao": 273,
+    "nome": "DESIRÉE MAY FLORENCIO",
+    "numero_inscricao": "102265-8",
+    "data_nascimento": "15/01/2004",
+    "oed": "BELÉM",
+    "GI": 215
+  },
+  {
+    "classificacao": 274,
+    "nome": "PEDRO ESDRAS LIMA MAGALHÃES",
+    "numero_inscricao": "102596-3",
+    "data_nascimento": "09/02/2004",
+    "oed": "SÃO LUIS",
+    "GI": 215
+  },
+  {
+    "classificacao": 275,
+    "nome": "GABRIEL DA SILVA VIANA",
+    "numero_inscricao": "109528-3",
+    "data_nascimento": "05/05/2003",
+    "oed": "FORTALEZA",
+    "GI": 210
+  },
+  {
+    "classificacao": 276,
+    "nome": "ARTHUR DOS SANTOS CONCEIÇÃO SCHWENGBER",
+    "numero_inscricao": "105200-5",
+    "data_nascimento": "20/05/2008",
+    "oed": "RECIFE",
+    "GI": 210
+  },
+  {
+    "classificacao": 277,
+    "nome": "JOAO VICTOR DO NASCIMENTO FARIAS",
+    "numero_inscricao": "108416-2",
+    "data_nascimento": "23/02/2008",
+    "oed": "FORTALEZA",
+    "GI": 210
+  },
+  {
+    "classificacao": 278,
+    "nome": "ANA SOPHIA DA LUZ SARAIVA DE MATOS",
+    "numero_inscricao": "108780-6",
+    "data_nascimento": "12/11/2008",
+    "oed": "BELÉM",
+    "GI": 210
+  },
+  {
+    "classificacao": 279,
+    "nome": "LUIZ ALEXANDRE MELQUIADES COSTA",
+    "numero_inscricao": "108406-6",
+    "data_nascimento": "11/09/2007",
+    "oed": "FORTALEZA",
+    "GI": 210
+  },
+  {
+    "classificacao": 280,
+    "nome": "ISAAC RIEL DA CAMARA RIBEIRO",
+    "numero_inscricao": "109327-0",
+    "data_nascimento": "18/01/2006",
+    "oed": "NATAL",
+    "GI": 210
+  },
+  {
+    "classificacao": 281,
+    "nome": "YAGO BRAGA DOS SANTOS",
+    "numero_inscricao": "101344-4",
+    "data_nascimento": "24/03/2006",
+    "oed": "RECIFE",
+    "GI": 210
+  },
+  {
+    "classificacao": 282,
+    "nome": "LUCAS GABRIEL DAMASCENO BORGES",
+    "numero_inscricao": "103454-4",
+    "data_nascimento": "01/04/2007",
+    "oed": "PARNAÍBA",
+    "GI": 210
+  },
+  {
+    "classificacao": 283,
+    "nome": "JOAO LUCAS ARAGAO MARCAL",
+    "numero_inscricao": "108032-1",
+    "data_nascimento": "30/07/2003",
+    "oed": "FORTALEZA",
+    "GI": 210
+  },
+  {
+    "classificacao": 284,
+    "nome": "PEDRO VINÍCIUS NASCIMENTO DA COSTA",
+    "numero_inscricao": "109047-4",
+    "data_nascimento": "19/04/2008",
+    "oed": "FORTALEZA",
+    "GI": 210
+  },
+  {
+    "classificacao": 285,
+    "nome": "IAN JONAS SOUZA SILVEIRA DO NASCIMENTO",
+    "numero_inscricao": "103584-6",
+    "data_nascimento": "31/05/2008",
+    "oed": "RECIFE",
+    "GI": 210
+  },
+  {
+    "classificacao": 286,
+    "nome": "ROMILSON FERREIRA LIMA FILHO",
+    "numero_inscricao": "104851-6",
+    "data_nascimento": "23/06/2007",
+    "oed": "RECIFE",
+    "GI": 210
+  },
+  {
+    "classificacao": 287,
+    "nome": "MARCELO EDSON FERREIRA FILHO",
+    "numero_inscricao": "102182-3",
+    "data_nascimento": "11/11/2004",
+    "oed": "RECIFE",
+    "GI": 210
+  },
+  {
+    "classificacao": 288,
+    "nome": "CARLOS RODRIGO FREITAS BARROSO",
+    "numero_inscricao": "107566-1",
+    "data_nascimento": "10/06/2006",
+    "oed": "FORTALEZA",
+    "GI": 210
+  },
+  {
+    "classificacao": 289,
+    "nome": "SAULO RAFAEL E SILVA TAVARES",
+    "numero_inscricao": "109529-1",
+    "data_nascimento": "17/11/2006",
+    "oed": "BELÉM",
+    "GI": 210
+  },
+  {
+    "classificacao": 290,
+    "nome": "RUAN CLEISON AMARAL FERREIRA",
+    "numero_inscricao": "102648-0",
+    "data_nascimento": "10/07/2006",
+    "oed": "RECIFE",
+    "GI": 210
+  },
+  {
+    "classificacao": 291,
+    "nome": "KAUAN YEGO VIANA DA SILVA",
+    "numero_inscricao": "107171-6",
+    "data_nascimento": "21/02/2007",
+    "oed": "RECIFE",
+    "GI": 210
+  },
+  {
+    "classificacao": 292,
+    "nome": "GABRIEL AMORIM SANTIAGO",
+    "numero_inscricao": "106345-0",
+    "data_nascimento": "13/01/2009",
+    "oed": "FORTALEZA",
+    "GI": 210
+  },
+  {
+    "classificacao": 293,
+    "nome": "ANDREY MENEZES COELHO",
+    "numero_inscricao": "103754-2",
+    "data_nascimento": "08/02/2005",
+    "oed": "SALVADOR",
+    "GI": 210
+  },
+  {
+    "classificacao": 294,
+    "nome": "PAULA CRISTINA TAVARES DE BRITO",
+    "numero_inscricao": "104023-1",
+    "data_nascimento": "07/03/2008",
+    "oed": "BELÉM",
+    "GI": 210
+  },
+  {
+    "classificacao": 295,
+    "nome": "YASMIM CAVALCANTE DE SOUSA",
+    "numero_inscricao": "113868-5",
+    "data_nascimento": "05/09/2007",
+    "oed": "BELÉM",
+    "GI": 210
+  },
+  {
+    "classificacao": 296,
+    "nome": "MARÇAL SANTOS HUOYA",
+    "numero_inscricao": "111499-0",
+    "data_nascimento": "12/09/2007",
+    "oed": "SALVADOR",
+    "GI": 210
+  },
+  {
+    "classificacao": 297,
+    "nome": "RICHARD ROCHA DE LIMA",
+    "numero_inscricao": "110514-6",
+    "data_nascimento": "13/05/2005",
+    "oed": "NATAL",
+    "GI": 210
+  },
+  {
+    "classificacao": 298,
+    "nome": "LOHAN TOMAZ SALES DUARTE",
+    "numero_inscricao": "108400-7",
+    "data_nascimento": "07/01/2009",
+    "oed": "MANAUS",
+    "GI": 210
+  },
+  {
+    "classificacao": 299,
+    "nome": "ANNA BEATRIZ DA SILVA AMAZONAS",
+    "numero_inscricao": "106200-0",
+    "data_nascimento": "11/04/2008",
+    "oed": "BELÉM",
+    "GI": 210
+  },
+  {
+    "classificacao": 300,
+    "nome": "HEITOR RODRIGUES DE SOUZA OLIVEIRA",
+    "numero_inscricao": "104402-1",
+    "data_nascimento": "23/08/2006",
+    "oed": "SALVADOR",
+    "GI": 210
+  },
+  {
+    "classificacao": 301,
+    "nome": "GUILHERME LINS DE BIASE",
+    "numero_inscricao": "102344-0",
+    "data_nascimento": "22/04/2009",
+    "oed": "RECIFE",
+    "GI": 210
+  },
+  {
+    "classificacao": 302,
+    "nome": "HEITOR NOGUEIRA LIMA SILVA",
+    "numero_inscricao": "106465-5",
+    "data_nascimento": "18/04/2008",
+    "oed": "SALVADOR",
+    "GI": 210
+  },
+  {
+    "classificacao": 303,
+    "nome": "ARTHUR LEÔNIDAS FARIAS GUIMARÃES",
+    "numero_inscricao": "101274-0",
+    "data_nascimento": "05/01/2008",
+    "oed": "MANAUS",
+    "GI": 210
+  },
+  {
+    "classificacao": 304,
+    "nome": "ANA LAURA FREIRE GADELHA DA CRUZ",
+    "numero_inscricao": "104876-0",
+    "data_nascimento": "16/11/2005",
+    "oed": "MANAUS",
+    "GI": 210
+  },
+  {
+    "classificacao": 305,
+    "nome": "LORENZZO DORNELAS GARCIA",
+    "numero_inscricao": "107564-5",
+    "data_nascimento": "26/04/2004",
+    "oed": "FORTALEZA",
+    "GI": 210
+  },
+  {
+    "classificacao": 306,
+    "nome": "IGOR RAFAEL MOURA DA SILVA",
+    "numero_inscricao": "101704-0",
+    "data_nascimento": "01/02/2005",
+    "oed": "RECIFE",
+    "GI": 210
+  },
+  {
+    "classificacao": 307,
+    "nome": "OTTO FERREIRA TER REEGEN RODRIGUES",
+    "numero_inscricao": "110672-0",
+    "data_nascimento": "01/03/2005",
+    "oed": "FORTALEZA",
+    "GI": 210
+  },
+  {
+    "classificacao": 308,
+    "nome": "TIAGO BRITO LARA",
+    "numero_inscricao": "100935-7",
+    "data_nascimento": "31/12/2006",
+    "oed": "RECIFE",
+    "GI": 210
+  },
+  {
+    "classificacao": 309,
+    "nome": "HÉLIO FÉLIX SOARES NETO",
+    "numero_inscricao": "100910-3",
+    "data_nascimento": "21/05/2007",
+    "oed": "SÃO LUIS",
+    "GI": 210
+  },
+  {
+    "classificacao": 310,
+    "nome": "CAUÃ DE ANDRADE EMERICK FONSECA",
+    "numero_inscricao": "106981-9",
+    "data_nascimento": "14/12/2006",
+    "oed": "NATAL",
+    "GI": 210
+  },
+  {
+    "classificacao": 311,
+    "nome": "EDUARDO HENRIQUE PACIFICO SILVA",
+    "numero_inscricao": "103264-5",
+    "data_nascimento": "12/01/2007",
+    "oed": "RECIFE",
+    "GI": 210
+  },
+  {
+    "classificacao": 312,
+    "nome": "ANNA JULIA SILVA FRANCA",
+    "numero_inscricao": "100529-2",
+    "data_nascimento": "22/02/2007",
+    "oed": "RECIFE",
+    "GI": 210
+  },
+  {
+    "classificacao": 313,
+    "nome": "LUCAS JARDIM MOREIRA",
+    "numero_inscricao": "101433-2",
+    "data_nascimento": "02/05/2006",
+    "oed": "BELÉM",
+    "GI": 210
+  },
+  {
+    "classificacao": 314,
+    "nome": "ANA LUZIA BEZERRA AGUIAR E SILVA",
+    "numero_inscricao": "100484-7",
+    "data_nascimento": "29/08/2006",
+    "oed": "FORTALEZA",
+    "GI": 210
+  },
+  {
+    "classificacao": 315,
+    "nome": "ÍCARO DANIEL SOUZA CONCEIÇÃO",
+    "numero_inscricao": "107280-7",
+    "data_nascimento": "26/02/2005",
+    "oed": "SALVADOR",
+    "GI": 210
+  },
+  {
+    "classificacao": 316,
+    "nome": "ESTER ALINE DANTAS PINHEIRO",
+    "numero_inscricao": "101834-1",
+    "data_nascimento": "20/12/2007",
+    "oed": "BELÉM",
+    "GI": 210
+  },
+  {
+    "classificacao": 317,
+    "nome": "JAKSON EMANUEL SANTOS DE SOUZA",
+    "numero_inscricao": "106950-1",
+    "data_nascimento": "17/03/2008",
+    "oed": "RECIFE",
+    "GI": 210
+  },
+  {
+    "classificacao": 318,
+    "nome": "MARIA CLARA CARNEIRO DUARTE",
+    "numero_inscricao": "113378-8",
+    "data_nascimento": "06/11/2008",
+    "oed": "FORTALEZA",
+    "GI": 210
+  },
+  {
+    "classificacao": 319,
+    "nome": "ENZO BOITEUX DE OLIVEIRA PINTO",
+    "numero_inscricao": "104796-0",
+    "data_nascimento": "12/04/2004",
+    "oed": "RECIFE",
+    "GI": 210
+  },
+  {
+    "classificacao": 320,
+    "nome": "PEDRO OLIVEIRA REIS",
+    "numero_inscricao": "104317-6",
+    "data_nascimento": "21/07/2008",
+    "oed": "BELÉM",
+    "GI": 210
+  },
+  {
+    "classificacao": 321,
+    "nome": "ARTHUR CLARO DE CARVALHO BISNETO",
+    "numero_inscricao": "100104-8",
+    "data_nascimento": "03/01/2004",
+    "oed": "FORTALEZA",
+    "GI": 210
+  },
+  {
+    "classificacao": 322,
+    "nome": "THIAGO GONZALEZ RAMOS",
+    "numero_inscricao": "103787-6",
+    "data_nascimento": "28/07/2004",
+    "oed": "BELÉM",
+    "GI": 210
+  },
+  {
+    "classificacao": 323,
+    "nome": "LUÍS MIGUEL MARTINS GOMES COSTA",
+    "numero_inscricao": "102369-3",
+    "data_nascimento": "18/03/2008",
+    "oed": "FORTALEZA",
+    "GI": 205
+  },
+  {
+    "classificacao": 324,
+    "nome": "HENRI GABRIEL RAMOS CUNHA",
+    "numero_inscricao": "108556-0",
+    "data_nascimento": "18/04/2006",
+    "oed": "FORTALEZA",
+    "GI": 205
+  },
+  {
+    "classificacao": 325,
+    "nome": "FRANCISCO VINÍCIUS MACHADO VIEIRA",
+    "numero_inscricao": "102779-0",
+    "data_nascimento": "26/03/2009",
+    "oed": "PARNAÍBA",
+    "GI": 205
+  },
+  {
+    "classificacao": 326,
+    "nome": "JULIEN ALAN SOUSA HAFFAR",
+    "numero_inscricao": "104439-8",
+    "data_nascimento": "09/11/2009",
+    "oed": "FORTALEZA",
+    "GI": 205
+  },
+  {
+    "classificacao": 327,
+    "nome": "JOÃO PAULO GONÇALVES FERREIRA",
+    "numero_inscricao": "108212-4",
+    "data_nascimento": "01/03/2006",
+    "oed": "BELÉM",
+    "GI": 205
+  },
+  {
+    "classificacao": 328,
+    "nome": "LUCAS MANUEL COSTA MELO",
+    "numero_inscricao": "101375-1",
+    "data_nascimento": "25/08/2004",
+    "oed": "FORTALEZA",
+    "GI": 205
+  },
+  {
+    "classificacao": 329,
+    "nome": "LINO FERREIRA DE CARVALHO",
+    "numero_inscricao": "102387-0",
+    "data_nascimento": "09/03/2005",
+    "oed": "FORTALEZA",
+    "GI": 205
+  },
+  {
+    "classificacao": 330,
+    "nome": "LETÍCIA GABRIELA DE HOLANDA CAVALCANTE COSTA",
+    "numero_inscricao": "108555-2",
+    "data_nascimento": "27/08/2007",
+    "oed": "FORTALEZA",
+    "GI": 205
+  },
+  {
+    "classificacao": 331,
+    "nome": "LETÍCIA SAMARA MACÊDO DO NASCIMENTO",
+    "numero_inscricao": "106763-7",
+    "data_nascimento": "05/06/2009",
+    "oed": "RECIFE",
+    "GI": 205
+  },
+  {
+    "classificacao": 332,
+    "nome": "MATHEUS DA SILVEIRA FREIRE",
+    "numero_inscricao": "112491-0",
+    "data_nascimento": "02/01/2007",
+    "oed": "FORTALEZA",
+    "GI": 205
+  },
+  {
+    "classificacao": 333,
+    "nome": "LUCAS GABRIEL CIDREIRA SANTIAGO DE ARAUJO",
+    "numero_inscricao": "111771-0",
+    "data_nascimento": "03/10/2003",
+    "oed": "FORTALEZA",
+    "GI": 205
+  },
+  {
+    "classificacao": 334,
+    "nome": "LUCAS MORAES HOLANDA BRASIL",
+    "numero_inscricao": "107533-8",
+    "data_nascimento": "26/08/2005",
+    "oed": "FORTALEZA",
+    "GI": 205
+  },
+  {
+    "classificacao": 335,
+    "nome": "WILSON RIBEIRO FITERMAN JUNIOR",
+    "numero_inscricao": "104384-6",
+    "data_nascimento": "04/04/2006",
+    "oed": "FORTALEZA",
+    "GI": 205
+  },
+  {
+    "classificacao": 336,
+    "nome": "MATEUS OLIVEIRA DE BRITO",
+    "numero_inscricao": "113261-1",
+    "data_nascimento": "14/07/2007",
+    "oed": "PARNAÍBA",
+    "GI": 205
+  },
+  {
+    "classificacao": 337,
+    "nome": "LUIZ FELIPE NAIME LIMA",
+    "numero_inscricao": "104670-5",
+    "data_nascimento": "16/05/2003",
+    "oed": "RECIFE",
+    "GI": 205
+  },
+  {
+    "classificacao": 338,
+    "nome": "MARCELO RIAN CORDEIRO COSTA",
+    "numero_inscricao": "102992-1",
+    "data_nascimento": "12/11/2008",
+    "oed": "FORTALEZA",
+    "GI": 205
+  },
+  {
+    "classificacao": 339,
+    "nome": "VINICIUS GUERRA DE OLIVEIRA",
+    "numero_inscricao": "100592-0",
+    "data_nascimento": "05/05/2009",
+    "oed": "FORTALEZA",
+    "GI": 205
+  },
+  {
+    "classificacao": 340,
+    "nome": "LUCAS MAIA SILVA DE PONTES",
+    "numero_inscricao": "107322-8",
+    "data_nascimento": "27/01/2005",
+    "oed": "FORTALEZA",
+    "GI": 205
+  },
+  {
+    "classificacao": 341,
+    "nome": "TALES DE ALBUQUERQUE LIMA",
+    "numero_inscricao": "104019-4",
+    "data_nascimento": "27/12/2007",
+    "oed": "BELÉM",
+    "GI": 205
+  },
+  {
+    "classificacao": 342,
+    "nome": "GILBERTO DE JESUS ALMEIDA FILHO",
+    "numero_inscricao": "113766-6",
+    "data_nascimento": "09/06/2005",
+    "oed": "SALVADOR",
+    "GI": 205
+  },
+  {
+    "classificacao": 343,
+    "nome": "CARLOS GABRIEL DE SOUZA BRAZ",
+    "numero_inscricao": "106926-1",
+    "data_nascimento": "28/11/2008",
+    "oed": "BELÉM",
+    "GI": 205
+  },
+  {
+    "classificacao": 344,
+    "nome": "IGOR SANDINO DE PAIVA CRISPINIANO",
+    "numero_inscricao": "109793-2",
+    "data_nascimento": "10/03/2004",
+    "oed": "FORTALEZA",
+    "GI": 205
+  },
+  {
+    "classificacao": 345,
+    "nome": "PIETRA SICSU SENA",
+    "numero_inscricao": "104689-5",
+    "data_nascimento": "13/11/2008",
+    "oed": "BELÉM",
+    "GI": 205
+  },
+  {
+    "classificacao": 346,
+    "nome": "SAMUEL HENRIQUE DA SILVA MOREIRA",
+    "numero_inscricao": "104123-4",
+    "data_nascimento": "17/05/2007",
+    "oed": "BELÉM",
+    "GI": 205
+  },
+  {
+    "classificacao": 347,
+    "nome": "MIGUEL RIBEIRO DE SANTANA",
+    "numero_inscricao": "108175-4",
+    "data_nascimento": "10/08/2007",
+    "oed": "SALVADOR",
+    "GI": 205
+  },
+  {
+    "classificacao": 348,
+    "nome": "JOSE GABRIEL CARVALHO DOS SANTOS",
+    "numero_inscricao": "104816-1",
+    "data_nascimento": "08/02/2005",
+    "oed": "MANAUS",
+    "GI": 205
+  },
+  {
+    "classificacao": 349,
+    "nome": "DANIEL RENY ALVES FILHO",
+    "numero_inscricao": "104142-9",
+    "data_nascimento": "05/08/2009",
+    "oed": "BELÉM",
+    "GI": 205
+  },
+  {
+    "classificacao": 350,
+    "nome": "RAFAEL FERREIRA RAEL",
+    "numero_inscricao": "108201-0",
+    "data_nascimento": "03/06/2006",
+    "oed": "RECIFE",
+    "GI": 205
+  },
+  {
+    "classificacao": 351,
+    "nome": "MARCO ANTÔNIO ALENCAR QUEIROZ CARLOTO",
+    "numero_inscricao": "107545-0",
+    "data_nascimento": "05/04/2006",
+    "oed": "BELÉM",
+    "GI": 205
+  },
+  {
+    "classificacao": 352,
+    "nome": "YRWIN GOMES FRANÇA DE ALMEIDA",
+    "numero_inscricao": "100496-0",
+    "data_nascimento": "02/11/2006",
+    "oed": "SALVADOR",
+    "GI": 205
+  },
+  {
+    "classificacao": 353,
+    "nome": "MIGUEL FRANCISCO MADEIRO SAMPAIO",
+    "numero_inscricao": "113038-4",
+    "data_nascimento": "18/03/2008",
+    "oed": "FORTALEZA",
+    "GI": 205
+  },
+  {
+    "classificacao": 354,
+    "nome": "GABRIEL SIQUEIRA GONÇALVES",
+    "numero_inscricao": "112578-8",
+    "data_nascimento": "16/03/2006",
+    "oed": "PARNAÍBA",
+    "GI": 205
+  },
+  {
+    "classificacao": 355,
+    "nome": "MARIA LUIZA FERREIRA TORQUATO",
+    "numero_inscricao": "102291-4",
+    "data_nascimento": "19/10/2007",
+    "oed": "RECIFE",
+    "GI": 205
+  },
+  {
+    "classificacao": 356,
+    "nome": "PABLO WILLAMYS NASCIMENTO DOS SANTOS",
+    "numero_inscricao": "100746-6",
+    "data_nascimento": "05/04/2004",
+    "oed": "FORTALEZA",
+    "GI": 205
+  },
+  {
+    "classificacao": 357,
+    "nome": "GUILHERME DA COSTA BARROS BRANDÃO",
+    "numero_inscricao": "101487-7",
+    "data_nascimento": "29/08/2005",
+    "oed": "RECIFE",
+    "GI": 205
+  },
+  {
+    "classificacao": 358,
+    "nome": "PEDRO JOSE DE PAIVA RIBEIRO",
+    "numero_inscricao": "102107-3",
+    "data_nascimento": "13/04/2009",
+    "oed": "RECIFE",
+    "GI": 205
+  },
+  {
+    "classificacao": 359,
+    "nome": "ARTHUR GABRIEL SANTANA ARAUJO",
+    "numero_inscricao": "101282-0",
+    "data_nascimento": "15/02/2008",
+    "oed": "RECIFE",
+    "GI": 205
+  },
+  {
+    "classificacao": 360,
+    "nome": "GABRIEL PEREIRA GARCIA",
+    "numero_inscricao": "100563-9",
+    "data_nascimento": "30/03/2005",
+    "oed": "BELÉM",
+    "GI": 205
+  },
+  {
+    "classificacao": 361,
+    "nome": "JOSÉ FRANCISCO FERREIRA DE AGUIAR",
+    "numero_inscricao": "102205-0",
+    "data_nascimento": "07/11/2007",
+    "oed": "NATAL",
+    "GI": 205
+  },
+  {
+    "classificacao": 362,
+    "nome": "RAPHAEL ICÓ RIBEIRO DE OLIVEIRA",
+    "numero_inscricao": "100279-6",
+    "data_nascimento": "02/03/2006",
+    "oed": "SALVADOR",
+    "GI": 205
+  },
+  {
+    "classificacao": 363,
+    "nome": "SAMUEL GUIMARÃES MARTINS",
+    "numero_inscricao": "111473-9",
+    "data_nascimento": "16/09/2008",
+    "oed": "MANAUS",
+    "GI": 205
+  },
+  {
+    "classificacao": 364,
+    "nome": "JOAO CARLOS LIMA OLIVEIRA",
+    "numero_inscricao": "109946-0",
+    "data_nascimento": "12/12/2006",
+    "oed": "FORTALEZA",
+    "GI": 205
+  },
+  {
+    "classificacao": 365,
+    "nome": "JOÃO GUILHERME CASTRO DE MELO",
+    "numero_inscricao": "101963-5",
+    "data_nascimento": "12/10/2007",
+    "oed": "RECIFE",
+    "GI": 205
+  },
+  {
+    "classificacao": 366,
+    "nome": "GUILHERME BARBOSA DOS SANTOS",
+    "numero_inscricao": "100868-8",
+    "data_nascimento": "16/04/2003",
+    "oed": "SALVADOR",
+    "GI": 205
+  },
+  {
+    "classificacao": 367,
+    "nome": "GUSTAVO CORRÊA STEFANEL",
+    "numero_inscricao": "103881-0",
+    "data_nascimento": "04/12/2005",
+    "oed": "SALVADOR",
+    "GI": 205
+  },
+  {
+    "classificacao": 368,
+    "nome": "PATRICK FERREIRA DE SOUZA",
+    "numero_inscricao": "102562-1",
+    "data_nascimento": "15/07/2003",
+    "oed": "BELÉM",
+    "GI": 205
+  },
+  {
+    "classificacao": 369,
+    "nome": "CAMILA GONÇALVES DE SOUZA",
+    "numero_inscricao": "100851-4",
+    "data_nascimento": "31/07/2008",
+    "oed": "FORTALEZA",
+    "GI": 205
+  },
+  {
+    "classificacao": 370,
+    "nome": "EDUARDO DE MELO ANDRÉ PINTO",
+    "numero_inscricao": "105455-3",
+    "data_nascimento": "13/09/2006",
+    "oed": "MANAUS",
+    "GI": 205
+  },
+  {
+    "classificacao": 371,
+    "nome": "BIANCA VILLALBA DE ANDRADE",
+    "numero_inscricao": "100154-0",
+    "data_nascimento": "25/10/2005",
+    "oed": "SALVADOR",
+    "GI": 205
+  },
+  {
+    "classificacao": 372,
+    "nome": "EDMILTON MESQUITA BEZERRA FILHO",
+    "numero_inscricao": "106059-0",
+    "data_nascimento": "27/04/2006",
+    "oed": "SÃO LUIS",
+    "GI": 205
+  },
+  {
+    "classificacao": 373,
+    "nome": "JOÃO PEDRO BENJAMIM PINHEIRO",
+    "numero_inscricao": "107562-9",
+    "data_nascimento": "27/10/2006",
+    "oed": "FORTALEZA",
+    "GI": 205
+  },
+  {
+    "classificacao": 374,
+    "nome": "WENDEL SANTOS DE LIMA",
+    "numero_inscricao": "109266-4",
+    "data_nascimento": "21/07/2007",
+    "oed": "NATAL",
+    "GI": 205
+  },
+  {
+    "classificacao": 375,
+    "nome": "HENRY LUCCAS CERQUEIRA VASCONCELOS GOMES",
+    "numero_inscricao": "105631-3",
+    "data_nascimento": "25/02/2008",
+    "oed": "SALVADOR",
+    "GI": 205
+  },
+  {
+    "classificacao": 376,
+    "nome": "PETERSON FERREIRA DE CASTRO LOURENÇO",
+    "numero_inscricao": "101039-0",
+    "data_nascimento": "31/08/2009",
+    "oed": "FORTALEZA",
+    "GI": 205
+  },
+  {
+    "classificacao": 377,
+    "nome": "MATEUS LOPES SANTOS DE MELO",
+    "numero_inscricao": "103827-0",
+    "data_nascimento": "27/01/2003",
+    "oed": "BELÉM",
+    "GI": 205
+  },
+  {
+    "classificacao": 378,
+    "nome": "GUSTAVO LOPES DOS SANTOS",
+    "numero_inscricao": "104095-2",
+    "data_nascimento": "06/03/2008",
+    "oed": "NATAL",
+    "GI": 205
+  },
+  {
+    "classificacao": 379,
+    "nome": "LETHICIA VEILLARD CLEMENTINO",
+    "numero_inscricao": "100476-7",
+    "data_nascimento": "31/07/2004",
+    "oed": "RECIFE",
+    "GI": 205
+  },
+  {
+    "classificacao": 380,
+    "nome": "TARIK ELIZIARIO BENTES ZAIDAN",
+    "numero_inscricao": "110159-1",
+    "data_nascimento": "20/09/2005",
+    "oed": "BELÉM",
+    "GI": 205
+  },
+  {
+    "classificacao": 381,
+    "nome": "FRANCISCO PEDRO LIMA DOS SANTOS",
+    "numero_inscricao": "102945-4",
+    "data_nascimento": "27/06/2008",
+    "oed": "FORTALEZA",
+    "GI": 205
+  },
+  {
+    "classificacao": 382,
+    "nome": "RAPHAEL RUFFIER DE BRITTO",
+    "numero_inscricao": "103711-2",
+    "data_nascimento": "21/01/2009",
+    "oed": "MANAUS",
+    "GI": 205
+  },
+  {
+    "classificacao": 383,
+    "nome": "LUIZ HENRIQUE PEREIRA E SILVA",
+    "numero_inscricao": "107951-5",
+    "data_nascimento": "25/09/2003",
+    "oed": "BELÉM",
+    "GI": 205
+  },
+  {
+    "classificacao": 384,
+    "nome": "PAULO ISIDRO REIS DE LIMA",
+    "numero_inscricao": "108456-8",
+    "data_nascimento": "12/04/2007",
+    "oed": "FORTALEZA",
+    "GI": 200
+  },
+  {
+    "classificacao": 385,
+    "nome": "DANIEL DIOGENES PAIVA",
+    "numero_inscricao": "100517-0",
+    "data_nascimento": "15/12/2008",
+    "oed": "FORTALEZA",
+    "GI": 200
+  },
+  {
+    "classificacao": 386,
+    "nome": "ANTÔNIO MIGUEL GONÇALVES BEZERRA JÚNIOR",
+    "numero_inscricao": "109167-0",
+    "data_nascimento": "18/05/2005",
+    "oed": "FORTALEZA",
+    "GI": 200
+  },
+  {
+    "classificacao": 387,
+    "nome": "IAN BARRETO TAVARES MATOS DE VASCONCELOS",
+    "numero_inscricao": "107523-1",
+    "data_nascimento": "16/02/2007",
+    "oed": "FORTALEZA",
+    "GI": 200
+  },
+  {
+    "classificacao": 388,
+    "nome": "CAIO MOREIRA DE LIMA",
+    "numero_inscricao": "110848-6",
+    "data_nascimento": "08/12/2009",
+    "oed": "FORTALEZA",
+    "GI": 200
+  },
+  {
+    "classificacao": 389,
+    "nome": "PEDRO PAULO DENIZART DOS SANTOS",
+    "numero_inscricao": "110656-0",
+    "data_nascimento": "22/07/2006",
+    "oed": "FORTALEZA",
+    "GI": 200
+  },
+  {
+    "classificacao": 390,
+    "nome": "WDIS KAUÊ DA CRUZ ALVES",
+    "numero_inscricao": "106141-1",
+    "data_nascimento": "17/11/2006",
+    "oed": "FORTALEZA",
+    "GI": 200
+  },
+  {
+    "classificacao": 391,
+    "nome": "SAMUEL DE ARAUJO LANDIM",
+    "numero_inscricao": "107695-5",
+    "data_nascimento": "08/10/2007",
+    "oed": "FORTALEZA",
+    "GI": 200
+  },
+  {
+    "classificacao": 392,
+    "nome": "ANA GABRIELA PINHO NOBREGA",
+    "numero_inscricao": "108510-6",
+    "data_nascimento": "03/12/2006",
+    "oed": "FORTALEZA",
+    "GI": 200
+  },
+  {
+    "classificacao": 393,
+    "nome": "JAIRLOM ALBUQUERQUE PEREIRA",
+    "numero_inscricao": "108358-1",
+    "data_nascimento": "14/04/2008",
+    "oed": "FORTALEZA",
+    "GI": 200
+  },
+  {
+    "classificacao": 394,
+    "nome": "GUSTAVO STOFFEL DAMASCENO BOQUIMPANI",
+    "numero_inscricao": "111739-0",
+    "data_nascimento": "13/07/2005",
+    "oed": "SALVADOR",
+    "GI": 200
+  },
+  {
+    "classificacao": 395,
+    "nome": "FELIPE GABRIEL RODRIGUES DA COSTA",
+    "numero_inscricao": "108404-0",
+    "data_nascimento": "17/01/2009",
+    "oed": "FORTALEZA",
+    "GI": 200
+  },
+  {
+    "classificacao": 396,
+    "nome": "MIGUEL MURTA FERNANDES",
+    "numero_inscricao": "113574-0",
+    "data_nascimento": "19/11/2007",
+    "oed": "SALVADOR",
+    "GI": 200
+  },
+  {
+    "classificacao": 397,
+    "nome": "PAULO HENRIQUE MEDEIROS FRANCO",
+    "numero_inscricao": "101711-1",
+    "data_nascimento": "08/05/2004",
+    "oed": "FORTALEZA",
+    "GI": 200
+  },
+  {
+    "classificacao": 398,
+    "nome": "LUCAS GOMES SILVA",
+    "numero_inscricao": "104843-6",
+    "data_nascimento": "11/05/2007",
+    "oed": "RECIFE",
+    "GI": 200
+  },
+  {
+    "classificacao": 399,
+    "nome": "RAPHAEL CUNHA BORJA DA SILVA",
+    "numero_inscricao": "109206-6",
+    "data_nascimento": "04/09/2007",
+    "oed": "NATAL",
+    "GI": 200
+  },
+  {
+    "classificacao": 400,
+    "nome": "ARTHUR MANOEL ALVES COSTA",
+    "numero_inscricao": "107258-3",
+    "data_nascimento": "26/12/2004",
+    "oed": "BELÉM",
+    "GI": 200
+  },
+  {
+    "classificacao": 401,
+    "nome": "JULIA YUKARI SOARES SASAKI",
+    "numero_inscricao": "110788-9",
+    "data_nascimento": "06/07/2008",
+    "oed": "MANAUS",
+    "GI": 200
+  },
+  {
+    "classificacao": 402,
+    "nome": "FILIPE VIEIRA SIMOES",
+    "numero_inscricao": "101825-3",
+    "data_nascimento": "30/10/2009",
+    "oed": "SALVADOR",
+    "GI": 200
+  },
+  {
+    "classificacao": 403,
+    "nome": "LEONARDO LAPA VELOSO",
+    "numero_inscricao": "105777-0",
+    "data_nascimento": "23/10/2006",
+    "oed": "RECIFE",
+    "GI": 200
+  },
+  {
+    "classificacao": 404,
+    "nome": "JOAO AUGUSTO PEREIRA ANDRADE",
+    "numero_inscricao": "105997-9",
+    "data_nascimento": "21/03/2006",
+    "oed": "SALVADOR",
+    "GI": 200
+  },
+  {
+    "classificacao": 405,
+    "nome": "ARIEL BERNARDO DE LIMA NUNES",
+    "numero_inscricao": "101591-7",
+    "data_nascimento": "23/12/2008",
+    "oed": "RECIFE",
+    "GI": 200
+  },
+  {
+    "classificacao": 406,
+    "nome": "CAIO VITOR SOUSA DA CRUZ",
+    "numero_inscricao": "100016-8",
+    "data_nascimento": "08/05/2003",
+    "oed": "FORTALEZA",
+    "GI": 200
+  },
+  {
+    "classificacao": 407,
+    "nome": "NICOLAS LIMA CABRAL",
+    "numero_inscricao": "100245-4",
+    "data_nascimento": "27/02/2008",
+    "oed": "SÃO LUIS",
+    "GI": 200
+  },
+  {
+    "classificacao": 408,
+    "nome": "DANTE PENAFORTE MURATORE",
+    "numero_inscricao": "108261-8",
+    "data_nascimento": "14/08/2009",
+    "oed": "FORTALEZA",
+    "GI": 200
+  },
+  {
+    "classificacao": 409,
+    "nome": "ENZO EDUARDO NOVAES DE MEDEIROS",
+    "numero_inscricao": "107197-8",
+    "data_nascimento": "07/10/2006",
+    "oed": "NATAL",
+    "GI": 200
+  },
+  {
+    "classificacao": 410,
+    "nome": "GABRIEL RODRIGUES AYRES",
+    "numero_inscricao": "109208-2",
+    "data_nascimento": "08/06/2006",
+    "oed": "RECIFE",
+    "GI": 200
+  },
+  {
+    "classificacao": 411,
+    "nome": "VÍTOR DE CARVALHO PRATA E MATTOS QUEIROZ",
+    "numero_inscricao": "107708-5",
+    "data_nascimento": "01/11/2006",
+    "oed": "SALVADOR",
+    "GI": 200
+  },
+  {
+    "classificacao": 412,
+    "nome": "YAN GUILHERME AMORIM CHAVES",
+    "numero_inscricao": "109901-4",
+    "data_nascimento": "09/04/2009",
+    "oed": "BELÉM",
+    "GI": 200
+  },
+  {
+    "classificacao": 413,
+    "nome": "ARTHUR MACHADO DA COSTA",
+    "numero_inscricao": "100345-7",
+    "data_nascimento": "24/05/2004",
+    "oed": "NATAL",
+    "GI": 200
+  },
+  {
+    "classificacao": 414,
+    "nome": "KAIO RAMALHO DE ARAÚJO",
+    "numero_inscricao": "106716-0",
+    "data_nascimento": "13/07/2006",
+    "oed": "FORTALEZA",
+    "GI": 200
+  },
+  {
+    "classificacao": 415,
+    "nome": "PAULO ISRAEL FERREIRA SPINOSA",
+    "numero_inscricao": "100770-6",
+    "data_nascimento": "11/09/2007",
+    "oed": "FORTALEZA",
+    "GI": 200
+  },
+  {
+    "classificacao": 416,
+    "nome": "LUCAS DE ALMEIDA CARDOSO",
+    "numero_inscricao": "107774-7",
+    "data_nascimento": "03/11/2009",
+    "oed": "RECIFE",
+    "GI": 200
+  },
+  {
+    "classificacao": 417,
+    "nome": "MARCO AURÉLIO MENDES SILVA CARVALHO",
+    "numero_inscricao": "104831-3",
+    "data_nascimento": "21/06/2009",
+    "oed": "PARNAÍBA",
+    "GI": 200
+  },
+  {
+    "classificacao": 418,
+    "nome": "ARTHUR SOUZA DE OLIVEIRA",
+    "numero_inscricao": "112403-0",
+    "data_nascimento": "03/06/2009",
+    "oed": "MANAUS",
+    "GI": 200
+  },
+  {
+    "classificacao": 419,
+    "nome": "GUSTAVO SANDES ARAUJO",
+    "numero_inscricao": "109599-6",
+    "data_nascimento": "19/05/2007",
+    "oed": "SALVADOR",
+    "GI": 200
+  },
+  {
+    "classificacao": 420,
+    "nome": "JOÃO HENRIQUE COSTA TENORIO DA SILVA",
+    "numero_inscricao": "110858-2",
+    "data_nascimento": "02/08/2004",
+    "oed": "RECIFE",
+    "GI": 200
+  },
+  {
+    "classificacao": 421,
+    "nome": "NILTON FERNANDES DA SILVA FILHO",
+    "numero_inscricao": "113172-3",
+    "data_nascimento": "09/07/2003",
+    "oed": "NATAL",
+    "GI": 200
+  },
+  {
+    "classificacao": 422,
+    "nome": "MARCUS VINÍCIUS MARTINS ARANHA",
+    "numero_inscricao": "102419-4",
+    "data_nascimento": "28/10/2006",
+    "oed": "BELÉM",
+    "GI": 200
+  },
+  {
+    "classificacao": 423,
+    "nome": "JOAO VICTOR DA COSTA PINTO",
+    "numero_inscricao": "100202-4",
+    "data_nascimento": "03/03/2007",
+    "oed": "MANAUS",
+    "GI": 200
+  },
+  {
+    "classificacao": 424,
+    "nome": "CARLOS HENRIQUE ALMEIDA SANTOS",
+    "numero_inscricao": "107237-2",
+    "data_nascimento": "09/06/2009",
+    "oed": "FORTALEZA",
+    "GI": 200
+  },
+  {
+    "classificacao": 425,
+    "nome": "SARA GABRIELLE SILVA ALVES DE ARAUJO",
+    "numero_inscricao": "102308-7",
+    "data_nascimento": "16/06/2003",
+    "oed": "MANAUS",
+    "GI": 200
+  },
+  {
+    "classificacao": 426,
+    "nome": "MAIRA LIMA DE ALMEIDA",
+    "numero_inscricao": "103060-7",
+    "data_nascimento": "28/12/2003",
+    "oed": "NATAL",
+    "GI": 200
+  },
+  {
+    "classificacao": 427,
+    "nome": "ARIEL FELIPE BRASIL DE SALES",
+    "numero_inscricao": "107475-7",
+    "data_nascimento": "27/03/2008",
+    "oed": "NATAL",
+    "GI": 200
+  },
+  {
+    "classificacao": 428,
+    "nome": "SÉRGIO RICARDO DOS SANTOS FILHO",
+    "numero_inscricao": "109375-5",
+    "data_nascimento": "07/06/2009",
+    "oed": "SALVADOR",
+    "GI": 200
+  },
+  {
+    "classificacao": 429,
+    "nome": "ADALBERTO ROCHA BARROS",
+    "numero_inscricao": "108285-3",
+    "data_nascimento": "28/08/2007",
+    "oed": "RECIFE",
+    "GI": 200
+  },
+  {
+    "classificacao": 430,
+    "nome": "MURILO SOARES EVANGELISTA",
+    "numero_inscricao": "108765-4",
+    "data_nascimento": "12/09/2008",
+    "oed": "PARNAÍBA",
+    "GI": 200
+  },
+  {
+    "classificacao": 431,
+    "nome": "PEDRO PEREZ DE SIQUEIRA",
+    "numero_inscricao": "107892-6",
+    "data_nascimento": "15/04/2008",
+    "oed": "RECIFE",
+    "GI": 200
+  },
+  {
+    "classificacao": 432,
+    "nome": "ERICK COSTA ARAÚJO",
+    "numero_inscricao": "113134-4",
+    "data_nascimento": "24/07/2005",
+    "oed": "FORTALEZA",
+    "GI": 200
+  },
+  {
+    "classificacao": 433,
+    "nome": "JOÃO PEDRO DE ANDRADE SOARES",
+    "numero_inscricao": "110987-6",
+    "data_nascimento": "28/02/2003",
+    "oed": "RECIFE",
+    "GI": 200
+  },
+  {
+    "classificacao": 434,
+    "nome": "LUCAS ROCHA FERNANDES LEITE",
+    "numero_inscricao": "105305-9",
+    "data_nascimento": "11/10/2007",
+    "oed": "RECIFE",
+    "GI": 200
+  },
+  {
+    "classificacao": 435,
+    "nome": "YASMIM CRISTINA PADILHA DE SOUSA",
+    "numero_inscricao": "110616-5",
+    "data_nascimento": "20/01/2007",
+    "oed": "BELÉM",
+    "GI": 200
+  },
+  {
+    "classificacao": 436,
+    "nome": "MATHEUS RODNEY BEZERRA REIS",
+    "numero_inscricao": "108083-1",
+    "data_nascimento": "11/10/2007",
+    "oed": "FORTALEZA",
+    "GI": 200
+  },
+  {
+    "classificacao": 437,
+    "nome": "GUSTAVO SANTOS DE AGUIAR",
+    "numero_inscricao": "100596-2",
+    "data_nascimento": "01/12/2007",
+    "oed": "RECIFE",
+    "GI": 200
+  },
+  {
+    "classificacao": 438,
+    "nome": "FIRMINO CAVALLARO BISNETO",
+    "numero_inscricao": "109603-2",
+    "data_nascimento": "06/06/2006",
+    "oed": "FORTALEZA",
+    "GI": 200
+  },
+  {
+    "classificacao": 439,
+    "nome": "LUCAS DA ROCHA LIRA",
+    "numero_inscricao": "106762-9",
+    "data_nascimento": "19/01/2005",
+    "oed": "NATAL",
+    "GI": 200
+  },
+  {
+    "classificacao": 440,
+    "nome": "DAVI DE OLIVEIRA SIMÕES DE CARVALHO",
+    "numero_inscricao": "102176-0",
+    "data_nascimento": "23/05/2006",
+    "oed": "FORTALEZA",
+    "GI": 200
+  },
+  {
+    "classificacao": 441,
+    "nome": "JOAO PEDRO DE MELO GUERRA",
+    "numero_inscricao": "104666-8",
+    "data_nascimento": "19/07/2008",
+    "oed": "FORTALEZA",
+    "GI": 195
+  },
+  {
+    "classificacao": 442,
+    "nome": "RUAN LIMA DE SOUSA",
+    "numero_inscricao": "107455-4",
+    "data_nascimento": "17/12/2005",
+    "oed": "FORTALEZA",
+    "GI": 195
+  },
+  {
+    "classificacao": 443,
+    "nome": "LORENZO OBREGON",
+    "numero_inscricao": "108975-6",
+    "data_nascimento": "29/01/2007",
+    "oed": "FORTALEZA",
+    "GI": 195
+  },
+  {
+    "classificacao": 444,
+    "nome": "SAMUEL MELO VIANA",
+    "numero_inscricao": "112706-2",
+    "data_nascimento": "24/09/2006",
+    "oed": "FORTALEZA",
+    "GI": 195
+  },
+  {
+    "classificacao": 445,
+    "nome": "ARTHUR FERNANDO NASCIMENTO DE LIMA",
+    "numero_inscricao": "102826-7",
+    "data_nascimento": "30/06/2006",
+    "oed": "RECIFE",
+    "GI": 195
+  },
+  {
+    "classificacao": 446,
+    "nome": "GUILHERME FIGUEIREDO BEZERRA",
+    "numero_inscricao": "107458-9",
+    "data_nascimento": "04/07/2007",
+    "oed": "FORTALEZA",
+    "GI": 195
+  },
+  {
+    "classificacao": 447,
+    "nome": "RAFAEL BEYDSON MACHADO LAVOR",
+    "numero_inscricao": "107531-1",
+    "data_nascimento": "15/08/2005",
+    "oed": "FORTALEZA",
+    "GI": 195
+  },
+  {
+    "classificacao": 448,
+    "nome": "ISADORA MEIRELLES DE JESUS",
+    "numero_inscricao": "107987-3",
+    "data_nascimento": "28/03/2003",
+    "oed": "FORTALEZA",
+    "GI": 195
+  },
+  {
+    "classificacao": 449,
+    "nome": "VINÍCIUS LUSTOSA ARAGÃO",
+    "numero_inscricao": "107319-9",
+    "data_nascimento": "12/10/2006",
+    "oed": "FORTALEZA",
+    "GI": 195
+  },
+  {
+    "classificacao": 450,
+    "nome": "ANTONIO GUILHERME SILVA DIAS",
+    "numero_inscricao": "104487-3",
+    "data_nascimento": "21/08/2008",
+    "oed": "PARNAÍBA",
+    "GI": 195
+  },
+  {
+    "classificacao": 451,
+    "nome": "MATHEUS NEVES PEREIRA",
+    "numero_inscricao": "100457-2",
+    "data_nascimento": "20/03/2003",
+    "oed": "SALVADOR",
+    "GI": 195
+  },
+  {
+    "classificacao": 452,
+    "nome": "ISABELLA OLIVEIRA AMORIM DA SILVA",
+    "numero_inscricao": "110400-4",
+    "data_nascimento": "09/03/2005",
+    "oed": "FORTALEZA",
+    "GI": 195
+  },
+  {
+    "classificacao": 453,
+    "nome": "JOAO MARCELLO CAFEZEIRO ALBUQUERQUE",
+    "numero_inscricao": "105218-7",
+    "data_nascimento": "26/11/2008",
+    "oed": "SALVADOR",
+    "GI": 195
+  },
+  {
+    "classificacao": 454,
+    "nome": "LUCAS BEZERRA DIAS",
+    "numero_inscricao": "113925-8",
+    "data_nascimento": "22/03/2006",
+    "oed": "NATAL",
+    "GI": 195
+  },
+  {
+    "classificacao": 455,
+    "nome": "PEDRO HENRIQUE BRANCO DE OLIVEIRA FRANCA",
+    "numero_inscricao": "110016-9",
+    "data_nascimento": "23/12/2007",
+    "oed": "RECIFE",
+    "GI": 195
+  },
+  {
+    "classificacao": 456,
+    "nome": "AMANDA DE BARROS GOMES",
+    "numero_inscricao": "111433-3",
+    "data_nascimento": "24/10/2005",
+    "oed": "RECIFE",
+    "GI": 195
+  },
+  {
+    "classificacao": 457,
+    "nome": "CAIO PORCIÚNCULA DE ARAGÃO MOREIRA",
+    "numero_inscricao": "110068-7",
+    "data_nascimento": "18/05/2007",
+    "oed": "SALVADOR",
+    "GI": 195
+  },
+  {
+    "classificacao": 458,
+    "nome": "JULIA ELLEN LIMA SANTOS DE SOUZA SILVA",
+    "numero_inscricao": "110919-8",
+    "data_nascimento": "29/07/2008",
+    "oed": "RECIFE",
+    "GI": 195
+  },
+  {
+    "classificacao": 459,
+    "nome": "YURY GONÇALVES DA SILVA",
+    "numero_inscricao": "100152-3",
+    "data_nascimento": "02/05/2004",
+    "oed": "SALVADOR",
+    "GI": 195
+  },
+  {
+    "classificacao": 460,
+    "nome": "GUILHERME PEREIRA DINIZ",
+    "numero_inscricao": "107598-7",
+    "data_nascimento": "28/09/2007",
+    "oed": "MANAUS",
+    "GI": 195
+  },
+  {
+    "classificacao": 461,
+    "nome": "EIDER MELO DE ANDRADE NETO",
+    "numero_inscricao": "110402-0",
+    "data_nascimento": "27/10/2007",
+    "oed": "NATAL",
+    "GI": 195
+  },
+  {
+    "classificacao": 462,
+    "nome": "GABRIEL AUGUSTO DE MORAIS PESSOA",
+    "numero_inscricao": "108345-0",
+    "data_nascimento": "17/04/2006",
+    "oed": "PARNAÍBA",
+    "GI": 195
+  },
+  {
+    "classificacao": 463,
+    "nome": "DAVI LUCENA DE OLIVEIRA",
+    "numero_inscricao": "104366-0",
+    "data_nascimento": "24/11/2008",
+    "oed": "RECIFE",
+    "GI": 195
+  },
+  {
+    "classificacao": 464,
+    "nome": "CAIO VICENTINI GRACIANO",
+    "numero_inscricao": "101442-0",
+    "data_nascimento": "18/07/2005",
+    "oed": "RECIFE",
+    "GI": 195
+  },
+  {
+    "classificacao": 465,
+    "nome": "JOÃO GUILHERME SILVEIRA DE ARRUDA",
+    "numero_inscricao": "106039-8",
+    "data_nascimento": "26/11/2008",
+    "oed": "FORTALEZA",
+    "GI": 195
+  },
+  {
+    "classificacao": 466,
+    "nome": "JOÃO MARCELO PEREIRA DUTRA",
+    "numero_inscricao": "110640-5",
+    "data_nascimento": "19/03/2005",
+    "oed": "BELÉM",
+    "GI": 195
+  },
+  {
+    "classificacao": 467,
+    "nome": "FÁBIO BRUNO BORGES PORTO",
+    "numero_inscricao": "103417-3",
+    "data_nascimento": "09/11/2004",
+    "oed": "BELÉM",
+    "GI": 195
+  },
+  {
+    "classificacao": 468,
+    "nome": "WYLTON ANDRADE PINHEIRO",
+    "numero_inscricao": "103896-7",
+    "data_nascimento": "10/09/2007",
+    "oed": "FORTALEZA",
+    "GI": 195
+  },
+  {
+    "classificacao": 469,
+    "nome": "GUILHERME DUARTE MORAES",
+    "numero_inscricao": "110193-8",
+    "data_nascimento": "21/05/2008",
+    "oed": "MANAUS",
+    "GI": 195
+  },
+  {
+    "classificacao": 470,
+    "nome": "DAVI TAVARES ARNAUD",
+    "numero_inscricao": "104882-3",
+    "data_nascimento": "23/09/2005",
+    "oed": "FORTALEZA",
+    "GI": 195
+  },
+  {
+    "classificacao": 471,
+    "nome": "FELIPE CHAVES GOMES",
+    "numero_inscricao": "105621-7",
+    "data_nascimento": "18/06/2004",
+    "oed": "RECIFE",
+    "GI": 195
+  },
+  {
+    "classificacao": 472,
+    "nome": "PEDRO GABRIEL CANDIDO DE SOUZA",
+    "numero_inscricao": "111740-3",
+    "data_nascimento": "24/06/2009",
+    "oed": "FORTALEZA",
+    "GI": 195
+  },
+  {
+    "classificacao": 473,
+    "nome": "SAMUEL ELEUTERIO BEZERRA DA SILVA",
+    "numero_inscricao": "111851-0",
+    "data_nascimento": "07/01/2009",
+    "oed": "BELÉM",
+    "GI": 195
+  },
+  {
+    "classificacao": 474,
+    "nome": "GIOVANNI FREITAS CRONEMBERGER",
+    "numero_inscricao": "104235-0",
+    "data_nascimento": "22/08/2006",
+    "oed": "FORTALEZA",
+    "GI": 195
+  },
+  {
+    "classificacao": 475,
+    "nome": "LETÍCIA NUNES NOBREGA",
+    "numero_inscricao": "103993-5",
+    "data_nascimento": "31/12/2003",
+    "oed": "FORTALEZA",
+    "GI": 195
+  },
+  {
+    "classificacao": 476,
+    "nome": "MATEUS RIBEIRO DE SOUSA COSTA",
+    "numero_inscricao": "105984-8",
+    "data_nascimento": "04/01/2009",
+    "oed": "FORTALEZA",
+    "GI": 195
+  },
+  {
+    "classificacao": 477,
+    "nome": "YSAK SANTOS DE ABREU",
+    "numero_inscricao": "102602-6",
+    "data_nascimento": "06/12/2007",
+    "oed": "BELÉM",
+    "GI": 195
+  },
+  {
+    "classificacao": 478,
+    "nome": "YAGO LANDIM GUEDES",
+    "numero_inscricao": "106414-5",
+    "data_nascimento": "19/03/2007",
+    "oed": "SALVADOR",
+    "GI": 195
+  },
+  {
+    "classificacao": 479,
+    "nome": "LUIS FELIPE COSTA E SILVA RISUENHO",
+    "numero_inscricao": "103741-1",
+    "data_nascimento": "12/12/2005",
+    "oed": "BELÉM",
+    "GI": 195
+  },
+  {
+    "classificacao": 480,
+    "nome": "MÁRIO RUSEMBERG BEZERRA LIMA",
+    "numero_inscricao": "108197-3",
+    "data_nascimento": "08/07/2008",
+    "oed": "FORTALEZA",
+    "GI": 195
+  },
+  {
+    "classificacao": 481,
+    "nome": "LOHANNE VANESSA MOREIRA",
+    "numero_inscricao": "109656-9",
+    "data_nascimento": "23/04/2008",
+    "oed": "FORTALEZA",
+    "GI": 195
+  },
+  {
+    "classificacao": 482,
+    "nome": "CLARA COSTA DA SILVA GOMES",
+    "numero_inscricao": "111873-0",
+    "data_nascimento": "16/12/2004",
+    "oed": "RECIFE",
+    "GI": 195
+  },
+  {
+    "classificacao": 483,
+    "nome": "GUILHERME ALELAF DINIZ",
+    "numero_inscricao": "103936-1",
+    "data_nascimento": "06/09/2008",
+    "oed": "SALVADOR",
+    "GI": 195
+  },
+  {
+    "classificacao": 484,
+    "nome": "PEDRO LIMA CHAVES",
+    "numero_inscricao": "112460-3",
+    "data_nascimento": "26/05/2008",
+    "oed": "FORTALEZA",
+    "GI": 195
+  },
+  {
+    "classificacao": 485,
+    "nome": "CIPRIANO FLOR MACHADO DA PAIXÃO",
+    "numero_inscricao": "111834-2",
+    "data_nascimento": "07/02/2009",
+    "oed": "FORTALEZA",
+    "GI": 195
+  },
+  {
+    "classificacao": 486,
+    "nome": "LUCAS D ALVA ALVES",
+    "numero_inscricao": "108573-9",
+    "data_nascimento": "25/03/2009",
+    "oed": "FORTALEZA",
+    "GI": 195
+  },
+  {
+    "classificacao": 487,
+    "nome": "REBECA NASCIMENTO MARTINS",
+    "numero_inscricao": "109835-3",
+    "data_nascimento": "04/03/2006",
+    "oed": "FORTALEZA",
+    "GI": 195
+  },
+  {
+    "classificacao": 488,
+    "nome": "MICHEL ANTUNES PEDREIRA",
+    "numero_inscricao": "102780-3",
+    "data_nascimento": "11/08/2004",
+    "oed": "SALVADOR",
+    "GI": 195
+  },
+  {
+    "classificacao": 489,
+    "nome": "GUSTAVO VAZ RODRIGUES SANTOS",
+    "numero_inscricao": "106985-1",
+    "data_nascimento": "01/09/2008",
+    "oed": "BELÉM",
+    "GI": 195
+  },
+  {
+    "classificacao": 490,
+    "nome": "JOSÉ LEVI ALEXANDRE DE PAULA SILVA",
+    "numero_inscricao": "110770-7",
+    "data_nascimento": "02/01/2009",
+    "oed": "FORTALEZA",
+    "GI": 195
+  },
+  {
+    "classificacao": 491,
+    "nome": "JOÃO VICTOR ALMEIDA VIGARIO",
+    "numero_inscricao": "109295-5",
+    "data_nascimento": "27/06/2007",
+    "oed": "BELÉM",
+    "GI": 195
+  },
+  {
+    "classificacao": 492,
+    "nome": "LUÍS AUGUSTO PETZOLD FIGUEIREDO",
+    "numero_inscricao": "102105-7",
+    "data_nascimento": "29/09/2007",
+    "oed": "SALVADOR",
+    "GI": 195
+  },
+  {
+    "classificacao": 493,
+    "nome": "CARLOS ARTUR SABINO SALES",
+    "numero_inscricao": "105802-8",
+    "data_nascimento": "06/09/2008",
+    "oed": "RECIFE",
+    "GI": 195
+  },
+  {
+    "classificacao": 494,
+    "nome": "JOÃO VICTOR DA SILVA BEZERRA",
+    "numero_inscricao": "105008-5",
+    "data_nascimento": "06/05/2006",
+    "oed": "FORTALEZA",
+    "GI": 195
+  },
+  {
+    "classificacao": 495,
+    "nome": "CLARA LUA CARVALHO VITAL ZUGNO AGUZZOLI",
+    "numero_inscricao": "112666-8",
+    "data_nascimento": "11/10/2004",
+    "oed": "FORTALEZA",
+    "GI": 195
+  },
+  {
+    "classificacao": 496,
+    "nome": "VITOR VIANA MARTINS",
+    "numero_inscricao": "113558-0",
+    "data_nascimento": "13/08/2005",
+    "oed": "FORTALEZA",
+    "GI": 195
+  },
+  {
+    "classificacao": 497,
+    "nome": "PEDRO VITOR MAURICIO FÉLIX",
+    "numero_inscricao": "102426-6",
+    "data_nascimento": "22/11/2008",
+    "oed": "NATAL",
+    "GI": 195
+  },
+  {
+    "classificacao": 498,
+    "nome": "IAGO FERREIRA SILVESTRE",
+    "numero_inscricao": "104671-3",
+    "data_nascimento": "20/02/2004",
+    "oed": "SALVADOR",
+    "GI": 195
+  },
+  {
+    "classificacao": 499,
+    "nome": "ERICK ANDREW CAVALCANTE NASCIMENTO DE CARVALHO",
+    "numero_inscricao": "112551-8",
+    "data_nascimento": "28/09/2006",
+    "oed": "NATAL",
+    "GI": 195
+  },
+  {
+    "classificacao": 500,
+    "nome": "THAINÁ CAROLINI SILVA MARTINS",
+    "numero_inscricao": "100999-8",
+    "data_nascimento": "06/03/2008",
+    "oed": "BELÉM",
+    "GI": 195
+  },
+  {
+    "classificacao": 501,
+    "nome": "RUAN SILVEIRA",
+    "numero_inscricao": "100166-2",
+    "data_nascimento": "26/07/2006",
+    "oed": "SALVADOR",
+    "GI": 195
+  },
+  {
+    "classificacao": 502,
+    "nome": "GUILHERME SANTOS MEIRELES",
+    "numero_inscricao": "101254-8",
+    "data_nascimento": "28/10/2007",
+    "oed": "NATAL",
+    "GI": 195
+  },
+  {
+    "classificacao": 503,
+    "nome": "GABRIEL RODRIGUES FARIAS",
+    "numero_inscricao": "105328-6",
+    "data_nascimento": "05/10/2004",
+    "oed": "FORTALEZA",
+    "GI": 195
+  },
+  {
+    "classificacao": 504,
+    "nome": "CAIO RODRIGUES CRUZ",
+    "numero_inscricao": "101738-1",
+    "data_nascimento": "23/09/2005",
+    "oed": "RECIFE",
+    "GI": 195
+  },
+  {
+    "classificacao": 505,
+    "nome": "EDUARDO RODRIGUES XAVIER DE SÁ",
+    "numero_inscricao": "110323-9",
+    "data_nascimento": "11/10/2007",
+    "oed": "SALVADOR",
+    "GI": 195
+  },
+  {
+    "classificacao": 506,
+    "nome": "FERNANDO FRA ALVES DE LIMA TAVARES",
+    "numero_inscricao": "100535-6",
+    "data_nascimento": "18/09/2005",
+    "oed": "BELÉM",
+    "GI": 195
+  },
+  {
+    "classificacao": 507,
+    "nome": "ARTHUR DE MOURA GUEDES",
+    "numero_inscricao": "101944-0",
+    "data_nascimento": "19/09/2007",
+    "oed": "NATAL",
+    "GI": 195
+  },
+  {
+    "classificacao": 508,
+    "nome": "MATHEUS RYAN SILVA DE MELO",
+    "numero_inscricao": "105322-7",
+    "data_nascimento": "09/04/2007",
+    "oed": "MANAUS",
+    "GI": 195
+  },
+  {
+    "classificacao": 509,
+    "nome": "LUCAS MUNIZ RODRIGUES",
+    "numero_inscricao": "100107-2",
+    "data_nascimento": "29/07/2007",
+    "oed": "BELÉM",
+    "GI": 195
+  },
+  {
+    "classificacao": 510,
+    "nome": "WESKLLEY YURI FIALHO DA SILVA",
+    "numero_inscricao": "100463-6",
+    "data_nascimento": "14/04/2008",
+    "oed": "RECIFE",
+    "GI": 195
+  },
+  {
+    "classificacao": 511,
+    "nome": "JULIO CESAR DE LIMA MENDONÇA",
+    "numero_inscricao": "102085-5",
+    "data_nascimento": "23/06/2005",
+    "oed": "NATAL",
+    "GI": 195
+  },
+  {
+    "classificacao": 512,
+    "nome": "ARTHUR DE QUEIROS DODD MARIANO",
+    "numero_inscricao": "107993-7",
+    "data_nascimento": "25/08/2007",
+    "oed": "FORTALEZA",
+    "GI": 195
+  },
+  {
+    "classificacao": 513,
+    "nome": "KAUAN CHAVES TEIXEIRA",
+    "numero_inscricao": "102631-7",
+    "data_nascimento": "22/09/2003",
+    "oed": "BELÉM",
+    "GI": 195
+  },
+  {
+    "classificacao": 514,
+    "nome": "ÁGATHA LETÍCIA MIRANDA SILVA",
+    "numero_inscricao": "110018-5",
+    "data_nascimento": "06/07/2006",
+    "oed": "RECIFE",
+    "GI": 195
+  },
+  {
+    "classificacao": 515,
+    "nome": "DIEGO SARAIVA BARBOSA",
+    "numero_inscricao": "105099-0",
+    "data_nascimento": "03/06/2009",
+    "oed": "FORTALEZA",
+    "GI": 195
+  },
+  {
+    "classificacao": 516,
+    "nome": "DAVID JESUS SANTOS SIQUEIRA",
+    "numero_inscricao": "111981-2",
+    "data_nascimento": "22/09/2004",
+    "oed": "BELÉM",
+    "GI": 195
+  },
+  {
+    "classificacao": 517,
+    "nome": "MIGUEL SCAGLIONI DE LA PUENTE",
+    "numero_inscricao": "103059-4",
+    "data_nascimento": "07/04/2006",
+    "oed": "SALVADOR",
+    "GI": 195
+  },
+  {
+    "classificacao": 518,
+    "nome": "JORGE EDUARDO NUNES GUERRA",
+    "numero_inscricao": "112016-0",
+    "data_nascimento": "05/07/2004",
+    "oed": "RECIFE",
+    "GI": 195
+  },
+  {
+    "classificacao": 519,
+    "nome": "DANDARA PEREIRA SILVA",
+    "numero_inscricao": "101812-2",
+    "data_nascimento": "13/06/2005",
+    "oed": "SALVADOR",
+    "GI": 195
+  },
+  {
+    "classificacao": 520,
+    "nome": "PEDRO COSTA GARCIA",
+    "numero_inscricao": "100669-0",
+    "data_nascimento": "12/08/2009",
+    "oed": "BELÉM",
+    "GI": 195
+  },
+  {
+    "classificacao": 521,
+    "nome": "RENAN NEGRÃO GOMES CARNEIRO",
+    "numero_inscricao": "104296-6",
+    "data_nascimento": "15/02/2007",
+    "oed": "BELÉM",
+    "GI": 195
+  },
+  {
+    "classificacao": 522,
+    "nome": "ADRIANO MOTA DE SOUSA JUNIOR",
+    "numero_inscricao": "104475-0",
+    "data_nascimento": "08/09/2005",
+    "oed": "NATAL",
+    "GI": 195
+  },
+  {
+    "classificacao": 523,
+    "nome": "RENATO ARAÚJO MELO",
+    "numero_inscricao": "109366-7",
+    "data_nascimento": "16/01/2006",
+    "oed": "FORTALEZA",
+    "GI": 195
+  },
+  {
+    "classificacao": 524,
+    "nome": "ANA ESTER AFONSO DE SOUZA CAVALCANTE",
+    "numero_inscricao": "110872-6",
+    "data_nascimento": "16/08/2006",
+    "oed": "FORTALEZA",
+    "GI": 195
+  },
+  {
+    "classificacao": 525,
+    "nome": "CESARIO AUGUSTO FERNANDES MARTINS NETO",
+    "numero_inscricao": "108087-4",
+    "data_nascimento": "29/05/2008",
+    "oed": "FORTALEZA",
+    "GI": 190
+  },
+  {
+    "classificacao": 526,
+    "nome": "CARLOS EDUARDO VIANA BARROS",
+    "numero_inscricao": "108681-1",
+    "data_nascimento": "13/04/2006",
+    "oed": "FORTALEZA",
+    "GI": 190
+  },
+  {
+    "classificacao": 527,
+    "nome": "LAERTE CESÁRIO AMORIM ALMEIDA",
+    "numero_inscricao": "112494-5",
+    "data_nascimento": "04/10/2006",
+    "oed": "SÃO LUIS",
+    "GI": 190
+  },
+  {
+    "classificacao": 528,
+    "nome": "GABRIEL GADELHA COSTA",
+    "numero_inscricao": "107447-4",
+    "data_nascimento": "10/06/2009",
+    "oed": "FORTALEZA",
+    "GI": 190
+  },
+  {
+    "classificacao": 529,
+    "nome": "MARCOS VINICIUS ALVES DOS SANTOS",
+    "numero_inscricao": "111472-0",
+    "data_nascimento": "05/02/2009",
+    "oed": "SALVADOR",
+    "GI": 190
+  },
+  {
+    "classificacao": 530,
+    "nome": "YURI ALEXANDRE DA FONSECA BARROS",
+    "numero_inscricao": "107370-3",
+    "data_nascimento": "21/04/2005",
+    "oed": "BELÉM",
+    "GI": 190
+  },
+  {
+    "classificacao": 531,
+    "nome": "HEITOR RICARTE GUIMARÃES",
+    "numero_inscricao": "102549-6",
+    "data_nascimento": "02/06/2005",
+    "oed": "FORTALEZA",
+    "GI": 190
+  },
+  {
+    "classificacao": 532,
+    "nome": "THIAGO FELIPE ARAUJO DE SOUZA",
+    "numero_inscricao": "111130-0",
+    "data_nascimento": "27/01/2004",
+    "oed": "MANAUS",
+    "GI": 190
+  },
+  {
+    "classificacao": 533,
+    "nome": "JOANA LINDA DOS SANTOS CEZAR",
+    "numero_inscricao": "102101-4",
+    "data_nascimento": "17/02/2006",
+    "oed": "PARNAÍBA",
+    "GI": 190
+  },
+  {
+    "classificacao": 534,
+    "nome": "VICTOR WESLLEY SOUSA RODRIGUES",
+    "numero_inscricao": "108373-3",
+    "data_nascimento": "24/10/2005",
+    "oed": "FORTALEZA",
+    "GI": 190
+  },
+  {
+    "classificacao": 535,
+    "nome": "AROLDO ANDREY LIMA DAMASCENO",
+    "numero_inscricao": "108155-1",
+    "data_nascimento": "29/06/2009",
+    "oed": "FORTALEZA",
+    "GI": 190
+  },
+  {
+    "classificacao": 536,
+    "nome": "RUAN FURTADO GOBETTI",
+    "numero_inscricao": "102604-2",
+    "data_nascimento": "27/11/2003",
+    "oed": "RECIFE",
+    "GI": 190
+  },
+  {
+    "classificacao": 537,
+    "nome": "RAFAEL FONSECA LIRA",
+    "numero_inscricao": "112232-5",
+    "data_nascimento": "22/04/2009",
+    "oed": "FORTALEZA",
+    "GI": 190
+  },
+  {
+    "classificacao": 538,
+    "nome": "IZYS DE OLIVEIRA QUARESMA",
+    "numero_inscricao": "110925-1",
+    "data_nascimento": "12/06/2008",
+    "oed": "FORTALEZA",
+    "GI": 190
+  },
+  {
+    "classificacao": 539,
+    "nome": "ARTHUR LUCAS BARRETO FARIAS",
+    "numero_inscricao": "111348-8",
+    "data_nascimento": "04/08/2009",
+    "oed": "BELÉM",
+    "GI": 190
+  },
+  {
+    "classificacao": 540,
+    "nome": "JOÃO LACERDA MEDEIROS",
+    "numero_inscricao": "105308-3",
+    "data_nascimento": "04/07/2008",
+    "oed": "RECIFE",
+    "GI": 190
+  },
+  {
+    "classificacao": 541,
+    "nome": "PAULO RICARDO CHILHEN TEODORO",
+    "numero_inscricao": "100131-2",
+    "data_nascimento": "09/03/2005",
+    "oed": "RECIFE",
+    "GI": 190
+  },
+  {
+    "classificacao": 542,
+    "nome": "MATEUS DE ALMEIDA PONTES BARBARA",
+    "numero_inscricao": "109589-0",
+    "data_nascimento": "29/01/2005",
+    "oed": "RECIFE",
+    "GI": 190
+  },
+  {
+    "classificacao": 543,
+    "nome": "MATHEUS MACEDO DE SOUSA",
+    "numero_inscricao": "110895-3",
+    "data_nascimento": "07/06/2007",
+    "oed": "FORTALEZA",
+    "GI": 190
+  },
+  {
+    "classificacao": 544,
+    "nome": "BRENO DIÓGENES PINHEIRO SA",
+    "numero_inscricao": "107013-1",
+    "data_nascimento": "29/07/2009",
+    "oed": "FORTALEZA",
+    "GI": 190
+  },
+  {
+    "classificacao": 545,
+    "nome": "BRUNO GABRIEL TRAVASSOS GOMES BARRETO",
+    "numero_inscricao": "105857-0",
+    "data_nascimento": "12/03/2007",
+    "oed": "RECIFE",
+    "GI": 190
+  },
+  {
+    "classificacao": 546,
+    "nome": "ITALO FREITAS ROSÁRIO",
+    "numero_inscricao": "100701-0",
+    "data_nascimento": "10/11/2005",
+    "oed": "BELÉM",
+    "GI": 190
+  },
+  {
+    "classificacao": 547,
+    "nome": "CARLOS DANIEL RODRIGUES FERNANDES",
+    "numero_inscricao": "103861-7",
+    "data_nascimento": "14/06/2006",
+    "oed": "NATAL",
+    "GI": 190
+  },
+  {
+    "classificacao": 548,
+    "nome": "LUCAS DE JESUS AMORIM",
+    "numero_inscricao": "102049-2",
+    "data_nascimento": "06/06/2005",
+    "oed": "SALVADOR",
+    "GI": 190
+  },
+  {
+    "classificacao": 549,
+    "nome": "KARLA LORENA LIMA DE LIRA",
+    "numero_inscricao": "100249-7",
+    "data_nascimento": "23/10/2006",
+    "oed": "NATAL",
+    "GI": 190
+  },
+  {
+    "classificacao": 550,
+    "nome": "GUSTAVO JOSÉ PACHECO CORREIA",
+    "numero_inscricao": "100127-5",
+    "data_nascimento": "21/03/2004",
+    "oed": "SALVADOR",
+    "GI": 190
+  },
+  {
+    "classificacao": 551,
+    "nome": "SAMUEL ASAFE BENJAMIM CLEMENTE DOS SANTOS",
+    "numero_inscricao": "113366-5",
+    "data_nascimento": "07/11/2007",
+    "oed": "RECIFE",
+    "GI": 190
+  },
+  {
+    "classificacao": 552,
+    "nome": "JOAQUIM ALMEIDA GONÇALVES DAMASCENO",
+    "numero_inscricao": "104374-0",
+    "data_nascimento": "15/05/2006",
+    "oed": "BELÉM",
+    "GI": 190
+  },
+  {
+    "classificacao": 553,
+    "nome": "PEDRO HENRIQUE NEVES SOUSA DA COSTA",
+    "numero_inscricao": "106986-0",
+    "data_nascimento": "13/03/2009",
+    "oed": "BELÉM",
+    "GI": 190
+  },
+  {
+    "classificacao": 554,
+    "nome": "TAYNÁ DOS REIS MARIANO",
+    "numero_inscricao": "109993-8",
+    "data_nascimento": "22/05/2006",
+    "oed": "SALVADOR",
+    "GI": 190
+  },
+  {
+    "classificacao": 555,
+    "nome": "ENZO EVENCIO VIEIRA DE ALMEIDA",
+    "numero_inscricao": "105685-8",
+    "data_nascimento": "09/06/2005",
+    "oed": "PARNAÍBA",
+    "GI": 190
+  },
+  {
+    "classificacao": 556,
+    "nome": "JOÃO PEDRO MEDEIROS FAÇANHA",
+    "numero_inscricao": "101161-7",
+    "data_nascimento": "11/11/2009",
+    "oed": "FORTALEZA",
+    "GI": 190
+  },
+  {
+    "classificacao": 557,
+    "nome": "MARIA CLARA MORAES SOARES",
+    "numero_inscricao": "102470-9",
+    "data_nascimento": "15/12/2008",
+    "oed": "BELÉM",
+    "GI": 190
+  },
+  {
+    "classificacao": 558,
+    "nome": "TAUAN MORAES DE FREITAS",
+    "numero_inscricao": "107622-6",
+    "data_nascimento": "16/05/2007",
+    "oed": "FORTALEZA",
+    "GI": 190
+  },
+  {
+    "classificacao": 559,
+    "nome": "FABIO CRISTOVAO CABRAL DE VASCONCELOS CAMPOS",
+    "numero_inscricao": "108508-5",
+    "data_nascimento": "12/12/2007",
+    "oed": "NATAL",
+    "GI": 190
+  },
+  {
+    "classificacao": 560,
+    "nome": "PAULA OLIVEIRA RAMALHO",
+    "numero_inscricao": "106258-8",
+    "data_nascimento": "19/12/2005",
+    "oed": "BELÉM",
+    "GI": 190
+  },
+  {
+    "classificacao": 561,
+    "nome": "LUIS GUILHERME DE ALMEIDA CABRAL",
+    "numero_inscricao": "112736-1",
+    "data_nascimento": "29/08/2007",
+    "oed": "MANAUS",
+    "GI": 190
+  },
+  {
+    "classificacao": 562,
+    "nome": "MIGUEL BARRA VALLADAO",
+    "numero_inscricao": "106452-4",
+    "data_nascimento": "08/03/2004",
+    "oed": "SALVADOR",
+    "GI": 190
+  },
+  {
+    "classificacao": 563,
+    "nome": "LUIZ GUSTAVO FAUSTINO DE ALMEIDA LUCENA",
+    "numero_inscricao": "111542-4",
+    "data_nascimento": "17/05/2009",
+    "oed": "PARNAÍBA",
+    "GI": 190
+  },
+  {
+    "classificacao": 564,
+    "nome": "MARIA VICTÓRIA BONIFACIO AZEVEDO GERPE",
+    "numero_inscricao": "109586-5",
+    "data_nascimento": "14/07/2006",
+    "oed": "RECIFE",
+    "GI": 190
+  },
+  {
+    "classificacao": 565,
+    "nome": "CARLOS VINICIUS TAVARES MODESTO",
+    "numero_inscricao": "109255-0",
+    "data_nascimento": "03/05/2007",
+    "oed": "BELÉM",
+    "GI": 190
+  },
+  {
+    "classificacao": 566,
+    "nome": "FERNANDO YAGO CUNHA DA SILVA",
+    "numero_inscricao": "108966-8",
+    "data_nascimento": "28/02/2003",
+    "oed": "NATAL",
+    "GI": 190
+  },
+  {
+    "classificacao": 567,
+    "nome": "JOÃO DE LIMA VEIGA NETO",
+    "numero_inscricao": "101037-4",
+    "data_nascimento": "01/05/2005",
+    "oed": "BELÉM",
+    "GI": 190
+  },
+  {
+    "classificacao": 568,
+    "nome": "LÍVIA MELLO FERNANDES",
+    "numero_inscricao": "103537-9",
+    "data_nascimento": "18/03/2003",
+    "oed": "RECIFE",
+    "GI": 190
+  },
+  {
+    "classificacao": 569,
+    "nome": "GABRIEL EL HAKEH DE PAULA",
+    "numero_inscricao": "106106-7",
+    "data_nascimento": "06/01/2007",
+    "oed": "RECIFE",
+    "GI": 190
+  },
+  {
+    "classificacao": 570,
+    "nome": "HENRY CHARLES PERERA MIRANDA",
+    "numero_inscricao": "105468-4",
+    "data_nascimento": "07/04/2005",
+    "oed": "SALVADOR",
+    "GI": 190
+  },
+  {
+    "classificacao": 571,
+    "nome": "GABRIEL BARROS MARANHÃO DE MIRANDA",
+    "numero_inscricao": "111383-2",
+    "data_nascimento": "18/12/2007",
+    "oed": "RECIFE",
+    "GI": 190
+  },
+  {
+    "classificacao": 572,
+    "nome": "RENATO ARAGAO DA SILVA NETO",
+    "numero_inscricao": "102191-1",
+    "data_nascimento": "08/02/2006",
+    "oed": "FORTALEZA",
+    "GI": 190
+  },
+  {
+    "classificacao": 573,
+    "nome": "GABRIEL FERNANDES DE CARVALHO",
+    "numero_inscricao": "103061-5",
+    "data_nascimento": "01/12/2007",
+    "oed": "SALVADOR",
+    "GI": 190
+  },
+  {
+    "classificacao": 574,
+    "nome": "ELIZABETE MENEZES DE LIMA",
+    "numero_inscricao": "110821-6",
+    "data_nascimento": "09/10/2008",
+    "oed": "FORTALEZA",
+    "GI": 190
+  },
+  {
+    "classificacao": 575,
+    "nome": "INGRID NATHALLY DE LIMA SILVA",
+    "numero_inscricao": "106842-9",
+    "data_nascimento": "05/11/2004",
+    "oed": "NATAL",
+    "GI": 190
+  },
+  {
+    "classificacao": 576,
+    "nome": "ANTONIA YASMIM DOS ANJOS BORGES",
+    "numero_inscricao": "102331-9",
+    "data_nascimento": "18/12/2008",
+    "oed": "PARNAÍBA",
+    "GI": 190
+  },
+  {
+    "classificacao": 577,
+    "nome": "VINICIUS DA SILVA DIONIZIO",
+    "numero_inscricao": "104197-1",
+    "data_nascimento": "09/04/2007",
+    "oed": "NATAL",
+    "GI": 190
+  },
+  {
+    "classificacao": 578,
+    "nome": "ALEXANDRE VITOR SOARES BOTANI",
+    "numero_inscricao": "100940-2",
+    "data_nascimento": "02/08/2006",
+    "oed": "BELÉM",
+    "GI": 190
+  },
+  {
+    "classificacao": 579,
+    "nome": "THALITA FERREIRA CAVALCANTI",
+    "numero_inscricao": "100976-0",
+    "data_nascimento": "27/02/2007",
+    "oed": "PARNAÍBA",
+    "GI": 190
+  },
+  {
+    "classificacao": 580,
+    "nome": "BERNARDO PAULINO FERREIRA",
+    "numero_inscricao": "104203-4",
+    "data_nascimento": "23/01/2009",
+    "oed": "SALVADOR",
+    "GI": 190
+  },
+  {
+    "classificacao": 581,
+    "nome": "IRIS VALENTINA ANDRADE LOPES",
+    "numero_inscricao": "100116-0",
+    "data_nascimento": "22/02/2007",
+    "oed": "BELÉM",
+    "GI": 190
+  },
+  {
+    "classificacao": 582,
+    "nome": "YAN GIULLIANO BRABO DAMASO",
+    "numero_inscricao": "101088-4",
+    "data_nascimento": "22/03/2004",
+    "oed": "BELÉM",
+    "GI": 190
+  },
+  {
+    "classificacao": 583,
+    "nome": "MARIANA BRAGA DA SILVA",
+    "numero_inscricao": "110086-3",
+    "data_nascimento": "01/04/2003",
+    "oed": "SALVADOR",
+    "GI": 190
+  },
+  {
+    "classificacao": 584,
+    "nome": "JOÃO VICTOR SOARES TAVARES",
+    "numero_inscricao": "100338-5",
+    "data_nascimento": "26/07/2008",
+    "oed": "RECIFE",
+    "GI": 190
+  },
+  {
+    "classificacao": 585,
+    "nome": "EWERTHON RIBEIRO DE SOUZA LIMA",
+    "numero_inscricao": "104358-0",
+    "data_nascimento": "05/03/2003",
+    "oed": "RECIFE",
+    "GI": 190
+  },
+  {
+    "classificacao": 586,
+    "nome": "ALAN MIGUEL OLIVEIRA DA SILVA",
+    "numero_inscricao": "109869-5",
+    "data_nascimento": "29/06/2008",
+    "oed": "RECIFE",
+    "GI": 190
+  },
+  {
+    "classificacao": 587,
+    "nome": "GEOVANNA ANDRADE SANTOS",
+    "numero_inscricao": "106676-5",
+    "data_nascimento": "04/09/2006",
+    "oed": "SALVADOR",
+    "GI": 190
+  },
+  {
+    "classificacao": 588,
+    "nome": "JOAO GABRIEL COELHO DE OLIVEIRA SANTOS",
+    "numero_inscricao": "112224-5",
+    "data_nascimento": "18/11/2008",
+    "oed": "SÃO LUIS",
+    "GI": 190
+  },
+  {
+    "classificacao": 589,
+    "nome": "ARTUR GILSON ALVES NOBRE",
+    "numero_inscricao": "108074-3",
+    "data_nascimento": "28/06/2006",
+    "oed": "FORTALEZA",
+    "GI": 185
+  },
+  {
+    "classificacao": 590,
+    "nome": "SAMUEL MARTINS VIEIRA JUNIOR",
+    "numero_inscricao": "101432-4",
+    "data_nascimento": "03/06/2007",
+    "oed": "MANAUS",
+    "GI": 185
+  },
+  {
+    "classificacao": 591,
+    "nome": "THIAGO DE ALMEIDA CARDOSO",
+    "numero_inscricao": "111171-4",
+    "data_nascimento": "14/01/2008",
+    "oed": "RECIFE",
+    "GI": 185
+  },
+  {
+    "classificacao": 592,
+    "nome": "GABRIEL LIMA LEAL",
+    "numero_inscricao": "106445-2",
+    "data_nascimento": "14/02/2007",
+    "oed": "RECIFE",
+    "GI": 185
+  },
+  {
+    "classificacao": 593,
+    "nome": "TÚLIO TAVARES COSTA SABINO",
+    "numero_inscricao": "108072-7",
+    "data_nascimento": "28/05/2004",
+    "oed": "SALVADOR",
+    "GI": 185
+  },
+  {
+    "classificacao": 594,
+    "nome": "HELOÍSA LIRA DE FARIAS",
+    "numero_inscricao": "105192-6",
+    "data_nascimento": "09/02/2009",
+    "oed": "RECIFE",
+    "GI": 185
+  },
+  {
+    "classificacao": 595,
+    "nome": "DAVI DOS ANJOS MIGUEZ PAIXÃO",
+    "numero_inscricao": "104355-5",
+    "data_nascimento": "21/10/2008",
+    "oed": "SALVADOR",
+    "GI": 185
+  },
+  {
+    "classificacao": 596,
+    "nome": "FELIPE ALENCAR ARAÚJO",
+    "numero_inscricao": "109078-1",
+    "data_nascimento": "28/11/2006",
+    "oed": "FORTALEZA",
+    "GI": 185
+  },
+  {
+    "classificacao": 597,
+    "nome": "AÍKE DE JESUS ALVES CUNHA",
+    "numero_inscricao": "110695-8",
+    "data_nascimento": "29/12/2008",
+    "oed": "PARNAÍBA",
+    "GI": 185
+  },
+  {
+    "classificacao": 598,
+    "nome": "EDUARDO SOEIRO SANTANA",
+    "numero_inscricao": "104491-0",
+    "data_nascimento": "30/11/2004",
+    "oed": "RECIFE",
+    "GI": 185
+  },
+  {
+    "classificacao": 599,
+    "nome": "GUSTAVO ROCHA DE LIRA CAMPOS",
+    "numero_inscricao": "106155-0",
+    "data_nascimento": "27/11/2005",
+    "oed": "RECIFE",
+    "GI": 185
+  },
+  {
+    "classificacao": 600,
+    "nome": "GABRIEL DE ANDRADE NASCIMENTO",
+    "numero_inscricao": "102669-1",
+    "data_nascimento": "30/05/2006",
+    "oed": "MANAUS",
+    "GI": 185
+  },
+  {
+    "classificacao": 601,
+    "nome": "LUCAS SANTOS DA SILVA",
+    "numero_inscricao": "111703-2",
+    "data_nascimento": "31/08/2008",
+    "oed": "FORTALEZA",
+    "GI": 185
+  },
+  {
+    "classificacao": 602,
+    "nome": "JÚLIO ARAÚJO AQUINO",
+    "numero_inscricao": "113907-1",
+    "data_nascimento": "03/07/2003",
+    "oed": "FORTALEZA",
+    "GI": 185
+  },
+  {
+    "classificacao": 603,
+    "nome": "THAIS VIRGINIA CARVALHO MACHADO",
+    "numero_inscricao": "101475-4",
+    "data_nascimento": "11/07/2008",
+    "oed": "PARNAÍBA",
+    "GI": 185
+  },
+  {
+    "classificacao": 604,
+    "nome": "ROMULO EDUARDO MARTINS CAVALCANTI",
+    "numero_inscricao": "102660-8",
+    "data_nascimento": "11/04/2005",
+    "oed": "SALVADOR",
+    "GI": 185
+  },
+  {
+    "classificacao": 605,
+    "nome": "ALEX SANTOS DO AMARAL",
+    "numero_inscricao": "100226-0",
+    "data_nascimento": "27/02/2006",
+    "oed": "BELÉM",
+    "GI": 185
+  },
+  {
+    "classificacao": 606,
+    "nome": "KAIO BARBOSA DA SILVA",
+    "numero_inscricao": "107673-6",
+    "data_nascimento": "21/03/2009",
+    "oed": "FORTALEZA",
+    "GI": 185
+  },
+  {
+    "classificacao": 607,
+    "nome": "ANDERSON LUCAS BRANDÃO ESTEVES",
+    "numero_inscricao": "108480-8",
+    "data_nascimento": "15/11/2008",
+    "oed": "BELÉM",
+    "GI": 185
+  },
+  {
+    "classificacao": 608,
+    "nome": "PEDRO GREGORIO PESSOA DE MACEDO",
+    "numero_inscricao": "112482-2",
+    "data_nascimento": "19/04/2007",
+    "oed": "NATAL",
+    "GI": 185
+  },
+  {
+    "classificacao": 609,
+    "nome": "PEDRO HENRIQUE DE SENA LIMA",
+    "numero_inscricao": "105756-0",
+    "data_nascimento": "25/07/2005",
+    "oed": "FORTALEZA",
+    "GI": 185
+  },
+  {
+    "classificacao": 610,
+    "nome": "EMANUEL RAWA GURGEL DE ARAUJO FREITAS",
+    "numero_inscricao": "105862-6",
+    "data_nascimento": "05/04/2005",
+    "oed": "NATAL",
+    "GI": 185
+  },
+  {
+    "classificacao": 611,
+    "nome": "SAMUEL LEITE DE BRITO FARIAS",
+    "numero_inscricao": "111183-7",
+    "data_nascimento": "18/10/2006",
+    "oed": "PARNAÍBA",
+    "GI": 185
+  },
+  {
+    "classificacao": 612,
+    "nome": "THALIA FURTADO AKSENEN",
+    "numero_inscricao": "108092-0",
+    "data_nascimento": "26/01/2007",
+    "oed": "FORTALEZA",
+    "GI": 185
+  },
+  {
+    "classificacao": 613,
+    "nome": "DANNIEL WELLINGTON EPAMINONDAS DOS SANTOS",
+    "numero_inscricao": "105774-6",
+    "data_nascimento": "28/08/2007",
+    "oed": "NATAL",
+    "GI": 185
+  },
+  {
+    "classificacao": 614,
+    "nome": "JOÃO WITOR WINCK COSTA",
+    "numero_inscricao": "101056-9",
+    "data_nascimento": "05/06/2004",
+    "oed": "BELÉM",
+    "GI": 185
+  },
+  {
+    "classificacao": 615,
+    "nome": "FELIPE KENZO BABA SANTOS",
+    "numero_inscricao": "101688-0",
+    "data_nascimento": "25/02/2007",
+    "oed": "SALVADOR",
+    "GI": 185
+  },
+  {
+    "classificacao": 616,
+    "nome": "JOSÉ MANOEL DE SOUSA NETO",
+    "numero_inscricao": "112277-1",
+    "data_nascimento": "11/11/2008",
+    "oed": "RECIFE",
+    "GI": 185
+  },
+  {
+    "classificacao": 617,
+    "nome": "ANDRÉ GABRIEL CAMPOS DA SILVA",
+    "numero_inscricao": "113509-7",
+    "data_nascimento": "29/09/2008",
+    "oed": "NATAL",
+    "GI": 185
+  },
+  {
+    "classificacao": 618,
+    "nome": "PRISCILA MARQUES SANTIAGO",
+    "numero_inscricao": "110793-4",
+    "data_nascimento": "25/04/2006",
+    "oed": "FORTALEZA",
+    "GI": 185
+  },
+  {
+    "classificacao": 619,
+    "nome": "BERNARDO FERRAZ NASCIMENTO",
+    "numero_inscricao": "100401-1",
+    "data_nascimento": "02/04/2007",
+    "oed": "SALVADOR",
+    "GI": 185
+  },
+  {
+    "classificacao": 620,
+    "nome": "SÉRGIO FELLIPE DA CRUZ GOES",
+    "numero_inscricao": "109150-6",
+    "data_nascimento": "24/05/2007",
+    "oed": "NATAL",
+    "GI": 185
+  },
+  {
+    "classificacao": 621,
+    "nome": "ANA BEATRIZ OLIVEIRA CAMPOS",
+    "numero_inscricao": "112958-6",
+    "data_nascimento": "10/04/2006",
+    "oed": "NATAL",
+    "GI": 185
+  },
+  {
+    "classificacao": 622,
+    "nome": "PEDRO GUILHERME MENDES DOS SANTOS",
+    "numero_inscricao": "109316-5",
+    "data_nascimento": "21/01/2003",
+    "oed": "NATAL",
+    "GI": 185
+  },
+  {
+    "classificacao": 623,
+    "nome": "BEATRIZ FERNANDES ALVES PINHO",
+    "numero_inscricao": "111621-6",
+    "data_nascimento": "17/06/2003",
+    "oed": "RECIFE",
+    "GI": 185
+  },
+  {
+    "classificacao": 624,
+    "nome": "ADERVAL SOUSA PERICO",
+    "numero_inscricao": "113506-2",
+    "data_nascimento": "30/12/2008",
+    "oed": "FORTALEZA",
+    "GI": 185
+  },
+  {
+    "classificacao": 625,
+    "nome": "ARTHUR ALEXIS RODRIGUES HAWKINS",
+    "numero_inscricao": "105491-6",
+    "data_nascimento": "17/04/2004",
+    "oed": "BELÉM",
+    "GI": 185
+  },
+  {
+    "classificacao": 626,
+    "nome": "MARIA LUIZA MARQUES DE CARVALHO",
+    "numero_inscricao": "102144-4",
+    "data_nascimento": "11/07/2008",
+    "oed": "RECIFE",
+    "GI": 185
+  },
+  {
+    "classificacao": 627,
+    "nome": "SOFIA DUCOS MEDEIROS",
+    "numero_inscricao": "107100-3",
+    "data_nascimento": "08/11/2008",
+    "oed": "MANAUS",
+    "GI": 185
+  },
+  {
+    "classificacao": 628,
+    "nome": "RODRIGO SILVA DA SILVA",
+    "numero_inscricao": "109681-7",
+    "data_nascimento": "25/10/2006",
+    "oed": "BELÉM",
+    "GI": 185
+  },
+  {
+    "classificacao": 629,
+    "nome": "FRANCISCO YURI DE BRITO VIEIRA",
+    "numero_inscricao": "103713-9",
+    "data_nascimento": "26/03/2009",
+    "oed": "PARNAÍBA",
+    "GI": 185
+  },
+  {
+    "classificacao": 630,
+    "nome": "LUIZ OTÁVIO SOUZA TANAN",
+    "numero_inscricao": "102706-1",
+    "data_nascimento": "01/04/2009",
+    "oed": "SALVADOR",
+    "GI": 185
+  },
+  {
+    "classificacao": 631,
+    "nome": "JOÃO ANDRYÊ SANTOS RIBEIRO",
+    "numero_inscricao": "101471-1",
+    "data_nascimento": "06/09/2007",
+    "oed": "NATAL",
+    "GI": 185
+  },
+  {
+    "classificacao": 632,
+    "nome": "ERIC FARIAS SOUZA",
+    "numero_inscricao": "101640-0",
+    "data_nascimento": "14/08/2007",
+    "oed": "BELÉM",
+    "GI": 185
+  },
+  {
+    "classificacao": 633,
+    "nome": "RODRIGO ALVES SANTOS VIEIRA",
+    "numero_inscricao": "110293-0",
+    "data_nascimento": "27/10/2003",
+    "oed": "SALVADOR",
+    "GI": 185
+  },
+  {
+    "classificacao": 634,
+    "nome": "PEDRO CARVALHO COUTINHO",
+    "numero_inscricao": "101512-4",
+    "data_nascimento": "19/02/2005",
+    "oed": "FORTALEZA",
+    "GI": 185
+  },
+  {
+    "classificacao": 635,
+    "nome": "DANIEL RODRIGUES VIANA",
+    "numero_inscricao": "100147-8",
+    "data_nascimento": "21/02/2008",
+    "oed": "NATAL",
+    "GI": 185
+  },
+  {
+    "classificacao": 636,
+    "nome": "MARCELO JOSÉ PEREIRA DONATO",
+    "numero_inscricao": "101509-5",
+    "data_nascimento": "22/03/2004",
+    "oed": "BELÉM",
+    "GI": 185
+  },
+  {
+    "classificacao": 637,
+    "nome": "CAIO BRUNO BRITO DE LEAO",
+    "numero_inscricao": "107311-3",
+    "data_nascimento": "19/05/2006",
+    "oed": "BELÉM",
+    "GI": 185
+  },
+  {
+    "classificacao": 638,
+    "nome": "JULIANA SALDANHA GUEDES",
+    "numero_inscricao": "111000-9",
+    "data_nascimento": "12/02/2007",
+    "oed": "BELÉM",
+    "GI": 185
+  },
+  {
+    "classificacao": 639,
+    "nome": "GIOVANNA VICTORIA MODESTO DE SOUSA",
+    "numero_inscricao": "113913-5",
+    "data_nascimento": "24/11/2005",
+    "oed": "BELÉM",
+    "GI": 185
+  },
+  {
+    "classificacao": 640,
+    "nome": "VICTOR HUGO DE ALMEIDA TEIXEIRA",
+    "numero_inscricao": "102096-0",
+    "data_nascimento": "31/01/2006",
+    "oed": "NATAL",
+    "GI": 185
+  },
+  {
+    "classificacao": 641,
+    "nome": "MATEUS DIAS BIÉ",
+    "numero_inscricao": "102017-7",
+    "data_nascimento": "24/10/2003",
+    "oed": "BELÉM",
+    "GI": 185
+  },
+  {
+    "classificacao": 642,
+    "nome": "LUCAS HENRIQUE GOUVEIA CRUZ",
+    "numero_inscricao": "111987-1",
+    "data_nascimento": "01/07/2006",
+    "oed": "NATAL",
+    "GI": 185
+  },
+  {
+    "classificacao": 643,
+    "nome": "JOAO VICTOR CARDOSO DE OLIVEIRA",
+    "numero_inscricao": "100571-9",
+    "data_nascimento": "28/08/2006",
+    "oed": "SALVADOR",
+    "GI": 185
+  },
+  {
+    "classificacao": 644,
+    "nome": "VINÍCIUS GABRIEL SILVA CAMPOS",
+    "numero_inscricao": "104885-8",
+    "data_nascimento": "22/04/2003",
+    "oed": "SALVADOR",
+    "GI": 185
+  },
+  {
+    "classificacao": 645,
+    "nome": "MARIA EDUARDA MAGALHÃES MENDES",
+    "numero_inscricao": "112780-4",
+    "data_nascimento": "10/08/2005",
+    "oed": "FORTALEZA",
+    "GI": 185
+  },
+  {
+    "classificacao": 646,
+    "nome": "JOÃO JOAQUIM FALCÃO SILVA",
+    "numero_inscricao": "105992-8",
+    "data_nascimento": "03/04/2009",
+    "oed": "FORTALEZA",
+    "GI": 185
+  },
+  {
+    "classificacao": 647,
+    "nome": "NICOLAS MIGUEL DOS ANJOS",
+    "numero_inscricao": "110624-5",
+    "data_nascimento": "15/09/2008",
+    "oed": "RECIFE",
+    "GI": 185
+  },
+  {
+    "classificacao": 648,
+    "nome": "CECILIA MUTTER BEZERRA DE LIMA",
+    "numero_inscricao": "104602-7",
+    "data_nascimento": "31/03/2009",
+    "oed": "FORTALEZA",
+    "GI": 185
+  },
+  {
+    "classificacao": 649,
+    "nome": "FELIPE DE MORAIS VIANA SAMPAIO",
+    "numero_inscricao": "107771-2",
+    "data_nascimento": "22/05/2009",
+    "oed": "FORTALEZA",
+    "GI": 185
+  },
+  {
+    "classificacao": 650,
+    "nome": "JOÃO PAULO RIBEIRO MANGABEIRA",
+    "numero_inscricao": "105252-3",
+    "data_nascimento": "05/03/2008",
+    "oed": "NATAL",
+    "GI": 185
+  },
+  {
+    "classificacao": 651,
+    "nome": "PEDRO AUGUSTO NEVES DOS SANTOS",
+    "numero_inscricao": "107176-7",
+    "data_nascimento": "21/08/2008",
+    "oed": "SALVADOR",
+    "GI": 185
+  },
+  {
+    "classificacao": 652,
+    "nome": "MOISÉS ÁVILA ZACARIAS FARIAS",
+    "numero_inscricao": "107470-6",
+    "data_nascimento": "01/08/2007",
+    "oed": "BELÉM",
+    "GI": 185
+  },
+  {
+    "classificacao": 653,
+    "nome": "CATARINA CHIARA MONTEIRO DE PAIVA",
+    "numero_inscricao": "105924-0",
+    "data_nascimento": "30/01/2007",
+    "oed": "RECIFE",
+    "GI": 185
+  },
+  {
+    "classificacao": 654,
+    "nome": "THIAGO HENRIQUE FAVACHO DE FREITAS",
+    "numero_inscricao": "105054-4",
+    "data_nascimento": "22/11/2006",
+    "oed": "BELÉM",
+    "GI": 185
+  },
+  {
+    "classificacao": 655,
+    "nome": "LUIZ FELIPE RODRIGUEZ SANTOS",
+    "numero_inscricao": "102411-9",
+    "data_nascimento": "19/01/2004",
+    "oed": "BELÉM",
+    "GI": 185
+  },
+  {
+    "classificacao": 656,
+    "nome": "VICTOR REIS DOS SANTOS",
+    "numero_inscricao": "107308-4",
+    "data_nascimento": "03/11/2005",
+    "oed": "BELÉM",
+    "GI": 185
+  },
+  {
+    "classificacao": 657,
+    "nome": "CAUA SILVA BATISTA",
+    "numero_inscricao": "108557-9",
+    "data_nascimento": "22/07/2007",
+    "oed": "BELÉM",
+    "GI": 185
+  },
+  {
+    "classificacao": 658,
+    "nome": "HEMMANUELLY VELTEN KLEIN GONÇALVES DUTRA",
+    "numero_inscricao": "107174-0",
+    "data_nascimento": "11/02/2007",
+    "oed": "SALVADOR",
+    "GI": 185
+  },
+  {
+    "classificacao": 659,
+    "nome": "DAVI ARAUJO BEZERRA",
+    "numero_inscricao": "108524-5",
+    "data_nascimento": "11/11/2006",
+    "oed": "FORTALEZA",
+    "GI": 185
+  },
+  {
+    "classificacao": 660,
+    "nome": "IASMIN PESSANHA DOURADO LINO",
+    "numero_inscricao": "100211-2",
+    "data_nascimento": "13/06/2007",
+    "oed": "SALVADOR",
+    "GI": 185
+  },
+  {
+    "classificacao": 661,
+    "nome": "LAUREANA DE LIMA DE MENDONÇA",
+    "numero_inscricao": "100141-9",
+    "data_nascimento": "17/08/2006",
+    "oed": "BELÉM",
+    "GI": 185
+  },
+  {
+    "classificacao": 662,
+    "nome": "GUILHERME LUIGGI UCHÔA CAVALCANTI",
+    "numero_inscricao": "109278-7",
+    "data_nascimento": "02/11/2007",
+    "oed": "RECIFE",
+    "GI": 185
+  },
+  {
+    "classificacao": 663,
+    "nome": "PEDRO HENRIQUE ARAUJO SILVA",
+    "numero_inscricao": "104502-4",
+    "data_nascimento": "02/02/2004",
+    "oed": "RECIFE",
+    "GI": 185
+  },
+  {
+    "classificacao": 664,
+    "nome": "JOAO VICTOR BARATA DE SOUZA",
+    "numero_inscricao": "113358-5",
+    "data_nascimento": "17/09/2008",
+    "oed": "BELÉM",
+    "GI": 185
+  },
+  {
+    "classificacao": 665,
+    "nome": "ISABELLY ROSENDO SILVA",
+    "numero_inscricao": "104379-0",
+    "data_nascimento": "27/10/2008",
+    "oed": "RECIFE",
+    "GI": 185
+  },
+  {
+    "classificacao": 666,
+    "nome": "LAUBER ARTUR DOS SANTOS MIRANDA",
+    "numero_inscricao": "101256-4",
+    "data_nascimento": "04/07/2005",
+    "oed": "PARNAÍBA",
+    "GI": 185
+  },
+  {
+    "classificacao": 667,
+    "nome": "FABRÍCIO DOS SANTOS ALMEIDA",
+    "numero_inscricao": "100625-2",
+    "data_nascimento": "30/11/2004",
+    "oed": "SALVADOR",
+    "GI": 185
+  },
+  {
+    "classificacao": 668,
+    "nome": "VICTOR MONTEIRO DE QUEIROZ",
+    "numero_inscricao": "112408-0",
+    "data_nascimento": "07/04/2007",
+    "oed": "SALVADOR",
+    "GI": 185
+  },
+  {
+    "classificacao": 669,
+    "nome": "ELIAS QUEIROZ DA SILVA",
+    "numero_inscricao": "111462-4",
+    "data_nascimento": "21/01/2008",
+    "oed": "SALVADOR",
+    "GI": 185
+  },
+  {
+    "classificacao": 670,
+    "nome": "LUIS INACIO SIQUEIRA DE JESUS",
+    "numero_inscricao": "100428-1",
+    "data_nascimento": "08/07/2006",
+    "oed": "SALVADOR",
+    "GI": 185
+  },
+  {
+    "classificacao": 671,
+    "nome": "MARIA CECÍLIA SOARES DE SENA SOUZA",
+    "numero_inscricao": "112580-9",
+    "data_nascimento": "16/04/2009",
+    "oed": "SALVADOR",
+    "GI": 185
+  },
+  {
+    "classificacao": 672,
+    "nome": "MIGUEL FILLIPE FRANÇA DA SILVA",
+    "numero_inscricao": "100925-0",
+    "data_nascimento": "04/06/2003",
+    "oed": "RECIFE",
+    "GI": 185
+  },
+  {
+    "classificacao": 673,
+    "nome": "SAMERSSON EMANUEL IRINEU DO NASCIMENTO",
+    "numero_inscricao": "103388-3",
+    "data_nascimento": "18/05/2005",
+    "oed": "NATAL",
+    "GI": 185
+  },
+  {
+    "classificacao": 674,
+    "nome": "RENAN SANTOS DE JESUS OLIVEIRA",
+    "numero_inscricao": "110292-2",
+    "data_nascimento": "22/08/2006",
+    "oed": "FORTALEZA",
+    "GI": 185
+  },
+  {
+    "classificacao": 675,
+    "nome": "GUSTAVO BASTOS VASCONCELOS DUARTE",
+    "numero_inscricao": "102854-0",
+    "data_nascimento": "26/06/2009",
+    "oed": "RECIFE",
+    "GI": 180
+  },
+  {
+    "classificacao": 676,
+    "nome": "DJACI DOS SANTOS ALVES JUNIOR",
+    "numero_inscricao": "107981-4",
+    "data_nascimento": "01/06/2005",
+    "oed": "RECIFE",
+    "GI": 180
+  },
+  {
+    "classificacao": 677,
+    "nome": "JOAO GABRIEL ARAUJO DA CUNHA",
+    "numero_inscricao": "102322-0",
+    "data_nascimento": "03/06/2008",
+    "oed": "RECIFE",
+    "GI": 180
+  },
+  {
+    "classificacao": 678,
+    "nome": "SAMYLE SANTOS PINHEIRO",
+    "numero_inscricao": "108462-1",
+    "data_nascimento": "03/05/2006",
+    "oed": "FORTALEZA",
+    "GI": 180
+  },
+  {
+    "classificacao": 679,
+    "nome": "LEONARDO MENDES FARIAS",
+    "numero_inscricao": "108429-3",
+    "data_nascimento": "10/11/2006",
+    "oed": "FORTALEZA",
+    "GI": 180
+  },
+  {
+    "classificacao": 680,
+    "nome": "MARCIO MARCOS DOS SANTOS JUNIOR",
+    "numero_inscricao": "111844-9",
+    "data_nascimento": "15/10/2003",
+    "oed": "SALVADOR",
+    "GI": 180
+  },
+  {
+    "classificacao": 681,
+    "nome": "ALEX MAKINO HONGO",
+    "numero_inscricao": "101419-9",
+    "data_nascimento": "05/03/2003",
+    "oed": "BELÉM",
+    "GI": 180
+  },
+  {
+    "classificacao": 682,
+    "nome": "ESTER SALVADOR DEMUNER",
+    "numero_inscricao": "104612-3",
+    "data_nascimento": "15/04/2008",
+    "oed": "SALVADOR",
+    "GI": 180
+  },
+  {
+    "classificacao": 683,
+    "nome": "HEITOR LEAL VELOSO",
+    "numero_inscricao": "112003-9",
+    "data_nascimento": "24/02/2009",
+    "oed": "BELÉM",
+    "GI": 180
+  },
+  {
+    "classificacao": 684,
+    "nome": "LUAN FARIAS SALES",
+    "numero_inscricao": "108136-7",
+    "data_nascimento": "02/11/2006",
+    "oed": "RECIFE",
+    "GI": 180
+  },
+  {
+    "classificacao": 685,
+    "nome": "JOÃO CAMILO DOS SANTOS NETO",
+    "numero_inscricao": "111930-2",
+    "data_nascimento": "22/02/2006",
+    "oed": "FORTALEZA",
+    "GI": 180
+  },
+  {
+    "classificacao": 686,
+    "nome": "GUILHERME ROCHA DE FREITAS",
+    "numero_inscricao": "113137-9",
+    "data_nascimento": "27/02/2006",
+    "oed": "FORTALEZA",
+    "GI": 180
+  },
+  {
+    "classificacao": 687,
+    "nome": "JOÃO RICARDO DE ARAUJO LANDIM",
+    "numero_inscricao": "102498-7",
+    "data_nascimento": "26/08/2004",
+    "oed": "FORTALEZA",
+    "GI": 180
+  },
+  {
+    "classificacao": 688,
+    "nome": "ARTHUR LUZ DOS SANTOS",
+    "numero_inscricao": "100454-8",
+    "data_nascimento": "25/10/2003",
+    "oed": "RECIFE",
+    "GI": 180
+  },
+  {
+    "classificacao": 689,
+    "nome": "DANIELL DÉO DE SOUSA NOGUEIRA",
+    "numero_inscricao": "102736-0",
+    "data_nascimento": "13/04/2004",
+    "oed": "BELÉM",
+    "GI": 180
+  },
+  {
+    "classificacao": 690,
+    "nome": "RAUL FRACEROL OLIVEIRA SANTOS",
+    "numero_inscricao": "104740-9",
+    "data_nascimento": "30/11/2008",
+    "oed": "BELÉM",
+    "GI": 180
+  },
+  {
+    "classificacao": 691,
+    "nome": "JOÃO VITOR RAMOS SPINELLI",
+    "numero_inscricao": "107090-8",
+    "data_nascimento": "23/03/2005",
+    "oed": "SALVADOR",
+    "GI": 180
+  },
+  {
+    "classificacao": 692,
+    "nome": "GABRIELY LIMA DOS ANJOS",
+    "numero_inscricao": "101491-4",
+    "data_nascimento": "16/12/2003",
+    "oed": "FORTALEZA",
+    "GI": 180
+  },
+  {
+    "classificacao": 693,
+    "nome": "PEDRO DIÓGENES BARBOSA DE SOUZA",
+    "numero_inscricao": "109918-8",
+    "data_nascimento": "19/08/2009",
+    "oed": "RECIFE",
+    "GI": 180
+  },
+  {
+    "classificacao": 694,
+    "nome": "FRANKLIN GOMES MENDES FILHO",
+    "numero_inscricao": "108046-0",
+    "data_nascimento": "23/06/2005",
+    "oed": "FORTALEZA",
+    "GI": 180
+  },
+  {
+    "classificacao": 695,
+    "nome": "JOÃO PEDRO PINTO SANTOS",
+    "numero_inscricao": "108785-7",
+    "data_nascimento": "26/12/2007",
+    "oed": "SALVADOR",
+    "GI": 180
+  },
+  {
+    "classificacao": 696,
+    "nome": "SAMUEL CAMPOS CARVALHO",
+    "numero_inscricao": "103683-0",
+    "data_nascimento": "13/08/2004",
+    "oed": "SANTARÉM",
+    "GI": 180
+  },
+  {
+    "classificacao": 697,
+    "nome": "MIGUEL FÉLIX FRANCA CRUZ",
+    "numero_inscricao": "102082-0",
+    "data_nascimento": "03/05/2009",
+    "oed": "RECIFE",
+    "GI": 180
+  },
+  {
+    "classificacao": 698,
+    "nome": "CAUÃ RENATO ABOIM NEVES DOS SANTOS",
+    "numero_inscricao": "101462-3",
+    "data_nascimento": "25/03/2006",
+    "oed": "BELÉM",
+    "GI": 180
+  },
+  {
+    "classificacao": 699,
+    "nome": "PEDRO GORDINHO ESTEVES DA SILVA",
+    "numero_inscricao": "106795-2",
+    "data_nascimento": "23/10/2006",
+    "oed": "MANAUS",
+    "GI": 180
+  },
+  {
+    "classificacao": 700,
+    "nome": "WICTOR DE OLIVEIRA MARQUES",
+    "numero_inscricao": "107272-7",
+    "data_nascimento": "26/03/2009",
+    "oed": "BELÉM",
+    "GI": 180
+  },
+  {
+    "classificacao": 701,
+    "nome": "MAIRON ADRIANO COSTA MELO",
+    "numero_inscricao": "102621-0",
+    "data_nascimento": "11/08/2006",
+    "oed": "MANAUS",
+    "GI": 180
+  },
+  {
+    "classificacao": 702,
+    "nome": "JOÃO PAULO DE ANDRADE NETO",
+    "numero_inscricao": "107030-0",
+    "data_nascimento": "07/02/2008",
+    "oed": "MANAUS",
+    "GI": 180
+  },
+  {
+    "classificacao": 703,
+    "nome": "FABIO AUGUSTO VACARI DOS SANTOS",
+    "numero_inscricao": "100989-1",
+    "data_nascimento": "06/08/2005",
+    "oed": "SALVADOR",
+    "GI": 180
+  },
+  {
+    "classificacao": 704,
+    "nome": "KAYLON SOUZA GOMES",
+    "numero_inscricao": "100801-2",
+    "data_nascimento": "12/05/2008",
+    "oed": "SALVADOR",
+    "GI": 180
+  },
+  {
+    "classificacao": 705,
+    "nome": "FRANÇOIR HANRIR PONTES GOMES",
+    "numero_inscricao": "105119-2",
+    "data_nascimento": "15/10/2006",
+    "oed": "PARNAÍBA",
+    "GI": 180
+  },
+  {
+    "classificacao": 706,
+    "nome": "LUIZ FELIPE DA SILVA OLIVEIRA",
+    "numero_inscricao": "104089-9",
+    "data_nascimento": "01/06/2006",
+    "oed": "MANAUS",
+    "GI": 180
+  },
+  {
+    "classificacao": 707,
+    "nome": "MICAIAS BATISTA SOUZA",
+    "numero_inscricao": "104385-4",
+    "data_nascimento": "22/07/2007",
+    "oed": "NATAL",
+    "GI": 180
+  },
+  {
+    "classificacao": 708,
+    "nome": "IAGO KAUAN DOS SANTOS SILVA",
+    "numero_inscricao": "102681-9",
+    "data_nascimento": "07/12/2005",
+    "oed": "SALVADOR",
+    "GI": 180
+  },
+  {
+    "classificacao": 709,
+    "nome": "KAUA FELIPE SANTIAGO REIS",
+    "numero_inscricao": "106372-4",
+    "data_nascimento": "01/09/2004",
+    "oed": "SALVADOR",
+    "GI": 180
+  },
+  {
+    "classificacao": 710,
+    "nome": "ANDRÉ LUIS SILVA",
+    "numero_inscricao": "108098-9",
+    "data_nascimento": "14/07/2006",
+    "oed": "NATAL",
+    "GI": 180
+  },
+  {
+    "classificacao": 711,
+    "nome": "VINÍCIUS NUNES ALENCAR E SILVA",
+    "numero_inscricao": "103813-1",
+    "data_nascimento": "01/11/2003",
+    "oed": "RECIFE",
+    "GI": 180
+  },
+  {
+    "classificacao": 712,
+    "nome": "KAIKY ALVES MAYRINCK MACEDO",
+    "numero_inscricao": "111054-3",
+    "data_nascimento": "19/02/2006",
+    "oed": "NATAL",
+    "GI": 180
+  },
+  {
+    "classificacao": 713,
+    "nome": "ALEX SOUZA JUNQUEIRA DOS SANTOS",
+    "numero_inscricao": "113324-3",
+    "data_nascimento": "03/01/2008",
+    "oed": "RECIFE",
+    "GI": 180
+  },
+  {
+    "classificacao": 714,
+    "nome": "PEDRO LUIZ MORO TSCHÁ",
+    "numero_inscricao": "104589-2",
+    "data_nascimento": "06/01/2005",
+    "oed": "SALVADOR",
+    "GI": 180
+  },
+  {
+    "classificacao": 715,
+    "nome": "MATHEUS HENRIQUE SOUZA VIANA",
+    "numero_inscricao": "104936-7",
+    "data_nascimento": "01/09/2004",
+    "oed": "BELÉM",
+    "GI": 180
+  },
+  {
+    "classificacao": 716,
+    "nome": "CAYO CEZAR CHARAMBA MARQUES DA CUNHA",
+    "numero_inscricao": "113531-0",
+    "data_nascimento": "17/06/2008",
+    "oed": "RECIFE",
+    "GI": 180
+  },
+  {
+    "classificacao": 717,
+    "nome": "NICOLAS DE MORAES SILVA",
+    "numero_inscricao": "105148-3",
+    "data_nascimento": "03/12/2008",
+    "oed": "BELÉM",
+    "GI": 180
+  },
+  {
+    "classificacao": 718,
+    "nome": "MARIA CLARA FERNANDES BARROS",
+    "numero_inscricao": "107823-0",
+    "data_nascimento": "12/07/2005",
+    "oed": "FORTALEZA",
+    "GI": 180
+  },
+  {
+    "classificacao": 719,
+    "nome": "FRANKLIN VAZ LIMA",
+    "numero_inscricao": "101174-8",
+    "data_nascimento": "16/07/2004",
+    "oed": "FORTALEZA",
+    "GI": 180
+  },
+  {
+    "classificacao": 720,
+    "nome": "JOÃO LUCAS VIANA DA SILVA",
+    "numero_inscricao": "102581-6",
+    "data_nascimento": "23/05/2007",
+    "oed": "NATAL",
+    "GI": 180
+  },
+  {
+    "classificacao": 721,
+    "nome": "KAYKY DOS SANTOS MACHADO",
+    "numero_inscricao": "104348-3",
+    "data_nascimento": "05/08/2004",
+    "oed": "SALVADOR",
+    "GI": 180
+  },
+  {
+    "classificacao": 722,
+    "nome": "JOÃO VICTOR PEREIRA DOS SANTOS",
+    "numero_inscricao": "102343-1",
+    "data_nascimento": "29/05/2006",
+    "oed": "RECIFE",
+    "GI": 180
+  },
+  {
+    "classificacao": 723,
+    "nome": "VITOR RAFAEL ALVES DE FREITAS",
+    "numero_inscricao": "109248-8",
+    "data_nascimento": "02/02/2009",
+    "oed": "RECIFE",
+    "GI": 180
+  },
+  {
+    "classificacao": 724,
+    "nome": "MARIACLARA SALES DE FREITAS MATOS",
+    "numero_inscricao": "108169-0",
+    "data_nascimento": "05/03/2006",
+    "oed": "SALVADOR",
+    "GI": 180
+  },
+  {
+    "classificacao": 725,
+    "nome": "SAMYR RHAUA SOUZA DE MELO",
+    "numero_inscricao": "109469-4",
+    "data_nascimento": "21/05/2006",
+    "oed": "NATAL",
+    "GI": 180
+  },
+  {
+    "classificacao": 726,
+    "nome": "LUAN DE QUEIROZ SCARCELA",
+    "numero_inscricao": "112760-1",
+    "data_nascimento": "29/08/2007",
+    "oed": "FORTALEZA",
+    "GI": 180
+  },
+  {
+    "classificacao": 727,
+    "nome": "RAFAEL ARTHUR BONILLA MENDES",
+    "numero_inscricao": "113391-3",
+    "data_nascimento": "31/12/2007",
+    "oed": "RECIFE",
+    "GI": 180
+  },
+  {
+    "classificacao": 728,
+    "nome": "RAFAEL ALONSO NONATO",
+    "numero_inscricao": "112191-2",
+    "data_nascimento": "20/07/2006",
+    "oed": "RECIFE",
+    "GI": 180
+  },
+  {
+    "classificacao": 729,
+    "nome": "JORGE MIGUEL DA SILVA CAMPOS",
+    "numero_inscricao": "100426-5",
+    "data_nascimento": "12/03/2003",
+    "oed": "RECIFE",
+    "GI": 180
+  },
+  {
+    "classificacao": 730,
+    "nome": "LUCAS SILVA DE SOUZA",
+    "numero_inscricao": "107228-4",
+    "data_nascimento": "26/02/2007",
+    "oed": "RECIFE",
+    "GI": 180
+  },
+  {
+    "classificacao": 731,
+    "nome": "CAROLINE CURITIBA DA CUNHA CARBOS",
+    "numero_inscricao": "104419-5",
+    "data_nascimento": "26/09/2003",
+    "oed": "SALVADOR",
+    "GI": 180
+  },
+  {
+    "classificacao": 732,
+    "nome": "ELISEU VIRGINIO ALVES",
+    "numero_inscricao": "106817-0",
+    "data_nascimento": "11/01/2008",
+    "oed": "FORTALEZA",
+    "GI": 180
+  },
+  {
+    "classificacao": 733,
+    "nome": "GABRIEL ARAÚJO TEIXEIRA",
+    "numero_inscricao": "108182-6",
+    "data_nascimento": "20/07/2004",
+    "oed": "FORTALEZA",
+    "GI": 180
+  },
+  {
+    "classificacao": 734,
+    "nome": "MANUELLE LOPES VERNECK",
+    "numero_inscricao": "101884-3",
+    "data_nascimento": "14/03/2007",
+    "oed": "BELÉM",
+    "GI": 180
+  },
+  {
+    "classificacao": 735,
+    "nome": "JARBAS WELLERSON DOS SANTOS FURTADO",
+    "numero_inscricao": "112614-0",
+    "data_nascimento": "22/12/2008",
+    "oed": "BELÉM",
+    "GI": 180
+  },
+  {
+    "classificacao": 736,
+    "nome": "PEDRO PAULO MACEDO MORAES CARDOSO",
+    "numero_inscricao": "102665-9",
+    "data_nascimento": "29/03/2005",
+    "oed": "PARNAÍBA",
+    "GI": 180
+  },
+  {
+    "classificacao": 737,
+    "nome": "MARIA EDUARDA BARRETO SANTOS",
+    "numero_inscricao": "113936-2",
+    "data_nascimento": "12/06/2006",
+    "oed": "SALVADOR",
+    "GI": 180
+  },
+  {
+    "classificacao": 738,
+    "nome": "JOÃO GABRIEL GOMES MIRANDA DA SILVA",
+    "numero_inscricao": "109175-0",
+    "data_nascimento": "01/01/2009",
+    "oed": "BELÉM",
+    "GI": 180
+  },
+  {
+    "classificacao": 739,
+    "nome": "ANA LUIZA LEITÃO DA SILVA FREITAS",
+    "numero_inscricao": "102377-3",
+    "data_nascimento": "20/12/2005",
+    "oed": "BELÉM",
+    "GI": 180
+  },
+  {
+    "classificacao": 740,
+    "nome": "JUAN MOREIRA LOPES",
+    "numero_inscricao": "102743-2",
+    "data_nascimento": "14/11/2009",
+    "oed": "PARNAÍBA",
+    "GI": 180
+  },
+  {
+    "classificacao": 741,
+    "nome": "MIGUEL BOMFIM SILVA",
+    "numero_inscricao": "108125-2",
+    "data_nascimento": "30/05/2005",
+    "oed": "SALVADOR",
+    "GI": 180
+  },
+  {
+    "classificacao": 742,
+    "nome": "VICTOR RIBEIRO DUARTE DE SOUZA",
+    "numero_inscricao": "100076-6",
+    "data_nascimento": "20/05/2006",
+    "oed": "SALVADOR",
+    "GI": 180
+  },
+  {
+    "classificacao": 743,
+    "nome": "YANNA ALINE DOMINGUES",
+    "numero_inscricao": "112579-6",
+    "data_nascimento": "12/12/2003",
+    "oed": "FORTALEZA",
+    "GI": 180
+  },
+  {
+    "classificacao": 744,
+    "nome": "JOSÉ ABNER SOUZA FARIA",
+    "numero_inscricao": "102526-9",
+    "data_nascimento": "27/06/2007",
+    "oed": "SALVADOR",
+    "GI": 180
+  },
+  {
+    "classificacao": 745,
+    "nome": "JOÃO MATHEUS COSTA ALBUQUERQUE MOURA",
+    "numero_inscricao": "100317-4",
+    "data_nascimento": "03/07/2008",
+    "oed": "RECIFE",
+    "GI": 180
+  },
+  {
+    "classificacao": 746,
+    "nome": "GABRIEL NOGUEIRA RAMOS",
+    "numero_inscricao": "104256-0",
+    "data_nascimento": "12/05/2003",
+    "oed": "SALVADOR",
+    "GI": 180
+  },
+  {
+    "classificacao": 747,
+    "nome": "NATHÁLIA ALMEIDA DE SOUSA MEDEIROS",
+    "numero_inscricao": "103747-0",
+    "data_nascimento": "26/02/2004",
+    "oed": "MANAUS",
+    "GI": 180
+  },
+  {
+    "classificacao": 748,
+    "nome": "JOSÉ WILLIAM FERREIRA DA SILVA",
+    "numero_inscricao": "108654-7",
+    "data_nascimento": "03/10/2007",
+    "oed": "RECIFE",
+    "GI": 180
+  },
+  {
+    "classificacao": 749,
+    "nome": "MATHEUS CALIXTO HOTZ",
+    "numero_inscricao": "107186-3",
+    "data_nascimento": "21/09/2007",
+    "oed": "RECIFE",
+    "GI": 180
+  },
+  {
+    "classificacao": 750,
+    "nome": "MATEUS CLEMENTINO MALVEIRA",
+    "numero_inscricao": "111133-5",
+    "data_nascimento": "30/09/2005",
+    "oed": "RECIFE",
+    "GI": 180
+  },
+  {
+    "classificacao": 751,
+    "nome": "MARIA CLARA SILVA SOUZA",
+    "numero_inscricao": "108538-4",
+    "data_nascimento": "07/11/2005",
+    "oed": "FORTALEZA",
+    "GI": 180
+  },
+  {
+    "classificacao": 752,
+    "nome": "ATHAMAY PAZ NÓBREGA DE LIMA",
+    "numero_inscricao": "100875-0",
+    "data_nascimento": "31/01/2009",
+    "oed": "RECIFE",
+    "GI": 180
+  },
+  {
+    "classificacao": 753,
+    "nome": "SOPHIA DE LIMA BASTOS",
+    "numero_inscricao": "108742-7",
+    "data_nascimento": "24/10/2006",
+    "oed": "BELÉM",
+    "GI": 180
+  },
+  {
+    "classificacao": 754,
+    "nome": "ANTÔNIO RIBEIRO LEÃO NETO",
+    "numero_inscricao": "101600-4",
+    "data_nascimento": "19/02/2004",
+    "oed": "NATAL",
+    "GI": 180
+  },
+  {
+    "classificacao": 755,
+    "nome": "GUILHERME MANTAIA MOREIRA",
+    "numero_inscricao": "105768-2",
+    "data_nascimento": "13/11/2006",
+    "oed": "FORTALEZA",
+    "GI": 180
+  },
+  {
+    "classificacao": 756,
+    "nome": "JOÃO PEDRO NOBRE SOUSA",
+    "numero_inscricao": "110804-8",
+    "data_nascimento": "03/06/2005",
+    "oed": "FORTALEZA",
+    "GI": 180
+  },
+  {
+    "classificacao": 757,
+    "nome": "ISABELA VEIGA LEVI",
+    "numero_inscricao": "101752-5",
+    "data_nascimento": "27/08/2007",
+    "oed": "BELÉM",
+    "GI": 180
+  },
+  {
+    "classificacao": 758,
+    "nome": "ENZO VIANNA DE ARAÚJO GÓES GALLUCCI",
+    "numero_inscricao": "110585-9",
+    "data_nascimento": "21/03/2009",
+    "oed": "SALVADOR",
+    "GI": 180
+  },
+  {
+    "classificacao": 759,
+    "nome": "GIOVANNA DOS SANTOS FERRAZ",
+    "numero_inscricao": "108119-9",
+    "data_nascimento": "29/06/2007",
+    "oed": "BELÉM",
+    "GI": 180
+  },
+  {
+    "classificacao": 760,
+    "nome": "CAIO WILLIAM DE FARIAS FERREIRA GONÇALVES",
+    "numero_inscricao": "106172-9",
+    "data_nascimento": "03/10/2003",
+    "oed": "NATAL",
+    "GI": 180
+  },
+  {
+    "classificacao": 761,
+    "nome": "AIRTON DOS ANJOS SENA",
+    "numero_inscricao": "105498-3",
+    "data_nascimento": "17/02/2007",
+    "oed": "SALVADOR",
+    "GI": 180
+  },
+  {
+    "classificacao": 762,
+    "nome": "GABRIEL RODRIGUES DOS SANTOS",
+    "numero_inscricao": "100283-3",
+    "data_nascimento": "17/04/2008",
+    "oed": "RECIFE",
+    "GI": 180
+  },
+  {
+    "classificacao": 763,
+    "nome": "SAMUEL RAMALHO DA SILVA",
+    "numero_inscricao": "101906-1",
+    "data_nascimento": "09/09/2006",
+    "oed": "PARNAÍBA",
+    "GI": 180
+  },
+  {
+    "classificacao": 764,
+    "nome": "SABRINA VITÓRIA DA CRUZ BEZERRA",
+    "numero_inscricao": "106882-4",
+    "data_nascimento": "11/01/2007",
+    "oed": "BELÉM",
+    "GI": 180
+  },
+  {
+    "classificacao": 765,
+    "nome": "MARIA LUISA GUILHERME LUCIOLI",
+    "numero_inscricao": "105658-3",
+    "data_nascimento": "07/03/2005",
+    "oed": "SALVADOR",
+    "GI": 180
+  },
+  {
+    "classificacao": 766,
+    "nome": "CARLOS CHRISTIANO KRAKHECKE NETO",
+    "numero_inscricao": "108828-6",
+    "data_nascimento": "31/10/2009",
+    "oed": "MANAUS",
+    "GI": 180
+  },
+  {
+    "classificacao": 767,
+    "nome": "KELVYN DE PAULA CARVALHO",
+    "numero_inscricao": "100555-9",
+    "data_nascimento": "08/10/2004",
+    "oed": "SALVADOR",
+    "GI": 180
+  },
+  {
+    "classificacao": 768,
+    "nome": "YHALY GABRIELY ARAÚJO DAMASCENO",
+    "numero_inscricao": "111352-5",
+    "data_nascimento": "21/04/2004",
+    "oed": "NATAL",
+    "GI": 180
+  },
+  {
+    "classificacao": 769,
+    "nome": "LADISLAO PEDROSO MONTE FILHO",
+    "numero_inscricao": "112433-9",
+    "data_nascimento": "31/05/2006",
+    "oed": "AMAPÁ",
+    "GI": 180
+  },
+  {
+    "classificacao": 770,
+    "nome": "JOÃO VICTOR SOARES LIMA",
+    "numero_inscricao": "108711-0",
+    "data_nascimento": "27/07/2006",
+    "oed": "FORTALEZA",
+    "GI": 180
+  },
+  {
+    "classificacao": 771,
+    "nome": "WALTER DA SILVA EVANGELISTA",
+    "numero_inscricao": "104154-1",
+    "data_nascimento": "10/10/2009",
+    "oed": "MANAUS",
+    "GI": 180
+  },
+  {
+    "classificacao": 772,
+    "nome": "MEL SANSONE YANAGAWA",
+    "numero_inscricao": "109134-6",
+    "data_nascimento": "17/03/2005",
+    "oed": "SALVADOR",
+    "GI": 180
+  },
+  {
+    "classificacao": 773,
+    "nome": "EDUARDO LOBO DE MELO MIRANDA",
+    "numero_inscricao": "113499-1",
+    "data_nascimento": "17/07/2009",
+    "oed": "BELÉM",
+    "GI": 180
+  },
+  {
+    "classificacao": 774,
+    "nome": "ERIC VITOR DE OLIVEIRA LIMA",
+    "numero_inscricao": "102420-7",
+    "data_nascimento": "05/08/2005",
+    "oed": "FORTALEZA",
+    "GI": 180
+  },
+  {
+    "classificacao": 775,
+    "nome": "LEONIDAS SALES THEOCHAROPOULOS",
+    "numero_inscricao": "108858-5",
+    "data_nascimento": "15/10/2007",
+    "oed": "FORTALEZA",
+    "GI": 180
+  },
+  {
+    "classificacao": 776,
+    "nome": "JOÃO PEDRO BASTOS DUTRA D'AQUINO",
+    "numero_inscricao": "113564-4",
+    "data_nascimento": "15/10/2006",
+    "oed": "RECIFE",
+    "GI": 180
+  },
+  {
+    "classificacao": 777,
+    "nome": "ANTONIO CALEO CHAVES DE MIRANDA",
+    "numero_inscricao": "110728-0",
+    "data_nascimento": "22/06/2004",
+    "oed": "PARNAÍBA",
+    "GI": 180
+  },
+  {
+    "classificacao": 778,
+    "nome": "ALINE MELO PALMA DOS SANTOS",
+    "numero_inscricao": "109947-9",
+    "data_nascimento": "05/02/2004",
+    "oed": "BELÉM",
+    "GI": 180
+  },
+  {
+    "classificacao": 779,
+    "nome": "LUIZ HENRIQUE DO NASCIMENTO LUZ",
+    "numero_inscricao": "107343-9",
+    "data_nascimento": "11/07/2008",
+    "oed": "FORTALEZA",
+    "GI": 175
+  },
+  {
+    "classificacao": 780,
+    "nome": "MATEUS PIETRO AFRICA DE MENEZES",
+    "numero_inscricao": "108066-3",
+    "data_nascimento": "05/06/2008",
+    "oed": "FORTALEZA",
+    "GI": 175
+  },
+  {
+    "classificacao": 781,
+    "nome": "GUSTAVO RODRIGUES DE CASTRO",
+    "numero_inscricao": "107505-5",
+    "data_nascimento": "20/11/2008",
+    "oed": "FORTALEZA",
+    "GI": 175
+  },
+  {
+    "classificacao": 782,
+    "nome": "PEDRO DIMAS DE OLIVEIRA GONÇALVES PIMENTA",
+    "numero_inscricao": "101102-7",
+    "data_nascimento": "05/11/2007",
+    "oed": "FORTALEZA",
+    "GI": 175
+  },
+  {
+    "classificacao": 783,
+    "nome": "LEONARDO LOURENÇO ERRERA",
+    "numero_inscricao": "106341-7",
+    "data_nascimento": "21/06/2007",
+    "oed": "FORTALEZA",
+    "GI": 175
+  },
+  {
+    "classificacao": 784,
+    "nome": "PEDRO LUCAS NASCIMENTO SANTOS",
+    "numero_inscricao": "101227-3",
+    "data_nascimento": "25/10/2008",
+    "oed": "PARNAÍBA",
+    "GI": 175
+  },
+  {
+    "classificacao": 785,
+    "nome": "TIAGO ALEXANDRE PINHEIRO",
+    "numero_inscricao": "108035-6",
+    "data_nascimento": "20/07/2005",
+    "oed": "FORTALEZA",
+    "GI": 175
+  },
+  {
+    "classificacao": 786,
+    "nome": "SILVIO GLEYDSON DOS SANTOS BAÍA",
+    "numero_inscricao": "106301-1",
+    "data_nascimento": "26/09/2006",
+    "oed": "BELÉM",
+    "GI": 175
+  },
+  {
+    "classificacao": 787,
+    "nome": "ÁRMISSON ALVES DE OLIVEIRA",
+    "numero_inscricao": "102018-5",
+    "data_nascimento": "07/01/2004",
+    "oed": "SÃO LUIS",
+    "GI": 175
+  },
+  {
+    "classificacao": 788,
+    "nome": "LUCAS ALBERTO CÂNDIDO MAGALHÃES DAYRELL",
+    "numero_inscricao": "113577-5",
+    "data_nascimento": "24/11/2008",
+    "oed": "FORTALEZA",
+    "GI": 175
+  },
+  {
+    "classificacao": 789,
+    "nome": "CARLOS HENRIQUE FURTADO FARIAS",
+    "numero_inscricao": "107663-0",
+    "data_nascimento": "08/06/2006",
+    "oed": "FORTALEZA",
+    "GI": 175
+  },
+  {
+    "classificacao": 790,
+    "nome": "CAUÃ SANTOS DE NAZARÉ",
+    "numero_inscricao": "101453-5",
+    "data_nascimento": "08/06/2009",
+    "oed": "BELÉM",
+    "GI": 175
+  },
+  {
+    "classificacao": 791,
+    "nome": "GEORGE GUSTAVO DE VASCONCELOS SOUSA",
+    "numero_inscricao": "108309-8",
+    "data_nascimento": "11/08/2007",
+    "oed": "FORTALEZA",
+    "GI": 175
+  },
+  {
+    "classificacao": 792,
+    "nome": "VICTOR MACIEL DE ABREU MOREIRA ANDRADE",
+    "numero_inscricao": "107991-0",
+    "data_nascimento": "28/02/2006",
+    "oed": "FORTALEZA",
+    "GI": 175
+  },
+  {
+    "classificacao": 793,
+    "nome": "FABRICIO MENDONÇA FERREIRA",
+    "numero_inscricao": "104695-9",
+    "data_nascimento": "05/06/2005",
+    "oed": "RECIFE",
+    "GI": 175
+  },
+  {
+    "classificacao": 794,
+    "nome": "RIQUELME RAFAEL CORDEIRO CORDEIRO",
+    "numero_inscricao": "106111-2",
+    "data_nascimento": "17/02/2007",
+    "oed": "BELÉM",
+    "GI": 175
+  },
+  {
+    "classificacao": 795,
+    "nome": "CAIO LUCAS GUILHERMINO CÂNDIDO DA SILVA",
+    "numero_inscricao": "109725-4",
+    "data_nascimento": "01/03/2009",
+    "oed": "FORTALEZA",
+    "GI": 175
+  },
+  {
+    "classificacao": 796,
+    "nome": "FELIPE ALBERTO MENDONCA DE MELO MONTEIRO",
+    "numero_inscricao": "104482-2",
+    "data_nascimento": "12/01/2009",
+    "oed": "RECIFE",
+    "GI": 175
+  },
+  {
+    "classificacao": 797,
+    "nome": "CAUÃ BRASIL OLIVEIRA",
+    "numero_inscricao": "105137-9",
+    "data_nascimento": "17/07/2008",
+    "oed": "NATAL",
+    "GI": 175
+  },
+  {
+    "classificacao": 798,
+    "nome": "PABLO DE OLIVEIRA DUARTE",
+    "numero_inscricao": "100356-1",
+    "data_nascimento": "23/02/2004",
+    "oed": "RECIFE",
+    "GI": 175
+  },
+  {
+    "classificacao": 799,
+    "nome": "ARTHUR JONAS GOMES DE FONTES",
+    "numero_inscricao": "102756-3",
+    "data_nascimento": "02/07/2006",
+    "oed": "RECIFE",
+    "GI": 175
+  },
+  {
+    "classificacao": 800,
+    "nome": "VINÍCIUS GABRIEL PESSOA CÔRTES",
+    "numero_inscricao": "100954-1",
+    "data_nascimento": "09/07/2005",
+    "oed": "MANAUS",
+    "GI": 175
+  },
+  {
+    "classificacao": 801,
+    "nome": "JULIANA ROCHA MORAES",
+    "numero_inscricao": "104556-9",
+    "data_nascimento": "01/03/2009",
+    "oed": "BELÉM",
+    "GI": 175
+  },
+  {
+    "classificacao": 802,
+    "nome": "PEDRO LEVI BANDEIRA BRITO",
+    "numero_inscricao": "100479-1",
+    "data_nascimento": "05/03/2006",
+    "oed": "FORTALEZA",
+    "GI": 175
+  },
+  {
+    "classificacao": 803,
+    "nome": "JOAO CARLOS DA SILVA VIANA",
+    "numero_inscricao": "112991-4",
+    "data_nascimento": "10/10/2007",
+    "oed": "BELÉM",
+    "GI": 175
+  },
+  {
+    "classificacao": 804,
+    "nome": "LAURA DAS NEVES DE ANDRADE",
+    "numero_inscricao": "101124-6",
+    "data_nascimento": "22/12/2007",
+    "oed": "NATAL",
+    "GI": 175
+  },
+  {
+    "classificacao": 805,
+    "nome": "LUCAS FERREIRA DIU ROCHA",
+    "numero_inscricao": "109732-6",
+    "data_nascimento": "07/03/2007",
+    "oed": "RECIFE",
+    "GI": 175
+  },
+  {
+    "classificacao": 806,
+    "nome": "MAURO VITOR ROCHA SOUZA",
+    "numero_inscricao": "101561-8",
+    "data_nascimento": "07/12/2003",
+    "oed": "RECIFE",
+    "GI": 175
+  },
+  {
+    "classificacao": 807,
+    "nome": "RAÍSSA SPINOLA DE OLIVEIRA",
+    "numero_inscricao": "101887-8",
+    "data_nascimento": "18/01/2006",
+    "oed": "SALVADOR",
+    "GI": 175
+  },
+  {
+    "classificacao": 808,
+    "nome": "GUSTAVO HENRIQUE DA CRUZ MACIEL",
+    "numero_inscricao": "105718-0",
+    "data_nascimento": "15/01/2005",
+    "oed": "NATAL",
+    "GI": 175
+  },
+  {
+    "classificacao": 809,
+    "nome": "GABRIEL VITOR CARVALHO DA COSTA MAGALHÃES",
+    "numero_inscricao": "103538-7",
+    "data_nascimento": "27/09/2006",
+    "oed": "FORTALEZA",
+    "GI": 175
+  },
+  {
+    "classificacao": 810,
+    "nome": "RAFAEL DE ALMEIDA SANTOS",
+    "numero_inscricao": "104850-8",
+    "data_nascimento": "09/03/2007",
+    "oed": "FORTALEZA",
+    "GI": 175
+  },
+  {
+    "classificacao": 811,
+    "nome": "LUCAS GABRIEL CARVALHO DE LIMA",
+    "numero_inscricao": "109769-2",
+    "data_nascimento": "30/04/2004",
+    "oed": "NATAL",
+    "GI": 175
+  },
+  {
+    "classificacao": 812,
+    "nome": "DAVI OLIVEIRA FERNANDES",
+    "numero_inscricao": "103349-6",
+    "data_nascimento": "06/05/2008",
+    "oed": "SALVADOR",
+    "GI": 175
+  },
+  {
+    "classificacao": 813,
+    "nome": "JOAO LUCIUS DE ABREU ROSA",
+    "numero_inscricao": "111471-2",
+    "data_nascimento": "08/06/2008",
+    "oed": "BELÉM",
+    "GI": 175
+  },
+  {
+    "classificacao": 814,
+    "nome": "CAUA VITOR CAVALCANTI VANDERLEI",
+    "numero_inscricao": "103922-2",
+    "data_nascimento": "17/11/2006",
+    "oed": "RECIFE",
+    "GI": 175
+  },
+  {
+    "classificacao": 815,
+    "nome": "LUIS GUSTAVO SILVINO PANZA GARCIA",
+    "numero_inscricao": "105540-9",
+    "data_nascimento": "31/10/2005",
+    "oed": "NATAL",
+    "GI": 175
+  },
+  {
+    "classificacao": 816,
+    "nome": "DAVID ANDRES PAIVA DE SOUSA",
+    "numero_inscricao": "109050-3",
+    "data_nascimento": "04/04/2006",
+    "oed": "NATAL",
+    "GI": 175
+  },
+  {
+    "classificacao": 817,
+    "nome": "MATHEUS GOMES DA FROTA FALCAO",
+    "numero_inscricao": "107671-0",
+    "data_nascimento": "23/11/2009",
+    "oed": "FORTALEZA",
+    "GI": 175
+  },
+  {
+    "classificacao": 818,
+    "nome": "LAVÍNIA CAVALCANTE DE SOUSA",
+    "numero_inscricao": "113604-9",
+    "data_nascimento": "26/05/2009",
+    "oed": "BELÉM",
+    "GI": 175
+  },
+  {
+    "classificacao": 819,
+    "nome": "MIGUEL DE SÁ",
+    "numero_inscricao": "109958-3",
+    "data_nascimento": "28/04/2007",
+    "oed": "SALVADOR",
+    "GI": 175
+  },
+  {
+    "classificacao": 820,
+    "nome": "JOÃO GUILHERME LISBÔA CORREIA",
+    "numero_inscricao": "106545-5",
+    "data_nascimento": "22/02/2008",
+    "oed": "SALVADOR",
+    "GI": 175
+  },
+  {
+    "classificacao": 821,
+    "nome": "CAUÃ ALVES DE ARAÚJO FERREIRA",
+    "numero_inscricao": "104193-9",
+    "data_nascimento": "07/06/2006",
+    "oed": "NATAL",
+    "GI": 175
+  },
+  {
+    "classificacao": 822,
+    "nome": "MATHEUS ALEXANDRINO DA SILVA",
+    "numero_inscricao": "111336-5",
+    "data_nascimento": "19/03/2007",
+    "oed": "SALVADOR",
+    "GI": 175
+  },
+  {
+    "classificacao": 823,
+    "nome": "RENATO AUGUSTO BEZERRA DOS SANTOS",
+    "numero_inscricao": "103786-8",
+    "data_nascimento": "19/06/2008",
+    "oed": "MANAUS",
+    "GI": 175
+  },
+  {
+    "classificacao": 824,
+    "nome": "YULE HENRIQUE DA SILVA PEREIRA",
+    "numero_inscricao": "108962-5",
+    "data_nascimento": "21/12/2004",
+    "oed": "RECIFE",
+    "GI": 175
+  },
+  {
+    "classificacao": 825,
+    "nome": "ARTHUR CÉSAR MENDES DE FREITAS",
+    "numero_inscricao": "100047-5",
+    "data_nascimento": "09/09/2007",
+    "oed": "FORTALEZA",
+    "GI": 175
+  },
+  {
+    "classificacao": 826,
+    "nome": "MARCELA DOS SANTOS RIBEIRO",
+    "numero_inscricao": "109298-0",
+    "data_nascimento": "06/09/2004",
+    "oed": "SALVADOR",
+    "GI": 175
+  },
+  {
+    "classificacao": 827,
+    "nome": "MARIANA MOREIRA NASCIMENTO",
+    "numero_inscricao": "105155-5",
+    "data_nascimento": "27/01/2009",
+    "oed": "FORTALEZA",
+    "GI": 175
+  },
+  {
+    "classificacao": 828,
+    "nome": "IAN AGUIAR PIMENTA",
+    "numero_inscricao": "100444-1",
+    "data_nascimento": "07/03/2005",
+    "oed": "FORTALEZA",
+    "GI": 175
+  },
+  {
+    "classificacao": 829,
+    "nome": "PEDRO HENRIQUE DA ROCHA BARROSO",
+    "numero_inscricao": "105463-3",
+    "data_nascimento": "22/03/2004",
+    "oed": "RECIFE",
+    "GI": 175
+  },
+  {
+    "classificacao": 830,
+    "nome": "ANDRÉ GALVÃO DE OLIVEIRA",
+    "numero_inscricao": "101395-4",
+    "data_nascimento": "05/08/2005",
+    "oed": "NATAL",
+    "GI": 175
+  },
+  {
+    "classificacao": 831,
+    "nome": "ALEXANDRE BORTOLASSE PEREIRA BORBA",
+    "numero_inscricao": "102691-5",
+    "data_nascimento": "25/10/2004",
+    "oed": "BELÉM",
+    "GI": 175
+  },
+  {
+    "classificacao": 832,
+    "nome": "EUDOXIO TERCEIRO GOMES DOS SANTOS",
+    "numero_inscricao": "101080-9",
+    "data_nascimento": "20/07/2007",
+    "oed": "SÃO LUIS",
+    "GI": 175
+  },
+  {
+    "classificacao": 833,
+    "nome": "VINÍCIUS ANTHONY AZEVEDO PEREIRA",
+    "numero_inscricao": "106874-4",
+    "data_nascimento": "01/06/2006",
+    "oed": "RECIFE",
+    "GI": 175
+  },
+  {
+    "classificacao": 834,
+    "nome": "JÚLIA CARDOSO ABREU",
+    "numero_inscricao": "112616-6",
+    "data_nascimento": "11/12/2007",
+    "oed": "FORTALEZA",
+    "GI": 175
+  },
+  {
+    "classificacao": 835,
+    "nome": "LYAN NUNES DA CUNHA",
+    "numero_inscricao": "109711-5",
+    "data_nascimento": "01/08/2005",
+    "oed": "BELÉM",
+    "GI": 175
+  },
+  {
+    "classificacao": 836,
+    "nome": "EMANUEL ANTERO FARIAS DE OLIVEIRA",
+    "numero_inscricao": "105341-1",
+    "data_nascimento": "12/10/2008",
+    "oed": "NATAL",
+    "GI": 175
+  },
+  {
+    "classificacao": 837,
+    "nome": "GABRIEL FERNANDES SILVA",
+    "numero_inscricao": "102234-0",
+    "data_nascimento": "21/10/2008",
+    "oed": "FORTALEZA",
+    "GI": 175
+  },
+  {
+    "classificacao": 838,
+    "nome": "VINÍCIUS SOUZA LEITE",
+    "numero_inscricao": "109030-0",
+    "data_nascimento": "16/04/2006",
+    "oed": "SALVADOR",
+    "GI": 175
+  },
+  {
+    "classificacao": 839,
+    "nome": "ANA BEATRIZ FERRAZ CORDEIRO",
+    "numero_inscricao": "109660-6",
+    "data_nascimento": "24/04/2007",
+    "oed": "BELÉM",
+    "GI": 175
+  },
+  {
+    "classificacao": 840,
+    "nome": "LUCAS FELIPE G. PAIVA",
+    "numero_inscricao": "100698-1",
+    "data_nascimento": "27/10/2003",
+    "oed": "RECIFE",
+    "GI": 175
+  },
+  {
+    "classificacao": 841,
+    "nome": "ANA CLARA DA SILVA MENDES",
+    "numero_inscricao": "113041-3",
+    "data_nascimento": "23/03/2009",
+    "oed": "BELÉM",
+    "GI": 175
+  },
+  {
+    "classificacao": 842,
+    "nome": "LUCAS LIMA PAIVA DE AMORIM",
+    "numero_inscricao": "109376-3",
+    "data_nascimento": "28/04/2009",
+    "oed": "NATAL",
+    "GI": 175
+  },
+  {
+    "classificacao": 843,
+    "nome": "CARLOS DANIEL FECURY LAMEIRA VINAGRE",
+    "numero_inscricao": "107616-2",
+    "data_nascimento": "21/12/2007",
+    "oed": "BELÉM",
+    "GI": 175
+  },
+  {
+    "classificacao": 844,
+    "nome": "ADRIANO TORRES LOPES FILHO",
+    "numero_inscricao": "103160-0",
+    "data_nascimento": "20/02/2006",
+    "oed": "NATAL",
+    "GI": 175
+  },
+  {
+    "classificacao": 845,
+    "nome": "ARTHUR RANIERY BORGES DOS SANTOS",
+    "numero_inscricao": "101579-0",
+    "data_nascimento": "03/11/2008",
+    "oed": "BELÉM",
+    "GI": 175
+  },
+  {
+    "classificacao": 846,
+    "nome": "IGOR DE AMORIM AZEVEDO DOS SANTOS",
+    "numero_inscricao": "106757-3",
+    "data_nascimento": "17/04/2009",
+    "oed": "RECIFE",
+    "GI": 175
+  },
+  {
+    "classificacao": 847,
+    "nome": "GABRIEL FLORÊNCIO DE PONTES E SOUZA",
+    "numero_inscricao": "109120-7",
+    "data_nascimento": "25/12/2005",
+    "oed": "BELÉM",
+    "GI": 175
+  },
+  {
+    "classificacao": 848,
+    "nome": "MARIA CLARA AGUIAR VERAS",
+    "numero_inscricao": "110824-0",
+    "data_nascimento": "26/05/2008",
+    "oed": "FORTALEZA",
+    "GI": 175
+  },
+  {
+    "classificacao": 849,
+    "nome": "AGATHA SOFIA BORGES DA COSTA JARDIM",
+    "numero_inscricao": "109383-5",
+    "data_nascimento": "10/03/2006",
+    "oed": "BELÉM",
+    "GI": 175
+  },
+  {
+    "classificacao": 850,
+    "nome": "LARA SOTERO SACRAMENTO",
+    "numero_inscricao": "106675-7",
+    "data_nascimento": "11/01/2009",
+    "oed": "SALVADOR",
+    "GI": 175
+  },
+  {
+    "classificacao": 851,
+    "nome": "JOÃO PEDRO SOUZA DE FARIAS",
+    "numero_inscricao": "100485-5",
+    "data_nascimento": "21/06/2007",
+    "oed": "SALVADOR",
+    "GI": 175
+  },
+  {
+    "classificacao": 852,
+    "nome": "ANNA PAULA BORGES VIANA FIGUEIREDO",
+    "numero_inscricao": "101923-0",
+    "data_nascimento": "03/10/2003",
+    "oed": "BELÉM",
+    "GI": 175
+  },
+  {
+    "classificacao": 853,
+    "nome": "ANA CECÍLIA COSTA DA SILVA",
+    "numero_inscricao": "101846-4",
+    "data_nascimento": "06/10/2007",
+    "oed": "NATAL",
+    "GI": 175
+  },
+  {
+    "classificacao": 854,
+    "nome": "HEBERT CÁSSIO GUIMARÃES FONSECA JÚNIOR",
+    "numero_inscricao": "110033-7",
+    "data_nascimento": "20/01/2005",
+    "oed": "FORTALEZA",
+    "GI": 175
+  },
+  {
+    "classificacao": 855,
+    "nome": "GABRIEL LOPES DE AQUINO",
+    "numero_inscricao": "101799-8",
+    "data_nascimento": "07/12/2004",
+    "oed": "SALVADOR",
+    "GI": 175
+  },
+  {
+    "classificacao": 856,
+    "nome": "GIOVANA DA SILVA MORAIS",
+    "numero_inscricao": "103888-7",
+    "data_nascimento": "25/06/2005",
+    "oed": "BELÉM",
+    "GI": 175
+  },
+  {
+    "classificacao": 857,
+    "nome": "VICTOR SOUZA LEITE",
+    "numero_inscricao": "109005-2",
+    "data_nascimento": "16/04/2006",
+    "oed": "SALVADOR",
+    "GI": 175
+  },
+  {
+    "classificacao": 858,
+    "nome": "ROBERTO DE SOUSA CAVALCANTE",
+    "numero_inscricao": "100567-1",
+    "data_nascimento": "09/10/2007",
+    "oed": "BELÉM",
+    "GI": 175
+  },
+  {
+    "classificacao": 859,
+    "nome": "CARLOS EDUARDO DA SILVA GOMES",
+    "numero_inscricao": "110066-0",
+    "data_nascimento": "14/10/2006",
+    "oed": "RECIFE",
+    "GI": 175
+  },
+  {
+    "classificacao": 860,
+    "nome": "ELOÁ SYNTHES FERNANDES",
+    "numero_inscricao": "102491-0",
+    "data_nascimento": "12/06/2007",
+    "oed": "NATAL",
+    "GI": 175
+  },
+  {
+    "classificacao": 861,
+    "nome": "MATEUS PINHEIRO ALVES",
+    "numero_inscricao": "102473-3",
+    "data_nascimento": "06/04/2004",
+    "oed": "BELÉM",
+    "GI": 175
+  },
+  {
+    "classificacao": 862,
+    "nome": "ANDRIELLY RAMIRES DE SOUZA",
+    "numero_inscricao": "100886-4",
+    "data_nascimento": "24/09/2003",
+    "oed": "BELÉM",
+    "GI": 175
+  },
+  {
+    "classificacao": 863,
+    "nome": "ALAKAE ELEANOR GALDINO",
+    "numero_inscricao": "106160-6",
+    "data_nascimento": "18/05/2006",
+    "oed": "RECIFE",
+    "GI": 175
+  },
+  {
+    "classificacao": 864,
+    "nome": "JOSE CHAGAS FREIRE DE CARVALHO",
+    "numero_inscricao": "102015-0",
+    "data_nascimento": "06/02/2008",
+    "oed": "SALVADOR",
+    "GI": 175
+  },
+  {
+    "classificacao": 865,
+    "nome": "RAUL FELIPE SILVA FERREIRA",
+    "numero_inscricao": "100533-0",
+    "data_nascimento": "29/09/2006",
+    "oed": "SALVADOR",
+    "GI": 175
+  },
+  {
+    "classificacao": 866,
+    "nome": "GABRIEL MORAES BARCELLOS",
+    "numero_inscricao": "107803-7",
+    "data_nascimento": "27/09/2008",
+    "oed": "FORTALEZA",
+    "GI": 175
+  },
+  {
+    "classificacao": 867,
+    "nome": "MATHEUS ARAGÃO NASCIMENTO TORRES",
+    "numero_inscricao": "103091-4",
+    "data_nascimento": "10/05/2008",
+    "oed": "SALVADOR",
+    "GI": 175
+  },
+  {
+    "classificacao": 868,
+    "nome": "MIRELLA RIBEIRO MESQUITA",
+    "numero_inscricao": "102383-7",
+    "data_nascimento": "27/12/2008",
+    "oed": "PARNAÍBA",
+    "GI": 175
+  },
+  {
+    "classificacao": 869,
+    "nome": "LUCIANO YURI ANNIBAL DE SOUZA",
+    "numero_inscricao": "100663-1",
+    "data_nascimento": "17/06/2005",
+    "oed": "SALVADOR",
+    "GI": 175
+  },
+  {
+    "classificacao": 870,
+    "nome": "NICOLAS LAMBSTEIN",
+    "numero_inscricao": "111659-0",
+    "data_nascimento": "06/03/2007",
+    "oed": "FORTALEZA",
+    "GI": 175
+  },
+  {
+    "classificacao": 871,
+    "nome": "DANIEL SOUTO MAIOR FIGUEIREDO",
+    "numero_inscricao": "111738-2",
+    "data_nascimento": "11/09/2009",
+    "oed": "RECIFE",
+    "GI": 175
+  },
+  {
+    "classificacao": 872,
+    "nome": "PEDRO GEOVANNY DE LIMA LEITE",
+    "numero_inscricao": "105133-6",
+    "data_nascimento": "20/09/2005",
+    "oed": "FORTALEZA",
+    "GI": 175
+  },
+  {
+    "classificacao": 873,
+    "nome": "MAITÊ FERNANDES DOS SANTOS",
+    "numero_inscricao": "100266-5",
+    "data_nascimento": "31/03/2006",
+    "oed": "FORTALEZA",
+    "GI": 175
+  },
+  {
+    "classificacao": 874,
+    "nome": "MAYRA LUIZA DE SOUSA VIANA",
+    "numero_inscricao": "104682-8",
+    "data_nascimento": "07/10/2006",
+    "oed": "BELÉM",
+    "GI": 175
+  },
+  {
+    "classificacao": 875,
+    "nome": "MARCOS DANIEL DOS SANTOS AGUIAR",
+    "numero_inscricao": "110550-9",
+    "data_nascimento": "27/05/2003",
+    "oed": "BELÉM",
+    "GI": 175
+  },
+  {
+    "classificacao": 876,
+    "nome": "PAULO SERGIO DO NASCIMENTO FELIX",
+    "numero_inscricao": "100298-0",
+    "data_nascimento": "08/02/2004",
+    "oed": "SALVADOR",
+    "GI": 175
+  },
+  {
+    "classificacao": 877,
+    "nome": "LUIZ GUSTAVO TINOCO CRUZ",
+    "numero_inscricao": "102298-1",
+    "data_nascimento": "07/05/2008",
+    "oed": "NATAL",
+    "GI": 175
+  },
+  {
+    "classificacao": 878,
+    "nome": "NILO FEITOSA NETO",
+    "numero_inscricao": "110882-2",
+    "data_nascimento": "26/01/2005",
+    "oed": "FORTALEZA",
+    "GI": 175
+  },
+  {
+    "classificacao": 879,
+    "nome": "PEDRO ANTUNES TELES DE ARAÚJO",
+    "numero_inscricao": "107139-6",
+    "data_nascimento": "28/02/2009",
+    "oed": "NATAL",
+    "GI": 175
+  },
+  {
+    "classificacao": 880,
+    "nome": "LUCAS OLIVEIRA ALMEIDA",
+    "numero_inscricao": "100615-6",
+    "data_nascimento": "27/02/2008",
+    "oed": "FORTALEZA",
+    "GI": 170
+  },
+  {
+    "classificacao": 881,
+    "nome": "JOÃO HERBERTH VIANA DE ASSIS",
+    "numero_inscricao": "100328-9",
+    "data_nascimento": "27/06/2003",
+    "oed": "FORTALEZA",
+    "GI": 170
+  },
+  {
+    "classificacao": 882,
+    "nome": "REBECA MEDEIROS CAVALCANTI",
+    "numero_inscricao": "105952-2",
+    "data_nascimento": "16/08/2005",
+    "oed": "RECIFE",
+    "GI": 170
+  },
+  {
+    "classificacao": 883,
+    "nome": "JOÃO FRANCISCO DA COSTA OLIVEIRA",
+    "numero_inscricao": "103131-9",
+    "data_nascimento": "23/03/2005",
+    "oed": "BELÉM",
+    "GI": 170
+  },
+  {
+    "classificacao": 884,
+    "nome": "NICOLAS VICTOR RODRIGUES PINHEIRO",
+    "numero_inscricao": "112294-0",
+    "data_nascimento": "26/01/2003",
+    "oed": "FORTALEZA",
+    "GI": 170
+  },
+  {
+    "classificacao": 885,
+    "nome": "LUCAS ALVES DO RÊGO",
+    "numero_inscricao": "103051-9",
+    "data_nascimento": "28/12/2005",
+    "oed": "FORTALEZA",
+    "GI": 170
+  },
+  {
+    "classificacao": 886,
+    "nome": "JOÃO ANDRÉ FEITOSA FILHO",
+    "numero_inscricao": "103647-8",
+    "data_nascimento": "06/12/2004",
+    "oed": "FORTALEZA",
+    "GI": 170
+  },
+  {
+    "classificacao": 887,
+    "nome": "HILBERT ALENCAR NASCIMENTO FILHO",
+    "numero_inscricao": "102170-0",
+    "data_nascimento": "15/12/2005",
+    "oed": "FORTALEZA",
+    "GI": 170
+  },
+  {
+    "classificacao": 888,
+    "nome": "JURACY DE PAULA BASTOS NETO",
+    "numero_inscricao": "111728-6",
+    "data_nascimento": "15/11/2006",
+    "oed": "FORTALEZA",
+    "GI": 170
+  },
+  {
+    "classificacao": 889,
+    "nome": "EMANOEL MARQUES ALEXANDRINO FILHO",
+    "numero_inscricao": "108746-0",
+    "data_nascimento": "06/12/2004",
+    "oed": "FORTALEZA",
+    "GI": 170
+  },
+  {
+    "classificacao": 890,
+    "nome": "YURI PINHEIRO BRASIL",
+    "numero_inscricao": "109894-3",
+    "data_nascimento": "20/09/2006",
+    "oed": "FORTALEZA",
+    "GI": 170
+  },
+  {
+    "classificacao": 891,
+    "nome": "PEDRO LUCAS MELO DE SOUZA BRITO",
+    "numero_inscricao": "106299-1",
+    "data_nascimento": "05/07/2006",
+    "oed": "FORTALEZA",
+    "GI": 170
+  },
+  {
+    "classificacao": 892,
+    "nome": "ALESSANDRA CAROLINA RAMOS RIBEIRO",
+    "numero_inscricao": "107877-4",
+    "data_nascimento": "31/07/2009",
+    "oed": "BELÉM",
+    "GI": 170
+  },
+  {
+    "classificacao": 893,
+    "nome": "TIAGO PAIVA DOS PRASERES PIRES",
+    "numero_inscricao": "110231-6",
+    "data_nascimento": "21/10/2005",
+    "oed": "BELÉM",
+    "GI": 170
+  },
+  {
+    "classificacao": 894,
+    "nome": "MIGUEL MACHADO DE MIRANDA DOS SANTOS",
+    "numero_inscricao": "106554-3",
+    "data_nascimento": "18/02/2008",
+    "oed": "RECIFE",
+    "GI": 170
+  },
+  {
+    "classificacao": 895,
+    "nome": "RYAN SILVA SOUZA",
+    "numero_inscricao": "109495-0",
+    "data_nascimento": "05/06/2006",
+    "oed": "PARNAÍBA",
+    "GI": 170
+  },
+  {
+    "classificacao": 896,
+    "nome": "ARTHUR CAVALCANTI FRANÇA FERRAZ",
+    "numero_inscricao": "109848-4",
+    "data_nascimento": "20/11/2009",
+    "oed": "RECIFE",
+    "GI": 170
+  },
+  {
+    "classificacao": 897,
+    "nome": "LUISA PERES SOARES CORREIA DA COSTA",
+    "numero_inscricao": "104510-4",
+    "data_nascimento": "09/03/2009",
+    "oed": "NATAL",
+    "GI": 170
+  },
+  {
+    "classificacao": 898,
+    "nome": "ISAAC TEIRSON RIBEIRO LIMA",
+    "numero_inscricao": "105709-2",
+    "data_nascimento": "19/08/2005",
+    "oed": "FORTALEZA",
+    "GI": 170
+  },
+  {
+    "classificacao": 899,
+    "nome": "BRUNO RIBEIRO KISHI",
+    "numero_inscricao": "104720-6",
+    "data_nascimento": "25/01/2005",
+    "oed": "BELÉM",
+    "GI": 170
+  },
+  {
+    "classificacao": 900,
+    "nome": "DANIEL AGOSTINHO DE SOUZA RODRIGUES",
+    "numero_inscricao": "102231-6",
+    "data_nascimento": "18/01/2008",
+    "oed": "FORTALEZA",
+    "GI": 170
+  },
+  {
+    "classificacao": 901,
+    "nome": "ISAAC MOURA DA SILVA",
+    "numero_inscricao": "110769-4",
+    "data_nascimento": "13/09/2006",
+    "oed": "FORTALEZA",
+    "GI": 170
+  },
+  {
+    "classificacao": 902,
+    "nome": "IAN KAIO DE BRITO LIBERATO",
+    "numero_inscricao": "100762-6",
+    "data_nascimento": "24/02/2006",
+    "oed": "PARNAÍBA",
+    "GI": 170
+  },
+  {
+    "classificacao": 903,
+    "nome": "HILTON OLIVEIRA DE LIMA FILHO",
+    "numero_inscricao": "107219-6",
+    "data_nascimento": "21/03/2007",
+    "oed": "RECIFE",
+    "GI": 170
+  },
+  {
+    "classificacao": 904,
+    "nome": "GABRIEL DINIZ FILGUEIRAS",
+    "numero_inscricao": "107207-3",
+    "data_nascimento": "30/03/2009",
+    "oed": "FORTALEZA",
+    "GI": 170
+  },
+  {
+    "classificacao": 905,
+    "nome": "EDUARDO VINICIUS BARBOSA DOS SANTOS DE OLIVEIRA",
+    "numero_inscricao": "103102-8",
+    "data_nascimento": "10/05/2004",
+    "oed": "SALVADOR",
+    "GI": 170
+  },
+  {
+    "classificacao": 906,
+    "nome": "MAIRON SOUZA DE JESUS",
+    "numero_inscricao": "104315-0",
+    "data_nascimento": "03/05/2005",
+    "oed": "SALVADOR",
+    "GI": 170
+  },
+  {
+    "classificacao": 907,
+    "nome": "EMANUELLY DA SILVA LIMA",
+    "numero_inscricao": "104643-0",
+    "data_nascimento": "18/11/2008",
+    "oed": "BELÉM",
+    "GI": 170
+  },
+  {
+    "classificacao": 908,
+    "nome": "VITOR EDUARDO ARAÚJO BARRETO",
+    "numero_inscricao": "108603-7",
+    "data_nascimento": "22/06/2007",
+    "oed": "FORTALEZA",
+    "GI": 170
+  },
+  {
+    "classificacao": 909,
+    "nome": "HEITOR DE LUNA MELO",
+    "numero_inscricao": "105674-3",
+    "data_nascimento": "02/01/2008",
+    "oed": "RECIFE",
+    "GI": 170
+  },
+  {
+    "classificacao": 910,
+    "nome": "JOÃO PEDRO DOS SANTOS SILVA",
+    "numero_inscricao": "100677-0",
+    "data_nascimento": "15/12/2007",
+    "oed": "SÃO LUIS",
+    "GI": 170
+  },
+  {
+    "classificacao": 911,
+    "nome": "DAVI PEREIRA BORBA",
+    "numero_inscricao": "110743-2",
+    "data_nascimento": "26/02/2005",
+    "oed": "NATAL",
+    "GI": 170
+  },
+  {
+    "classificacao": 912,
+    "nome": "HEITOR PEREIRA DA SILVA",
+    "numero_inscricao": "100993-9",
+    "data_nascimento": "11/12/2007",
+    "oed": "RECIFE",
+    "GI": 170
+  },
+  {
+    "classificacao": 913,
+    "nome": "MATEUS ARRUDA MORAIS DE SOUSA",
+    "numero_inscricao": "111775-3",
+    "data_nascimento": "06/02/2009",
+    "oed": "FORTALEZA",
+    "GI": 170
+  },
+  {
+    "classificacao": 914,
+    "nome": "MILENA DE FONSECA BASILIO",
+    "numero_inscricao": "110510-3",
+    "data_nascimento": "04/07/2003",
+    "oed": "NATAL",
+    "GI": 170
+  },
+  {
+    "classificacao": 915,
+    "nome": "JOÃO PEDRO FERREIRA DA SILVA",
+    "numero_inscricao": "100859-0",
+    "data_nascimento": "27/09/2005",
+    "oed": "FORTALEZA",
+    "GI": 170
+  },
+  {
+    "classificacao": 916,
+    "nome": "ERICK MOYSES VIEIRA MOITA",
+    "numero_inscricao": "109980-7",
+    "data_nascimento": "28/11/2009",
+    "oed": "PARNAÍBA",
+    "GI": 170
+  },
+  {
+    "classificacao": 917,
+    "nome": "WESLEY ALMEIDA DA SILVA",
+    "numero_inscricao": "102817-9",
+    "data_nascimento": "30/08/2005",
+    "oed": "SÃO LUIS",
+    "GI": 170
+  },
+  {
+    "classificacao": 918,
+    "nome": "ARON RYAN ROCHA RAULINO",
+    "numero_inscricao": "113541-7",
+    "data_nascimento": "15/05/2009",
+    "oed": "FORTALEZA",
+    "GI": 170
+  },
+  {
+    "classificacao": 919,
+    "nome": "CAIO SILVA SANTOS",
+    "numero_inscricao": "106776-8",
+    "data_nascimento": "30/04/2007",
+    "oed": "SALVADOR",
+    "GI": 170
+  },
+  {
+    "classificacao": 920,
+    "nome": "LUCAS FAGUNDES ALVES",
+    "numero_inscricao": "106352-1",
+    "data_nascimento": "21/07/2007",
+    "oed": "BELÉM",
+    "GI": 170
+  },
+  {
+    "classificacao": 921,
+    "nome": "GENÉSIO CUSTÓDIO FILHO",
+    "numero_inscricao": "106971-2",
+    "data_nascimento": "27/09/2006",
+    "oed": "PARNAÍBA",
+    "GI": 170
+  },
+  {
+    "classificacao": 922,
+    "nome": "PABLO FERREIRA DE SOUSA",
+    "numero_inscricao": "100781-0",
+    "data_nascimento": "14/05/2004",
+    "oed": "SÃO LUIS",
+    "GI": 170
+  },
+  {
+    "classificacao": 923,
+    "nome": "GUILHERME OTRANTO RIBEIRO DE ARAUJO",
+    "numero_inscricao": "107694-7",
+    "data_nascimento": "04/07/2004",
+    "oed": "SALVADOR",
+    "GI": 170
+  },
+  {
+    "classificacao": 924,
+    "nome": "JOAO PEDRO DEL PRÉTE MATTA",
+    "numero_inscricao": "102415-1",
+    "data_nascimento": "28/01/2004",
+    "oed": "SALVADOR",
+    "GI": 170
+  },
+  {
+    "classificacao": 925,
+    "nome": "MATEUS ARAUJO CESAR",
+    "numero_inscricao": "112603-5",
+    "data_nascimento": "08/09/2005",
+    "oed": "SALVADOR",
+    "GI": 170
+  },
+  {
+    "classificacao": 926,
+    "nome": "DEIVIDY DE MOURA BRITO",
+    "numero_inscricao": "103076-2",
+    "data_nascimento": "01/07/2009",
+    "oed": "PARNAÍBA",
+    "GI": 170
+  },
+  {
+    "classificacao": 927,
+    "nome": "WELLINGTON GURGEL DE CARVALHO CAMILO",
+    "numero_inscricao": "100452-1",
+    "data_nascimento": "12/09/2007",
+    "oed": "NATAL",
+    "GI": 170
+  },
+  {
+    "classificacao": 928,
+    "nome": "HENRICO LOPES NERY DA SILVA",
+    "numero_inscricao": "104586-8",
+    "data_nascimento": "29/05/2008",
+    "oed": "RECIFE",
+    "GI": 170
+  },
+  {
+    "classificacao": 929,
+    "nome": "GUSTAVO HENRIQUE ANDRADE DA SILVA",
+    "numero_inscricao": "105789-3",
+    "data_nascimento": "17/09/2003",
+    "oed": "RECIFE",
+    "GI": 170
+  },
+  {
+    "classificacao": 930,
+    "nome": "LUCAS GABRIEL LIMA BRANDAO",
+    "numero_inscricao": "108811-2",
+    "data_nascimento": "05/06/2006",
+    "oed": "MANAUS",
+    "GI": 170
+  },
+  {
+    "classificacao": 931,
+    "nome": "ADRIEL ESTRAI",
+    "numero_inscricao": "105520-6",
+    "data_nascimento": "08/07/2006",
+    "oed": "RECIFE",
+    "GI": 170
+  },
+  {
+    "classificacao": 932,
+    "nome": "GIOVANNA EMANUELLE NASCIMENTO COSTA",
+    "numero_inscricao": "107893-4",
+    "data_nascimento": "07/07/2009",
+    "oed": "RECIFE",
+    "GI": 170
+  },
+  {
+    "classificacao": 933,
+    "nome": "MIGUEL VIGETA DA CUNHA",
+    "numero_inscricao": "107749-9",
+    "data_nascimento": "13/04/2005",
+    "oed": "NATAL",
+    "GI": 170
+  },
+  {
+    "classificacao": 934,
+    "nome": "DAVI GOMES MACHADO",
+    "numero_inscricao": "109083-7",
+    "data_nascimento": "23/09/2006",
+    "oed": "FORTALEZA",
+    "GI": 170
+  },
+  {
+    "classificacao": 935,
+    "nome": "MARIA FERNANDA CONCEIÇÃO SARMENTO",
+    "numero_inscricao": "105574-0",
+    "data_nascimento": "21/10/2008",
+    "oed": "AMAPÁ",
+    "GI": 170
+  },
+  {
+    "classificacao": 936,
+    "nome": "JOÃO GABRIEL SAMPAIO DELGADO",
+    "numero_inscricao": "101587-0",
+    "data_nascimento": "01/10/2008",
+    "oed": "NATAL",
+    "GI": 170
+  },
+  {
+    "classificacao": 937,
+    "nome": "CAIO MATEUS DE SOUSA COSTA",
+    "numero_inscricao": "103379-5",
+    "data_nascimento": "17/02/2009",
+    "oed": "PARNAÍBA",
+    "GI": 170
+  },
+  {
+    "classificacao": 938,
+    "nome": "GABRIEL ACIOLI BORGES",
+    "numero_inscricao": "103843-0",
+    "data_nascimento": "05/07/2006",
+    "oed": "FORTALEZA",
+    "GI": 170
+  },
+  {
+    "classificacao": 939,
+    "nome": "GUILHERME CABRAL XAVIER",
+    "numero_inscricao": "103404-2",
+    "data_nascimento": "10/02/2003",
+    "oed": "BELÉM",
+    "GI": 170
+  },
+  {
+    "classificacao": 940,
+    "nome": "JOSÉ EWERTON NASCIMENTO DA SILVA",
+    "numero_inscricao": "101718-9",
+    "data_nascimento": "25/08/2008",
+    "oed": "RECIFE",
+    "GI": 170
+  },
+  {
+    "classificacao": 941,
+    "nome": "CAUA NASCIMENTO MACIEL",
+    "numero_inscricao": "100942-9",
+    "data_nascimento": "22/12/2004",
+    "oed": "BELÉM",
+    "GI": 170
+  },
+  {
+    "classificacao": 942,
+    "nome": "ANA CLARA SUREKE ABILIO SILVA",
+    "numero_inscricao": "112242-1",
+    "data_nascimento": "27/12/2007",
+    "oed": "RECIFE",
+    "GI": 170
+  },
+  {
+    "classificacao": 943,
+    "nome": "JOAO VICTOR DIAS TENORIO DE OLIVEIRA",
+    "numero_inscricao": "104411-0",
+    "data_nascimento": "25/04/2009",
+    "oed": "RECIFE",
+    "GI": 170
+  },
+  {
+    "classificacao": 944,
+    "nome": "YAGO OLIVEIRA DE FREITAS",
+    "numero_inscricao": "104526-0",
+    "data_nascimento": "28/12/2004",
+    "oed": "BELÉM",
+    "GI": 170
+  },
+  {
+    "classificacao": 945,
+    "nome": "GUSTAVO FIGUEIREDO BISCARDE",
+    "numero_inscricao": "104692-4",
+    "data_nascimento": "14/10/2005",
+    "oed": "SALVADOR",
+    "GI": 170
+  },
+  {
+    "classificacao": 946,
+    "nome": "BRENO MAGALHÃES DE AZEVEDO CARVALHO",
+    "numero_inscricao": "104566-5",
+    "data_nascimento": "30/01/2004",
+    "oed": "SALVADOR",
+    "GI": 170
+  },
+  {
+    "classificacao": 947,
+    "nome": "MARIA EDUARDA MESQUITA BRAZ PALMEIRA",
+    "numero_inscricao": "103989-8",
+    "data_nascimento": "30/04/2003",
+    "oed": "FORTALEZA",
+    "GI": 170
+  },
+  {
+    "classificacao": 948,
+    "nome": "JUAN CARLOS COELHO RAMOS",
+    "numero_inscricao": "106969-1",
+    "data_nascimento": "08/11/2008",
+    "oed": "PARNAÍBA",
+    "GI": 170
+  },
+  {
+    "classificacao": 949,
+    "nome": "GABRIEL RODRIGUES FREITAS",
+    "numero_inscricao": "100082-0",
+    "data_nascimento": "22/09/2005",
+    "oed": "SALVADOR",
+    "GI": 170
+  },
+  {
+    "classificacao": 950,
+    "nome": "SAMUEL NOGUEIRA LIMA NASCIMENTO",
+    "numero_inscricao": "101032-3",
+    "data_nascimento": "08/08/2008",
+    "oed": "FORTALEZA",
+    "GI": 170
+  },
+  {
+    "classificacao": 951,
+    "nome": "CLÁUDIO EMANUEL AMORIM DA COSTA",
+    "numero_inscricao": "103651-5",
+    "data_nascimento": "17/05/2008",
+    "oed": "BELÉM",
+    "GI": 170
+  },
+  {
+    "classificacao": 952,
+    "nome": "ABRAÃO RIBEIRO GALDINO",
+    "numero_inscricao": "100162-0",
+    "data_nascimento": "03/10/2005",
+    "oed": "NATAL",
+    "GI": 170
+  },
+  {
+    "classificacao": 953,
+    "nome": "JOÃO EDUARDO FARIAS DE SOUSA",
+    "numero_inscricao": "101115-8",
+    "data_nascimento": "24/06/2006",
+    "oed": "FORTALEZA",
+    "GI": 170
+  },
+  {
+    "classificacao": 954,
+    "nome": "VINICIUS MARTINS VICENTINI DA SILVA",
+    "numero_inscricao": "109795-9",
+    "data_nascimento": "07/03/2008",
+    "oed": "RECIFE",
+    "GI": 170
+  },
+  {
+    "classificacao": 955,
+    "nome": "LANNA VITÓRIA VERAS ARAÚJO",
+    "numero_inscricao": "113924-0",
+    "data_nascimento": "18/09/2009",
+    "oed": "FORTALEZA",
+    "GI": 170
+  },
+  {
+    "classificacao": 956,
+    "nome": "IURY FERREIRA TORRES DE SOUSA",
+    "numero_inscricao": "110576-0",
+    "data_nascimento": "15/07/2003",
+    "oed": "NATAL",
+    "GI": 170
+  },
+  {
+    "classificacao": 957,
+    "nome": "PABLO COSTA SILVA",
+    "numero_inscricao": "101900-2",
+    "data_nascimento": "13/02/2008",
+    "oed": "BELÉM",
+    "GI": 170
+  },
+  {
+    "classificacao": 958,
+    "nome": "CAROLINA OLIVEIRA KRAKHECKE",
+    "numero_inscricao": "109479-0",
+    "data_nascimento": "08/12/2009",
+    "oed": "MANAUS",
+    "GI": 170
+  },
+  {
+    "classificacao": 959,
+    "nome": "GUSTAVO ADMIR DA SILVA DA SILVA",
+    "numero_inscricao": "104544-6",
+    "data_nascimento": "01/01/2008",
+    "oed": "BELÉM",
+    "GI": 170
+  },
+  {
+    "classificacao": 960,
+    "nome": "DANILO NATHAN DE OLIVEIRA BARROS",
+    "numero_inscricao": "112677-2",
+    "data_nascimento": "25/09/2009",
+    "oed": "FORTALEZA",
+    "GI": 170
+  },
+  {
+    "classificacao": 961,
+    "nome": "MATEUS BATISTA DA SILVA TAVARES",
+    "numero_inscricao": "106910-6",
+    "data_nascimento": "17/05/2003",
+    "oed": "RECIFE",
+    "GI": 170
+  },
+  {
+    "classificacao": 962,
+    "nome": "GABRIEL SILVA WESNER",
+    "numero_inscricao": "100588-2",
+    "data_nascimento": "02/10/2006",
+    "oed": "NATAL",
+    "GI": 170
+  },
+  {
+    "classificacao": 963,
+    "nome": "JOÃO PEDRO LIMA DONATO",
+    "numero_inscricao": "107105-4",
+    "data_nascimento": "11/03/2009",
+    "oed": "NATAL",
+    "GI": 170
+  },
+  {
+    "classificacao": 964,
+    "nome": "PEDRO DE ALENCAR ALVES",
+    "numero_inscricao": "105861-8",
+    "data_nascimento": "12/04/2009",
+    "oed": "SALVADOR",
+    "GI": 170
+  },
+  {
+    "classificacao": 965,
+    "nome": "IAN AUGUSTO SOUZA PANTOJA",
+    "numero_inscricao": "101888-6",
+    "data_nascimento": "06/02/2009",
+    "oed": "BELÉM",
+    "GI": 170
+  },
+  {
+    "classificacao": 966,
+    "nome": "LUIZ PEDRO PERES TORRES MELO E SILVA",
+    "numero_inscricao": "100500-6",
+    "data_nascimento": "28/12/2003",
+    "oed": "FORTALEZA",
+    "GI": 170
+  },
+  {
+    "classificacao": 967,
+    "nome": "EDUARDO HENRIQUE SIQUEIRA ARAUJO",
+    "numero_inscricao": "100898-7",
+    "data_nascimento": "12/04/2007",
+    "oed": "SALVADOR",
+    "GI": 170
+  },
+  {
+    "classificacao": 968,
+    "nome": "DJALMA PEREIRA DA COSTA E SILVA NETO",
+    "numero_inscricao": "101549-0",
+    "data_nascimento": "08/04/2009",
+    "oed": "PARNAÍBA",
+    "GI": 170
+  },
+  {
+    "classificacao": 969,
+    "nome": "ÉRICK FABIANO GARCIA",
+    "numero_inscricao": "102968-1",
+    "data_nascimento": "16/10/2007",
+    "oed": "SALVADOR",
+    "GI": 170
+  },
+  {
+    "classificacao": 970,
+    "nome": "ANTONIO GABRIEL DE MENDONÇA SOUSA",
+    "numero_inscricao": "106549-8",
+    "data_nascimento": "22/12/2004",
+    "oed": "PARNAÍBA",
+    "GI": 170
+  },
+  {
+    "classificacao": 971,
+    "nome": "MARIANA AFONSO ARAGÃO",
+    "numero_inscricao": "108863-0",
+    "data_nascimento": "27/08/2007",
+    "oed": "FORTALEZA",
+    "GI": 170
+  },
+  {
+    "classificacao": 972,
+    "nome": "ALÍCIA DE SOUSA BESERRA",
+    "numero_inscricao": "104469-7",
+    "data_nascimento": "08/10/2009",
+    "oed": "PARNAÍBA",
+    "GI": 170
+  },
+  {
+    "classificacao": 973,
+    "nome": "LINDEMBERG MATHEUS ALBUQUERQUE DE MELO",
+    "numero_inscricao": "108999-1",
+    "data_nascimento": "07/12/2004",
+    "oed": "NATAL",
+    "GI": 170
+  },
+  {
+    "classificacao": 974,
+    "nome": "MARIA CLARA ANDRADE GARCIA",
+    "numero_inscricao": "102196-2",
+    "data_nascimento": "13/12/2006",
+    "oed": "RECIFE",
+    "GI": 170
+  },
+  {
+    "classificacao": 975,
+    "nome": "LUCAS PIETRO BRITO SOUSA",
+    "numero_inscricao": "102478-4",
+    "data_nascimento": "26/07/2008",
+    "oed": "SÃO LUIS",
+    "GI": 170
+  },
+  {
+    "classificacao": 976,
+    "nome": "CLECIO ALEXANDRE DA SILVA",
+    "numero_inscricao": "103632-0",
+    "data_nascimento": "01/08/2005",
+    "oed": "RECIFE",
+    "GI": 170
+  },
+  {
+    "classificacao": 977,
+    "nome": "JOÃO VITOR GONÇALVES FONTES",
+    "numero_inscricao": "112243-0",
+    "data_nascimento": "25/10/2007",
+    "oed": "RECIFE",
+    "GI": 170
+  },
+  {
+    "classificacao": 978,
+    "nome": "MARCO ANDRE CORTEZ SIMOES",
+    "numero_inscricao": "106334-5",
+    "data_nascimento": "28/08/2008",
+    "oed": "SÃO LUIS",
+    "GI": 170
+  },
+  {
+    "classificacao": 979,
+    "nome": "JOÃO GABRIEL GRADELA SILVEIRA CAVALCANTE",
+    "numero_inscricao": "102892-9",
+    "data_nascimento": "12/11/2007",
+    "oed": "FORTALEZA",
+    "GI": 170
+  },
+  {
+    "classificacao": 980,
+    "nome": "MARI ALVES MARQUES",
+    "numero_inscricao": "101243-3",
+    "data_nascimento": "17/07/2008",
+    "oed": "FORTALEZA",
+    "GI": 170
+  },
+  {
+    "classificacao": 981,
+    "nome": "ERALDO CARLOS ANDRADE DE CARVALHO FILHO",
+    "numero_inscricao": "105968-8",
+    "data_nascimento": "07/12/2006",
+    "oed": "MANAUS",
+    "GI": 170
+  },
+  {
+    "classificacao": 982,
+    "nome": "ERICK MARTINS RAMOS",
+    "numero_inscricao": "100369-2",
+    "data_nascimento": "20/01/2004",
+    "oed": "NATAL",
+    "GI": 170
+  },
+  {
+    "classificacao": 983,
+    "nome": "LUCAS DIAS DA ROCHA",
+    "numero_inscricao": "110465-3",
+    "data_nascimento": "26/05/2009",
+    "oed": "SALVADOR",
+    "GI": 170
+  },
+  {
+    "classificacao": 984,
+    "nome": "ANA VICTORIA DE SOUZA PEREIRA",
+    "numero_inscricao": "110606-9",
+    "data_nascimento": "24/09/2009",
+    "oed": "MANAUS",
+    "GI": 170
+  },
+  {
+    "classificacao": 985,
+    "nome": "GABRIEL LEONARDO FORTE",
+    "numero_inscricao": "101245-0",
+    "data_nascimento": "31/07/2007",
+    "oed": "FORTALEZA",
+    "GI": 170
+  },
+  {
+    "classificacao": 986,
+    "nome": "ALEFF KAUÃ CHAGAS BATISTA",
+    "numero_inscricao": "101789-1",
+    "data_nascimento": "31/10/2008",
+    "oed": "FORTALEZA",
+    "GI": 170
+  },
+  {
+    "classificacao": 987,
+    "nome": "HEVELLYN DA SILVA COSTA",
+    "numero_inscricao": "100997-1",
+    "data_nascimento": "08/12/2005",
+    "oed": "PARNAÍBA",
+    "GI": 170
+  },
+  {
+    "classificacao": 988,
+    "nome": "ELOÍSA CÉZAR DA SILVA",
+    "numero_inscricao": "104601-9",
+    "data_nascimento": "17/05/2004",
+    "oed": "SALVADOR",
+    "GI": 170
+  },
+  {
+    "classificacao": 989,
+    "nome": "PEDRO SILVA VIEIRA",
+    "numero_inscricao": "100391-6",
+    "data_nascimento": "08/07/2006",
+    "oed": "SALVADOR",
+    "GI": 170
+  },
+  {
+    "classificacao": 990,
+    "nome": "JOSÉ LUCAS SANTOS MIRANDA",
+    "numero_inscricao": "112171-0",
+    "data_nascimento": "21/04/2006",
+    "oed": "SALVADOR",
+    "GI": 170
+  },
+  {
+    "classificacao": 991,
+    "nome": "FLAIRA CRUZ DE OLIVEIRA",
+    "numero_inscricao": "107586-4",
+    "data_nascimento": "10/06/2008",
+    "oed": "BELÉM",
+    "GI": 170
+  },
+  {
+    "classificacao": 992,
+    "nome": "THAMYRES EDUARDA MACEDO RAMOS",
+    "numero_inscricao": "105299-6",
+    "data_nascimento": "06/08/2007",
+    "oed": "BELÉM",
+    "GI": 170
+  },
+  {
+    "classificacao": 993,
+    "nome": "ALEX RAFAEL SANTIAGO DE PAIVA",
+    "numero_inscricao": "108366-1",
+    "data_nascimento": "02/05/2007",
+    "oed": "FORTALEZA",
+    "GI": 170
+  },
+  {
+    "classificacao": 994,
+    "nome": "JOÃO GUILHERME DA CÂMARA NEVES",
+    "numero_inscricao": "100290-5",
+    "data_nascimento": "21/06/2007",
+    "oed": "RECIFE",
+    "GI": 170
+  },
+  {
+    "classificacao": 995,
+    "nome": "JULIA MC NALLY LISBOA",
+    "numero_inscricao": "107304-1",
+    "data_nascimento": "05/01/2008",
+    "oed": "RECIFE",
+    "GI": 170
+  },
+  {
+    "classificacao": 996,
+    "nome": "CARLOS HENRY GOMES CARVALHO",
+    "numero_inscricao": "109226-9",
+    "data_nascimento": "11/08/2003",
+    "oed": "FORTALEZA",
+    "GI": 170
+  },
+  {
+    "classificacao": 997,
+    "nome": "ALANA FERREIRA TAVARES BATISTA",
+    "numero_inscricao": "111076-2",
+    "data_nascimento": "28/11/2007",
+    "oed": "BELÉM",
+    "GI": 170
+  },
+  {
+    "classificacao": 998,
+    "nome": "LARISSA GABRIELLE DA SILVA MELO",
+    "numero_inscricao": "110355-4",
+    "data_nascimento": "21/12/2003",
+    "oed": "SALVADOR",
+    "GI": 170
+  },
+  {
+    "classificacao": 999,
+    "nome": "RICARDO MASCARENHAS LOPES DA SILVA JUNIOR",
+    "numero_inscricao": "107589-9",
+    "data_nascimento": "19/06/2007",
+    "oed": "PARNAÍBA",
+    "GI": 165
+  },
+  {
+    "classificacao": 1000,
+    "nome": "MARCOS VINICIUS DE PAULA MOURA",
+    "numero_inscricao": "108020-9",
+    "data_nascimento": "27/03/2008",
+    "oed": "FORTALEZA",
+    "GI": 165
+  }
+]
